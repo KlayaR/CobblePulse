@@ -573,14 +573,54 @@
 
         try {
           // Only fetch your local database - it has everything!
-          const dbResponse = await fetch("./localDB.json");
-          window.localDB = await dbResponse.json();
+          // Add cache-busting parameter to force reload
+          const dbResponse = await fetch("./localDB.json?v=" + Date.now());
+
+          console.log("Fetch response status:", dbResponse.status);
+          console.log("Content-Type:", dbResponse.headers.get("content-type"));
+
+          if (!dbResponse.ok) {
+            throw new Error(`HTTP error! status: ${dbResponse.status}`);
+          }
+
+          const contentType = dbResponse.headers.get("content-type");
+          if (!contentType || !contentType.includes("application/json")) {
+            console.warn("Response is not JSON, content-type:", contentType);
+            const text = await dbResponse.text();
+            console.log(
+              "Response text (first 500 chars):",
+              text.substring(0, 500),
+            );
+            throw new Error(
+              "Server returned HTML instead of JSON. Make sure localDB.json exists in the same directory as index.html",
+            );
+          }
+
+          localDB = await dbResponse.json();
+          window.localDB = localDB;
+          console.log(
+            "LocalDB loaded:",
+            Object.keys(localDB).length,
+            "entries",
+          );
 
           // Directly render using your local data
           allPokemon = Object.values(localDB);
+          console.log(
+            "allPokemon array created:",
+            allPokemon.length,
+            "Pokemon",
+          );
+          console.log("First Pokemon:", allPokemon[0]);
+
           renderTable(allPokemon);
         } catch (e) {
-          console.error("Data load failed. Make sure localDB.json exists.", e);
+          console.error("Data load failed:", e);
+          DOM.list.innerHTML = `<tr><td colspan="4" class="loading">
+            <strong>Error loading data:</strong> ${e.message}<br><br>
+            Make sure localDB.json is in the same directory as index.html.<br>
+            Check the browser console (F12) for more details.
+          </td></tr>`;
         }
       }
 
@@ -622,11 +662,18 @@
       }
 
       function renderTable(pokemonArray) {
+        console.log("renderTable called with", pokemonArray.length, "Pokemon");
         DOM.list.innerHTML = `<tr><td colspan="4" class="loading">Loading All Pokémon...</td></tr>`;
 
         let html = "";
         for (let i = 0; i < pokemonArray.length; i++) {
           const p = pokemonArray[i];
+
+          // Add safety check for types array
+          if (!p.types || !Array.isArray(p.types)) {
+            console.warn("Pokemon missing types array:", p.name, p);
+            p.types = [];
+          }
 
           const typeHtml = p.types
             .map((t) => `<span class="type-badge type-${t}">${t}</span>`)
