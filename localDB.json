@@ -395,7 +395,7 @@
         "spawn": "Oak Forest, Birch Forest, Dark Oak Forest, Plains, Cherry Grove",
         "rarity": "Common",
         "condition": "Day",
-        "forms": "Valencian�form: All Jungle biomes"
+        "forms": "Valencian form: All Jungle biomes"
       }
     ],
     "allRanks": [
@@ -433,7 +433,7 @@
         "spawn": "Oak Forest, Birch Forest, Dark Oak Forest, Plains, Cherry Grove",
         "rarity": "Common",
         "condition": "Day",
-        "forms": "Valencian�form: All Jungle biomes"
+        "forms": "Valencian form: All Jungle biomes"
       }
     ],
     "allRanks": [
@@ -471,7 +471,7 @@
         "spawn": "Oak Forest, Birch Forest, Dark Oak Forest, Plains, Cherry Grove",
         "rarity": "Common",
         "condition": "Day",
-        "forms": "Valencian�form: All Jungle biomes"
+        "forms": "Valencian form: All Jungle biomes"
       }
     ],
     "allRanks": [
@@ -744,7 +744,7 @@
         "spawn": "Plains, Plains, Savanna, Savanna Plateau, All Forest biomes except Dark Forest,",
         "rarity": "Common",
         "condition": "Night",
-        "forms": "Alolan form�is Uncommon and spawns in Dark Forest during the night"
+        "forms": "Alolan form is Uncommon and spawns in Dark Forest during the night"
       }
     ],
     "allRanks": [
@@ -782,7 +782,7 @@
         "spawn": "Plains, Savanna, Savanna Plateau, All Forest biomes except Dark Forest,",
         "rarity": "Common",
         "condition": "Night",
-        "forms": "Alolan form�is Uncommon and spawns in Dark Forest during the night"
+        "forms": "Alolan form is Uncommon and spawns in Dark Forest during the night"
       }
     ],
     "allRanks": [
@@ -962,7 +962,7 @@
         "spawn": "All Forest biomes except Dark Forest,",
         "rarity": "Uncommon",
         "condition": "During a storm",
-        "forms": "Alolan form�spawns in Beach"
+        "forms": "Alolan form spawns in Beach"
       }
     ],
     "allRanks": [
@@ -1006,7 +1006,7 @@
         "spawn": "Forest biomes",
         "rarity": "Uncommon",
         "condition": "During a storm",
-        "forms": "Alolan form�spawns in Jungle, Desert, Savanna"
+        "forms": "Alolan form spawns in Jungle, Desert, Savanna"
       }
     ],
     "allRanks": [
@@ -1032,7 +1032,7 @@
         "spawn": "Badlands, Desert",
         "rarity": "Common",
         "condition": "",
-        "forms": "Alolan form�spawns in"
+        "forms": "Alolan form spawns in"
       }
     ],
     "allRanks": [
@@ -1079,7 +1079,7 @@
         "spawn": "Badlands, Desert",
         "rarity": "Common",
         "condition": "",
-        "forms": "Alolan form�spawns in"
+        "forms": "Alolan form spawns in"
       }
     ],
     "allRanks": [
@@ -1416,7 +1416,7 @@
         "spawn": "All Forest biomes, Cherry Grove, All Taiga biomes, Crimson Forest, Warped Forest",
         "rarity": "Uncommon",
         "condition": "",
-        "forms": "Alolan form�spawns in Snowy Taiga, Grove"
+        "forms": "Alolan form spawns in Snowy Taiga, Grove"
       }
     ],
     "allRanks": [
@@ -1454,7 +1454,7 @@
         "spawn": "All Forest biomes, Cherry Grove, All Taiga biomes, Crimson Forest, Warped Forest",
         "rarity": "Uncommon",
         "condition": "Also Obtainable by giving Vulpix a",
-        "forms": "Alolan form�spawns in Snowy Taiga, Snow Forest"
+        "forms": "Alolan form spawns in Snowy Taiga, Snow Forest"
       }
     ],
     "allRanks": [
@@ -1687,7 +1687,7 @@
         "spawn": "All Forest biomes, All Plains biomes, All Jungle biomes, Savanna",
         "rarity": "Common",
         "condition": "Day",
-        "forms": "Valencian form�spawns during the day in Savanna"
+        "forms": "Valencian form spawns during the day in Savanna"
       }
     ],
     "allRanks": [
@@ -1714,7 +1714,7 @@
         "spawn": "All Forest biomes, All Plains biomes, Jungle, Savanna",
         "rarity": "Common",
         "condition": "Day",
-        "forms": "Valencian form�spawns during the day in Savanna"
+        "forms": "Valencian form spawns during the day in Savanna"
       }
     ],
     "allRanks": [
@@ -1753,7 +1753,7 @@
         "spawn": "All Forest biomes, All Plains biomes, Jungle, Savanna",
         "rarity": "Common",
         "condition": "Night",
-        "forms": "Valencian form�spawns during the night in Savanna"
+        "forms": "Valencian form spawns during the night in Savanna"
       }
     ],
     "allRanks": [
@@ -1957,7 +1957,7 @@
         "spawn": "Overworld biomes except Deep Dark",
         "rarity": "Common",
         "condition": "Min Y=0",
-        "forms": "Alolan form�spawns in Overworld biomes"
+        "forms": "Alolan form spawns in Overworld biomes"
       }
     ],
     "allRanks": [
@@ -1983,7 +1983,7 @@
         "spawn": "Overworld biomes except Deep Dark",
         "rarity": "Common",
         "condition": "Min Y=0",
-        "forms": "Alolan form�spawns in Overworld biomes"
+        "forms": "Alolan form spawns in Overworld biomes"
       }
     ],
     "allRanks": [
@@ -2009,7 +2009,7 @@
         "spawn": "Overworld biomes except Taiga, Desert, Badlands, Frozen River, Jagged Peaks, Snowy Beach, Snowy Plains",
         "rarity": "Common",
         "condition": "Nigh, Weather clear",
-        "forms": "Alolan form�spawns in Badlands, Frozen River, Jagged Peaks, Snowy Beach, Snowy Plains"
+        "forms": "Alolan form spawns in Badlands, Frozen River, Jagged Peaks, Snowy Beach, Snowy Plains"
       }
     ],
     "allRanks": [
@@ -2050,7 +2050,7 @@
         "spawn": "Desert",
         "rarity": "Common",
         "condition": "",
-        "forms": "Alolan form�spawns in Badlands, Frozen River, Jagged Peaks, Snowy Beach, Snowy Plains"
+        "forms": "Alolan form spawns in Badlands, Frozen River, Jagged Peaks, Snowy Beach, Snowy Plains"
       }
     ],
     "allRanks": [
@@ -2228,7 +2228,7 @@
         "spawn": "All Overworld biomes except Desert",
         "rarity": "Common",
         "condition": "",
-        "forms": "Hisuian form�spawns in Frozen Peaks,"
+        "forms": "Hisuian form spawns in Frozen Peaks,"
       }
     ],
     "allRanks": [
@@ -2254,7 +2254,7 @@
         "spawn": "All Overworld biomes except Desert",
         "rarity": "Common",
         "condition": "",
-        "forms": "Hisuian form�spawns in Frozen Peaks,"
+        "forms": "Hisuian form spawns in Frozen Peaks,"
       }
     ],
     "allRanks": [
@@ -2815,7 +2815,7 @@
         "spawn": "All Overworld biomes except Deep Dark",
         "rarity": "Common",
         "condition": "Caves",
-        "forms": "Alolan form�spawns in all Overworld biomes near iron ores"
+        "forms": "Alolan form spawns in all Overworld biomes near iron ores"
       }
     ],
     "allRanks": [
@@ -2842,7 +2842,7 @@
         "spawn": "All Overworld biomes except Deep Dark",
         "rarity": "Common",
         "condition": "Caves",
-        "forms": "Alolan form�spawns in all Overworld biomes near iron ores"
+        "forms": "Alolan form spawns in all Overworld biomes near iron ores"
       }
     ],
     "allRanks": [
@@ -2881,7 +2881,7 @@
         "spawn": "All Overworld biomes except Deep Dark",
         "rarity": "Common",
         "condition": "Caves",
-        "forms": "Alolan form�spawns in all Overworld biomes near iron ores"
+        "forms": "Alolan form spawns in all Overworld biomes near iron ores"
       }
     ],
     "allRanks": [
@@ -2914,7 +2914,7 @@
         "spawn": "All Plains biomes, All Savanna biomes, Nether Wastes",
         "rarity": "Uncommon",
         "condition": "Night, Weather clear",
-        "forms": "Galarian form�spawns in Flower Forest, Meadow, Sunflower Plains, Cherry Grove, Dark Forest"
+        "forms": "Galarian form spawns in Flower Forest, Meadow, Sunflower Plains, Cherry Grove, Dark Forest"
       }
     ],
     "allRanks": [
@@ -2952,7 +2952,7 @@
         "spawn": "All Plains biomes, All Savanna biomes, Nether Wastes",
         "rarity": "Uncommon",
         "condition": "",
-        "forms": "Galarian form�spawns in Flower Forest, Meadow, Sunflower Plains, Cherry Grove, Dark Forest"
+        "forms": "Galarian form spawns in Flower Forest, Meadow, Sunflower Plains, Cherry Grove, Dark Forest"
       }
     ],
     "allRanks": [
@@ -2990,7 +2990,7 @@
         "spawn": "Beach, River",
         "rarity": "Common",
         "condition": "Also by fishing",
-        "forms": "Galarian form�spawns in Mushroom Fields"
+        "forms": "Galarian form spawns in Mushroom Fields"
       }
     ],
     "allRanks": [
@@ -3017,7 +3017,7 @@
         "spawn": "Beach",
         "rarity": "Common",
         "condition": "Also by fishing",
-        "forms": "Galarian form�spawns in Mushroom Fields"
+        "forms": "Galarian form spawns in Mushroom Fields"
       }
     ],
     "allRanks": [
@@ -3177,7 +3177,7 @@
     ]
   },
   "farfetchd": {
-    "name": "Farfetch�d",
+    "name": "Farfetch d",
     "cleanName": "farfetchd",
     "dex": 83,
     "id": 83,
@@ -3187,7 +3187,7 @@
         "spawn": "All Overworld biomes",
         "rarity": "Common",
         "condition": "Near Medicinal Leek",
-        "forms": "Galarian form�spawns in All Forest biomes"
+        "forms": "Galarian form spawns in All Forest biomes"
       }
     ],
     "allRanks": [
@@ -3354,7 +3354,7 @@
         "spawn": "Swamp, Mangrove Swamp",
         "rarity": "Uncommon",
         "condition": "",
-        "forms": "Alolan form�spawns in Beach"
+        "forms": "Alolan form spawns in Beach"
       }
     ],
     "allRanks": [
@@ -3380,7 +3380,7 @@
         "spawn": "Swamp, Mangrove Swamp",
         "rarity": "Uncommon",
         "condition": "",
-        "forms": "Alolan form�spawns in Beach"
+        "forms": "Alolan form spawns in Beach"
       }
     ],
     "allRanks": [
@@ -3852,7 +3852,7 @@
         "spawn": "All Overworld biomes",
         "rarity": "Common",
         "condition": "Storm",
-        "forms": "Hisuian form�spawns during the storm in the same biomes ear apricorns"
+        "forms": "Hisuian form spawns during the storm in the same biomes ear apricorns"
       }
     ],
     "allRanks": [
@@ -3878,7 +3878,7 @@
         "spawn": "All Overworld biomes",
         "rarity": "Common",
         "condition": "Storm",
-        "forms": "Hisuian form�spawns during the storm in the same biomes near apricorns"
+        "forms": "Hisuian form spawns during the storm in the same biomes near apricorns"
       }
     ],
     "allRanks": [
@@ -3916,7 +3916,7 @@
         "spawn": "Jungle, Savanna, Beach",
         "rarity": "Common",
         "condition": "",
-        "forms": "Alolan Region bias�spawns in Beach"
+        "forms": "Alolan Region bias spawns in Beach"
       }
     ],
     "allRanks": [
@@ -3955,7 +3955,7 @@
         "spawn": "Jungle, Savanna, Beach",
         "rarity": "Common",
         "condition": "",
-        "forms": "Alolan Form�spawns in Beach"
+        "forms": "Alolan Form spawns in Beach"
       }
     ],
     "allRanks": [
@@ -4000,7 +4000,7 @@
         "spawn": "Badlands, Desert, Soul Sand Valley",
         "rarity": "Common",
         "condition": "",
-        "forms": "Alolan Region bias�spawns in Soul Sand Valley"
+        "forms": "Alolan Region bias spawns in Soul Sand Valley"
       }
     ],
     "allRanks": [
@@ -4038,7 +4038,7 @@
         "spawn": "Badlands, Desert, Soul Sand Valley",
         "rarity": "Common",
         "condition": "",
-        "forms": "Alolan Form�spawns in Soul Sand Valley"
+        "forms": "Alolan Form spawns in Soul Sand Valley"
       }
     ],
     "allRanks": [
@@ -4184,7 +4184,7 @@
         "spawn": "All Overworld biomes, Soul Sand Valley",
         "rarity": "Common",
         "condition": "Night",
-        "forms": "Galarian Region bias�spawns in Dark Forest during the night"
+        "forms": "Galarian Region bias spawns in Dark Forest during the night"
       }
     ],
     "allRanks": [
@@ -4699,7 +4699,7 @@
         "spawn": "All Overworld biomes",
         "rarity": "Uncommon",
         "condition": "Day, more common near a minecraft village",
-        "forms": "Galarian form�spawns in Frozen River, Jagged Peaks, Snowy Beach, Snowy Plains, Snowy Slopes"
+        "forms": "Galarian form spawns in Frozen River, Jagged Peaks, Snowy Beach, Snowy Plains, Snowy Slopes"
       }
     ],
     "allRanks": [
@@ -4924,7 +4924,7 @@
         "spawn": "Plains, Sunflower Plains",
         "rarity": "Common",
         "condition": "Day",
-        "forms": "Paldean forms�spawns in Meadow, Windswept Hills, Jagged Peaks near Lava or Water"
+        "forms": "Paldean forms spawns in Meadow, Windswept Hills, Jagged Peaks near Lava or Water"
       }
     ],
     "allRanks": [
@@ -5357,10 +5357,10 @@
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/138.png",
     "locations": [
       {
-        "spawn": "Fossil: Dripstone Oasis, Enhydro Agate, Eroded Pillar, Preserved Skeleton,�Sandy Den, Vibrant Hydrothermal Vents",
+        "spawn": "Fossil: Dripstone Oasis, Enhydro Agate, Eroded Pillar, Preserved Skeleton, Sandy Den, Vibrant Hydrothermal Vents",
         "rarity": "Rare",
         "condition": "Hidden in Suspicious sand/gravel.",
-        "forms": "Can also be found�wild�in the�Lush Caves."
+        "forms": "Can also be found wild in the Lush Caves."
       }
     ],
     "allRanks": [
@@ -5399,7 +5399,7 @@
         "spawn": "Evolution from Omanyte",
         "rarity": "Rare",
         "condition": "Hidden in Suspicious sand/gravel.",
-        "forms": "Can also be found�wild�in the�Lush Caves."
+        "forms": "Can also be found wild in the Lush Caves."
       }
     ],
     "allRanks": [
@@ -5435,10 +5435,10 @@
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/140.png",
     "locations": [
       {
-        "spawn": "Fossil: Enhydro Agate,�Hydrothermal Vents, Rooted Pit, Sunscorched Den, Suspicious Mound",
+        "spawn": "Fossil: Enhydro Agate, Hydrothermal Vents, Rooted Pit, Sunscorched Den, Suspicious Mound",
         "rarity": "Rare",
         "condition": "Hidden in Suspicious sand/gravel.",
-        "forms": "Can also be found�wild�in the�Lush Caves."
+        "forms": "Can also be found wild in the Lush Caves."
       }
     ],
     "allRanks": [
@@ -5477,7 +5477,7 @@
         "spawn": "Evolution from Kabuto",
         "rarity": "Rare",
         "condition": "Suspicious sand/gravel",
-        "forms": "Can also be found�wild�in the�Lush Caves."
+        "forms": "Can also be found wild in the Lush Caves."
       }
     ],
     "allRanks": [
@@ -5513,10 +5513,10 @@
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/142.png",
     "locations": [
       {
-        "spawn": "Fossil: Frozen Pond, Lush Den,�Oak Tree,�Spruce Tree",
+        "spawn": "Fossil: Frozen Pond, Lush Den, Oak Tree, Spruce Tree",
         "rarity": "Rare",
         "condition": "Suspicious sand/gravel.",
-        "forms": "Can also be found�wild�in the�Lush Caves."
+        "forms": "Can also be found wild in the Lush Caves."
       }
     ],
     "allRanks": [
@@ -5694,7 +5694,7 @@
         "spawn": "Nether Wastes",
         "rarity": "Ultra-Rare",
         "condition": "Structure: Moltres Tower",
-        "forms": "Galarian form�spawns under"
+        "forms": "Galarian form spawns under"
       }
     ],
     "allRanks": [
@@ -6129,7 +6129,7 @@
         "spawn": "Plains, Forest, Birch Forest, Meadow",
         "rarity": "Ultra-Rare",
         "condition": "Day",
-        "forms": "Hisuian region bias�spawns in Crimson Forest and Taiga"
+        "forms": "Hisuian region bias spawns in Crimson Forest and Taiga"
       }
     ],
     "allRanks": [
@@ -6155,7 +6155,7 @@
         "spawn": "Plains, Forest, Birch Forest, Meadow",
         "rarity": "Ultra-Rare",
         "condition": "Day",
-        "forms": "Hisuian region bias�spawns in Crimson Forest and Taiga"
+        "forms": "Hisuian region bias spawns in Crimson Forest and Taiga"
       }
     ],
     "allRanks": [
@@ -6193,7 +6193,7 @@
         "spawn": "Plains, Forest, Birch Forest, Meadow",
         "rarity": "Ultra-Rare",
         "condition": "Day",
-        "forms": "Hisuian form�spawns in Taiga and Crimson Forest"
+        "forms": "Hisuian form spawns in Taiga and Crimson Forest"
       }
     ],
     "allRanks": [
@@ -6754,7 +6754,7 @@
         "spawn": "Flower Forest, Birch Forest, Oak Forest",
         "rarity": "Uncommon",
         "condition": "Day",
-        "forms": "Alolan Region bias�spawns in Beach during thunderstorm"
+        "forms": "Alolan Region bias spawns in Beach during thunderstorm"
       }
     ],
     "allRanks": [
@@ -7078,7 +7078,7 @@
         "spawn": "Savanna, Jungle, Sparse Jungle, Sunflower Plains,",
         "rarity": "Common",
         "condition": "Day",
-        "forms": "Valencian forms�spoawns in Savanna, Savanna Plateau during the day"
+        "forms": "Valencian forms spoawns in Savanna, Savanna Plateau during the day"
       }
     ],
     "allRanks": [
@@ -7561,7 +7561,7 @@
         "spawn": "Lush Caves, Swamp, Mangrove Swamp (Rain)",
         "rarity": "Common",
         "condition": "Also by fishing in Mushroom Fields",
-        "forms": "Paldean form�spawns in"
+        "forms": "Paldean form spawns in"
       }
     ],
     "allRanks": [
@@ -7866,7 +7866,7 @@
         "spawn": "Snowy Beach, Beach (Day)",
         "rarity": "Common",
         "condition": "Also by fishing",
-        "forms": "Galarian form�spawns in"
+        "forms": "Galarian form spawns in"
       }
     ],
     "allRanks": [
@@ -8381,7 +8381,7 @@
         "spawn": "Lukewarm Ocean, Warm Ocean",
         "rarity": "Common",
         "condition": "Also by fishing",
-        "forms": "Hisuian form�spawns in"
+        "forms": "Hisuian form spawns in"
       }
     ],
     "allRanks": [
@@ -8568,7 +8568,7 @@
         "spawn": "All Taiga biomes",
         "rarity": "Uncommon",
         "condition": "Night",
-        "forms": "Hisuian form�spawns in"
+        "forms": "Hisuian form spawns in"
       }
     ],
     "allRanks": [
@@ -9562,7 +9562,7 @@
         "spawn": "Plains, Sunflower Plains, Meadow, Savanna",
         "rarity": "Common",
         "condition": "",
-        "forms": "Red Mooshtank�spawns ins Mushroom Fields"
+        "forms": "Red Mooshtank spawns ins Mushroom Fields"
       }
     ],
     "allRanks": [
@@ -9704,7 +9704,7 @@
         "spawn": "Birch Forest",
         "rarity": "Rare",
         "condition": "Structure: Burned Tower",
-        "forms": "More common during�thunderstorm"
+        "forms": "More common during thunderstorm"
       }
     ],
     "allRanks": [
@@ -9777,7 +9777,7 @@
         "spawn": "Birch Forest",
         "rarity": "Rare",
         "condition": "Structure: Burned Tower",
-        "forms": "More common in the�daytime"
+        "forms": "More common in the daytime"
       }
     ],
     "allRanks": [
@@ -9851,7 +9851,7 @@
         "spawn": "Birch Forest",
         "rarity": "Rare",
         "condition": "Structure: Burned Tower",
-        "forms": "More common during�rain"
+        "forms": "More common during rain"
       }
     ],
     "allRanks": [
@@ -10044,7 +10044,7 @@
         "spawn": "Deep Cold Ocean",
         "rarity": "Ultra-Rare",
         "condition": "Structure: Whirl Island",
-        "forms": "Shadow Lugia (ATM x MSD)�can be obtained by crafting the�Shadow Soul Stone"
+        "forms": "Shadow Lugia (ATM x MSD) can be obtained by crafting the Shadow Soul Stone"
       }
     ],
     "allRanks": [
@@ -10626,7 +10626,7 @@
         "spawn": "All Forest biomes, All Plains biomes",
         "rarity": "Common",
         "condition": "",
-        "forms": "Galarian form�spawns in"
+        "forms": "Galarian form spawns in"
       }
     ],
     "allRanks": [
@@ -10664,7 +10664,7 @@
         "spawn": "Oak Forest, Birch Forest, Dark Forest, Plains, Sunflower Plains, Snowy Plains",
         "rarity": "Common",
         "condition": "",
-        "forms": "Galarian form�spawns in Taiga biomes"
+        "forms": "Galarian form spawns in Taiga biomes"
       }
     ],
     "allRanks": [
@@ -12210,7 +12210,7 @@
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/304.png",
     "locations": [
       {
-        "spawn": "Jagged Peaks,�Frozen Peaks,�Stony Peaks, Snowy Slopes,�Meadow, Grove,Windswept Hills",
+        "spawn": "Jagged Peaks, Frozen Peaks, Stony Peaks, Snowy Slopes, Meadow, Grove,Windswept Hills",
         "rarity": "Common",
         "condition": "",
         "forms": ""
@@ -12249,7 +12249,7 @@
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/305.png",
     "locations": [
       {
-        "spawn": "Jagged Peaks,�Frozen Peaks,�Stony Peaks, Snowy Slopes,�Meadow, Grove,Windswept Hills",
+        "spawn": "Jagged Peaks, Frozen Peaks, Stony Peaks, Snowy Slopes, Meadow, Grove,Windswept Hills",
         "rarity": "Common",
         "condition": "",
         "forms": ""
@@ -12288,7 +12288,7 @@
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/306.png",
     "locations": [
       {
-        "spawn": "Jagged Peaks,�Frozen Peaks,�Stony Peaks, Snowy Slopes,�Meadow, Grove, Windswept Hills",
+        "spawn": "Jagged Peaks, Frozen Peaks, Stony Peaks, Snowy Slopes, Meadow, Grove, Windswept Hills",
         "rarity": "Common",
         "condition": "",
         "forms": ""
@@ -13923,7 +13923,7 @@
         "spawn": "Fossil: Dripstone Oasis, Frozen Spike, Mossy Pond, Preserved Skeleton, Submerged Impact, Submerged Spike, Underwater Fissure",
         "rarity": "Ultra-Rare",
         "condition": "Suspicious Sand/Gravel.",
-        "forms": "Can Also be found�wild�in the Lush Caves"
+        "forms": "Can Also be found wild in the Lush Caves"
       }
     ],
     "allRanks": [
@@ -13959,10 +13959,10 @@
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/348.png",
     "locations": [
       {
-        "spawn": "Anorith�s Evolution",
+        "spawn": "Anorith s Evolution",
         "rarity": "Ultra-Rare",
         "condition": "",
-        "forms": "Can Also be found�wild�in the Lush Caves"
+        "forms": "Can Also be found wild in the Lush Caves"
       }
     ],
     "allRanks": [
@@ -14000,7 +14000,7 @@
       {
         "spawn": "All Ocean biomes",
         "rarity": "Ultra-Rare",
-        "condition": "Only Fishing in a�Slime chunk",
+        "condition": "Only Fishing in a Slime chunk",
         "forms": ""
       }
     ],
@@ -14038,7 +14038,7 @@
       {
         "spawn": "All Ocean biomes",
         "rarity": "Ultra-Rare",
-        "condition": "Only Fishing in a�Slime chunk",
+        "condition": "Only Fishing in a Slime chunk",
         "forms": ""
       }
     ],
@@ -14095,7 +14095,7 @@
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/351.png",
     "locations": [
       {
-        "spawn": "Forecast�Plains, Sunflower Plains, Beach (Rain)",
+        "spawn": "Forecast Plains, Sunflower Plains, Beach (Rain)",
         "rarity": "Uncommon",
         "condition": "",
         "forms": "Normal: All Overworld biome"
@@ -16546,10 +16546,10 @@
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/408.png",
     "locations": [
       {
-        "spawn": "Fossil: Birch Tree, Mossy Pond,�Mud Pit, Oak Tree, Suspicious Mound",
+        "spawn": "Fossil: Birch Tree, Mossy Pond, Mud Pit, Oak Tree, Suspicious Mound",
         "rarity": "Ultra-Rare",
         "condition": "Suspicious sand/gravel.",
-        "forms": "Can also be found�wild�in the�Lush Caves."
+        "forms": "Can also be found wild in the Lush Caves."
       }
     ],
     "allRanks": [
@@ -16575,7 +16575,7 @@
         "spawn": "Evolution from Cranidos",
         "rarity": "Ultra-Rare",
         "condition": "",
-        "forms": "Can also be found�wild�in the�Lush Caves."
+        "forms": "Can also be found wild in the Lush Caves."
       }
     ],
     "allRanks": [
@@ -16619,7 +16619,7 @@
         "spawn": "Fossil: Eroded Pillar, Lush Den, Mud Pit,",
         "rarity": "Ultra-Rare",
         "condition": "Suspicious sand/gravel",
-        "forms": "Can also be found�wild�in the�Lush Caves."
+        "forms": "Can also be found wild in the Lush Caves."
       }
     ],
     "allRanks": [
@@ -16658,7 +16658,7 @@
         "spawn": "Evolution from Shieldon",
         "rarity": "Ultra-Rare",
         "condition": "",
-        "forms": "Can also be found�wild�in the�Lush Caves."
+        "forms": "Can also be found wild in the Lush Caves."
       }
     ],
     "allRanks": [
@@ -17063,7 +17063,7 @@
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/422.png",
     "locations": [
       {
-        "spawn": "East Form:�Snowy Beach, Coild Ocean, Deep Cold Ocean, Frozen Ocean Deep Frozen Ocean",
+        "spawn": "East Form: Snowy Beach, Coild Ocean, Deep Cold Ocean, Frozen Ocean Deep Frozen Ocean",
         "rarity": "Uncommon",
         "condition": "Also Fishing in same biomes",
         "forms": ""
@@ -17104,7 +17104,7 @@
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/423.png",
     "locations": [
       {
-        "spawn": "East Form:�Snowy Beach, Coild Ocean, Deep Cold Ocean, Frozen Ocean Deep Frozen Ocean",
+        "spawn": "East Form: Snowy Beach, Coild Ocean, Deep Cold Ocean, Frozen Ocean Deep Frozen Ocean",
         "rarity": "Uncommon",
         "condition": "Also Fishing in same biomes",
         "forms": ""
@@ -17735,7 +17735,7 @@
         "spawn": "All Overworld biomes except Frozen River,",
         "rarity": "Uncommon",
         "condition": "Common in villages",
-        "forms": "Galarian form�spawns in Frozen River, Jagged Peaks, Snowy Beach,Snowy Plains,Snowy Slopes"
+        "forms": "Galarian form spawns in Frozen River, Jagged Peaks, Snowy Beach,Snowy Plains,Snowy Slopes"
       }
     ],
     "allRanks": [
@@ -18671,7 +18671,7 @@
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/461.png",
     "locations": [
       {
-        "spawn": "Taiga, Snowy Taiga,�Old Growth Pine Taiga,�Old Growth Spruce Taiga",
+        "spawn": "Taiga, Snowy Taiga, Old Growth Pine Taiga, Old Growth Spruce Taiga",
         "rarity": "Uncommon",
         "condition": "Day",
         "forms": ""
@@ -20746,7 +20746,7 @@
         "spawn": "Beach",
         "rarity": "Ultra-Rare",
         "condition": "Also by fishing in: Oceam, Deep Ocean, Warm Ocean, Lukewarm Ocean, Deep Lukewarm Ocean",
-        "forms": "Hisuian region bias�spawn in"
+        "forms": "Hisuian region bias spawn in"
       }
     ],
     "allRanks": [
@@ -20784,7 +20784,7 @@
         "spawn": "Beach",
         "rarity": "Ultra-Rare",
         "condition": "Also by fishing in: Oceam, Deep Ocean, Warm Ocean, Lukewarm Ocean, Deep Lukewarm Ocean",
-        "forms": "Hisuian region bias�spawn in"
+        "forms": "Hisuian region bias spawn in"
       }
     ],
     "allRanks": [
@@ -20822,7 +20822,7 @@
         "spawn": "Beach",
         "rarity": "Ultra-Rare",
         "condition": "Also by fishing in: Oceam, Deep Ocean, Warm Ocean, Lukewarm Ocean, Deep Lukewarm Ocean",
-        "forms": "Hisuian form�spawn in"
+        "forms": "Hisuian form spawn in"
       }
     ],
     "allRanks": [
@@ -22640,7 +22640,7 @@
         "spawn": "Flower Forest, Cherry Grove, Meadow",
         "rarity": "Common",
         "condition": "Day",
-        "forms": "Hisuian region bias�spawns in Windswept Hills, Windswept Gravelly Hills, Windswept Forest"
+        "forms": "Hisuian region bias spawns in Windswept Hills, Windswept Gravelly Hills, Windswept Forest"
       }
     ],
     "allRanks": [
@@ -22678,7 +22678,7 @@
         "spawn": "Flower Forest, Cherry Grove, Meadow",
         "rarity": "Common",
         "condition": "Day",
-        "forms": "Hisuian form�spawn in Windswept Hills, Windswept Gravelly Hills, Windswept Forest"
+        "forms": "Hisuian form spawn in Windswept Hills, Windswept Gravelly Hills, Windswept Forest"
       }
     ],
     "allRanks": [
@@ -22920,7 +22920,7 @@
         "spawn": "Desert, Jungle, Badlands, Bamboo Jungle, Nether Wastes, Basalt Deltas",
         "rarity": "Common",
         "condition": "Day",
-        "forms": "Galarian form�spawns in Frozen Peaks, Ice Spikes, Frozen River, Snowy Plains, Snowy Slopes, Jagged Peaks"
+        "forms": "Galarian form spawns in Frozen Peaks, Ice Spikes, Frozen River, Snowy Plains, Snowy Slopes, Jagged Peaks"
       }
     ],
     "allRanks": [
@@ -22958,7 +22958,7 @@
         "spawn": "Desert, Jungle, Badlands, Bamboo Jungle, Nether Wastes, Basalt Deltas",
         "rarity": "Common",
         "condition": "",
-        "forms": "Galarian form�spawns in Frozen Peaks, Ice Spikes, Frozen River, Snowy Plains, Snowy Slopes, Jagged Peaks"
+        "forms": "Galarian form spawns in Frozen Peaks, Ice Spikes, Frozen River, Snowy Plains, Snowy Slopes, Jagged Peaks"
       }
     ],
     "allRanks": [
@@ -23311,7 +23311,7 @@
         "spawn": "Fossil: Frozen Pond, Hydrothermal Vents,",
         "rarity": "Ultra-Rare",
         "condition": "Suspicious sand/gravel.",
-        "forms": "Can also be found�wild�in�Lush Caves"
+        "forms": "Can also be found wild in Lush Caves"
       }
     ],
     "allRanks": [
@@ -23347,10 +23347,10 @@
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/565.png",
     "locations": [
       {
-        "spawn": "Tirtouga�s evolution",
+        "spawn": "Tirtouga s evolution",
         "rarity": "Ultra-Rare",
         "condition": "",
-        "forms": "Can also be found�wild�in�Lush Caves"
+        "forms": "Can also be found wild in Lush Caves"
       }
     ],
     "allRanks": [
@@ -23386,10 +23386,10 @@
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/566.png",
     "locations": [
       {
-        "spawn": "Fossil: Birch Tree, Mossy Pond,�Powdered Deposit,",
+        "spawn": "Fossil: Birch Tree, Mossy Pond, Powdered Deposit,",
         "rarity": "Ultra-Rare",
         "condition": "Suspicious sand/gravel. Use",
-        "forms": "Can also be found�wild�in�Lush Caves"
+        "forms": "Can also be found wild in Lush Caves"
       }
     ],
     "allRanks": [
@@ -23425,10 +23425,10 @@
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/567.png",
     "locations": [
       {
-        "spawn": "Archen�s evolution",
+        "spawn": "Archen s evolution",
         "rarity": "Ultra-Rare",
         "condition": "",
-        "forms": "Can also be found�wild�in�Lush Caves"
+        "forms": "Can also be found wild in Lush Caves"
       }
     ],
     "allRanks": [
@@ -25501,7 +25501,7 @@
         "spawn": "Swamp, Mangrove Swamp",
         "rarity": "Uncommon",
         "condition": "Also by fishing in: Desert, Badlands,",
-        "forms": "Galarian from�spawns in Swamp, Mangrove Swamp (Day)"
+        "forms": "Galarian from spawns in Swamp, Mangrove Swamp (Day)"
       }
     ],
     "allRanks": [
@@ -26029,7 +26029,7 @@
         "spawn": "Badlands, Meadow, Windswept Hills, Windswept Gravelly Hills, Stony Shore",
         "rarity": "Common",
         "condition": "",
-        "forms": "Hisuian form�spawns ins Frozen Peaks, Jagged Peaks, Stony Peaks, Snowy Slopes"
+        "forms": "Hisuian form spawns ins Frozen Peaks, Jagged Peaks, Stony Peaks, Snowy Slopes"
       }
     ],
     "allRanks": [
@@ -27028,7 +27028,7 @@
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/647.png",
     "locations": [
       {
-        "spawn": "Sakura Grove,�Sakura Valley",
+        "spawn": "Sakura Grove, Sakura Valley",
         "rarity": "Ultra-Rare",
         "condition": "",
         "forms": ""
@@ -27939,7 +27939,7 @@
         "spawn": "Badlands, Cherry Grove, Flower Forest, Meadow",
         "rarity": "Common",
         "condition": "",
-        "forms": "There are�20+ Forms"
+        "forms": "There are 20+ Forms"
       }
     ],
     "allRanks": [
@@ -28034,7 +28034,7 @@
     ]
   },
   "flabb": {
-    "name": "Flab�b�",
+    "name": "Flab b ",
     "cleanName": "flabb",
     "dex": 669,
     "id": 669,
@@ -28082,7 +28082,7 @@
         "spawn": "All Overworld biomes",
         "rarity": "Common",
         "condition": "There are 6 colored variants.",
-        "forms": "Eternal Folette�spawns during the�night�near both red flowers and blue flowers"
+        "forms": "Eternal Folette spawns during the night near both red flowers and blue flowers"
       }
     ],
     "allRanks": [
@@ -28293,7 +28293,7 @@
         "spawn": "Cherry Grove, Flower Forest",
         "rarity": "Uncommon",
         "condition": "Day",
-        "forms": "There are�9 forms�obtainable by giving 9 different dyes."
+        "forms": "There are 9 forms obtainable by giving 9 different dyes."
       }
     ],
     "allRanks": [
@@ -29007,7 +29007,7 @@
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/696.png",
     "locations": [
       {
-        "spawn": "Fossil: Eroded Pillar,�Lush Den, Mud Pit,",
+        "spawn": "Fossil: Eroded Pillar, Lush Den, Mud Pit,",
         "rarity": "Ultra-Rare",
         "condition": "Suspicious sand/gravel. Use",
         "forms": "Can also be found wild in Lush Caves"
@@ -29046,7 +29046,7 @@
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/697.png",
     "locations": [
       {
-        "spawn": "Tyrunt�s evolution",
+        "spawn": "Tyrunt s evolution",
         "rarity": "Standard",
         "condition": "",
         "forms": "Can also be found wild in Lush Caves"
@@ -29085,7 +29085,7 @@
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/698.png",
     "locations": [
       {
-        "spawn": "Fossil: Eroded Pillar,�Frozen Pond, Frozen Spike, Powdered Deposit, Spruce Tree",
+        "spawn": "Fossil: Eroded Pillar, Frozen Pond, Frozen Spike, Powdered Deposit, Spruce Tree",
         "rarity": "Ultra-Rare",
         "condition": "Suspicious sand/gravel. Use",
         "forms": "Can also be found wild in Lush Caves"
@@ -29124,7 +29124,7 @@
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/699.png",
     "locations": [
       {
-        "spawn": "Amaura�s evolution",
+        "spawn": "Amaura s evolution",
         "rarity": "Standard",
         "condition": "",
         "forms": "Can also be found wild in Lush Caves"
@@ -29345,7 +29345,7 @@
         "spawn": "Swamp, Mangrove Swamp (Rain)",
         "rarity": "Rare",
         "condition": "Also by fishing in Swamp, Mangrove Swamp",
-        "forms": "Hisuian region bias�spawns in Dripstone Caves, Lush Caves"
+        "forms": "Hisuian region bias spawns in Dripstone Caves, Lush Caves"
       }
     ],
     "allRanks": [
@@ -29371,7 +29371,7 @@
         "spawn": "Swamp, Mangrove Swamp (Rain)",
         "rarity": "Rare",
         "condition": "Also by fishing in Swamp, Mangrove Swamp",
-        "forms": "Hisuian region bias�spawns in Dripstone Caves, Lush Caves"
+        "forms": "Hisuian region bias spawns in Dripstone Caves, Lush Caves"
       }
     ],
     "allRanks": [
@@ -29409,7 +29409,7 @@
         "spawn": "Swamp, Mangrove Swamp (Rain)",
         "rarity": "Rare",
         "condition": "Also by fishing in Swamp, Mangrove Swamp",
-        "forms": "Hisuian form�spawn in Lush Caves, Dripstone Caves"
+        "forms": "Hisuian form spawn in Lush Caves, Dripstone Caves"
       }
     ],
     "allRanks": [
@@ -30159,7 +30159,7 @@
         "spawn": "Oak Forest, Dark Forest, Birch Forest, Flower Forest",
         "rarity": "Ultra-Rare",
         "condition": "Day",
-        "forms": "Hisuian region bias�spawns in Snowy Taiga"
+        "forms": "Hisuian region bias spawns in Snowy Taiga"
       }
     ],
     "allRanks": [
@@ -30186,7 +30186,7 @@
         "spawn": "Oak Forest, Dark Forest, Birch Forest, Flower Forest",
         "rarity": "Ultra-Rare",
         "condition": "Day",
-        "forms": "Hisuian region bias�spawns in Snowy Taiga"
+        "forms": "Hisuian region bias spawns in Snowy Taiga"
       }
     ],
     "allRanks": [
@@ -30225,7 +30225,7 @@
         "spawn": "Oak Forest, Dark Forest, Birch Forest, Flower Forest",
         "rarity": "Ultra-Rare",
         "condition": "Day",
-        "forms": "Hisuian form�spawns in"
+        "forms": "Hisuian form spawns in"
       }
     ],
     "allRanks": [
@@ -30893,7 +30893,7 @@
         "spawn": "All Overworld biomes",
         "rarity": "Uncommon",
         "condition": "",
-        "forms": "Baile Style�spawns in Plains and"
+        "forms": "Baile Style spawns in Plains and"
       }
     ],
     "allRanks": [
@@ -31064,7 +31064,7 @@
         "spawn": "All Hills biomes, Meadow, Grove, Snowy Slopes,",
         "rarity": "Uncommon",
         "condition": "",
-        "forms": "Rockruff�wolf_form=dusk"
+        "forms": "Rockruff wolf_form=dusk"
       }
     ],
     "allRanks": [
@@ -31102,7 +31102,7 @@
         "spawn": "Jagged Peaks, Frozen Peaks, Stony Peaks, Meadow, Grove, Snowy Slopes, Windswept Hills, Windswept Gravelly Hills, Windswept Forest",
         "rarity": "Uncommon",
         "condition": "",
-        "forms": "Midday:�Evolve Rockruff during the day."
+        "forms": "Midday: Evolve Rockruff during the day."
       }
     ],
     "allRanks": [
@@ -31652,7 +31652,7 @@
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/757.png",
     "locations": [
       {
-        "spawn": "Badlands,�Eroded Badlands,�Wooded Badlands,�Jagged Peaks,�Frozen Peaks,�Stony Peaks,�Meadow,�Grove,�Snowy Slope, Basalt Deltas, Soul Sand Valley",
+        "spawn": "Badlands, Eroded Badlands, Wooded Badlands, Jagged Peaks, Frozen Peaks, Stony Peaks, Meadow, Grove, Snowy Slope, Basalt Deltas, Soul Sand Valley",
         "rarity": "Common",
         "condition": "",
         "forms": ""
@@ -31694,7 +31694,7 @@
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/758.png",
     "locations": [
       {
-        "spawn": "Badlands,�Eroded Badlands,�Wooded Badlands,�Jagged Peaks,�Frozen Peaks,�Stony Peaks,�Meadow,�Grove,�Snowy Slope, Basalt Deltas, Soul Sand Valley",
+        "spawn": "Badlands, Eroded Badlands, Wooded Badlands, Jagged Peaks, Frozen Peaks, Stony Peaks, Meadow, Grove, Snowy Slope, Basalt Deltas, Soul Sand Valley",
         "rarity": "Common",
         "condition": "",
         "forms": ""
@@ -32296,7 +32296,7 @@
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/772.png",
     "locations": [
       {
-        "spawn": "Fossil: Loot dropped by the�Team Rocket",
+        "spawn": "Fossil: Loot dropped by the Team Rocket",
         "rarity": "Ultra-Rare",
         "condition": "Resurrection Machine",
         "forms": ""
@@ -32334,7 +32334,7 @@
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/773.png",
     "locations": [
       {
-        "spawn": "Type Null�s evolution",
+        "spawn": "Type Null s evolution",
         "rarity": "Standard",
         "condition": "",
         "forms": ""
@@ -32703,7 +32703,7 @@
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/781.png",
     "locations": [
       {
-        "spawn": "Ocean,�Deep Ocean,�Warm Ocean,�Lukewarm Ocean,�Cold Ocean,�Frozen Ocean",
+        "spawn": "Ocean, Deep Ocean, Warm Ocean, Lukewarm Ocean, Cold Ocean, Frozen Ocean",
         "rarity": "Common",
         "condition": "",
         "forms": ""
@@ -33249,7 +33249,7 @@
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/795.png",
     "locations": [
       {
-        "spawn": "Blooming Valley, Steppe,�White Cliffs, The End",
+        "spawn": "Blooming Valley, Steppe, White Cliffs, The End",
         "rarity": "Ultra-Rare",
         "condition": "",
         "forms": ""
@@ -33628,7 +33628,7 @@
       {
         "spawn": "The End",
         "rarity": "Ultra-Rare",
-        "condition": "Dawn Tower, Dusk Tower�(COBBLEVERSE)",
+        "condition": "Dawn Tower, Dusk Tower (COBBLEVERSE)",
         "forms": ""
       }
     ],
@@ -34520,7 +34520,7 @@
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/824.png",
     "locations": [
       {
-        "spawn": "Oak�Forest,�Flower Forest,�Birch Forest,�Old Growth Birch Forest,�Plains,�Sunflower Plains",
+        "spawn": "Oak Forest, Flower Forest, Birch Forest, Old Growth Birch Forest, Plains, Sunflower Plains",
         "rarity": "Common",
         "condition": "",
         "forms": ""
@@ -35183,7 +35183,7 @@
       {
         "spawn": "Oak Forest, Flower Forest, Birch Forest, Dark Oak Forest",
         "rarity": "Rare",
-        "condition": "Give a�Tart Apple�to Applin.",
+        "condition": "Give a Tart Apple to Applin.",
         "forms": ""
       }
     ],
@@ -35222,7 +35222,7 @@
       {
         "spawn": "Oak Forest, Flower Forest, Birch Forest, Dark Oak Forest",
         "rarity": "Rare",
-        "condition": "Give a�Sweet Apple�to Applin",
+        "condition": "Give a Sweet Apple to Applin",
         "forms": ""
       }
     ],
@@ -36281,7 +36281,7 @@
     ]
   },
   "sirfetchd": {
-    "name": "Sirfetch�d",
+    "name": "Sirfetch d",
     "cleanName": "sirfetchd",
     "dex": 865,
     "id": 865,
@@ -36906,7 +36906,7 @@
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/881.png",
     "locations": [
       {
-        "spawn": "Fossil: Frozen Pond,�Frozen Spike, Oak Tree,",
+        "spawn": "Fossil: Frozen Pond, Frozen Spike, Oak Tree,",
         "rarity": "Standard",
         "condition": "",
         "forms": ""
@@ -36984,7 +36984,7 @@
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/883.png",
     "locations": [
       {
-        "spawn": "Fossil: Frozen Pond,�Frozen Spike, Oak Tree, Powdered Deposit,�Preserved Skeleton, Sandy Den,",
+        "spawn": "Fossil: Frozen Pond, Frozen Spike, Oak Tree, Powdered Deposit, Preserved Skeleton, Sandy Den,",
         "rarity": "Standard",
         "condition": "",
         "forms": ""
@@ -37349,7 +37349,7 @@
         "spawn": "End Highlands",
         "rarity": "Ultra-Rare",
         "condition": "",
-        "forms": "Eternatus needs a Star Core to become�Eternamax�"
+        "forms": "Eternatus needs a Star Core to become Eternamax "
       }
     ],
     "allRanks": [
@@ -37601,7 +37601,7 @@
       {
         "spawn": "Desert",
         "rarity": "Ultra-Rare",
-        "condition": "Structure:�Split Decision Temple",
+        "condition": "Structure: Split Decision Temple",
         "forms": ""
       }
     ],
@@ -37660,7 +37660,7 @@
       {
         "spawn": "Snowy Taiga",
         "rarity": "Ultra-Rare",
-        "condition": "Structure: Crown Cemetery�Spire",
+        "condition": "Structure: Crown Cemetery Spire",
         "forms": "Need Iceroot carrots"
       }
     ],
@@ -37759,7 +37759,7 @@
       {
         "spawn": "Old Growth Pine Taiga, Snowy Taiga",
         "rarity": "Ultra-Rare",
-        "condition": "Structure:�Crown Cemetery�or�Crown Spire",
+        "condition": "Structure: Crown Cemetery or Crown Spire",
         "forms": "Need Calyrex Crown"
       }
     ],
@@ -37912,7 +37912,7 @@
         "spawn": "Forest, Birch Forest, Dark Forest, Flower Forest, aiga, Old Growth Pine Taiga, Snowy Taiga, Meadow,",
         "rarity": "Common",
         "condition": "MinY=48",
-        "forms": "Bloodmoon form�spawns in All Forest biomes during the night"
+        "forms": "Bloodmoon form spawns in All Forest biomes during the night"
       }
     ],
     "allRanks": [
@@ -39180,7 +39180,7 @@
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/928.png",
     "locations": [
       {
-        "spawn": "Plains, Sunflower Plains,�Meadow,�Grove, Savanna, Savanna Plateau, Windswept Savanna",
+        "spawn": "Plains, Sunflower Plains, Meadow, Grove, Savanna, Savanna Plateau, Windswept Savanna",
         "rarity": "Common",
         "condition": "",
         "forms": ""
@@ -39219,7 +39219,7 @@
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/929.png",
     "locations": [
       {
-        "spawn": "Plains, Sunflower Plains,�Meadow,�Grove, Savanna, Savanna Plateau, Windswept Savanna",
+        "spawn": "Plains, Sunflower Plains, Meadow, Grove, Savanna, Savanna Plateau, Windswept Savanna",
         "rarity": "Common",
         "condition": "",
         "forms": ""
@@ -39258,7 +39258,7 @@
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/930.png",
     "locations": [
       {
-        "spawn": "Plains, Sunflower Plains,�Meadow,�Grove, Savanna, Savanna Plateau, Windswept Savanna",
+        "spawn": "Plains, Sunflower Plains, Meadow, Grove, Savanna, Savanna Plateau, Windswept Savanna",
         "rarity": "Uncommon",
         "condition": "",
         "forms": ""
@@ -40735,7 +40735,7 @@
         "spawn": "All Ocean biomes",
         "rarity": "Common",
         "condition": "Also by fishing in same biomes",
-        "forms": "Hero-form:�Switch Palafin out (do not let it faint)"
+        "forms": "Hero-form: Switch Palafin out (do not let it faint)"
       }
     ],
     "allRanks": [
@@ -41679,7 +41679,7 @@
       {
         "spawn": "Bamboo Jungle",
         "rarity": "Ultra-Rare",
-        "condition": "Bisharp�must defeat 3 Bisharp�in a row without ever fainting.",
+        "condition": "Bisharp must defeat 3 Bisharp in a row without ever fainting.",
         "forms": ""
       }
     ],
