@@ -1,7 +1,3 @@
-Here is a professional, high-quality `README.md` file for your GitHub repository. It’s designed using clean Markdown, emojis for visual flair, and a clear structure to show off the technical depth of **CobblePulse**.
-
----
-
 # 🌌 CobblePulse
 
 ### *The Ultimate Competitive & Exploration Intelligence Bridge for Cobblemon*
