@@ -283,6 +283,55 @@
         border-color: var(--accent-primary);
       }
 
+      /* About Page Styling */
+      .about-content {
+        padding: 30px;
+        line-height: 1.8;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .about-content h2 {
+        color: var(--accent-primary);
+        margin-top: 30px;
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+      }
+
+      .about-content h2:first-child {
+        margin-top: 0;
+      }
+
+      .about-content p {
+        margin-bottom: 15px;
+        color: var(--text-main);
+      }
+
+      .about-content a {
+        color: var(--accent-primary);
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.2s;
+      }
+
+      .about-content a:hover {
+        color: #ff6b81;
+        text-decoration: underline;
+      }
+
+      .about-content ul {
+        margin-left: 20px;
+        margin-bottom: 15px;
+      }
+
+      .about-content li {
+        margin-bottom: 8px;
+      }
+
+      .about-content strong {
+        color: var(--accent-primary);
+      }
+
       /* --- MAIN UI - TABLE --- */
       .table-container {
         overflow-x: auto;
@@ -536,11 +585,12 @@
       </header>
 
       <div class="tabs" id="tabContainer">
+        <button class="tab-btn active" data-tab="about">About</button>
         <button class="tab-btn" data-tab="ubers">Ubers</button>
         <button class="tab-btn" data-tab="ou">OU</button>
         <button class="tab-btn" data-tab="uu">UU</button>
         <button class="tab-btn" data-tab="ru">RU</button>
-        <button class="tab-btn active" data-tab="all">All Cobblemon</button>
+        <button class="tab-btn" data-tab="all">All Cobblemon</button>
       </div>
 
       <div class="glass-panel table-container">
@@ -573,7 +623,7 @@
       // --- STATE ---
       let allPokemon = [];
       let localDB = {};
-      let currentTab = "all";
+      let currentTab = "about";
 
       const DOM = {
         list: document.getElementById("pokemonList"),
@@ -659,7 +709,7 @@
           );
           console.log("First Pokemon:", allPokemon[0]);
 
-          renderTable(allPokemon);
+          applyFilters(); // Show About tab on initial load
         } catch (e) {
           console.error("Data load failed:", e);
           DOM.list.innerHTML = `<tr><td colspan="4" class="loading">
@@ -763,6 +813,54 @@
         const typeFilter = DOM.typeFilter.value;
 
         let filtered = [];
+
+        // Handle About tab separately
+        if (currentTab === "about") {
+          DOM.list.innerHTML = `
+            <tr>
+              <td colspan="4" style="padding: 0;">
+                <div class="about-content">
+                  <h2>Welcome to CobblePulse! 🎮</h2>
+                  <p>
+                    CobblePulse is your complete guide to <a href="https://cobblemon.com/" target="_blank">Cobblemon</a> — 
+                    a Minecraft mod that brings Pokémon into your world. Here you'll find spawn locations, competitive tier rankings, 
+                    and battle strategies for every Pokémon.
+                  </p>
+                  
+                  <h2>What Are Competitive Tiers?</h2>
+                  <p>
+                    Competitive tiers organize Pokémon by power level, based on data from <a href="https://www.smogon.com/" target="_blank">Smogon University</a> — 
+                    the premier competitive Pokémon community. This helps create fair, balanced battles.
+                  </p>
+                  
+                  <ul>
+                    <li><strong>Ubers:</strong> The most powerful legendaries and mega evolutions. Restricted in standard play due to overwhelming strength.</li>
+                    <li><strong>OU (OverUsed):</strong> The standard competitive tier. Strong, popular Pokémon that define the metagame.</li>
+                    <li><strong>UU (UnderUsed):</strong> Solid Pokémon that don't quite reach OU power levels, but are still very viable.</li>
+                    <li><strong>RU (RarelyUsed):</strong> Less common picks that can still shine with the right strategy.</li>
+                  </ul>
+                  
+                  <h2>How to Use This Site</h2>
+                  <ul>
+                    <li><strong>Browse Tiers:</strong> Click the tier tabs above to see the top 50 Pokémon in each competitive tier, ranked by usage.</li>
+                    <li><strong>View All:</strong> Click "All Cobblemon" to see every Pokémon available in the mod.</li>
+                    <li><strong>Search:</strong> Use the search box to find Pokémon by name or Pokédex number.</li>
+                    <li><strong>Filter by Type:</strong> Use the type dropdown to filter by Pokémon type.</li>
+                    <li><strong>Click for Details:</strong> Click any Pokémon to see spawn locations, competitive movesets, EVs, and more.</li>
+                  </ul>
+                  
+                  <h2>Data Sources</h2>
+                  <p>
+                    This site combines spawn data from <a href="https://www.lumyverse.com/cobbleverse/" target="_blank">Cobbleverse</a>, 
+                    competitive data from <a href="https://www.smogon.com/" target="_blank">Smogon</a>, 
+                    and Pokémon information from <a href="https://pokeapi.co/" target="_blank">PokéAPI</a>.
+                  </p>
+                </div>
+              </td>
+            </tr>
+          `;
+          return;
+        }
 
         if (currentTab === "all") {
           filtered = allPokemon;
