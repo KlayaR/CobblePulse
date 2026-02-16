@@ -80,6 +80,6 @@ CobblePulse stays ahead of the meta without manual intervention. The included Gi
 * **Base Data:** [PokeAPI](https://pokeapi.co/)
 * **Competitive Sets:** [Smogon](https://www.smogon.com/) / [Showdown](https://pokemonshowdown.com/)
 * **Icons & Sprites:** [GitHub/PokeAPI Sprites](https://github.com/PokeAPI/sprites)
-* **Spawn Data:** [Cobbleverse](https://www.lumyverse.com/cobbleverse/all-pokemon-in-cobbleverse/))
+* **Spawn Data:** [Cobbleverse](https://www.lumyverse.com/cobbleverse/all-pokemon-in-cobbleverse/)
 
 ---
