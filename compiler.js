@@ -1,151 +1,237 @@
 const fs = require("fs");
+const axios = require("axios");
+
+// --- CONFIGURATION ---
+const SPREADSHEET_CSV_URL =
+  "https://raw.githubusercontent.com/KlayaR/CobblePulse/main/spawns.csv";
 
 const smogonToPokeApiMap = {
   meowscarada: "meowscarada",
   "iron-valiant": "iron-valiant",
   "roaring-moon": "roaring-moon",
+  "great-tusk": "great-tusk",
+  "walking-wake": "walking-wake",
+  "iron-leaves": "iron-leaves",
 };
 
-const pokemonDB = {};
+let pokemonDB = {};
 
-async function buildDatabase() {
-  console.log("🚀 STARTING DEEP-SCAN BUILD...");
-  try {
-    await processSmogonTiers();
-    fs.writeFileSync("localDB.json", JSON.stringify(pokemonDB, null, 2));
-    console.log("✅ DONE! Check localDB.json now.");
-  } catch (error) {
-    console.error("❌ CRITICAL ERROR:", error);
+/**
+ * HELPER: BULLETPROOF CSV PARSER
+ * This safely handles commas inside quotes (e.g. "Oak Forest, Birch Forest")
+ */
+function parseCSV(text) {
+  // Auto-detect the delimiter by checking the first line
+  const firstLine = text.split("\n")[0];
+  const delimiter =
+    firstLine.split(";").length > firstLine.split(",").length ? ";" : ",";
+
+  let result = [],
+    row = [],
+    inQuotes = false,
+    val = "";
+
+  for (let i = 0; i < text.length; i++) {
+    let char = text[i];
+    if (inQuotes) {
+      if (char === '"' && text[i + 1] === '"') {
+        val += '"';
+        i++;
+      } else if (char === '"') {
+        inQuotes = false;
+      } else {
+        val += char;
+      }
+    } else {
+      if (char === '"') {
+        inQuotes = true;
+      } else if (char === delimiter) {
+        // Clean up newlines inside cells to be neat comma lists
+        row.push(val.trim().replace(/\n|\r/g, ", "));
+        val = "";
+      } else if (char === "\n" || char === "\r") {
+        row.push(val.trim().replace(/\n|\r/g, ", "));
+        result.push(row);
+        row = [];
+        val = "";
+        if (char === "\r" && text[i + 1] === "\n") i++; // Handle Windows line breaks
+      } else {
+        val += char;
+      }
+    }
   }
+  if (val || text[text.length - 1] === delimiter)
+    row.push(val.trim().replace(/\n|\r/g, ", "));
+  if (row.length > 0) result.push(row);
+  return result;
 }
 
-async function processSmogonTiers() {
-  const tiers = ["ubers", "ou", "uu", "ru"];
-
-  for (const tier of tiers) {
-    console.log(`\n📦 PROCESSING TIER: ${tier.toUpperCase()}`);
-
-    const statsRes = await fetch(
-      `https://pkmn.github.io/smogon/data/stats/gen9${tier}.json`,
-    );
-    const setsRes = await fetch(
-      `https://pkmn.github.io/smogon/data/sets/gen9${tier}.json`,
-    );
-
-    if (!statsRes.ok || !setsRes.ok) {
-      console.log(`⚠️  Skipping ${tier} - API not responding.`);
-      continue;
+/**
+ * STRATEGY PARSER
+ * Extracts abilities, items, and moves from Smogon tier data
+ */
+function parseSets(name, stats, setsData) {
+  const variants = [name, name.replace("-", " "), name.split("-")[0]];
+  let sets = null;
+  for (const v of variants) {
+    if (setsData[v]) {
+      sets = setsData[v];
+      break;
     }
+  }
+  if (!sets) return [];
 
-    const statsData = await statsRes.json();
-    const setsData = await setsRes.json();
-    const pokemonStats = statsData.pokemon || statsData.data || statsData;
+  return Object.entries(sets).map(([setName, details]) => {
+    let rawAbility =
+      details.abilities ||
+      details.ability ||
+      details.Abilities ||
+      details.Ability;
+    if (!rawAbility || rawAbility === "Any") {
+      rawAbility =
+        Object.keys(stats.abilities || {}).sort(
+          (a, b) => stats.abilities[b] - stats.abilities[a],
+        )[0] || "Any";
+    }
+    return {
+      name: setName,
+      ability: Array.isArray(rawAbility)
+        ? rawAbility.join(" / ")
+        : typeof rawAbility === "object"
+          ? Object.values(rawAbility).join(" / ")
+          : rawAbility,
+      item: (Array.isArray(details.item)
+        ? details.item.join(" / ")
+        : String(details.item || "None")
+      )
+        .split(",")
+        .join(" / "),
+      nature: Array.isArray(details.nature || details.natures)
+        ? (details.nature || details.natures).join(" / ")
+        : details.nature || "Hardy",
+      teraType: Array.isArray(details.teratypes || details.teraType)
+        ? (details.teratypes || details.teraType).join(" / ")
+        : details.teraType || "Normal",
+      evs:
+        Object.entries(details.evs || {})
+          .map(([s, v]) => `${v} ${s.toUpperCase()}`)
+          .join(" / ") || "None",
+      moves: (details.moves || [])
+        .map((m) => (Array.isArray(m) ? m.join(" / ") : m))
+        .slice(0, 4),
+    };
+  });
+}
 
-    Object.entries(pokemonStats).forEach(([smogonName, stats], index) => {
-      let cleanName = smogonName.toLowerCase().replace(/[^a-z0-9]/g, "");
-      if (smogonToPokeApiMap[cleanName])
-        cleanName = smogonToPokeApiMap[cleanName];
+/**
+ * MAIN BUILD ENGINE
+ */
+async function buildDatabase() {
+  console.log("🚀 STARTING FINAL CONSOLIDATED BUILD...");
+  try {
+    // 1. Process Spreadsheet Spawns
+    console.log("🔍 Fetching and parsing spawns.csv...");
+    const spreadsheetRes = await axios.get(SPREADSHEET_CSV_URL);
+    const rows = parseCSV(spreadsheetRes.data);
+
+    for (let i = 1; i < rows.length; i++) {
+      const row = rows[i];
+      if (row.length < 5 || !row[1]) continue;
+
+      const nameRaw = row[1];
+      const cleanName = nameRaw.toLowerCase().replace(/[^a-z0-9]/g, "");
+      const spawn = row[3] || "Unknown";
+      const rarity = row[4] || "Standard";
+      const condition = row[5] || "";
+      const forms = row[6] || "";
 
       if (!pokemonDB[cleanName]) {
-        pokemonDB[cleanName] = {
-          name: smogonName,
-          locations: [],
-          allRanks: [],
-        };
+        pokemonDB[cleanName] = { name: nameRaw, locations: [], allRanks: [] };
       }
 
-      let strategies = [];
-      // Look for the Pokemon in the sets data (handling name variations)
-      const curatedSets =
-        setsData[smogonName] || setsData[smogonName.replace("-", " ")] || {};
+      pokemonDB[cleanName].locations.push({
+        spawn: spawn,
+        rarity: rarity,
+        condition: condition,
+        forms: forms,
+      });
+    }
+    console.log(
+      `✅ Processed spreadsheet spawns for ${Object.keys(pokemonDB).length} Pokémon!`,
+    );
 
-      if (Object.keys(curatedSets).length > 0) {
-        for (const [setName, setDetails] of Object.entries(curatedSets)) {
-          // --- BRUTE FORCE ABILITY DETECTION ---
-          // We check every possible variation Smogon uses
-          let rawAbility =
-            setDetails.abilities ||
-            setDetails.ability ||
-            setDetails.Abilities ||
-            setDetails.Ability ||
-            "Any";
+    // 2. Enrich with Smogon Competitive Data
+    const tiers = ["ubers", "ou", "uu", "ru", "lc"];
+    for (const tier of tiers) {
+      console.log(`📦 ENRICHING TIER: ${tier.toUpperCase()}`);
+      try {
+        const statsRes = await axios.get(
+          `https://pkmn.github.io/smogon/data/stats/gen9${tier}.json`,
+        );
+        const setsRes = await axios.get(
+          `https://pkmn.github.io/smogon/data/sets/gen9${tier}.json`,
+        );
+        const statsData =
+          statsRes.data.pokemon || statsRes.data.data || statsRes.data;
+        const setsData = setsRes.data;
 
-          // Smogon often stores abilities as an array: ["Multiscale"]
-          // Or an object: { "0": "Multiscale" }
-          let abilityValue = "Any";
-          if (Array.isArray(rawAbility)) {
-            abilityValue = rawAbility.join(" / ");
-          } else if (typeof rawAbility === "object" && rawAbility !== null) {
-            abilityValue = Object.values(rawAbility).join(" / ");
-          } else {
-            abilityValue = rawAbility;
+        Object.entries(statsData).forEach(([smogonName, stats], index) => {
+          let cleanName = smogonName.toLowerCase().replace(/[^a-z0-9]/g, "");
+          if (smogonToPokeApiMap[cleanName])
+            cleanName = smogonToPokeApiMap[cleanName];
+
+          if (!pokemonDB[cleanName]) {
+            pokemonDB[cleanName] = {
+              name: smogonName,
+              locations: [],
+              allRanks: [],
+            };
           }
 
-          // --- BRUTE FORCE TERA DETECTION ---
-          let rawTera =
-            setDetails.teratypes ||
-            setDetails.teraTypes ||
-            setDetails.teraType ||
-            "Normal";
-          let teraValue = Array.isArray(rawTera)
-            ? rawTera.join(" / ")
-            : rawTera;
-
-          // --- BRUTE FORCE NATURE DETECTION ---
-          let rawNature = setDetails.natures || setDetails.nature || "Hardy";
-          let natureValue = Array.isArray(rawNature)
-            ? rawNature.join(" / ")
-            : rawNature;
-
-          // --- MOVES & EVs ---
-          const parsedMoves = (setDetails.moves || [])
-            .map((m) => (Array.isArray(m) ? m.join(" / ") : m))
-            .slice(0, 4);
-          const evs = setDetails.evs || {};
-          const evString =
-            Object.entries(evs)
-              .map(([s, v]) => `${v} ${s.toUpperCase()}`)
-              .join(" / ") || "None";
-
-          strategies.push({
-            name: setName,
-            ability: abilityValue,
-            item: setDetails.item || "Leftovers",
-            nature: natureValue,
-            teraType: teraValue,
-            evs: evString,
-            moves: parsedMoves,
+          const usage = stats.usage
+            ? typeof stats.usage === "number"
+              ? stats.usage
+              : stats.usage.weighted || 0
+            : 0;
+          pokemonDB[cleanName].allRanks.push({
+            tier: tier,
+            rank: index + 1,
+            usage: (usage * 100).toFixed(2),
+            strategies: parseSets(smogonName, stats, setsData),
           });
-        }
+        });
+      } catch (e) {
+        /* Skip missing tiers */
       }
+    }
 
-      // Fallback for Usage Stats
-      const usage = stats.usage
-        ? typeof stats.usage === "number"
-          ? stats.usage
-          : stats.usage.weighted || 0
-        : 0;
-
-      pokemonDB[cleanName].allRanks.push({
-        tier: tier,
-        rank: index + 1,
-        usage: (usage * 100).toFixed(2),
-        strategies:
-          strategies.length > 0
-            ? strategies
-            : [
-                {
-                  name: "Standard Usage",
-                  ability: "Check Stats",
-                  item: "Multiple",
-                  nature: "Various",
-                  teraType: "Normal",
-                  evs: "Standard",
-                  moves: [],
-                },
-              ],
-      });
+    // 3. Final Fallback for Untiered Pokémon (like Charmander)
+    Object.values(pokemonDB).forEach((p) => {
+      if (p.allRanks.length === 0) {
+        p.allRanks.push({
+          tier: "Untiered",
+          rank: "N/A",
+          usage: "0.00",
+          strategies: [
+            {
+              name: "Standard",
+              ability: "Any",
+              item: "Leftovers",
+              nature: "Any",
+              teraType: "Normal",
+              evs: "N/A",
+              moves: ["Tackle"],
+            },
+          ],
+        });
+      }
     });
+
+    // 4. Save to localDB.json
+    fs.writeFileSync("localDB.json", JSON.stringify(pokemonDB, null, 2));
+    console.log("✅ DONE! localDB.json is fixed and complete.");
+  } catch (error) {
+    console.error("❌ ERROR:", error.message);
   }
 }
 
