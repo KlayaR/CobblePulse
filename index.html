@@ -572,14 +572,15 @@
         setupEventListeners();
 
         try {
+          // Only fetch your local database - it has everything!
           const dbResponse = await fetch("./localDB.json");
-          localDB = await dbResponse.json();
-        } catch (e) {
-          console.error("Make sure you are running a local server.", e);
-        }
+          window.localDB = await dbResponse.json();
 
-        await fetchAllPokemon();
-        applyFilters();
+          // Directly render using your local data
+          renderTable();
+        } catch (e) {
+          console.error("Data load failed. Make sure localDB.json exists.", e);
+        }
       }
 
       async function fetchAllPokemon() {
