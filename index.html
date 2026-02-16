@@ -597,11 +597,17 @@
           }
 
           localDB = await dbResponse.json();
-          window.localDB = localDB;
+          window.localDB = localDB; // Also set on window for debugging
+
           console.log(
             "LocalDB loaded:",
             Object.keys(localDB).length,
             "entries",
+          );
+          console.log("Type of localDB:", typeof localDB);
+          console.log(
+            "Is it an object?",
+            localDB !== null && typeof localDB === "object",
           );
 
           // Directly render using your local data
@@ -757,7 +763,8 @@
             const dbEntry = localDB[p.cleanName] || localDB[p.name] || {};
             const source = (dbEntry.source || "").toLowerCase();
             return (
-              p.name.includes(query) ||
+              p.name.toLowerCase().includes(query) ||
+              p.cleanName.includes(query) ||
               p.id.toString() === query ||
               source.includes(query)
             );
