@@ -577,38 +577,10 @@
           window.localDB = await dbResponse.json();
 
           // Directly render using your local data
-          renderTable();
+          allPokemon = Object.values(localDB);
+          renderTable(allPokemon);
         } catch (e) {
           console.error("Data load failed. Make sure localDB.json exists.", e);
-        }
-      }
-
-      async function fetchAllPokemon() {
-        try {
-          // Increased limit to 1300 to catch forms like Calyrex-Shadow (ID 10194)
-          const response = await fetch(
-            "https://pokeapi.co/api/v2/pokemon?limit=1300",
-          );
-          const data = await response.json();
-
-          allPokemon = data.results.map((p) => {
-            // Safely extract the true ID from the URL (Fixes the 10000+ ID issue)
-            const urlParts = p.url.split("/");
-            const id = parseInt(urlParts[urlParts.length - 2]);
-
-            // Matches the exact cleaning logic your compiler uses!
-            const cleanName = p.name.toLowerCase().replace(/[^a-z0-9]/g, "");
-
-            return {
-              id: id,
-              name: p.name,
-              cleanName: cleanName,
-              sprite: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`,
-              types: [],
-            };
-          });
-        } catch (error) {
-          DOM.list.innerHTML = `<tr><td colspan="4" class="loading">Error loading PokeAPI data.</td></tr>`;
         }
       }
 
@@ -649,21 +621,12 @@
               `;
       }
 
-      async function renderTable(pokemonArray) {
+      function renderTable(pokemonArray) {
         DOM.list.innerHTML = `<tr><td colspan="4" class="loading">Loading All Pokémon...</td></tr>`;
 
         let html = "";
         for (let i = 0; i < pokemonArray.length; i++) {
           const p = pokemonArray[i];
-
-          if (p.types.length === 0) {
-            try {
-              const details = await getPokemonDetails(p.id);
-              p.types = details.types.map((t) => t.type.name);
-            } catch (e) {
-              p.types = ["normal"];
-            }
-          }
 
           const typeHtml = p.types
             .map((t) => `<span class="type-badge type-${t}">${t}</span>`)
