@@ -492,6 +492,154 @@
         border-color: var(--accent-primary);
         color: var(--accent-primary);
       }
+
+      /* --- FILTER CHIPS --- */
+      .filter-chips {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+      .filter-section h4 {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        margin-bottom: 8px;
+      }
+      .type-filter-badge {
+        cursor: pointer;
+        opacity: 0.4;
+        transition: all 0.2s;
+        position: relative;
+        user-select: none;
+      }
+      .type-filter-badge:hover {
+        opacity: 0.7;
+        transform: scale(1.05);
+      }
+      .type-filter-badge.active {
+        opacity: 1;
+        box-shadow: 0 0 0 2px var(--accent-primary);
+      }
+      .type-filter-badge.active::after {
+        content: "✓";
+        position: absolute;
+        top: -4px;
+        right: -4px;
+        background: var(--accent-primary);
+        color: white;
+        font-size: 0.6rem;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+      }
+      .filter-chip {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 12px;
+        border-radius: 20px;
+        border: 1px solid var(--glass-border);
+        background: rgba(0, 0, 0, 0.2);
+        color: var(--text-muted);
+        font-size: 0.85rem;
+        cursor: pointer;
+        transition: all 0.2s;
+        user-select: none;
+      }
+      .filter-chip:hover {
+        border-color: var(--accent-primary);
+        background: rgba(233, 69, 96, 0.1);
+      }
+      .filter-chip.active {
+        border-color: var(--accent-primary);
+        background: rgba(233, 69, 96, 0.2);
+        color: var(--accent-primary);
+      }
+      .filter-chip-count {
+        font-size: 0.75rem;
+        opacity: 0.7;
+      }
+
+      /* --- ADVANCED FILTERS --- */
+      .advanced-filters {
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid var(--glass-border);
+        border-radius: 8px;
+        padding: 15px;
+        margin-bottom: 15px;
+        display: none;
+      }
+      .advanced-filters.open {
+        display: block;
+      }
+      .advanced-toggle {
+        padding: 6px 12px;
+        border-radius: 8px;
+        border: 1px solid var(--glass-border);
+        background: rgba(0, 0, 0, 0.2);
+        color: var(--text-muted);
+        font-size: 0.85rem;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .advanced-toggle:hover {
+        border-color: var(--accent-primary);
+        color: var(--accent-primary);
+      }
+      .filter-section {
+        margin-bottom: 15px;
+      }
+      .filter-section:last-child {
+        margin-bottom: 0;
+      }
+      .filter-section h4 {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+      }
+      .checkbox-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .checkbox-label {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 0.8rem;
+        cursor: pointer;
+        user-select: none;
+      }
+      .checkbox-label input {
+        cursor: pointer;
+      }
+      .stat-slider {
+        display: grid;
+        grid-template-columns: 60px 1fr 60px;
+        gap: 8px;
+        align-items: center;
+        margin-bottom: 8px;
+      }
+      .stat-slider label {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+      }
+      .stat-slider input[type="range"] {
+        width: 100%;
+      }
+      .stat-slider span {
+        font-size: 0.75rem;
+        text-align: right;
+      }
+
       .about-content {
         padding: 30px;
         line-height: 1.8;
@@ -784,15 +932,85 @@
             <input
               type="text"
               id="searchInput"
-              placeholder="Search by name or Dex ID..."
+              placeholder="Search: name, #id, type:fire, ability:levitate, move:earthquake, speed>100"
             />
             <button class="search-clear" id="searchClear">&times;</button>
           </div>
-          <select id="typeFilter">
-            <option value="all">All Types</option>
-          </select>
         </div>
       </header>
+
+      <div class="filter-chips" id="filterChips" style="display: none">
+        <div class="filter-section">
+          <h4
+            style="
+              font-size: 0.75rem;
+              color: var(--text-muted);
+              text-transform: uppercase;
+              margin-bottom: 8px;
+            "
+          >
+            Filter by Type:
+          </h4>
+          <div
+            id="typeFilterBadges"
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              gap: 6px;
+              margin-bottom: 12px;
+            "
+          >
+            <!-- Type badges injected here -->
+          </div>
+        </div>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap">
+          <div class="filter-chip" id="spawnsChip">
+            <span>📍 Has Spawns</span>
+          </div>
+          <div class="filter-chip" id="legendaryChip">
+            <span>⭐ Legendary</span>
+          </div>
+          <button class="advanced-toggle" id="advancedToggle">
+            ⚙️ Advanced Filters
+          </button>
+        </div>
+      </div>
+
+      <div class="advanced-filters" id="advancedFilters">
+        <div class="filter-section">
+          <h4>Base Stats (Minimum)</h4>
+          <div class="stat-slider">
+            <label>HP</label>
+            <input type="range" id="hpSlider" min="0" max="255" value="0" />
+            <span id="hpValue">0</span>
+          </div>
+          <div class="stat-slider">
+            <label>ATK</label>
+            <input type="range" id="atkSlider" min="0" max="255" value="0" />
+            <span id="atkValue">0</span>
+          </div>
+          <div class="stat-slider">
+            <label>DEF</label>
+            <input type="range" id="defSlider" min="0" max="255" value="0" />
+            <span id="defValue">0</span>
+          </div>
+          <div class="stat-slider">
+            <label>Sp.ATK</label>
+            <input type="range" id="spaSlider" min="0" max="255" value="0" />
+            <span id="spaValue">0</span>
+          </div>
+          <div class="stat-slider">
+            <label>Sp.DEF</label>
+            <input type="range" id="spdSlider" min="0" max="255" value="0" />
+            <span id="spdValue">0</span>
+          </div>
+          <div class="stat-slider">
+            <label>SPE</label>
+            <input type="range" id="speSlider" min="0" max="255" value="0" />
+            <span id="speValue">0</span>
+          </div>
+        </div>
+      </div>
 
       <div class="tabs" id="tabContainer">
         <button class="tab-btn active" data-tab="about">About</button>
@@ -851,11 +1069,25 @@
         localStorage.getItem("cobblePulseFavorites") || "[]",
       );
 
+      // Filter state
+      let filterState = {
+        types: [], // Array for multi-type selection
+        hasSpawns: false,
+        isLegendary: false,
+        stats: {
+          hp: 0,
+          attack: 0,
+          defense: 0,
+          "special-attack": 0,
+          "special-defense": 0,
+          speed: 0,
+        },
+      };
+
       const DOM = {
         list: document.getElementById("pokemonList"),
         searchInput: document.getElementById("searchInput"),
         searchClear: document.getElementById("searchClear"),
-        typeFilter: document.getElementById("typeFilter"),
         tabs: document.querySelectorAll(".tab-btn"),
         modalOverlay: document.getElementById("modalOverlay"),
         modalBody: document.getElementById("modalBody"),
@@ -865,6 +1097,18 @@
         randomBtn: document.getElementById("randomBtn"),
         aboutPanel: document.getElementById("aboutPanel"),
         tableContainer: document.getElementById("tableContainer"),
+        filterChips: document.getElementById("filterChips"),
+        typeFilterBadges: document.getElementById("typeFilterBadges"),
+        spawnsChip: document.getElementById("spawnsChip"),
+        legendaryChip: document.getElementById("legendaryChip"),
+        advancedToggle: document.getElementById("advancedToggle"),
+        advancedFilters: document.getElementById("advancedFilters"),
+        hpSlider: document.getElementById("hpSlider"),
+        atkSlider: document.getElementById("atkSlider"),
+        defSlider: document.getElementById("defSlider"),
+        spaSlider: document.getElementById("spaSlider"),
+        spdSlider: document.getElementById("spdSlider"),
+        speSlider: document.getElementById("speSlider"),
       };
 
       const POKEMON_TYPES = [
@@ -889,7 +1133,6 @@
       ];
 
       async function init() {
-        populateTypeFilter();
         setupEventListeners();
         applyFilters(); // Show About tab immediately, before DB loads
 
@@ -943,9 +1186,23 @@
 
           applyFilters(); // Show About tab on initial load
 
-          // Open modal if URL has ?pokemon= param (shared link)
+          // Restore state from URL params
           const urlParams = new URLSearchParams(window.location.search);
+          const tabParam = urlParams.get("tab");
           const pokemonParam = urlParams.get("pokemon");
+
+          // Restore tab if specified
+          if (tabParam) {
+            const tabBtn = document.querySelector(`[data-tab="${tabParam}"]`);
+            if (tabBtn) {
+              DOM.tabs.forEach((t) => t.classList.remove("active"));
+              tabBtn.classList.add("active");
+              currentTab = tabParam;
+              applyFilters();
+            }
+          }
+
+          // Open modal if pokemon specified
           if (pokemonParam && localDB[pokemonParam]) {
             const p = localDB[pokemonParam];
             openModal(p.id, p.cleanName);
@@ -1049,14 +1306,61 @@
         DOM.list.innerHTML = html;
       }
 
+      // Parse smart search queries (type:fire, ability:levitate, move:earthquake, speed>100)
+      function parseSmartSearch(query) {
+        const filters = {
+          text: "",
+          type: null,
+          ability: null,
+          move: null,
+          tier: null,
+          statFilters: {},
+        };
+
+        const parts = query.split(/\s+/);
+
+        parts.forEach((part) => {
+          if (part.startsWith("type:")) {
+            filters.type = part.substring(5).toLowerCase();
+          } else if (part.startsWith("ability:")) {
+            filters.ability = part.substring(8).toLowerCase().replace(/-/g, "");
+          } else if (part.startsWith("move:")) {
+            filters.move = part.substring(5).toLowerCase().replace(/-/g, "");
+          } else if (part.startsWith("tier:")) {
+            filters.tier = part.substring(5).toLowerCase();
+          } else if (
+            /^(hp|atk|def|spa|spd|spe|speed|attack|defense)([><]=?)(\d+)$/.test(
+              part,
+            )
+          ) {
+            const match = part.match(
+              /^(hp|atk|def|spa|spd|spe|speed|attack|defense)([><]=?)(\d+)$/,
+            );
+            const stat = match[1];
+            const op = match[2];
+            const val = parseInt(match[3]);
+            filters.statFilters[stat] = { op, val };
+          } else if (part) {
+            filters.text += (filters.text ? " " : "") + part;
+          }
+        });
+
+        return filters;
+      }
+
       function applyFilters() {
         const query = DOM.searchInput.value.toLowerCase();
-        const typeFilter = DOM.typeFilter.value;
         const sortBy = DOM.sortSelect ? DOM.sortSelect.value : "dex";
 
         // Show toolbar only on "all" tab
         if (DOM.toolbar) {
           DOM.toolbar.style.display = currentTab === "all" ? "flex" : "none";
+        }
+
+        // Show filter chips only when not on about tab
+        if (DOM.filterChips) {
+          DOM.filterChips.style.display =
+            currentTab === "about" ? "none" : "flex";
         }
 
         let filtered = [];
@@ -1157,22 +1461,149 @@
           filtered = filtered.slice(0, 50);
         }
 
-        // Search
+        // Smart search parsing
+        const searchFilters = parseSmartSearch(query);
+
         if (query) {
           filtered = filtered.filter((p) => {
-            return (
-              p.name.toLowerCase().includes(query) ||
-              p.cleanName.includes(query) ||
-              p.id.toString() === query
+            const dbEntry = localDB[p.cleanName] || localDB[p.name] || {};
+
+            // Text search (name/ID)
+            if (searchFilters.text) {
+              const textMatch =
+                p.name.toLowerCase().includes(searchFilters.text) ||
+                p.cleanName.includes(searchFilters.text) ||
+                p.id.toString() === searchFilters.text;
+              if (!textMatch) return false;
+            }
+
+            // Type filter
+            if (searchFilters.type) {
+              if (!p.types.includes(searchFilters.type)) return false;
+            }
+
+            // Ability filter
+            if (searchFilters.ability && dbEntry.abilities) {
+              const hasAbility = dbEntry.abilities.some((a) =>
+                a.name.replace(/-/g, "").includes(searchFilters.ability),
+              );
+              if (!hasAbility) return false;
+            }
+
+            // Move filter
+            if (searchFilters.move && dbEntry.allRanks) {
+              const hasMove = dbEntry.allRanks.some(
+                (rank) =>
+                  rank.strategies &&
+                  rank.strategies.some(
+                    (strat) =>
+                      strat.moves &&
+                      strat.moves.some((m) =>
+                        m
+                          .toLowerCase()
+                          .replace(/-/g, "")
+                          .replace(/\s/g, "")
+                          .includes(searchFilters.move),
+                      ),
+                  ),
+              );
+              if (!hasMove) return false;
+            }
+
+            // Tier filter
+            if (searchFilters.tier && dbEntry.allRanks) {
+              const inTier = dbEntry.allRanks.some((r) =>
+                r.tier.toLowerCase().includes(searchFilters.tier),
+              );
+              if (!inTier) return false;
+            }
+
+            // Stat filters
+            if (
+              Object.keys(searchFilters.statFilters).length > 0 &&
+              dbEntry.stats
+            ) {
+              for (let statKey in searchFilters.statFilters) {
+                const { op, val } = searchFilters.statFilters[statKey];
+                let actualStat = 0;
+
+                // Map short names to full stat names
+                const statMap = {
+                  hp: "hp",
+                  atk: "attack",
+                  attack: "attack",
+                  def: "defense",
+                  defense: "defense",
+                  spa: "special-attack",
+                  spd: "special-defense",
+                  spe: "speed",
+                  speed: "speed",
+                };
+                const fullStatName = statMap[statKey];
+                actualStat = dbEntry.stats[fullStatName] || 0;
+
+                if (op === ">" && actualStat <= val) return false;
+                if (op === "<" && actualStat >= val) return false;
+                if (op === ">=" && actualStat < val) return false;
+                if (op === "<=" && actualStat > val) return false;
+              }
+            }
+
+            return true;
+          });
+        }
+
+        // Filter chip: Types (multi-select)
+        if (filterState.types.length > 0) {
+          filtered = filtered.filter((p) =>
+            filterState.types.some((type) => p.types.includes(type)),
+          );
+        }
+
+        // Filter chip: Has Spawns
+        if (filterState.hasSpawns) {
+          filtered = filtered.filter((p) => {
+            const dbEntry = localDB[p.cleanName] || localDB[p.name] || {};
+            return dbEntry.locations && dbEntry.locations.length > 0;
+          });
+        }
+
+        // Filter chip: Legendary
+        if (filterState.isLegendary) {
+          filtered = filtered.filter((p) => {
+            const dbEntry = localDB[p.cleanName] || localDB[p.name] || {};
+            // This requires species data - we'll mark legendaries in the DB compilation
+            // For now, just check if the name contains legendary keywords
+            return p.name.match(
+              /(mewtwo|lugia|ho-oh|kyogre|groudon|rayquaza|dialga|palkia|giratina|reshiram|zekrom|kyurem|xerneas|yveltal|zygarde|solgaleo|lunala|necrozma|zacian|zamazenta|eternatus|calyrex|koraidon|miraidon)/i,
             );
           });
         }
 
-        // Type filter
-        if (typeFilter !== "all") {
-          filtered = filtered.filter(
-            (p) => p.types.includes(typeFilter) || p.types.length === 0,
-          );
+        // Advanced filters: Base stats
+        if (
+          filterState.stats.hp > 0 ||
+          filterState.stats.attack > 0 ||
+          filterState.stats.defense > 0 ||
+          filterState.stats["special-attack"] > 0 ||
+          filterState.stats["special-defense"] > 0 ||
+          filterState.stats.speed > 0
+        ) {
+          filtered = filtered.filter((p) => {
+            const dbEntry = localDB[p.cleanName] || localDB[p.name] || {};
+            if (!dbEntry.stats) return false;
+
+            return (
+              (dbEntry.stats.hp || 0) >= filterState.stats.hp &&
+              (dbEntry.stats.attack || 0) >= filterState.stats.attack &&
+              (dbEntry.stats.defense || 0) >= filterState.stats.defense &&
+              (dbEntry.stats["special-attack"] || 0) >=
+                filterState.stats["special-attack"] &&
+              (dbEntry.stats["special-defense"] || 0) >=
+                filterState.stats["special-defense"] &&
+              (dbEntry.stats.speed || 0) >= filterState.stats.speed
+            );
+          });
         }
 
         // Sort (only for "all" tab)
@@ -1191,21 +1622,19 @@
         renderTable(filtered);
       }
 
-      function populateTypeFilter() {
-        POKEMON_TYPES.forEach((type) => {
-          const option = document.createElement("option");
-          option.value = type;
-          option.textContent = type.charAt(0).toUpperCase() + type.slice(1);
-          DOM.typeFilter.appendChild(option);
-        });
-      }
-
       // --- MODAL WITH REDESIGNED GRID ---
       async function openModal(id, cleanName) {
         DOM.modalOverlay.classList.add("active");
         DOM.modalBody.innerHTML = `<div class="loading">Fetching Data...</div>`;
-        // Push URL so the modal has a shareable link
-        history.pushState({ modal: cleanName }, "", `?pokemon=${cleanName}`);
+        // Push URL with both tab and pokemon
+        const params = new URLSearchParams();
+        params.set("tab", currentTab);
+        params.set("pokemon", cleanName);
+        history.pushState(
+          { tab: currentTab, modal: cleanName },
+          "",
+          `?${params.toString()}`,
+        );
 
         try {
           const details = await getPokemonDetails(id);
@@ -1459,7 +1888,10 @@
           const favBtnHtml = `<button class="fav-btn" id="favBtn" title="${isFav ? "Remove from favorites" : "Add to favorites"}">${isFav ? "⭐" : "🤍"}</button>`;
 
           // --- SHARE BUTTON ---
-          const shareUrl = `${window.location.origin}${window.location.pathname}?pokemon=${cleanName}`;
+          const shareParams = new URLSearchParams();
+          shareParams.set("tab", currentTab);
+          shareParams.set("pokemon", cleanName);
+          const shareUrl = `${window.location.origin}${window.location.pathname}?${shareParams.toString()}`;
           const shareBtnHtml = `
             <button id="shareBtn" title="Copy share link" style="
               background: none; border: 1px solid var(--glass-border);
@@ -1470,7 +1902,25 @@
 
           DOM.modalBody.innerHTML = `
             <div class="modal-header">
-                <img src="${details.sprites.front_default}" alt="${details.name}" class="modal-sprite" id="modalSprite">
+                <div style="position: relative; display: inline-block;">
+                  <img src="${details.sprites.front_default}" alt="${details.name}" class="modal-sprite" id="modalSprite">
+                  <button class="shiny-btn" id="shinyBtn" title="Shiny Toggle" style="
+                    position: absolute;
+                    top: -6px;
+                    right: -6px;
+                    background: rgba(0, 0, 0, 0.5);
+                    backdrop-filter: blur(4px);
+                    margin: 0;
+                    padding: 4px;
+                    font-size: 0.65rem;
+                    border-radius: 4px;
+                    width: 24px;
+                    height: 24px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  ">✨</button>
+                </div>
                 <div class="modal-title">
                     <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin-bottom: 6px;">
                         <a href="${pokemonDbUrl}" target="_blank" title="View on PokemonDB"
@@ -1479,7 +1929,6 @@
                         </a>
                         ${favBtnHtml}
                         ${shareBtnHtml}
-                        <button class="shiny-btn" id="shinyBtn" title="Toggle shiny">✨</button>
                         <span class="tier-badge">${currentBadge}</span>
                         ${usageBadge}
                         ${sourceTag}
@@ -1576,8 +2025,12 @@
 
       function closeModal() {
         DOM.modalOverlay.classList.remove("active");
-        // Clean the URL when modal is closed
-        history.pushState({}, "", window.location.pathname);
+        // Clean the URL but keep the tab
+        if (currentTab && currentTab !== "about") {
+          history.pushState({ tab: currentTab }, "", `?tab=${currentTab}`);
+        } else {
+          history.pushState({}, "", window.location.pathname);
+        }
       }
 
       // Handle browser back button closing the modal
@@ -1609,7 +2062,26 @@
           applyFilters();
         });
 
-        DOM.typeFilter.addEventListener("change", applyFilters);
+        // Populate type filter badges
+        POKEMON_TYPES.forEach((type) => {
+          const badge = document.createElement("span");
+          badge.className = `type-badge type-${type} type-filter-badge`;
+          badge.textContent = type;
+          badge.dataset.type = type;
+          badge.addEventListener("click", () => {
+            const index = filterState.types.indexOf(type);
+            if (index > -1) {
+              filterState.types.splice(index, 1);
+              badge.classList.remove("active");
+            } else {
+              filterState.types.push(type);
+              badge.classList.add("active");
+            }
+            applyFilters();
+          });
+          DOM.typeFilterBadges.appendChild(badge);
+        });
+
         if (DOM.sortSelect)
           DOM.sortSelect.addEventListener("change", applyFilters);
         if (DOM.randomBtn)
@@ -1620,6 +2092,66 @@
             openModal(p.id, p.cleanName);
           });
 
+        // Filter chip listeners
+        DOM.spawnsChip.addEventListener("click", () => {
+          filterState.hasSpawns = !filterState.hasSpawns;
+          DOM.spawnsChip.classList.toggle("active", filterState.hasSpawns);
+          applyFilters();
+        });
+
+        DOM.legendaryChip.addEventListener("click", () => {
+          filterState.isLegendary = !filterState.isLegendary;
+          DOM.legendaryChip.classList.toggle("active", filterState.isLegendary);
+          applyFilters();
+        });
+
+        // Advanced filters toggle
+        DOM.advancedToggle.addEventListener("click", () => {
+          DOM.advancedFilters.classList.toggle("open");
+        });
+
+        // Stat sliders
+        const sliders = [
+          {
+            elem: DOM.hpSlider,
+            value: document.getElementById("hpValue"),
+            stat: "hp",
+          },
+          {
+            elem: DOM.atkSlider,
+            value: document.getElementById("atkValue"),
+            stat: "attack",
+          },
+          {
+            elem: DOM.defSlider,
+            value: document.getElementById("defValue"),
+            stat: "defense",
+          },
+          {
+            elem: DOM.spaSlider,
+            value: document.getElementById("spaValue"),
+            stat: "special-attack",
+          },
+          {
+            elem: DOM.spdSlider,
+            value: document.getElementById("spdValue"),
+            stat: "special-defense",
+          },
+          {
+            elem: DOM.speSlider,
+            value: document.getElementById("speValue"),
+            stat: "speed",
+          },
+        ];
+
+        sliders.forEach(({ elem, value, stat }) => {
+          elem.addEventListener("input", () => {
+            value.textContent = elem.value;
+            filterState.stats[stat] = parseInt(elem.value);
+            applyFilters();
+          });
+        });
+
         DOM.tabs.forEach((tab) => {
           tab.addEventListener("click", (e) => {
             DOM.tabs.forEach((t) => t.classList.remove("active"));
@@ -1629,6 +2161,13 @@
             // Clear search when changing tabs
             DOM.searchInput.value = "";
             DOM.searchClear.classList.remove("visible");
+
+            // Update URL with tab
+            if (currentTab && currentTab !== "about") {
+              history.pushState({ tab: currentTab }, "", `?tab=${currentTab}`);
+            } else {
+              history.pushState({}, "", window.location.pathname);
+            }
 
             applyFilters();
           });
@@ -2120,7 +2659,7 @@
                     <p style="font-weight: 500; text-transform: capitalize;">${hoverSpan("nature", strat.nature)}</p>
                 </div>
                 <div class="info-card" style="grid-column: span 2; margin: 0; background: rgba(0,0,0,0.3); text-align: center;">
-                    <h4 style="font-size: 0.75rem;">✨ Ability</h4>
+                    <h4 style="font-size: 0.75rem;">🧬 Ability</h4>
                     <p style="text-transform: capitalize; font-weight: 500;">${hoverSpan("ability", strat.ability)}</p>
                 </div>
                 <div class="info-card" style="grid-column: span 2; margin: 0; background: rgba(0,0,0,0.3); text-align: center;">
