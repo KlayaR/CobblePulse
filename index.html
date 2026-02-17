@@ -8,7 +8,6 @@
       rel="stylesheet"
     />
     <title>CobblePulse</title>
-    <link rel="icon" type="image/x-icon" href="Z" />
     <style>
       /* --- GOOGLE FONTS IMPORT --- */
       @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap");
@@ -823,8 +822,8 @@
                 <div class="about-content">
                   <h2>Welcome to CobblePulse! 🎮</h2>
                   <p>
-                    CobblePulse is your guide to <a href="https://www.lumyverse.com/cobbleverse/" target="_blank">Cobbleverse</a> — 
-                    a Minecraft modpack that brings Pokémon into your world. Here you'll find spawn locations, competitive tier rankings, 
+                    CobblePulse is your complete guide to <a href="https://cobblemon.com/" target="_blank">Cobblemon</a> — 
+                    a Minecraft mod that brings Pokémon into your world. Here you'll find spawn locations, competitive tier rankings, 
                     and battle strategies for every Pokémon.
                   </p>
                   
@@ -1075,6 +1074,43 @@
             ? `<span class="tier-badge" style="background: var(--accent-primary); margin-left: 8px;">${stats.usage}% USAGE</span>`
             : "";
 
+          // --- BUILD IMMUNITY HTML ---
+          const immunities = getImmunities(
+            details.types.map((t) => t.type.name),
+            dbEntry.abilities || [],
+          );
+
+          const immunitiesHtml =
+            immunities.length > 0
+              ? `
+              <div class="info-card full-width" style="margin-bottom: 20px;">
+                <h4 style="color: var(--accent-primary); margin-bottom: 12px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">🛡️ Immunities</h4>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                  ${immunities
+                    .map(
+                      (imm) => `
+                    <div style="
+                      display: flex; align-items: center; gap: 6px;
+                      background: rgba(0,0,0,0.3);
+                      border: 1px solid var(--glass-border);
+                      border-radius: 8px;
+                      padding: 6px 10px;
+                    ">
+                      <span class="type-badge type-${imm.type}" style="margin: 0; font-size: 0.7rem;">${imm.type}</span>
+                      ${
+                        imm.source === "ability"
+                          ? `<span style="color: var(--text-muted); font-size: 0.75rem;">${imm.label.split("(")[1]?.replace(")", "") || ""}</span>
+                           ${imm.isHidden ? `<span style="font-size: 0.65rem; color: #a0a0b5; opacity: 0.7;">(hidden)</span>` : ""}`
+                          : `<span style="color: var(--text-muted); font-size: 0.75rem;">Typing</span>`
+                      }
+                    </div>
+                  `,
+                    )
+                    .join("")}
+                </div>
+              </div>`
+              : "";
+
           DOM.modalBody.innerHTML = `
             <div class="modal-header">
                 <img src="${details.sprites.front_default}" alt="${details.name}" class="modal-sprite">
@@ -1093,6 +1129,7 @@
                 </div>
             </div>
             <div>
+                ${immunitiesHtml}
                 ${compHtml}
                 <div class="info-card full-width" style="border-color: var(--accent-primary);">
                     ${locationsHtml}
@@ -1299,6 +1336,82 @@
           steel: 2,
         },
       };
+
+      // Map of abilities that grant immunities
+      const ABILITY_IMMUNITIES = {
+        levitate: { type: "ground", label: "Ground (Levitate)" },
+        "flash-fire": { type: "fire", label: "Fire (Flash Fire)" },
+        "water-absorb": { type: "water", label: "Water (Water Absorb)" },
+        "dry-skin": { type: "water", label: "Water (Dry Skin)" },
+        "volt-absorb": { type: "electric", label: "Electric (Volt Absorb)" },
+        "motor-drive": { type: "electric", label: "Electric (Motor Drive)" },
+        "lightning-rod": {
+          type: "electric",
+          label: "Electric (Lightning Rod)",
+        },
+        "sap-sipper": { type: "grass", label: "Grass (Sap Sipper)" },
+        "earth-eater": { type: "ground", label: "Ground (Earth Eater)" },
+        "well-baked-body": { type: "fire", label: "Fire (Well-Baked Body)" },
+        "wind-rider": { type: "flying", label: "Flying (Wind Rider)" },
+        soundproof: { type: "sound", label: "Sound moves (Soundproof)" },
+        bulletproof: { type: "bullet", label: "Ball/Bomb moves (Bulletproof)" },
+      };
+
+      function getImmunities(types, abilities) {
+        let immunities = [];
+
+        // 1. Type-based immunities
+        const typeImmunityMap = {
+          normal: [],
+          fire: [],
+          water: [],
+          electric: ["ground"],
+          grass: [],
+          ice: [],
+          fighting: ["ghost"],
+          poison: [],
+          ground: [],
+          flying: ["ground"],
+          psychic: [],
+          bug: [],
+          rock: [],
+          ghost: ["normal", "fighting"],
+          dragon: [],
+          dark: ["psychic"],
+          steel: ["poison"],
+          fairy: ["dragon"],
+        };
+
+        types.forEach((t) => {
+          (typeImmunityMap[t] || []).forEach((immune) => {
+            if (!immunities.find((i) => i.type === immune)) {
+              immunities.push({
+                type: immune,
+                label: immune,
+                source: "typing",
+              });
+            }
+          });
+        });
+
+        // 2. Ability-based immunities
+        (abilities || []).forEach((a) => {
+          const abilityImmunity = ABILITY_IMMUNITIES[a.name];
+          if (abilityImmunity) {
+            // Don't duplicate if type already gives it
+            if (!immunities.find((i) => i.type === abilityImmunity.type)) {
+              immunities.push({
+                type: abilityImmunity.type,
+                label: abilityImmunity.label,
+                source: "ability",
+                isHidden: a.isHidden,
+              });
+            }
+          }
+        });
+
+        return immunities;
+      }
 
       function getTacticalMatchups(types) {
         let multipliers = {};
