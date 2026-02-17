@@ -7,35 +7,28 @@ let favorites   = JSON.parse(localStorage.getItem("cobblePulseFavorites") || "[]
 let filterState = {
   types: [],
   hasSpawns: false,
-  isLegendary: false,
-  stats: { hp: 0, attack: 0, defense: 0, "special-attack": 0, "special-defense": 0, speed: 0 },
+  rarity: "all", // "all" | "legendary" | "non-legendary"
 };
 
 const DOM = {
-  list:            document.getElementById("pokemonList"),
-  searchInput:     document.getElementById("searchInput"),
-  searchClear:     document.getElementById("searchClear"),
-  tabs:            document.querySelectorAll(".tab-btn"),
-  modalOverlay:    document.getElementById("modalOverlay"),
-  modalBody:       document.getElementById("modalBody"),
-  closeBtn:        document.getElementById("closeBtn"),
-  toolbar:         document.getElementById("toolbar"),
-  sortSelect:      document.getElementById("sortSelect"),
-  randomBtn:       document.getElementById("randomBtn"),
-  aboutPanel:      document.getElementById("aboutPanel"),
-  tableContainer:  document.getElementById("tableContainer"),
-  filterChips:     document.getElementById("filterChips"),
-  typeFilterBadges:document.getElementById("typeFilterBadges"),
-  spawnsChip:      document.getElementById("spawnsChip"),
-  legendaryChip:   document.getElementById("legendaryChip"),
-  advancedToggle:  document.getElementById("advancedToggle"),
-  advancedFilters: document.getElementById("advancedFilters"),
-  hpSlider:        document.getElementById("hpSlider"),
-  atkSlider:       document.getElementById("atkSlider"),
-  defSlider:       document.getElementById("defSlider"),
-  spaSlider:       document.getElementById("spaSlider"),
-  spdSlider:       document.getElementById("spdSlider"),
-  speSlider:       document.getElementById("speSlider"),
+  list:                  document.getElementById("pokemonList"),
+  searchInput:           document.getElementById("searchInput"),
+  searchClear:           document.getElementById("searchClear"),
+  tabs:                  document.querySelectorAll(".tab-btn"),
+  modalOverlay:          document.getElementById("modalOverlay"),
+  modalBody:             document.getElementById("modalBody"),
+  closeBtn:              document.getElementById("closeBtn"),
+  sortSelect:            document.getElementById("sortSelect"),
+  randomBtn:             document.getElementById("randomBtn"),
+  aboutPanel:            document.getElementById("aboutPanel"),
+  tableContainer:        document.getElementById("tableContainer"),
+  unifiedFilters:        document.getElementById("unifiedFilters"),
+  spawnsChip:            document.getElementById("spawnsChip"),
+  rarityDropdownBtn:     document.getElementById("rarityDropdownBtn"),
+  rarityDropdownPanel:   document.getElementById("rarityDropdownPanel"),
+  typesDropdownBtn:      document.getElementById("typesDropdownBtn"),
+  typesDropdownPanel:    document.getElementById("typesDropdownPanel"),
+  typeCount:             document.getElementById("typeCount"),
 };
 
 const POKEMON_TYPES = ["normal","fire","water","grass","electric","ice","fighting","poison","ground","flying","psychic","bug","rock","ghost","dragon","dark","steel","fairy"];
@@ -72,6 +65,17 @@ function renderTable(pokemonArray) {
   DOM.list.innerHTML = html;
 }
 
+// --- UPDATE TYPE COUNT BADGE ---
+function updateTypeCount() {
+  if (filterState.types.length > 0) {
+    DOM.typeCount.textContent = `(${filterState.types.length})`;
+    DOM.typesDropdownBtn.classList.add("active");
+  } else {
+    DOM.typeCount.textContent = "";
+    DOM.typesDropdownBtn.classList.remove("active");
+  }
+}
+
 // --- EVENT LISTENERS ---
 function setupEventListeners() {
   let timeout = null;
@@ -88,56 +92,85 @@ function setupEventListeners() {
     applyFilters();
   });
 
-  // Type filter badges
+  // --- POPULATE TYPE FILTER BADGES IN DROPDOWN ---
   POKEMON_TYPES.forEach((type) => {
     const badge = document.createElement("span");
     badge.className = `type-badge type-${type} type-filter-badge`;
     badge.textContent = type;
     badge.dataset.type = type;
-    badge.addEventListener("click", () => {
+    badge.addEventListener("click", (e) => {
+      e.stopPropagation(); // Don't close dropdown when clicking a badge
       const index = filterState.types.indexOf(type);
       if (index > -1) { filterState.types.splice(index, 1); badge.classList.remove("active"); }
       else            { filterState.types.push(type);       badge.classList.add("active"); }
+      updateTypeCount();
       applyFilters();
     });
-    DOM.typeFilterBadges.appendChild(badge);
+    DOM.typesDropdownPanel.appendChild(badge);
   });
 
-  if (DOM.sortSelect) DOM.sortSelect.addEventListener("change", applyFilters);
-  if (DOM.randomBtn)  DOM.randomBtn.addEventListener("click", () => {
-    const keys = Object.keys(localDB);
-    const p    = localDB[keys[Math.floor(Math.random() * keys.length)]];
-    openModal(p.id, p.cleanName);
+  // --- TYPES DROPDOWN TOGGLE ---
+  DOM.typesDropdownBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const isOpen = DOM.typesDropdownPanel.classList.contains("open");
+    // Close all dropdowns first
+    document.querySelectorAll(".filter-dropdown-panel").forEach((p) => p.classList.remove("open"));
+    if (!isOpen) DOM.typesDropdownPanel.classList.add("open");
   });
 
+  // --- RARITY DROPDOWN TOGGLE ---
+  DOM.rarityDropdownBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const isOpen = DOM.rarityDropdownPanel.classList.contains("open");
+    // Close all dropdowns first
+    document.querySelectorAll(".filter-dropdown-panel").forEach((p) => p.classList.remove("open"));
+    if (!isOpen) DOM.rarityDropdownPanel.classList.add("open");
+  });
+
+  // --- RARITY OPTION SELECTION ---
+  document.querySelectorAll(".rarity-option").forEach((opt) => {
+    opt.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const value = opt.dataset.value;
+      filterState.rarity = value;
+
+      // Update active state
+      document.querySelectorAll(".rarity-option").forEach((o) => o.classList.remove("active"));
+      opt.classList.add("active");
+
+      // Update button text
+      const labels = { all: "⭐ Rarity", legendary: "⭐ Legendary/Mythical", "non-legendary": "⭐ Non-Legendary" };
+      DOM.rarityDropdownBtn.innerHTML = `${labels[value]} ▾`;
+      DOM.rarityDropdownBtn.classList.toggle("active", value !== "all");
+
+      DOM.rarityDropdownPanel.classList.remove("open");
+      applyFilters();
+    });
+  });
+
+  // --- CLICK OUTSIDE TO CLOSE DROPDOWNS ---
+  document.addEventListener("click", () => {
+    document.querySelectorAll(".filter-dropdown-panel").forEach((p) => p.classList.remove("open"));
+  });
+
+  // --- HAS SPAWNS CHIP ---
   DOM.spawnsChip.addEventListener("click", () => {
     filterState.hasSpawns = !filterState.hasSpawns;
     DOM.spawnsChip.classList.toggle("active", filterState.hasSpawns);
     applyFilters();
   });
-  DOM.legendaryChip.addEventListener("click", () => {
-    filterState.isLegendary = !filterState.isLegendary;
-    DOM.legendaryChip.classList.toggle("active", filterState.isLegendary);
-    applyFilters();
-  });
-  DOM.advancedToggle.addEventListener("click", () => DOM.advancedFilters.classList.toggle("open"));
 
-  // Stat sliders
-  [
-    { elem: DOM.hpSlider,  value: document.getElementById("hpValue"),  stat: "hp" },
-    { elem: DOM.atkSlider, value: document.getElementById("atkValue"), stat: "attack" },
-    { elem: DOM.defSlider, value: document.getElementById("defValue"), stat: "defense" },
-    { elem: DOM.spaSlider, value: document.getElementById("spaValue"), stat: "special-attack" },
-    { elem: DOM.spdSlider, value: document.getElementById("spdValue"), stat: "special-defense" },
-    { elem: DOM.speSlider, value: document.getElementById("speValue"), stat: "speed" },
-  ].forEach(({ elem, value, stat }) => {
-    elem.addEventListener("input", () => {
-      value.textContent = elem.value;
-      filterState.stats[stat] = parseInt(elem.value);
-      applyFilters();
-    });
+  // --- SORT SELECT ---
+  if (DOM.sortSelect) DOM.sortSelect.addEventListener("change", applyFilters);
+
+  // --- RANDOM BUTTON ---
+  if (DOM.randomBtn) DOM.randomBtn.addEventListener("click", () => {
+    const keys = Object.keys(localDB);
+    const p    = localDB[keys[Math.floor(Math.random() * keys.length)]];
+    openModal(p.id, p.cleanName);
   });
 
+  // --- TABS ---
   DOM.tabs.forEach((tab) => {
     tab.addEventListener("click", (e) => {
       DOM.tabs.forEach((t) => t.classList.remove("active"));
@@ -151,6 +184,7 @@ function setupEventListeners() {
     });
   });
 
+  // --- MODAL CLOSE ---
   DOM.closeBtn.addEventListener("click", closeModal);
   DOM.modalOverlay.addEventListener("click", (e) => { if (e.target === DOM.modalOverlay) closeModal(); });
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
