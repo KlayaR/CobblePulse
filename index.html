@@ -283,7 +283,142 @@
         border-color: var(--accent-primary);
       }
 
-      /* About Page Styling */
+      /* --- STAT BARS --- */
+      .stat-bar-container {
+        display: grid;
+        grid-template-columns: 80px 1fr 35px;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 6px;
+      }
+      .stat-label {
+        font-size: 0.72rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+      }
+      .stat-bar-bg {
+        background: rgba(255, 255, 255, 0.07);
+        border-radius: 6px;
+        height: 8px;
+        overflow: hidden;
+      }
+      .stat-bar-fill {
+        height: 100%;
+        border-radius: 6px;
+        transition: width 0.6s ease;
+      }
+      .stat-value {
+        font-size: 0.8rem;
+        font-weight: bold;
+        text-align: right;
+      }
+
+      /* --- SHINY TOGGLE --- */
+      .shiny-btn {
+        background: none;
+        border: 1px solid var(--glass-border);
+        color: var(--text-muted);
+        border-radius: 6px;
+        padding: 3px 8px;
+        font-size: 0.7rem;
+        cursor: pointer;
+        transition: all 0.2s;
+        margin-left: 8px;
+      }
+      .shiny-btn:hover,
+      .shiny-btn.active {
+        border-color: #ffd700;
+        color: #ffd700;
+      }
+
+      /* --- EVOLUTION CHAIN --- */
+      .evo-chain {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 8px;
+      }
+      .evo-mon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        transition: transform 0.2s;
+        text-align: center;
+      }
+      .evo-mon:hover {
+        transform: scale(1.1);
+      }
+      .evo-mon img {
+        width: 56px;
+        height: 56px;
+        image-rendering: pixelated;
+      }
+      .evo-mon span {
+        font-size: 0.65rem;
+        color: var(--text-muted);
+        text-transform: capitalize;
+        margin-top: 2px;
+      }
+      .evo-mon.current span {
+        color: var(--accent-primary);
+        font-weight: bold;
+      }
+      .evo-arrow {
+        color: var(--text-muted);
+        font-size: 1rem;
+      }
+
+      /* --- FAVORITES --- */
+      .fav-btn {
+        background: none;
+        border: none;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: transform 0.2s;
+        padding: 0 4px;
+        line-height: 1;
+      }
+      .fav-btn:hover {
+        transform: scale(1.3);
+      }
+
+      /* --- SORT & RANDOM --- */
+      .toolbar {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 12px;
+        flex-wrap: wrap;
+      }
+      .sort-select {
+        padding: 6px 10px;
+        border-radius: 8px;
+        border: 1px solid var(--glass-border);
+        background: rgba(0, 0, 0, 0.2);
+        color: var(--text-main);
+        font-size: 0.85rem;
+        outline: none;
+        cursor: pointer;
+      }
+      .sort-select:focus {
+        border-color: var(--accent-primary);
+      }
+      .random-btn {
+        padding: 6px 12px;
+        border-radius: 8px;
+        border: 1px solid var(--glass-border);
+        background: rgba(0, 0, 0, 0.2);
+        color: var(--text-muted);
+        font-size: 0.85rem;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .random-btn:hover {
+        border-color: var(--accent-primary);
+        color: var(--accent-primary);
+      }
       .about-content {
         padding: 30px;
         line-height: 1.8;
@@ -590,7 +725,20 @@
         <button class="tab-btn" data-tab="ou">OU</button>
         <button class="tab-btn" data-tab="uu">UU</button>
         <button class="tab-btn" data-tab="ru">RU</button>
+        <button class="tab-btn" data-tab="nu">NU</button>
+        <button class="tab-btn" data-tab="pu">PU</button>
+        <button class="tab-btn" data-tab="lc">LC</button>
         <button class="tab-btn" data-tab="all">All Cobblemon</button>
+        <button class="tab-btn" data-tab="favorites">⭐ Favorites</button>
+      </div>
+
+      <div class="toolbar" id="toolbar" style="display: none">
+        <select class="sort-select" id="sortSelect">
+          <option value="dex">Sort: Dex #</option>
+          <option value="name">Sort: Name A–Z</option>
+          <option value="type">Sort: Type</option>
+        </select>
+        <button class="random-btn" id="randomBtn">🎲 Random</button>
       </div>
 
       <div class="glass-panel table-container">
@@ -624,6 +772,9 @@
       let allPokemon = [];
       let localDB = {};
       let currentTab = "about";
+      let favorites = JSON.parse(
+        localStorage.getItem("cobblePulseFavorites") || "[]",
+      );
 
       const DOM = {
         list: document.getElementById("pokemonList"),
@@ -634,6 +785,9 @@
         modalOverlay: document.getElementById("modalOverlay"),
         modalBody: document.getElementById("modalBody"),
         closeBtn: document.getElementById("closeBtn"),
+        toolbar: document.getElementById("toolbar"),
+        sortSelect: document.getElementById("sortSelect"),
+        randomBtn: document.getElementById("randomBtn"),
       };
 
       const POKEMON_TYPES = [
@@ -791,11 +945,12 @@
             ? "var(--accent-primary)"
             : "var(--text-muted)";
 
+          const isFavRow = favorites.includes(p.cleanName) ? "⭐ " : "";
           html += `
             <tr onclick="openModal(${p.id}, '${p.cleanName}')">
                 <td><strong style="color: ${rankColor};">${rankText}</strong></td>
                 <td class="sprite-cell"><img src="${p.sprite}" alt="${p.name}" loading="lazy"></td>
-                <td style="text-transform: capitalize; font-weight: bold;">${p.name.replace("-", " ")}</td>
+                <td style="text-transform: capitalize; font-weight: bold;">${isFavRow}${p.name.replace("-", " ")}</td>
                 <td>${typeHtml}</td>
             </tr>
           `;
@@ -811,10 +966,16 @@
       function applyFilters() {
         const query = DOM.searchInput.value.toLowerCase();
         const typeFilter = DOM.typeFilter.value;
+        const sortBy = DOM.sortSelect ? DOM.sortSelect.value : "dex";
+
+        // Show toolbar only on "all" tab
+        if (DOM.toolbar) {
+          DOM.toolbar.style.display = currentTab === "all" ? "flex" : "none";
+        }
 
         let filtered = [];
 
-        // Handle About tab separately
+        // Handle About tab
         if (currentTab === "about") {
           DOM.list.innerHTML = `
             <tr>
@@ -847,6 +1008,7 @@
                   <ul>
                     <li><strong>Browse Tiers:</strong> Click the tier tabs above to see the top 50 Pokémon in each competitive tier, ranked by usage.</li>
                     <li><strong>View All:</strong> Click "All Cobblemon" to see every Pokémon available in the mod.</li>
+                    <li><strong>Favorites:</strong> Click the ⭐ in any Pokémon modal to save it to your Favorites tab.</li>
                     <li><strong>Search:</strong> Use the search box to find Pokémon by name or Pokédex number.</li>
                     <li><strong>Filter by Type:</strong> Use the type dropdown to filter by Pokémon type.</li>
                     <li><strong>Click for Details:</strong> Click any Pokémon to see spawn locations, competitive movesets, EVs, and more.</li>
@@ -865,10 +1027,17 @@
           return;
         }
 
-        if (currentTab === "all") {
-          filtered = allPokemon;
+        // Handle Favorites tab
+        if (currentTab === "favorites") {
+          filtered = allPokemon.filter((p) => favorites.includes(p.cleanName));
+          if (filtered.length === 0) {
+            DOM.list.innerHTML = `<tr><td colspan="4" class="loading">No favorites yet — click ⭐ in any Pokémon modal to add one!</td></tr>`;
+            return;
+          }
+        } else if (currentTab === "all") {
+          filtered = [...allPokemon];
         } else {
-          // 1. Filter to current tier
+          // Tier tabs
           filtered = allPokemon.filter((p) => {
             const dbEntry = localDB[p.cleanName] || localDB[p.name];
             if (!dbEntry || !dbEntry.allRanks) return false;
@@ -879,7 +1048,6 @@
             );
           });
 
-          // 2. Sort mathematically by Rank
           filtered.sort((a, b) => {
             const entryA = (
               localDB[a.cleanName] || localDB[a.name]
@@ -894,29 +1062,38 @@
             return (entryA?.rank || 999) - (entryB?.rank || 999);
           });
 
-          // 3. APPLY TOP 50 LIMIT (Only for tier tabs)
           filtered = filtered.slice(0, 50);
         }
 
-        // 4. Handle Search Query
+        // Search
         if (query) {
           filtered = filtered.filter((p) => {
-            const dbEntry = localDB[p.cleanName] || localDB[p.name] || {};
-            const source = (dbEntry.source || "").toLowerCase();
             return (
               p.name.toLowerCase().includes(query) ||
               p.cleanName.includes(query) ||
-              p.id.toString() === query ||
-              source.includes(query)
+              p.id.toString() === query
             );
           });
         }
 
-        // 5. Handle Type Filter
+        // Type filter
         if (typeFilter !== "all") {
           filtered = filtered.filter(
             (p) => p.types.includes(typeFilter) || p.types.length === 0,
           );
+        }
+
+        // Sort (only for "all" tab)
+        if (currentTab === "all") {
+          if (sortBy === "name") {
+            filtered.sort((a, b) => a.name.localeCompare(b.name));
+          } else if (sortBy === "type") {
+            filtered.sort((a, b) =>
+              (a.types[0] || "").localeCompare(b.types[0] || ""),
+            );
+          } else {
+            filtered.sort((a, b) => (a.id || 0) - (b.id || 0));
+          }
         }
 
         renderTable(filtered);
@@ -1080,49 +1257,127 @@
             dbEntry.abilities || [],
           );
 
-          const immunitiesHtml =
-            immunities.length > 0
+          // --- BUILD WEAKNESS HTML ---
+          const weaknesses = getWeaknesses(
+            details.types.map((t) => t.type.name),
+          );
+          const weaknessHtml =
+            Object.keys(weaknesses).length > 0
               ? `
-              <div class="info-card full-width" style="margin-bottom: 20px;">
-                <h4 style="color: var(--accent-primary); margin-bottom: 12px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">🛡️ Immunities</h4>
-                <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                  ${immunities
-                    .map(
-                      (imm) => `
-                    <div style="
-                      display: flex; align-items: center; gap: 6px;
-                      background: rgba(0,0,0,0.3);
-                      border: 1px solid var(--glass-border);
-                      border-radius: 8px;
-                      padding: 6px 10px;
-                    ">
-                      <span class="type-badge type-${imm.type}" style="margin: 0; font-size: 0.7rem;">${imm.type}</span>
-                      ${
-                        imm.source === "ability"
-                          ? `<span style="color: var(--text-muted); font-size: 0.75rem;">${imm.label.split("(")[1]?.replace(")", "") || ""}</span>
-                           ${imm.isHidden ? `<span style="font-size: 0.65rem; color: #a0a0b5; opacity: 0.7;">(hidden)</span>` : ""}`
-                          : `<span style="color: var(--text-muted); font-size: 0.75rem;">Typing</span>`
-                      }
-                    </div>
-                  `,
-                    )
-                    .join("")}
-                </div>
-              </div>`
+            <div class="info-card full-width" style="margin-bottom: 20px;">
+              <h4 style="color: #ff6b6b; margin-bottom: 10px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">⚠️ Weaknesses</h4>
+              <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                ${Object.entries(weaknesses)
+                  .map(
+                    ([type, mult]) => `
+                  <div style="display:flex;align-items:center;gap:4px;background:rgba(0,0,0,0.3);border:1px solid var(--glass-border);border-radius:8px;padding:4px 8px;">
+                    <span class="type-badge type-${type}" style="margin:0;font-size:0.7rem;">${type}</span>
+                    <span style="color:${mult === 4 ? "#ff4d4d" : "#ffaa44"};font-weight:bold;font-size:0.75rem;">×${mult}</span>
+                  </div>
+                `,
+                  )
+                  .join("")}
+              </div>
+            </div>`
               : "";
+
+          // --- BUILD BASE STATS HTML ---
+          const statConfig = [
+            { key: "hp", label: "HP", color: "#ff5959" },
+            { key: "attack", label: "ATK", color: "#f5ac78" },
+            { key: "defense", label: "DEF", color: "#fae078" },
+            { key: "special-attack", label: "Sp.ATK", color: "#9db7f5" },
+            { key: "special-defense", label: "Sp.DEF", color: "#a7db8d" },
+            { key: "speed", label: "SPE", color: "#fa92b2" },
+          ];
+          const pokemonStats = dbEntry.stats || {};
+          const statsHtml =
+            Object.keys(pokemonStats).length > 0
+              ? `
+            <div class="info-card full-width" style="margin-bottom: 20px;">
+              <h4 style="color: var(--accent-primary); margin-bottom: 12px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">📊 Base Stats</h4>
+              ${statConfig
+                .map((s) => {
+                  const val = pokemonStats[s.key] || 0;
+                  const pct = Math.min(Math.round((val / 255) * 100), 100);
+                  return `
+                  <div class="stat-bar-container">
+                    <span class="stat-label">${s.label}</span>
+                    <div class="stat-bar-bg">
+                      <div class="stat-bar-fill" style="width:${pct}%;background:${s.color};"></div>
+                    </div>
+                    <span class="stat-value" style="color:${s.color};">${val}</span>
+                  </div>`;
+                })
+                .join("")}
+            </div>`
+              : "";
+
+          // --- BUILD EVOLUTION CHAIN ---
+          let evoHtml = "";
+          try {
+            const speciesUrl = dbEntry.speciesUrl || details.species.url;
+            const specRes = await fetch(speciesUrl);
+            const specData = await specRes.json();
+            const evoRes = await fetch(specData.evolution_chain.url);
+            const evoData = await evoRes.json();
+
+            const evoList = [];
+            let node = evoData.chain;
+            while (node) {
+              evoList.push(node.species.name);
+              node = node.evolves_to[0] || null;
+            }
+
+            if (evoList.length > 1) {
+              evoHtml = `
+                <div class="info-card full-width" style="margin-bottom: 20px;">
+                  <h4 style="color: var(--accent-primary); margin-bottom: 10px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">🔄 Evolution Chain</h4>
+                  <div class="evo-chain">
+                    ${evoList
+                      .map((name, i) => {
+                        const evoEntry =
+                          localDB[name] || localDB[name.replace("-", "")];
+                        const evoId = evoEntry?.id || "";
+                        const evoSprite = evoId
+                          ? `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${evoId}.png`
+                          : "";
+                        const isCurrent = name === details.name;
+                        return `
+                        ${i > 0 ? `<span class="evo-arrow">→</span>` : ""}
+                        <div class="evo-mon ${isCurrent ? "current" : ""}" 
+                             onclick="${evoId ? `openModal(${evoId}, '${name}')` : ""}">
+                          ${evoSprite ? `<img src="${evoSprite}" alt="${name}">` : ""}
+                          <span>${name.replace("-", " ")}</span>
+                        </div>`;
+                      })
+                      .join("")}
+                  </div>
+                </div>`;
+            }
+          } catch (e) {
+            /* evo chain failed silently */
+          }
+
+          // --- FAVORITE BUTTON ---
+          const isFav = favorites.includes(cleanName);
+          const favBtnHtml = `<button class="fav-btn" id="favBtn" title="${isFav ? "Remove from favorites" : "Add to favorites"}">${isFav ? "⭐" : "🤍"}</button>`;
 
           DOM.modalBody.innerHTML = `
             <div class="modal-header">
-                <img src="${details.sprites.front_default}" alt="${details.name}" class="modal-sprite">
+                <div style="position:relative;display:inline-block;">
+                  <img src="${details.sprites.front_default}" alt="${details.name}" class="modal-sprite" id="modalSprite">
+                  <button class="shiny-btn" id="shinyBtn" title="Toggle shiny">✨ Shiny</button>
+                </div>
                 <div class="modal-title">
                     <h2 style="margin-bottom: 5px; display: flex; align-items: center; flex-wrap: wrap;">
                         <a href="${pokemonDbUrl}" target="_blank" title="View on PokemonDB" 
                            style="color: var(--text-main); text-decoration: none; transition: color 0.2s;">
                            ${details.name.replace("-", " ")}
                         </a>
+                        ${favBtnHtml}
                         <span class="tier-badge">${currentBadge}</span>
                         ${usageBadge}
-                        
                         ${sourceTag}
                     </h2>
                     <div style="margin-top: 5px; display: flex; align-items: center; flex-wrap: wrap; gap: 10px;">
@@ -1150,12 +1405,47 @@
                 </div>
             </div>
             <div>
+                ${weaknessHtml}
+                ${statsHtml}
+                ${evoHtml}
                 ${compHtml}
                 <div class="info-card full-width" style="border-color: var(--accent-primary);">
                     ${locationsHtml}
                 </div>
             </div>
-        `;
+          `;
+
+          // Wire up shiny toggle
+          const normalSprite = details.sprites.front_default;
+          const shinySprite = details.sprites.front_shiny;
+          let isShiny = false;
+          document.getElementById("shinyBtn").addEventListener("click", () => {
+            isShiny = !isShiny;
+            document.getElementById("modalSprite").src = isShiny
+              ? shinySprite
+              : normalSprite;
+            document
+              .getElementById("shinyBtn")
+              .classList.toggle("active", isShiny);
+          });
+
+          // Wire up favorite button
+          document.getElementById("favBtn").addEventListener("click", () => {
+            const idx = favorites.indexOf(cleanName);
+            if (idx === -1) {
+              favorites.push(cleanName);
+              document.getElementById("favBtn").textContent = "⭐";
+              document.getElementById("favBtn").title = "Remove from favorites";
+            } else {
+              favorites.splice(idx, 1);
+              document.getElementById("favBtn").textContent = "🤍";
+              document.getElementById("favBtn").title = "Add to favorites";
+            }
+            localStorage.setItem(
+              "cobblePulseFavorites",
+              JSON.stringify(favorites),
+            );
+          });
           if (hasStrategies) {
             renderStrategyView(0);
           }
@@ -1192,6 +1482,15 @@
         });
 
         DOM.typeFilter.addEventListener("change", applyFilters);
+        if (DOM.sortSelect)
+          DOM.sortSelect.addEventListener("change", applyFilters);
+        if (DOM.randomBtn)
+          DOM.randomBtn.addEventListener("click", () => {
+            const keys = Object.keys(localDB);
+            const randomKey = keys[Math.floor(Math.random() * keys.length)];
+            const p = localDB[randomKey];
+            openModal(p.id, p.cleanName);
+          });
 
         DOM.tabs.forEach((tab) => {
           tab.addEventListener("click", (e) => {
@@ -1431,6 +1730,21 @@
         });
 
         return immunities;
+      }
+
+      function getWeaknesses(types) {
+        let multipliers = {};
+        for (let attacker in TYPE_CHART) {
+          let mult = 1;
+          types.forEach((t) => {
+            mult *=
+              TYPE_CHART[attacker][t] !== undefined
+                ? TYPE_CHART[attacker][t]
+                : 1;
+          });
+          if (mult > 1) multipliers[attacker] = mult;
+        }
+        return multipliers; // e.g. { fire: 2, ice: 4 }
       }
 
       function getTacticalMatchups(types) {
