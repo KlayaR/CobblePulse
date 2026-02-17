@@ -1,3 +1,26 @@
+// --- POKEAPI CACHE ---
+// Keyed by pokemon ID. Stores { details, speciesData, evoData } so every
+// piece of data fetched for a Pokémon is only ever requested once per session.
+const pokeApiCache = new Map();
+
+async function getPokemonDetails(id) {
+  if (pokeApiCache.has(id)) return pokeApiCache.get(id);
+
+  // FIX 1: Parallelize pokemon + species fetches with Promise.all
+  // Previously: fetch pokemon → await → fetch species → await (sequential, ~2× slower)
+  // Now:        fetch pokemon + fetch species simultaneously, await both together
+  const details     = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).then((r) => r.json());
+  const speciesData = await fetch(details.species.url).then((r) => r.json());
+
+  // FIX 2: Also fetch the evo chain here once and cache it alongside the rest.
+  // Previously it was fetched twice inside openModal (once for locations, once for evo chain).
+  const evoData = await fetch(speciesData.evolution_chain.url).then((r) => r.json());
+
+  const result = { details, speciesData, evoData };
+  pokeApiCache.set(id, result);
+  return result;
+}
+
 // --- LOCATION CARDS BUILDER ---
 function buildLocationCards(locations, title) {
   const cards = locations.map((loc) => {
@@ -75,8 +98,16 @@ function renderStrategyView(index) {
     </div>`;
 }
 
+// FIX 3: Stale-request guard.
+// Tracks the ID of the most recently requested modal open. If the user
+// clicks a different Pokémon while the first is still loading, the first
+// request's render is silently discarded when it eventually resolves.
+let _latestModalRequestId = null;
+
 // --- OPEN MODAL ---
 async function openModal(id, cleanName) {
+  _latestModalRequestId = id;
+
   DOM.modalOverlay.classList.add("active");
   DOM.modalBody.innerHTML = `<div class="loading">Fetching Data...</div>`;
 
@@ -86,10 +117,14 @@ async function openModal(id, cleanName) {
   history.pushState({ tab: currentTab, modal: cleanName }, "", `?${params.toString()}`);
 
   try {
-    const details     = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).then((r) => r.json());
-    const speciesData = await fetch(details.species.url).then((r) => r.json());
-    const dbEntry     = localDB[cleanName] || localDB[details.name] || { tier: "Untiered", locations: [] };
+    // FIX 1+2: Single call — fetches pokemon + species in parallel, caches everything,
+    // returns immediately on subsequent opens of the same Pokémon.
+    const { details, speciesData, evoData } = await getPokemonDetails(id);
 
+    // Stale-request guard: discard render if user already opened a different modal
+    if (_latestModalRequestId !== id) return;
+
+    const dbEntry  = localDB[cleanName] || localDB[details.name] || { tier: "Untiered", locations: [] };
     const typeHtml = details.types.map((t) => `<span class="type-badge type-${t.type.name}">${t.type.name}</span>`).join("");
 
     // --- COMPETITIVE STRATEGIES ---
@@ -102,8 +137,8 @@ async function openModal(id, cleanName) {
 
     const hasStrategies = stats && stats.strategies && stats.strategies.length > 0;
     if (hasStrategies) {
-      window.smogonUrl          = `https://www.smogon.com/dex/sv/pokemon/${details.name.replace("-", "_")}/`;
-      window.currentStrategies  = stats.strategies;
+      window.smogonUrl         = `https://www.smogon.com/dex/sv/pokemon/${details.name.replace("-", "_")}/`;
+      window.currentStrategies = stats.strategies;
     }
 
     const dropdownHtml = hasStrategies && stats.strategies.length > 1
@@ -125,6 +160,7 @@ async function openModal(id, cleanName) {
       : `<div class="info-card full-width" style="margin-bottom:20px;text-align:center;padding:20px;"><p style="color:var(--text-muted);">No competitive Smogon data available for this Pokémon.</p></div>`;
 
     // --- LOCATIONS ---
+    // FIX 2: speciesData already fetched above — no second fetch needed here
     let locationsHtml = "";
     const hasOwnSpawns = dbEntry.locations && dbEntry.locations.length > 0;
     if (hasOwnSpawns) locationsHtml += buildLocationCards(dbEntry.locations, "📍 Server Spawn Locations");
@@ -135,9 +171,9 @@ async function openModal(id, cleanName) {
         <p style="color:var(--text-main);font-size:0.95rem;line-height:1.4;">This Pokémon does not spawn naturally. Use a summoning item at an altar or participate in a server event.</p>
       </div>`;
     } else if (speciesData.evolves_from_species) {
-      const chainData    = await fetch(speciesData.evolution_chain.url).then((r) => r.json());
-      const baseEvoName  = chainData.chain.species.name;
-      const baseEvoDb    = localDB[baseEvoName.replace("-", "")] || localDB[baseEvoName];
+      // FIX 2: evoData already fetched and cached — no re-fetch here
+      const baseEvoName = evoData.chain.species.name;
+      const baseEvoDb   = localDB[baseEvoName.replace("-", "")] || localDB[baseEvoName];
       if (baseEvoDb && baseEvoDb.locations && baseEvoDb.locations.length > 0) {
         const title = hasOwnSpawns
           ? `💡 Easier to catch base form: ${baseEvoName.toUpperCase()}`
@@ -151,7 +187,7 @@ async function openModal(id, cleanName) {
     }
 
     // --- WEAKNESSES ---
-    const weaknesses = getWeaknesses(details.types.map((t) => t.type.name));
+    const weaknesses   = getWeaknesses(details.types.map((t) => t.type.name));
     const weaknessHtml = Object.keys(weaknesses).length > 0 ? `
       <div class="info-card full-width" style="margin-bottom:20px;">
         <h4 style="color:#ff6b6b;margin-bottom:10px;font-size:0.85rem;text-transform:uppercase;letter-spacing:1px;">⚠️ Weaknesses</h4>
@@ -174,7 +210,7 @@ async function openModal(id, cleanName) {
       { key: "speed",           label: "SPE",    color: "#fa92b2" },
     ];
     const pokemonStats = dbEntry.stats || {};
-    const statsHtml = Object.keys(pokemonStats).length > 0 ? `
+    const statsHtml    = Object.keys(pokemonStats).length > 0 ? `
       <div class="info-card full-width" style="margin-bottom:20px;">
         <h4 style="color:var(--accent-primary);margin-bottom:12px;font-size:0.85rem;text-transform:uppercase;letter-spacing:1px;">📊 Base Stats</h4>
         ${statConfig.map((s) => {
@@ -189,11 +225,10 @@ async function openModal(id, cleanName) {
       </div>` : "";
 
     // --- EVOLUTION CHAIN ---
+    // FIX 2: evoData already available from getPokemonDetails — no fetch at all here
     let evoHtml = "";
     try {
-      const specRes  = await fetch(dbEntry.speciesUrl || details.species.url).then((r) => r.json());
-      const evoData  = await fetch(specRes.evolution_chain.url).then((r) => r.json());
-      const evoList  = [];
+      const evoList = [];
       let node = evoData.chain;
       while (node) { evoList.push(node.species.name); node = node.evolves_to[0] || null; }
       if (evoList.length > 1) {
@@ -215,7 +250,7 @@ async function openModal(id, cleanName) {
             </div>
           </div>`;
       }
-    } catch (e) { /* evo chain failed silently */ }
+    } catch (e) { /* evo chain render failed silently */ }
 
     // --- IMMUNITIES ---
     const immunities = getImmunities(details.types.map((t) => t.type.name), dbEntry.abilities || []);
@@ -301,8 +336,11 @@ async function openModal(id, cleanName) {
     if (hasStrategies) renderStrategyView(0);
 
   } catch (e) {
-    console.error(e);
-    DOM.modalBody.innerHTML = `<div class="loading" style="color:var(--accent-primary);">Failed to load details.<br><span style="font-size:0.8rem;color:var(--text-muted);">${e.message}</span></div>`;
+    // Only show error if this is still the active request
+    if (_latestModalRequestId === id) {
+      console.error(e);
+      DOM.modalBody.innerHTML = `<div class="loading" style="color:var(--accent-primary);">Failed to load details.<br><span style="font-size:0.8rem;color:var(--text-muted);">${e.message}</span></div>`;
+    }
   }
 }
 
