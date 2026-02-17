@@ -271,12 +271,15 @@ select option { background: #1a1a2e; color: #fff; }
   font-weight: bold;
 }
 
-/* Types panel */
+/* Types panel — hidden by default, shown as grid only when open */
 .types-panel {
+  display: none;
+  min-width: 280px;
+}
+.types-panel.open {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 6px;
-  min-width: 280px;
 }
 
 .type-filter-badge {
