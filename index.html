@@ -967,6 +967,7 @@
 
           // Handle About tab
           if (currentTab === "about") {
+            document.querySelector(".table-container").style.display = "none";
             DOM.list.innerHTML = `
               <tr>
                 <td colspan="4" style="padding: 0;">
@@ -1018,6 +1019,7 @@
           }
 
           // Handle Favorites tab
+          document.querySelector(".table-container").style.display = "";
           if (currentTab === "favorites") {
             filtered = allPokemon.filter(p => favorites.includes(p.cleanName));
             if (filtered.length === 0) {
