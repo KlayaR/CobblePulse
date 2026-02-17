@@ -5,10 +5,9 @@ const axios = require("axios");
 const SPREADSHEET_CSV_URL = "https://raw.githubusercontent.com/KlayaR/CobblePulse/main/spawns.csv";
 
 // How many PokéAPI requests to fire simultaneously.
-// 20 is safe — high enough to be fast, low enough to avoid rate limiting.
 const POKEAPI_BATCH_SIZE = 20;
 
-// ms to wait between batches to be polite to PokéAPI
+// ms to wait between batches
 const POKEAPI_BATCH_DELAY = 300;
 
 // --- SMOGON NAME → POKEAPI SLUG OVERRIDES ---
@@ -62,7 +61,7 @@ const formToDexMap = {
   ogerponhearthflame: 1017, ogerponwellspring: 1017,
   ogerponcornerstone: 1017, ogerponteal:       1017,
 
-  // Ursaluna (#901) — FIX: was incorrectly "nursalunabloodmoon"
+  // Ursaluna (#901)
   ursalunabloodmoon: 901,
 
   // Rotom Forms (#479)
@@ -112,22 +111,21 @@ const formToDexMap = {
   indeedeef:         876, indeedem:            876,
 };
 
-// --- POKEMON THAT NEED A SPECIFIC POKEAPI FORM SLUG (not just dex number) ---
-// Used in Phase 3 to fetch the correct form's sprite/types/stats
+// --- POKEMON THAT NEED A SPECIFIC POKEAPI FORM SLUG ---
 const cleanNameToPokeApiFormSlug = {
-  ursalunabloodmoon: "ursaluna-bloodmoon",
-  giratinaorigin:    "giratina-origin",
-  dialgarorigin:     "dialga-origin",
-  palkiaorigin:      "palkia-origin",
-  kyuremblack:       "kyurem-black",
-  kyuremwhite:       "kyurem-white",
-  shayminsky:        "shaymin-sky",
-  hoopaunbound:      "hoopa-unbound",
-  urshifurapidstrike:"urshifu-rapid-strike",
-  calyrexice:        "calyrex-ice",
-  calyrexshadow:     "calyrex-shadow",
-  zaciancrowned:     "zacian-crowned",
-  zamazentacrowned:  "zamazenta-crowned",
+  ursalunabloodmoon:  "ursaluna-bloodmoon",
+  giratinaorigin:     "giratina-origin",
+  dialgarorigin:      "dialga-origin",
+  palkiaorigin:       "palkia-origin",
+  kyuremblack:        "kyurem-black",
+  kyuremwhite:        "kyurem-white",
+  shayminsky:         "shaymin-sky",
+  hoopaunbound:       "hoopa-unbound",
+  urshifurapidstrike: "urshifu-rapid-strike",
+  calyrexice:         "calyrex-ice",
+  calyrexshadow:      "calyrex-shadow",
+  zaciancrowned:      "zacian-crowned",
+  zamazentacrowned:   "zamazenta-crowned",
 };
 
 let pokemonDB = {};
@@ -165,7 +163,7 @@ function nameToPokeAPI(name) {
   return specialCases[apiName] || apiName;
 }
 
-// --- HELPER: Fix UTF-8 mojibake from misread CSV encoding ---
+// --- HELPER: Fix UTF-8 mojibake ---
 function cleanText(text) {
   if (!text) return text;
   return text
@@ -188,7 +186,7 @@ function cleanText(text) {
     .replace(/�/g,  "'");
 }
 
-// --- HELPER: Bulletproof CSV parser (handles commas inside quoted cells) ---
+// --- HELPER: Bulletproof CSV parser ---
 function parseCSV(text) {
   const firstLine = text.split("\n")[0];
   const delimiter = firstLine.split(";").length > firstLine.split(",").length ? ";" : ",";
@@ -219,12 +217,38 @@ function parseCSV(text) {
 }
 
 // --- HELPER: Extract competitive strategies from Smogon set data ---
+// FIX: Previously used a broken 3-variant lookup that missed many Pokémon
+// (only replaced first hyphen, and stripped to base word as fallback).
+// Now builds a case-insensitive index of all setsData keys once and
+// tries multiple normalised forms of the Smogon name against it.
 function parseSets(name, stats, setsData) {
-  const variants = [name, name.replace("-", " "), name.split("-")[0]];
-  let sets = null;
-  for (const v of variants) {
-    if (setsData[v]) { sets = setsData[v]; break; }
+  // Build a lowercase → original-key map once per call
+  const lowerIndex = {};
+  for (const key of Object.keys(setsData)) {
+    lowerIndex[key.toLowerCase()] = key;
   }
+
+  // Generate every reasonable normalisation of the Smogon name
+  const candidates = new Set([
+    name,
+    name.toLowerCase(),
+    name.replace(/-/g, " "),           // all hyphens → spaces  ("Iron Valiant")
+    name.replace(/-/g, ""),            // strip all hyphens     ("IronValiant")
+    name.replace(/ /g, "-"),           // spaces → hyphens      ("Iron-Valiant")
+    name.toLowerCase().replace(/-/g, " "),
+    name.toLowerCase().replace(/-/g, ""),
+    name.toLowerCase().replace(/ /g, "-"),
+  ]);
+
+  let sets = null;
+  for (const candidate of candidates) {
+    // Try exact match first, then case-insensitive
+    if (setsData[candidate])            { sets = setsData[candidate]; break; }
+    if (lowerIndex[candidate.toLowerCase()]) {
+      sets = setsData[lowerIndex[candidate.toLowerCase()]]; break;
+    }
+  }
+
   if (!sets) return [];
 
   return Object.entries(sets).map(([setName, details]) => {
@@ -234,17 +258,18 @@ function parseSets(name, stats, setsData) {
     }
     return {
       name:     setName,
-      ability:  Array.isArray(rawAbility)           ? rawAbility.join(" / ")              : typeof rawAbility === "object" ? Object.values(rawAbility).join(" / ") : rawAbility,
-      item:     (Array.isArray(details.item)         ? details.item.join(" / ")            : String(details.item || "None")).split(",").join(" / "),
+      ability:  Array.isArray(rawAbility)  ? rawAbility.join(" / ") : typeof rawAbility === "object" ? Object.values(rawAbility).join(" / ") : rawAbility,
+      item:     (Array.isArray(details.item) ? details.item.join(" / ") : String(details.item || "None")).split(",").join(" / "),
       nature:   Array.isArray(details.nature || details.natures) ? (details.nature || details.natures).join(" / ") : details.nature || "Hardy",
       teraType: Array.isArray(details.teratypes || details.teraType) ? (details.teratypes || details.teraType).join(" / ") : details.teraType || "Normal",
       evs:      Object.entries(details.evs || {}).map(([s, v]) => `${v} ${s.toUpperCase()}`).join(" / ") || "None",
-      moves:    (details.moves || []).map((m) => (Array.isArray(m) ? m.join(" / ") : m)).slice(0, 4),
+      // FIX: removed .slice(0, 4) — Smogon sets can have move alternatives beyond slot 4
+      moves:    (details.moves || []).map((m) => (Array.isArray(m) ? m.join(" / ") : m)),
     };
   });
 }
 
-// --- HELPER: Run an async fn on items in chunks, with a delay between batches ---
+// --- HELPER: Run an async fn on items in chunks ---
 async function batchedAsync(items, batchSize, delayMs, fn) {
   const results = [];
   for (let i = 0; i < items.length; i += batchSize) {
@@ -350,7 +375,6 @@ async function buildDatabase() {
       }
     }));
 
-    // Mark untiered Pokémon
     Object.values(pokemonDB).forEach((p) => {
       if (p.allRanks.length === 0) {
         p.allRanks.push({ tier: "Untiered", rank: "N/A", usage: "0.00", strategies: [] });
@@ -360,8 +384,6 @@ async function buildDatabase() {
 
     // ─────────────────────────────────────────────────────────────
     // PHASE 3 — Enrich with PokéAPI data
-    // For forms with a specific PokéAPI slug (e.g. ursaluna-bloodmoon),
-    // fetch that form endpoint instead of the base dex number.
     // ─────────────────────────────────────────────────────────────
     console.log("\n🌐 PHASE 3: Fetching PokéAPI data in parallel batches...");
     const allEntries = Object.keys(pokemonDB);
@@ -380,7 +402,6 @@ async function buildDatabase() {
       }
 
       try {
-        // For form slugs, species is always fetched by dex number
         const [pokemonRes, speciesRes] = await Promise.all([
           axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemonKey}`),
           axios.get(`https://pokeapi.co/api/v2/pokemon-species/${dexNumber}`),
@@ -389,7 +410,7 @@ async function buildDatabase() {
         const data    = pokemonRes.data;
         const species = speciesRes.data;
 
-        pokemonDB[cleanName].id          = dexNumber; // keep dex id for sprite consistency
+        pokemonDB[cleanName].id          = dexNumber;
         pokemonDB[cleanName].sprite      = data.sprites.front_default ||
           `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${dexNumber}.png`;
         pokemonDB[cleanName].types       = data.types.map((t) => t.type.name);
