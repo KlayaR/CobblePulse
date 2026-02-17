@@ -40,6 +40,27 @@ const formToDexMap = {
   urshifurapidstrike:  892,
   urshifusingledtrike: 892,
 
+  // Mega Forms
+  charizardmegax:  6,   charizardmegay:  6,
+  venusaurmega:    3,   blastoismega:    9,
+  dianciemega:     719, lopunnymega:     428,
+  scizormega:      212, latiosmega:      381,
+  latiasmega:      380, tyranitarmega:   248,
+  mawilemega:      303, swampertmega:    260,
+  pinsirmega:      127, heracrossmega:   214,
+  aggronmega:      306, banettmega:      354,
+  absolmega:       359, garchompmega:    445,
+  lucariomega:     448, alakazammega:    65,
+  gengarmega:      94,  kangaskhanmega:  115,
+  aerodactylmega:  142, ampharosmega:    181,
+  steelixmega:     208, houndoommega:    229,
+  manectricmega:   310, sharpedomega:    319,
+  cameruptmega:    323, altariamega:     334,
+  salamencemega:   373, metagrossmega:   376,
+  rayquazamega:    384, slowbromega:     80,
+  audinomega:      531, gallademega:     475,
+  gardevoirmega:   282, medichamega:     308,
+
   // Arceus Forms (#493)
   arceusfairy:    493, arceusground:   493, arceuswater:    493,
   arceusghost:    493, arceuselectric: 493, arceusflying:   493,
