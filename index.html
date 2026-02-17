@@ -741,7 +741,11 @@
         <button class="random-btn" id="randomBtn">🎲 Random</button>
       </div>
 
-      <div class="glass-panel table-container">
+      <div id="aboutPanel" style="display: none" class="glass-panel">
+        <!-- About content injected here -->
+      </div>
+
+      <div class="glass-panel table-container" id="tableContainer">
         <table>
           <thead>
             <tr>
@@ -751,11 +755,7 @@
               <th>Types</th>
             </tr>
           </thead>
-          <tbody id="pokemonList">
-            <tr>
-              <td colspan="4" class="loading">Loading Pokédex Data...</td>
-            </tr>
-          </tbody>
+          <tbody id="pokemonList"></tbody>
         </table>
       </div>
     </div>
@@ -786,6 +786,8 @@
           toolbar: document.getElementById("toolbar"),
           sortSelect: document.getElementById("sortSelect"),
           randomBtn: document.getElementById("randomBtn"),
+          aboutPanel: document.getElementById("aboutPanel"),
+          tableContainer: document.getElementById("tableContainer"),
         };
 
         const POKEMON_TYPES = [
@@ -967,11 +969,9 @@
 
           // Handle About tab
           if (currentTab === "about") {
-            document.querySelector(".table-container").style.display = "none";
-            DOM.list.innerHTML = `
-              <tr>
-                <td colspan="4" style="padding: 0;">
-                  <div class="about-content">
+            DOM.aboutPanel.style.display = "block";
+            DOM.tableContainer.style.display = "none";
+            DOM.aboutPanel.innerHTML = `<div class="about-content">
                     <h2>Welcome to CobblePulse! 🎮</h2>
                     <p>
                       CobblePulse is your complete guide to <a href="https://cobblemon.com/" target="_blank">Cobblemon</a> —
@@ -1011,15 +1011,15 @@
                       competitive data from <a href="https://www.smogon.com/" target="_blank">Smogon</a>,
                       and Pokémon information from <a href="https://pokeapi.co/" target="_blank">PokéAPI</a>.
                     </p>
-                  </div>
-                </td>
-              </tr>
-            `;
+                  </div>`;
             return;
           }
 
+          // All other tabs: show table, hide about panel
+          DOM.aboutPanel.style.display = "none";
+          DOM.tableContainer.style.display = "";
+
           // Handle Favorites tab
-          document.querySelector(".table-container").style.display = "";
           if (currentTab === "favorites") {
             filtered = allPokemon.filter(p => favorites.includes(p.cleanName));
             if (filtered.length === 0) {
