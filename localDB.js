@@ -1,4 +1,4 @@
-{
+window.localDB = {
   "bulbasaur": {
     "name": "Bulbasaur",
     "cleanName": "bulbasaur",
@@ -74039,4 +74039,4 @@
     "isLegendary": false,
     "isMythical": false
   }
-}
+};
