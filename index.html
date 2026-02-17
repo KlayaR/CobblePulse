@@ -1125,11 +1125,31 @@
                         
                         ${sourceTag}
                     </h2>
-                    <div style="margin-top: 5px;">${typeHtml}</div>
+                    <div style="margin-top: 5px; display: flex; align-items: center; flex-wrap: wrap; gap: 10px;">
+                        <div>${typeHtml}</div>
+                        ${
+                          immunities.length > 0
+                            ? `
+                          <div style="display: flex; align-items: center; gap: 6px; border-left: 1px solid var(--glass-border); padding-left: 10px;">
+                            <span style="color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px;">🛡️</span>
+                            ${immunities
+                              .map(
+                                (imm) => `
+                              <div style="display: flex; align-items: center; gap: 3px;">
+                                <span class="type-badge type-${imm.type}" style="margin: 0; font-size: 0.7rem;">${imm.type}</span>
+                                <span style="color: var(--text-muted); font-size: 0.65rem;">${imm.source === "ability" ? imm.label.split("(")[1]?.replace(")", "") : "Typing"}</span>
+                              </div>
+                            `,
+                              )
+                              .join("")}
+                          </div>
+                        `
+                            : ""
+                        }
+                    </div>
                 </div>
             </div>
             <div>
-                ${immunitiesHtml}
                 ${compHtml}
                 <div class="info-card full-width" style="border-color: var(--accent-primary);">
                     ${locationsHtml}
