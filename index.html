@@ -284,7 +284,44 @@
         border-color: var(--accent-primary);
       }
 
-      /* --- STAT BARS --- */
+      /* --- TOOLTIP --- */
+      #tooltip {
+        position: fixed;
+        z-index: 9999;
+        background: #0f1923;
+        border: 1px solid var(--accent-primary);
+        border-radius: 8px;
+        padding: 10px 14px;
+        max-width: 260px;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.15s ease;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+      }
+      #tooltip.visible {
+        opacity: 1;
+      }
+      #tooltip .tt-name {
+        font-weight: bold;
+        font-size: 0.85rem;
+        color: var(--accent-primary);
+        text-transform: capitalize;
+        margin-bottom: 4px;
+      }
+      #tooltip .tt-desc {
+        font-size: 0.78rem;
+        color: var(--text-main);
+        line-height: 1.5;
+      }
+      #tooltip .tt-meta {
+        font-size: 0.72rem;
+        color: var(--text-muted);
+        margin-top: 5px;
+      }
+      .has-tooltip {
+        border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+        cursor: help;
+      }
       .stat-bar-container {
         display: grid;
         grid-template-columns: 80px 1fr 35px;
@@ -701,6 +738,12 @@
     </style>
   </head>
   <body>
+    <div id="tooltip">
+      <div class="tt-name" id="tt-name"></div>
+      <div class="tt-desc" id="tt-desc"></div>
+      <div class="tt-meta" id="tt-meta"></div>
+    </div>
+
     <div class="container" id="app">
       <header>
         <h1>CobblePulse</h1>
@@ -1569,6 +1612,136 @@
         });
       }
 
+      // --- TOOLTIP ENGINE ---
+      const tooltipCache = {};
+      const tooltip = document.getElementById("tooltip");
+
+      function showTooltip(e, name, desc, meta = "") {
+        document.getElementById("tt-name").textContent = name;
+        document.getElementById("tt-desc").textContent = desc;
+        document.getElementById("tt-meta").textContent = meta;
+        tooltip.classList.add("visible");
+        moveTooltip(e);
+      }
+
+      function moveTooltip(e) {
+        const x = e.clientX + 14;
+        const y = e.clientY + 14;
+        const w = tooltip.offsetWidth;
+        const h = tooltip.offsetHeight;
+        tooltip.style.left =
+          (x + w > window.innerWidth ? x - w - 28 : x) + "px";
+        tooltip.style.top =
+          (y + h > window.innerHeight ? y - h - 28 : y) + "px";
+      }
+
+      function hideTooltip() {
+        tooltip.classList.remove("visible");
+      }
+
+      async function fetchTooltip(type, slug) {
+        const key = `${type}:${slug}`;
+        if (tooltipCache[key]) return tooltipCache[key];
+
+        try {
+          const apiSlug = slug
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, "-")
+            .replace(/^-|-$/g, "");
+          let result = null;
+
+          if (type === "ability") {
+            const res = await fetch(
+              `https://pokeapi.co/api/v2/ability/${apiSlug}`,
+            );
+            const data = await res.json();
+            const entry = data.effect_entries?.find(
+              (e) => e.language.name === "en",
+            );
+            const short = data.flavor_text_entries?.find(
+              (e) => e.language.name === "en",
+            );
+            result = {
+              name: data.name.replace(/-/g, " "),
+              desc:
+                entry?.short_effect ||
+                short?.flavor_text ||
+                "No description available.",
+              meta: "",
+            };
+          } else if (type === "move") {
+            const res = await fetch(
+              `https://pokeapi.co/api/v2/move/${apiSlug}`,
+            );
+            const data = await res.json();
+            const entry = data.flavor_text_entries?.find(
+              (e) => e.language.name === "en",
+            );
+            const power = data.power ? `Power: ${data.power}` : "";
+            const acc = data.accuracy ? `Acc: ${data.accuracy}%` : "";
+            const pp = data.pp ? `PP: ${data.pp}` : "";
+            result = {
+              name: data.name.replace(/-/g, " "),
+              desc:
+                entry?.flavor_text?.replace(/\f/g, " ") ||
+                "No description available.",
+              meta: [data.type?.name, data.damage_class?.name, power, acc, pp]
+                .filter(Boolean)
+                .join("  ·  "),
+            };
+          } else if (type === "nature") {
+            const res = await fetch(
+              `https://pokeapi.co/api/v2/nature/${apiSlug}`,
+            );
+            const data = await res.json();
+            const up = data.increased_stat?.name?.replace(/-/g, " ") || null;
+            const down = data.decreased_stat?.name?.replace(/-/g, " ") || null;
+            result = {
+              name: data.name,
+              desc:
+                up && down
+                  ? `+${up} / -${down}`
+                  : "Neutral nature — no stat changes.",
+              meta: "",
+            };
+          } else if (type === "item") {
+            const res = await fetch(
+              `https://pokeapi.co/api/v2/item/${apiSlug}`,
+            );
+            const data = await res.json();
+            const entry = data.effect_entries?.find(
+              (e) => e.language.name === "en",
+            );
+            const flavor = data.flavor_text_entries?.find(
+              (e) => e.language.name === "en",
+            );
+            result = {
+              name: data.name.replace(/-/g, " "),
+              desc:
+                entry?.short_effect ||
+                flavor?.text ||
+                "No description available.",
+              meta: "",
+            };
+          }
+
+          if (result) tooltipCache[key] = result;
+          return result;
+        } catch (e) {
+          return { name: slug, desc: "Could not load description.", meta: "" };
+        }
+      }
+
+      async function handleTooltipHover(e, type, slug) {
+        const data = await fetchTooltip(type, slug);
+        if (data) showTooltip(e, data.name, data.desc, data.meta);
+      }
+
+      // Global mousemove to reposition tooltip
+      document.addEventListener("mousemove", (e) => {
+        if (tooltip.classList.contains("visible")) moveTooltip(e);
+      });
+
       init();
 
       const TYPE_CHART = {
@@ -1846,19 +2019,40 @@
         }
         return html;
       }
-      // This function instantly swaps out the stats when a new strategy is selected from the dropdown
       function renderStrategyView(index) {
         const strat = window.currentStrategies[index];
 
-        // Sleek Move List with crimson ">" arrows
+        // Helper to wrap each option in a hoverable span
+        function hoverSpan(type, value) {
+          // Handle "A / B" options — wrap each individually
+          return value
+            .split(" / ")
+            .map((v) => {
+              const slug = v.trim();
+              return `<span class="has-tooltip" 
+              onmouseenter="handleTooltipHover(event,'${type}','${slug}')"
+              onmouseleave="hideTooltip()">${slug}</span>`;
+            })
+            .join(
+              '<span style="color:var(--text-muted);margin:0 4px;">/</span>',
+            );
+        }
+
+        // Moves list with tooltips
         const movesList = strat.moves
           .map((m) => {
-            const formatted = m
+            const parts = m
               .split(" / ")
+              .map((part) => {
+                const slug = part.trim();
+                return `<span class="has-tooltip"
+                onmouseenter="handleTooltipHover(event,'move','${slug}')"
+                onmouseleave="hideTooltip()">${slug}</span>`;
+              })
               .join(
                 '<span style="color: var(--text-muted); font-weight: normal; margin: 0 4px;">/</span>',
               );
-            return `<li style="margin-bottom: 8px; line-height: 1.4; font-weight: bold;"><span style="color: var(--accent-primary); margin-right: 8px;">></span>${formatted}</li>`;
+            return `<li style="margin-bottom: 8px; line-height: 1.4; font-weight: bold; text-transform: capitalize;"><span style="color: var(--accent-primary); margin-right: 8px;">></span>${parts}</li>`;
           })
           .join("");
 
@@ -1877,15 +2071,15 @@
                 
                 <div class="info-card" style="grid-column: span 2; margin: 0; background: rgba(0,0,0,0.3); text-align: center;">
                     <h4 style="font-size: 0.75rem;">🎭 Nature</h4>
-                    <p style="font-weight: 500;">${strat.nature}</p>
+                    <p style="font-weight: 500; text-transform: capitalize;">${hoverSpan("nature", strat.nature)}</p>
                 </div>
                 <div class="info-card" style="grid-column: span 2; margin: 0; background: rgba(0,0,0,0.3); text-align: center;">
                     <h4 style="font-size: 0.75rem;">✨ Ability</h4>
-                    <p style="text-transform: capitalize; font-weight: 500;">${strat.ability}</p>
+                    <p style="text-transform: capitalize; font-weight: 500;">${hoverSpan("ability", strat.ability)}</p>
                 </div>
                 <div class="info-card" style="grid-column: span 2; margin: 0; background: rgba(0,0,0,0.3); text-align: center;">
                     <h4 style="font-size: 0.75rem;">🎒 Held Item</h4>
-                    <p style="font-weight: 500;">${strat.item}</p>
+                    <p style="font-weight: 500; text-transform: capitalize;">${hoverSpan("item", strat.item)}</p>
                 </div>
                 
                 <div class="info-card" style="grid-column: span 3; margin: 0; background: rgba(0,0,0,0.3); text-align: center;">
@@ -1901,7 +2095,7 @@
             
             <div style="margin-bottom: 5px;">
                 <h4 style="color: var(--text-muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">⚔️ Required Moves</h4>
-                <ul style="list-style-type: none; padding-left: 5px; text-transform: capitalize; display: grid; grid-template-columns: 1fr; gap: 6px; margin-top: 10px;">
+                <ul style="list-style-type: none; padding-left: 5px; display: grid; grid-template-columns: 1fr; gap: 6px; margin-top: 10px;">
                     ${movesList}
                 </ul>
                 <div style="text-align: right; margin-top: 15px;">
