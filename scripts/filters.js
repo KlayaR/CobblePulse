@@ -19,9 +19,20 @@ function parseSmartSearch(query) {
   return filters;
 }
 
+// Helper: get a Pokémon's rank in the current tier
+function getTierRank(p) {
+  const dbEntry = localDB[p.cleanName] || localDB[p.name] || {};
+  if (!dbEntry.allRanks) return 999;
+  const tierKey = currentTab === "ubers" ? "uber" : currentTab;
+  const r = dbEntry.allRanks.find((r) => r.tier.toLowerCase().includes(tierKey));
+  return r ? (r.rank || 999) : 999;
+}
+
 // --- MAIN FILTER & RENDER ORCHESTRATOR ---
 function applyFilters() {
-  const query = DOM.searchInput.value.toLowerCase();
+  const query  = DOM.searchInput.value.toLowerCase();
+  const sortBy = DOM.sortSelect ? DOM.sortSelect.value : "rank";
+  const isTierTab = currentTab !== "about" && currentTab !== "all" && currentTab !== "favorites";
 
   // Always show unified filters on non-About tabs
   if (DOM.unifiedFilters) {
@@ -30,7 +41,7 @@ function applyFilters() {
 
   // --- ABOUT TAB ---
   if (currentTab === "about") {
-    DOM.aboutPanel.style.display    = "block";
+    DOM.aboutPanel.style.display     = "block";
     DOM.tableContainer.style.display = "none";
     DOM.aboutPanel.innerHTML = `<div class="about-content">
       <h2>Welcome to CobblePulse! 🎮</h2>
@@ -71,7 +82,7 @@ function applyFilters() {
     return;
   }
 
-  DOM.aboutPanel.style.display    = "none";
+  DOM.aboutPanel.style.display     = "none";
   DOM.tableContainer.style.display = "";
 
   if (allPokemon.length === 0) {
@@ -91,7 +102,7 @@ function applyFilters() {
   } else if (currentTab === "all") {
     filtered = [...allPokemon];
   } else {
-    // --- TIER TABS ---
+    // --- TIER TABS: filter to only Pokémon in this tier ---
     filtered = allPokemon.filter((p) => {
       const dbEntry = localDB[p.cleanName] || localDB[p.name];
       if (!dbEntry || !dbEntry.allRanks) return false;
@@ -100,11 +111,8 @@ function applyFilters() {
         (currentTab === "ubers" && r.tier.toLowerCase() === "uber")
       );
     });
-    filtered.sort((a, b) => {
-      const entryA = (localDB[a.cleanName] || localDB[a.name]).allRanks.find((r) => r.tier.toLowerCase().includes(currentTab.replace("s", "")));
-      const entryB = (localDB[b.cleanName] || localDB[b.name]).allRanks.find((r) => r.tier.toLowerCase().includes(currentTab.replace("s", "")));
-      return (entryA?.rank || 999) - (entryB?.rank || 999);
-    });
+    // Tier tabs always pre-sorted by rank; slice to top 50 before user sort
+    filtered.sort((a, b) => getTierRank(a) - getTierRank(b));
     filtered = filtered.slice(0, 50);
   }
 
@@ -148,8 +156,7 @@ function applyFilters() {
     });
   }
 
-  // --- NEW: TYPE FILTER (AND LOGIC) ---
-  // FIX: Changed from .some() to .every() so selecting multiple types shows only Pokémon with ALL selected types
+  // --- TYPE FILTER (AND LOGIC) ---
   if (filterState.types.length > 0) {
     filtered = filtered.filter((p) => filterState.types.every((type) => p.types.includes(type)));
   }
@@ -162,7 +169,7 @@ function applyFilters() {
     });
   }
 
-  // --- NEW: RARITY FILTER (using isLegendary/isMythical from localDB) ---
+  // --- RARITY FILTER ---
   if (filterState.rarity === "legendary") {
     filtered = filtered.filter((p) => {
       const dbEntry = localDB[p.cleanName] || localDB[p.name] || {};
@@ -174,13 +181,24 @@ function applyFilters() {
       return !dbEntry.isLegendary && !dbEntry.isMythical;
     });
   }
-  // If rarity === "all", no filtering
 
   // --- SORT ---
-  const sortBy = DOM.sortSelect ? DOM.sortSelect.value : "dex";
-  if (sortBy === "name")     filtered.sort((a, b) => a.name.localeCompare(b.name));
-  else if (sortBy === "type") filtered.sort((a, b) => (a.types[0] || "").localeCompare(b.types[0] || ""));
-  else                        filtered.sort((a, b) => (a.id || 0) - (b.id || 0));
+  // "rank" on a tier tab = already sorted above, nothing to do
+  // "rank" on all/favorites = fall back to dex order (rank has no meaning there)
+  if (sortBy === "name") {
+    filtered.sort((a, b) => a.name.localeCompare(b.name));
+  } else if (sortBy === "type") {
+    filtered.sort((a, b) => (a.types[0] || "").localeCompare(b.types[0] || ""));
+  } else if (sortBy === "dex") {
+    filtered.sort((a, b) => (a.id || 0) - (b.id || 0));
+  } else if (sortBy === "rank") {
+    if (isTierTab) {
+      // Already sorted by rank above — no-op
+    } else {
+      // On All / Favorites, rank means nothing so fall back to dex
+      filtered.sort((a, b) => (a.id || 0) - (b.id || 0));
+    }
+  }
 
   renderTable(filtered);
 }
