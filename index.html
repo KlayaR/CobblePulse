@@ -333,17 +333,16 @@
         padding: 2px 6px;
         border-radius: 4px;
       }
-      .tt-dmg-physical {
-        background: rgba(192, 96, 0, 0.3);
-        color: #f5a742;
+      .move-cat.physical {
+        background-position: 0 0;
       }
-      .tt-dmg-special {
-        background: rgba(50, 100, 220, 0.3);
-        color: #7eb8f7;
+
+      .move-cat.special {
+        background-position: -42px 0;
       }
-      .tt-dmg-status {
-        background: rgba(130, 70, 180, 0.3);
-        color: #c77fff;
+
+      .move-cat.status {
+        background-position: -84px 0;
       }
       .tt-stat {
         font-size: 0.7rem;
@@ -1647,9 +1646,9 @@
       const ttContent = document.getElementById("tt-content");
 
       const DMG_CLASS_HTML = {
-        physical: `<img class="move-dmg-icon" src="./assets/icons/physical.png">`,
-        special: `<img class="move-dmg-icon" src="./assets/icons/special.png">`,
-        status: `<img class="move-dmg-icon" src="./assets/icons/status.png">`,
+        physical: `<span class="move-cat physical"></span>`,
+        special: `<span class="move-cat special"></span>`,
+        status: `<span class="move-cat status"></span>`,
       };
 
       function showTooltip(e, html) {
