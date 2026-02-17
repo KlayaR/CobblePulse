@@ -60,6 +60,25 @@ const formToDexMap = {
   rayquazamega:    384, slowbromega:     80,
   audinomega:      531, gallademega:     475,
   gardevoirmega:   282, medichamega:     308,
+  gyaradosmega:    130, sableyemega:     302,
+  beedrillmega:    15,  sceptilemega:    254,
+  abomasnowmega:   460, pidgeotmega:     16,
+  glaliemega:      362,
+
+  // Zygarde Forms (#718)
+  zygarde10:   718, zygarde50:   718, zygardecomplete: 718,
+
+  // Gourgeist Forms (#711)
+  gourgeistsuper:  711, gourgeistlarge:  711,
+  gourgeistsmall:  711, gourgeistaverage: 711,
+
+  // Silvally Forms (#773)
+  silvallyfire:     773, silvallywater:    773, silvallyelectric: 773,
+  silvallygrass:    773, silvallyice:      773, silvallyfighting: 773,
+  silvallypoison:   773, silvallyground:   773, silvallyflying:   773,
+  silvallypsychic:  773, silvallybug:      773, silvallyrock:     773,
+  silvallyghost:    773, silvallydragon:   773, silvallydark:     773,
+  silvallysteel:    773, silvallyfairy:    773, silvallynormal:   773,
 
   // Arceus Forms (#493)
   arceusfairy:    493, arceusground:   493, arceuswater:    493,
@@ -238,9 +257,6 @@ function parseCSV(text) {
 }
 
 // --- HELPER: Map one set's details to a strategy object ---
-// setsForPokemon = the tier-keyed object from gen9.json for this Pokémon,
-// OR a flat { SetName: details } object from a per-tier sets file.
-// tierKey is the tier name string to attach (used when iterating gen9.json).
 function mapSetDetails(setName, details, stats) {
   let rawAbility = details.abilities || details.ability || details.Abilities || details.Ability;
   if (!rawAbility || rawAbility === "Any") {
@@ -263,10 +279,7 @@ function mapSetDetails(setName, details, stats) {
 }
 
 // --- HELPER: Extract all strategies from gen9.json for a given Pokémon name ---
-// gen9AllSets = full gen9.json object  { "Charizard": { pu: { "Sun Wallbreaker": {...} }, vgc2025: {...} } }
-// Returns a Map of  tierName → strategy[]
 function getStrategiesFromAllSets(smogonName, stats, gen9AllSets) {
-  // Case-insensitive key lookup
   const lowerIndex = {};
   for (const key of Object.keys(gen9AllSets)) {
     lowerIndex[key.toLowerCase()] = key;
@@ -291,18 +304,13 @@ function getStrategiesFromAllSets(smogonName, stats, gen9AllSets) {
 
   if (!pokemonEntry) return new Map();
 
-  // gen9.json structure: { tierKey: { SetName: details } }
-  // But some entries may be flat { SetName: details } (older format) — detect by checking
-  // whether values are plain set-detail objects (have "moves" key) or sub-objects.
   const tierMap = new Map();
   for (const [key, value] of Object.entries(pokemonEntry)) {
     if (value && typeof value === "object" && !Array.isArray(value) && ("moves" in value || "item" in value || "ability" in value || "abilities" in value)) {
-      // Flat format — treat whole pokemonEntry as one unnamed tier
       const strategies = Object.entries(pokemonEntry).map(([sn, d]) => mapSetDetails(sn, d, stats));
       tierMap.set("default", strategies);
       break;
     } else if (value && typeof value === "object") {
-      // Nested format — key is a tier name
       const strategies = Object.entries(value).map(([sn, d]) => mapSetDetails(sn, d, stats));
       if (strategies.length > 0) tierMap.set(key, strategies);
     }
@@ -368,15 +376,9 @@ async function buildDatabase() {
 
     // ─────────────────────────────────────────────────────────────
     // PHASE 2 — Enrich with Smogon competitive data
-    // Strategy:
-    //   • Fetch gen9.json ONCE — contains ALL sets for ALL tiers
-    //   • Fetch per-tier stats files for 12 tiers — provides usage %
-    //   • For each Pokémon in a tier's stats, attach usage + strategies
-    //     from gen9.json (which covers every tier including zu, vgc2025…)
     // ─────────────────────────────────────────────────────────────
     console.log("\n⚔️  PHASE 2: Fetching Smogon data...");
 
-    // 12 tiers for usage stats — covers standard, VGC, National Dex, Doubles, Monotype
     const tiers = [
       "ubers", "ou", "uu", "ru", "nu", "pu", "zu", "lc",
       "vgc2025",
@@ -385,7 +387,6 @@ async function buildDatabase() {
       "monotype",
     ];
 
-    // Fetch all sets in ONE request
     let gen9AllSets = {};
     try {
       const allSetsRes = await axios.get("https://pkmn.github.io/smogon/data/sets/gen9.json");
@@ -395,7 +396,6 @@ async function buildDatabase() {
       console.log(`  ⚠️  gen9.json failed — ${e.message} (sets will be empty)`);
     }
 
-    // Fetch stats per tier in parallel
     await Promise.all(tiers.map(async (tier) => {
       try {
         const statsRes  = await axios.get(`https://pkmn.github.io/smogon/data/stats/gen9${tier}.json`);
@@ -423,9 +423,7 @@ async function buildDatabase() {
             ? typeof stats.usage === "number" ? stats.usage : (stats.usage.weighted || 0)
             : 0;
 
-          // Pull strategies from gen9.json for this specific tier
           const allTierStrategies = getStrategiesFromAllSets(smogonName, stats, gen9AllSets);
-          // Prefer strategies keyed to this exact tier, fallback to any available tier
           const strategies = allTierStrategies.get(tier)
             || allTierStrategies.get("default")
             || (allTierStrategies.size > 0 ? [...allTierStrategies.values()][0] : []);
@@ -443,8 +441,6 @@ async function buildDatabase() {
       }
     }));
 
-    // For Pokémon with sets in gen9.json but NO stats in any fetched tier,
-    // add them as "Untiered" so their sets are still visible.
     const lowerIndex = {};
     for (const key of Object.keys(gen9AllSets)) lowerIndex[key.toLowerCase()] = key;
 
