@@ -67,6 +67,7 @@ function renderTable(pokemonArray) {
 
 // --- UPDATE TYPE COUNT BADGE ---
 function updateTypeCount() {
+  if (!DOM.typeCount || !DOM.typesDropdownBtn) return;
   if (filterState.types.length > 0) {
     DOM.typeCount.textContent = `(${filterState.types.length})`;
     DOM.typesDropdownBtn.classList.add("active");
@@ -93,39 +94,45 @@ function setupEventListeners() {
   });
 
   // --- POPULATE TYPE FILTER BADGES IN DROPDOWN ---
-  POKEMON_TYPES.forEach((type) => {
-    const badge = document.createElement("span");
-    badge.className = `type-badge type-${type} type-filter-badge`;
-    badge.textContent = type;
-    badge.dataset.type = type;
-    badge.addEventListener("click", (e) => {
-      e.stopPropagation(); // Don't close dropdown when clicking a badge
-      const index = filterState.types.indexOf(type);
-      if (index > -1) { filterState.types.splice(index, 1); badge.classList.remove("active"); }
-      else            { filterState.types.push(type);       badge.classList.add("active"); }
-      updateTypeCount();
-      applyFilters();
+  if (DOM.typesDropdownPanel) {
+    POKEMON_TYPES.forEach((type) => {
+      const badge = document.createElement("span");
+      badge.className = `type-badge type-${type} type-filter-badge`;
+      badge.textContent = type;
+      badge.dataset.type = type;
+      badge.addEventListener("click", (e) => {
+        e.stopPropagation(); // Don't close dropdown when clicking a badge
+        const index = filterState.types.indexOf(type);
+        if (index > -1) { filterState.types.splice(index, 1); badge.classList.remove("active"); }
+        else            { filterState.types.push(type);       badge.classList.add("active"); }
+        updateTypeCount();
+        applyFilters();
+      });
+      DOM.typesDropdownPanel.appendChild(badge);
     });
-    DOM.typesDropdownPanel.appendChild(badge);
-  });
+  }
 
   // --- TYPES DROPDOWN TOGGLE ---
-  DOM.typesDropdownBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    const isOpen = DOM.typesDropdownPanel.classList.contains("open");
-    // Close all dropdowns first
-    document.querySelectorAll(".filter-dropdown-panel").forEach((p) => p.classList.remove("open"));
-    if (!isOpen) DOM.typesDropdownPanel.classList.add("open");
-  });
+  if (DOM.typesDropdownBtn && DOM.typesDropdownPanel) {
+    DOM.typesDropdownBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = DOM.typesDropdownPanel.classList.contains("open");
+      // Close all dropdowns first
+      document.querySelectorAll(".filter-dropdown-panel").forEach((p) => p.classList.remove("open"));
+      if (!isOpen) DOM.typesDropdownPanel.classList.add("open");
+    });
+  }
 
   // --- RARITY DROPDOWN TOGGLE ---
-  DOM.rarityDropdownBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    const isOpen = DOM.rarityDropdownPanel.classList.contains("open");
-    // Close all dropdowns first
-    document.querySelectorAll(".filter-dropdown-panel").forEach((p) => p.classList.remove("open"));
-    if (!isOpen) DOM.rarityDropdownPanel.classList.add("open");
-  });
+  if (DOM.rarityDropdownBtn && DOM.rarityDropdownPanel) {
+    DOM.rarityDropdownBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = DOM.rarityDropdownPanel.classList.contains("open");
+      // Close all dropdowns first
+      document.querySelectorAll(".filter-dropdown-panel").forEach((p) => p.classList.remove("open"));
+      if (!isOpen) DOM.rarityDropdownPanel.classList.add("open");
+    });
+  }
 
   // --- RARITY OPTION SELECTION ---
   document.querySelectorAll(".rarity-option").forEach((opt) => {
@@ -139,11 +146,13 @@ function setupEventListeners() {
       opt.classList.add("active");
 
       // Update button text
-      const labels = { all: "⭐ Rarity", legendary: "⭐ Legendary/Mythical", "non-legendary": "⭐ Non-Legendary" };
-      DOM.rarityDropdownBtn.innerHTML = `${labels[value]} ▾`;
-      DOM.rarityDropdownBtn.classList.toggle("active", value !== "all");
+      if (DOM.rarityDropdownBtn) {
+        const labels = { all: "⭐ Rarity", legendary: "⭐ Legendary/Mythical", "non-legendary": "⭐ Non-Legendary" };
+        DOM.rarityDropdownBtn.innerHTML = `${labels[value]} ▾`;
+        DOM.rarityDropdownBtn.classList.toggle("active", value !== "all");
+      }
 
-      DOM.rarityDropdownPanel.classList.remove("open");
+      if (DOM.rarityDropdownPanel) DOM.rarityDropdownPanel.classList.remove("open");
       applyFilters();
     });
   });
@@ -154,21 +163,25 @@ function setupEventListeners() {
   });
 
   // --- HAS SPAWNS CHIP ---
-  DOM.spawnsChip.addEventListener("click", () => {
-    filterState.hasSpawns = !filterState.hasSpawns;
-    DOM.spawnsChip.classList.toggle("active", filterState.hasSpawns);
-    applyFilters();
-  });
+  if (DOM.spawnsChip) {
+    DOM.spawnsChip.addEventListener("click", () => {
+      filterState.hasSpawns = !filterState.hasSpawns;
+      DOM.spawnsChip.classList.toggle("active", filterState.hasSpawns);
+      applyFilters();
+    });
+  }
 
   // --- SORT SELECT ---
   if (DOM.sortSelect) DOM.sortSelect.addEventListener("change", applyFilters);
 
   // --- RANDOM BUTTON ---
-  if (DOM.randomBtn) DOM.randomBtn.addEventListener("click", () => {
-    const keys = Object.keys(localDB);
-    const p    = localDB[keys[Math.floor(Math.random() * keys.length)]];
-    openModal(p.id, p.cleanName);
-  });
+  if (DOM.randomBtn) {
+    DOM.randomBtn.addEventListener("click", () => {
+      const keys = Object.keys(localDB);
+      const p    = localDB[keys[Math.floor(Math.random() * keys.length)]];
+      openModal(p.id, p.cleanName);
+    });
+  }
 
   // --- TABS ---
   DOM.tabs.forEach((tab) => {
