@@ -40,7 +40,7 @@ const formToDexMap = {
   urshifurapidstrike:  892,
   urshifusingledtrike: 892,
 
-  // Mega Forms
+  // Mega Forms (both possible cleanName spellings included for safety)
   charizardmegax:  6,   charizardmegay:  6,
   venusaurmega:    3,   blastoismega:    9,
   dianciemega:     719, lopunnymega:     428,
@@ -48,7 +48,8 @@ const formToDexMap = {
   latiasmega:      380, tyranitarmega:   248,
   mawilemega:      303, swampertmega:    260,
   pinsirmega:      127, heracrossmega:   214,
-  aggronmega:      306, banettmega:      354,
+  aggronmega:      306,
+  banettmega:      354, banettemega:     354,  // both spellings
   absolmega:       359, garchompmega:    445,
   lucariomega:     448, alakazammega:    65,
   gengarmega:      94,  kangaskhanmega:  115,
@@ -59,18 +60,19 @@ const formToDexMap = {
   salamencemega:   373, metagrossmega:   376,
   rayquazamega:    384, slowbromega:     80,
   audinomega:      531, gallademega:     475,
-  gardevoirmega:   282, medichamega:     308,
+  gardevoirmega:   282,
+  medichamega:     308, medichammega:    308,  // both spellings
   gyaradosmega:    130, sableyemega:     302,
   beedrillmega:    15,  sceptilemega:    254,
   abomasnowmega:   460, pidgeotmega:     16,
-  glaliemega:      362,
+  glaliemega:      362, blazikenmega:    257,
 
   // Zygarde Forms (#718)
-  zygarde10:   718, zygarde50:   718, zygardecomplete: 718,
+  zygarde10:       718, zygarde50:       718, zygardecomplete: 718,
 
   // Gourgeist Forms (#711)
-  gourgeistsuper:  711, gourgeistlarge:  711,
-  gourgeistsmall:  711, gourgeistaverage: 711,
+  gourgeistsuper:   711, gourgeistlarge:   711,
+  gourgeistsmall:   711, gourgeistaverage: 711,
 
   // Silvally Forms (#773)
   silvallyfire:     773, silvallywater:    773, silvallyelectric: 773,
@@ -152,7 +154,9 @@ const formToDexMap = {
 };
 
 // --- POKEMON THAT NEED A SPECIFIC POKEAPI FORM SLUG ---
+// Megas have their own slug so Phase 3 fetches the Mega sprite + Mega stats
 const cleanNameToPokeApiFormSlug = {
+  // Special legendaries
   ursalunabloodmoon:  "ursaluna-bloodmoon",
   giratinaorigin:     "giratina-origin",
   dialgarorigin:      "dialga-origin",
@@ -166,6 +170,56 @@ const cleanNameToPokeApiFormSlug = {
   calyrexshadow:      "calyrex-shadow",
   zaciancrowned:      "zacian-crowned",
   zamazentacrowned:   "zamazenta-crowned",
+
+  // Mega Forms → PokéAPI slugs (gives Mega sprite + boosted stats)
+  charizardmegax:  "charizard-mega-x",
+  charizardmegay:  "charizard-mega-y",
+  venusaurmega:    "venusaur-mega",
+  blastoismega:    "blastoise-mega",
+  alakazammega:    "alakazam-mega",
+  gengarmega:      "gengar-mega",
+  kangaskhanmega:  "kangaskhan-mega",
+  pinsirmega:      "pinsir-mega",
+  gyaradosmega:    "gyarados-mega",
+  aerodactylmega:  "aerodactyl-mega",
+  ampharosmega:    "ampharos-mega",
+  scizormega:      "scizor-mega",
+  heracrossmega:   "heracross-mega",
+  houndoommega:    "houndoom-mega",
+  tyranitarmega:   "tyranitar-mega",
+  blazikenmega:    "blaziken-mega",
+  gardevoirmega:   "gardevoir-mega",
+  mawilemega:      "mawile-mega",
+  aggronmega:      "aggron-mega",
+  medichamega:     "medicham-mega",
+  medichammega:    "medicham-mega",
+  manectricmega:   "manectric-mega",
+  sharpedomega:    "sharpedo-mega",
+  cameruptmega:    "camerupt-mega",
+  altariamega:     "altaria-mega",
+  sableyemega:     "sableye-mega",
+  banettmega:      "banette-mega",
+  banettemega:     "banette-mega",
+  absolmega:       "absol-mega",
+  glaliemega:      "glalie-mega",
+  salamencemega:   "salamence-mega",
+  metagrossmega:   "metagross-mega",
+  latiasmega:      "latias-mega",
+  latiosmega:      "latios-mega",
+  rayquazamega:    "rayquaza-mega",
+  lopunnymega:     "lopunny-mega",
+  garchompmega:    "garchomp-mega",
+  lucariomega:     "lucario-mega",
+  audinomega:      "audino-mega",
+  slowbromega:     "slowbro-mega",
+  steelixmega:     "steelix-mega",
+  pidgeotmega:     "pidgeot-mega",
+  beedrillmega:    "beedrill-mega",
+  dianciemega:     "diancie-mega",
+  gallademega:     "gallade-mega",
+  sceptilemega:    "sceptile-mega",
+  swampertmega:    "swampert-mega",
+  abomasnowmega:   "abomasnow-mega",
 };
 
 let pokemonDB = {};
