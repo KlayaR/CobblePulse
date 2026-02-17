@@ -49,7 +49,7 @@ const formToDexMap = {
   mawilemega:      303, swampertmega:    260,
   pinsirmega:      127, heracrossmega:   214,
   aggronmega:      306,
-  banettmega:      354, banettemega:     354,  // both spellings
+  banettmega:      354, banettemega:     354,
   absolmega:       359, garchompmega:    445,
   lucariomega:     448, alakazammega:    65,
   gengarmega:      94,  kangaskhanmega:  115,
@@ -61,7 +61,7 @@ const formToDexMap = {
   rayquazamega:    384, slowbromega:     80,
   audinomega:      531, gallademega:     475,
   gardevoirmega:   282,
-  medichamega:     308, medichammega:    308,  // both spellings
+  medichamega:     308, medichammega:    308,
   gyaradosmega:    130, sableyemega:     302,
   beedrillmega:    15,  sceptilemega:    254,
   abomasnowmega:   460, pidgeotmega:     16,
@@ -332,8 +332,11 @@ function mapSetDetails(setName, details, stats) {
   };
 }
 
-// --- HELPER: Extract all strategies from gen9.json for a given Pokémon name ---
-function getStrategiesFromAllSets(smogonName, stats, gen9AllSets) {
+// --- HELPER: Extract ALL strategies from gen9.json for a given Pokémon name ---
+// Returns a flat array of all sets across ALL tiers found in the JSON.
+// The old approach tried to match tier keys exactly ("vgc2025" vs "VGC 2025 Reg H"),
+// which silently dropped sets. Now we collect every set from every tier block.
+function getAllStrategies(smogonName, stats, gen9AllSets) {
   const lowerIndex = {};
   for (const key of Object.keys(gen9AllSets)) {
     lowerIndex[key.toLowerCase()] = key;
@@ -352,24 +355,38 @@ function getStrategiesFromAllSets(smogonName, stats, gen9AllSets) {
 
   let pokemonEntry = null;
   for (const c of candidates) {
-    if (gen9AllSets[c])                  { pokemonEntry = gen9AllSets[c]; break; }
-    if (lowerIndex[c.toLowerCase()])     { pokemonEntry = gen9AllSets[lowerIndex[c.toLowerCase()]]; break; }
+    if (gen9AllSets[c])              { pokemonEntry = gen9AllSets[c]; break; }
+    if (lowerIndex[c.toLowerCase()]) { pokemonEntry = gen9AllSets[lowerIndex[c.toLowerCase()]]; break; }
   }
 
-  if (!pokemonEntry) return new Map();
+  if (!pokemonEntry) return [];
 
-  const tierMap = new Map();
-  for (const [key, value] of Object.entries(pokemonEntry)) {
-    if (value && typeof value === "object" && !Array.isArray(value) && ("moves" in value || "item" in value || "ability" in value || "abilities" in value)) {
-      const strategies = Object.entries(pokemonEntry).map(([sn, d]) => mapSetDetails(sn, d, stats));
-      tierMap.set("default", strategies);
-      break;
-    } else if (value && typeof value === "object") {
-      const strategies = Object.entries(value).map(([sn, d]) => mapSetDetails(sn, d, stats));
-      if (strategies.length > 0) tierMap.set(key, strategies);
+  // Detect flat structure: { "Set Name": { moves, item, ... }, ... }
+  const firstValue = Object.values(pokemonEntry)[0];
+  const isFlat = firstValue && typeof firstValue === "object" &&
+    ("moves" in firstValue || "item" in firstValue || "ability" in firstValue || "abilities" in firstValue);
+
+  if (isFlat) {
+    // Flat: all entries are sets directly
+    return Object.entries(pokemonEntry).map(([setName, details]) => mapSetDetails(setName, details, stats));
+  }
+
+  // Nested: each key is a tier block containing sets
+  // Collect ALL sets from ALL tier blocks, deduplicating by set name
+  const seen = new Set();
+  const allSets = [];
+  for (const tierBlock of Object.values(pokemonEntry)) {
+    if (tierBlock && typeof tierBlock === "object" && !Array.isArray(tierBlock)) {
+      for (const [setName, details] of Object.entries(tierBlock)) {
+        if (!seen.has(setName) && details && typeof details === "object" &&
+            ("moves" in details || "item" in details || "ability" in details || "abilities" in details)) {
+          seen.add(setName);
+          allSets.push(mapSetDetails(setName, details, stats));
+        }
+      }
     }
   }
-  return tierMap;
+  return allSets;
 }
 
 // --- HELPER: Run an async fn on items in chunks ---
@@ -477,10 +494,8 @@ async function buildDatabase() {
             ? typeof stats.usage === "number" ? stats.usage : (stats.usage.weighted || 0)
             : 0;
 
-          const allTierStrategies = getStrategiesFromAllSets(smogonName, stats, gen9AllSets);
-          const strategies = allTierStrategies.get(tier)
-            || allTierStrategies.get("default")
-            || (allTierStrategies.size > 0 ? [...allTierStrategies.values()][0] : []);
+          // Use getAllStrategies — collects ALL sets from ALL tier blocks, no key-matching failures
+          const strategies = getAllStrategies(smogonName, stats, gen9AllSets);
 
           pokemonDB[cleanName].allRanks.push({
             tier:       tier,
@@ -495,13 +510,9 @@ async function buildDatabase() {
       }
     }));
 
-    const lowerIndex = {};
-    for (const key of Object.keys(gen9AllSets)) lowerIndex[key.toLowerCase()] = key;
-
     Object.values(pokemonDB).forEach((p) => {
       if (p.allRanks.length === 0) {
-        const fakeSets = getStrategiesFromAllSets(p.name, {}, gen9AllSets);
-        const strategies = fakeSets.size > 0 ? [...fakeSets.values()].flat() : [];
+        const strategies = getAllStrategies(p.name, {}, gen9AllSets);
         p.allRanks.push({ tier: "Untiered", rank: "N/A", usage: "0.00", strategies });
       }
     });

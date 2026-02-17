@@ -9,6 +9,10 @@ const DMG_CLASS_HTML = {
   status:   `<span class="tt-dmg-class tt-dmg-status"></span>`,
 };
 
+// Tracks whether the mouse is currently hovering a tooltip trigger.
+// Set true on mouseenter, false on mouseleave — checked after async fetch.
+let _tooltipHoverActive = false;
+
 function showTooltip(e, html) {
   ttContent.innerHTML = html;
   tooltip.classList.add("visible");
@@ -25,6 +29,7 @@ function moveTooltip(e) {
 }
 
 function hideTooltip() {
+  _tooltipHoverActive = false;
   tooltip.classList.remove("visible");
 }
 
@@ -86,8 +91,12 @@ async function fetchTooltip(type, slug) {
 }
 
 async function handleTooltipHover(e, type, slug) {
+  // Mark hover as active BEFORE the async fetch.
+  // If mouseleave fires while fetching, _tooltipHoverActive becomes false
+  // and we skip showing the tooltip even though the fetch completed.
+  _tooltipHoverActive = true;
   const html = await fetchTooltip(type, slug);
-  if (html) showTooltip(e, html);
+  if (html && _tooltipHoverActive) showTooltip(e, html);
 }
 
 // Reposition on mouse move
