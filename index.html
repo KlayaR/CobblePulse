@@ -1266,9 +1266,10 @@
           const currentBadge = stats ? stats.tier.toUpperCase() : "UNTIERED";
 
           // NEW: Creates the Usage Badge for the header!
-          const usageBadge = stats
-            ? `<span class="tier-badge" style="background: var(--accent-primary); margin-left: 8px;">${stats.usage}% USAGE</span>`
-            : "";
+          const usageBadge =
+            stats && parseFloat(stats.usage) > 0
+              ? `<span style="font-size: 0.7rem; color: var(--text-muted); margin-left: 6px;">${stats.usage}% usage</span>`
+              : "";
 
           // --- BUILD IMMUNITY HTML ---
           const immunities = getImmunities(
@@ -1394,29 +1395,27 @@
 
           DOM.modalBody.innerHTML = `
             <div class="modal-header">
-                <div style="position:relative;display:inline-block;">
-                  <img src="${details.sprites.front_default}" alt="${details.name}" class="modal-sprite" id="modalSprite">
-                  <button class="shiny-btn" id="shinyBtn" title="Toggle shiny">✨ Shiny</button>
-                </div>
+                <img src="${details.sprites.front_default}" alt="${details.name}" class="modal-sprite" id="modalSprite">
                 <div class="modal-title">
-                    <h2 style="margin-bottom: 5px; display: flex; align-items: center; flex-wrap: wrap;">
-                        <a href="${pokemonDbUrl}" target="_blank" title="View on PokemonDB" 
-                           style="color: var(--text-main); text-decoration: none; transition: color 0.2s;">
+                    <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin-bottom: 6px;">
+                        <a href="${pokemonDbUrl}" target="_blank" title="View on PokemonDB"
+                           style="color: var(--text-main); text-decoration: none; font-size: 1.6rem; font-weight: bold; text-transform: capitalize;">
                            ${details.name.replace("-", " ")}
                         </a>
                         ${favBtnHtml}
                         ${shareBtnHtml}
+                        <button class="shiny-btn" id="shinyBtn" title="Toggle shiny">✨</button>
                         <span class="tier-badge">${currentBadge}</span>
                         ${usageBadge}
                         ${sourceTag}
-                    </h2>
-                    <div style="margin-top: 5px; display: flex; align-items: center; flex-wrap: wrap; gap: 10px;">
+                    </div>
+                    <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px;">
                         <div>${typeHtml}</div>
                         ${
                           immunities.length > 0
                             ? `
                           <div style="display: flex; align-items: center; gap: 6px; border-left: 1px solid var(--glass-border); padding-left: 10px;">
-                            <span style="color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px;">🛡️</span>
+                            <span style="color: var(--text-muted); font-size: 0.7rem;">🛡️</span>
                             ${immunities
                               .map(
                                 (imm) => `
@@ -1434,13 +1433,17 @@
                     </div>
                 </div>
             </div>
-            <div>
-                ${weaknessHtml}
-                ${statsHtml}
-                ${evoHtml}
-                ${compHtml}
-                <div class="info-card full-width" style="border-color: var(--accent-primary);">
-                    ${locationsHtml}
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px;">
+                <div>
+                    ${weaknessHtml}
+                    ${statsHtml}
+                    ${evoHtml}
+                </div>
+                <div>
+                    ${compHtml}
+                    <div class="info-card full-width" style="border-color: var(--accent-primary);">
+                        ${locationsHtml}
+                    </div>
                 </div>
             </div>
           `;
@@ -1787,18 +1790,18 @@
       }
 
       function getWeaknesses(types) {
+        // TYPE_CHART[attacker][defender] = multiplier
+        // We need: for each attacker, what's the total multiplier against this Pokemon's types?
         let multipliers = {};
         for (let attacker in TYPE_CHART) {
           let mult = 1;
-          types.forEach((t) => {
-            mult *=
-              TYPE_CHART[attacker][t] !== undefined
-                ? TYPE_CHART[attacker][t]
-                : 1;
+          types.forEach((defender) => {
+            const row = TYPE_CHART[attacker] || {};
+            mult *= row[defender] !== undefined ? row[defender] : 1;
           });
           if (mult > 1) multipliers[attacker] = mult;
         }
-        return multipliers; // e.g. { fire: 2, ice: 4 }
+        return multipliers;
       }
 
       function getTacticalMatchups(types) {
