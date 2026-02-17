@@ -22,7 +22,6 @@ const smogonToPokeApiMap = {
 };
 
 // --- FORM NAME → BASE DEX NUMBER ---
-// FIX: Removed duplicate weezinggalar (was listed under both Alolan and Galarian sections)
 const formToDexMap = {
   // Legendary Forms
   zaciancrowned:       888,
@@ -63,8 +62,8 @@ const formToDexMap = {
   ogerponhearthflame: 1017, ogerponwellspring: 1017,
   ogerponcornerstone: 1017, ogerponteal:       1017,
 
-  // Ursaluna (#901)
-  nursalunabloodmoon: 901,
+  // Ursaluna (#901) — FIX: was incorrectly "nursalunabloodmoon"
+  ursalunabloodmoon: 901,
 
   // Rotom Forms (#479)
   rotomwash: 479, rotomheat: 479, rotomfrost: 479,
@@ -113,6 +112,24 @@ const formToDexMap = {
   indeedeef:         876, indeedem:            876,
 };
 
+// --- POKEMON THAT NEED A SPECIFIC POKEAPI FORM SLUG (not just dex number) ---
+// Used in Phase 3 to fetch the correct form's sprite/types/stats
+const cleanNameToPokeApiFormSlug = {
+  ursalunabloodmoon: "ursaluna-bloodmoon",
+  giratinaorigin:    "giratina-origin",
+  dialgarorigin:     "dialga-origin",
+  palkiaorigin:      "palkia-origin",
+  kyuremblack:       "kyurem-black",
+  kyuremwhite:       "kyurem-white",
+  shayminsky:        "shaymin-sky",
+  hoopaunbound:      "hoopa-unbound",
+  urshifurapidstrike:"urshifu-rapid-strike",
+  calyrexice:        "calyrex-ice",
+  calyrexshadow:     "calyrex-shadow",
+  zaciancrowned:     "zacian-crowned",
+  zamazentacrowned:  "zamazenta-crowned",
+};
+
 let pokemonDB = {};
 
 // --- HELPER: Convert Pokémon name to PokéAPI slug ---
@@ -149,7 +166,6 @@ function nameToPokeAPI(name) {
 }
 
 // --- HELPER: Fix UTF-8 mojibake from misread CSV encoding ---
-// This happens when a Latin-1/Windows-1252 encoded CSV is read as UTF-8.
 function cleanText(text) {
   if (!text) return text;
   return text
@@ -286,7 +302,6 @@ async function buildDatabase() {
 
     // ─────────────────────────────────────────────────────────────
     // PHASE 2 — Enrich with Smogon competitive data
-    // FIX: Fetch all 7 tiers in parallel (was sequential)
     // ─────────────────────────────────────────────────────────────
     console.log("\n⚔️  PHASE 2: Fetching Smogon tier data (parallel)...");
     const tiers = ["ubers", "ou", "uu", "ru", "nu", "pu", "lc"];
@@ -344,19 +359,9 @@ async function buildDatabase() {
     console.log(`✅ Phase 2 done`);
 
     // ─────────────────────────────────────────────────────────────
-    // PHASE 3 — Enrich with PokéAPI data (IDs, sprites, types,
-    //           abilities, stats, isLegendary, isMythical)
-    //
-    // FIX 1: Batched parallel fetches (POKEAPI_BATCH_SIZE at a time)
-    //         instead of one-at-a-time sequential loop.
-    //         ~600 Pokémon @ 200ms each = was ~2 min, now ~10 sec.
-    //
-    // FIX 2: Also fetches species endpoint per Pokémon to store
-    //         isLegendary + isMythical booleans directly in the DB,
-    //         enabling a reliable legendary filter on the frontend.
-    //
-    // FIX 3: speciesUrl is NOT stored — modal.js no longer needs it
-    //         (it now uses the cached species data from getPokemonDetails).
+    // PHASE 3 — Enrich with PokéAPI data
+    // For forms with a specific PokéAPI slug (e.g. ursaluna-bloodmoon),
+    // fetch that form endpoint instead of the base dex number.
     // ─────────────────────────────────────────────────────────────
     console.log("\n🌐 PHASE 3: Fetching PokéAPI data in parallel batches...");
     const allEntries = Object.keys(pokemonDB);
@@ -364,36 +369,38 @@ async function buildDatabase() {
     let failCount    = 0;
 
     await batchedAsync(allEntries, POKEAPI_BATCH_SIZE, POKEAPI_BATCH_DELAY, async (cleanName) => {
-      const dexNumber = pokemonDB[cleanName].dex;
-      if (!dexNumber) {
+      const dexNumber  = pokemonDB[cleanName].dex;
+      const formSlug   = cleanNameToPokeApiFormSlug[cleanName];
+      const pokemonKey = formSlug || dexNumber;
+
+      if (!pokemonKey) {
         console.log(`  ⚠️  Skipped ${cleanName} — no dex number`);
         failCount++;
         return;
       }
 
       try {
-        // Fetch pokemon + species in parallel for each entry
+        // For form slugs, species is always fetched by dex number
         const [pokemonRes, speciesRes] = await Promise.all([
-          axios.get(`https://pokeapi.co/api/v2/pokemon/${dexNumber}`),
+          axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemonKey}`),
           axios.get(`https://pokeapi.co/api/v2/pokemon-species/${dexNumber}`),
         ]);
 
         const data    = pokemonRes.data;
         const species = speciesRes.data;
 
-        pokemonDB[cleanName].id          = data.id;
-        pokemonDB[cleanName].sprite      = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${data.id}.png`;
+        pokemonDB[cleanName].id          = dexNumber; // keep dex id for sprite consistency
+        pokemonDB[cleanName].sprite      = data.sprites.front_default ||
+          `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${dexNumber}.png`;
         pokemonDB[cleanName].types       = data.types.map((t) => t.type.name);
         pokemonDB[cleanName].abilities   = data.abilities.map((a) => ({ name: a.ability.name, isHidden: a.is_hidden }));
         pokemonDB[cleanName].stats       = Object.fromEntries(data.stats.map((s) => [s.stat.name, s.base_stat]));
-
-        // NEW: Store legendary/mythical status from species endpoint
         pokemonDB[cleanName].isLegendary = species.is_legendary;
         pokemonDB[cleanName].isMythical  = species.is_mythical;
 
         successCount++;
       } catch (e) {
-        console.log(`  ⚠️  PokéAPI failed for ${pokemonDB[cleanName].name} (#${dexNumber}) — ${e.message}`);
+        console.log(`  ⚠️  PokéAPI failed for ${pokemonDB[cleanName].name} (#${pokemonKey}) — ${e.message}`);
         failCount++;
       }
     });
@@ -407,7 +414,6 @@ async function buildDatabase() {
     fs.writeFileSync("localDB.json", JSON.stringify(pokemonDB, null, 2));
     console.log("  ✅ localDB.json saved");
 
-    // localDB.js is a CORS-friendly version for direct <script> loading
     fs.writeFileSync("localDB.js", `window.localDB = ${JSON.stringify(pokemonDB, null, 2)};`);
     console.log("  ✅ localDB.js saved");
 
