@@ -289,37 +289,70 @@
         position: fixed;
         z-index: 9999;
         background: #0f1923;
-        border: 1px solid var(--accent-primary);
-        border-radius: 8px;
-        padding: 10px 14px;
-        max-width: 260px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        padding: 12px 14px;
+        max-width: 280px;
         pointer-events: none;
         opacity: 0;
         transition: opacity 0.15s ease;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
       }
       #tooltip.visible {
         opacity: 1;
       }
       #tooltip .tt-name {
         font-weight: bold;
-        font-size: 0.85rem;
-        color: var(--accent-primary);
+        font-size: 0.9rem;
+        color: #fff;
         text-transform: capitalize;
-        margin-bottom: 4px;
+        margin-bottom: 6px;
       }
       #tooltip .tt-desc {
         font-size: 0.78rem;
-        color: var(--text-main);
-        line-height: 1.5;
+        color: rgba(255, 255, 255, 0.75);
+        line-height: 1.55;
       }
       #tooltip .tt-meta {
-        font-size: 0.72rem;
-        color: var(--text-muted);
-        margin-top: 5px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        flex-wrap: wrap;
+        margin-top: 8px;
+        padding-top: 8px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .tt-dmg-class {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 0.7rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        padding: 2px 6px;
+        border-radius: 4px;
+      }
+      .tt-dmg-physical {
+        background: rgba(192, 96, 0, 0.3);
+        color: #f5a742;
+      }
+      .tt-dmg-special {
+        background: rgba(50, 100, 220, 0.3);
+        color: #7eb8f7;
+      }
+      .tt-dmg-status {
+        background: rgba(130, 70, 180, 0.3);
+        color: #c77fff;
+      }
+      .tt-stat {
+        font-size: 0.7rem;
+        color: rgba(255, 255, 255, 0.5);
+        background: rgba(255, 255, 255, 0.06);
+        padding: 2px 6px;
+        border-radius: 4px;
       }
       .has-tooltip {
-        border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
         cursor: help;
       }
       .stat-bar-container {
@@ -738,11 +771,7 @@
     </style>
   </head>
   <body>
-    <div id="tooltip">
-      <div class="tt-name" id="tt-name"></div>
-      <div class="tt-desc" id="tt-desc"></div>
-      <div class="tt-meta" id="tt-meta"></div>
-    </div>
+    <div id="tooltip"><div id="tt-content"></div></div>
 
     <div class="container" id="app">
       <header>
@@ -1615,24 +1644,29 @@
       // --- TOOLTIP ENGINE ---
       const tooltipCache = {};
       const tooltip = document.getElementById("tooltip");
+      const ttContent = document.getElementById("tt-content");
 
-      function showTooltip(e, name, desc, meta = "") {
-        document.getElementById("tt-name").textContent = name;
-        document.getElementById("tt-desc").textContent = desc;
-        document.getElementById("tt-meta").textContent = meta;
+      const DMG_CLASS_HTML = {
+        physical: `<span class="tt-dmg-class tt-dmg-physical">⚔️ Physical</span>`,
+        special: `<span class="tt-dmg-class tt-dmg-special">💫 Special</span>`,
+        status: `<span class="tt-dmg-class tt-dmg-status">🌀 Status</span>`,
+      };
+
+      function showTooltip(e, html) {
+        ttContent.innerHTML = html;
         tooltip.classList.add("visible");
         moveTooltip(e);
       }
 
       function moveTooltip(e) {
-        const x = e.clientX + 14;
-        const y = e.clientY + 14;
+        const x = e.clientX + 16;
+        const y = e.clientY + 16;
         const w = tooltip.offsetWidth;
         const h = tooltip.offsetHeight;
         tooltip.style.left =
-          (x + w > window.innerWidth ? x - w - 28 : x) + "px";
+          (x + w > window.innerWidth ? e.clientX - w - 16 : x) + "px";
         tooltip.style.top =
-          (y + h > window.innerHeight ? y - h - 28 : y) + "px";
+          (y + h > window.innerHeight ? e.clientY - h - 16 : y) + "px";
       }
 
       function hideTooltip() {
@@ -1648,7 +1682,7 @@
             .toLowerCase()
             .replace(/[^a-z0-9]+/g, "-")
             .replace(/^-|-$/g, "");
-          let result = null;
+          let html = "";
 
           if (type === "ability") {
             const res = await fetch(
@@ -1661,14 +1695,13 @@
             const short = data.flavor_text_entries?.find(
               (e) => e.language.name === "en",
             );
-            result = {
-              name: data.name.replace(/-/g, " "),
-              desc:
-                entry?.short_effect ||
-                short?.flavor_text ||
-                "No description available.",
-              meta: "",
-            };
+            const desc =
+              entry?.short_effect ||
+              short?.flavor_text ||
+              "No description available.";
+            html = `
+              <div class="tt-name">${data.name.replace(/-/g, " ")}</div>
+              <div class="tt-desc">${desc}</div>`;
           } else if (type === "move") {
             const res = await fetch(
               `https://pokeapi.co/api/v2/move/${apiSlug}`,
@@ -1677,33 +1710,42 @@
             const entry = data.flavor_text_entries?.find(
               (e) => e.language.name === "en",
             );
-            const power = data.power ? `Power: ${data.power}` : "";
-            const acc = data.accuracy ? `Acc: ${data.accuracy}%` : "";
-            const pp = data.pp ? `PP: ${data.pp}` : "";
-            result = {
-              name: data.name.replace(/-/g, " "),
-              desc:
-                entry?.flavor_text?.replace(/\f/g, " ") ||
-                "No description available.",
-              meta: [data.type?.name, data.damage_class?.name, power, acc, pp]
-                .filter(Boolean)
-                .join("  ·  "),
-            };
+            const desc =
+              entry?.flavor_text?.replace(/\f/g, " ") ||
+              "No description available.";
+            const typeName = data.type?.name || "";
+            const dmgClass = data.damage_class?.name || "";
+            const typeTag = typeName
+              ? `<span class="type-badge type-${typeName}" style="margin:0;font-size:0.65rem;padding:1px 6px;">${typeName}</span>`
+              : "";
+            const dmgTag = DMG_CLASS_HTML[dmgClass] || "";
+            const power = data.power
+              ? `<span class="tt-stat">PWR ${data.power}</span>`
+              : "";
+            const acc = data.accuracy
+              ? `<span class="tt-stat">ACC ${data.accuracy}%</span>`
+              : "";
+            const pp = data.pp
+              ? `<span class="tt-stat">PP ${data.pp}</span>`
+              : "";
+            html = `
+              <div class="tt-name">${data.name.replace(/-/g, " ")}</div>
+              <div class="tt-desc">${desc}</div>
+              <div class="tt-meta">${typeTag}${dmgTag}${power}${acc}${pp}</div>`;
           } else if (type === "nature") {
             const res = await fetch(
               `https://pokeapi.co/api/v2/nature/${apiSlug}`,
             );
             const data = await res.json();
-            const up = data.increased_stat?.name?.replace(/-/g, " ") || null;
-            const down = data.decreased_stat?.name?.replace(/-/g, " ") || null;
-            result = {
-              name: data.name,
-              desc:
-                up && down
-                  ? `+${up} / -${down}`
-                  : "Neutral nature — no stat changes.",
-              meta: "",
-            };
+            const up = data.increased_stat?.name?.replace(/-/g, " ");
+            const down = data.decreased_stat?.name?.replace(/-/g, " ");
+            const desc =
+              up && down
+                ? `<span style="color:#6dff8a;">▲ ${up}</span> &nbsp; <span style="color:#ff6b6b;">▼ ${down}</span>`
+                : `Neutral — no stat changes.`;
+            html = `
+              <div class="tt-name">${data.name} Nature</div>
+              <div class="tt-desc" style="font-size:0.82rem;">${desc}</div>`;
           } else if (type === "item") {
             const res = await fetch(
               `https://pokeapi.co/api/v2/item/${apiSlug}`,
@@ -1715,29 +1757,31 @@
             const flavor = data.flavor_text_entries?.find(
               (e) => e.language.name === "en",
             );
-            result = {
-              name: data.name.replace(/-/g, " "),
-              desc:
-                entry?.short_effect ||
-                flavor?.text ||
-                "No description available.",
-              meta: "",
-            };
+            const desc =
+              entry?.short_effect ||
+              flavor?.text ||
+              "No description available.";
+            const sprite = data.sprites?.default
+              ? `<img src="${data.sprites.default}" style="width:28px;height:28px;image-rendering:pixelated;float:right;margin-left:8px;">`
+              : "";
+            html = `
+              <div class="tt-name">${sprite}${data.name.replace(/-/g, " ")}</div>
+              <div class="tt-desc">${desc}</div>`;
           }
 
-          if (result) tooltipCache[key] = result;
-          return result;
-        } catch (e) {
-          return { name: slug, desc: "Could not load description.", meta: "" };
+          tooltipCache[key] = html;
+          return html;
+        } catch (err) {
+          return `<div class="tt-name">${slug}</div><div class="tt-desc">Could not load description.</div>`;
         }
       }
 
       async function handleTooltipHover(e, type, slug) {
-        const data = await fetchTooltip(type, slug);
-        if (data) showTooltip(e, data.name, data.desc, data.meta);
+        const html = await fetchTooltip(type, slug);
+        if (html) showTooltip(e, html);
       }
 
-      // Global mousemove to reposition tooltip
+      // Reposition tooltip on mouse move
       document.addEventListener("mousemove", (e) => {
         if (tooltip.classList.contains("visible")) moveTooltip(e);
       });
