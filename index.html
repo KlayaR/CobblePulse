@@ -22,30 +22,6 @@
         </div>
       </header>
 
-      <div class="filter-chips" id="filterChips" style="display:none">
-        <div class="filter-section">
-          <h4 style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;margin-bottom:8px;">Filter by Type:</h4>
-          <div id="typeFilterBadges" style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;"></div>
-        </div>
-        <div style="display:flex;gap:8px;flex-wrap:wrap">
-          <div class="filter-chip" id="spawnsChip"><span>📍 Has Spawns</span></div>
-          <div class="filter-chip" id="legendaryChip"><span>⭐ Legendary</span></div>
-          <button class="advanced-toggle" id="advancedToggle">⚙️ Advanced Filters</button>
-        </div>
-      </div>
-
-      <div class="advanced-filters" id="advancedFilters">
-        <div class="filter-section">
-          <h4>Base Stats (Minimum)</h4>
-          <div class="stat-slider"><label>HP</label>     <input type="range" id="hpSlider"  min="0" max="255" value="0" /><span id="hpValue">0</span></div>
-          <div class="stat-slider"><label>ATK</label>    <input type="range" id="atkSlider" min="0" max="255" value="0" /><span id="atkValue">0</span></div>
-          <div class="stat-slider"><label>DEF</label>    <input type="range" id="defSlider" min="0" max="255" value="0" /><span id="defValue">0</span></div>
-          <div class="stat-slider"><label>Sp.ATK</label> <input type="range" id="spaSlider" min="0" max="255" value="0" /><span id="spaValue">0</span></div>
-          <div class="stat-slider"><label>Sp.DEF</label> <input type="range" id="spdSlider" min="0" max="255" value="0" /><span id="spdValue">0</span></div>
-          <div class="stat-slider"><label>SPE</label>    <input type="range" id="speSlider" min="0" max="255" value="0" /><span id="speValue">0</span></div>
-        </div>
-      </div>
-
       <div class="tabs" id="tabContainer">
         <button class="tab-btn active" data-tab="about">About</button>
         <button class="tab-btn" data-tab="ubers">Ubers</button>
@@ -59,13 +35,41 @@
         <button class="tab-btn" data-tab="favorites">⭐ Favorites</button>
       </div>
 
-      <div class="toolbar" id="toolbar" style="display:none">
-        <select class="sort-select" id="sortSelect">
+      <!-- NEW: Unified filter bar, always visible on all tabs except About -->
+      <div class="unified-filters" id="unifiedFilters" style="display:none">
+        <select class="filter-dropdown" id="sortSelect">
           <option value="dex">Sort: Dex #</option>
           <option value="name">Sort: Name A–Z</option>
           <option value="type">Sort: Type</option>
         </select>
-        <button class="random-btn" id="randomBtn">🎲 Random</button>
+
+        <button class="filter-button" id="randomBtn">🎲 Random</button>
+
+        <div class="filter-chip" id="spawnsChip">
+          <span>📍 Has Spawns</span>
+        </div>
+
+        <!-- Rarity dropdown -->
+        <div class="filter-dropdown-wrapper" id="rarityDropdownWrapper">
+          <button class="filter-dropdown-btn" id="rarityDropdownBtn">
+            ⭐ Rarity ▾
+          </button>
+          <div class="filter-dropdown-panel" id="rarityDropdownPanel">
+            <div class="rarity-option" data-value="all">All Pokémon</div>
+            <div class="rarity-option" data-value="legendary">Legendary/Mythical</div>
+            <div class="rarity-option active" data-value="non-legendary">Non-Legendary</div>
+          </div>
+        </div>
+
+        <!-- Types dropdown -->
+        <div class="filter-dropdown-wrapper" id="typesDropdownWrapper">
+          <button class="filter-dropdown-btn" id="typesDropdownBtn">
+            Types <span id="typeCount"></span> ▾
+          </button>
+          <div class="filter-dropdown-panel types-panel" id="typesDropdownPanel">
+            <!-- Filled dynamically with type badges -->
+          </div>
+        </div>
       </div>
 
       <div id="aboutPanel" style="display:none" class="glass-panel"></div>

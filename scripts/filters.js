@@ -21,11 +21,12 @@ function parseSmartSearch(query) {
 
 // --- MAIN FILTER & RENDER ORCHESTRATOR ---
 function applyFilters() {
-  const query  = DOM.searchInput.value.toLowerCase();
-  const sortBy = DOM.sortSelect ? DOM.sortSelect.value : "dex";
+  const query = DOM.searchInput.value.toLowerCase();
 
-  if (DOM.toolbar)     DOM.toolbar.style.display     = currentTab === "all" ? "flex" : "none";
-  if (DOM.filterChips) DOM.filterChips.style.display = currentTab === "about" ? "none" : "flex";
+  // Always show unified filters on non-About tabs
+  if (DOM.unifiedFilters) {
+    DOM.unifiedFilters.style.display = currentTab === "about" ? "none" : "flex";
+  }
 
   // --- ABOUT TAB ---
   if (currentTab === "about") {
@@ -147,45 +148,39 @@ function applyFilters() {
     });
   }
 
-  // --- FILTER CHIPS ---
+  // --- NEW: TYPE FILTER (AND LOGIC) ---
+  // FIX: Changed from .some() to .every() so selecting multiple types shows only Pokémon with ALL selected types
   if (filterState.types.length > 0) {
-    filtered = filtered.filter((p) => filterState.types.some((type) => p.types.includes(type)));
+    filtered = filtered.filter((p) => filterState.types.every((type) => p.types.includes(type)));
   }
+
+  // --- HAS SPAWNS FILTER ---
   if (filterState.hasSpawns) {
     filtered = filtered.filter((p) => {
       const dbEntry = localDB[p.cleanName] || localDB[p.name] || {};
       return dbEntry.locations && dbEntry.locations.length > 0;
     });
   }
-  if (filterState.isLegendary) {
-    filtered = filtered.filter((p) =>
-      p.name.match(/(mewtwo|lugia|ho-oh|kyogre|groudon|rayquaza|dialga|palkia|giratina|reshiram|zekrom|kyurem|xerneas|yveltal|zygarde|solgaleo|lunala|necrozma|zacian|zamazenta|eternatus|calyrex|koraidon|miraidon)/i)
-    );
-  }
 
-  // --- ADVANCED STAT FILTERS ---
-  const { stats } = filterState;
-  if (Object.values(stats).some((v) => v > 0)) {
+  // --- NEW: RARITY FILTER (using isLegendary/isMythical from localDB) ---
+  if (filterState.rarity === "legendary") {
     filtered = filtered.filter((p) => {
       const dbEntry = localDB[p.cleanName] || localDB[p.name] || {};
-      if (!dbEntry.stats) return false;
-      return (
-        (dbEntry.stats.hp || 0) >= stats.hp &&
-        (dbEntry.stats.attack || 0) >= stats.attack &&
-        (dbEntry.stats.defense || 0) >= stats.defense &&
-        (dbEntry.stats["special-attack"] || 0) >= stats["special-attack"] &&
-        (dbEntry.stats["special-defense"] || 0) >= stats["special-defense"] &&
-        (dbEntry.stats.speed || 0) >= stats.speed
-      );
+      return dbEntry.isLegendary || dbEntry.isMythical;
+    });
+  } else if (filterState.rarity === "non-legendary") {
+    filtered = filtered.filter((p) => {
+      const dbEntry = localDB[p.cleanName] || localDB[p.name] || {};
+      return !dbEntry.isLegendary && !dbEntry.isMythical;
     });
   }
+  // If rarity === "all", no filtering
 
-  // --- SORT (all tab only) ---
-  if (currentTab === "all") {
-    if (sortBy === "name")     filtered.sort((a, b) => a.name.localeCompare(b.name));
-    else if (sortBy === "type") filtered.sort((a, b) => (a.types[0] || "").localeCompare(b.types[0] || ""));
-    else                        filtered.sort((a, b) => (a.id || 0) - (b.id || 0));
-  }
+  // --- SORT ---
+  const sortBy = DOM.sortSelect ? DOM.sortSelect.value : "dex";
+  if (sortBy === "name")     filtered.sort((a, b) => a.name.localeCompare(b.name));
+  else if (sortBy === "type") filtered.sort((a, b) => (a.types[0] || "").localeCompare(b.types[0] || ""));
+  else                        filtered.sort((a, b) => (a.id || 0) - (b.id || 0));
 
   renderTable(filtered);
 }
