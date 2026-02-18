@@ -130,7 +130,12 @@ input:focus, select:focus { border-color: var(--accent-primary); }
 select option { background: #1a1a2e; color: #fff; }
 
 /* --- TABS --- */
-.tabs { display: flex; gap: 10px; margin-bottom: 15px; overflow-x: auto; padding-bottom: 5px; }
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
 
 .tab-btn {
   background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border);
@@ -484,7 +489,6 @@ tr:hover { background: rgba(255,255,255,0.05); }
   .controls { flex-direction: column; width: 100%; }
   .search-wrapper { width: 100%; }
   input[type="text"] { width: 100%; font-size: 0.9rem; }
-  .tabs { flex-wrap: nowrap; overflow-x: auto; }
   .unified-filters { flex-direction: column; align-items: stretch; }
   .filter-dropdown, .filter-button, .filter-chip, .filter-dropdown-btn { width: 100%; justify-content: center; }
   .modal-content { max-width: 100%; padding: 20px; max-height: 95vh; }
