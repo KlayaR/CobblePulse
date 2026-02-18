@@ -8,6 +8,7 @@
   --glass-border: rgba(255, 255, 255, 0.1);
   --accent-primary: #e94560;
   --accent-secondary: #0f3460;
+  --mega-gold: #ffd700;
   --text-main: #f5f5f5;
   --text-muted: #a0a0b5;
   --blur: blur(12px);
@@ -423,6 +424,20 @@ select option { background: #1a1a2e; color: #fff; }
 .stat-bar-fill { height: 100%; border-radius: 6px; transition: width 0.6s ease; }
 .stat-value { font-size: 0.8rem; font-weight: bold; text-align: right; }
 
+.stat-total {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--glass-border);
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.stat-total strong {
+  color: var(--accent-primary);
+  font-size: 1.1rem;
+}
+
 /* --- EVOLUTION CHAIN --- */
 .evo-chain { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
 .evo-mon { display: flex; flex-direction: column; align-items: center; cursor: pointer; transition: transform 0.2s; text-align: center; }
@@ -627,6 +642,114 @@ tr:hover { background: rgba(255,255,255,0.05); }
 .immunity-source {
   color: var(--text-muted);
   font-size: 0.65rem;
+}
+
+/* --- MEGA EVOLUTION TOGGLE --- */
+.mega-toggle-container {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.mega-toggle-btn {
+  background: rgba(0, 0, 0, 0.3);
+  border: 2px solid var(--glass-border);
+  color: var(--text-muted);
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+  position: relative;
+  overflow: hidden;
+}
+
+.mega-toggle-btn:hover {
+  border-color: var(--mega-gold);
+  color: var(--mega-gold);
+  background: rgba(255, 215, 0, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2);
+}
+
+.mega-toggle-btn.active {
+  border-color: var(--mega-gold);
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 215, 0, 0.1));
+  color: var(--mega-gold);
+  font-weight: 900;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3), inset 0 0 20px rgba(255, 215, 0, 0.1);
+}
+
+.mega-toggle-btn.active::before {
+  content: "⚡";
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.9rem;
+  animation: pulse-mega 2s infinite ease-in-out;
+}
+
+@keyframes pulse-mega {
+  0%, 100% { opacity: 0.6; transform: translateY(-50%) scale(1); }
+  50% { opacity: 1; transform: translateY(-50%) scale(1.2); }
+}
+
+.mega-boost-badge {
+  color: var(--mega-gold);
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-left: 10px;
+  padding: 3px 8px;
+  background: rgba(255, 215, 0, 0.15);
+  border: 1px solid var(--mega-gold);
+  border-radius: 4px;
+  animation: pulse-mega-badge 2s infinite ease-in-out;
+}
+
+@keyframes pulse-mega-badge {
+  0%, 100% { box-shadow: 0 0 5px rgba(255, 215, 0, 0.3); }
+  50% { box-shadow: 0 0 15px rgba(255, 215, 0, 0.6); }
+}
+
+.mega-obtain-notice {
+  background: rgba(255, 215, 0, 0.1);
+  border: 2px solid var(--mega-gold);
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.mega-obtain-notice h4 {
+  color: var(--mega-gold);
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mega-obtain-notice p {
+  color: var(--text-main);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.mega-obtain-notice ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 10px 0;
+}
+
+.mega-obtain-notice li {
+  padding: 6px 0;
+  color: var(--text-main);
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 
 /* Modal Cards */
@@ -1060,6 +1183,10 @@ tr:hover { background: rgba(255,255,255,0.05); }
     margin-bottom: 10px;
   }
   
+  .mega-toggle-container {
+    justify-content: center;
+  }
+  
   .strategy-grid {
     grid-template-columns: 1fr;
     gap: 10px;
@@ -1129,5 +1256,10 @@ tr:hover { background: rgba(255,255,255,0.05); }
   .type-badge {
     font-size: 0.7rem;
     padding: 3px 8px;
+  }
+  
+  .mega-toggle-btn {
+    font-size: 0.75rem;
+    padding: 5px 10px;
   }
 }
