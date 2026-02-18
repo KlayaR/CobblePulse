@@ -1,48 +1,27 @@
 /* === IMAGE LAZY LOADING & OPTIMIZATION === */
 
-/* Loading states for lazy-loaded images */
+/* Lazy-loaded images - transparent placeholder, no background */
 img[data-src] {
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-  background-size: 200% 100%;
-  animation: shimmer 1.5s infinite;
+  background: transparent;
   min-height: 50px;
   min-width: 50px;
 }
 
-/* Shimmer animation for loading state */
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
-
-/* Loading transition */
+/* Loading transition - simple opacity fade, no blur */
 img.loading {
-  opacity: 0.6;
-  filter: blur(4px);
-  transition: opacity 0.3s ease, filter 0.3s ease;
+  opacity: 0.3;
+  transition: opacity 0.2s ease;
 }
 
-/* Loaded state */
+/* Loaded state - quick fade in */
 img.loaded {
   opacity: 1;
-  filter: blur(0);
-  animation: fadeIn 0.3s ease;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  transition: opacity 0.2s ease;
 }
 
 /* Error state */
 img.error {
-  opacity: 0.3;
+  opacity: 0.2;
   filter: grayscale(100%);
 }
 
@@ -58,17 +37,9 @@ img {
   transform: translateZ(0);
 }
 
-/* Modal sprite with lazy loading */
+/* Modal sprite with lazy loading - no background */
 .modal-sprite[data-src] {
   min-height: 110px;
   min-width: 110px;
-}
-
-/* Reduce shimmer opacity for dark theme */
-img[data-src] {
-  background: linear-gradient(90deg, 
-    rgba(255,255,255,0.05) 25%, 
-    rgba(255,255,255,0.1) 50%, 
-    rgba(255,255,255,0.05) 75%);
-  background-size: 200% 100%;
+  background: transparent;
 }
