@@ -9,10 +9,21 @@
   const MAX_TEAM_SIZE = 6;
   const MIN_COMPETITIVE_BST = 480;
   let currentSelectorTab = 'favorites';
+  
+  // Global suggestion filters (persisted)
+  let suggestionFilters = {
+    allowLegendaries: JSON.parse(localStorage.getItem('cobblePulse_allowLegendaries') || 'true'),
+    difficulty: localStorage.getItem('cobblePulse_difficulty') || 'balanced'
+  };
 
   // Ensure favorites is available
   if (typeof window.favorites === 'undefined') {
     window.favorites = JSON.parse(localStorage.getItem('cobblePulseFavorites') || '[]');
+  }
+
+  function saveSuggestionFilters() {
+    localStorage.setItem('cobblePulse_allowLegendaries', suggestionFilters.allowLegendaries);
+    localStorage.setItem('cobblePulse_difficulty', suggestionFilters.difficulty);
   }
 
   // Load teams from localStorage
@@ -99,6 +110,24 @@
         ${teamSelector}
       </div>
 
+      <!-- Global Suggestion Filters -->
+      <div class="global-filters" style="background:var(--bg-secondary);padding:15px;border-radius:12px;margin-bottom:20px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:15px;">
+          <div style="font-weight:600;color:var(--text-primary);">🎯 Suggestion Settings:</div>
+          <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
+            <label style="display:flex;align-items:center;gap:8px;cursor:pointer;">
+              <input type="checkbox" id="globalAllowLegendaries" ${suggestionFilters.allowLegendaries ? 'checked' : ''} onchange="updateSuggestionFilters()" style="cursor:pointer;">
+              <span style="font-size:0.9rem;">Allow Legendaries</span>
+            </label>
+            <select id="globalDifficulty" onchange="updateSuggestionFilters()" style="padding:6px 12px;border-radius:6px;border:1px solid var(--border-color);background:var(--bg-primary);color:var(--text-primary);cursor:pointer;">
+              <option value="competitive" ${suggestionFilters.difficulty === 'competitive' ? 'selected' : ''}>Competitive (Best)</option>
+              <option value="balanced" ${suggestionFilters.difficulty === 'balanced' ? 'selected' : ''}>Balanced</option>
+              <option value="easy" ${suggestionFilters.difficulty === 'easy' ? 'selected' : ''}>Easy (Common)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
       <div class="team-actions">
         <button class="team-action-btn export-btn" onclick="exportTeam()" ${currentTeam.filter(p=>p).length === 0 ? 'disabled' : ''}>
           📤 Export Team
@@ -108,9 +137,6 @@
         </button>
         <button class="team-action-btn template-btn" onclick="showTemplatesModal()">
           📋 Templates
-        </button>
-        <button class="team-action-btn suggest-btn" onclick="showSuggestModal()" ${currentTeam.filter(p=>p).length === 0 ? 'disabled' : ''}>
-          💡 Suggest
         </button>
         <button class="team-action-btn clear-btn" onclick="confirmClearTeam()" ${currentTeam.filter(p=>p).length === 0 ? 'disabled' : ''}>
           🗑️ Clear
@@ -159,6 +185,12 @@
     initDragAndDrop();
   }
 
+  window.updateSuggestionFilters = function() {
+    suggestionFilters.allowLegendaries = document.getElementById('globalAllowLegendaries').checked;
+    suggestionFilters.difficulty = document.getElementById('globalDifficulty').value;
+    saveSuggestionFilters();
+  };
+
   function renderTeamSlots() {
     let html = '';
     for (let i = 0; i < MAX_TEAM_SIZE; i++) {
@@ -168,7 +200,6 @@
         const role = determineRole(pokemon);
         const roleIcon = getRoleIcon(role);
         
-        // FIX: Properly format abilities as text
         let abilitiesText = 'Unknown';
         if (pokemon.abilities && Array.isArray(pokemon.abilities) && pokemon.abilities.length > 0) {
           abilitiesText = pokemon.abilities.slice(0, 2).join(' / ');
@@ -193,8 +224,16 @@
         `;
       } else {
         html += `
-          <div class="team-slot empty" onclick="showPokemonSelector(${i})" data-slot="${i}">
-            <div class="empty-slot-content">
+          <div class="team-slot empty" data-slot="${i}">
+            <div class="empty-slot-header" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+              <button class="slot-action-btn" onclick="showSmartSuggestion(${i})" title="Smart Suggestion" style="flex:1;margin-right:5px;background:#3b82f6;">
+                💡 Suggest
+              </button>
+              <button class="slot-action-btn" onclick="showRandomSuggestion(${i})" title="Random Pick" style="flex:1;margin-left:5px;background:#8b5cf6;">
+                🎲 Random
+              </button>
+            </div>
+            <div class="empty-slot-content" onclick="showPokemonSelector(${i})" style="cursor:pointer;">
               <span class="plus-icon">+</span>
               <span class="slot-label">Add Pokémon</span>
             </div>
@@ -486,62 +525,14 @@
   };
 
   // ========================================
-  // SMART AI SUGGESTION SYSTEM
+  // PER-SLOT SMART SUGGESTION
   // ========================================
   
-  window.showSuggestModal = function() {
-    const modalHtml = `
-      <div class="suggest-modal">
-        <h3>💡 Smart Team Suggestions</h3>
-        <p style="margin-bottom:20px;color:var(--text-muted);">Configure suggestion preferences:</p>
-        
-        <div class="suggest-options">
-          <div class="suggest-option-group">
-            <label class="suggest-label">
-              <input type="checkbox" id="allowLegendaries" checked>
-              <span>Allow Legendary/Mythical Pokémon</span>
-            </label>
-          </div>
-          
-          <div class="suggest-option-group">
-            <label class="suggest-label">Difficulty Level:</label>
-            <select id="difficultyLevel" class="suggest-select">
-              <option value="competitive">Competitive (Best BST, any rarity)</option>
-              <option value="balanced">Balanced (Good power, moderate rarity)</option>
-              <option value="easy" selected>Easy Team (Common spawns only)</option>
-            </select>
-          </div>
-        </div>
-        
-        <div class="suggest-actions">
-          <button class="btn-primary" onclick="generateSmartSuggestions()">🎯 Generate Suggestions</button>
-          <button class="btn-secondary" onclick="closeModal()">Cancel</button>
-        </div>
-      </div>
-    `;
-    
-    const overlay = document.getElementById('modalOverlay');
-    const modalBody = document.getElementById('modalBody');
-    modalBody.innerHTML = modalHtml;
-    overlay.classList.add('active');
-  };
-
-  window.generateSmartSuggestions = function() {
-    const allowLegendaries = document.getElementById('allowLegendaries').checked;
-    const difficulty = document.getElementById('difficultyLevel').value;
-    
-    const suggestions = smartSuggest(allowLegendaries, difficulty);
+  window.showSmartSuggestion = function(slotIndex) {
+    const suggestions = smartSuggest(suggestionFilters.allowLegendaries, suggestionFilters.difficulty);
     
     if (suggestions.length === 0) {
-      alert('No suitable suggestions found. Try adjusting your filters.');
-      return;
-    }
-    
-    const emptySlot = currentTeam.findIndex((p, i) => !p && i < MAX_TEAM_SIZE);
-    const slotIndex = emptySlot >= 0 ? emptySlot : currentTeam.length;
-    
-    if (currentTeam.filter(p => p).length >= MAX_TEAM_SIZE) {
-      alert('Team is full! Remove a Pokémon first.');
+      alert('No suitable suggestions found. Try adjusting the global filters above.');
       return;
     }
     
@@ -551,7 +542,7 @@
         <p style="color:var(--text-muted);margin-bottom:15px;font-size:0.9rem;">
           ${suggestions[0].reasons.slice(0, 2).join(' • ')}
         </p>
-        <div class="selector-results" style="max-height:60vh;">
+        <div class="selector-results" style="max-height:60vh;overflow-y:auto;">
           ${suggestions.map((s, idx) => {
             const p = s.pokemon;
             const types = p.types.map(t => `<span class="type-badge type-${t}">${t}</span>`).join('');
@@ -587,8 +578,98 @@
       </div>
     `;
     
+    const overlay = document.getElementById('modalOverlay');
     const modalBody = document.getElementById('modalBody');
     modalBody.innerHTML = modalHtml;
+    overlay.classList.add('active');
+  };
+
+  // ========================================
+  // PER-SLOT RANDOM SUGGESTION
+  // ========================================
+  
+  window.showRandomSuggestion = function(slotIndex) {
+    const allPokemonData = window.localDB?.pokemon || window.localDB || {};
+    
+    // Filter based on global settings
+    let candidates = Object.values(allPokemonData).filter(p => {
+      if (window.isMegaForm(p.cleanName)) return false;
+      if (currentTeam.some(tp => tp && tp.id === p.id)) return false;
+      if (!suggestionFilters.allowLegendaries && (p.isLegendary || p.isMythical)) return false;
+      
+      if (p.stats) {
+        const bst = Object.values(p.stats).reduce((a, b) => a + b, 0);
+        if (suggestionFilters.difficulty === 'competitive' && bst < 520) return false;
+        if (suggestionFilters.difficulty === 'balanced' && bst < 480) return false;
+        if (suggestionFilters.difficulty === 'easy') {
+          if (bst < 450 || bst > 550) return false;
+          if (!p.locations || p.locations.length === 0) return false;
+          const hasCommonSpawn = p.locations.some(loc => 
+            loc.rarity && (loc.rarity.toLowerCase().includes('common') || 
+                          loc.rarity.toLowerCase().includes('frequent'))
+          );
+          if (!hasCommonSpawn) return false;
+        }
+      }
+      
+      return true;
+    });
+    
+    if (candidates.length === 0) {
+      alert('No Pokémon match the current filters. Try adjusting the global settings.');
+      return;
+    }
+    
+    // Pick 12 random
+    const randomPicks = [];
+    const pickedIndices = new Set();
+    while (randomPicks.length < Math.min(12, candidates.length)) {
+      const idx = Math.floor(Math.random() * candidates.length);
+      if (!pickedIndices.has(idx)) {
+        pickedIndices.add(idx);
+        randomPicks.push(candidates[idx]);
+      }
+    }
+    
+    const modalHtml = `
+      <div class="pokemon-selector-modal">
+        <h3>🎲 Random Picks for Slot ${slotIndex + 1}</h3>
+        <p style="color:var(--text-muted);margin-bottom:15px;font-size:0.9rem;">
+          Random selection based on your filters (${suggestionFilters.difficulty} difficulty, ${suggestionFilters.allowLegendaries ? 'with' : 'no'} legendaries)
+        </p>
+        <div class="selector-results" style="max-height:60vh;overflow-y:auto;">
+          ${randomPicks.map(p => {
+            const types = p.types.map(t => `<span class="type-badge type-${t}">${t}</span>`).join('');
+            const role = determineRole({ ...p, abilities: p.abilities || [] });
+            const roleIcon = getRoleIcon(role);
+            const bstInfo = p.stats ? Object.values(p.stats).reduce((a,b) => a+b, 0) : '?';
+            const rarityBadge = p.isLegendary || p.isMythical ? '<span style="color:#ffd700;">✨ Legendary</span>' : 
+                               p.locations?.some(loc => loc.rarity?.toLowerCase().includes('common')) ? '<span style="color:#4ade80;">📍 Common</span>' : '';
+            
+            return `
+              <div class="selector-pokemon" onclick="addToTeam(${slotIndex}, ${p.id}, '${p.cleanName}')" style="cursor:pointer;position:relative;">
+                <div style="position:absolute;top:5px;left:5px;font-size:1.3rem;" title="${role}">
+                  ${roleIcon}
+                </div>
+                <img src="${p.sprite}" alt="${p.name}" loading="lazy">
+                <div class="selector-pokemon-info">
+                  <div class="selector-pokemon-name">${p.name}</div>
+                  <div class="selector-pokemon-types">${types}</div>
+                  <div style="font-size:0.75rem;color:var(--text-muted);margin-top:4px;">
+                    BST: ${bstInfo} | ${rarityBadge}
+                  </div>
+                </div>
+              </div>
+            `;
+          }).join('')}
+        </div>
+      </div>
+    `;
+    
+    const overlay = document.getElementById('modalOverlay');
+    const modalBody = document.getElementById('modalBody');
+    modalBody.innerHTML = modalHtml;
+    overlay.classList.add('active');
   };
 
   function smartSuggest(allowLegendaries, difficulty) {
@@ -597,7 +678,6 @@
     
     if (!TYPE_CHART) return [];
     
-    // Analyze current team needs
     const defensiveWeaknesses = {};
     const coveredTypes = new Set();
     const teamRoles = {};
@@ -606,7 +686,6 @@
     currentTeam.forEach(pokemon => {
       if (!pokemon) return;
       
-      // Defensive weaknesses
       Object.keys(TYPE_CHART).forEach(attackType => {
         let effectiveness = 1;
         pokemon.types.forEach(defenseType => {
@@ -618,7 +697,6 @@
         }
       });
       
-      // Offensive coverage
       const fullData = allPokemonData[pokemon.cleanName];
       pokemon.types.forEach(type => {
         Object.keys(TYPE_CHART).forEach(defType => {
@@ -626,11 +704,9 @@
         });
       });
       
-      // Role tracking
       const role = determineRole(pokemon);
       teamRoles[role] = (teamRoles[role] || 0) + 1;
       
-      // Stats
       if (fullData?.stats) {
         totalSpeed += fullData.stats.speed;
         totalDefense += fullData.stats.defense + fullData.stats['special-defense'];
@@ -642,21 +718,19 @@
     const avgDefense = teamCount > 0 ? totalDefense / teamCount : 0;
     const uncoveredTypes = Object.keys(TYPE_CHART).filter(t => !coveredTypes.has(t));
     
-    // Score candidates
     const candidates = Object.values(allPokemonData)
       .filter(p => {
         if (window.isMegaForm(p.cleanName)) return false;
         if (currentTeam.some(tp => tp && tp.id === p.id)) return false;
         if (!allowLegendaries && (p.isLegendary || p.isMythical)) return false;
         
-        // Difficulty filters
         if (p.stats) {
           const bst = Object.values(p.stats).reduce((a, b) => a + b, 0);
           if (difficulty === 'competitive' && bst < 520) return false;
           if (difficulty === 'balanced' && bst < 480) return false;
           if (difficulty === 'easy') {
-            if (bst < 450 || bst > 550) return false; // Moderate power
-            if (!p.locations || p.locations.length === 0) return false; // Must have spawns
+            if (bst < 450 || bst > 550) return false;
+            if (!p.locations || p.locations.length === 0) return false;
             const hasCommonSpawn = p.locations.some(loc => 
               loc.rarity && (loc.rarity.toLowerCase().includes('common') || 
                             loc.rarity.toLowerCase().includes('frequent'))
@@ -672,21 +746,19 @@
         const reasons = [];
         const role = determineRole({ ...p, abilities: p.abilities || [] });
         
-        // Rarity scoring
         let rarity = 'uncommon';
         if (p.locations && p.locations.length > 0) {
           const hasCommon = p.locations.some(loc => loc.rarity?.toLowerCase().includes('common'));
           if (hasCommon) rarity = 'common';
         }
         
-        // DEFENSIVE SYNERGY (40 points max)
         let defenseScore = 0;
         Object.entries(defensiveWeaknesses).forEach(([type, count]) => {
           p.types.forEach(defenseType => {
             const typeData = TYPE_CHART[defenseType];
             if (typeData.immunities.includes(type)) {
               defenseScore += count * 15;
-              reasons.push(`🛡️ Immune to ${type} (covers ${count} weaknesses)`);
+              reasons.push(`🛡️ Immune to ${type} (${count}× weak)`);
             } else if (typeData.resistances.includes(type)) {
               defenseScore += count * 8;
               reasons.push(`🛡️ Resists ${type} (${count}× weak)`);
@@ -695,7 +767,6 @@
         });
         score += Math.min(defenseScore, 40);
         
-        // OFFENSIVE COVERAGE (35 points max)
         let coverageScore = 0;
         const newlyCovered = [];
         uncoveredTypes.forEach(uncoveredType => {
@@ -711,7 +782,6 @@
         }
         score += Math.min(coverageScore, 35);
         
-        // ROLE BALANCE (25 points max)
         const needsFastSweeper = avgSpeed < 80 && (teamRoles['Fast Sweeper'] || 0) < 2;
         const needsWall = avgDefense < 150 && (teamRoles['Wall/Tank'] || 0) < 2;
         const hasTooManySweepers = (teamRoles['Fast Sweeper'] || 0) + (teamRoles['Slow Sweeper'] || 0) >= 4;
@@ -729,19 +799,14 @@
           reasons.push('⚖️ Balances offensive team');
         }
         
-        // EASE OF ACQUISITION (difficulty bonus)
-        if (difficulty === 'easy') {
-          if (rarity === 'common') {
-            score += 20;
-            reasons.push('📍 Easy to obtain (common spawn)');
-          }
-        } else if (difficulty === 'competitive') {
-          if (p.stats) {
-            const bst = Object.values(p.stats).reduce((a, b) => a + b, 0);
-            if (bst >= 580) {
-              score += 15;
-              reasons.push('💪 High BST (top tier)');
-            }
+        if (difficulty === 'easy' && rarity === 'common') {
+          score += 20;
+          reasons.push('📍 Easy to obtain');
+        } else if (difficulty === 'competitive' && p.stats) {
+          const bst = Object.values(p.stats).reduce((a, b) => a + b, 0);
+          if (bst >= 580) {
+            score += 15;
+            reasons.push('💪 High BST');
           }
         }
         
@@ -761,27 +826,27 @@
   const TEAM_TEMPLATES = {
     'Balanced Core': {
       pokemon: ['Landorus', 'Toxapex', 'Corviknight', 'Heatran', 'Tapu Fini', 'Rillaboom'],
-      desc: 'Well-rounded competitive team with offense and defense'
+      desc: 'Well-rounded competitive team'
     },
     'Hyper Offense': {
       pokemon: ['Dragapult', 'Garchomp', 'Volcarona', 'Kartana', 'Tapu Koko', 'Melmetal'],
-      desc: 'Fast-paced aggressive team focused on overwhelming opponents'
+      desc: 'Fast aggressive sweepers'
     },
-    'Easy Starter Team': {
+    'Easy Starter': {
       pokemon: ['Talonflame', 'Azumarill', 'Toxicroak', 'Ferrothorn', 'Hippowdon', 'Slowbro'],
-      desc: 'Accessible team with common spawns and solid synergy'
+      desc: 'Accessible with common spawns'
     },
     'Rain Team': {
       pokemon: ['Pelipper', 'Barraskewda', 'Kingdra', 'Ferrothorn', 'Toxapex', 'Rillaboom'],
-      desc: 'Weather-based strategy utilizing rain'
+      desc: 'Rain weather strategy'
     },
     'Sun Team': {
       pokemon: ['Torkoal', 'Venusaur', 'Charizard', 'Heatran', 'Landorus', 'Tapu Fini'],
-      desc: 'Weather-based strategy utilizing sun'
+      desc: 'Sun weather strategy'
     },
     'Stall Team': {
       pokemon: ['Toxapex', 'Ferrothorn', 'Chansey', 'Corviknight', 'Hippowdon', 'Slowbro'],
-      desc: 'Defensive team focused on outlasting opponents'
+      desc: 'Ultra defensive team'
     }
   };
   
@@ -842,7 +907,7 @@
       if(window.closeModal) window.closeModal();
       renderTeamBuilder();
     } else {
-      alert('Could not load template - some Pokémon not found.');
+      alert('Could not load template.');
     }
   };
 
@@ -855,9 +920,9 @@
     const url = `${window.location.origin}${window.location.pathname}?team=${teamCode}`;
     
     navigator.clipboard.writeText(url).then(() => {
-      alert('✅ Team link copied to clipboard! Share it with friends.');
+      alert('✅ Team link copied! Share it with friends.');
     }).catch(() => {
-      prompt('Copy this link to share your team:', url);
+      prompt('Copy this link:', url);
     });
   };
   
@@ -865,9 +930,9 @@
     const modalHtml = `
       <div class="import-modal">
         <h3>📥 Import Team</h3>
-        <p style="margin-bottom:15px;color:var(--text-muted);">Paste a team link or code:</p>
-        <textarea id="importCode" placeholder="https://... or paste team code" rows="4" style="width:100%;padding:10px;border:1px solid var(--border-color);border-radius:8px;background:var(--bg-secondary);color:var(--text-primary);font-family:monospace;"></textarea>
-        <div class="import-actions" style="margin-top:15px;display:flex;gap:10px;">
+        <p style="margin-bottom:15px;color:var(--text-muted);">Paste team link or code:</p>
+        <textarea id="importCode" placeholder="https://... or paste code" rows="4" style="width:100%;padding:10px;border:1px solid var(--border-color);border-radius:8px;background:var(--bg-secondary);color:var(--text-primary);font-family:monospace;"></textarea>
+        <div style="margin-top:15px;display:flex;gap:10px;">
           <button class="btn-primary" onclick="importTeam()" style="flex:1;">Import</button>
           <button class="btn-secondary" onclick="closeModal()" style="flex:1;">Cancel</button>
         </div>
@@ -882,11 +947,7 @@
   
   window.importTeam = function() {
     const input = document.getElementById('importCode').value.trim();
-    let teamCode = input;
-    
-    if (input.includes('?team=')) {
-      teamCode = input.split('?team=')[1].split('&')[0];
-    }
+    let teamCode = input.includes('?team=') ? input.split('?team=')[1].split('&')[0] : input;
     
     try {
       const cleanNames = JSON.parse(atob(teamCode));
@@ -912,12 +973,12 @@
         saveTeam();
         if(window.closeModal) window.closeModal();
         renderTeamBuilder();
-        alert('✅ Team imported successfully!');
+        alert('✅ Team imported!');
       } else {
-        alert('❌ No valid Pokémon found in import code.');
+        alert('❌ No valid Pokémon found.');
       }
     } catch (e) {
-      alert('❌ Invalid team code. Please check and try again.');
+      alert('❌ Invalid code.');
     }
   };
 
@@ -968,7 +1029,7 @@
       alert('Cannot delete your only team!');
       return;
     }
-    if (confirm(`Delete team "${currentTeamName}"? This cannot be undone.`)) {
+    if (confirm(`Delete "${currentTeamName}"?`)) {
       delete savedTeams[currentTeamName];
       currentTeamName = Object.keys(savedTeams)[0];
       currentTeam = savedTeams[currentTeamName];
@@ -1017,21 +1078,19 @@
 
     return `
       ${criticalWeaknesses.length > 0 ? `
-        <div class="critical-weaknesses" style="margin-bottom:15px;">
+        <div style="margin-bottom:15px;">
           <h4 style="color:#ef4444;margin-bottom:8px;">🚨 Critical Weaknesses</h4>
-          <div class="weakness-list">
-            ${criticalWeaknesses.map(([type, pokemons]) => `
-              <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
-                <span class="type-badge type-${type}">${type}</span>
-                <span style="color:#ef4444;font-weight:bold;">${pokemons.length}×</span>
-                <span style="font-size:0.85rem;color:var(--text-muted);">${pokemons.join(', ')}</span>
-              </div>
-            `).join('')}
-          </div>
+          ${criticalWeaknesses.map(([type, pokemons]) => `
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+              <span class="type-badge type-${type}">${type}</span>
+              <span style="color:#ef4444;font-weight:bold;">${pokemons.length}×</span>
+              <span style="font-size:0.85rem;color:var(--text-muted);">${pokemons.join(', ')}</span>
+            </div>
+          `).join('')}
         </div>
       ` : ''}
       
-      <div class="weakness-summary" style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;text-align:center;">
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;text-align:center;">
         <div>
           <div style="font-size:1.8rem;font-weight:bold;color:#ef4444;">${Object.keys(weaknesses).length}</div>
           <div style="font-size:0.8rem;color:var(--text-muted);">Weak To</div>
@@ -1072,7 +1131,7 @@
     });
 
     return `
-      <div class="team-stats-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;">
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;">
         <div style="background:var(--bg-secondary);padding:10px;border-radius:8px;text-align:center;">
           <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:4px;">HP</div>
           <div style="font-size:1.3rem;font-weight:bold;">${avgStats.hp}</div>
@@ -1098,7 +1157,7 @@
           <div style="font-size:1.3rem;font-weight:bold;">${avgStats.speed}</div>
         </div>
       </div>
-      <p style="text-align:center;margin-top:10px;font-size:0.85rem;color:var(--text-muted);">Average base stats across your team</p>
+      <p style="text-align:center;margin-top:10px;font-size:0.85rem;color:var(--text-muted);">Average base stats</p>
     `;
   }
   
