@@ -1,3 +1,7 @@
+// CobblePulse Database Compiler v2.0
+// Automatically compiles JSON data sources into optimized localDB.js
+// Features: Strategy deduplication, tier rankings, build timestamps, PokéAPI enrichment
+
 const fs   = require("fs");
 const axios = require("axios");
 
