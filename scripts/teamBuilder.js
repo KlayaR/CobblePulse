@@ -8,6 +8,7 @@
   let currentTeamName = 'default';
   const MAX_TEAM_SIZE = 6;
   const MIN_COMPETITIVE_BST = 480;
+  let currentSelectorTab = 'favorites';
 
   // Ensure favorites is available
   if (typeof window.favorites === 'undefined') {
@@ -120,7 +121,7 @@
         ${renderTeamSlots()}
       </div>
 
-      ${currentTeam.length > 0 ? `
+      ${currentTeam.filter(p => p).length > 0 ? `
         <div class="team-analysis">
           <div class="analysis-section role-section">
             <h3>🎯 Team Roles</h3>
@@ -341,36 +342,181 @@
   function getMoveType(moveName) {
     const moveTypes = {
       'earthquake': 'ground', 'ice beam': 'ice', 'thunderbolt': 'electric', 'flamethrower': 'fire',
-      'surf': 'water', 'psychic': 'psychic', 'shadow ball': 'ghost', 'focus blast': 'fighting'
+      'surf': 'water', 'psychic': 'psychic', 'shadow ball': 'ghost', 'focus blast': 'fighting',
+      'ice punch': 'ice', 'thunder punch': 'electric', 'fire punch': 'fire', 'drain punch': 'fighting',
+      'stone edge': 'rock', 'iron head': 'steel', 'u-turn': 'bug', 'volt switch': 'electric'
     };
     return moveTypes[moveName.toLowerCase().replace(/[^a-z ]/g, '')] || null;
   }
 
+  // Pokemon selector with proper rendering
   window.showPokemonSelector = function(slotIndex) {
     const allPokemonData = window.localDB?.pokemon || window.localDB || {};
-    const favoritePokemon = Object.values(allPokemonData).filter(p => window.favorites.includes(p.cleanName) && !window.isMegaForm(p.cleanName));
-    const overlay = document.getElementById('modalOverlay'), modalBody = document.getElementById('modalBody');
-    modalBody.innerHTML = `<div class="pokemon-selector-modal"><h3>Select Slot ${slotIndex + 1}</h3><div class="selector-results">${favoritePokemon.map(p => `<div class="selector-pokemon" onclick="addToTeam(${slotIndex},${p.id},'${p.cleanName}')"><img src="${p.sprite}" alt="${p.name}"><div>${p.name}</div></div>`).join('')}</div></div>`;
+    const favoritePokemon = Object.values(allPokemonData).filter(p => 
+      window.favorites.includes(p.cleanName) && !window.isMegaForm(p.cleanName)
+    );
+
+    const modalHtml = `
+      <div class="pokemon-selector-modal">
+        <h3>Select Pokémon for Slot ${slotIndex + 1}</h3>
+        
+        <div class="selector-search">
+          <input type="text" id="selectorSearch" placeholder="Search Pokémon..." oninput="filterSelectorResults()">
+        </div>
+
+        <div class="selector-tabs">
+          <button class="selector-tab active" data-tab="favorites" onclick="switchSelectorTab('favorites')">⭐ Favorites</button>
+          <button class="selector-tab" data-tab="all" onclick="switchSelectorTab('all')">All Pokémon</button>
+        </div>
+
+        <div class="selector-results" id="selectorResults">
+          ${renderSelectorPokemon(favoritePokemon, slotIndex)}
+        </div>
+      </div>
+    `;
+
+    const overlay = document.getElementById('modalOverlay');
+    const modalBody = document.getElementById('modalBody');
+    modalBody.innerHTML = modalHtml;
     overlay.classList.add('active');
+    window.currentSelectorSlot = slotIndex;
   };
 
+  window.switchSelectorTab = function(tab) {
+    currentSelectorTab = tab;
+    document.querySelectorAll('.selector-tab').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.tab === tab);
+    });
+    window.filterSelectorResults();
+  };
+
+  window.filterSelectorResults = function() {
+    const search = document.getElementById('selectorSearch')?.value.toLowerCase() || '';
+    const allPokemonData = window.localDB?.pokemon || window.localDB || {};
+    
+    let pokemonList = [];
+    if (currentSelectorTab === 'favorites') {
+      pokemonList = Object.values(allPokemonData).filter(p => 
+        window.favorites.includes(p.cleanName) && !window.isMegaForm(p.cleanName)
+      );
+    } else {
+      pokemonList = Object.values(allPokemonData).filter(p => !window.isMegaForm(p.cleanName));
+    }
+
+    if (search) {
+      pokemonList = pokemonList.filter(p => 
+        p.name.toLowerCase().includes(search) || 
+        p.id.toString() === search
+      );
+    }
+
+    pokemonList.sort((a, b) => a.id - b.id);
+
+    const resultsContainer = document.getElementById('selectorResults');
+    if (resultsContainer) {
+      resultsContainer.innerHTML = renderSelectorPokemon(pokemonList, window.currentSelectorSlot);
+    }
+  };
+
+  function renderSelectorPokemon(pokemonList, slotIndex) {
+    if (pokemonList.length === 0) {
+      return '<div class="no-selector-results">No Pokémon found. Try adjusting your search or check the other tab.</div>';
+    }
+
+    return pokemonList.map(p => {
+      const types = p.types.map(t => `<span class="type-badge type-${t}">${t}</span>`).join('');
+      const isInTeam = currentTeam.some(tp => tp && tp.id === p.id);
+      
+      return `
+        <div class="selector-pokemon ${isInTeam ? 'in-team' : ''}" onclick="${isInTeam ? '' : `addToTeam(${slotIndex}, ${p.id}, '${p.cleanName}')`}">
+          <img src="${p.sprite}" alt="${p.name}" loading="lazy">
+          <div class="selector-pokemon-info">
+            <div class="selector-pokemon-name">${p.name}</div>
+            <div class="selector-pokemon-types">${types}</div>
+          </div>
+          ${isInTeam ? '<span class="in-team-badge">✓ In Team</span>' : ''}
+        </div>
+      `;
+    }).join('');
+  }
+
   window.addToTeam = function(slotIndex, pokemonId, cleanName) {
-    const allPokemonData = window.localDB?.pokemon || window.localDB || {}, pokemon = allPokemonData[cleanName];
+    const allPokemonData = window.localDB?.pokemon || window.localDB || {};
+    const pokemon = allPokemonData[cleanName];
+    
     if (!pokemon) return;
-    currentTeam[slotIndex] = {id:pokemon.id,name:pokemon.name,cleanName:pokemon.cleanName,types:pokemon.types,sprite:pokemon.sprite,abilities:pokemon.abilities||[]};
+
+    currentTeam[slotIndex] = {
+      id: pokemon.id,
+      name: pokemon.name,
+      cleanName: pokemon.cleanName,
+      types: pokemon.types,
+      sprite: pokemon.sprite,
+      abilities: pokemon.abilities || []
+    };
+
     saveTeam();
     if(window.closeModal) window.closeModal();
     renderTeamBuilder();
   };
 
-  window.removeFromTeam = function(slotIndex) { currentTeam[slotIndex] = null; saveTeam(); renderTeamBuilder(); };
-  window.confirmClearTeam = function() { if(confirm('Clear?')) { currentTeam=[]; saveTeam(); renderTeamBuilder(); }};
+  window.removeFromTeam = function(slotIndex) { 
+    currentTeam[slotIndex] = null; 
+    saveTeam(); 
+    renderTeamBuilder(); 
+  };
+  
+  window.confirmClearTeam = function() { 
+    if(confirm('Clear this team?')) { 
+      currentTeam=[]; 
+      saveTeam(); 
+      renderTeamBuilder(); 
+    }
+  };
+  
   window.showTemplatesModal = function() { alert('Templates coming soon!'); };
   window.showImportModal = function() { alert('Import coming soon!'); };
   window.exportTeam = function() { alert('Export coming soon!'); };
   window.suggestPokemon = function() { alert('Suggestions coming soon!'); };
   
-  function renderDefensiveWeaknesses() { return '<p>Defensive analysis loaded</p>'; }
-  function renderTeamStats() { return '<p>Team stats loaded</p>'; }
+  function renderDefensiveWeaknesses() { 
+    return '<p style="color: var(--text-muted);">Defensive weaknesses and resistances analysis will appear here once you add more Pokémon to your team.</p>'; 
+  }
+  
+  function renderTeamStats() { 
+    const allPokemonData = window.localDB?.pokemon || window.localDB || {};
+    let totalStats = { hp: 0, attack: 0, defense: 0, 'special-attack': 0, 'special-defense': 0, speed: 0 };
+    let count = 0;
+
+    currentTeam.forEach(pokemon => {
+      if (!pokemon) return;
+      const fullData = allPokemonData[pokemon.cleanName];
+      if (fullData?.stats) {
+        Object.keys(totalStats).forEach(stat => {
+          totalStats[stat] += fullData.stats[stat] || 0;
+        });
+        count++;
+      }
+    });
+
+    if (count === 0) return '<p>No stat data available</p>';
+
+    const avgStats = {};
+    Object.keys(totalStats).forEach(stat => {
+      avgStats[stat] = Math.round(totalStats[stat] / count);
+    });
+
+    return `
+      <div class="team-stats-grid">
+        <div class="stat-item"><span class="stat-name">HP</span><span class="stat-value">${avgStats.hp}</span></div>
+        <div class="stat-item"><span class="stat-name">Attack</span><span class="stat-value">${avgStats.attack}</span></div>
+        <div class="stat-item"><span class="stat-name">Defense</span><span class="stat-value">${avgStats.defense}</span></div>
+        <div class="stat-item"><span class="stat-name">Sp. Atk</span><span class="stat-value">${avgStats['special-attack']}</span></div>
+        <div class="stat-item"><span class="stat-name">Sp. Def</span><span class="stat-value">${avgStats['special-defense']}</span></div>
+        <div class="stat-item"><span class="stat-name">Speed</span><span class="stat-value">${avgStats.speed}</span></div>
+      </div>
+      <p class="stats-note">Average base stats across your team</p>
+    `;
+  }
   
 })();
