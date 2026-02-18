@@ -1,4 +1,4 @@
-/* === TEAM BUILDER === */
+/* === TEAM BUILDER - ENHANCED === */
 
 #teamBuilderContainer {
   padding: 30px;
@@ -20,6 +20,52 @@
 .team-subtitle {
   color: var(--text-muted);
   font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+/* Team Selector */
+.team-selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 15px;
+  padding: 10px;
+  background: rgba(0,0,0,0.2);
+  border-radius: 8px;
+  border: 1px solid var(--glass-border);
+}
+
+.team-selector label {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+#teamSelect {
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--glass-border);
+  background: rgba(0,0,0,0.3);
+  color: var(--text-main);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.team-mgmt-btn {
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--glass-border);
+  background: rgba(0,0,0,0.3);
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+
+.team-mgmt-btn:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
 }
 
 /* Team Actions */
@@ -56,9 +102,11 @@
 
 .export-btn:hover:not(:disabled) { border-color: #4caf50; }
 .import-btn:hover:not(:disabled) { border-color: #2196f3; }
+.template-btn:hover:not(:disabled) { border-color: #ff9800; }
+.suggest-btn:hover:not(:disabled) { border-color: #9c27b0; }
 .clear-btn:hover:not(:disabled) { border-color: #f44336; }
 
-/* Team Slots */
+/* Team Slots with Drag & Drop */
 .team-slots {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -73,7 +121,7 @@
   padding: 15px;
   transition: all 0.3s;
   position: relative;
-  min-height: 140px;
+  min-height: 160px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -89,6 +137,22 @@
   border-color: var(--accent-primary);
   background: rgba(233,69,96,0.05);
   transform: scale(1.02);
+}
+
+.team-slot.filled {
+  border-color: var(--accent-primary);
+  padding-top: 35px;
+  cursor: grab;
+}
+
+.team-slot.filled:active {
+  cursor: grabbing;
+}
+
+.team-slot.drag-over {
+  border-color: #4caf50;
+  background: rgba(76,175,80,0.1);
+  transform: scale(1.05);
 }
 
 .empty-slot-content {
@@ -108,11 +172,7 @@
   font-weight: bold;
 }
 
-.team-slot.filled {
-  border-color: var(--accent-primary);
-  padding-top: 35px;
-}
-
+/* Slot Buttons */
 .remove-slot-btn {
   position: absolute;
   top: 8px;
@@ -162,6 +222,20 @@
   transform: scale(1.1);
 }
 
+/* Role Badge */
+.slot-role-badge {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.8);
+  border: 1px solid var(--glass-border);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  z-index: 2;
+}
+
 .slot-sprite {
   width: 80px;
   height: 80px;
@@ -187,11 +261,18 @@
   gap: 4px;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 4px;
 }
 
 .slot-types .type-badge {
   font-size: 0.7rem;
   padding: 3px 8px;
+}
+
+.slot-ability {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: 3px;
 }
 
 /* Empty Team Message */
@@ -214,16 +295,6 @@
 
 .empty-team-message p {
   margin-bottom: 8px;
-}
-
-.empty-team-message .tip {
-  margin-top: 20px;
-  padding: 12px;
-  background: rgba(255,193,7,0.1);
-  border: 1px solid rgba(255,193,7,0.3);
-  border-radius: 8px;
-  color: #ffc107;
-  display: inline-block;
 }
 
 /* Team Analysis */
@@ -254,6 +325,78 @@
   margin-bottom: 10px;
 }
 
+/* Role Section */
+.role-section {
+  border-color: rgba(156,39,176,0.3);
+}
+
+.role-section h3 {
+  color: #9c27b0;
+}
+
+.role-distribution {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.role-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 10px;
+  background: rgba(0,0,0,0.3);
+  border-radius: 4px;
+}
+
+.role-icon {
+  font-size: 1.2rem;
+}
+
+.role-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.role-name {
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: var(--text-main);
+}
+
+.role-pokemon {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.role-warnings {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.role-warning {
+  padding: 5px 10px;
+  background: rgba(255,152,0,0.1);
+  border: 1px solid rgba(255,152,0,0.3);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  color: #ff9800;
+}
+
+.role-balanced {
+  text-align: center;
+  padding: 8px;
+  background: rgba(76,175,80,0.1);
+  border: 1px solid rgba(76,175,80,0.3);
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: #4caf50;
+}
+
+/* Coverage Section */
 .coverage-section {
   border-color: rgba(76,175,80,0.3);
 }
@@ -262,23 +405,36 @@
   color: #4caf50;
 }
 
-.weakness-section {
-  border-color: rgba(244,67,54,0.3);
+.coverage-stats {
+  margin-bottom: 10px;
 }
 
-.weakness-section h3 {
-  color: #f44336;
+.coverage-meter {
+  position: relative;
+  height: 24px;
+  background: rgba(0,0,0,0.3);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
 }
 
-.stats-section {
-  border-color: rgba(33,150,243,0.3);
+.coverage-meter-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4caf50, #8bc34a);
+  transition: width 0.5s ease;
 }
 
-.stats-section h3 {
-  color: #2196f3;
+.coverage-meter-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.8);
 }
 
-/* Coverage Grid */
 .coverage-grid {
   display: flex;
   flex-wrap: wrap;
@@ -339,7 +495,15 @@
   font-size: 0.85rem;
 }
 
-/* Weaknesses */
+/* Weakness Section */
+.weakness-section {
+  border-color: rgba(244,67,54,0.3);
+}
+
+.weakness-section h3 {
+  color: #f44336;
+}
+
 .critical-weaknesses {
   margin-bottom: 12px;
   padding: 10px 12px;
@@ -418,7 +582,15 @@
   color: var(--text-muted);
 }
 
-/* Team Stats - Super Compact Badge Style */
+/* Stats Section */
+.stats-section {
+  border-color: rgba(33,150,243,0.3);
+}
+
+.stats-section h3 {
+  color: #2196f3;
+}
+
 .team-stats-grid {
   display: flex;
   flex-wrap: wrap;
@@ -592,6 +764,47 @@
   color: var(--text-muted);
 }
 
+/* Templates Modal */
+.templates-modal h3 {
+  color: var(--accent-primary);
+  margin-bottom: 15px;
+}
+
+.template-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.template-item {
+  padding: 12px 15px;
+  background: rgba(0,0,0,0.3);
+  border: 2px solid var(--glass-border);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.template-item:hover {
+  border-color: var(--accent-primary);
+  background: rgba(233,69,96,0.1);
+  transform: translateX(5px);
+}
+
+.template-name {
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  margin-bottom: 5px;
+}
+
+.template-pokemon {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
 /* Import Modal */
 .import-modal {
   text-align: center;
@@ -651,6 +864,25 @@
   background: rgba(255,255,255,0.15);
 }
 
+/* Quick Add Button (for main table) */
+.quick-add-btn {
+  background: rgba(76,175,80,0.2);
+  border: 1px solid rgba(76,175,80,0.5);
+  color: #4caf50;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-left: 5px;
+}
+
+.quick-add-btn:hover {
+  background: rgba(76,175,80,0.3);
+  border-color: #4caf50;
+  transform: scale(1.05);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   #teamBuilderContainer {
@@ -673,6 +905,11 @@
     flex: 1;
     min-width: 120px;
   }
+  
+  .team-selector {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
 
 @media (max-width: 480px) {
@@ -683,5 +920,10 @@
   .selector-pokemon img {
     width: 50px;
     height: 50px;
+  }
+  
+  .team-action-btn {
+    font-size: 0.85rem;
+    padding: 8px 15px;
   }
 }
