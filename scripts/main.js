@@ -39,7 +39,6 @@ function renderTable(pokemonArray) {
   DOM.list.innerHTML = `<tr><td colspan="4" class="loading">Loading...</td></tr>`;
   let html = "";
   
-  // NEW: Access pokemon from window.localDB.pokemon instead of window.localDB directly
   const allPokemonData = window.localDB?.pokemon || window.localDB || {};
   
   for (const p of pokemonArray) {
@@ -58,8 +57,9 @@ function renderTable(pokemonArray) {
     const rankColor = isCompetitiveTab ? "var(--accent-primary)" : "var(--text-muted)";
     const isFavRow  = favorites.includes(p.cleanName) ? "⭐ " : "";
 
+    // Prefetch on hover: warm the cache before the user clicks
     html += `
-      <tr onclick="openModal(${p.id}, '${p.cleanName}')">
+      <tr onclick="openModal(${p.id}, '${p.cleanName}')" onmouseenter="prefetchPokemonDetails(${p.id})">
         <td><strong style="color:${rankColor};">${rankText}</strong></td>
         <td class="sprite-cell"><img src="${p.sprite}" alt="${p.name}" loading="lazy"></td>
         <td style="text-transform:capitalize;font-weight:bold;">${isFavRow}${p.name.replace("-", " ")}</td>
@@ -211,28 +211,25 @@ async function init() {
   applyFilters();
 
   try {
-    // Show loading skeleton
     if (DOM.loadingSkeleton) DOM.loadingSkeleton.style.display = "block";
 
-    // NEW: Fetch localDB.js which now has structure: { _meta: {...}, pokemon: {...} }
     const response = await fetch("./localDB.js?v=" + Date.now());
     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
     
     const scriptText = await response.text();
-    eval(scriptText); // Executes: window.localDB = { _meta, pokemon }
+    eval(scriptText);
 
-    // NEW: Extract pokemon from new structure
     const dbData = window.localDB || {};
-    const pokemonData = dbData.pokemon || dbData; // Fallback to old structure if no .pokemon key
+    const pokemonData = dbData.pokemon || dbData;
     
-    // Update global references
     window.localDB = dbData;
     allPokemon = Object.values(pokemonData);
+
+    // Pre-build mega forms index now that data is loaded
+    buildMegaFormsIndex();
     
-    // Hide loading skeleton
     if (DOM.loadingSkeleton) DOM.loadingSkeleton.style.display = "none";
 
-    // Update footer with build timestamp
     if (dbData._meta && dbData._meta.buildTimestamp) {
       const buildDate = new Date(dbData._meta.buildTimestamp);
       const dateStr = buildDate.toLocaleDateString("en-US", { 
@@ -248,7 +245,6 @@ async function init() {
 
     applyFilters();
 
-    // Restore state from URL params
     const urlParams    = new URLSearchParams(window.location.search);
     const tabParam     = urlParams.get("tab");
     const pokemonParam = urlParams.get("pokemon");

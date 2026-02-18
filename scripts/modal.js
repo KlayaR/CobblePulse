@@ -1,16 +1,45 @@
 // --- POKEAPI CACHE ---
 const pokeApiCache = new Map();
 
+// --- MEGA FORMS INDEX (built once at startup) ---
+// Map<dexNumber, Array<{cleanName, data}>> - avoids linear scan on every modal open
+let _megaFormsIndex = null;
+
+function buildMegaFormsIndex() {
+  if (_megaFormsIndex) return;
+  _megaFormsIndex = new Map();
+  const allPokemonData = window.localDB?.pokemon || window.localDB || {};
+  for (const [cleanName, data] of Object.entries(allPokemonData)) {
+    if (cleanName.includes("mega") && !cleanName.includes("meganium")) {
+      const dex = data.dex;
+      if (!_megaFormsIndex.has(dex)) _megaFormsIndex.set(dex, []);
+      _megaFormsIndex.get(dex).push({ cleanName, data });
+    }
+  }
+}
+
 async function getPokemonDetails(id) {
   if (pokeApiCache.has(id)) return pokeApiCache.get(id);
 
-  const details     = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).then((r) => r.json());
+  // 1st fetch: pokemon details
+  const details = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).then((r) => r.json());
+
+  // 2nd fetch: species data (needed to get evo chain URL)
   const speciesData = await fetch(details.species.url).then((r) => r.json());
-  const evoData     = await fetch(speciesData.evolution_chain.url).then((r) => r.json());
+
+  // 3rd fetch: evo chain (parallel-safe once we have speciesData)
+  const evoData = await fetch(speciesData.evolution_chain.url).then((r) => r.json());
 
   const result = { details, speciesData, evoData };
   pokeApiCache.set(id, result);
   return result;
+}
+
+// --- PREFETCH ON HOVER (call this from card onmouseenter) ---
+function prefetchPokemonDetails(id) {
+  if (!pokeApiCache.has(id)) {
+    getPokemonDetails(id).catch(() => {}); // fire and forget, silently
+  }
 }
 
 // --- HELPER: Abbreviate tier name for badges ---
@@ -30,31 +59,21 @@ function abbreviateTier(tierName) {
   return tierName.length > 15 ? tierName.slice(0, 12) + "..." : tierName;
 }
 
-// --- HELPER: Find Mega forms for a base Pokémon ---
+// --- HELPER: Find Mega forms for a base Pokémon (uses pre-built index) ---
 function findMegaForms(baseDexNumber) {
-  const allPokemonData = window.localDB?.pokemon || window.localDB || {};
-  const megaForms = [];
-  for (const [cleanName, data] of Object.entries(allPokemonData)) {
-    if (data.dex === baseDexNumber && cleanName.includes("mega") && !cleanName.includes("meganium")) {
-      megaForms.push({ cleanName, data });
-    }
-  }
-  return megaForms;
+  buildMegaFormsIndex();
+  return _megaFormsIndex.get(baseDexNumber) || [];
 }
 
 // --- HELPER: Convert cleanName to PokéAPI slug ---
-// e.g. "charizardmegax" -> "charizard-mega-x", "charizardmegay" -> "charizard-mega-y"
 function cleanNameToPokeApiSlug(cleanName) {
-  // Insert hyphens before known suffixes
   return cleanName
     .replace(/megax$/, "-mega-x")
     .replace(/megay$/, "-mega-y")
     .replace(/mega$/, "-mega")
     .replace(/megax/,  "-mega-x-")
     .replace(/megay/,  "-mega-y-")
-    // General: insert hyphen before "mega" if not already there
     .replace(/([a-z])(mega)/, "$1-$2")
-    // Clean up any double hyphens
     .replace(/--+/g, "-");
 }
 
@@ -121,22 +140,42 @@ async function openModal(id, cleanName, megaCleanName = null) {
   _currentBaseCleanName = cleanName;
 
   DOM.modalOverlay.classList.add("active");
-  DOM.modalBody.innerHTML = `<div class="loading">Fetching Data...</div>`;
 
   const params = new URLSearchParams();
   params.set("tab", currentTab);
   params.set("pokemon", megaCleanName || cleanName);
   history.pushState({ tab: currentTab, modal: megaCleanName || cleanName }, "", `?${params.toString()}`);
 
+  // --- PROGRESSIVE RENDER: show header skeleton immediately ---
+  const allPokemonData = window.localDB?.pokemon || window.localDB || {};
+  const actualCleanName = megaCleanName || cleanName;
+  const dbEntry = allPokemonData[actualCleanName];
+
+  if (!dbEntry) {
+    DOM.modalBody.innerHTML = `<div class="loading error-loading">Pokémon data not found for ${actualCleanName}</div>`;
+    return;
+  }
+
+  // Show a fast skeleton header using data we already have locally (no fetch needed)
+  const localSprite = dbEntry.sprite || `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
+  const localTypes  = (dbEntry.types || []).map((t) => `<span class="type-badge type-${t}">${t}</span>`).join("");
+  DOM.modalBody.innerHTML = `
+    <div class="modal-header" id="modal-header-section">
+      <div class="sprite-container">
+        <img src="${localSprite}" alt="${actualCleanName}" class="modal-sprite" id="modalSprite">
+      </div>
+      <div class="modal-title">
+        <div class="title-row">
+          <span class="pokemon-name-link" style="text-transform:capitalize">${actualCleanName.replace(/-/g, " ")}</span>
+        </div>
+        <div class="types-immunities-row">
+          <div class="types-container">${localTypes}</div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-details-section"><div class="loading">Fetching data...</div></div>`;
+
   try {
-    const allPokemonData = window.localDB?.pokemon || window.localDB || {};
-    const actualCleanName = megaCleanName || cleanName;
-    const dbEntry = allPokemonData[actualCleanName];
-
-    if (!dbEntry) throw new Error(`Pokémon data not found for ${actualCleanName}`);
-
-    // For Mega forms: use the PokéAPI slug derived from the cleanName
-    // e.g. "charizardmegax" -> "charizard-mega-x"
     const fetchId = megaCleanName ? cleanNameToPokeApiSlug(megaCleanName) : id;
     const { details, speciesData, evoData } = await getPokemonDetails(fetchId);
     if (_latestModalRequestId !== id && !megaCleanName) return;
@@ -314,10 +353,10 @@ async function openModal(id, cleanName, megaCleanName = null) {
     const shareUrl     = `${window.location.origin}${window.location.pathname}?${shareParams.toString()}`;
     const shareBtnHtml = `<button id="shareBtn" title="Copy share link" class="share-btn">🔗 Share</button>`;
 
-    // Sprite: use PokéAPI sprite from fetched details (already correct form)
     const normalSprite = details.sprites.front_default;
     const shinySprite  = details.sprites.front_shiny;
 
+    // --- FULL RENDER: replace skeleton with complete modal ---
     DOM.modalBody.innerHTML = `
       <div class="modal-header">
         <div class="sprite-container">
