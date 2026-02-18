@@ -21,6 +21,9 @@ const TYPE_CHART_DATA = {
   fairy:    { weaknesses: ['poison', 'steel'], resistances: ['fighting', 'bug', 'dark'], immunities: ['dragon'] }
 };
 
+// Expose globally for team builder
+window.TYPE_CHART_DATA = TYPE_CHART_DATA;
+
 let selectedAttackType = null;
 let selectedDefenseType = null;
 
