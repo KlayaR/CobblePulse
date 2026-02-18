@@ -129,13 +129,13 @@ function renderStrategyView(index) {
 
 let _latestModalRequestId = null;
 let _currentBaseDexNumber = null;
-let _currentMegaForm = null;
+let _currentBaseCleanName = null;
 
 // --- OPEN MODAL (now supports megaCleanName parameter) ---
 async function openModal(id, cleanName, megaCleanName = null) {
   _latestModalRequestId = id;
   _currentBaseDexNumber = id;
-  _currentMegaForm = megaCleanName;
+  _currentBaseCleanName = cleanName;
 
   DOM.modalOverlay.classList.add("active");
   DOM.modalBody.innerHTML = `<div class="loading">Fetching Data...</div>`;
@@ -162,14 +162,14 @@ async function openModal(id, cleanName, megaCleanName = null) {
 
     const typeHtml = details.types.map((t) => `<span class="type-badge type-${t.type.name}">${t.type.name}</span>`).join("");
 
-    // --- MEGA EVOLUTION TOGGLE ---
-    const megaForms = megaCleanName ? [] : findMegaForms(id);
+    // --- MEGA EVOLUTION TOGGLE (always check base dex number) ---
+    const megaForms = findMegaForms(id);
     const hasMegaForms = megaForms.length > 0;
     const megaToggleHtml = hasMegaForms ? `
       <div class="mega-toggle-container">
         <button class="mega-toggle-btn ${!megaCleanName ? 'active' : ''}" onclick="openModal(${id}, '${cleanName}', null)">Base Form</button>
         ${megaForms.map((mega) => {
-          const megaLabel = mega.data.name.replace(/-/g, " ").replace(/mega/i, "Mega");
+          const megaLabel = mega.data.name.replace(/-/g, " ").replace(/mega/i, "Mega").trim();
           return `<button class="mega-toggle-btn ${megaCleanName === mega.cleanName ? 'active' : ''}" onclick="openModal(${id}, '${cleanName}', '${mega.cleanName}')">${megaLabel}</button>`;
         }).join("")}
       </div>` : "";
@@ -210,7 +210,7 @@ async function openModal(id, cleanName, megaCleanName = null) {
     const compHtml = hasStrategies
       ? `<div class="info-card full-width strategy-info-card">${dropdownHtml}<div id="dynamic-strategy-content"></div></div>`
       : megaCleanName
-        ? `<div class="info-card full-width no-strategies"><p>⚡ This Mega Evolution has +100 Base Stat Total compared to the base form. Switch to Base Form for spawn locations.</p></div>`
+        ? `<div class="info-card full-width no-strategies"><p>⚡ This Mega Evolution has a +100 Base Stat Total boost compared to the base form. Switch to Base Form tab to see spawn locations.</p></div>`
         : `<div class="info-card full-width no-strategies"><p>No competitive Smogon data available for this Pokémon.</p></div>`;
 
     // --- LOCATIONS (only show for base form) ---
@@ -240,15 +240,16 @@ async function openModal(id, cleanName, megaCleanName = null) {
       }
     } else {
       // Mega form: show how to obtain
+      const baseName = details.name.split("-")[0];
       locationsHtml = `<div class="mega-obtain-notice">
         <h4>⚡ How to Mega Evolve</h4>
-        <p>To Mega Evolve ${details.name.split("-")[0]}, you need:</p>
+        <p>To Mega Evolve ${baseName.charAt(0).toUpperCase() + baseName.slice(1)}, you need:</p>
         <ul>
           <li>🔸 The corresponding <strong>Mega Stone</strong> held item</li>
           <li>🔸 In battle, select <strong>Mega Evolution</strong> once per battle</li>
           <li>🔸 Reverts to base form after battle ends</li>
         </ul>
-        <p>Check the base form tab for spawn locations to catch ${details.name.split("-")[0]}.</p>
+        <p>Check the Base Form tab above for spawn locations to catch ${baseName.charAt(0).toUpperCase() + baseName.slice(1)}.</p>
       </div>`;
     }
 
@@ -277,9 +278,10 @@ async function openModal(id, cleanName, megaCleanName = null) {
     ];
     const pokemonStats = dbEntry.stats || {};
     const totalBST = Object.values(pokemonStats).reduce((sum, val) => sum + (val || 0), 0);
+    const megaBadge = megaCleanName ? '<span class="mega-boost-badge">⚡ Mega Boosted!</span>' : '';
     const statsHtml    = Object.keys(pokemonStats).length > 0 ? `
       <div class="info-card full-width stats-card">
-        <h4 class="section-title">📊 Base Stats ${megaCleanName ? '<span class="mega-boost-badge">⚡ Mega Boosted!</span>' : ''}</h4>
+        <h4 class="section-title">📊 Base Stats${megaBadge}</h4>
         ${statConfig.map((s) => {
           const val = pokemonStats[s.key] || 0;
           const pct = Math.min(Math.round((val / 255) * 100), 100);
@@ -359,9 +361,9 @@ async function openModal(id, cleanName, megaCleanName = null) {
                   </div>`).join("")}
               </div>` : ""}
           </div>
-          ${megaToggleHtml}
         </div>
       </div>
+      ${megaToggleHtml}
       <div>
         ${weaknessHtml}${statsHtml}${evoHtml}${compHtml}
         <div class="info-card full-width locations-card">${locationsHtml}</div>
@@ -416,7 +418,7 @@ async function openModal(id, cleanName, megaCleanName = null) {
 // --- CLOSE MODAL ---
 function closeModal() {
   DOM.modalOverlay.classList.remove("active");
-  _currentMegaForm = null;
+  _currentBaseCleanName = null;
   if (currentTab && currentTab !== "about") {
     history.pushState({ tab: currentTab }, "", `?tab=${currentTab}`);
   } else {
