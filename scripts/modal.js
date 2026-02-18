@@ -1,20 +1,83 @@
 // --- POKEAPI CACHE ---
 const pokeApiCache = new Map();
 
-// --- MEGA FORMS INDEX (built once at startup) ---
-let _megaFormsIndex = null;
+// --- FORM VARIANT SUFFIXES ---
+// Used to detect and label any alternate form stored in localDB
+const FORM_SUFFIXES = [
+  { suffix: "mega",    label: "Mega",           icon: "⚡" },
+  { suffix: "megax",   label: "Mega X",         icon: "⚡" },
+  { suffix: "megay",   label: "Mega Y",         icon: "⚡" },
+  { suffix: "alola",   label: "Alolan",         icon: "🌴" },
+  { suffix: "galar",   label: "Galarian",       icon: "🌿" },
+  { suffix: "hisui",   label: "Hisuian",        icon: "⛰️" },
+  { suffix: "paldea",  label: "Paldean",        icon: "🌞" },
+  { suffix: "origin",  label: "Origin",         icon: "🔄" },
+  { suffix: "crowned", label: "Crowned",        icon: "👑" },
+  { suffix: "therian", label: "Therian",        icon: "🎭" },
+  { suffix: "black",   label: "Black",          icon: "⬛" },
+  { suffix: "white",   label: "White",          icon: "⬜" },
+  { suffix: "sky",     label: "Sky",            icon: "🌤️" },
+  { suffix: "unbound", label: "Unbound",        icon: "🔓" },
+  { suffix: "blaze",   label: "Blaze Breed",    icon: "🔥" },
+  { suffix: "aqua",    label: "Aqua Breed",     icon: "💧" },
+  { suffix: "combat",  label: "Combat Breed",   icon: "🥊" },
+  { suffix: "ice",     label: "Ice Rider",      icon: "🧊" },
+  { suffix: "shadow",  label: "Shadow Rider",   icon: "👻" },
+];
 
-function buildMegaFormsIndex() {
-  if (_megaFormsIndex) return;
-  _megaFormsIndex = new Map();
+// Pokémon that should NEVER be treated as a form variant of another entry
+// (they're standalone Pokémon whose names happen to contain a suffix word)
+const FORM_EXCLUSIONS = new Set([
+  "meganium", "galarian", "hisuian", "alolan", "aegislash", "galar",
+  "rapidash", "ponyta", "meowth", "corsola", "slowpoke", "slowbro",
+  "slowking", "darumaka", "darmanitan", "yamask", "stunfisk",
+  "zigzagoon", "linoone", "farfetchd", "mrrime", "obstagoon",
+  "perrserker", "cursola", "sirfetchd", "runerigus",
+]);
+
+// --- ALTERNATE FORMS INDEX ---
+// Map<baseDexNumber, Array<{cleanName, data, label, icon}>> built once at startup
+let _altFormsIndex = null;
+
+function buildAltFormsIndex() {
+  if (_altFormsIndex) return;
+  _altFormsIndex = new Map();
   const allPokemonData = window.localDB?.pokemon || window.localDB || {};
+
   for (const [cleanName, data] of Object.entries(allPokemonData)) {
-    if (cleanName.includes("mega") && !cleanName.includes("meganium")) {
+    if (FORM_EXCLUSIONS.has(cleanName)) continue;
+
+    for (const { suffix, label, icon } of FORM_SUFFIXES) {
+      // Match suffix at end of cleanName, or as an interior segment (e.g. "charizardmegax")
+      if (!cleanName.includes(suffix)) continue;
+
       const dex = data.dex;
-      if (!_megaFormsIndex.has(dex)) _megaFormsIndex.set(dex, []);
-      _megaFormsIndex.get(dex).push({ cleanName, data });
+      if (!dex) continue;
+
+      // Make sure there's actually a base entry with the same dex number
+      // to avoid indexing standalone Pokémon like "rapidashgalar" → base is "rapidash"
+      if (!_altFormsIndex.has(dex)) _altFormsIndex.set(dex, []);
+
+      // Avoid duplicates
+      const existing = _altFormsIndex.get(dex);
+      if (!existing.find((f) => f.cleanName === cleanName)) {
+        // Build a short display label: strip the base name, capitalise remainder
+        let shortLabel = label;
+        // For mega-x / mega-y keep the suffix in the label
+        existing.push({ cleanName, data, label: shortLabel, icon });
+      }
+      break; // only match the first (most-specific) suffix
     }
   }
+}
+
+// Keep the old name for backward-compat with any external callers
+function buildMegaFormsIndex() { buildAltFormsIndex(); }
+function findMegaForms(baseDexNumber) { return findAltForms(baseDexNumber).filter((f) => f.label.startsWith("Mega")); }
+
+function findAltForms(baseDexNumber) {
+  buildAltFormsIndex();
+  return _altFormsIndex.get(baseDexNumber) || [];
 }
 
 // --- FETCH WITH TIMEOUT ---
@@ -26,31 +89,25 @@ function fetchWithTimeout(url, ms = 8000) {
     .catch((e) => { clearTimeout(timer); throw e; });
 }
 
-// --- SPRITE URL HELPERS (no API call needed) ---
-// Uses the PokeAPI/sprites GitHub CDN directly — no rate limit, no timeouts
-function getSpriteUrl(id)  { return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`; }
-function getShinyUrl(id)   { return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${id}.png`; }
+// --- SPRITE URL HELPERS (no API call, direct CDN) ---
+function getSpriteUrl(id) { return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`; }
+function getShinyUrl(id)  { return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${id}.png`; }
 
-// --- GET MINIMAL POKEAPI DATA (only what localDB doesn't have) ---
-// We only need PokeAPI for: is_legendary/is_mythical, evolves_from_species, evolution_chain
-// Everything else (types, stats, abilities, sprite) comes from localDB or CDN directly.
-async function getPokemonApiData(id) {
-  if (pokeApiCache.has(id)) return pokeApiCache.get(id);
-
-  // Fetch species and evolution chain in the fewest possible round trips.
-  // species URL is predictable, so we can fetch it directly without first hitting /pokemon/${id}
-  const speciesData = await fetchWithTimeout(`https://pokeapi.co/api/v2/pokemon-species/${id}`);
+// --- GET EVO CHAIN (only thing we still need from PokeAPI) ---
+// isLegendary / isMythical are now stored in localDB by the compiler, so
+// we only fetch the evo chain for non-legendary Pokémon.
+async function getEvoChain(dexId) {
+  if (pokeApiCache.has(dexId)) return pokeApiCache.get(dexId);
+  const speciesData = await fetchWithTimeout(`https://pokeapi.co/api/v2/pokemon-species/${dexId}`);
   const evoData     = await fetchWithTimeout(speciesData.evolution_chain.url);
-
-  const result = { speciesData, evoData };
-  pokeApiCache.set(id, result);
-  return result;
+  pokeApiCache.set(dexId, evoData);
+  return evoData;
 }
 
 // --- PREFETCH ON HOVER ---
 function prefetchPokemonDetails(id) {
   if (!pokeApiCache.has(id)) {
-    getPokemonApiData(id).catch(() => {});
+    getEvoChain(id).catch(() => {});
   }
 }
 
@@ -71,22 +128,40 @@ function abbreviateTier(tierName) {
   return tierName.length > 15 ? tierName.slice(0, 12) + "..." : tierName;
 }
 
-// --- HELPER: Find Mega forms (O(1) index lookup) ---
-function findMegaForms(baseDexNumber) {
-  buildMegaFormsIndex();
-  return _megaFormsIndex.get(baseDexNumber) || [];
-}
-
-// --- HELPER: Convert cleanName to PokéAPI slug ---
-function cleanNameToPokeApiSlug(cleanName) {
-  return cleanName
-    .replace(/megax$/, "-mega-x")
-    .replace(/megay$/, "-mega-y")
-    .replace(/mega$/, "-mega")
-    .replace(/megax/,  "-mega-x-")
-    .replace(/megay/,  "-mega-y-")
-    .replace(/([a-z])(mega)/, "$1-$2")
-    .replace(/--+/g, "-");
+// --- HELPER: Convert cleanName to PokeAPI sprite path segment ---
+// Only needed for forms whose sprite ID differs from their numeric dex id
+// (Megas use form-slug IDs in the CDN, regional forms use their numeric id)
+function cleanNameToSpriteId(cleanName, numericId) {
+  // Megas have their own sprite files named by form slug
+  const megaSlugMap = {
+    charizardmegax:  "charizard-mega-x",  charizardmegay: "charizard-mega-y",
+    venusaurmega:    "venusaur-mega",      blastoismega:    "blastoise-mega",
+    alakazammega:    "alakazam-mega",      gengarmega:      "gengar-mega",
+    kangaskhanmega:  "kangaskhan-mega",    pinsirmega:      "pinsir-mega",
+    gyaradosmega:    "gyarados-mega",      aerodactylmega:  "aerodactyl-mega",
+    ampharosmega:    "ampharos-mega",      scizormega:      "scizor-mega",
+    heracrossmega:   "heracross-mega",     houndoommega:    "houndoom-mega",
+    tyranitarmega:   "tyranitar-mega",     blazikenmega:    "blaziken-mega",
+    gardevoirmega:   "gardevoir-mega",     mawilemega:      "mawile-mega",
+    aggronmega:      "aggron-mega",        medichamega:     "medicham-mega",
+    medichammega:    "medicham-mega",      manectricmega:   "manectric-mega",
+    sharpedomega:    "sharpedo-mega",      cameruptmega:    "camerupt-mega",
+    altariamega:     "altaria-mega",       sableyemega:     "sableye-mega",
+    banettmega:      "banette-mega",       banettemega:     "banette-mega",
+    absolmega:       "absol-mega",         glaliemega:      "glalie-mega",
+    salamencemega:   "salamence-mega",     metagrossmega:   "metagross-mega",
+    latiasmega:      "latias-mega",        latiosmega:      "latios-mega",
+    rayquazamega:    "rayquaza-mega",      lopunnymega:     "lopunny-mega",
+    garchompmega:    "garchomp-mega",      lucariomega:     "lucario-mega",
+    audinomega:      "audino-mega",        slowbromega:     "slowbro-mega",
+    steelixmega:     "steelix-mega",       pidgeotmega:     "pidgeot-mega",
+    beedrillmega:    "beedrill-mega",      dianciemega:     "diancie-mega",
+    gallademega:     "gallade-mega",       sceptilemega:    "sceptile-mega",
+    swampertmega:    "swampert-mega",      abomasnowmega:   "abomasnow-mega",
+  };
+  if (megaSlugMap[cleanName]) return megaSlugMap[cleanName];
+  // Regional forms & everything else: use the numeric dex id (sprite exists by dex number)
+  return numericId;
 }
 
 // --- LOCATION CARDS BUILDER ---
@@ -146,7 +221,8 @@ let _currentBaseDexNumber = null;
 let _currentBaseCleanName = null;
 
 // --- OPEN MODAL ---
-async function openModal(id, cleanName, megaCleanName = null) {
+// altFormCleanName: if set, we're viewing an alternate form (mega/alolan/galarian/etc.)
+async function openModal(id, cleanName, altFormCleanName = null) {
   _latestModalRequestId = id;
   _currentBaseDexNumber = id;
   _currentBaseCleanName = cleanName;
@@ -155,11 +231,11 @@ async function openModal(id, cleanName, megaCleanName = null) {
 
   const params = new URLSearchParams();
   params.set("tab", currentTab);
-  params.set("pokemon", megaCleanName || cleanName);
-  history.pushState({ tab: currentTab, modal: megaCleanName || cleanName }, "", `?${params.toString()}`);
+  params.set("pokemon", altFormCleanName || cleanName);
+  history.pushState({ tab: currentTab, modal: altFormCleanName || cleanName }, "", `?${params.toString()}`);
 
   const allPokemonData  = window.localDB?.pokemon || window.localDB || {};
-  const actualCleanName = megaCleanName || cleanName;
+  const actualCleanName = altFormCleanName || cleanName;
   const dbEntry         = allPokemonData[actualCleanName];
 
   if (!dbEntry) {
@@ -168,22 +244,18 @@ async function openModal(id, cleanName, megaCleanName = null) {
   }
 
   // ---------------------------------------------------------------
-  // PHASE 1: Render the full modal IMMEDIATELY from localDB data.
-  // No network call needed for: sprite, types, stats, weaknesses,
-  // immunities, strategies, locations, badges.
+  // PHASE 1 — Render full modal INSTANTLY from localDB (no network)
   // ---------------------------------------------------------------
 
-  const spriteId     = megaCleanName ? cleanNameToPokeApiSlug(megaCleanName) : id;
+  const spriteId     = cleanNameToSpriteId(actualCleanName, dbEntry.id || id);
   const normalSprite = getSpriteUrl(spriteId);
   const shinySprite  = getShinyUrl(spriteId);
 
-  // Types from localDB
   const types    = dbEntry.types || [];
   const typeHtml = types.map((t) => `<span class="type-badge type-${t}">${t}</span>`).join("");
 
-  // Weaknesses & immunities from localDB types (already have getWeaknesses/getImmunities)
-  const weaknesses   = getWeaknesses(types);
-  const immunities   = getImmunities(types, dbEntry.abilities || []);
+  const weaknesses = getWeaknesses(types);
+  const immunities = getImmunities(types, dbEntry.abilities || []);
 
   const weaknessHtml = Object.keys(weaknesses).length > 0 ? `
     <div class="info-card full-width weaknesses-card">
@@ -197,7 +269,6 @@ async function openModal(id, cleanName, megaCleanName = null) {
       </div>
     </div>` : "";
 
-  // Stats from localDB
   const statConfig = [
     { key: "hp",              label: "HP",     color: "#ff5959" },
     { key: "attack",          label: "ATK",    color: "#f5ac78" },
@@ -208,10 +279,17 @@ async function openModal(id, cleanName, megaCleanName = null) {
   ];
   const pokemonStats = dbEntry.stats || {};
   const totalBST     = Object.values(pokemonStats).reduce((sum, val) => sum + (val || 0), 0);
-  const megaBadge    = megaCleanName ? '<span class="mega-boost-badge">⚡ Mega Boosted!</span>' : '';
-  const statsHtml    = Object.keys(pokemonStats).length > 0 ? `
+
+  // Detect form type for badge
+  let formBadge = "";
+  if (altFormCleanName) {
+    const matched = FORM_SUFFIXES.find((f) => altFormCleanName.includes(f.suffix));
+    if (matched) formBadge = `<span class="mega-boost-badge">${matched.icon} ${matched.label} Form</span>`;
+  }
+
+  const statsHtml = Object.keys(pokemonStats).length > 0 ? `
     <div class="info-card full-width stats-card">
-      <h4 class="section-title">📊 Base Stats${megaBadge}</h4>
+      <h4 class="section-title">📊 Base Stats${formBadge}</h4>
       ${statConfig.map((s) => {
         const val = pokemonStats[s.key] || 0;
         const pct = Math.min(Math.round((val / 255) * 100), 100);
@@ -224,7 +302,7 @@ async function openModal(id, cleanName, megaCleanName = null) {
       <div class="stat-total">Total BST: <strong>${totalBST}</strong></div>
     </div>` : "";
 
-  // Competitive strategies from localDB
+  // Strategies
   let stats = null;
   if (dbEntry.allRanks && dbEntry.allRanks.length > 0) {
     stats = currentTab === "all"
@@ -233,7 +311,7 @@ async function openModal(id, cleanName, megaCleanName = null) {
   }
   const hasStrategies = dbEntry.strategies && dbEntry.strategies.length > 0;
   if (hasStrategies) {
-    window.smogonUrl         = `https://www.smogon.com/dex/sv/pokemon/${(megaCleanName || cleanName).replace("-", "_")}/`;
+    window.smogonUrl         = `https://www.smogon.com/dex/sv/pokemon/${actualCleanName.replace("-", "_")}/`;
     window.currentStrategies = dbEntry.strategies;
   }
   const dropdownHtml = hasStrategies && dbEntry.strategies.length > 1
@@ -254,63 +332,78 @@ async function openModal(id, cleanName, megaCleanName = null) {
            </span>
          </div>`
       : "";
+
   const compHtml = hasStrategies
     ? `<div class="info-card full-width strategy-info-card">${dropdownHtml}<div id="dynamic-strategy-content"></div></div>`
-    : megaCleanName
-      ? `<div class="info-card full-width no-strategies"><p>⚡ This Mega Evolution has a +100 Base Stat Total boost compared to the base form. Switch to Base Form tab to see spawn locations.</p></div>`
+    : altFormCleanName
+      ? `<div class="info-card full-width no-strategies"><p>No competitive Smogon data available for this form. Check the Base tab for strategies.</p></div>`
       : `<div class="info-card full-width no-strategies"><p>No competitive Smogon data available for this Pokémon.</p></div>`;
 
-  // Locations from localDB
+  // Locations
   let locationsHtml = "";
-  if (!megaCleanName) {
+  if (!altFormCleanName) {
     const hasOwnSpawns = dbEntry.locations && dbEntry.locations.length > 0;
-    if (hasOwnSpawns) locationsHtml += buildLocationCards(dbEntry.locations, "📍 Server Spawn Locations");
-    // Legendary/evo check deferred to phase 2 (needs speciesData) — show placeholder
+    if (hasOwnSpawns) {
+      locationsHtml += buildLocationCards(dbEntry.locations, "📍 Server Spawn Locations");
+    }
+    // Use isLegendary/isMythical from localDB (stored by compiler) — no PokeAPI needed
     if (!hasOwnSpawns) {
-      locationsHtml += `<div id="locations-placeholder" class="loading" style="font-size:0.85em;padding:8px;">Checking spawn info...</div>`;
+      if (dbEntry.isLegendary || dbEntry.isMythical) {
+        locationsHtml += `<div class="legendary-notice"><h4>✨ Legendary Summoning</h4><p>This Pokémon does not spawn naturally. Use a summoning item at an altar or participate in a server event.</p></div>`;
+      } else {
+        // Still need evo chain from PokeAPI to find base-form spawns — show placeholder
+        locationsHtml += `<div id="locations-placeholder" class="loading" style="font-size:0.85em;padding:8px;">Checking spawn info...</div>`;
+      }
     }
   } else {
-    const baseName = cleanName.charAt(0).toUpperCase() + cleanName.slice(1);
-    locationsHtml = `<div class="mega-obtain-notice">
-      <h4>⚡ How to Mega Evolve</h4>
-      <p>To Mega Evolve ${baseName}, you need:</p>
-      <ul>
-        <li>🔸 The corresponding <strong>Mega Stone</strong> held item</li>
-        <li>🔸 In battle, select <strong>Mega Evolution</strong> once per battle</li>
-        <li>🔸 Reverts to base form after battle ends</li>
-      </ul>
-      <p>Check the <strong>Base</strong> tab above for spawn locations.</p>
-    </div>`;
+    // Alt form: show own spawns if any, otherwise point to base form
+    const hasFormSpawns = dbEntry.locations && dbEntry.locations.length > 0;
+    if (hasFormSpawns) {
+      locationsHtml = buildLocationCards(dbEntry.locations, "📍 Spawn Locations");
+    } else {
+      const baseEntry = allPokemonData[cleanName];
+      if (baseEntry && baseEntry.locations && baseEntry.locations.length > 0) {
+        locationsHtml = buildLocationCards(baseEntry.locations, `🔗 Base Form Spawns (${cleanName.charAt(0).toUpperCase() + cleanName.slice(1)})`);
+      } else {
+        const matched = FORM_SUFFIXES.find((f) => altFormCleanName.includes(f.suffix));
+        const formName = matched ? matched.label : "Alternate Form";
+        const baseName = cleanName.charAt(0).toUpperCase() + cleanName.slice(1);
+        locationsHtml = `<div class="mega-obtain-notice">
+          <h4>${matched?.icon || "⚡"} How to Obtain ${formName} Form</h4>
+          <p>Check the <strong>Base</strong> tab above for ${baseName}'s spawn locations.</p>
+        </div>`;
+      }
+    }
   }
 
-  // Mega toggle from index
-  const megaForms    = findMegaForms(id);
-  const hasMegaForms = megaForms.length > 0;
-  const megaToggleHtml = hasMegaForms ? `
+  // Alternate forms toggle (all variants: mega, alolan, galarian, hisuian, etc.)
+  const altForms    = findAltForms(id);
+  const hasAltForms = altForms.length > 0;
+  const altFormsToggleHtml = hasAltForms ? `
     <div class="mega-toggle-container">
-      <button class="mega-toggle-btn ${!megaCleanName ? 'active' : ''}" onclick="openModal(${id}, '${cleanName}', null)">Base</button>
-      ${megaForms.map((mega) => {
-        const rawLabel  = mega.data.name || mega.cleanName;
-        const megaLabel = rawLabel.replace(/-/g, " ").replace(/mega/i, "Mega").replace(new RegExp(cleanName, "i"), "").trim() || "Mega";
-        return `<button class="mega-toggle-btn ${megaCleanName === mega.cleanName ? 'active' : ''}" onclick="openModal(${id}, '${cleanName}', '${mega.cleanName}')">${megaLabel}</button>`;
-      }).join("")}
+      <button class="mega-toggle-btn ${!altFormCleanName ? 'active' : ''}" onclick="openModal(${id}, '${cleanName}', null)">Base</button>
+      ${altForms.map((form) => `
+        <button class="mega-toggle-btn ${altFormCleanName === form.cleanName ? 'active' : ''}" onclick="openModal(${id}, '${cleanName}', '${form.cleanName}')">
+          ${form.icon} ${form.label}
+        </button>`).join("")}
     </div>` : "";
 
   // Badges & buttons
   const currentBadge = stats ? stats.tier.toUpperCase() : "UNTIERED";
   const usageBadge   = stats && parseFloat(stats.usage) > 0 ? `<span class="usage-badge">${stats.usage}% usage</span>` : "";
   const sourceTag    = dbEntry.source ? `<span class="source-tag">[Source: ${dbEntry.source}]</span>` : "";
-  const isFav        = favorites.includes(megaCleanName || cleanName);
+  const isFav        = favorites.includes(altFormCleanName || cleanName);
   const favBtnHtml   = `<button class="fav-btn" id="favBtn" title="${isFav ? "Remove from favorites" : "Add to favorites"}">${isFav ? "⭐" : "🤍"}</button>`;
-  const pokemonDbUrl = `https://pokemondb.net/pokedex/${megaCleanName || cleanName}`;
-  const shareParams  = new URLSearchParams({ tab: currentTab, pokemon: megaCleanName || cleanName });
+  const pokemonDbUrl = `https://pokemondb.net/pokedex/${cleanName}`;
+  const shareParams  = new URLSearchParams({ tab: currentTab, pokemon: altFormCleanName || cleanName });
   const shareUrl     = `${window.location.origin}${window.location.pathname}?${shareParams.toString()}`;
   const shareBtnHtml = `<button id="shareBtn" title="Copy share link" class="share-btn">🔗 Share</button>`;
 
-  // Evolution placeholder (filled in phase 2)
-  const evoPh = megaCleanName ? "" : `<div id="evo-placeholder"></div>`;
+  // Evo chain placeholder (phase 2 fills this; skip for alt forms and legendaries)
+  const needsEvoPh = !altFormCleanName && !dbEntry.isLegendary && !dbEntry.isMythical;
+  const evoPh = needsEvoPh ? `<div id="evo-placeholder"></div>` : "";
 
-  // --- RENDER FULL MODAL (instant, no network) ---
+  // --- RENDER ---
   DOM.modalBody.innerHTML = `
     <div class="modal-header">
       <div class="sprite-container">
@@ -335,7 +428,7 @@ async function openModal(id, cleanName, megaCleanName = null) {
                 </div>`).join("")}
             </div>` : ""}
         </div>
-        ${megaToggleHtml}
+        ${altFormsToggleHtml}
       </div>
     </div>
     <div>
@@ -359,7 +452,7 @@ async function openModal(id, cleanName, megaCleanName = null) {
     });
   });
   document.getElementById("favBtn").addEventListener("click", () => {
-    const targetName = megaCleanName || cleanName;
+    const targetName = altFormCleanName || cleanName;
     const idx = favorites.indexOf(targetName);
     if (idx === -1) {
       favorites.push(targetName);
@@ -375,75 +468,63 @@ async function openModal(id, cleanName, megaCleanName = null) {
   if (hasStrategies) renderStrategyView(0);
 
   // ---------------------------------------------------------------
-  // PHASE 2: Fetch only what we can't get from localDB.
-  // species (legendary flag) + evo chain — fills placeholders.
-  // If this fails or times out, the modal is already fully usable.
+  // PHASE 2 — Background: fetch evo chain only for non-legendary base forms
+  // Modal is already fully usable — this just fills evo chain + evolves-from spawns
   // ---------------------------------------------------------------
-  if (megaCleanName) return; // Mega forms don't need phase 2
+  if (!needsEvoPh) return;
 
   try {
-    const { speciesData, evoData } = await getPokemonApiData(id);
-    if (_latestModalRequestId !== id) return; // user already opened another modal
+    const evoData = await getEvoChain(id);
+    if (_latestModalRequestId !== id) return;
 
-    // Fill locations placeholder
-    const locPlaceholder = document.getElementById("locations-placeholder");
-    if (locPlaceholder) {
+    // Fill location placeholder ("evolves from X" spawns)
+    const locPh = document.getElementById("locations-placeholder");
+    if (locPh) {
       const hasOwnSpawns = dbEntry.locations && dbEntry.locations.length > 0;
-      let extraLocHtml = "";
-      if (!hasOwnSpawns && (speciesData.is_legendary || speciesData.is_mythical)) {
-        extraLocHtml = `<div class="legendary-notice"><h4>✨ Legendary Summoning</h4><p>This Pokémon does not spawn naturally. Use a summoning item at an altar or participate in a server event.</p></div>`;
-      } else if (speciesData.evolves_from_species) {
+      let extraLocHtml   = "";
+      if (!hasOwnSpawns) {
         const baseEvoName = evoData.chain.species.name;
         const baseEvoDb   = allPokemonData[baseEvoName.replace("-", "")] || allPokemonData[baseEvoName];
         if (baseEvoDb && baseEvoDb.locations && baseEvoDb.locations.length > 0) {
-          const title = hasOwnSpawns
-            ? `💡 Easier to catch base form: ${baseEvoName.toUpperCase()}`
-            : `🧬 Evolves from ${baseEvoName.toUpperCase()} (Spawns Below)`;
-          extraLocHtml = buildLocationCards(baseEvoDb.locations, title);
-        } else if (!hasOwnSpawns) {
+          extraLocHtml = buildLocationCards(baseEvoDb.locations, `🧬 Evolves from ${baseEvoName.toUpperCase()} (Spawns Below)`);
+        } else {
           extraLocHtml = `<p class="no-spawns">Must be evolved from <strong>${baseEvoName.toUpperCase()}</strong>. No wild spawns found.</p>`;
         }
-      } else if (!hasOwnSpawns) {
-        extraLocHtml = '<p class="no-spawns">No wild spawns found on this server.</p>';
       }
-      locPlaceholder.outerHTML = extraLocHtml;
+      locPh.outerHTML = extraLocHtml || "";
     }
 
-    // Fill evolution chain placeholder
+    // Fill evo chain
     const evoPlaceholder = document.getElementById("evo-placeholder");
     if (evoPlaceholder) {
-      try {
-        const evoList = [];
-        let node = evoData.chain;
-        while (node) { evoList.push(node.species.name); node = node.evolves_to[0] || null; }
-        if (evoList.length > 1) {
-          evoPlaceholder.outerHTML = `
-            <div class="info-card full-width evo-card">
-              <h4 class="section-title">🔄 Evolution Chain</h4>
-              <div class="evo-chain">
-                ${evoList.map((name, i) => {
-                  const evoEntry  = allPokemonData[name] || allPokemonData[name.replace("-", "")];
-                  const evoId     = evoEntry?.id || "";
-                  const evoSprite = evoId ? getSpriteUrl(evoId) : "";
-                  const isCurrent = name === cleanName;
-                  return `${i > 0 ? `<span class="evo-arrow">→</span>` : ""}
-                    <div class="evo-mon ${isCurrent ? "current" : ""}" onclick="${evoId ? `openModal(${evoId},'${name}')` : ""}">
-                      ${evoSprite ? `<img src="${evoSprite}" alt="${name}">` : ""}
-                      <span>${name.replace("-", " ")}</span>
-                    </div>`;
-                }).join("")}
-              </div>
-            </div>`;
-        } else {
-          evoPlaceholder.remove();
-        }
-      } catch (e) {
+      const evoList = [];
+      let node = evoData.chain;
+      while (node) { evoList.push(node.species.name); node = node.evolves_to[0] || null; }
+      if (evoList.length > 1) {
+        evoPlaceholder.outerHTML = `
+          <div class="info-card full-width evo-card">
+            <h4 class="section-title">🔄 Evolution Chain</h4>
+            <div class="evo-chain">
+              ${evoList.map((name, i) => {
+                const evoEntry  = allPokemonData[name] || allPokemonData[name.replace("-", "")];
+                const evoId     = evoEntry?.id || "";
+                const evoSprite = evoId ? getSpriteUrl(evoId) : "";
+                const isCurrent = name === cleanName;
+                return `${i > 0 ? `<span class="evo-arrow">→</span>` : ""}
+                  <div class="evo-mon ${isCurrent ? "current" : ""}" onclick="${evoId ? `openModal(${evoId},'${name}')` : ""}">
+                    ${evoSprite ? `<img src="${evoSprite}" alt="${name}">` : ""}
+                    <span>${name.replace("-", " ")}</span>
+                  </div>`;
+              }).join("")}
+            </div>
+          </div>`;
+      } else {
         evoPlaceholder.remove();
       }
     }
   } catch (e) {
-    // Phase 2 failed (timeout / network) — modal is already fully displayed, just clean up placeholders
-    const locPh = document.getElementById("locations-placeholder");
+    // Phase 2 failed — modal is already usable, just clean up
+    const locPh  = document.getElementById("locations-placeholder");
     const evoPh2 = document.getElementById("evo-placeholder");
     if (locPh)  locPh.outerHTML  = '<p class="no-spawns">Could not load spawn info (network error).</p>';
     if (evoPh2) evoPh2.remove();

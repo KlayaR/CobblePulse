@@ -57,7 +57,7 @@ function renderTable(pokemonArray) {
     const rankColor = isCompetitiveTab ? "var(--accent-primary)" : "var(--text-muted)";
     const isFavRow  = favorites.includes(p.cleanName) ? "⭐ " : "";
 
-    // Prefetch on hover: warm the cache before the user clicks
+    // Prefetch evo chain on hover for instant modal open
     html += `
       <tr onclick="openModal(${p.id}, '${p.cleanName}')" onmouseenter="prefetchPokemonDetails(${p.id})">
         <td><strong style="color:${rankColor};">${rankText}</strong></td>
@@ -98,7 +98,6 @@ function setupEventListeners() {
     applyFilters();
   });
 
-  // --- POPULATE TYPE FILTER BADGES IN DROPDOWN ---
   if (DOM.typesDropdownPanel) {
     POKEMON_TYPES.forEach((type) => {
       const badge = document.createElement("span");
@@ -117,7 +116,6 @@ function setupEventListeners() {
     });
   }
 
-  // --- TYPES DROPDOWN TOGGLE ---
   if (DOM.typesDropdownBtn && DOM.typesDropdownPanel) {
     DOM.typesDropdownBtn.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -127,7 +125,6 @@ function setupEventListeners() {
     });
   }
 
-  // --- RARITY DROPDOWN TOGGLE ---
   if (DOM.rarityDropdownBtn && DOM.rarityDropdownPanel) {
     DOM.rarityDropdownBtn.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -137,33 +134,27 @@ function setupEventListeners() {
     });
   }
 
-  // --- RARITY OPTION SELECTION ---
   document.querySelectorAll(".rarity-option").forEach((opt) => {
     opt.addEventListener("click", (e) => {
       e.stopPropagation();
       const value = opt.dataset.value;
       filterState.rarity = value;
-
       document.querySelectorAll(".rarity-option").forEach((o) => o.classList.remove("active"));
       opt.classList.add("active");
-
       if (DOM.rarityDropdownBtn) {
         const labels = { all: "⭐ Rarity", legendary: "⭐ Legendary/Mythical", "non-legendary": "⭐ Non-Legendary" };
         DOM.rarityDropdownBtn.innerHTML = `${labels[value]} ▾`;
         DOM.rarityDropdownBtn.classList.toggle("active", value !== "all");
       }
-
       if (DOM.rarityDropdownPanel) DOM.rarityDropdownPanel.classList.remove("open");
       applyFilters();
     });
   });
 
-  // --- CLICK OUTSIDE TO CLOSE DROPDOWNS ---
   document.addEventListener("click", () => {
     document.querySelectorAll(".filter-dropdown-panel").forEach((p) => p.classList.remove("open"));
   });
 
-  // --- HAS SPAWNS CHIP ---
   if (DOM.spawnsChip) {
     DOM.spawnsChip.addEventListener("click", () => {
       filterState.hasSpawns = !filterState.hasSpawns;
@@ -172,10 +163,8 @@ function setupEventListeners() {
     });
   }
 
-  // --- SORT SELECT ---
   if (DOM.sortSelect) DOM.sortSelect.addEventListener("change", applyFilters);
 
-  // --- RANDOM BUTTON ---
   if (DOM.randomBtn) {
     DOM.randomBtn.addEventListener("click", () => {
       const allPokemonData = window.localDB?.pokemon || window.localDB || {};
@@ -185,7 +174,6 @@ function setupEventListeners() {
     });
   }
 
-  // --- TABS ---
   DOM.tabs.forEach((tab) => {
     tab.addEventListener("click", (e) => {
       DOM.tabs.forEach((t) => t.classList.remove("active"));
@@ -199,7 +187,6 @@ function setupEventListeners() {
     });
   });
 
-  // --- MODAL CLOSE ---
   DOM.closeBtn.addEventListener("click", closeModal);
   DOM.modalOverlay.addEventListener("click", (e) => { if (e.target === DOM.modalOverlay) closeModal(); });
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
@@ -219,22 +206,22 @@ async function init() {
     const scriptText = await response.text();
     eval(scriptText);
 
-    const dbData = window.localDB || {};
+    const dbData      = window.localDB || {};
     const pokemonData = dbData.pokemon || dbData;
     
     window.localDB = dbData;
-    allPokemon = Object.values(pokemonData);
+    allPokemon     = Object.values(pokemonData);
 
-    // Pre-build mega forms index now that data is loaded
-    buildMegaFormsIndex();
+    // Build alt-forms index (mega/alola/galar/hisui/paldea etc.) once data is loaded
+    buildAltFormsIndex();
     
     if (DOM.loadingSkeleton) DOM.loadingSkeleton.style.display = "none";
 
     if (dbData._meta && dbData._meta.buildTimestamp) {
       const buildDate = new Date(dbData._meta.buildTimestamp);
-      const dateStr = buildDate.toLocaleDateString("en-US", { 
-        year: "numeric", month: "short", day: "numeric", 
-        hour: "2-digit", minute: "2-digit" 
+      const dateStr   = buildDate.toLocaleDateString("en-US", {
+        year: "numeric", month: "short", day: "numeric",
+        hour: "2-digit", minute: "2-digit",
       });
       const timestampEl = document.getElementById("buildTimestamp");
       if (timestampEl) {
