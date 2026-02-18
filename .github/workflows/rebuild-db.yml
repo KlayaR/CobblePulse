@@ -9,6 +9,9 @@ on:
       - 'spawns.csv'      # Auto-rebuild when spawns.csv changes
       - 'compiler.js'     # Auto-rebuild when compiler logic changes
 
+permissions:
+  contents: write  # Required for git push
+
 jobs:
   build:
     runs-on: ubuntu-latest
