@@ -167,7 +167,14 @@
         const types = pokemon.types.map(t => `<span class="type-badge type-${t}">${t}</span>`).join('');
         const role = determineRole(pokemon);
         const roleIcon = getRoleIcon(role);
-        const abilities = pokemon.abilities ? pokemon.abilities.slice(0, 2).join(' / ') : 'Unknown';
+        
+        // FIX: Properly format abilities as text
+        let abilitiesText = 'Unknown';
+        if (pokemon.abilities && Array.isArray(pokemon.abilities) && pokemon.abilities.length > 0) {
+          abilitiesText = pokemon.abilities.slice(0, 2).join(' / ');
+        } else if (pokemon.abilities && typeof pokemon.abilities === 'string') {
+          abilitiesText = pokemon.abilities;
+        }
         
         html += `
           <div class="team-slot filled" draggable="true" data-slot="${i}">
@@ -177,7 +184,7 @@
             <div class="slot-info">
               <div class="slot-name">${pokemon.name}</div>
               <div class="slot-types">${types}</div>
-              <div class="slot-ability" title="Ability">${abilities}</div>
+              <div class="slot-ability" title="Ability">${abilitiesText}</div>
             </div>
             <button class="view-details-btn" onclick="openModal(${pokemon.id}, '${pokemon.cleanName}')" title="Details">
               ℹ️
