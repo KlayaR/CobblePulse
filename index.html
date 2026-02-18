@@ -11,6 +11,29 @@
   <body>
     <div id="tooltip"><div id="tt-content"></div></div>
 
+    <!-- Loading Skeleton -->
+    <div id="loadingSkeleton" class="loading-skeleton">
+      <div class="skeleton-header">
+        <div class="skeleton-title"></div>
+        <div class="skeleton-search"></div>
+      </div>
+      <div class="skeleton-tabs">
+        <div class="skeleton-tab"></div>
+        <div class="skeleton-tab"></div>
+        <div class="skeleton-tab"></div>
+        <div class="skeleton-tab"></div>
+        <div class="skeleton-tab"></div>
+      </div>
+      <div class="skeleton-cards">
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+      </div>
+    </div>
+
     <div class="container" id="app">
       <header>
         <h1>CobblePulse</h1>
@@ -105,6 +128,7 @@
         <a href="https://www.smogon.com/" target="_blank" class="source-badge">Smogon</a>
         <a href="https://pokeapi.co/" target="_blank" class="source-badge">PokéAPI</a>
       </div>
+      <span id="buildTimestamp" class="build-timestamp" style="display:none;"></span>
     </footer>
 
     <!-- Scripts loaded in dependency order -->

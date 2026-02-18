@@ -7,7 +7,7 @@ let favorites   = JSON.parse(localStorage.getItem("cobblePulseFavorites") || "[]
 let filterState = {
   types: [],
   hasSpawns: false,
-  rarity: "all", // "all" | "legendary" | "non-legendary"
+  rarity: "all",
 };
 
 const DOM = {
@@ -29,6 +29,7 @@ const DOM = {
   typesDropdownBtn:      document.getElementById("typesDropdownBtn"),
   typesDropdownPanel:    document.getElementById("typesDropdownPanel"),
   typeCount:             document.getElementById("typeCount"),
+  loadingSkeleton:       document.getElementById("loadingSkeleton"),
 };
 
 const POKEMON_TYPES = ["normal","fire","water","grass","electric","ice","fighting","poison","ground","flying","psychic","bug","rock","ghost","dragon","dark","steel","fairy"];
@@ -37,10 +38,14 @@ const POKEMON_TYPES = ["normal","fire","water","grass","electric","ice","fightin
 function renderTable(pokemonArray) {
   DOM.list.innerHTML = `<tr><td colspan="4" class="loading">Loading...</td></tr>`;
   let html = "";
+  
+  // NEW: Access pokemon from window.localDB.pokemon instead of window.localDB directly
+  const allPokemonData = window.localDB?.pokemon || window.localDB || {};
+  
   for (const p of pokemonArray) {
     if (!p.types || !Array.isArray(p.types)) p.types = [];
     const typeHtml = p.types.map((t) => `<span class="type-badge type-${t}">${t}</span>`).join("");
-    const dbEntry  = localDB[p.cleanName] || localDB[p.name] || {};
+    const dbEntry  = allPokemonData[p.cleanName] || allPokemonData[p.name] || {};
 
     let rank = 0;
     if (currentTab !== "all" && dbEntry.allRanks) {
@@ -101,7 +106,7 @@ function setupEventListeners() {
       badge.textContent = type;
       badge.dataset.type = type;
       badge.addEventListener("click", (e) => {
-        e.stopPropagation(); // Don't close dropdown when clicking a badge
+        e.stopPropagation();
         const index = filterState.types.indexOf(type);
         if (index > -1) { filterState.types.splice(index, 1); badge.classList.remove("active"); }
         else            { filterState.types.push(type);       badge.classList.add("active"); }
@@ -117,7 +122,6 @@ function setupEventListeners() {
     DOM.typesDropdownBtn.addEventListener("click", (e) => {
       e.stopPropagation();
       const isOpen = DOM.typesDropdownPanel.classList.contains("open");
-      // Close all dropdowns first
       document.querySelectorAll(".filter-dropdown-panel").forEach((p) => p.classList.remove("open"));
       if (!isOpen) DOM.typesDropdownPanel.classList.add("open");
     });
@@ -128,7 +132,6 @@ function setupEventListeners() {
     DOM.rarityDropdownBtn.addEventListener("click", (e) => {
       e.stopPropagation();
       const isOpen = DOM.rarityDropdownPanel.classList.contains("open");
-      // Close all dropdowns first
       document.querySelectorAll(".filter-dropdown-panel").forEach((p) => p.classList.remove("open"));
       if (!isOpen) DOM.rarityDropdownPanel.classList.add("open");
     });
@@ -141,11 +144,9 @@ function setupEventListeners() {
       const value = opt.dataset.value;
       filterState.rarity = value;
 
-      // Update active state
       document.querySelectorAll(".rarity-option").forEach((o) => o.classList.remove("active"));
       opt.classList.add("active");
 
-      // Update button text
       if (DOM.rarityDropdownBtn) {
         const labels = { all: "⭐ Rarity", legendary: "⭐ Legendary/Mythical", "non-legendary": "⭐ Non-Legendary" };
         DOM.rarityDropdownBtn.innerHTML = `${labels[value]} ▾`;
@@ -177,8 +178,9 @@ function setupEventListeners() {
   // --- RANDOM BUTTON ---
   if (DOM.randomBtn) {
     DOM.randomBtn.addEventListener("click", () => {
-      const keys = Object.keys(localDB);
-      const p    = localDB[keys[Math.floor(Math.random() * keys.length)]];
+      const allPokemonData = window.localDB?.pokemon || window.localDB || {};
+      const keys = Object.keys(allPokemonData);
+      const p    = allPokemonData[keys[Math.floor(Math.random() * keys.length)]];
       openModal(p.id, p.cleanName);
     });
   }
@@ -209,16 +211,41 @@ async function init() {
   applyFilters();
 
   try {
-    const dbResponse = await fetch("./localDB.json?v=" + Date.now());
-    if (!dbResponse.ok) throw new Error(`HTTP error! status: ${dbResponse.status}`);
-    const contentType = dbResponse.headers.get("content-type");
-    if (!contentType || !contentType.includes("application/json")) {
-      const text = await dbResponse.text();
-      throw new Error("Server returned HTML instead of JSON. Make sure localDB.json exists.");
+    // Show loading skeleton
+    if (DOM.loadingSkeleton) DOM.loadingSkeleton.style.display = "block";
+
+    // NEW: Fetch localDB.js which now has structure: { _meta: {...}, pokemon: {...} }
+    const response = await fetch("./localDB.js?v=" + Date.now());
+    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+    
+    const scriptText = await response.text();
+    eval(scriptText); // Executes: window.localDB = { _meta, pokemon }
+
+    // NEW: Extract pokemon from new structure
+    const dbData = window.localDB || {};
+    const pokemonData = dbData.pokemon || dbData; // Fallback to old structure if no .pokemon key
+    
+    // Update global references
+    window.localDB = dbData;
+    allPokemon = Object.values(pokemonData);
+    
+    // Hide loading skeleton
+    if (DOM.loadingSkeleton) DOM.loadingSkeleton.style.display = "none";
+
+    // Update footer with build timestamp
+    if (dbData._meta && dbData._meta.buildTimestamp) {
+      const buildDate = new Date(dbData._meta.buildTimestamp);
+      const dateStr = buildDate.toLocaleDateString("en-US", { 
+        year: "numeric", month: "short", day: "numeric", 
+        hour: "2-digit", minute: "2-digit" 
+      });
+      const timestampEl = document.getElementById("buildTimestamp");
+      if (timestampEl) {
+        timestampEl.textContent = `Last Updated: ${dateStr}`;
+        timestampEl.style.display = "inline";
+      }
     }
 
-    localDB    = await dbResponse.json();
-    allPokemon = Object.values(localDB);
     applyFilters();
 
     // Restore state from URL params
@@ -235,13 +262,14 @@ async function init() {
         applyFilters();
       }
     }
-    if (pokemonParam && localDB[pokemonParam]) {
-      const p = localDB[pokemonParam];
+    if (pokemonParam && pokemonData[pokemonParam]) {
+      const p = pokemonData[pokemonParam];
       openModal(p.id, p.cleanName);
     }
   } catch (e) {
     console.error("Data load failed:", e);
-    DOM.list.innerHTML = `<tr><td colspan="4" class="loading"><strong>Error loading data:</strong> ${e.message}<br><br>Make sure localDB.json is in the same directory as index.html.</td></tr>`;
+    if (DOM.loadingSkeleton) DOM.loadingSkeleton.style.display = "none";
+    DOM.list.innerHTML = `<tr><td colspan="4" class="loading"><strong>Error loading data:</strong> ${e.message}<br><br>Make sure localDB.js is in the same directory as index.html.</td></tr>`;
   }
 }
 
