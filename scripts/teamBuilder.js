@@ -136,7 +136,7 @@
           <select id="globalDifficulty" onchange="updateSuggestionFilters()" class="filter-select">
             <option value="competitive" ${suggestionFilters.difficulty === 'competitive' ? 'selected' : ''}>Competitive</option>
             <option value="balanced" ${suggestionFilters.difficulty === 'balanced' ? 'selected' : ''}>Balanced</option>
-            <option value="easy" ${suggestionFilters.difficulty === 'easy' ? 'selected' : ''}>Easy (Common)</option>
+            <option value="easy" ${suggestionFilters.difficulty === 'easy' ? 'selected' : ''}>Easy</option>
           </select>
         </div>
       </div>
