@@ -57,15 +57,36 @@ function getTierRank(p) {
 function applyFilters() {
   const query  = DOM.searchInput.value.toLowerCase();
   const sortBy = DOM.sortSelect ? DOM.sortSelect.value : "rank";
-  const isTierTab = currentTab !== "about" && currentTab !== "all" && currentTab !== "favorites" && currentTab !== "typechart";
+  const isTierTab = currentTab !== "about" && currentTab !== "all" && currentTab !== "favorites" && currentTab !== "typechart" && currentTab !== "teambuilder";
 
   // Hide unified filters on special tabs
   if (DOM.unifiedFilters) {
-    DOM.unifiedFilters.style.display = (currentTab === "about" || currentTab === "typechart") ? "none" : "flex";
+    DOM.unifiedFilters.style.display = (currentTab === "about" || currentTab === "typechart" || currentTab === "teambuilder") ? "none" : "flex";
   }
 
-  // Get type chart panel element
+  // Get special panel elements
   const typeChartPanel = document.getElementById("typeChartPanel");
+  const teamBuilderPanel = document.getElementById("teamBuilderPanel");
+
+  // --- TEAM BUILDER TAB ---
+  if (currentTab === "teambuilder") {
+    DOM.aboutPanel.style.display = "none";
+    DOM.tableContainer.style.display = "none";
+    if (typeChartPanel) typeChartPanel.style.display = "none";
+    if (teamBuilderPanel) {
+      teamBuilderPanel.style.display = "block";
+      // Initialize team builder if function exists
+      if (typeof initTeamBuilder === "function") {
+        initTeamBuilder();
+      }
+    }
+    return;
+  }
+
+  // Hide team builder panel on other tabs
+  if (teamBuilderPanel) {
+    teamBuilderPanel.style.display = "none";
+  }
 
   // --- TYPE CHART TAB ---
   if (currentTab === "typechart") {
@@ -115,6 +136,7 @@ function applyFilters() {
         <li><strong>Browse Tiers:</strong> Click the tier tabs to see the top 50 in each tier.</li>
         <li><strong>View All:</strong> Click "All Cobblemon" to see every Pokémon.</li>
         <li><strong>Favorites:</strong> Click ⭐ in any modal to save to Favorites.</li>
+        <li><strong>Team Builder:</strong> Click "⚔️ Team Builder" to create competitive teams with coverage analysis.</li>
         <li><strong>Type Chart:</strong> Click "🔥 Type Chart" to view interactive type effectiveness.</li>
         <li><strong>Search:</strong> Use the search box to find by name, #id, type:fire, ability:levitate, move:earthquake, speed>100.</li>
         <li><strong>Click for Details:</strong> Click any Pokémon for spawn locations, movesets, EVs, and more.</li>
