@@ -214,12 +214,12 @@
   transform: scale(1.05);
 }
 
-/* Per-Slot Suggestion Buttons - REDUCED SIZE */
+/* Per-Slot Suggestion Buttons - MUCH SMALLER */
 .slot-suggestion-btns {
   display: flex;
-  gap: 4px;
+  gap: 3px;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .suggest-btn, .random-btn {
@@ -227,16 +227,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 4px;
-  padding: 5px 8px;
-  border-radius: 6px;
-  border: 1.5px solid var(--glass-border);
+  gap: 3px;
+  padding: 3px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--glass-border);
   background: rgba(0,0,0,0.4);
   color: var(--text-main);
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.2s;
   font-weight: 600;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
 }
 
 .suggest-btn {
@@ -247,7 +247,7 @@
   border-color: #3b82f6;
   background: rgba(59,130,246,0.15);
   transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(59,130,246,0.3);
+  box-shadow: 0 2px 6px rgba(59,130,246,0.25);
 }
 
 .random-btn {
@@ -258,18 +258,18 @@
   border-color: #8b5cf6;
   background: rgba(139,92,246,0.15);
   transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(139,92,246,0.3);
+  box-shadow: 0 2px 6px rgba(139,92,246,0.25);
 }
 
 .btn-icon {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   display: flex;
   align-items: center;
 }
 
 .btn-text {
-  font-size: 0.7rem;
-  letter-spacing: 0.3px;
+  font-size: 0.65rem;
+  letter-spacing: 0.2px;
 }
 
 .empty-slot-content {
@@ -1053,7 +1053,7 @@
   }
   
   .btn-icon {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 
