@@ -8,7 +8,7 @@
   --glass-border: rgba(255, 255, 255, 0.1);
   --accent-primary: #e94560;
   --accent-secondary: #0f3460;
-  --mega-gold: #ffd700;
+  --mega-accent: #9370db;
   --text-main: #f5f5f5;
   --text-muted: #a0a0b5;
   --blur: blur(12px);
@@ -647,89 +647,61 @@ tr:hover { background: rgba(255,255,255,0.05); }
 /* --- MEGA EVOLUTION TOGGLE --- */
 .mega-toggle-container {
   display: flex;
-  gap: 8px;
-  margin-bottom: 20px;
-  padding-bottom: 18px;
-  border-bottom: 1px solid var(--glass-border);
+  gap: 6px;
+  margin-bottom: 15px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .mega-toggle-btn {
   background: rgba(0, 0, 0, 0.3);
-  border: 2px solid var(--glass-border);
+  border: 1px solid var(--glass-border);
   color: var(--text-muted);
-  padding: 8px 18px;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   text-transform: capitalize;
-  position: relative;
-  overflow: hidden;
-  white-space: nowrap;
 }
 
 .mega-toggle-btn:hover {
-  border-color: var(--mega-gold);
-  color: var(--mega-gold);
-  background: rgba(255, 215, 0, 0.1);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2);
+  border-color: var(--mega-accent);
+  color: var(--mega-accent);
+  background: rgba(147, 112, 219, 0.1);
 }
 
 .mega-toggle-btn.active {
-  border-color: var(--mega-gold);
-  background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 215, 0, 0.1));
-  color: var(--mega-gold);
-  font-weight: 900;
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3), inset 0 0 20px rgba(255, 215, 0, 0.1);
-  padding-left: 28px;
-}
-
-.mega-toggle-btn.active::before {
-  content: "⚡";
-  position: absolute;
-  left: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 0.9rem;
-  animation: pulse-mega 2s infinite ease-in-out;
-}
-
-@keyframes pulse-mega {
-  0%, 100% { opacity: 0.6; transform: translateY(-50%) scale(1); }
-  50% { opacity: 1; transform: translateY(-50%) scale(1.2); }
+  border-color: var(--mega-accent);
+  background: rgba(147, 112, 219, 0.2);
+  color: var(--mega-accent);
+  font-weight: 700;
 }
 
 .mega-boost-badge {
-  color: var(--mega-gold);
-  font-size: 0.75rem;
+  color: var(--mega-accent);
+  font-size: 0.7rem;
   font-weight: bold;
-  margin-left: 10px;
-  padding: 3px 8px;
-  background: rgba(255, 215, 0, 0.15);
-  border: 1px solid var(--mega-gold);
+  margin-left: 8px;
+  padding: 2px 6px;
+  background: rgba(147, 112, 219, 0.15);
+  border: 1px solid var(--mega-accent);
   border-radius: 4px;
-  animation: pulse-mega-badge 2s infinite ease-in-out;
-}
-
-@keyframes pulse-mega-badge {
-  0%, 100% { box-shadow: 0 0 5px rgba(255, 215, 0, 0.3); }
-  50% { box-shadow: 0 0 15px rgba(255, 215, 0, 0.6); }
 }
 
 .mega-obtain-notice {
-  background: rgba(255, 215, 0, 0.1);
-  border: 2px solid var(--mega-gold);
+  background: rgba(147, 112, 219, 0.1);
+  border: 1px solid var(--mega-accent);
   padding: 15px;
   border-radius: 8px;
   margin-top: 10px;
 }
 
 .mega-obtain-notice h4 {
-  color: var(--mega-gold);
+  color: var(--mega-accent);
   margin-bottom: 10px;
   font-size: 0.95rem;
   display: flex;
@@ -1193,8 +1165,8 @@ tr:hover { background: rgba(255,255,255,0.05); }
   }
   
   .mega-toggle-btn {
-    font-size: 0.8rem;
-    padding: 7px 14px;
+    font-size: 0.7rem;
+    padding: 4px 8px;
   }
   
   .strategy-grid {
@@ -1269,7 +1241,7 @@ tr:hover { background: rgba(255,255,255,0.05); }
   }
   
   .mega-toggle-btn {
-    font-size: 0.75rem;
-    padding: 6px 12px;
+    font-size: 0.65rem;
+    padding: 3px 8px;
   }
 }

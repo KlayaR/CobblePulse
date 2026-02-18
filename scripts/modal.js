@@ -167,9 +167,9 @@ async function openModal(id, cleanName, megaCleanName = null) {
     const hasMegaForms = megaForms.length > 0;
     const megaToggleHtml = hasMegaForms ? `
       <div class="mega-toggle-container">
-        <button class="mega-toggle-btn ${!megaCleanName ? 'active' : ''}" onclick="openModal(${id}, '${cleanName}', null)">Base Form</button>
+        <button class="mega-toggle-btn ${!megaCleanName ? 'active' : ''}" onclick="openModal(${id}, '${cleanName}', null)">Base</button>
         ${megaForms.map((mega) => {
-          const megaLabel = mega.data.name.replace(/-/g, " ").replace(/mega/i, "Mega").trim();
+          const megaLabel = mega.data.name.replace(/-/g, " ").replace(/mega/i, "Mega").replace(/charizard/i, "").replace(/mewtwo/i, "").trim();
           return `<button class="mega-toggle-btn ${megaCleanName === mega.cleanName ? 'active' : ''}" onclick="openModal(${id}, '${cleanName}', '${mega.cleanName}')">${megaLabel}</button>`;
         }).join("")}
       </div>` : "";
