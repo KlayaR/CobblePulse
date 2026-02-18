@@ -1,4 +1,4 @@
-// Team Builder Logic - Enhanced Version
+// Team Builder Logic - Complete Enhanced Version
 
 (function() {
   'use strict';
@@ -80,7 +80,7 @@
     if (!container) return;
 
     const teamNames = Object.keys(savedTeams);
-    const teamSelector = teamNames.length > 0 ? `
+    const teamSelector = teamNames.length > 1 ? `
       <div class="team-selector">
         <label>Current Team:</label>
         <select id="teamSelect" onchange="switchTeam(this.value)">
@@ -100,7 +100,7 @@
       </div>
 
       <div class="team-actions">
-        <button class="team-action-btn export-btn" onclick="exportTeam()" ${currentTeam.length === 0 ? 'disabled' : ''}>
+        <button class="team-action-btn export-btn" onclick="exportTeam()" ${currentTeam.filter(p=>p).length === 0 ? 'disabled' : ''}>
           📤 Export Team
         </button>
         <button class="team-action-btn import-btn" onclick="showImportModal()">
@@ -109,10 +109,10 @@
         <button class="team-action-btn template-btn" onclick="showTemplatesModal()">
           📋 Templates
         </button>
-        <button class="team-action-btn suggest-btn" onclick="suggestPokemon()" ${currentTeam.length === 0 ? 'disabled' : ''}>
+        <button class="team-action-btn suggest-btn" onclick="showSuggestModal()" ${currentTeam.filter(p=>p).length === 0 ? 'disabled' : ''}>
           💡 Suggest
         </button>
-        <button class="team-action-btn clear-btn" onclick="confirmClearTeam()" ${currentTeam.length === 0 ? 'disabled' : ''}>
+        <button class="team-action-btn clear-btn" onclick="confirmClearTeam()" ${currentTeam.filter(p=>p).length === 0 ? 'disabled' : ''}>
           🗑️ Clear
         </button>
       </div>
@@ -333,7 +333,7 @@
     const coveragePercent = Math.round((coveredTypes.length / 18) * 100);
 
     return `
-      <div class="coverage-stats"><div class="coverage-meter"><div class="coverage-meter-fill" style="width:${coveragePercent}%"></div><span class="coverage-meter-text">${coveragePercent}% Coverage</span></div></div>
+      <div class="coverage-stats"><div class="coverage-meter"><div class="coverage-meter-fill" style="width:${coveragePercent}%"></div><span class="coverage-meter-text">${coveragePercent}% Coverage (${coveredTypes.length}/18)</span></div></div>
       <div class="coverage-grid">${coveredTypes.map(type => `<div class="coverage-item covered" title="${coverage[type].join('\n')}"><span class="type-badge type-${type}">${type}</span><span class="coverage-count">${coverage[type].length}</span></div>`).join('')}</div>
       ${uncoveredTypes.length > 0 ? `<div class="uncovered-section"><h4>⚠️ Not Covered (${uncoveredTypes.length})</h4><div class="coverage-grid">${uncoveredTypes.map(type => `<span class="type-badge type-${type} uncovered-badge">${type}</span>`).join('')}</div></div>` : '<div class="perfect-coverage">🎯 Perfect!</div>'}
     `;
@@ -344,7 +344,11 @@
       'earthquake': 'ground', 'ice beam': 'ice', 'thunderbolt': 'electric', 'flamethrower': 'fire',
       'surf': 'water', 'psychic': 'psychic', 'shadow ball': 'ghost', 'focus blast': 'fighting',
       'ice punch': 'ice', 'thunder punch': 'electric', 'fire punch': 'fire', 'drain punch': 'fighting',
-      'stone edge': 'rock', 'iron head': 'steel', 'u-turn': 'bug', 'volt switch': 'electric'
+      'stone edge': 'rock', 'iron head': 'steel', 'u-turn': 'bug', 'volt switch': 'electric',
+      'scald': 'water', 'sludge bomb': 'poison', 'play rough': 'fairy', 'moonblast': 'fairy',
+      'aura sphere': 'fighting', 'dark pulse': 'dark', 'knock off': 'dark', 'earth power': 'ground',
+      'flash cannon': 'steel', 'energy ball': 'grass', 'hydro pump': 'water', 'brave bird': 'flying',
+      'close combat': 'fighting', 'rock slide': 'rock', 'outrage': 'dragon', 'draco meteor': 'dragon'
     };
     return moveTypes[moveName.toLowerCase().replace(/[^a-z ]/g, '')] || null;
   }
@@ -428,7 +432,7 @@
       const isInTeam = currentTeam.some(tp => tp && tp.id === p.id);
       
       return `
-        <div class="selector-pokemon ${isInTeam ? 'in-team' : ''}" onclick="${isInTeam ? '' : `addToTeam(${slotIndex}, ${p.id}, '${p.cleanName}')`}">
+        <div class="selector-pokemon ${isInTeam ? 'in-team' : ''}" onclick="${isInTeam ? '' : `addToTeam(${slotIndex}, ${p.id}, '${p.cleanName}')`}" style="${isInTeam ? 'cursor:not-allowed;opacity:0.5;' : 'cursor:pointer;'}">
           <img src="${p.sprite}" alt="${p.name}" loading="lazy">
           <div class="selector-pokemon-info">
             <div class="selector-pokemon-name">${p.name}</div>
@@ -467,20 +471,574 @@
   };
   
   window.confirmClearTeam = function() { 
-    if(confirm('Clear this team?')) { 
-      currentTeam=[]; 
+    if(confirm('Clear this team? This cannot be undone.')) { 
+      currentTeam = [];
       saveTeam(); 
       renderTeamBuilder(); 
     }
   };
+
+  // ========================================
+  // SMART AI SUGGESTION SYSTEM
+  // ========================================
   
-  window.showTemplatesModal = function() { alert('Templates coming soon!'); };
-  window.showImportModal = function() { alert('Import coming soon!'); };
-  window.exportTeam = function() { alert('Export coming soon!'); };
-  window.suggestPokemon = function() { alert('Suggestions coming soon!'); };
+  window.showSuggestModal = function() {
+    const modalHtml = `
+      <div class="suggest-modal">
+        <h3>💡 Smart Team Suggestions</h3>
+        <p style="margin-bottom:20px;color:var(--text-muted);">Configure suggestion preferences:</p>
+        
+        <div class="suggest-options">
+          <div class="suggest-option-group">
+            <label class="suggest-label">
+              <input type="checkbox" id="allowLegendaries" checked>
+              <span>Allow Legendary/Mythical Pokémon</span>
+            </label>
+          </div>
+          
+          <div class="suggest-option-group">
+            <label class="suggest-label">Difficulty Level:</label>
+            <select id="difficultyLevel" class="suggest-select">
+              <option value="competitive">Competitive (Best BST, any rarity)</option>
+              <option value="balanced">Balanced (Good power, moderate rarity)</option>
+              <option value="easy" selected>Easy Team (Common spawns only)</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="suggest-actions">
+          <button class="btn-primary" onclick="generateSmartSuggestions()">🎯 Generate Suggestions</button>
+          <button class="btn-secondary" onclick="closeModal()">Cancel</button>
+        </div>
+      </div>
+    `;
+    
+    const overlay = document.getElementById('modalOverlay');
+    const modalBody = document.getElementById('modalBody');
+    modalBody.innerHTML = modalHtml;
+    overlay.classList.add('active');
+  };
+
+  window.generateSmartSuggestions = function() {
+    const allowLegendaries = document.getElementById('allowLegendaries').checked;
+    const difficulty = document.getElementById('difficultyLevel').value;
+    
+    const suggestions = smartSuggest(allowLegendaries, difficulty);
+    
+    if (suggestions.length === 0) {
+      alert('No suitable suggestions found. Try adjusting your filters.');
+      return;
+    }
+    
+    const emptySlot = currentTeam.findIndex((p, i) => !p && i < MAX_TEAM_SIZE);
+    const slotIndex = emptySlot >= 0 ? emptySlot : currentTeam.length;
+    
+    if (currentTeam.filter(p => p).length >= MAX_TEAM_SIZE) {
+      alert('Team is full! Remove a Pokémon first.');
+      return;
+    }
+    
+    const modalHtml = `
+      <div class="pokemon-selector-modal">
+        <h3>💡 Smart Suggestions for Slot ${slotIndex + 1}</h3>
+        <p style="color:var(--text-muted);margin-bottom:15px;font-size:0.9rem;">
+          ${suggestions[0].reasons.slice(0, 2).join(' • ')}
+        </p>
+        <div class="selector-results" style="max-height:60vh;">
+          ${suggestions.map((s, idx) => {
+            const p = s.pokemon;
+            const types = p.types.map(t => `<span class="type-badge type-${t}">${t}</span>`).join('');
+            const roleIcon = getRoleIcon(s.role);
+            const bstInfo = p.stats ? Object.values(p.stats).reduce((a,b) => a+b, 0) : '?';
+            const rarityBadge = p.isLegendary || p.isMythical ? '<span style="color:#ffd700;">✨ Legendary</span>' : 
+                               s.rarity === 'common' ? '<span style="color:#4ade80;">📍 Common</span>' : 
+                               s.rarity === 'uncommon' ? '<span style="color:#60a5fa;">📍 Uncommon</span>' : '';
+            
+            return `
+              <div class="selector-pokemon" onclick="addToTeam(${slotIndex}, ${p.id}, '${p.cleanName}')" style="cursor:pointer;position:relative;">
+                <div style="position:absolute;top:5px;right:5px;background:rgba(0,0,0,0.8);padding:3px 8px;border-radius:4px;font-size:0.75rem;font-weight:bold;color:#4ade80;">
+                  #${idx + 1} Score: ${s.score}
+                </div>
+                <div style="position:absolute;top:5px;left:5px;font-size:1.3rem;" title="${s.role}">
+                  ${roleIcon}
+                </div>
+                <img src="${p.sprite}" alt="${p.name}" loading="lazy">
+                <div class="selector-pokemon-info">
+                  <div class="selector-pokemon-name">${p.name}</div>
+                  <div class="selector-pokemon-types">${types}</div>
+                  <div style="font-size:0.75rem;color:var(--text-muted);margin-top:4px;">
+                    BST: ${bstInfo} | ${rarityBadge}
+                  </div>
+                  <div style="font-size:0.7rem;color:var(--text-secondary);margin-top:6px;line-height:1.3;">
+                    ${s.reasons.slice(0, 2).join('<br>')}
+                  </div>
+                </div>
+              </div>
+            `;
+          }).join('')}
+        </div>
+      </div>
+    `;
+    
+    const modalBody = document.getElementById('modalBody');
+    modalBody.innerHTML = modalHtml;
+  };
+
+  function smartSuggest(allowLegendaries, difficulty) {
+    const TYPE_CHART = window.TYPE_CHART_DATA;
+    const allPokemonData = window.localDB?.pokemon || window.localDB || {};
+    
+    if (!TYPE_CHART) return [];
+    
+    // Analyze current team needs
+    const defensiveWeaknesses = {};
+    const coveredTypes = new Set();
+    const teamRoles = {};
+    let totalSpeed = 0, totalDefense = 0, teamCount = 0;
+    
+    currentTeam.forEach(pokemon => {
+      if (!pokemon) return;
+      
+      // Defensive weaknesses
+      Object.keys(TYPE_CHART).forEach(attackType => {
+        let effectiveness = 1;
+        pokemon.types.forEach(defenseType => {
+          const data = TYPE_CHART[defenseType];
+          if (data.weaknesses.includes(attackType)) effectiveness *= 2;
+        });
+        if (effectiveness >= 2) {
+          defensiveWeaknesses[attackType] = (defensiveWeaknesses[attackType] || 0) + 1;
+        }
+      });
+      
+      // Offensive coverage
+      const fullData = allPokemonData[pokemon.cleanName];
+      pokemon.types.forEach(type => {
+        Object.keys(TYPE_CHART).forEach(defType => {
+          if (TYPE_CHART[defType].weaknesses.includes(type)) coveredTypes.add(defType);
+        });
+      });
+      
+      // Role tracking
+      const role = determineRole(pokemon);
+      teamRoles[role] = (teamRoles[role] || 0) + 1;
+      
+      // Stats
+      if (fullData?.stats) {
+        totalSpeed += fullData.stats.speed;
+        totalDefense += fullData.stats.defense + fullData.stats['special-defense'];
+        teamCount++;
+      }
+    });
+    
+    const avgSpeed = teamCount > 0 ? totalSpeed / teamCount : 0;
+    const avgDefense = teamCount > 0 ? totalDefense / teamCount : 0;
+    const uncoveredTypes = Object.keys(TYPE_CHART).filter(t => !coveredTypes.has(t));
+    
+    // Score candidates
+    const candidates = Object.values(allPokemonData)
+      .filter(p => {
+        if (window.isMegaForm(p.cleanName)) return false;
+        if (currentTeam.some(tp => tp && tp.id === p.id)) return false;
+        if (!allowLegendaries && (p.isLegendary || p.isMythical)) return false;
+        
+        // Difficulty filters
+        if (p.stats) {
+          const bst = Object.values(p.stats).reduce((a, b) => a + b, 0);
+          if (difficulty === 'competitive' && bst < 520) return false;
+          if (difficulty === 'balanced' && bst < 480) return false;
+          if (difficulty === 'easy') {
+            if (bst < 450 || bst > 550) return false; // Moderate power
+            if (!p.locations || p.locations.length === 0) return false; // Must have spawns
+            const hasCommonSpawn = p.locations.some(loc => 
+              loc.rarity && (loc.rarity.toLowerCase().includes('common') || 
+                            loc.rarity.toLowerCase().includes('frequent'))
+            );
+            if (!hasCommonSpawn) return false;
+          }
+        }
+        
+        return true;
+      })
+      .map(p => {
+        let score = 0;
+        const reasons = [];
+        const role = determineRole({ ...p, abilities: p.abilities || [] });
+        
+        // Rarity scoring
+        let rarity = 'uncommon';
+        if (p.locations && p.locations.length > 0) {
+          const hasCommon = p.locations.some(loc => loc.rarity?.toLowerCase().includes('common'));
+          if (hasCommon) rarity = 'common';
+        }
+        
+        // DEFENSIVE SYNERGY (40 points max)
+        let defenseScore = 0;
+        Object.entries(defensiveWeaknesses).forEach(([type, count]) => {
+          p.types.forEach(defenseType => {
+            const typeData = TYPE_CHART[defenseType];
+            if (typeData.immunities.includes(type)) {
+              defenseScore += count * 15;
+              reasons.push(`🛡️ Immune to ${type} (covers ${count} weaknesses)`);
+            } else if (typeData.resistances.includes(type)) {
+              defenseScore += count * 8;
+              reasons.push(`🛡️ Resists ${type} (${count}× weak)`);
+            }
+          });
+        });
+        score += Math.min(defenseScore, 40);
+        
+        // OFFENSIVE COVERAGE (35 points max)
+        let coverageScore = 0;
+        const newlyCovered = [];
+        uncoveredTypes.forEach(uncoveredType => {
+          p.types.forEach(attackType => {
+            if (TYPE_CHART[uncoveredType].weaknesses.includes(attackType)) {
+              coverageScore += 12;
+              newlyCovered.push(uncoveredType);
+            }
+          });
+        });
+        if (newlyCovered.length > 0) {
+          reasons.push(`⚔️ Covers ${newlyCovered.slice(0, 3).join(', ')}`);
+        }
+        score += Math.min(coverageScore, 35);
+        
+        // ROLE BALANCE (25 points max)
+        const needsFastSweeper = avgSpeed < 80 && (teamRoles['Fast Sweeper'] || 0) < 2;
+        const needsWall = avgDefense < 150 && (teamRoles['Wall/Tank'] || 0) < 2;
+        const hasTooManySweepers = (teamRoles['Fast Sweeper'] || 0) + (teamRoles['Slow Sweeper'] || 0) >= 4;
+        
+        if (needsFastSweeper && role === 'Fast Sweeper') {
+          score += 25;
+          reasons.push('⚡ Adds speed control');
+        }
+        if (needsWall && role === 'Wall/Tank') {
+          score += 25;
+          reasons.push('🛡️ Adds bulk');
+        }
+        if (hasTooManySweepers && (role === 'Wall/Tank' || role === 'Support/Utility')) {
+          score += 20;
+          reasons.push('⚖️ Balances offensive team');
+        }
+        
+        // EASE OF ACQUISITION (difficulty bonus)
+        if (difficulty === 'easy') {
+          if (rarity === 'common') {
+            score += 20;
+            reasons.push('📍 Easy to obtain (common spawn)');
+          }
+        } else if (difficulty === 'competitive') {
+          if (p.stats) {
+            const bst = Object.values(p.stats).reduce((a, b) => a + b, 0);
+            if (bst >= 580) {
+              score += 15;
+              reasons.push('💪 High BST (top tier)');
+            }
+          }
+        }
+        
+        return { pokemon: p, score, role, reasons, rarity };
+      })
+      .filter(s => s.score > 10)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 12);
+    
+    return candidates;
+  }
+
+  // ========================================
+  // TEAM TEMPLATES
+  // ========================================
   
-  function renderDefensiveWeaknesses() { 
-    return '<p style="color: var(--text-muted);">Defensive weaknesses and resistances analysis will appear here once you add more Pokémon to your team.</p>'; 
+  const TEAM_TEMPLATES = {
+    'Balanced Core': {
+      pokemon: ['Landorus', 'Toxapex', 'Corviknight', 'Heatran', 'Tapu Fini', 'Rillaboom'],
+      desc: 'Well-rounded competitive team with offense and defense'
+    },
+    'Hyper Offense': {
+      pokemon: ['Dragapult', 'Garchomp', 'Volcarona', 'Kartana', 'Tapu Koko', 'Melmetal'],
+      desc: 'Fast-paced aggressive team focused on overwhelming opponents'
+    },
+    'Easy Starter Team': {
+      pokemon: ['Talonflame', 'Azumarill', 'Toxicroak', 'Ferrothorn', 'Hippowdon', 'Slowbro'],
+      desc: 'Accessible team with common spawns and solid synergy'
+    },
+    'Rain Team': {
+      pokemon: ['Pelipper', 'Barraskewda', 'Kingdra', 'Ferrothorn', 'Toxapex', 'Rillaboom'],
+      desc: 'Weather-based strategy utilizing rain'
+    },
+    'Sun Team': {
+      pokemon: ['Torkoal', 'Venusaur', 'Charizard', 'Heatran', 'Landorus', 'Tapu Fini'],
+      desc: 'Weather-based strategy utilizing sun'
+    },
+    'Stall Team': {
+      pokemon: ['Toxapex', 'Ferrothorn', 'Chansey', 'Corviknight', 'Hippowdon', 'Slowbro'],
+      desc: 'Defensive team focused on outlasting opponents'
+    }
+  };
+  
+  window.showTemplatesModal = function() {
+    const modalHtml = `
+      <div class="templates-modal">
+        <h3>📋 Team Templates</h3>
+        <p style="color:var(--text-muted);margin-bottom:20px;font-size:0.9rem;">
+          Load a pre-built competitive team:
+        </p>
+        <div class="template-list">
+          ${Object.entries(TEAM_TEMPLATES).map(([name, data]) => `
+            <div class="template-item" onclick="loadTemplate('${name}')" style="cursor:pointer;">
+              <div class="template-name">${name}</div>
+              <div class="template-desc">${data.desc}</div>
+              <div class="template-pokemon">${data.pokemon.join(' • ')}</div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+    
+    const overlay = document.getElementById('modalOverlay');
+    const modalBody = document.getElementById('modalBody');
+    modalBody.innerHTML = modalHtml;
+    overlay.classList.add('active');
+  };
+  
+  window.loadTemplate = function(templateName) {
+    const template = TEAM_TEMPLATES[templateName];
+    if (!template) return;
+    
+    const allPokemonData = window.localDB?.pokemon || window.localDB || {};
+    const newTeam = [];
+    
+    template.pokemon.forEach(name => {
+      const cleanName = name.toLowerCase().replace(/[^a-z]/g, '');
+      const pokemon = allPokemonData[cleanName];
+      
+      if (pokemon) {
+        newTeam.push({
+          id: pokemon.id,
+          name: pokemon.name,
+          cleanName: pokemon.cleanName,
+          types: pokemon.types,
+          sprite: pokemon.sprite,
+          abilities: pokemon.abilities || []
+        });
+      }
+    });
+    
+    if (newTeam.length > 0) {
+      if (currentTeam.filter(p => p).length > 0) {
+        if (!confirm(`Replace current team with "${templateName}"?`)) return;
+      }
+      currentTeam = newTeam;
+      saveTeam();
+      if(window.closeModal) window.closeModal();
+      renderTeamBuilder();
+    } else {
+      alert('Could not load template - some Pokémon not found.');
+    }
+  };
+
+  // ========================================
+  // IMPORT/EXPORT
+  // ========================================
+  
+  window.exportTeam = function() {
+    const teamCode = btoa(JSON.stringify(currentTeam.map(p => p ? p.cleanName : null)));
+    const url = `${window.location.origin}${window.location.pathname}?team=${teamCode}`;
+    
+    navigator.clipboard.writeText(url).then(() => {
+      alert('✅ Team link copied to clipboard! Share it with friends.');
+    }).catch(() => {
+      prompt('Copy this link to share your team:', url);
+    });
+  };
+  
+  window.showImportModal = function() {
+    const modalHtml = `
+      <div class="import-modal">
+        <h3>📥 Import Team</h3>
+        <p style="margin-bottom:15px;color:var(--text-muted);">Paste a team link or code:</p>
+        <textarea id="importCode" placeholder="https://... or paste team code" rows="4" style="width:100%;padding:10px;border:1px solid var(--border-color);border-radius:8px;background:var(--bg-secondary);color:var(--text-primary);font-family:monospace;"></textarea>
+        <div class="import-actions" style="margin-top:15px;display:flex;gap:10px;">
+          <button class="btn-primary" onclick="importTeam()" style="flex:1;">Import</button>
+          <button class="btn-secondary" onclick="closeModal()" style="flex:1;">Cancel</button>
+        </div>
+      </div>
+    `;
+    
+    const overlay = document.getElementById('modalOverlay');
+    const modalBody = document.getElementById('modalBody');
+    modalBody.innerHTML = modalHtml;
+    overlay.classList.add('active');
+  };
+  
+  window.importTeam = function() {
+    const input = document.getElementById('importCode').value.trim();
+    let teamCode = input;
+    
+    if (input.includes('?team=')) {
+      teamCode = input.split('?team=')[1].split('&')[0];
+    }
+    
+    try {
+      const cleanNames = JSON.parse(atob(teamCode));
+      const allPokemonData = window.localDB?.pokemon || window.localDB || {};
+      
+      const importedTeam = cleanNames.map(cleanName => {
+        if (!cleanName) return null;
+        const pokemon = allPokemonData[cleanName];
+        if (!pokemon) return null;
+        
+        return {
+          id: pokemon.id,
+          name: pokemon.name,
+          cleanName: pokemon.cleanName,
+          types: pokemon.types,
+          sprite: pokemon.sprite,
+          abilities: pokemon.abilities || []
+        };
+      });
+      
+      if (importedTeam.filter(p => p).length > 0) {
+        currentTeam = importedTeam;
+        saveTeam();
+        if(window.closeModal) window.closeModal();
+        renderTeamBuilder();
+        alert('✅ Team imported successfully!');
+      } else {
+        alert('❌ No valid Pokémon found in import code.');
+      }
+    } catch (e) {
+      alert('❌ Invalid team code. Please check and try again.');
+    }
+  };
+
+  // ========================================
+  // TEAM MANAGEMENT
+  // ========================================
+  
+  window.switchTeam = function(teamName) {
+    currentTeamName = teamName;
+    currentTeam = savedTeams[teamName] || [];
+    renderTeamBuilder();
+  };
+  
+  window.showNewTeamModal = function() {
+    const name = prompt('Enter new team name:');
+    if (name && name.trim()) {
+      const teamName = name.trim();
+      if (savedTeams[teamName]) {
+        alert('Team name already exists!');
+        return;
+      }
+      savedTeams[teamName] = [];
+      currentTeamName = teamName;
+      currentTeam = [];
+      saveTeam();
+      renderTeamBuilder();
+    }
+  };
+  
+  window.renameCurrentTeam = function() {
+    const newName = prompt('Rename team:', currentTeamName);
+    if (newName && newName.trim() && newName !== currentTeamName) {
+      const teamName = newName.trim();
+      if (savedTeams[teamName]) {
+        alert('Team name already exists!');
+        return;
+      }
+      savedTeams[teamName] = currentTeam;
+      delete savedTeams[currentTeamName];
+      currentTeamName = teamName;
+      saveTeam();
+      renderTeamBuilder();
+    }
+  };
+  
+  window.deleteCurrentTeam = function() {
+    if (Object.keys(savedTeams).length === 1) {
+      alert('Cannot delete your only team!');
+      return;
+    }
+    if (confirm(`Delete team "${currentTeamName}"? This cannot be undone.`)) {
+      delete savedTeams[currentTeamName];
+      currentTeamName = Object.keys(savedTeams)[0];
+      currentTeam = savedTeams[currentTeamName];
+      saveTeam();
+      renderTeamBuilder();
+    }
+  };
+
+  // ========================================
+  // ANALYSIS HELPERS
+  // ========================================
+  
+  function renderDefensiveWeaknesses() {
+    const weaknesses = {}, resistances = {}, immunities = {};
+    const TYPE_CHART = window.TYPE_CHART_DATA;
+    
+    if (!TYPE_CHART) return '<p>Type chart not loaded</p>';
+    
+    currentTeam.forEach(pokemon => {
+      if (!pokemon) return;
+      Object.keys(TYPE_CHART).forEach(attackType => {
+        let effectiveness = 1;
+        pokemon.types.forEach(defenseType => {
+          const data = TYPE_CHART[defenseType];
+          if (data.immunities.includes(attackType)) effectiveness *= 0;
+          else if (data.weaknesses.includes(attackType)) effectiveness *= 2;
+          else if (data.resistances.includes(attackType)) effectiveness *= 0.5;
+        });
+        
+        if (effectiveness >= 2) {
+          if (!weaknesses[attackType]) weaknesses[attackType] = [];
+          weaknesses[attackType].push(pokemon.name);
+        } else if (effectiveness === 0) {
+          if (!immunities[attackType]) immunities[attackType] = [];
+          immunities[attackType].push(pokemon.name);
+        } else if (effectiveness <= 0.5) {
+          if (!resistances[attackType]) resistances[attackType] = [];
+          resistances[attackType].push(pokemon.name);
+        }
+      });
+    });
+
+    const criticalWeaknesses = Object.entries(weaknesses)
+      .filter(([type, pokemons]) => pokemons.length >= 2)
+      .sort((a, b) => b[1].length - a[1].length);
+
+    return `
+      ${criticalWeaknesses.length > 0 ? `
+        <div class="critical-weaknesses" style="margin-bottom:15px;">
+          <h4 style="color:#ef4444;margin-bottom:8px;">🚨 Critical Weaknesses</h4>
+          <div class="weakness-list">
+            ${criticalWeaknesses.map(([type, pokemons]) => `
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+                <span class="type-badge type-${type}">${type}</span>
+                <span style="color:#ef4444;font-weight:bold;">${pokemons.length}×</span>
+                <span style="font-size:0.85rem;color:var(--text-muted);">${pokemons.join(', ')}</span>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      ` : ''}
+      
+      <div class="weakness-summary" style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;text-align:center;">
+        <div>
+          <div style="font-size:1.8rem;font-weight:bold;color:#ef4444;">${Object.keys(weaknesses).length}</div>
+          <div style="font-size:0.8rem;color:var(--text-muted);">Weak To</div>
+        </div>
+        <div>
+          <div style="font-size:1.8rem;font-weight:bold;color:#4ade80;">${Object.keys(resistances).length}</div>
+          <div style="font-size:0.8rem;color:var(--text-muted);">Resists</div>
+        </div>
+        <div>
+          <div style="font-size:1.8rem;font-weight:bold;color:#60a5fa;">${Object.keys(immunities).length}</div>
+          <div style="font-size:0.8rem;color:var(--text-muted);">Immune To</div>
+        </div>
+      </div>
+    `;
   }
   
   function renderTeamStats() { 
@@ -507,15 +1065,33 @@
     });
 
     return `
-      <div class="team-stats-grid">
-        <div class="stat-item"><span class="stat-name">HP</span><span class="stat-value">${avgStats.hp}</span></div>
-        <div class="stat-item"><span class="stat-name">Attack</span><span class="stat-value">${avgStats.attack}</span></div>
-        <div class="stat-item"><span class="stat-name">Defense</span><span class="stat-value">${avgStats.defense}</span></div>
-        <div class="stat-item"><span class="stat-name">Sp. Atk</span><span class="stat-value">${avgStats['special-attack']}</span></div>
-        <div class="stat-item"><span class="stat-name">Sp. Def</span><span class="stat-value">${avgStats['special-defense']}</span></div>
-        <div class="stat-item"><span class="stat-name">Speed</span><span class="stat-value">${avgStats.speed}</span></div>
+      <div class="team-stats-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;">
+        <div style="background:var(--bg-secondary);padding:10px;border-radius:8px;text-align:center;">
+          <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:4px;">HP</div>
+          <div style="font-size:1.3rem;font-weight:bold;">${avgStats.hp}</div>
+        </div>
+        <div style="background:var(--bg-secondary);padding:10px;border-radius:8px;text-align:center;">
+          <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:4px;">Attack</div>
+          <div style="font-size:1.3rem;font-weight:bold;">${avgStats.attack}</div>
+        </div>
+        <div style="background:var(--bg-secondary);padding:10px;border-radius:8px;text-align:center;">
+          <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:4px;">Defense</div>
+          <div style="font-size:1.3rem;font-weight:bold;">${avgStats.defense}</div>
+        </div>
+        <div style="background:var(--bg-secondary);padding:10px;border-radius:8px;text-align:center;">
+          <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:4px;">Sp. Atk</div>
+          <div style="font-size:1.3rem;font-weight:bold;">${avgStats['special-attack']}</div>
+        </div>
+        <div style="background:var(--bg-secondary);padding:10px;border-radius:8px;text-align:center;">
+          <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:4px;">Sp. Def</div>
+          <div style="font-size:1.3rem;font-weight:bold;">${avgStats['special-defense']}</div>
+        </div>
+        <div style="background:var(--bg-secondary);padding:10px;border-radius:8px;text-align:center;">
+          <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:4px;">Speed</div>
+          <div style="font-size:1.3rem;font-weight:bold;">${avgStats.speed}</div>
+        </div>
       </div>
-      <p class="stats-note">Average base stats across your team</p>
+      <p style="text-align:center;margin-top:10px;font-size:0.85rem;color:var(--text-muted);">Average base stats across your team</p>
     `;
   }
   
