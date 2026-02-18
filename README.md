@@ -1,85 +1,133 @@
-# 🌌 CobblePulse
+# CobblePulse 🎮
 
-### *The Ultimate Competitive & Exploration Intelligence Bridge for Cobblemon*
+Your complete guide to **Cobblemon** — a Minecraft mod bringing Pokémon into your world. Find spawn locations, competitive tier rankings, and battle strategies for every Pokémon.
 
-**CobblePulse** is a high-performance, single-page web application designed for the modern Cobblemon trainer. It bridges the gap between high-level competitive strategy and immersive world exploration by fusing **Smogon’s** monthly meta-analysis with **Cobbleverse** spawn data.
+## Features
 
----
+✨ **Complete Pokédex** - All Cobblemon Pokémon with detailed information  
+🗺️ **Spawn Locations** - Server-specific spawn data from Cobbleverse  
+🏆 **Competitive Tiers** - Rankings from Smogon University (Ubers, OU, UU, RU, NU, PU, LC)  
+⚔️ **Battle Strategies** - Movesets, EVs, natures, and abilities for competitive play  
+🔍 **Smart Search** - Fuzzy search with typo tolerance, filter by type, ability, move, stats  
+⭐ **Favorites System** - Save your favorite Pokémon for quick access  
+📱 **Mobile Responsive** - Optimized for all devices  
 
-## 🚀 The Vision
+## Tech Stack
 
-CobblePulse is built on a "Hybrid Intelligence" architecture. It doesn't just list Pokémon; it provides a living synchronization of the meta:
+- **Frontend**: Vanilla JavaScript, CSS3 with glassmorphism design
+- **Data Sources**: [Cobbleverse](https://www.lumyverse.com/cobbleverse/), [Smogon](https://www.smogon.com/), [PokéAPI](https://pokeapi.co/)
+- **Build System**: Node.js compiler with intelligent strategy deduplication
+- **CI/CD**: GitHub Actions for automated database compilation
 
-* **The Strategic Pulse:** Monthly-synced Smogon rankings, usage stats, and "Best-in-Slot" competitive sets (Moves, Abilities, Natures, EVs).
-* **The Exploration Pulse:** Human-readable spawn instructions including biomes, rarity, and specific environmental conditions.
-* **The Ancestral Pulse:** Intelligent evolution-chain tracing that highlights the easiest path to a target by displaying base-form spawn data.
+## Development
 
----
+### Project Structure
 
-## ✨ Key Features
+```
+CobblePulse/
+├── data/                  # Source JSON data files
+│   ├── cobbleverse/       # Spawn location data
+│   └── smogon/           # Competitive strategy data
+├── scripts/              # Frontend JavaScript
+│   ├── main.js           # App initialization & state
+│   ├── modal.js          # Pokémon detail modals
+│   ├── filters.js        # Search & filtering logic
+│   ├── typeChart.js      # Type effectiveness data
+│   └── tooltip.js        # Interactive tooltips
+├── styles/
+│   └── main.css          # Complete styling (25KB)
+├── .github/workflows/
+│   └── build.yml         # Auto-compile on data changes
+├── compiler.js           # Compiles JSON → localDB.js
+├── localDB.js            # Generated database (git-ignored)
+└── index.html            # Single-page application
+```
 
-* 💎 **Glassmorphism UI:** A sleek, dark-mode interface with frosted glass aesthetics and responsive design.
-* 📊 **Live Competitive Tabs:** One-click filtering for **Ubers, OU, UU, and RU**, strictly capped at the Top 30 most-used Pokémon.
-* 🔍 **Smart Search:** Debounced global search across 1,025+ species with type-specific filtering.
-* 📍 **Deep Spawn Data:** Integrated location tracking that shows Biomes, Time, Rarity, and specific spawning conditions.
-* 🔗 **Direct Research:** Deep links to **PokémonDB** for every species to view breeding groups and full movepools.
-* 🤖 **Automated Sync:** Powered by GitHub Actions to update Smogon rankings and sets on the 1st of every month automatically.
+### Build Process
 
----
+The `compiler.js` script:
+1. Reads all JSON files from `data/`
+2. Deduplicates strategies across tiers (single source of truth)
+3. Calculates tier rankings based on usage stats
+4. Adds build timestamp metadata
+5. Outputs `localDB.js` in optimized format
 
-## 🛠️ Technical Stack
+The build runs automatically via GitHub Actions whenever:
+- Files in `data/**` are modified
+- `compiler.js` is updated
+- Manually triggered via Actions tab
 
-* **Frontend:** HTML5, CSS3 (Custom Properties & Grid), Vanilla JavaScript (ES6+).
-* **Data Sources:** [PokeAPI](https://pokeapi.co/), [Smogon Statistics](https://www.google.com/search?q=https://pkmn.github.io/smogon/), and Custom Server Spreadsheets.
-* **Automation:** Node.js (Compiler script) & GitHub Actions (Monthly Cron).
-
----
-
-## 📂 Installation & Setup
-
-### 1. Clone the Repository
+### Local Development
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/CobblePulse.git
+# Clone the repository
+git clone https://github.com/KlayaR/CobblePulse.git
 cd CobblePulse
 
-```
-
-### 2. Update Spawns
-
-Edit `spawns.csv` with your server-specific biome and rarity data.
-
-### 3. Run the Compiler
-
-Ensure you have [Node.js](https://nodejs.org/) installed, then run the compiler to merge your spreadsheet with the latest Smogon data:
-
-```bash
+# Run the compiler to generate localDB.js
 node compiler.js
 
+# Serve locally (any HTTP server works)
+python -m http.server 8000
+# or
+npx serve
 ```
 
-### 4. Deploy
+Then open `http://localhost:8000` in your browser.
 
-Simply push your changes to GitHub and enable **GitHub Pages** in the repository settings to go live!
+### Adding New Data
+
+1. Add JSON files to `data/cobbleverse/` or `data/smogon/`
+2. Commit and push to main branch
+3. GitHub Actions automatically compiles and commits `localDB.js`
+
+## Search Syntax
+
+CobblePulse supports advanced search queries:
+
+- **By name**: `pikachu` or `#25` (dex number)
+- **By type**: `type:fire` or `type:water`
+- **By ability**: `ability:levitate`
+- **By move**: `move:earthquake`
+- **By tier**: `tier:ou`
+- **By stat**: `speed>100`, `atk>=120`, `hp<80`
+- **Fuzzy matching**: Typos within 2 characters still work (e.g., `pikachoo` finds Pikachu)
+
+## Architecture Highlights
+
+### Performance Optimizations
+- **PokeAPI caching**: Each Pokémon's data fetched once per session
+- **Stale request guard**: Prevents race conditions when rapidly clicking Pokémon
+- **Parallel API calls**: Species + evolution data fetched simultaneously
+- **Lazy loading**: Images loaded on-demand
+- **Loading skeleton**: Smooth UX while data loads
+
+### Code Quality
+- **Zero inline styles**: All styling extracted to CSS classes
+- **Mobile-first responsive**: Breakpoints at 768px and 480px
+- **Glassmorphism design**: Modern frosted-glass aesthetic
+- **Accessibility**: Semantic HTML, keyboard navigation support
+
+## Data Attribution
+
+- **Spawn Data**: [Cobbleverse](https://www.lumyverse.com/cobbleverse/)
+- **Competitive Data**: [Smogon University](https://www.smogon.com/)
+- **Pokémon Info**: [PokéAPI](https://pokeapi.co/)
+- **Cobblemon Mod**: [Cobblemon Official](https://cobblemon.com/)
+
+## Contributing
+
+Contributions welcome! Areas for improvement:
+- Adding more server spawn data
+- Updating Smogon strategies for new metas
+- UI/UX enhancements
+- Mobile optimization
+- Additional search filters
+
+## License
+
+This project is for educational and community use. All Pokémon-related content is property of Nintendo/Game Freak/Creatures Inc.
 
 ---
 
-## 🤖 Automation Logic
-
-CobblePulse stays ahead of the meta without manual intervention. The included GitHub Action handles the heavy lifting:
-
-1. **Trigger:** Midnight on the 1st of every month.
-2. **Process:** Runs `compiler.js` on an Ubuntu runner.
-3. **Result:** Fetches fresh usage %, sorts by rank, and updates `cobbleverse_data.json`.
-
----
-
-## 📜 Credits
-
-* **Core Mod:** [Cobblemon](https://cobblemon.com/)
-* **Base Data:** [PokeAPI](https://pokeapi.co/)
-* **Competitive Sets:** [Smogon](https://www.smogon.com/) / [Showdown](https://pokemonshowdown.com/)
-* **Icons & Sprites:** [GitHub/PokeAPI Sprites](https://github.com/PokeAPI/sprites)
-* **Spawn Data:** [Cobbleverse](https://www.lumyverse.com/cobbleverse/all-pokemon-in-cobbleverse/)
-
----
+**Last Build**: Auto-updated on every data change via GitHub Actions
