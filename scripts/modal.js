@@ -21,6 +21,34 @@ async function getPokemonDetails(id) {
   return result;
 }
 
+// --- HELPER: Abbreviate tier name for badges ---
+function abbreviateTier(tierName) {
+  const abbrevs = {
+    "National Dex": "NDex",
+    "National Dex Ubers": "NDex Ubers",
+    "National Dex UU": "NDex UU",
+    "National Dex RU": "NDex RU",
+    "National Dex Monotype": "NDex Mono",
+    "Doubles OU": "DOU",
+    "VGC 2024 Reg F": "VGC24F",
+    "VGC 2025 Reg G": "VGC25G",
+    "VGC 2025 Reg H": "VGC25H",
+    "Almost Any Ability": "AAA",
+    "Balanced Hackmons": "BH",
+    "Mix and Mega": "MnM",
+    "Mixed": "Mixed",
+  };
+
+  if (abbrevs[tierName]) return abbrevs[tierName];
+
+  // Generic abbreviation: "Some Long Tier" → "SLT"
+  return tierName
+    .split(/\s+/)
+    .map((w) => w[0]?.toUpperCase())
+    .join("")
+    .slice(0, 8);
+}
+
 // --- LOCATION CARDS BUILDER ---
 function buildLocationCards(locations, title) {
   const cards = locations.map((loc) => {
@@ -145,13 +173,18 @@ async function openModal(id, cleanName) {
       ? `<div style="margin-bottom:15px;display:flex;align-items:center;justify-content:space-between;">
            <span style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;font-weight:bold;">Select Strategy:</span>
            <select onchange="renderStrategyView(this.value)" style="background:rgba(0,0,0,0.4);border:1px solid var(--accent-primary);color:#fff;padding:6px 12px;border-radius:6px;font-weight:bold;cursor:pointer;max-width:60%;outline:none;">
-             ${stats.strategies.map((s, i) => `<option value="${i}">${s.name}</option>`).join("")}
+             ${stats.strategies.map((s, i) => {
+               const tierBadge = s.tier ? `<span class="tier-badge" style="font-size:0.65rem;margin-right:4px;">${abbreviateTier(s.tier)}</span>` : "";
+               return `<option value="${i}">${tierBadge}${s.name}</option>`;
+             }).join("")}
            </select>
          </div>`
       : hasStrategies
         ? `<div style="margin-bottom:15px;display:flex;align-items:center;justify-content:space-between;">
              <span style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;font-weight:bold;">Strategy:</span>
-             <span style="color:var(--accent-primary);font-weight:bold;background:rgba(233,69,96,0.1);padding:4px 10px;border-radius:6px;">${stats.strategies[0].name}</span>
+             <span style="color:var(--accent-primary);font-weight:bold;background:rgba(233,69,96,0.1);padding:4px 10px;border-radius:6px;">
+               ${stats.strategies[0].tier ? `<span class="tier-badge" style="font-size:0.65rem;margin-right:4px;">${abbreviateTier(stats.strategies[0].tier)}</span>` : ""}${stats.strategies[0].name}
+             </span>
            </div>`
         : "";
 

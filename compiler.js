@@ -4,7 +4,7 @@ const axios = require("axios");
 // --- CONFIGURATION ---
 const SPREADSHEET_CSV_URL = "https://raw.githubusercontent.com/KlayaR/CobblePulse/main/spawns.csv";
 
-// How many PokéAPI requests to fire simultaneously.
+// How many Pokéapi requests to fire simultaneously.
 const POKEAPI_BATCH_SIZE = 20;
 
 // ms to wait between batches
@@ -257,6 +257,33 @@ function nameToPokeAPI(name) {
   return specialCases[apiName] || apiName;
 }
 
+// --- HELPER: Abbreviate tier name for badges ---
+function abbreviateTier(tierName) {
+  const abbrevs = {
+    "National Dex": "NDex",
+    "National Dex Ubers": "NDex Ubers",
+    "National Dex UU": "NDex UU",
+    "National Dex RU": "NDex RU",
+    "National Dex Monotype": "NDex Mono",
+    "Doubles OU": "DOU",
+    "VGC 2024 Reg F": "VGC24F",
+    "VGC 2025 Reg G": "VGC25G",
+    "VGC 2025 Reg H": "VGC25H",
+    "Almost Any Ability": "AAA",
+    "Balanced Hackmons": "BH",
+    "Mix and Mega": "MnM",
+  };
+
+  if (abbrevs[tierName]) return abbrevs[tierName];
+
+  // Generic abbreviation: "Some Long Tier" → "SLT"
+  return tierName
+    .split(/\s+/)
+    .map((w) => w[0]?.toUpperCase())
+    .join("")
+    .slice(0, 8);
+}
+
 // --- HELPER: Fix UTF-8 mojibake ---
 function cleanText(text) {
   if (!text) return text;
@@ -311,13 +338,14 @@ function parseCSV(text) {
 }
 
 // --- HELPER: Map one set's details to a strategy object ---
-function mapSetDetails(setName, details, stats) {
+function mapSetDetails(setName, details, stats, tierName) {
   let rawAbility = details.abilities || details.ability || details.Abilities || details.Ability;
   if (!rawAbility || rawAbility === "Any") {
     rawAbility = Object.keys(stats.abilities || {}).sort((a, b) => stats.abilities[b] - stats.abilities[a])[0] || "Any";
   }
   return {
     name:     setName,
+    tier:     tierName,  // NEW: track which tier this set came from
     ability:  Array.isArray(rawAbility)  ? rawAbility.join(" / ") :
               typeof rawAbility === "object" ? Object.values(rawAbility).join(" / ") : rawAbility,
     item:     (Array.isArray(details.item) ? details.item.join(" / ") : String(details.item || "None")).split(",").join(" / "),
@@ -334,8 +362,7 @@ function mapSetDetails(setName, details, stats) {
 
 // --- HELPER: Extract ALL strategies from gen9.json for a given Pokémon name ---
 // Returns a flat array of all sets across ALL tiers found in the JSON.
-// The old approach tried to match tier keys exactly ("vgc2025" vs "VGC 2025 Reg H"),
-// which silently dropped sets. Now we collect every set from every tier block.
+// Each strategy now includes its tier name.
 function getAllStrategies(smogonName, stats, gen9AllSets) {
   const lowerIndex = {};
   for (const key of Object.keys(gen9AllSets)) {
@@ -367,21 +394,21 @@ function getAllStrategies(smogonName, stats, gen9AllSets) {
     ("moves" in firstValue || "item" in firstValue || "ability" in firstValue || "abilities" in firstValue);
 
   if (isFlat) {
-    // Flat: all entries are sets directly
-    return Object.entries(pokemonEntry).map(([setName, details]) => mapSetDetails(setName, details, stats));
+    // Flat: all entries are sets directly (tier name unknown, default to "Mixed")
+    return Object.entries(pokemonEntry).map(([setName, details]) => mapSetDetails(setName, details, stats, "Mixed"));
   }
 
   // Nested: each key is a tier block containing sets
   // Collect ALL sets from ALL tier blocks, deduplicating by set name
   const seen = new Set();
   const allSets = [];
-  for (const tierBlock of Object.values(pokemonEntry)) {
+  for (const [tierName, tierBlock] of Object.entries(pokemonEntry)) {
     if (tierBlock && typeof tierBlock === "object" && !Array.isArray(tierBlock)) {
       for (const [setName, details] of Object.entries(tierBlock)) {
         if (!seen.has(setName) && details && typeof details === "object" &&
             ("moves" in details || "item" in details || "ability" in details || "abilities" in details)) {
           seen.add(setName);
-          allSets.push(mapSetDetails(setName, details, stats));
+          allSets.push(mapSetDetails(setName, details, stats, tierName));
         }
       }
     }
@@ -494,7 +521,7 @@ async function buildDatabase() {
             ? typeof stats.usage === "number" ? stats.usage : (stats.usage.weighted || 0)
             : 0;
 
-          // Use getAllStrategies — collects ALL sets from ALL tier blocks, no key-matching failures
+          // Use getAllStrategies — collects ALL sets from ALL tier blocks, now with tier names
           const strategies = getAllStrategies(smogonName, stats, gen9AllSets);
 
           pokemonDB[cleanName].allRanks.push({
