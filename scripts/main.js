@@ -34,7 +34,7 @@ const DOM = {
 
 const POKEMON_TYPES = ["normal","fire","water","grass","electric","ice","fighting","poison","ground","flying","psychic","bug","rock","ghost","dragon","dark","steel","fairy"];
 
-// --- RENDER TABLE WITH LAZY LOADING ---
+// --- RENDER TABLE ---
 function renderTable(pokemonArray) {
   DOM.list.innerHTML = `<tr><td colspan="4" class="loading">Loading...</td></tr>`;
   let html = "";
@@ -57,35 +57,17 @@ function renderTable(pokemonArray) {
     const rankColor = isCompetitiveTab ? "var(--accent-primary)" : "var(--text-muted)";
     const isFavRow  = favorites.includes(p.cleanName) ? "⭐ " : "";
 
-    // USE LAZY LOADING: data-src instead of src
-    const optimizedUrl = window.imageLoader ? window.imageLoader.getOptimizedSpriteUrl(p.id) : p.sprite;
-    const fallbackUrl = p.sprite;
-    
+    // Prefetch evo chain on hover for instant modal open
     html += `
       <tr onclick="openModal(${p.id}, '${p.cleanName}')" onmouseenter="prefetchPokemonDetails(${p.id})">
         <td><strong style="color:${rankColor};">${rankText}</strong></td>
-        <td class="sprite-cell">
-          <img 
-            data-src="${optimizedUrl}" 
-            data-fallback="${fallbackUrl}"
-            alt="${p.name}" 
-            class="lazy-image">
-        </td>
+        <td class="sprite-cell"><img src="${p.sprite}" alt="${p.name}" loading="lazy"></td>
         <td style="text-transform:capitalize;font-weight:bold;">${isFavRow}${p.name.replace("-", " ")}</td>
         <td>${typeHtml}</td>
       </tr>`;
   }
-  
-  if (pokemonArray.length === 0) {
-    html = `<tr><td colspan="4" class="loading">No Pokémon found.</td></tr>`;
-  }
-  
+  if (pokemonArray.length === 0) html = `<tr><td colspan="4" class="loading">No Pokémon found.</td></tr>`;
   DOM.list.innerHTML = html;
-  
-  // Initialize lazy loading for all images
-  if (window.imageLoader) {
-    window.imageLoader.observeAll();
-  }
 }
 
 // --- UPDATE TYPE COUNT BADGE ---
