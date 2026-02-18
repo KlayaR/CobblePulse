@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap" rel="preload" as="style" />
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap" rel="stylesheet" />
     <title>CobblePulse</title>
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
     <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/lazy-loading.css" />
   </head>
   <body>
     <div id="tooltip"><div id="tt-content"></div></div>
@@ -132,6 +134,7 @@
     </footer>
 
     <!-- Scripts loaded in dependency order -->
+    <script src="./scripts/imageLoader.js"></script>
     <script src="./scripts/typeChart.js"></script>
     <script src="./scripts/tooltip.js"></script>
     <script src="./scripts/filters.js"></script>
