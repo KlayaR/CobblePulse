@@ -1,20 +1,12 @@
 // --- POKEAPI CACHE ---
-// Keyed by pokemon ID. Stores { details, speciesData, evoData } so every
-// piece of data fetched for a Pokémon is only ever requested once per session.
 const pokeApiCache = new Map();
 
 async function getPokemonDetails(id) {
   if (pokeApiCache.has(id)) return pokeApiCache.get(id);
 
-  // FIX 1: Parallelize pokemon + species fetches with Promise.all
-  // Previously: fetch pokemon → await → fetch species → await (sequential, ~2× slower)
-  // Now:        fetch pokemon + fetch species simultaneously, await both together
   const details     = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).then((r) => r.json());
   const speciesData = await fetch(details.species.url).then((r) => r.json());
-
-  // FIX 2: Also fetch the evo chain here once and cache it alongside the rest.
-  // Previously it was fetched twice inside openModal (once for locations, once for evo chain).
-  const evoData = await fetch(speciesData.evolution_chain.url).then((r) => r.json());
+  const evoData     = await fetch(speciesData.evolution_chain.url).then((r) => r.json());
 
   const result = { details, speciesData, evoData };
   pokeApiCache.set(id, result);
@@ -24,49 +16,29 @@ async function getPokemonDetails(id) {
 // --- HELPER: Abbreviate tier name for badges ---
 function abbreviateTier(tierName) {
   const abbrevs = {
-    "National Dex": "NDex",
-    "National Dex Ubers": "NDex Ubers",
-    "National Dex UU": "NDex UU",
-    "National Dex RU": "NDex RU",
-    "National Dex Monotype": "NDex Mono",
-    "Doubles OU": "DOU",
-    "VGC 2024 Reg F": "VGC24F",
-    "VGC 2025 Reg G": "VGC25G",
-    "VGC 2025 Reg H": "VGC25H",
-    "Almost Any Ability": "AAA",
-    "Balanced Hackmons": "BH",
-    "Mix and Mega": "MnM",
-    "Mixed": "Mixed",
+    "National Dex": "NDex", "National Dex Ubers": "NDex Ubers",
+    "National Dex UU": "NDex UU", "National Dex RU": "NDex RU",
+    "National Dex Monotype": "NDex Mono", "Doubles OU": "DOU",
+    "VGC 2024 Reg F": "VGC24F", "VGC 2025 Reg G": "VGC25G",
+    "VGC 2025 Reg H": "VGC25H", "Almost Any Ability": "AAA",
+    "Balanced Hackmons": "BH", "Mix and Mega": "MnM", "Mixed": "Mixed",
   };
-
   if (abbrevs[tierName]) return abbrevs[tierName];
-
-  // Generic abbreviation: "Some Long Tier" → "SLT"
-  return tierName
-    .split(/\s+/)
-    .map((w) => w[0]?.toUpperCase())
-    .join("")
-    .slice(0, 8);
+  return tierName.split(/\s+/).map((w) => w[0]?.toUpperCase()).join("").slice(0, 8);
 }
 
 // --- LOCATION CARDS BUILDER ---
 function buildLocationCards(locations, title) {
   const cards = locations.map((loc) => {
-    const conditionHtml = loc.condition ? `<div style="margin-top:6px;color:var(--accent-primary);">⚠️ Condition: ${loc.condition}</div>` : "";
-    const formsHtml     = loc.forms     ? `<div style="margin-top:4px;color:#a8a878;">✨ Form Info: ${loc.forms}</div>` : "";
-    return `
-      <div style="background:rgba(0,0,0,0.2);border:1px solid var(--glass-border);border-left:3px solid var(--accent-primary);padding:12px;border-radius:6px;font-size:0.9rem;margin-bottom:8px;">
-        <div style="font-weight:bold;color:var(--text-main);margin-bottom:6px;font-size:1rem;">🌍 ${loc.spawn}</div>
-        <div style="display:flex;flex-wrap:wrap;gap:12px;color:var(--text-muted);">
-          <span style="background:rgba(255,255,255,0.05);padding:2px 8px;border-radius:4px;">🎯 Rarity: <strong>${loc.rarity}</strong></span>
-        </div>
-        ${conditionHtml}${formsHtml}
-      </div>`;
+    const conditionHtml = loc.condition ? `<div class="location-condition">⚠️ Condition: ${loc.condition}</div>` : "";
+    const formsHtml     = loc.forms     ? `<div class="location-forms">✨ Form Info: ${loc.forms}</div>` : "";
+    return `<div class="location-card">
+      <div class="location-spawn">🌍 ${loc.spawn}</div>
+      <div class="location-rarity">🎯 Rarity: <strong>${loc.rarity}</strong></div>
+      ${conditionHtml}${formsHtml}
+    </div>`;
   }).join("");
-
-  return `
-    <h4 style="color:var(--accent-primary);margin-bottom:12px;margin-top:15px;">${title}</h4>
-    <div style="max-height:250px;overflow-y:auto;padding-right:5px;display:flex;flex-direction:column;">${cards}</div>`;
+  return `<h4 class="section-title">${title}</h4><div class="location-cards">${cards}</div>`;
 }
 
 // --- RENDER STRATEGY VIEW ---
@@ -77,59 +49,36 @@ function renderStrategyView(index) {
     return value.split(" / ").map((v) => {
       const slug = v.trim();
       return `<span class="has-tooltip" onmouseenter="handleTooltipHover(event,'${type}','${slug}')" onmouseleave="hideTooltip()">${slug}</span>`;
-    }).join('<span style="color:var(--text-muted);margin:0 4px;">/</span>');
+    }).join('<span class="strat-divider">/</span>');
   }
 
   const movesList = strat.moves.map((m) => {
     const parts = m.split(" / ").map((part) => {
       const slug = part.trim();
       return `<span class="has-tooltip" onmouseenter="handleTooltipHover(event,'move','${slug}')" onmouseleave="hideTooltip()">${slug}</span>`;
-    }).join('<span style="color:var(--text-muted);font-weight:normal;margin:0 4px;">/</span>');
-    return `<li style="margin-bottom:8px;line-height:1.4;font-weight:bold;text-transform:capitalize;"><span style="color:var(--accent-primary);margin-right:8px;">></span>${parts}</li>`;
+    }).join('<span class="move-divider">/</span>');
+    return `<li class="move-item"><span class="move-arrow">></span>${parts}</li>`;
   }).join("");
 
   const teraHtml = strat.teraType.split(" / ").map((t) =>
-    `<span class="type-badge type-${t.toLowerCase()}" style="margin:0 2px;">${t}</span>`
+    `<span class="type-badge type-${t.toLowerCase()}">${t}</span>`
   ).join("");
 
   document.getElementById("dynamic-strategy-content").innerHTML = `
-    <div>
-      <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:15px;margin-bottom:20px;">
-        <div class="info-card" style="grid-column:span 2;margin:0;background:rgba(0,0,0,0.3);text-align:center;">
-          <h4 style="font-size:0.75rem;">🎭 Nature</h4>
-          <p style="font-weight:500;text-transform:capitalize;">${hoverSpan("nature", strat.nature)}</p>
-        </div>
-        <div class="info-card" style="grid-column:span 2;margin:0;background:rgba(0,0,0,0.3);text-align:center;">
-          <h4 style="font-size:0.75rem;">🧬 Ability</h4>
-          <p style="text-transform:capitalize;font-weight:500;">${hoverSpan("ability", strat.ability)}</p>
-        </div>
-        <div class="info-card" style="grid-column:span 2;margin:0;background:rgba(0,0,0,0.3);text-align:center;">
-          <h4 style="font-size:0.75rem;">🎒 Held Item</h4>
-          <p style="font-weight:500;text-transform:capitalize;">${hoverSpan("item", strat.item)}</p>
-        </div>
-        <div class="info-card" style="grid-column:span 3;margin:0;background:rgba(0,0,0,0.3);text-align:center;">
-          <h4 style="font-size:0.75rem;">🔮 Tera Type</h4>
-          <div style="margin-top:4px;display:flex;justify-content:center;flex-wrap:wrap;">${teraHtml}</div>
-        </div>
-        <div class="info-card" style="grid-column:span 3;margin:0;background:rgba(0,0,0,0.3);text-align:center;">
-          <h4 style="font-size:0.75rem;">📊 Target EVs</h4>
-          <p style="font-weight:500;font-size:0.9rem;">${strat.evs}</p>
-        </div>
-      </div>
-      <div style="margin-bottom:5px;">
-        <h4 style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:1px;">⚔️ Required Moves</h4>
-        <ul style="list-style-type:none;padding-left:5px;display:grid;grid-template-columns:1fr;gap:6px;margin-top:10px;">${movesList}</ul>
-        <div style="text-align:right;margin-top:15px;">
-          <a href="${window.smogonUrl}" target="_blank" style="font-size:0.65rem;color:var(--accent-primary);font-weight:bold;letter-spacing:0.5px;text-decoration:none;">VIEW FULL SMOGON STRATEGY ↗</a>
-        </div>
-      </div>
+    <div class="strategy-grid">
+      <div class="strategy-card"><h4>🎭 Nature</h4><p>${hoverSpan("nature", strat.nature)}</p></div>
+      <div class="strategy-card"><h4>🧬 Ability</h4><p>${hoverSpan("ability", strat.ability)}</p></div>
+      <div class="strategy-card"><h4>🎒 Held Item</h4><p>${hoverSpan("item", strat.item)}</p></div>
+      <div class="strategy-card strategy-card-wide"><h4>🔮 Tera Type</h4><div class="tera-types">${teraHtml}</div></div>
+      <div class="strategy-card strategy-card-wide"><h4>📊 Target EVs</h4><p>${strat.evs}</p></div>
+    </div>
+    <div class="moves-section">
+      <h4 class="section-title-sm">⚔️ Required Moves</h4>
+      <ul class="moves-list">${movesList}</ul>
+      <div class="smogon-link"><a href="${window.smogonUrl}" target="_blank">VIEW FULL SMOGON STRATEGY ↗</a></div>
     </div>`;
 }
 
-// FIX 3: Stale-request guard.
-// Tracks the ID of the most recently requested modal open. If the user
-// clicks a different Pokémon while the first is still loading, the first
-// request's render is silently discarded when it eventually resolves.
 let _latestModalRequestId = null;
 
 // --- OPEN MODAL ---
@@ -145,17 +94,16 @@ async function openModal(id, cleanName) {
   history.pushState({ tab: currentTab, modal: cleanName }, "", `?${params.toString()}`);
 
   try {
-    // FIX 1+2: Single call — fetches pokemon + species in parallel, caches everything,
-    // returns immediately on subsequent opens of the same Pokémon.
     const { details, speciesData, evoData } = await getPokemonDetails(id);
-
-    // Stale-request guard: discard render if user already opened a different modal
     if (_latestModalRequestId !== id) return;
 
-    const dbEntry  = localDB[cleanName] || localDB[details.name] || { tier: "Untiered", locations: [] };
-    const typeHtml = details.types.map((t) => `<span class="type-badge type-${t.type.name}">${t.type.name}</span>`).join("");
+    // NEW: Read from window.localDB.pokemon instead of window.localDB directly
+    const allPokemon = window.localDB?.pokemon || window.localDB || {};
+    const dbEntry    = allPokemon[cleanName] || allPokemon[details.name] || { tier: "Untiered", locations: [] };
+    const typeHtml   = details.types.map((t) => `<span class="type-badge type-${t.type.name}">${t.type.name}</span>`).join("");
 
     // --- COMPETITIVE STRATEGIES ---
+    // NEW: Strategies are now at dbEntry.strategies (top-level), not per-tier
     let stats = null;
     if (dbEntry.allRanks && dbEntry.allRanks.length > 0) {
       stats = currentTab === "all"
@@ -163,72 +111,70 @@ async function openModal(id, cleanName) {
         : (dbEntry.allRanks.find((r) => r.tier.toLowerCase().includes(currentTab.replace("s", ""))) || dbEntry.allRanks[0]);
     }
 
-    const hasStrategies = stats && stats.strategies && stats.strategies.length > 0;
+    const hasStrategies = dbEntry.strategies && dbEntry.strategies.length > 0;
     if (hasStrategies) {
       window.smogonUrl         = `https://www.smogon.com/dex/sv/pokemon/${details.name.replace("-", "_")}/`;
-      window.currentStrategies = stats.strategies;
+      window.currentStrategies = dbEntry.strategies;
     }
 
-    const dropdownHtml = hasStrategies && stats.strategies.length > 1
-      ? `<div style="margin-bottom:15px;display:flex;align-items:center;justify-content:space-between;">
-           <span style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;font-weight:bold;">Select Strategy:</span>
-           <select onchange="renderStrategyView(this.value)" style="background:rgba(0,0,0,0.4);border:1px solid var(--accent-primary);color:#fff;padding:6px 12px;border-radius:6px;font-weight:bold;cursor:pointer;max-width:60%;outline:none;">
-             ${stats.strategies.map((s, i) => {
-               const tierBadge = s.tier ? `<span class="tier-badge" style="font-size:0.65rem;margin-right:4px;">${abbreviateTier(s.tier)}</span>` : "";
+    const dropdownHtml = hasStrategies && dbEntry.strategies.length > 1
+      ? `<div class="strategy-dropdown-container">
+           <span class="strategy-label">Select Strategy:</span>
+           <select onchange="renderStrategyView(this.value)" class="strategy-select">
+             ${dbEntry.strategies.map((s, i) => {
+               const tierBadge = s.tier ? `<span class="tier-badge">[${abbreviateTier(s.tier)}]</span> ` : "";
                return `<option value="${i}">${tierBadge}${s.name}</option>`;
              }).join("")}
            </select>
          </div>`
       : hasStrategies
-        ? `<div style="margin-bottom:15px;display:flex;align-items:center;justify-content:space-between;">
-             <span style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;font-weight:bold;">Strategy:</span>
-             <span style="color:var(--accent-primary);font-weight:bold;background:rgba(233,69,96,0.1);padding:4px 10px;border-radius:6px;">
-               ${stats.strategies[0].tier ? `<span class="tier-badge" style="font-size:0.65rem;margin-right:4px;">${abbreviateTier(stats.strategies[0].tier)}</span>` : ""}${stats.strategies[0].name}
+        ? `<div class="strategy-single-container">
+             <span class="strategy-label">Strategy:</span>
+             <span class="strategy-single-name">
+               ${dbEntry.strategies[0].tier ? `<span class="tier-badge">[${abbreviateTier(dbEntry.strategies[0].tier)}]</span> ` : ""}${dbEntry.strategies[0].name}
              </span>
            </div>`
         : "";
 
     const compHtml = hasStrategies
-      ? `<div class="info-card full-width" style="margin-bottom:20px;border-color:var(--accent-primary);">${dropdownHtml}<div id="dynamic-strategy-content"></div></div>`
-      : `<div class="info-card full-width" style="margin-bottom:20px;text-align:center;padding:20px;"><p style="color:var(--text-muted);">No competitive Smogon data available for this Pokémon.</p></div>`;
+      ? `<div class="info-card full-width strategy-info-card">${dropdownHtml}<div id="dynamic-strategy-content"></div></div>`
+      : `<div class="info-card full-width no-strategies"><p>No competitive Smogon data available for this Pokémon.</p></div>`;
 
     // --- LOCATIONS ---
-    // FIX 2: speciesData already fetched above — no second fetch needed here
     let locationsHtml = "";
     const hasOwnSpawns = dbEntry.locations && dbEntry.locations.length > 0;
     if (hasOwnSpawns) locationsHtml += buildLocationCards(dbEntry.locations, "📍 Server Spawn Locations");
 
     if (!hasOwnSpawns && (speciesData.is_legendary || speciesData.is_mythical)) {
-      locationsHtml += `<div style="background:rgba(233,69,96,0.1);border:1px solid var(--accent-primary);padding:15px;border-radius:8px;margin-top:10px;">
-        <h4 style="color:var(--accent-primary);margin-bottom:8px;">✨ Legendary Summoning</h4>
-        <p style="color:var(--text-main);font-size:0.95rem;line-height:1.4;">This Pokémon does not spawn naturally. Use a summoning item at an altar or participate in a server event.</p>
+      locationsHtml += `<div class="legendary-notice">
+        <h4>✨ Legendary Summoning</h4>
+        <p>This Pokémon does not spawn naturally. Use a summoning item at an altar or participate in a server event.</p>
       </div>`;
     } else if (speciesData.evolves_from_species) {
-      // FIX 2: evoData already fetched and cached — no re-fetch here
       const baseEvoName = evoData.chain.species.name;
-      const baseEvoDb   = localDB[baseEvoName.replace("-", "")] || localDB[baseEvoName];
+      const baseEvoDb   = allPokemon[baseEvoName.replace("-", "")] || allPokemon[baseEvoName];
       if (baseEvoDb && baseEvoDb.locations && baseEvoDb.locations.length > 0) {
         const title = hasOwnSpawns
           ? `💡 Easier to catch base form: ${baseEvoName.toUpperCase()}`
           : `🧬 Evolves from ${baseEvoName.toUpperCase()} (Spawns Below)`;
         locationsHtml += buildLocationCards(baseEvoDb.locations, title);
       } else if (!hasOwnSpawns) {
-        locationsHtml += `<p style="color:var(--text-muted);margin-top:10px;">Must be evolved from <strong>${baseEvoName.toUpperCase()}</strong>. No wild spawns found.</p>`;
+        locationsHtml += `<p class="no-spawns">Must be evolved from <strong>${baseEvoName.toUpperCase()}</strong>. No wild spawns found.</p>`;
       }
     } else if (!hasOwnSpawns) {
-      locationsHtml += '<p style="color:var(--text-muted);margin-top:10px;">No wild spawns found on this server.</p>';
+      locationsHtml += '<p class="no-spawns">No wild spawns found on this server.</p>';
     }
 
     // --- WEAKNESSES ---
     const weaknesses   = getWeaknesses(details.types.map((t) => t.type.name));
     const weaknessHtml = Object.keys(weaknesses).length > 0 ? `
-      <div class="info-card full-width" style="margin-bottom:20px;">
-        <h4 style="color:#ff6b6b;margin-bottom:10px;font-size:0.85rem;text-transform:uppercase;letter-spacing:1px;">⚠️ Weaknesses</h4>
-        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+      <div class="info-card full-width weaknesses-card">
+        <h4 class="section-title-danger">⚠️ Weaknesses</h4>
+        <div class="weaknesses-grid">
           ${Object.entries(weaknesses).map(([type, mult]) => `
-            <div style="display:flex;align-items:center;gap:4px;background:rgba(0,0,0,0.3);border:1px solid var(--glass-border);border-radius:8px;padding:4px 8px;">
-              <span class="type-badge type-${type}" style="margin:0;font-size:0.7rem;">${type}</span>
-              <span style="color:${mult === 4 ? "#ff4d4d" : "#ffaa44"};font-weight:bold;font-size:0.75rem;">×${mult}</span>
+            <div class="weakness-item">
+              <span class="type-badge type-${type}">${type}</span>
+              <span class="weakness-mult weakness-mult-${mult === 4 ? 'quad' : 'double'}">×${mult}</span>
             </div>`).join("")}
         </div>
       </div>` : "";
@@ -244,8 +190,8 @@ async function openModal(id, cleanName) {
     ];
     const pokemonStats = dbEntry.stats || {};
     const statsHtml    = Object.keys(pokemonStats).length > 0 ? `
-      <div class="info-card full-width" style="margin-bottom:20px;">
-        <h4 style="color:var(--accent-primary);margin-bottom:12px;font-size:0.85rem;text-transform:uppercase;letter-spacing:1px;">📊 Base Stats</h4>
+      <div class="info-card full-width stats-card">
+        <h4 class="section-title">📊 Base Stats</h4>
         ${statConfig.map((s) => {
           const val = pokemonStats[s.key] || 0;
           const pct = Math.min(Math.round((val / 255) * 100), 100);
@@ -258,7 +204,6 @@ async function openModal(id, cleanName) {
       </div>` : "";
 
     // --- EVOLUTION CHAIN ---
-    // FIX 2: evoData already available from getPokemonDetails — no fetch at all here
     let evoHtml = "";
     try {
       const evoList = [];
@@ -266,11 +211,11 @@ async function openModal(id, cleanName) {
       while (node) { evoList.push(node.species.name); node = node.evolves_to[0] || null; }
       if (evoList.length > 1) {
         evoHtml = `
-          <div class="info-card full-width" style="margin-bottom:20px;">
-            <h4 style="color:var(--accent-primary);margin-bottom:10px;font-size:0.85rem;text-transform:uppercase;letter-spacing:1px;">🔄 Evolution Chain</h4>
+          <div class="info-card full-width evo-card">
+            <h4 class="section-title">🔄 Evolution Chain</h4>
             <div class="evo-chain">
               ${evoList.map((name, i) => {
-                const evoEntry  = localDB[name] || localDB[name.replace("-", "")];
+                const evoEntry  = allPokemon[name] || allPokemon[name.replace("-", "")];
                 const evoId     = evoEntry?.id || "";
                 const evoSprite = evoId ? `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${evoId}.png` : "";
                 const isCurrent = name === details.name;
@@ -290,36 +235,36 @@ async function openModal(id, cleanName) {
 
     // --- BADGES & BUTTONS ---
     const currentBadge = stats ? stats.tier.toUpperCase() : "UNTIERED";
-    const usageBadge   = stats && parseFloat(stats.usage) > 0 ? `<span style="font-size:0.7rem;color:var(--text-muted);margin-left:6px;">${stats.usage}% usage</span>` : "";
-    const sourceTag    = dbEntry.source ? `<span style="font-size:0.7rem;color:var(--text-muted);opacity:0.6;margin-left:8px;text-transform:uppercase;letter-spacing:1px;">[Source: ${dbEntry.source}]</span>` : "";
+    const usageBadge   = stats && parseFloat(stats.usage) > 0 ? `<span class="usage-badge">${stats.usage}% usage</span>` : "";
+    const sourceTag    = dbEntry.source ? `<span class="source-tag">[Source: ${dbEntry.source}]</span>` : "";
     const isFav        = favorites.includes(cleanName);
     const favBtnHtml   = `<button class="fav-btn" id="favBtn" title="${isFav ? "Remove from favorites" : "Add to favorites"}">${isFav ? "⭐" : "🤍"}</button>`;
     const pokemonDbUrl = `https://pokemondb.net/pokedex/${details.name}`;
     const shareParams  = new URLSearchParams({ tab: currentTab, pokemon: cleanName });
     const shareUrl     = `${window.location.origin}${window.location.pathname}?${shareParams.toString()}`;
-    const shareBtnHtml = `<button id="shareBtn" title="Copy share link" style="background:none;border:1px solid var(--glass-border);color:var(--text-muted);border-radius:6px;padding:3px 8px;font-size:0.7rem;cursor:pointer;transition:all 0.2s;margin-left:4px;">🔗 Share</button>`;
+    const shareBtnHtml = `<button id="shareBtn" title="Copy share link" class="share-btn">🔗 Share</button>`;
 
     DOM.modalBody.innerHTML = `
       <div class="modal-header">
-        <div style="position:relative;display:inline-block;">
+        <div class="sprite-container">
           <img src="${details.sprites.front_default}" alt="${details.name}" class="modal-sprite" id="modalSprite">
-          <button class="shiny-btn" id="shinyBtn" title="Shiny Toggle" style="position:absolute;top:-6px;right:-6px;background:rgba(0,0,0,0.5);backdrop-filter:blur(4px);margin:0;padding:4px;font-size:0.65rem;border-radius:4px;width:24px;height:24px;display:flex;align-items:center;justify-content:center;">✨</button>
+          <button class="shiny-btn" id="shinyBtn" title="Shiny Toggle">✨</button>
         </div>
         <div class="modal-title">
-          <div style="display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin-bottom:6px;">
-            <a href="${pokemonDbUrl}" target="_blank" title="View on PokemonDB" style="color:var(--text-main);text-decoration:none;font-size:1.6rem;font-weight:bold;text-transform:capitalize;">${details.name.replace("-", " ")}</a>
+          <div class="title-row">
+            <a href="${pokemonDbUrl}" target="_blank" title="View on PokemonDB" class="pokemon-name-link">${details.name.replace("-", " ")}</a>
             ${favBtnHtml}${shareBtnHtml}
             <span class="tier-badge">${currentBadge}</span>${usageBadge}${sourceTag}
           </div>
-          <div style="display:flex;align-items:center;flex-wrap:wrap;gap:10px;">
-            <div>${typeHtml}</div>
+          <div class="types-immunities-row">
+            <div class="types-container">${typeHtml}</div>
             ${immunities.length > 0 ? `
-              <div style="display:flex;align-items:center;gap:6px;border-left:1px solid var(--glass-border);padding-left:10px;">
-                <span style="color:var(--text-muted);font-size:0.7rem;">🛡️</span>
+              <div class="immunities-container">
+                <span class="immunity-icon">🛡️</span>
                 ${immunities.map((imm) => `
-                  <div style="display:flex;align-items:center;gap:3px;">
-                    <span class="type-badge type-${imm.type}" style="margin:0;font-size:0.7rem;">${imm.type}</span>
-                    <span style="color:var(--text-muted);font-size:0.65rem;">${imm.source === "ability" ? imm.label.split("(")[1]?.replace(")", "") : "Typing"}</span>
+                  <div class="immunity-item">
+                    <span class="type-badge type-${imm.type}">${imm.type}</span>
+                    <span class="immunity-source">${imm.source === "ability" ? imm.label.split("(")[1]?.replace(")", "") : "Typing"}</span>
                   </div>`).join("")}
               </div>` : ""}
           </div>
@@ -327,7 +272,7 @@ async function openModal(id, cleanName) {
       </div>
       <div>
         ${weaknessHtml}${statsHtml}${evoHtml}${compHtml}
-        <div class="info-card full-width" style="border-color:var(--accent-primary);">${locationsHtml}</div>
+        <div class="info-card full-width locations-card">${locationsHtml}</div>
       </div>`;
 
     // Wire up shiny toggle
@@ -345,9 +290,8 @@ async function openModal(id, cleanName) {
       navigator.clipboard.writeText(shareUrl).then(() => {
         const btn = document.getElementById("shareBtn");
         btn.textContent = "✅ Copied!";
-        btn.style.borderColor = "#44ff44";
-        btn.style.color = "#44ff44";
-        setTimeout(() => { btn.textContent = "🔗 Share"; btn.style.borderColor = ""; btn.style.color = ""; }, 2000);
+        btn.classList.add("copied");
+        setTimeout(() => { btn.textContent = "🔗 Share"; btn.classList.remove("copied"); }, 2000);
       });
     });
 
@@ -369,10 +313,9 @@ async function openModal(id, cleanName) {
     if (hasStrategies) renderStrategyView(0);
 
   } catch (e) {
-    // Only show error if this is still the active request
     if (_latestModalRequestId === id) {
       console.error(e);
-      DOM.modalBody.innerHTML = `<div class="loading" style="color:var(--accent-primary);">Failed to load details.<br><span style="font-size:0.8rem;color:var(--text-muted);">${e.message}</span></div>`;
+      DOM.modalBody.innerHTML = `<div class="loading error-loading">Failed to load details.<br><span class="error-message">${e.message}</span></div>`;
     }
   }
 }

@@ -1,3 +1,22 @@
+// --- FUZZY SEARCH: Levenshtein distance ---
+function levenshtein(a, b) {
+  const matrix = Array.from({ length: a.length + 1 }, (_, i) => [i]);
+  for (let j = 1; j <= b.length; j++) matrix[0][j] = j;
+  for (let i = 1; i <= a.length; i++) {
+    for (let j = 1; j <= b.length; j++) {
+      matrix[i][j] = a[i - 1] === b[j - 1]
+        ? matrix[i - 1][j - 1]
+        : Math.min(matrix[i - 1][j], matrix[i][j - 1], matrix[i - 1][j - 1]) + 1;
+    }
+  }
+  return matrix[a.length][b.length];
+}
+
+function fuzzyMatch(query, target) {
+  const distance = levenshtein(query.toLowerCase(), target.toLowerCase());
+  return distance <= 2; // Allow 2 character mistakes
+}
+
 // --- SMART SEARCH PARSER ---
 function parseSmartSearch(query) {
   const filters = { text: "", type: null, ability: null, move: null, tier: null, statFilters: {} };
@@ -21,7 +40,8 @@ function parseSmartSearch(query) {
 
 // Helper: get a Pokémon's rank in the current tier
 function getTierRank(p) {
-  const dbEntry = localDB[p.cleanName] || localDB[p.name] || {};
+  const allPokemon = window.localDB?.pokemon || window.localDB || {};
+  const dbEntry = allPokemon[p.cleanName] || allPokemon[p.name] || {};
   if (!dbEntry.allRanks) return 999;
   const tierKey = currentTab === "ubers" ? "uber" : currentTab;
   const r = dbEntry.allRanks.find((r) => r.tier.toLowerCase().includes(tierKey));
@@ -90,6 +110,7 @@ function applyFilters() {
     return;
   }
 
+  const allPokemonData = window.localDB?.pokemon || window.localDB || {};
   let filtered = [];
 
   // --- FAVORITES TAB ---
@@ -104,7 +125,7 @@ function applyFilters() {
   } else {
     // --- TIER TABS: filter to only Pokémon in this tier ---
     filtered = allPokemon.filter((p) => {
-      const dbEntry = localDB[p.cleanName] || localDB[p.name];
+      const dbEntry = allPokemonData[p.cleanName] || allPokemonData[p.name];
       if (!dbEntry || !dbEntry.allRanks) return false;
       return dbEntry.allRanks.some((r) =>
         r.tier.toLowerCase() === currentTab ||
@@ -116,25 +137,26 @@ function applyFilters() {
     filtered = filtered.slice(0, 50);
   }
 
-  // --- SMART SEARCH ---
+  // --- SMART SEARCH WITH FUZZY MATCHING ---
   if (query) {
     const searchFilters = parseSmartSearch(query);
     filtered = filtered.filter((p) => {
-      const dbEntry = localDB[p.cleanName] || localDB[p.name] || {};
+      const dbEntry = allPokemonData[p.cleanName] || allPokemonData[p.name] || {};
 
       if (searchFilters.text) {
-        const textMatch = p.name.toLowerCase().includes(searchFilters.text) || p.cleanName.includes(searchFilters.text) || p.id.toString() === searchFilters.text;
-        if (!textMatch) return false;
+        const exactMatch = p.name.toLowerCase().includes(searchFilters.text) || 
+                          p.cleanName.includes(searchFilters.text) || 
+                          p.id.toString() === searchFilters.text;
+        const fuzzy = fuzzyMatch(searchFilters.text, p.name) || fuzzyMatch(searchFilters.text, p.cleanName);
+        if (!exactMatch && !fuzzy) return false;
       }
       if (searchFilters.type   && !p.types.includes(searchFilters.type)) return false;
       if (searchFilters.ability && dbEntry.abilities) {
         if (!dbEntry.abilities.some((a) => a.name.replace(/-/g, "").includes(searchFilters.ability))) return false;
       }
-      if (searchFilters.move && dbEntry.allRanks) {
-        const hasMove = dbEntry.allRanks.some((rank) =>
-          rank.strategies && rank.strategies.some((strat) =>
-            strat.moves && strat.moves.some((m) => m.toLowerCase().replace(/-/g, "").replace(/\s/g, "").includes(searchFilters.move))
-          )
+      if (searchFilters.move && dbEntry.strategies) {
+        const hasMove = dbEntry.strategies.some((strat) =>
+          strat.moves && strat.moves.some((m) => m.toLowerCase().replace(/-/g, "").replace(/\s/g, "").includes(searchFilters.move))
         );
         if (!hasMove) return false;
       }
@@ -164,7 +186,7 @@ function applyFilters() {
   // --- HAS SPAWNS FILTER ---
   if (filterState.hasSpawns) {
     filtered = filtered.filter((p) => {
-      const dbEntry = localDB[p.cleanName] || localDB[p.name] || {};
+      const dbEntry = allPokemonData[p.cleanName] || allPokemonData[p.name] || {};
       return dbEntry.locations && dbEntry.locations.length > 0;
     });
   }
@@ -172,19 +194,17 @@ function applyFilters() {
   // --- RARITY FILTER ---
   if (filterState.rarity === "legendary") {
     filtered = filtered.filter((p) => {
-      const dbEntry = localDB[p.cleanName] || localDB[p.name] || {};
+      const dbEntry = allPokemonData[p.cleanName] || allPokemonData[p.name] || {};
       return dbEntry.isLegendary || dbEntry.isMythical;
     });
   } else if (filterState.rarity === "non-legendary") {
     filtered = filtered.filter((p) => {
-      const dbEntry = localDB[p.cleanName] || localDB[p.name] || {};
+      const dbEntry = allPokemonData[p.cleanName] || allPokemonData[p.name] || {};
       return !dbEntry.isLegendary && !dbEntry.isMythical;
     });
   }
 
   // --- SORT ---
-  // "rank" on a tier tab = already sorted above, nothing to do
-  // "rank" on all/favorites = fall back to dex order (rank has no meaning there)
   if (sortBy === "name") {
     filtered.sort((a, b) => a.name.localeCompare(b.name));
   } else if (sortBy === "type") {
