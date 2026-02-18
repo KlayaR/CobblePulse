@@ -1,10 +1,21 @@
 /* === IMAGE LAZY LOADING & OPTIMIZATION === */
 
-/* Lazy-loaded images - transparent placeholder, no background */
+/* Lazy-loaded images - no placeholder, no background */
 img[data-src] {
   background: transparent;
-  min-height: 50px;
-  min-width: 50px;
+}
+
+/* Sprite cell images - exact dimensions to prevent layout shift */
+.sprite-cell img[data-src] {
+  width: 50px;
+  height: 50px;
+}
+
+/* Modal sprite - exact dimensions */
+.modal-sprite[data-src] {
+  width: 110px;
+  height: 110px;
+  background: transparent;
 }
 
 /* Loading transition - simple opacity fade, no blur */
@@ -35,11 +46,4 @@ img {
 .sprite-cell img {
   will-change: transform;
   transform: translateZ(0);
-}
-
-/* Modal sprite with lazy loading - no background */
-.modal-sprite[data-src] {
-  min-height: 110px;
-  min-width: 110px;
-  background: transparent;
 }
