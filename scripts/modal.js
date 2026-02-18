@@ -15,16 +15,50 @@ async function getPokemonDetails(id) {
 
 // --- HELPER: Abbreviate tier name for badges ---
 function abbreviateTier(tierName) {
+  // Map tier names to clear, unambiguous abbreviations
   const abbrevs = {
-    "National Dex": "NDex", "National Dex Ubers": "NDex Ubers",
-    "National Dex UU": "NDex UU", "National Dex RU": "NDex RU",
-    "National Dex Monotype": "NDex Mono", "Doubles OU": "DOU",
-    "VGC 2024 Reg F": "VGC24F", "VGC 2025 Reg G": "VGC25G",
-    "VGC 2025 Reg H": "VGC25H", "Almost Any Ability": "AAA",
-    "Balanced Hackmons": "BH", "Mix and Mega": "MnM", "Mixed": "Mixed",
+    // Standard Smogon Singles Tiers
+    "ubers":     "Ubers",
+    "ou":        "OU",
+    "uu":        "UU",
+    "ru":        "RU",
+    "nu":        "NU",
+    "pu":        "PU",
+    "zu":        "ZU",
+    "lc":        "LC",
+    
+    // National Dex Tiers
+    "nationaldex":           "NDex",
+    "National Dex":          "NDex",
+    "National Dex Ubers":    "NDex Ubers",
+    "National Dex UU":       "NDex UU",
+    "National Dex RU":       "NDex RU",
+    "National Dex Monotype": "NDex Mono",
+    
+    // Doubles & VGC
+    "doublesou":     "Doubles OU",
+    "Doubles OU":    "Doubles OU",
+    "vgc2025":       "VGC 2025",
+    "VGC 2024 Reg F": "VGC 24F",
+    "VGC 2025 Reg G": "VGC 25G",
+    "VGC 2025 Reg H": "VGC 25H",
+    
+    // Other Metagames
+    "monotype":           "Monotype",
+    "Almost Any Ability": "AAA",
+    "Balanced Hackmons":  "BH",
+    "Mix and Mega":       "MnM",
+    "Mixed":              "Mixed",
+    "Untiered":           "Untiered",
   };
+  
+  // Check direct matches first (case-insensitive)
+  const lowerTier = tierName.toLowerCase();
+  if (abbrevs[lowerTier]) return abbrevs[lowerTier];
   if (abbrevs[tierName]) return abbrevs[tierName];
-  return tierName.split(/\s+/).map((w) => w[0]?.toUpperCase()).join("").slice(0, 8);
+  
+  // If no match found, return the original tier name (up to 15 chars)
+  return tierName.length > 15 ? tierName.slice(0, 12) + "..." : tierName;
 }
 
 // --- LOCATION CARDS BUILDER ---
@@ -122,7 +156,7 @@ async function openModal(id, cleanName) {
            <span class="strategy-label">Select Strategy:</span>
            <select onchange="renderStrategyView(this.value)" class="strategy-select">
              ${dbEntry.strategies.map((s, i) => {
-               const tierBadge = s.tier ? `<span class="tier-badge">[${abbreviateTier(s.tier)}]</span> ` : "";
+               const tierBadge = s.tier ? `[${abbreviateTier(s.tier)}] ` : "";
                return `<option value="${i}">${tierBadge}${s.name}</option>`;
              }).join("")}
            </select>
@@ -131,7 +165,7 @@ async function openModal(id, cleanName) {
         ? `<div class="strategy-single-container">
              <span class="strategy-label">Strategy:</span>
              <span class="strategy-single-name">
-               ${dbEntry.strategies[0].tier ? `<span class="tier-badge">[${abbreviateTier(dbEntry.strategies[0].tier)}]</span> ` : ""}${dbEntry.strategies[0].name}
+               ${dbEntry.strategies[0].tier ? `[${abbreviateTier(dbEntry.strategies[0].tier)}] ` : ""}${dbEntry.strategies[0].name}
              </span>
            </div>`
         : "";
