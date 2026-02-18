@@ -214,12 +214,12 @@
   transform: scale(1.05);
 }
 
-/* Per-Slot Suggestion Buttons */
+/* Per-Slot Suggestion Buttons - REDUCED SIZE */
 .slot-suggestion-btns {
   display: flex;
-  gap: 6px;
+  gap: 4px;
   width: 100%;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .suggest-btn, .random-btn {
@@ -227,16 +227,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
-  padding: 8px 10px;
-  border-radius: 8px;
-  border: 2px solid var(--glass-border);
+  gap: 4px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  border: 1.5px solid var(--glass-border);
   background: rgba(0,0,0,0.4);
   color: var(--text-main);
   cursor: pointer;
   transition: all 0.3s;
   font-weight: 600;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
 .suggest-btn {
@@ -246,8 +246,8 @@
 .suggest-btn:hover {
   border-color: #3b82f6;
   background: rgba(59,130,246,0.15);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(59,130,246,0.3);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(59,130,246,0.3);
 }
 
 .random-btn {
@@ -257,18 +257,18 @@
 .random-btn:hover {
   border-color: #8b5cf6;
   background: rgba(139,92,246,0.15);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(139,92,246,0.3);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(139,92,246,0.3);
 }
 
 .btn-icon {
-  font-size: 1rem;
+  font-size: 0.85rem;
   display: flex;
   align-items: center;
 }
 
 .btn-text {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   letter-spacing: 0.3px;
 }
 
@@ -1053,7 +1053,7 @@
   }
   
   .btn-icon {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 
