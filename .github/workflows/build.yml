@@ -1,0 +1,45 @@
+name: Build Database
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'data/**'
+      - 'compiler.js'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Run compiler
+        run: node compiler.js
+      
+      - name: Check for changes
+        id: git-check
+        run: |
+          git diff --exit-code localDB.js || echo "changed=true" >> $GITHUB_OUTPUT
+      
+      - name: Commit and push if changed
+        if: steps.git-check.outputs.changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add localDB.js
+          git commit -m "build: auto-generated localDB.js [skip ci]"
+          git push
