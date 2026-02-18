@@ -39,7 +39,6 @@ function renderTable(pokemonArray) {
   DOM.list.innerHTML = `<tr><td colspan="4" class="loading">Loading...</td></tr>`;
   let html = "";
   
-  // NEW: Access pokemon from window.localDB.pokemon instead of window.localDB directly
   const allPokemonData = window.localDB?.pokemon || window.localDB || {};
   
   for (const p of pokemonArray) {
@@ -58,8 +57,9 @@ function renderTable(pokemonArray) {
     const rankColor = isCompetitiveTab ? "var(--accent-primary)" : "var(--text-muted)";
     const isFavRow  = favorites.includes(p.cleanName) ? "⭐ " : "";
 
+    // Prefetch evo chain on hover for instant modal open
     html += `
-      <tr onclick="openModal(${p.id}, '${p.cleanName}')">
+      <tr onclick="openModal(${p.id}, '${p.cleanName}')" onmouseenter="prefetchPokemonDetails(${p.id})">
         <td><strong style="color:${rankColor};">${rankText}</strong></td>
         <td class="sprite-cell"><img src="${p.sprite}" alt="${p.name}" loading="lazy"></td>
         <td style="text-transform:capitalize;font-weight:bold;">${isFavRow}${p.name.replace("-", " ")}</td>
@@ -98,7 +98,6 @@ function setupEventListeners() {
     applyFilters();
   });
 
-  // --- POPULATE TYPE FILTER BADGES IN DROPDOWN ---
   if (DOM.typesDropdownPanel) {
     POKEMON_TYPES.forEach((type) => {
       const badge = document.createElement("span");
@@ -117,7 +116,6 @@ function setupEventListeners() {
     });
   }
 
-  // --- TYPES DROPDOWN TOGGLE ---
   if (DOM.typesDropdownBtn && DOM.typesDropdownPanel) {
     DOM.typesDropdownBtn.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -127,7 +125,6 @@ function setupEventListeners() {
     });
   }
 
-  // --- RARITY DROPDOWN TOGGLE ---
   if (DOM.rarityDropdownBtn && DOM.rarityDropdownPanel) {
     DOM.rarityDropdownBtn.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -137,33 +134,27 @@ function setupEventListeners() {
     });
   }
 
-  // --- RARITY OPTION SELECTION ---
   document.querySelectorAll(".rarity-option").forEach((opt) => {
     opt.addEventListener("click", (e) => {
       e.stopPropagation();
       const value = opt.dataset.value;
       filterState.rarity = value;
-
       document.querySelectorAll(".rarity-option").forEach((o) => o.classList.remove("active"));
       opt.classList.add("active");
-
       if (DOM.rarityDropdownBtn) {
         const labels = { all: "⭐ Rarity", legendary: "⭐ Legendary/Mythical", "non-legendary": "⭐ Non-Legendary" };
         DOM.rarityDropdownBtn.innerHTML = `${labels[value]} ▾`;
         DOM.rarityDropdownBtn.classList.toggle("active", value !== "all");
       }
-
       if (DOM.rarityDropdownPanel) DOM.rarityDropdownPanel.classList.remove("open");
       applyFilters();
     });
   });
 
-  // --- CLICK OUTSIDE TO CLOSE DROPDOWNS ---
   document.addEventListener("click", () => {
     document.querySelectorAll(".filter-dropdown-panel").forEach((p) => p.classList.remove("open"));
   });
 
-  // --- HAS SPAWNS CHIP ---
   if (DOM.spawnsChip) {
     DOM.spawnsChip.addEventListener("click", () => {
       filterState.hasSpawns = !filterState.hasSpawns;
@@ -172,10 +163,8 @@ function setupEventListeners() {
     });
   }
 
-  // --- SORT SELECT ---
   if (DOM.sortSelect) DOM.sortSelect.addEventListener("change", applyFilters);
 
-  // --- RANDOM BUTTON ---
   if (DOM.randomBtn) {
     DOM.randomBtn.addEventListener("click", () => {
       const allPokemonData = window.localDB?.pokemon || window.localDB || {};
@@ -185,7 +174,6 @@ function setupEventListeners() {
     });
   }
 
-  // --- TABS ---
   DOM.tabs.forEach((tab) => {
     tab.addEventListener("click", (e) => {
       DOM.tabs.forEach((t) => t.classList.remove("active"));
@@ -199,7 +187,6 @@ function setupEventListeners() {
     });
   });
 
-  // --- MODAL CLOSE ---
   DOM.closeBtn.addEventListener("click", closeModal);
   DOM.modalOverlay.addEventListener("click", (e) => { if (e.target === DOM.modalOverlay) closeModal(); });
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
@@ -211,33 +198,30 @@ async function init() {
   applyFilters();
 
   try {
-    // Show loading skeleton
     if (DOM.loadingSkeleton) DOM.loadingSkeleton.style.display = "block";
 
-    // NEW: Fetch localDB.js which now has structure: { _meta: {...}, pokemon: {...} }
     const response = await fetch("./localDB.js?v=" + Date.now());
     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
     
     const scriptText = await response.text();
-    eval(scriptText); // Executes: window.localDB = { _meta, pokemon }
+    eval(scriptText);
 
-    // NEW: Extract pokemon from new structure
-    const dbData = window.localDB || {};
-    const pokemonData = dbData.pokemon || dbData; // Fallback to old structure if no .pokemon key
+    const dbData      = window.localDB || {};
+    const pokemonData = dbData.pokemon || dbData;
     
-    // Update global references
     window.localDB = dbData;
-    allPokemon = Object.values(pokemonData);
+    allPokemon     = Object.values(pokemonData);
+
+    // Build alt-forms index (mega/alola/galar/hisui/paldea etc.) once data is loaded
+    buildAltFormsIndex();
     
-    // Hide loading skeleton
     if (DOM.loadingSkeleton) DOM.loadingSkeleton.style.display = "none";
 
-    // Update footer with build timestamp
     if (dbData._meta && dbData._meta.buildTimestamp) {
       const buildDate = new Date(dbData._meta.buildTimestamp);
-      const dateStr = buildDate.toLocaleDateString("en-US", { 
-        year: "numeric", month: "short", day: "numeric", 
-        hour: "2-digit", minute: "2-digit" 
+      const dateStr   = buildDate.toLocaleDateString("en-US", {
+        year: "numeric", month: "short", day: "numeric",
+        hour: "2-digit", minute: "2-digit",
       });
       const timestampEl = document.getElementById("buildTimestamp");
       if (timestampEl) {
@@ -248,7 +232,6 @@ async function init() {
 
     applyFilters();
 
-    // Restore state from URL params
     const urlParams    = new URLSearchParams(window.location.search);
     const tabParam     = urlParams.get("tab");
     const pokemonParam = urlParams.get("pokemon");
