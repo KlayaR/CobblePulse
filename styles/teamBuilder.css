@@ -417,40 +417,41 @@
   color: var(--text-muted);
 }
 
-/* Team Stats */
+/* Team Stats - Compressed */
 .team-stats-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin-bottom: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 8px;
+  margin-bottom: 8px;
 }
 
 .stat-item {
   background: rgba(0,0,0,0.3);
-  padding: 12px;
-  border-radius: 8px;
+  padding: 8px 10px;
+  border-radius: 6px;
   text-align: center;
   border: 1px solid var(--glass-border);
 }
 
 .stat-item .stat-name {
   display: block;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: var(--text-muted);
-  margin-bottom: 5px;
+  margin-bottom: 3px;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .stat-item .stat-value {
   display: block;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: bold;
   color: var(--accent-primary);
 }
 
 .stats-note {
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: var(--text-muted);
   font-style: italic;
 }
@@ -659,7 +660,7 @@
 
   .weakness-summary,
   .team-stats-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .selector-results {
@@ -675,6 +676,10 @@
 @media (max-width: 480px) {
   .team-slots {
     grid-template-columns: 1fr;
+  }
+
+  .team-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .selector-pokemon img {
