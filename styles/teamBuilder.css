@@ -214,21 +214,22 @@
   transform: scale(1.05);
 }
 
-/* Per-Slot Suggestion Buttons - MUCH SMALLER */
+/* Per-Slot Suggestion Buttons - STACKED VERTICALLY */
 .slot-suggestion-btns {
   display: flex;
+  flex-direction: column;
   gap: 3px;
   width: 100%;
   margin-bottom: 8px;
 }
 
 .suggest-btn, .random-btn {
-  flex: 1;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3px;
-  padding: 3px 6px;
+  gap: 4px;
+  padding: 4px 8px;
   border-radius: 4px;
   border: 1px solid var(--glass-border);
   background: rgba(0,0,0,0.4);
@@ -1070,9 +1071,5 @@
   .team-action-btn {
     font-size: 0.85rem;
     padding: 8px 15px;
-  }
-  
-  .slot-suggestion-btns {
-    flex-direction: column;
   }
 }
