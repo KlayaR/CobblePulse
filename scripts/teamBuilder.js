@@ -1,5 +1,7 @@
 // Team Builder Logic - Enhanced Version
 
+console.log('teamBuilder.js loaded');
+
 let currentTeam = [];
 let savedTeams = {};
 let currentTeamName = 'default';
@@ -46,9 +48,22 @@ function saveTeam() {
 
 // Initialize team builder
 function initTeamBuilder() {
+  console.log('initTeamBuilder called');
+  console.log('localDB:', window.localDB);
+  console.log('TYPE_CHART_DATA:', window.TYPE_CHART_DATA);
+  
   try {
+    const container = document.getElementById('teamBuilderContainer');
+    console.log('teamBuilderContainer found:', !!container);
+    
+    if (!container) {
+      console.error('teamBuilderContainer element not found!');
+      return;
+    }
+    
     loadTeam();
     renderTeamBuilder();
+    console.log('Team builder initialized successfully');
   } catch (error) {
     console.error('Team builder initialization error:', error);
     const container = document.getElementById('teamBuilderContainer');
@@ -74,6 +89,7 @@ if (typeof isMegaForm === 'undefined') {
 
 // Main render function
 function renderTeamBuilder() {
+  console.log('renderTeamBuilder called');
   const container = document.getElementById('teamBuilderContainer');
   if (!container) {
     console.error('Team builder container not found');
@@ -156,6 +172,8 @@ function renderTeamBuilder() {
       </div>
     `}
   `;
+  
+  console.log('Team builder HTML rendered');
 
   // Initialize drag and drop
   initDragAndDrop();
@@ -1211,3 +1229,5 @@ function checkTeamInURL() {
     }
   }
 }
+
+console.log('teamBuilder.js fully loaded');
