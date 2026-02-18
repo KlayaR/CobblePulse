@@ -110,24 +110,6 @@
         ${teamSelector}
       </div>
 
-      <!-- Global Suggestion Filters -->
-      <div class="global-filters" style="background:var(--bg-secondary);padding:15px;border-radius:12px;margin-bottom:20px;">
-        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:15px;">
-          <div style="font-weight:600;color:var(--text-primary);">🎯 Suggestion Settings:</div>
-          <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
-            <label style="display:flex;align-items:center;gap:8px;cursor:pointer;">
-              <input type="checkbox" id="globalAllowLegendaries" ${suggestionFilters.allowLegendaries ? 'checked' : ''} onchange="updateSuggestionFilters()" style="cursor:pointer;">
-              <span style="font-size:0.9rem;">Allow Legendaries</span>
-            </label>
-            <select id="globalDifficulty" onchange="updateSuggestionFilters()" style="padding:6px 12px;border-radius:6px;border:1px solid var(--border-color);background:var(--bg-primary);color:var(--text-primary);cursor:pointer;">
-              <option value="competitive" ${suggestionFilters.difficulty === 'competitive' ? 'selected' : ''}>Competitive (Best)</option>
-              <option value="balanced" ${suggestionFilters.difficulty === 'balanced' ? 'selected' : ''}>Balanced</option>
-              <option value="easy" ${suggestionFilters.difficulty === 'easy' ? 'selected' : ''}>Easy (Common)</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
       <div class="team-actions">
         <button class="team-action-btn export-btn" onclick="exportTeam()" ${currentTeam.filter(p=>p).length === 0 ? 'disabled' : ''}>
           📤 Export Team
@@ -141,6 +123,22 @@
         <button class="team-action-btn clear-btn" onclick="confirmClearTeam()" ${currentTeam.filter(p=>p).length === 0 ? 'disabled' : ''}>
           🗑️ Clear
         </button>
+      </div>
+
+      <!-- Global Suggestion Filters (moved above slots) -->
+      <div class="suggestion-filters-bar">
+        <div class="filters-content">
+          <span class="filters-label">🎯 Suggestion Settings:</span>
+          <label class="filter-checkbox">
+            <input type="checkbox" id="globalAllowLegendaries" ${suggestionFilters.allowLegendaries ? 'checked' : ''} onchange="updateSuggestionFilters()">
+            <span>Allow Legendaries</span>
+          </label>
+          <select id="globalDifficulty" onchange="updateSuggestionFilters()" class="filter-select">
+            <option value="competitive" ${suggestionFilters.difficulty === 'competitive' ? 'selected' : ''}>Competitive</option>
+            <option value="balanced" ${suggestionFilters.difficulty === 'balanced' ? 'selected' : ''}>Balanced</option>
+            <option value="easy" ${suggestionFilters.difficulty === 'easy' ? 'selected' : ''}>Easy (Common)</option>
+          </select>
+        </div>
       </div>
 
       <div class="team-slots" id="teamSlots">
@@ -200,11 +198,22 @@
         const role = determineRole(pokemon);
         const roleIcon = getRoleIcon(role);
         
+        // FIX: Properly format abilities - check all possible cases
         let abilitiesText = 'Unknown';
-        if (pokemon.abilities && Array.isArray(pokemon.abilities) && pokemon.abilities.length > 0) {
-          abilitiesText = pokemon.abilities.slice(0, 2).join(' / ');
-        } else if (pokemon.abilities && typeof pokemon.abilities === 'string') {
-          abilitiesText = pokemon.abilities;
+        if (pokemon.abilities) {
+          if (Array.isArray(pokemon.abilities)) {
+            if (pokemon.abilities.length > 0) {
+              // Filter out any potential object entries and get only strings
+              const abilityNames = pokemon.abilities
+                .filter(a => typeof a === 'string')
+                .slice(0, 2);
+              if (abilityNames.length > 0) {
+                abilitiesText = abilityNames.join(' / ');
+              }
+            }
+          } else if (typeof pokemon.abilities === 'string') {
+            abilitiesText = pokemon.abilities;
+          }
         }
         
         html += `
@@ -225,12 +234,14 @@
       } else {
         html += `
           <div class="team-slot empty" data-slot="${i}">
-            <div class="empty-slot-header" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
-              <button class="slot-action-btn" onclick="showSmartSuggestion(${i})" title="Smart Suggestion" style="flex:1;margin-right:5px;background:#3b82f6;">
-                💡 Suggest
+            <div class="slot-suggestion-btns">
+              <button class="suggest-btn" onclick="showSmartSuggestion(${i})" title="Smart AI Suggestion">
+                <span class="btn-icon">💡</span>
+                <span class="btn-text">Suggest</span>
               </button>
-              <button class="slot-action-btn" onclick="showRandomSuggestion(${i})" title="Random Pick" style="flex:1;margin-left:5px;background:#8b5cf6;">
-                🎲 Random
+              <button class="random-btn" onclick="showRandomSuggestion(${i})" title="Random Pick">
+                <span class="btn-icon">🎲</span>
+                <span class="btn-text">Random</span>
               </button>
             </div>
             <div class="empty-slot-content" onclick="showPokemonSelector(${i})" style="cursor:pointer;">
@@ -532,7 +543,7 @@
     const suggestions = smartSuggest(suggestionFilters.allowLegendaries, suggestionFilters.difficulty);
     
     if (suggestions.length === 0) {
-      alert('No suitable suggestions found. Try adjusting the global filters above.');
+      alert('No suitable suggestions found. Try adjusting the filters above the team slots.');
       return;
     }
     
@@ -591,7 +602,6 @@
   window.showRandomSuggestion = function(slotIndex) {
     const allPokemonData = window.localDB?.pokemon || window.localDB || {};
     
-    // Filter based on global settings
     let candidates = Object.values(allPokemonData).filter(p => {
       if (window.isMegaForm(p.cleanName)) return false;
       if (currentTeam.some(tp => tp && tp.id === p.id)) return false;
@@ -616,11 +626,10 @@
     });
     
     if (candidates.length === 0) {
-      alert('No Pokémon match the current filters. Try adjusting the global settings.');
+      alert('No Pokémon match the current filters. Try adjusting the settings above.');
       return;
     }
     
-    // Pick 12 random
     const randomPicks = [];
     const pickedIndices = new Set();
     while (randomPicks.length < Math.min(12, candidates.length)) {
@@ -635,7 +644,7 @@
       <div class="pokemon-selector-modal">
         <h3>🎲 Random Picks for Slot ${slotIndex + 1}</h3>
         <p style="color:var(--text-muted);margin-bottom:15px;font-size:0.9rem;">
-          Random selection based on your filters (${suggestionFilters.difficulty} difficulty, ${suggestionFilters.allowLegendaries ? 'with' : 'no'} legendaries)
+          Random selection (${suggestionFilters.difficulty} difficulty, ${suggestionFilters.allowLegendaries ? 'with' : 'no'} legendaries)
         </p>
         <div class="selector-results" style="max-height:60vh;overflow-y:auto;">
           ${randomPicks.map(p => {
@@ -920,7 +929,7 @@
     const url = `${window.location.origin}${window.location.pathname}?team=${teamCode}`;
     
     navigator.clipboard.writeText(url).then(() => {
-      alert('✅ Team link copied! Share it with friends.');
+      alert('✅ Team link copied!');
     }).catch(() => {
       prompt('Copy this link:', url);
     });
