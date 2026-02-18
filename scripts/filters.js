@@ -17,6 +17,11 @@ function fuzzyMatch(query, target) {
   return distance <= 2; // Allow 2 character mistakes
 }
 
+// --- HELPER: Check if a Pokémon is a Mega form ---
+function isMegaForm(cleanName) {
+  return cleanName.includes("mega") && !cleanName.includes("meganium");
+}
+
 // --- SMART SEARCH PARSER ---
 function parseSmartSearch(query) {
   const filters = { text: "", type: null, ability: null, move: null, tier: null, statFilters: {} };
@@ -90,6 +95,7 @@ function applyFilters() {
         <li><strong>Favorites:</strong> Click ⭐ in any modal to save to Favorites.</li>
         <li><strong>Search:</strong> Use the search box to find by name, #id, type:fire, ability:levitate, move:earthquake, speed>100.</li>
         <li><strong>Click for Details:</strong> Click any Pokémon for spawn locations, movesets, EVs, and more.</li>
+        <li><strong>Mega Evolutions:</strong> Click base Pokémon (e.g., Charizard) then use the Mega toggle buttons to view Mega forms.</li>
       </ul>
       
       <h2>Data Sources</h2>
@@ -115,16 +121,18 @@ function applyFilters() {
 
   // --- FAVORITES TAB ---
   if (currentTab === "favorites") {
-    filtered = allPokemon.filter((p) => favorites.includes(p.cleanName));
+    filtered = allPokemon.filter((p) => favorites.includes(p.cleanName) && !isMegaForm(p.cleanName));
     if (filtered.length === 0) {
       DOM.list.innerHTML = `<tr><td colspan="4" class="loading">No favorites yet — click ⭐ in any Pokémon modal to add one!</td></tr>`;
       return;
     }
   } else if (currentTab === "all") {
-    filtered = [...allPokemon];
+    // NEW: Filter out Mega forms from main list
+    filtered = allPokemon.filter((p) => !isMegaForm(p.cleanName));
   } else {
-    // --- TIER TABS: filter to only Pokémon in this tier ---
+    // --- TIER TABS: filter to only Pokémon in this tier (and exclude Megas) ---
     filtered = allPokemon.filter((p) => {
+      if (isMegaForm(p.cleanName)) return false; // Hide Megas from tier tabs
       const dbEntry = allPokemonData[p.cleanName] || allPokemonData[p.name];
       if (!dbEntry || !dbEntry.allRanks) return false;
       return dbEntry.allRanks.some((r) =>
