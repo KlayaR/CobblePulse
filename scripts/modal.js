@@ -278,7 +278,7 @@ async function openModal(id, cleanName, altFormCleanName = null) {
         return `<div class="stat-bar-container">
           <span class="stat-label">${s.label}</span>
           <div class="stat-bar-bg"><div class="stat-bar-fill" style="width:${pct}%;background:${s.color};"></div></div>
-          <span class="stat-value" style="color:${s.color};font-size:0.7rem;">${val}</span>
+          <span class="stat-value" style="color:${s.color};font-size:0.8rem;">${val}</span>
         </div>`;
       }).join("")}
       <div class="stat-total">Total BST: <strong>${totalBST}</strong></div>
