@@ -103,8 +103,74 @@
 .export-btn:hover:not(:disabled) { border-color: #4caf50; }
 .import-btn:hover:not(:disabled) { border-color: #2196f3; }
 .template-btn:hover:not(:disabled) { border-color: #ff9800; }
-.suggest-btn:hover:not(:disabled) { border-color: #9c27b0; }
 .clear-btn:hover:not(:disabled) { border-color: #f44336; }
+
+/* Suggestion Filters Bar (Above Slots) */
+.suggestion-filters-bar {
+  background: rgba(0,0,0,0.4);
+  border: 2px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.filters-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.filters-label {
+  font-weight: 600;
+  color: var(--text-main);
+  font-size: 0.9rem;
+}
+
+.filter-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+
+.filter-checkbox:hover {
+  color: var(--text-main);
+}
+
+.filter-checkbox input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: var(--accent-primary);
+}
+
+.filter-select {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 2px solid var(--glass-border);
+  background: rgba(0,0,0,0.3);
+  color: var(--text-main);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.filter-select:hover {
+  border-color: var(--accent-primary);
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 2px rgba(233,69,96,0.2);
+}
 
 /* Team Slots with Drag & Drop */
 .team-slots {
@@ -121,7 +187,7 @@
   padding: 15px;
   transition: all 0.3s;
   position: relative;
-  min-height: 160px;
+  min-height: 180px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -129,14 +195,7 @@
 }
 
 .team-slot.empty {
-  cursor: pointer;
   border-style: dashed;
-}
-
-.team-slot.empty:hover {
-  border-color: var(--accent-primary);
-  background: rgba(233,69,96,0.05);
-  transform: scale(1.02);
 }
 
 .team-slot.filled {
@@ -155,9 +214,71 @@
   transform: scale(1.05);
 }
 
+/* Per-Slot Suggestion Buttons */
+.slot-suggestion-btns {
+  display: flex;
+  gap: 6px;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.suggest-btn, .random-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 2px solid var(--glass-border);
+  background: rgba(0,0,0,0.4);
+  color: var(--text-main);
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.suggest-btn {
+  border-color: rgba(59,130,246,0.4);
+}
+
+.suggest-btn:hover {
+  border-color: #3b82f6;
+  background: rgba(59,130,246,0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59,130,246,0.3);
+}
+
+.random-btn {
+  border-color: rgba(139,92,246,0.4);
+}
+
+.random-btn:hover {
+  border-color: #8b5cf6;
+  background: rgba(139,92,246,0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139,92,246,0.3);
+}
+
+.btn-icon {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.btn-text {
+  font-size: 0.75rem;
+  letter-spacing: 0.3px;
+}
+
 .empty-slot-content {
   text-align: center;
   color: var(--text-muted);
+}
+
+.empty-slot-content:hover {
+  color: var(--accent-primary);
 }
 
 .plus-icon {
@@ -273,6 +394,10 @@
   font-size: 0.7rem;
   color: var(--text-muted);
   margin-top: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
 }
 
 /* Empty Team Message */
@@ -800,6 +925,12 @@
   margin-bottom: 5px;
 }
 
+.template-desc {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 3px;
+}
+
 .template-pokemon {
   font-size: 0.75rem;
   color: var(--text-muted);
@@ -910,6 +1041,20 @@
     flex-direction: column;
     align-items: stretch;
   }
+  
+  .filters-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  
+  .btn-text {
+    display: none;
+  }
+  
+  .btn-icon {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -925,5 +1070,9 @@
   .team-action-btn {
     font-size: 0.85rem;
     padding: 8px 15px;
+  }
+  
+  .slot-suggestion-btns {
+    flex-direction: column;
   }
 }
