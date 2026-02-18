@@ -229,11 +229,11 @@ function nameToPokeAPI(name) {
   let apiName = name
     .toLowerCase()
     .trim()
-    .replace(/['\u2019]/g, "")
+    .replace(/['']/g, "")
     .replace(/[.]/g, "")
     .replace(/\s+/g, "-")
-    .replace(/\u2640/g, "-f")
-    .replace(/\u2642/g, "-m");
+    .replace(/♀/g, "-f")
+    .replace(/♂/g, "-m");
 
   const specialCases = {
     "nidoran-f": "nidoran-f",
@@ -345,7 +345,7 @@ function mapSetDetails(setName, details, stats, tierName) {
   }
   return {
     name:     setName,
-    tier:     tierName,  // NEW: track which tier this set came from
+    tier:     tierName,
     ability:  Array.isArray(rawAbility)  ? rawAbility.join(" / ") :
               typeof rawAbility === "object" ? Object.values(rawAbility).join(" / ") : rawAbility,
     item:     (Array.isArray(details.item) ? details.item.join(" / ") : String(details.item || "None")).split(",").join(" / "),
@@ -361,8 +361,7 @@ function mapSetDetails(setName, details, stats, tierName) {
 }
 
 // --- HELPER: Extract ALL strategies from gen9.json for a given Pokémon name ---
-// Returns a flat array of all sets across ALL tiers found in the JSON.
-// Each strategy now includes its tier name.
+// NEW: Returns deduplicated strategies array instead of repeating per tier
 function getAllStrategies(smogonName, stats, gen9AllSets) {
   const lowerIndex = {};
   for (const key of Object.keys(gen9AllSets)) {
@@ -394,7 +393,6 @@ function getAllStrategies(smogonName, stats, gen9AllSets) {
     ("moves" in firstValue || "item" in firstValue || "ability" in firstValue || "abilities" in firstValue);
 
   if (isFlat) {
-    // Flat: all entries are sets directly (tier name unknown, default to "Mixed")
     return Object.entries(pokemonEntry).map(([setName, details]) => mapSetDetails(setName, details, stats, "Mixed"));
   }
 
@@ -433,11 +431,12 @@ async function batchedAsync(items, batchSize, delayMs, fn) {
 // --- MAIN BUILD ENGINE ---
 async function buildDatabase() {
   console.log("🚀 STARTING BUILD...");
+  const buildTimestamp = new Date().toISOString();
 
   try {
-    // ─────────────────────────────────────────────────────────────
+    // ────────────────────────────────────────────────────────────────────────
     // PHASE 1 — Parse spawns.csv
-    // ─────────────────────────────────────────────────────────────
+    // ────────────────────────────────────────────────────────────────────────
     console.log("\n📋 PHASE 1: Parsing spawns.csv...");
     const spreadsheetRes = await axios.get(SPREADSHEET_CSV_URL, { responseType: "text", responseEncoding: "utf8" });
     const rows = parseCSV(spreadsheetRes.data);
@@ -460,6 +459,7 @@ async function buildDatabase() {
           locations: [],
           allRanks:  [],
           types:     [],
+          strategies: [],  // NEW: top-level deduplicated strategies array
         };
       }
 
@@ -472,9 +472,9 @@ async function buildDatabase() {
     }
     console.log(`✅ Phase 1 done — ${Object.keys(pokemonDB).length} Pokémon from spawns.csv`);
 
-    // ─────────────────────────────────────────────────────────────
+    // ────────────────────────────────────────────────────────────────────────
     // PHASE 2 — Enrich with Smogon competitive data
-    // ─────────────────────────────────────────────────────────────
+    // ────────────────────────────────────────────────────────────────────────
     console.log("\n⚔️  PHASE 2: Fetching Smogon data...");
 
     const tiers = [
@@ -514,6 +514,7 @@ async function buildDatabase() {
               locations: [],
               allRanks:  [],
               types:     [],
+              strategies: [],
             };
           }
 
@@ -521,14 +522,15 @@ async function buildDatabase() {
             ? typeof stats.usage === "number" ? stats.usage : (stats.usage.weighted || 0)
             : 0;
 
-          // Use getAllStrategies — collects ALL sets from ALL tier blocks, now with tier names
-          const strategies = getAllStrategies(smogonName, stats, gen9AllSets);
+          // NEW: Strategies only stored ONCE at top level, not repeated per tier
+          if (pokemonDB[cleanName].strategies.length === 0) {
+            pokemonDB[cleanName].strategies = getAllStrategies(smogonName, stats, gen9AllSets);
+          }
 
           pokemonDB[cleanName].allRanks.push({
-            tier:       tier,
-            rank:       index + 1,
-            usage:      (usage * 100).toFixed(2),
-            strategies: strategies,
+            tier:  tier,
+            rank:  index + 1,
+            usage: (usage * 100).toFixed(2),
           });
         });
         console.log(`  ✅ ${tier.toUpperCase()} done`);
@@ -537,17 +539,20 @@ async function buildDatabase() {
       }
     }));
 
+    // For Pokémon with no tier data, still try to get their strategies
     Object.values(pokemonDB).forEach((p) => {
       if (p.allRanks.length === 0) {
-        const strategies = getAllStrategies(p.name, {}, gen9AllSets);
-        p.allRanks.push({ tier: "Untiered", rank: "N/A", usage: "0.00", strategies });
+        p.allRanks.push({ tier: "Untiered", rank: "N/A", usage: "0.00" });
+      }
+      if (p.strategies.length === 0) {
+        p.strategies = getAllStrategies(p.name, {}, gen9AllSets);
       }
     });
     console.log(`✅ Phase 2 done`);
 
-    // ─────────────────────────────────────────────────────────────
+    // ────────────────────────────────────────────────────────────────────────
     // PHASE 3 — Enrich with PokéAPI data
-    // ─────────────────────────────────────────────────────────────
+    // ────────────────────────────────────────────────────────────────────────
     console.log("\n🌐 PHASE 3: Fetching PokéAPI data in parallel batches...");
     const allEntries = Object.keys(pokemonDB);
     let successCount = 0;
@@ -591,17 +596,26 @@ async function buildDatabase() {
 
     console.log(`✅ Phase 3 done — ${successCount} enriched, ${failCount} skipped`);
 
-    // ─────────────────────────────────────────────────────────────
+    // ────────────────────────────────────────────────────────────────────────
     // PHASE 4 — Write output files
-    // ─────────────────────────────────────────────────────────────
+    // ────────────────────────────────────────────────────────────────────────
     console.log("\n💾 PHASE 4: Writing output files...");
-    fs.writeFileSync("localDB.json", JSON.stringify(pokemonDB, null, 2));
-    console.log("  ✅ localDB.json saved");
+    
+    // Add build timestamp to the DB
+    const finalDB = {
+      _meta: { buildTimestamp },
+      pokemon: pokemonDB,
+    };
 
-    fs.writeFileSync("localDB.js", `window.localDB = ${JSON.stringify(pokemonDB, null, 2)};`);
+    fs.writeFileSync("localDB.json", JSON.stringify(finalDB, null, 2));
+    console.log("  ✅ localDB.json saved (for CI verification only, not used by frontend)");
+
+    fs.writeFileSync("localDB.js", `window.localDB = ${JSON.stringify(finalDB, null, 2)};`);
     console.log("  ✅ localDB.js saved");
 
     console.log("\n🎉 BUILD COMPLETE!");
+    console.log(`📊 Database size: ${(fs.statSync("localDB.js").size / 1024 / 1024).toFixed(2)} MB`);
+    console.log(`⏰ Built at: ${buildTimestamp}`);
 
   } catch (error) {
     console.error("❌ FATAL ERROR:", error.message);
