@@ -158,9 +158,9 @@ const formToDexMap = {
 };
 
 // --- POKEMON THAT NEED A SPECIFIC POKEAPI FORM SLUG ---
-// Megas have their own slug so Phase 3 fetches the Mega sprite + Mega stats
+// Used in Phase 3 to fetch the right data + sprite ID from PokeAPI
 const cleanNameToPokeApiFormSlug = {
-  // Special legendaries
+  // Special legendaries & alternate forms with unique sprites/stats
   ursalunabloodmoon:  "ursaluna-bloodmoon",
   giratinaorigin:     "giratina-origin",
   dialgarorigin:      "dialga-origin",
@@ -175,7 +175,7 @@ const cleanNameToPokeApiFormSlug = {
   zaciancrowned:      "zacian-crowned",
   zamazentacrowned:   "zamazenta-crowned",
 
-  // Mega Forms → PokéAPI slugs (gives Mega sprite + boosted stats)
+  // Mega Forms
   charizardmegax:  "charizard-mega-x",
   charizardmegay:  "charizard-mega-y",
   venusaurmega:    "venusaur-mega",
@@ -224,6 +224,70 @@ const cleanNameToPokeApiFormSlug = {
   sceptilemega:    "sceptile-mega",
   swampertmega:    "swampert-mega",
   abomasnowmega:   "abomasnow-mega",
+
+  // Alolan Forms
+  ninetalesalola:  "ninetales-alola",
+  raichualola:     "raichu-alola",
+  sandslashalola:  "sandslash-alola",
+  sandshrewalola:  "sandshrew-alola",
+  exeggutoralola:  "exeggutor-alola",
+  golemalola:      "golem-alola",
+  dugtrioalola:    "dugtrio-alola",
+  diglettalola:    "diglett-alola",
+  grimeralola:     "grimer-alola",
+  meowthalola:     "meowth-alola",
+  geodudealola:    "geodude-alola",
+  persianalola:    "persian-alola",
+  marowakalola:    "marowak-alola",
+  raticatealola:   "raticate-alola",
+  rattatalola:     "rattata-alola",
+  vulpixalola:     "vulpix-alola",
+  mukalola:        "muk-alola",
+
+  // Galarian Forms
+  weezinggalar:    "weezing-galar",
+  slowkinggalar:   "slowking-galar",
+  slowbrogalar:    "slowbro-galar",
+  slowpokegalar:   "slowpoke-galar",
+  meowthgalar:     "meowth-galar",
+  corsolagalar:    "corsola-galar",
+  moltresgalar:    "moltres-galar",
+  zapdosgalar:     "zapdos-galar",
+  articunogalar:   "articuno-galar",
+  ponytagalar:     "ponyta-galar",
+  rapidashgalar:   "rapidash-galar",
+  farfetchdgalar:  "farfetchd-galar",
+  mrrimegalar:     "mr-mime-galar",
+  darmanitangalar: "darmanitan-galar-standard",
+  darumakagalar:   "darumaka-galar",
+  yamaskgalar:     "yamask-galar",
+  stunfiskgalar:   "stunfisk-galar",
+  zigzagoongalar:  "zigzagoon-galar",
+  linoonegalar:    "linoone-galar",
+
+  // Hisuian Forms
+  samurotthisui:   "samurott-hisui",
+  zoroarkhisui:    "zoroark-hisui",
+  goodrahisui:     "goodra-hisui",
+  qwilfishhisui:   "qwilfish-hisui",
+  lilliganthisui:  "lilligant-hisui",
+  arcaninehisui:   "arcanine-hisui",
+  typhlosionhisui: "typhlosion-hisui",
+  decidueyehisui:  "decidueye-hisui",
+  electrodehisui:  "electrode-hisui",
+  braviaryhisui:   "braviary-hisui",
+  sliggoohisui:    "sliggoo-hisui",
+  sneaselhisui:    "sneasel-hisui",
+  growlithehisui:  "growlithe-hisui",
+  zoruahisui:      "zorua-hisui",
+  avalugghisui:    "avalugg-hisui",
+  voltorbhisui:    "voltorb-hisui",
+
+  // Paldean Forms
+  taurospaldeablaze:  "tauros-paldea-blaze",
+  taurospaldeaaqua:   "tauros-paldea-aqua",
+  taurospaldeacombat: "tauros-paldea-combat",
+  wooperpaldea:       "wooper-paldea",
 };
 
 let pokemonDB = {};
@@ -463,7 +527,7 @@ async function buildDatabase() {
           locations: [],
           allRanks:  [],
           types:     [],
-          strategies: [],  // NEW: top-level deduplicated strategies array
+          strategies: [],
         };
       }
 
@@ -526,7 +590,7 @@ async function buildDatabase() {
             ? typeof stats.usage === "number" ? stats.usage : (stats.usage.weighted || 0)
             : 0;
 
-          // NEW: Strategies only stored ONCE at top level, not repeated per tier
+          // Strategies only stored ONCE at top level
           if (pokemonDB[cleanName].strategies.length === 0) {
             pokemonDB[cleanName].strategies = getAllStrategies(smogonName, stats, gen9AllSets);
           }
@@ -582,9 +646,11 @@ async function buildDatabase() {
         const data    = pokemonRes.data;
         const species = speciesRes.data;
 
-        pokemonDB[cleanName].id          = dexNumber;
+        // Store the actual sprite ID from pokemonRes.data.id
+        // For base forms this equals dexNumber, for regional/alt forms it's unique
+        pokemonDB[cleanName].id          = data.id;
         pokemonDB[cleanName].sprite      = data.sprites.front_default ||
-          `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${dexNumber}.png`;
+          `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${data.id}.png`;
         pokemonDB[cleanName].types       = data.types.map((t) => t.type.name);
         pokemonDB[cleanName].abilities   = data.abilities.map((a) => ({ name: a.ability.name, isHidden: a.is_hidden }));
         pokemonDB[cleanName].stats       = Object.fromEntries(data.stats.map((s) => [s.stat.name, s.base_stat]));
@@ -605,14 +671,13 @@ async function buildDatabase() {
     // ────────────────────────────────────────────────────────────────────────
     console.log("\n💾 PHASE 4: Writing output files...");
     
-    // Add build timestamp to the DB
     const finalDB = {
       _meta: { buildTimestamp },
       pokemon: pokemonDB,
     };
 
     fs.writeFileSync("localDB.json", JSON.stringify(finalDB, null, 2));
-    console.log("  ✅ localDB.json saved (for CI verification only, not used by frontend)");
+    console.log("  ✅ localDB.json saved");
 
     fs.writeFileSync("localDB.js", `window.localDB = ${JSON.stringify(finalDB, null, 2)};`);
     console.log("  ✅ localDB.js saved");

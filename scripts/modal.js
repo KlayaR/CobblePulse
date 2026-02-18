@@ -75,9 +75,8 @@ function fetchWithTimeout(url, ms = 8000) {
 }
 
 // --- SPRITE URL HELPERS ---
-// The compiler stores the correct per-form PokéAPI numeric ID in dbEntry.id for
-// regional forms (Alolan, Galarian, Hisuian, Paldean, etc.).
-// Mega forms are the exception: PokéAPI CDN uses a named slug for them, not a number.
+// Compiler stores correct per-form sprite ID in dbEntry.id for all forms.
+// Megas are exception: their CDN uses named slugs instead of numeric IDs.
 const MEGA_SPRITE_SLUGS = {
   charizardmegax:  "charizard-mega-x",  charizardmegay:  "charizard-mega-y",
   venusaurmega:    "venusaur-mega",      blastoismega:    "blastoise-mega",
@@ -105,9 +104,6 @@ const MEGA_SPRITE_SLUGS = {
   swampertmega:    "swampert-mega",      abomasnowmega:   "abomasnow-mega",
 };
 
-// Resolve the CDN path segment for a given form entry.
-// - Megas: named slug (e.g. "charizard-mega-x")
-// - Everything else: numeric ID already stored correctly by compiler in dbEntry.id
 function getSpriteId(cleanName, dbEntryId) {
   return MEGA_SPRITE_SLUGS[cleanName] || dbEntryId;
 }
@@ -143,6 +139,12 @@ function abbreviateTier(tierName) {
   if (abbrevs[lowerTier]) return abbrevs[lowerTier];
   if (abbrevs[tierName]) return abbrevs[tierName];
   return tierName.length > 15 ? tierName.slice(0, 12) + "..." : tierName;
+}
+
+// --- HELPER: Format Pokémon display name from base name + optional form badge ---
+function getDisplayName(baseName, isAltForm) {
+  // Base name (e.g. "Ninetales") with proper capitalization
+  return baseName.charAt(0).toUpperCase() + baseName.slice(1).replace(/-/g, " ");
 }
 
 // --- LOCATION CARDS BUILDER ---
@@ -224,23 +226,16 @@ async function openModal(id, cleanName, altFormCleanName = null) {
   }
 
   // ---------------------------------------------------------------
-  // PHASE 1 — Render full modal INSTANTLY from localDB (no network)
-  // All form data (types, stats, sprite) is already in localDB
-  // because the compiler fetched the correct per-form PokéAPI entry.
+  // PHASE 1 — Render full modal INSTANTLY from localDB
   // ---------------------------------------------------------------
 
-  // Sprite: use per-form ID from localDB (set correctly by compiler for all forms).
-  // Megas are the only exception where CDN uses a named slug instead of a number.
   const spriteId     = getSpriteId(actualCleanName, dbEntry.id || id);
   const normalSprite = getSpriteUrl(spriteId);
   const shinySprite  = getShinyUrl(spriteId);
 
-  // Types come directly from localDB — already correct for every form
-  // (e.g. Galarian Darmanitan has ["ice", "fire"] from PokéAPI, not base form's ["fire"])
   const types    = dbEntry.types || [];
   const typeHtml = types.map((t) => `<span class="type-badge type-${t}">${t}</span>`).join("");
 
-  // Weaknesses and immunities derived from the form's actual types
   const weaknesses = getWeaknesses(types);
   const immunities = getImmunities(types, dbEntry.abilities || []);
 
@@ -256,7 +251,6 @@ async function openModal(id, cleanName, altFormCleanName = null) {
       </div>
     </div>` : "";
 
-  // Stats come from localDB — already the form's own stats from PokéAPI
   const statConfig = [
     { key: "hp",              label: "HP",     color: "#ff5959" },
     { key: "attack",          label: "ATK",    color: "#f5ac78" },
@@ -268,7 +262,7 @@ async function openModal(id, cleanName, altFormCleanName = null) {
   const pokemonStats = dbEntry.stats || {};
   const totalBST     = Object.values(pokemonStats).reduce((sum, val) => sum + (val || 0), 0);
 
-  // Form badge (Mega Boosted / Alolan Form / Galarian Form / etc.)
+  // Form badge: detect form type, show badge in stats section
   let formBadge = "";
   if (altFormCleanName) {
     const matched = FORM_SUFFIXES.find((f) => altFormCleanName.includes(f.suffix));
@@ -340,21 +334,19 @@ async function openModal(id, cleanName, altFormCleanName = null) {
       }
     }
   } else {
-    // Alt form: show own spawns or point back to base form
     const hasFormSpawns = dbEntry.locations && dbEntry.locations.length > 0;
     if (hasFormSpawns) {
       locationsHtml = buildLocationCards(dbEntry.locations, "📍 Spawn Locations");
     } else {
       const baseEntry = allPokemonData[cleanName];
-      if (baseEntry && baseEntry.locations && baseEntry.locations.length > 0) {
-        locationsHtml = buildLocationCards(baseEntry.locations, `🔗 Base Form Spawns (${cleanName.charAt(0).toUpperCase() + cleanName.slice(1)})`);
+      if (baseEntry?.locations?.length > 0) {
+        locationsHtml = buildLocationCards(baseEntry.locations, `🔗 Base Form Spawns (${getDisplayName(cleanName)})`);
       } else {
         const matched = FORM_SUFFIXES.find((f) => altFormCleanName.includes(f.suffix));
         const formName = matched ? matched.label : "Alternate Form";
-        const baseName = cleanName.charAt(0).toUpperCase() + cleanName.slice(1);
         locationsHtml = `<div class="mega-obtain-notice">
           <h4>${matched?.icon || "⚡"} How to Obtain ${formName} Form</h4>
-          <p>Check the <strong>Base</strong> tab above for ${baseName}'s spawn locations.</p>
+          <p>Check the <strong>Base</strong> tab above for ${getDisplayName(cleanName)}'s spawn locations.</p>
         </div>`;
       }
     }
@@ -371,6 +363,10 @@ async function openModal(id, cleanName, altFormCleanName = null) {
           ${form.icon} ${form.label}
         </button>`).join("")}
     </div>` : "";
+
+  // Display name: use dbEntry.name (proper capitalization) from base entry
+  const baseEntry = allPokemonData[cleanName] || dbEntry;
+  const displayName = getDisplayName(baseEntry.name || cleanName);
 
   // Badges & buttons
   const currentBadge = stats ? stats.tier.toUpperCase() : "UNTIERED";
@@ -390,12 +386,12 @@ async function openModal(id, cleanName, altFormCleanName = null) {
   DOM.modalBody.innerHTML = `
     <div class="modal-header">
       <div class="sprite-container">
-        <img src="${normalSprite}" alt="${actualCleanName}" class="modal-sprite" id="modalSprite">
+        <img src="${normalSprite}" alt="${displayName}" class="modal-sprite" id="modalSprite">
         <button class="shiny-btn" id="shinyBtn" title="Shiny Toggle">✨</button>
       </div>
       <div class="modal-title">
         <div class="title-row">
-          <a href="${pokemonDbUrl}" target="_blank" title="View on PokemonDB" class="pokemon-name-link">${actualCleanName.replace(/-/g, " ")}</a>
+          <a href="${pokemonDbUrl}" target="_blank" title="View on PokemonDB" class="pokemon-name-link">${displayName}</a>
           ${favBtnHtml}${shareBtnHtml}
           <span class="tier-badge">${currentBadge}</span>${usageBadge}${sourceTag}
         </div>
@@ -459,7 +455,6 @@ async function openModal(id, cleanName, altFormCleanName = null) {
     const evoData = await getEvoChain(id);
     if (_latestModalRequestId !== id) return;
 
-    // Fill location placeholder ("evolves from X" spawns)
     const locPh = document.getElementById("locations-placeholder");
     if (locPh) {
       const hasOwnSpawns = dbEntry.locations && dbEntry.locations.length > 0;
@@ -468,15 +463,14 @@ async function openModal(id, cleanName, altFormCleanName = null) {
         const baseEvoName = evoData.chain.species.name;
         const baseEvoDb   = allPokemonData[baseEvoName.replace("-", "")] || allPokemonData[baseEvoName];
         if (baseEvoDb?.locations?.length > 0) {
-          extraLocHtml = buildLocationCards(baseEvoDb.locations, `🧬 Evolves from ${baseEvoName.toUpperCase()} (Spawns Below)`);
+          extraLocHtml = buildLocationCards(baseEvoDb.locations, `🧬 Evolves from ${getDisplayName(baseEvoName)} (Spawns Below)`);
         } else {
-          extraLocHtml = `<p class="no-spawns">Must be evolved from <strong>${baseEvoName.toUpperCase()}</strong>. No wild spawns found.</p>`;
+          extraLocHtml = `<p class="no-spawns">Must be evolved from <strong>${getDisplayName(baseEvoName)}</strong>. No wild spawns found.</p>`;
         }
       }
       locPh.outerHTML = extraLocHtml || "";
     }
 
-    // Fill evo chain
     const evoPlaceholder = document.getElementById("evo-placeholder");
     if (evoPlaceholder) {
       const evoList = [];
@@ -495,7 +489,7 @@ async function openModal(id, cleanName, altFormCleanName = null) {
                 return `${i > 0 ? `<span class="evo-arrow">→</span>` : ""}
                   <div class="evo-mon ${isCurrent ? "current" : ""}" onclick="${evoId ? `openModal(${evoId},'${name}')` : ""}">
                     ${evoSprite ? `<img src="${evoSprite}" alt="${name}">` : ""}
-                    <span>${name.replace("-", " ")}</span>
+                    <span>${getDisplayName(name)}</span>
                   </div>`;
               }).join("")}
             </div>
