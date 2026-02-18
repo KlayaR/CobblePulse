@@ -9,7 +9,7 @@
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
     <link rel="stylesheet" href="./styles/main.css" />
     <link rel="stylesheet" href="./styles/lazy-loading.css" />
-    <link rel="stylesheet" href="./styles/about-enhancements.css" />
+    <link rel="stylesheet" href="./styles/typeChart.css" />
   </head>
   <body>
     <div id="tooltip"><div id="tt-content"></div></div>
@@ -59,6 +59,7 @@
         <button class="tab-btn" data-tab="lc">LC</button>
         <button class="tab-btn" data-tab="all">All Cobblemon</button>
         <button class="tab-btn" data-tab="favorites">⭐ Favorites</button>
+        <button class="tab-btn" data-tab="typechart">🔥 Type Chart</button>
       </div>
 
       <!-- Unified filter bar -->
@@ -100,6 +101,11 @@
       </div>
 
       <div id="aboutPanel" style="display:none" class="glass-panel"></div>
+      
+      <!-- Type Chart Panel -->
+      <div id="typeChartPanel" style="display:none" class="glass-panel">
+        <div id="typeChartContainer"></div>
+      </div>
 
       <div class="glass-panel table-container" id="tableContainer">
         <table>
@@ -137,6 +143,7 @@
     <!-- Scripts loaded in dependency order -->
     <script src="./scripts/imageLoader.js"></script>
     <script src="./scripts/typeChart.js"></script>
+    <script src="./scripts/typeEffectiveness.js"></script>
     <script src="./scripts/tooltip.js"></script>
     <script src="./scripts/filters.js"></script>
     <script src="./scripts/modal.js"></script>
