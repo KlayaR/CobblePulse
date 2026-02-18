@@ -2,7 +2,6 @@
 const pokeApiCache = new Map();
 
 // --- FORM VARIANT SUFFIXES ---
-// Used to detect and label any alternate form stored in localDB
 const FORM_SUFFIXES = [
   { suffix: "mega",    label: "Mega",           icon: "⚡" },
   { suffix: "megax",   label: "Mega X",         icon: "⚡" },
@@ -21,12 +20,10 @@ const FORM_SUFFIXES = [
   { suffix: "blaze",   label: "Blaze Breed",    icon: "🔥" },
   { suffix: "aqua",    label: "Aqua Breed",     icon: "💧" },
   { suffix: "combat",  label: "Combat Breed",   icon: "🥊" },
-  { suffix: "ice",     label: "Ice Rider",      icon: "🧊" },
+  { suffix: "ice",     label: "Ice Rider",      icon: "🧢" },
   { suffix: "shadow",  label: "Shadow Rider",   icon: "👻" },
 ];
 
-// Pokémon that should NEVER be treated as a form variant of another entry
-// (they're standalone Pokémon whose names happen to contain a suffix word)
 const FORM_EXCLUSIONS = new Set([
   "meganium", "galarian", "hisuian", "alolan", "aegislash", "galar",
   "rapidash", "ponyta", "meowth", "corsola", "slowpoke", "slowbro",
@@ -36,7 +33,6 @@ const FORM_EXCLUSIONS = new Set([
 ]);
 
 // --- ALTERNATE FORMS INDEX ---
-// Map<baseDexNumber, Array<{cleanName, data, label, icon}>> built once at startup
 let _altFormsIndex = null;
 
 function buildAltFormsIndex() {
@@ -48,30 +44,19 @@ function buildAltFormsIndex() {
     if (FORM_EXCLUSIONS.has(cleanName)) continue;
 
     for (const { suffix, label, icon } of FORM_SUFFIXES) {
-      // Match suffix at end of cleanName, or as an interior segment (e.g. "charizardmegax")
       if (!cleanName.includes(suffix)) continue;
-
       const dex = data.dex;
       if (!dex) continue;
-
-      // Make sure there's actually a base entry with the same dex number
-      // to avoid indexing standalone Pokémon like "rapidashgalar" → base is "rapidash"
       if (!_altFormsIndex.has(dex)) _altFormsIndex.set(dex, []);
-
-      // Avoid duplicates
       const existing = _altFormsIndex.get(dex);
       if (!existing.find((f) => f.cleanName === cleanName)) {
-        // Build a short display label: strip the base name, capitalise remainder
-        let shortLabel = label;
-        // For mega-x / mega-y keep the suffix in the label
-        existing.push({ cleanName, data, label: shortLabel, icon });
+        existing.push({ cleanName, data, label, icon });
       }
-      break; // only match the first (most-specific) suffix
+      break;
     }
   }
 }
 
-// Keep the old name for backward-compat with any external callers
 function buildMegaFormsIndex() { buildAltFormsIndex(); }
 function findMegaForms(baseDexNumber) { return findAltForms(baseDexNumber).filter((f) => f.label.startsWith("Mega")); }
 
@@ -89,13 +74,48 @@ function fetchWithTimeout(url, ms = 8000) {
     .catch((e) => { clearTimeout(timer); throw e; });
 }
 
-// --- SPRITE URL HELPERS (no API call, direct CDN) ---
-function getSpriteUrl(id) { return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`; }
-function getShinyUrl(id)  { return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${id}.png`; }
+// --- SPRITE URL HELPERS ---
+// The compiler stores the correct per-form PokéAPI numeric ID in dbEntry.id for
+// regional forms (Alolan, Galarian, Hisuian, Paldean, etc.).
+// Mega forms are the exception: PokéAPI CDN uses a named slug for them, not a number.
+const MEGA_SPRITE_SLUGS = {
+  charizardmegax:  "charizard-mega-x",  charizardmegay:  "charizard-mega-y",
+  venusaurmega:    "venusaur-mega",      blastoismega:    "blastoise-mega",
+  alakazammega:    "alakazam-mega",      gengarmega:      "gengar-mega",
+  kangaskhanmega:  "kangaskhan-mega",    pinsirmega:      "pinsir-mega",
+  gyaradosmega:    "gyarados-mega",      aerodactylmega:  "aerodactyl-mega",
+  ampharosmega:    "ampharos-mega",      scizormega:      "scizor-mega",
+  heracrossmega:   "heracross-mega",     houndoommega:    "houndoom-mega",
+  tyranitarmega:   "tyranitar-mega",     blazikenmega:    "blaziken-mega",
+  gardevoirmega:   "gardevoir-mega",     mawilemega:      "mawile-mega",
+  aggronmega:      "aggron-mega",        medichamega:     "medicham-mega",
+  medichammega:    "medicham-mega",      manectricmega:   "manectric-mega",
+  sharpedomega:    "sharpedo-mega",      cameruptmega:    "camerupt-mega",
+  altariamega:     "altaria-mega",       sableyemega:     "sableye-mega",
+  banettmega:      "banette-mega",       banettemega:     "banette-mega",
+  absolmega:       "absol-mega",         glaliemega:      "glalie-mega",
+  salamencemega:   "salamence-mega",     metagrossmega:   "metagross-mega",
+  latiasmega:      "latias-mega",        latiosmega:      "latios-mega",
+  rayquazamega:    "rayquaza-mega",      lopunnymega:     "lopunny-mega",
+  garchompmega:    "garchomp-mega",      lucariomega:     "lucario-mega",
+  audinomega:      "audino-mega",        slowbromega:     "slowbro-mega",
+  steelixmega:     "steelix-mega",       pidgeotmega:     "pidgeot-mega",
+  beedrillmega:    "beedrill-mega",      dianciemega:     "diancie-mega",
+  gallademega:     "gallade-mega",       sceptilemega:    "sceptile-mega",
+  swampertmega:    "swampert-mega",      abomasnowmega:   "abomasnow-mega",
+};
 
-// --- GET EVO CHAIN (only thing we still need from PokeAPI) ---
-// isLegendary / isMythical are now stored in localDB by the compiler, so
-// we only fetch the evo chain for non-legendary Pokémon.
+// Resolve the CDN path segment for a given form entry.
+// - Megas: named slug (e.g. "charizard-mega-x")
+// - Everything else: numeric ID already stored correctly by compiler in dbEntry.id
+function getSpriteId(cleanName, dbEntryId) {
+  return MEGA_SPRITE_SLUGS[cleanName] || dbEntryId;
+}
+
+function getSpriteUrl(spriteId) { return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${spriteId}.png`; }
+function getShinyUrl(spriteId)  { return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${spriteId}.png`; }
+
+// --- GET EVO CHAIN ---
 async function getEvoChain(dexId) {
   if (pokeApiCache.has(dexId)) return pokeApiCache.get(dexId);
   const speciesData = await fetchWithTimeout(`https://pokeapi.co/api/v2/pokemon-species/${dexId}`);
@@ -104,14 +124,11 @@ async function getEvoChain(dexId) {
   return evoData;
 }
 
-// --- PREFETCH ON HOVER ---
 function prefetchPokemonDetails(id) {
-  if (!pokeApiCache.has(id)) {
-    getEvoChain(id).catch(() => {});
-  }
+  if (!pokeApiCache.has(id)) getEvoChain(id).catch(() => {});
 }
 
-// --- HELPER: Abbreviate tier name for badges ---
+// --- HELPER: Abbreviate tier name ---
 function abbreviateTier(tierName) {
   const abbrevs = {
     "ubers": "Ubers", "ou": "OU", "uu": "UU", "ru": "RU", "nu": "NU", "pu": "PU", "zu": "ZU", "lc": "LC",
@@ -126,42 +143,6 @@ function abbreviateTier(tierName) {
   if (abbrevs[lowerTier]) return abbrevs[lowerTier];
   if (abbrevs[tierName]) return abbrevs[tierName];
   return tierName.length > 15 ? tierName.slice(0, 12) + "..." : tierName;
-}
-
-// --- HELPER: Convert cleanName to PokeAPI sprite path segment ---
-// Only needed for forms whose sprite ID differs from their numeric dex id
-// (Megas use form-slug IDs in the CDN, regional forms use their numeric id)
-function cleanNameToSpriteId(cleanName, numericId) {
-  // Megas have their own sprite files named by form slug
-  const megaSlugMap = {
-    charizardmegax:  "charizard-mega-x",  charizardmegay: "charizard-mega-y",
-    venusaurmega:    "venusaur-mega",      blastoismega:    "blastoise-mega",
-    alakazammega:    "alakazam-mega",      gengarmega:      "gengar-mega",
-    kangaskhanmega:  "kangaskhan-mega",    pinsirmega:      "pinsir-mega",
-    gyaradosmega:    "gyarados-mega",      aerodactylmega:  "aerodactyl-mega",
-    ampharosmega:    "ampharos-mega",      scizormega:      "scizor-mega",
-    heracrossmega:   "heracross-mega",     houndoommega:    "houndoom-mega",
-    tyranitarmega:   "tyranitar-mega",     blazikenmega:    "blaziken-mega",
-    gardevoirmega:   "gardevoir-mega",     mawilemega:      "mawile-mega",
-    aggronmega:      "aggron-mega",        medichamega:     "medicham-mega",
-    medichammega:    "medicham-mega",      manectricmega:   "manectric-mega",
-    sharpedomega:    "sharpedo-mega",      cameruptmega:    "camerupt-mega",
-    altariamega:     "altaria-mega",       sableyemega:     "sableye-mega",
-    banettmega:      "banette-mega",       banettemega:     "banette-mega",
-    absolmega:       "absol-mega",         glaliemega:      "glalie-mega",
-    salamencemega:   "salamence-mega",     metagrossmega:   "metagross-mega",
-    latiasmega:      "latias-mega",        latiosmega:      "latios-mega",
-    rayquazamega:    "rayquaza-mega",      lopunnymega:     "lopunny-mega",
-    garchompmega:    "garchomp-mega",      lucariomega:     "lucario-mega",
-    audinomega:      "audino-mega",        slowbromega:     "slowbro-mega",
-    steelixmega:     "steelix-mega",       pidgeotmega:     "pidgeot-mega",
-    beedrillmega:    "beedrill-mega",      dianciemega:     "diancie-mega",
-    gallademega:     "gallade-mega",       sceptilemega:    "sceptile-mega",
-    swampertmega:    "swampert-mega",      abomasnowmega:   "abomasnow-mega",
-  };
-  if (megaSlugMap[cleanName]) return megaSlugMap[cleanName];
-  // Regional forms & everything else: use the numeric dex id (sprite exists by dex number)
-  return numericId;
 }
 
 // --- LOCATION CARDS BUILDER ---
@@ -221,7 +202,6 @@ let _currentBaseDexNumber = null;
 let _currentBaseCleanName = null;
 
 // --- OPEN MODAL ---
-// altFormCleanName: if set, we're viewing an alternate form (mega/alolan/galarian/etc.)
 async function openModal(id, cleanName, altFormCleanName = null) {
   _latestModalRequestId = id;
   _currentBaseDexNumber = id;
@@ -245,15 +225,22 @@ async function openModal(id, cleanName, altFormCleanName = null) {
 
   // ---------------------------------------------------------------
   // PHASE 1 — Render full modal INSTANTLY from localDB (no network)
+  // All form data (types, stats, sprite) is already in localDB
+  // because the compiler fetched the correct per-form PokéAPI entry.
   // ---------------------------------------------------------------
 
-  const spriteId     = cleanNameToSpriteId(actualCleanName, dbEntry.id || id);
+  // Sprite: use per-form ID from localDB (set correctly by compiler for all forms).
+  // Megas are the only exception where CDN uses a named slug instead of a number.
+  const spriteId     = getSpriteId(actualCleanName, dbEntry.id || id);
   const normalSprite = getSpriteUrl(spriteId);
   const shinySprite  = getShinyUrl(spriteId);
 
+  // Types come directly from localDB — already correct for every form
+  // (e.g. Galarian Darmanitan has ["ice", "fire"] from PokéAPI, not base form's ["fire"])
   const types    = dbEntry.types || [];
   const typeHtml = types.map((t) => `<span class="type-badge type-${t}">${t}</span>`).join("");
 
+  // Weaknesses and immunities derived from the form's actual types
   const weaknesses = getWeaknesses(types);
   const immunities = getImmunities(types, dbEntry.abilities || []);
 
@@ -269,6 +256,7 @@ async function openModal(id, cleanName, altFormCleanName = null) {
       </div>
     </div>` : "";
 
+  // Stats come from localDB — already the form's own stats from PokéAPI
   const statConfig = [
     { key: "hp",              label: "HP",     color: "#ff5959" },
     { key: "attack",          label: "ATK",    color: "#f5ac78" },
@@ -280,7 +268,7 @@ async function openModal(id, cleanName, altFormCleanName = null) {
   const pokemonStats = dbEntry.stats || {};
   const totalBST     = Object.values(pokemonStats).reduce((sum, val) => sum + (val || 0), 0);
 
-  // Detect form type for badge
+  // Form badge (Mega Boosted / Alolan Form / Galarian Form / etc.)
   let formBadge = "";
   if (altFormCleanName) {
     const matched = FORM_SUFFIXES.find((f) => altFormCleanName.includes(f.suffix));
@@ -289,7 +277,7 @@ async function openModal(id, cleanName, altFormCleanName = null) {
 
   const statsHtml = Object.keys(pokemonStats).length > 0 ? `
     <div class="info-card full-width stats-card">
-      <h4 class="section-title">📊 Base Stats${formBadge}</h4>
+      <h4 class="section-title">📊 Base Stats${formBadge ? ` ${formBadge}` : ""}</h4>
       ${statConfig.map((s) => {
         const val = pokemonStats[s.key] || 0;
         const pct = Math.min(Math.round((val / 255) * 100), 100);
@@ -311,7 +299,7 @@ async function openModal(id, cleanName, altFormCleanName = null) {
   }
   const hasStrategies = dbEntry.strategies && dbEntry.strategies.length > 0;
   if (hasStrategies) {
-    window.smogonUrl         = `https://www.smogon.com/dex/sv/pokemon/${actualCleanName.replace("-", "_")}/`;
+    window.smogonUrl         = `https://www.smogon.com/dex/sv/pokemon/${actualCleanName}/`;
     window.currentStrategies = dbEntry.strategies;
   }
   const dropdownHtml = hasStrategies && dbEntry.strategies.length > 1
@@ -336,27 +324,23 @@ async function openModal(id, cleanName, altFormCleanName = null) {
   const compHtml = hasStrategies
     ? `<div class="info-card full-width strategy-info-card">${dropdownHtml}<div id="dynamic-strategy-content"></div></div>`
     : altFormCleanName
-      ? `<div class="info-card full-width no-strategies"><p>No competitive Smogon data available for this form. Check the Base tab for strategies.</p></div>`
+      ? `<div class="info-card full-width no-strategies"><p>No competitive Smogon data for this form. Check the Base tab for strategies.</p></div>`
       : `<div class="info-card full-width no-strategies"><p>No competitive Smogon data available for this Pokémon.</p></div>`;
 
   // Locations
   let locationsHtml = "";
   if (!altFormCleanName) {
     const hasOwnSpawns = dbEntry.locations && dbEntry.locations.length > 0;
-    if (hasOwnSpawns) {
-      locationsHtml += buildLocationCards(dbEntry.locations, "📍 Server Spawn Locations");
-    }
-    // Use isLegendary/isMythical from localDB (stored by compiler) — no PokeAPI needed
+    if (hasOwnSpawns) locationsHtml += buildLocationCards(dbEntry.locations, "📍 Server Spawn Locations");
     if (!hasOwnSpawns) {
       if (dbEntry.isLegendary || dbEntry.isMythical) {
         locationsHtml += `<div class="legendary-notice"><h4>✨ Legendary Summoning</h4><p>This Pokémon does not spawn naturally. Use a summoning item at an altar or participate in a server event.</p></div>`;
       } else {
-        // Still need evo chain from PokeAPI to find base-form spawns — show placeholder
         locationsHtml += `<div id="locations-placeholder" class="loading" style="font-size:0.85em;padding:8px;">Checking spawn info...</div>`;
       }
     }
   } else {
-    // Alt form: show own spawns if any, otherwise point to base form
+    // Alt form: show own spawns or point back to base form
     const hasFormSpawns = dbEntry.locations && dbEntry.locations.length > 0;
     if (hasFormSpawns) {
       locationsHtml = buildLocationCards(dbEntry.locations, "📍 Spawn Locations");
@@ -376,7 +360,7 @@ async function openModal(id, cleanName, altFormCleanName = null) {
     }
   }
 
-  // Alternate forms toggle (all variants: mega, alolan, galarian, hisuian, etc.)
+  // Alt forms toggle
   const altForms    = findAltForms(id);
   const hasAltForms = altForms.length > 0;
   const altFormsToggleHtml = hasAltForms ? `
@@ -399,7 +383,6 @@ async function openModal(id, cleanName, altFormCleanName = null) {
   const shareUrl     = `${window.location.origin}${window.location.pathname}?${shareParams.toString()}`;
   const shareBtnHtml = `<button id="shareBtn" title="Copy share link" class="share-btn">🔗 Share</button>`;
 
-  // Evo chain placeholder (phase 2 fills this; skip for alt forms and legendaries)
   const needsEvoPh = !altFormCleanName && !dbEntry.isLegendary && !dbEntry.isMythical;
   const evoPh = needsEvoPh ? `<div id="evo-placeholder"></div>` : "";
 
@@ -468,8 +451,7 @@ async function openModal(id, cleanName, altFormCleanName = null) {
   if (hasStrategies) renderStrategyView(0);
 
   // ---------------------------------------------------------------
-  // PHASE 2 — Background: fetch evo chain only for non-legendary base forms
-  // Modal is already fully usable — this just fills evo chain + evolves-from spawns
+  // PHASE 2 — Background: evo chain only (non-legendary base forms)
   // ---------------------------------------------------------------
   if (!needsEvoPh) return;
 
@@ -481,11 +463,11 @@ async function openModal(id, cleanName, altFormCleanName = null) {
     const locPh = document.getElementById("locations-placeholder");
     if (locPh) {
       const hasOwnSpawns = dbEntry.locations && dbEntry.locations.length > 0;
-      let extraLocHtml   = "";
+      let extraLocHtml = "";
       if (!hasOwnSpawns) {
         const baseEvoName = evoData.chain.species.name;
         const baseEvoDb   = allPokemonData[baseEvoName.replace("-", "")] || allPokemonData[baseEvoName];
-        if (baseEvoDb && baseEvoDb.locations && baseEvoDb.locations.length > 0) {
+        if (baseEvoDb?.locations?.length > 0) {
           extraLocHtml = buildLocationCards(baseEvoDb.locations, `🧬 Evolves from ${baseEvoName.toUpperCase()} (Spawns Below)`);
         } else {
           extraLocHtml = `<p class="no-spawns">Must be evolved from <strong>${baseEvoName.toUpperCase()}</strong>. No wild spawns found.</p>`;
@@ -523,7 +505,6 @@ async function openModal(id, cleanName, altFormCleanName = null) {
       }
     }
   } catch (e) {
-    // Phase 2 failed — modal is already usable, just clean up
     const locPh  = document.getElementById("locations-placeholder");
     const evoPh2 = document.getElementById("evo-placeholder");
     if (locPh)  locPh.outerHTML  = '<p class="no-spawns">Could not load spawn info (network error).</p>';
