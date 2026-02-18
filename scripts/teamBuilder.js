@@ -4,6 +4,7 @@ let currentTeam = [];
 let savedTeams = {};
 let currentTeamName = 'default';
 const MAX_TEAM_SIZE = 6;
+const MIN_COMPETITIVE_BST = 480; // Filter for competitive viability
 
 // Load teams from localStorage
 function loadTeam() {
@@ -762,19 +763,20 @@ function renderTeamStats() {
   `;
 }
 
-// Suggest Pokemon based on team weaknesses
+// ENHANCED: Suggest Pokemon based on comprehensive analysis
 function suggestPokemon() {
   if (currentTeam.filter(p => p).length >= MAX_TEAM_SIZE) {
     alert('Team is full!');
     return;
   }
   
-  // Analyze what the team needs
-  const weaknesses = {};
   const TYPE_CHART = window.TYPE_CHART_DATA;
   const allPokemonData = window.localDB?.pokemon || window.localDB || {};
   
-  // Find types that hit multiple team members
+  // === 1. ANALYZE TEAM NEEDS ===
+  
+  // Defensive weaknesses (types that hit multiple members)
+  const defensiveWeaknesses = {};
   currentTeam.forEach(pokemon => {
     if (!pokemon) return;
     Object.keys(TYPE_CHART).forEach(attackType => {
@@ -784,50 +786,198 @@ function suggestPokemon() {
         if (data.weaknesses.includes(attackType)) effectiveness *= 2;
       });
       if (effectiveness >= 2) {
-        weaknesses[attackType] = (weaknesses[attackType] || 0) + 1;
+        defensiveWeaknesses[attackType] = (defensiveWeaknesses[attackType] || 0) + 1;
       }
     });
   });
   
-  // Find Pokemon that resist these common weaknesses
-  const suggestions = Object.values(allPokemonData)
-    .filter(p => !isMegaForm(p.cleanName) && !currentTeam.some(tp => tp && tp.id === p.id))
-    .map(p => {
-      let score = 0;
-      Object.entries(weaknesses).forEach(([type, count]) => {
-        const data = TYPE_CHART[type];
-        p.types.forEach(defenseType => {
-          const typeData = TYPE_CHART[defenseType];
-          if (typeData.immunities.includes(type)) score += count * 3;
-          else if (typeData.resistances.includes(type)) score += count * 2;
+  // Offensive coverage gaps
+  const coveredTypes = new Set();
+  currentTeam.forEach(pokemon => {
+    if (!pokemon) return;
+    const fullData = allPokemonData[pokemon.cleanName];
+    
+    // Check STAB
+    pokemon.types.forEach(type => {
+      Object.keys(TYPE_CHART).forEach(defType => {
+        if (TYPE_CHART[defType].weaknesses.includes(type)) {
+          coveredTypes.add(defType);
+        }
+      });
+    });
+    
+    // Check moves
+    if (fullData?.strategies) {
+      fullData.strategies.forEach(strat => {
+        strat.moves.forEach(moveSlot => {
+          const moves = moveSlot.split(' / ');
+          moves.forEach(move => {
+            const moveType = getMoveType(move.trim());
+            if (moveType) {
+              Object.keys(TYPE_CHART).forEach(defType => {
+                if (TYPE_CHART[defType].weaknesses.includes(moveType)) {
+                  coveredTypes.add(defType);
+                }
+              });
+            }
+          });
         });
       });
-      return { pokemon: p, score };
+    }
+  });
+  
+  const uncoveredTypes = Object.keys(TYPE_CHART).filter(t => !coveredTypes.has(t));
+  
+  // Role analysis
+  const roles = {};
+  const allPokemonData2 = window.localDB?.pokemon || window.localDB || {};
+  let totalSpeed = 0;
+  let totalDefense = 0;
+  let teamCount = 0;
+  
+  currentTeam.forEach(pokemon => {
+    if (!pokemon) return;
+    const role = determineRole(pokemon);
+    roles[role] = (roles[role] || 0) + 1;
+    
+    const fullData = allPokemonData2[pokemon.cleanName];
+    if (fullData?.stats) {
+      totalSpeed += fullData.stats.speed;
+      totalDefense += fullData.stats.defense + fullData.stats['special-defense'];
+      teamCount++;
+    }
+  });
+  
+  const avgSpeed = teamCount > 0 ? totalSpeed / teamCount : 0;
+  const avgDefense = teamCount > 0 ? totalDefense / teamCount : 0;
+  
+  const needsFastSweeper = avgSpeed < 80 && (roles['Fast Sweeper'] || 0) < 2;
+  const needsWall = avgDefense < 150 && (roles['Wall/Tank'] || 0) < 2;
+  const hasTooManySweepers = (roles['Fast Sweeper'] || 0) + (roles['Slow Sweeper'] || 0) >= 4;
+  
+  // === 2. SCORE ALL CANDIDATES ===
+  
+  const suggestions = Object.values(allPokemonData)
+    .filter(p => {
+      if (isMegaForm(p.cleanName)) return false;
+      if (currentTeam.some(tp => tp && tp.id === p.id)) return false;
+      
+      // Filter by competitive BST
+      if (p.stats) {
+        const bst = Object.values(p.stats).reduce((a, b) => a + b, 0);
+        if (bst < MIN_COMPETITIVE_BST) return false;
+      }
+      
+      return true;
+    })
+    .map(p => {
+      let score = 0;
+      const role = determineRole({ ...p, abilities: p.abilities || [] });
+      
+      // === DEFENSIVE SYNERGY (40% weight) ===
+      Object.entries(defensiveWeaknesses).forEach(([type, count]) => {
+        p.types.forEach(defenseType => {
+          const typeData = TYPE_CHART[defenseType];
+          if (typeData.immunities.includes(type)) score += count * 15; // Immunity = best
+          else if (typeData.resistances.includes(type)) score += count * 8; // Resist = good
+        });
+      });
+      
+      // === OFFENSIVE COVERAGE (35% weight) ===
+      // Check how many uncovered types this Pokemon can hit
+      let coverageBonus = 0;
+      uncoveredTypes.forEach(uncoveredType => {
+        // Check STAB
+        p.types.forEach(attackType => {
+          if (TYPE_CHART[uncoveredType].weaknesses.includes(attackType)) {
+            coverageBonus += 12;
+          }
+        });
+        
+        // Check common coverage moves
+        if (p.strategies) {
+          p.strategies.forEach(strat => {
+            strat.moves.forEach(moveSlot => {
+              const moves = moveSlot.split(' / ');
+              moves.forEach(move => {
+                const moveType = getMoveType(move.trim());
+                if (moveType && TYPE_CHART[uncoveredType].weaknesses.includes(moveType)) {
+                  coverageBonus += 8;
+                }
+              });
+            });
+          });
+        }
+      });
+      score += Math.min(coverageBonus, 80); // Cap to prevent over-weighting
+      
+      // === ROLE BALANCE (25% weight) ===
+      if (needsFastSweeper && role === 'Fast Sweeper') score += 30;
+      if (needsWall && role === 'Wall/Tank') score += 30;
+      if (hasTooManySweepers && (role === 'Wall/Tank' || role === 'Support/Utility')) score += 25;
+      if (!needsFastSweeper && !needsWall && role === 'Balanced') score += 15;
+      
+      // === STAT-BASED NEEDS ===
+      if (p.stats) {
+        // Speed control
+        if (avgSpeed < 80 && p.stats.speed >= 100) score += 15;
+        if (avgSpeed > 110 && p.stats.speed < 60) score += 10; // Trick Room potential
+        
+        // Bulk
+        const defTotal = p.stats.defense + p.stats['special-defense'];
+        if (avgDefense < 150 && defTotal >= 180) score += 15;
+        
+        // BST bonus for high-tier Pokemon
+        const bst = Object.values(p.stats).reduce((a, b) => a + b, 0);
+        if (bst >= 580) score += 10;
+        else if (bst >= 540) score += 5;
+      }
+      
+      return { pokemon: p, score, role };
     })
     .filter(s => s.score > 0)
     .sort((a, b) => b.score - a.score)
-    .slice(0, 12);
+    .slice(0, 15);
   
   if (suggestions.length === 0) {
-    alert('No specific suggestions - your team looks good!');
+    alert('No specific suggestions - your team looks solid!');
     return;
   }
   
   const emptySlot = currentTeam.findIndex((p, i) => !p && i < MAX_TEAM_SIZE);
   const slotIndex = emptySlot >= 0 ? emptySlot : currentTeam.length;
   
+  // Generate reason text
+  const reasons = [];
+  if (Object.keys(defensiveWeaknesses).length > 0) {
+    const topWeakness = Object.entries(defensiveWeaknesses).sort((a,b) => b[1] - a[1])[0];
+    reasons.push(`Weak to ${topWeakness[0]} (${topWeakness[1]}× members)`);
+  }
+  if (uncoveredTypes.length > 3) {
+    reasons.push(`Missing coverage for ${uncoveredTypes.length} types`);
+  }
+  if (needsFastSweeper) reasons.push('Need speed control');
+  if (needsWall) reasons.push('Need defensive bulk');
+  
   const modalHtml = `
     <div class="pokemon-selector-modal">
-      <h3>💡 Suggested Pokémon</h3>
-      <p style="color: var(--text-muted); margin-bottom: 15px; font-size: 0.9rem;">
-        Based on your team's weaknesses, these Pokémon would help defensively:
+      <h3>💡 Smart Suggestions</h3>
+      <p style="color: var(--text-muted); margin-bottom: 10px; font-size: 0.85rem;">
+        ${reasons.length > 0 ? 'Your team needs: ' + reasons.join(' • ') : 'Balanced suggestions for your team'}
       </p>
-      <div class="selector-results">
+      <div class="selector-results" style="max-height: 60vh;">
         ${suggestions.map(s => {
           const p = s.pokemon;
           const types = p.types.map(t => `<span class="type-badge type-${t}">${t}</span>`).join('');
+          const roleIcon = getRoleIcon(s.role);
           return `
             <div class="selector-pokemon" onclick="addToTeam(${slotIndex}, ${p.id}, '${p.cleanName}')">
+              <div style="position: absolute; top: 5px; right: 5px; background: rgba(0,0,0,0.8); padding: 2px 6px; border-radius: 3px; font-size: 0.7rem;">
+                Score: ${s.score}
+              </div>
+              <div style="position: absolute; top: 5px; left: 5px; font-size: 1.2rem;" title="${s.role}">
+                ${roleIcon}
+              </div>
               <img src="${p.sprite}" alt="${p.name}" loading="lazy">
               <div class="selector-pokemon-info">
                 <div class="selector-pokemon-name">${p.name}</div>
