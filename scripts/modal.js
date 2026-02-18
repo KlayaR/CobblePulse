@@ -15,49 +15,18 @@ async function getPokemonDetails(id) {
 
 // --- HELPER: Abbreviate tier name for badges ---
 function abbreviateTier(tierName) {
-  // Map tier names to clear, unambiguous abbreviations
   const abbrevs = {
-    // Standard Smogon Singles Tiers
-    "ubers":     "Ubers",
-    "ou":        "OU",
-    "uu":        "UU",
-    "ru":        "RU",
-    "nu":        "NU",
-    "pu":        "PU",
-    "zu":        "ZU",
-    "lc":        "LC",
-    
-    // National Dex Tiers
-    "nationaldex":           "NDex",
-    "National Dex":          "NDex",
-    "National Dex Ubers":    "NDex Ubers",
-    "National Dex UU":       "NDex UU",
-    "National Dex RU":       "NDex RU",
-    "National Dex Monotype": "NDex Mono",
-    
-    // Doubles & VGC
-    "doublesou":     "Doubles OU",
-    "Doubles OU":    "Doubles OU",
-    "vgc2025":       "VGC 2025",
-    "VGC 2024 Reg F": "VGC 24F",
-    "VGC 2025 Reg G": "VGC 25G",
-    "VGC 2025 Reg H": "VGC 25H",
-    
-    // Other Metagames
-    "monotype":           "Monotype",
-    "Almost Any Ability": "AAA",
-    "Balanced Hackmons":  "BH",
-    "Mix and Mega":       "MnM",
-    "Mixed":              "Mixed",
-    "Untiered":           "Untiered",
+    "ubers": "Ubers", "ou": "OU", "uu": "UU", "ru": "RU", "nu": "NU", "pu": "PU", "zu": "ZU", "lc": "LC",
+    "nationaldex": "NDex", "National Dex": "NDex", "National Dex Ubers": "NDex Ubers",
+    "National Dex UU": "NDex UU", "National Dex RU": "NDex RU", "National Dex Monotype": "NDex Mono",
+    "doublesou": "Doubles OU", "Doubles OU": "Doubles OU", "vgc2025": "VGC 2025",
+    "VGC 2024 Reg F": "VGC 24F", "VGC 2025 Reg G": "VGC 25G", "VGC 2025 Reg H": "VGC 25H",
+    "monotype": "Monotype", "Almost Any Ability": "AAA", "Balanced Hackmons": "BH",
+    "Mix and Mega": "MnM", "Mixed": "Mixed", "Untiered": "Untiered",
   };
-  
-  // Check direct matches first (case-insensitive)
   const lowerTier = tierName.toLowerCase();
   if (abbrevs[lowerTier]) return abbrevs[lowerTier];
   if (abbrevs[tierName]) return abbrevs[tierName];
-  
-  // If no match found, return the original tier name (up to 15 chars)
   return tierName.length > 15 ? tierName.slice(0, 12) + "..." : tierName;
 }
 
@@ -65,14 +34,28 @@ function abbreviateTier(tierName) {
 function findMegaForms(baseDexNumber) {
   const allPokemonData = window.localDB?.pokemon || window.localDB || {};
   const megaForms = [];
-  
   for (const [cleanName, data] of Object.entries(allPokemonData)) {
     if (data.dex === baseDexNumber && cleanName.includes("mega") && !cleanName.includes("meganium")) {
       megaForms.push({ cleanName, data });
     }
   }
-  
   return megaForms;
+}
+
+// --- HELPER: Convert cleanName to PokéAPI slug ---
+// e.g. "charizardmegax" -> "charizard-mega-x", "charizardmegay" -> "charizard-mega-y"
+function cleanNameToPokeApiSlug(cleanName) {
+  // Insert hyphens before known suffixes
+  return cleanName
+    .replace(/megax$/, "-mega-x")
+    .replace(/megay$/, "-mega-y")
+    .replace(/mega$/, "-mega")
+    .replace(/megax/,  "-mega-x-")
+    .replace(/megay/,  "-mega-y-")
+    // General: insert hyphen before "mega" if not already there
+    .replace(/([a-z])(mega)/, "$1-$2")
+    // Clean up any double hyphens
+    .replace(/--+/g, "-");
 }
 
 // --- LOCATION CARDS BUILDER ---
@@ -131,7 +114,7 @@ let _latestModalRequestId = null;
 let _currentBaseDexNumber = null;
 let _currentBaseCleanName = null;
 
-// --- OPEN MODAL (now supports megaCleanName parameter) ---
+// --- OPEN MODAL ---
 async function openModal(id, cleanName, megaCleanName = null) {
   _latestModalRequestId = id;
   _currentBaseDexNumber = id;
@@ -146,30 +129,29 @@ async function openModal(id, cleanName, megaCleanName = null) {
   history.pushState({ tab: currentTab, modal: megaCleanName || cleanName }, "", `?${params.toString()}`);
 
   try {
-    // If viewing a Mega form, fetch its specific data
     const allPokemonData = window.localDB?.pokemon || window.localDB || {};
     const actualCleanName = megaCleanName || cleanName;
     const dbEntry = allPokemonData[actualCleanName];
-    
-    if (!dbEntry) {
-      throw new Error(`Pokémon data not found for ${actualCleanName}`);
-    }
 
-    // Fetch from PokéAPI using the proper ID/slug
-    const fetchId = megaCleanName && dbEntry.id ? dbEntry.id : id;
+    if (!dbEntry) throw new Error(`Pokémon data not found for ${actualCleanName}`);
+
+    // For Mega forms: use the PokéAPI slug derived from the cleanName
+    // e.g. "charizardmegax" -> "charizard-mega-x"
+    const fetchId = megaCleanName ? cleanNameToPokeApiSlug(megaCleanName) : id;
     const { details, speciesData, evoData } = await getPokemonDetails(fetchId);
     if (_latestModalRequestId !== id && !megaCleanName) return;
 
     const typeHtml = details.types.map((t) => `<span class="type-badge type-${t.type.name}">${t.type.name}</span>`).join("");
 
-    // --- MEGA EVOLUTION TOGGLE (always check base dex number) ---
+    // --- MEGA EVOLUTION TOGGLE ---
     const megaForms = findMegaForms(id);
     const hasMegaForms = megaForms.length > 0;
     const megaToggleHtml = hasMegaForms ? `
       <div class="mega-toggle-container">
         <button class="mega-toggle-btn ${!megaCleanName ? 'active' : ''}" onclick="openModal(${id}, '${cleanName}', null)">Base</button>
         ${megaForms.map((mega) => {
-          const megaLabel = mega.data.name.replace(/-/g, " ").replace(/mega/i, "Mega").replace(/charizard/i, "").replace(/mewtwo/i, "").trim();
+          const rawLabel = mega.data.name || mega.cleanName;
+          const megaLabel = rawLabel.replace(/-/g, " ").replace(/mega/i, "Mega").replace(new RegExp(cleanName, "i"), "").trim() || "Mega";
           return `<button class="mega-toggle-btn ${megaCleanName === mega.cleanName ? 'active' : ''}" onclick="openModal(${id}, '${cleanName}', '${mega.cleanName}')">${megaLabel}</button>`;
         }).join("")}
       </div>` : "";
@@ -213,17 +195,13 @@ async function openModal(id, cleanName, megaCleanName = null) {
         ? `<div class="info-card full-width no-strategies"><p>⚡ This Mega Evolution has a +100 Base Stat Total boost compared to the base form. Switch to Base Form tab to see spawn locations.</p></div>`
         : `<div class="info-card full-width no-strategies"><p>No competitive Smogon data available for this Pokémon.</p></div>`;
 
-    // --- LOCATIONS (only show for base form) ---
+    // --- LOCATIONS ---
     let locationsHtml = "";
     if (!megaCleanName) {
       const hasOwnSpawns = dbEntry.locations && dbEntry.locations.length > 0;
       if (hasOwnSpawns) locationsHtml += buildLocationCards(dbEntry.locations, "📍 Server Spawn Locations");
-
       if (!hasOwnSpawns && (speciesData.is_legendary || speciesData.is_mythical)) {
-        locationsHtml += `<div class="legendary-notice">
-          <h4>✨ Legendary Summoning</h4>
-          <p>This Pokémon does not spawn naturally. Use a summoning item at an altar or participate in a server event.</p>
-        </div>`;
+        locationsHtml += `<div class="legendary-notice"><h4>✨ Legendary Summoning</h4><p>This Pokémon does not spawn naturally. Use a summoning item at an altar or participate in a server event.</p></div>`;
       } else if (speciesData.evolves_from_species) {
         const baseEvoName = evoData.chain.species.name;
         const baseEvoDb   = allPokemonData[baseEvoName.replace("-", "")] || allPokemonData[baseEvoName];
@@ -239,22 +217,21 @@ async function openModal(id, cleanName, megaCleanName = null) {
         locationsHtml += '<p class="no-spawns">No wild spawns found on this server.</p>';
       }
     } else {
-      // Mega form: show how to obtain
-      const baseName = details.name.split("-")[0];
+      const baseName = cleanName.charAt(0).toUpperCase() + cleanName.slice(1);
       locationsHtml = `<div class="mega-obtain-notice">
         <h4>⚡ How to Mega Evolve</h4>
-        <p>To Mega Evolve ${baseName.charAt(0).toUpperCase() + baseName.slice(1)}, you need:</p>
+        <p>To Mega Evolve ${baseName}, you need:</p>
         <ul>
           <li>🔸 The corresponding <strong>Mega Stone</strong> held item</li>
           <li>🔸 In battle, select <strong>Mega Evolution</strong> once per battle</li>
           <li>🔸 Reverts to base form after battle ends</li>
         </ul>
-        <p>Check the Base Form tab above for spawn locations to catch ${baseName.charAt(0).toUpperCase() + baseName.slice(1)}.</p>
+        <p>Check the <strong>Base</strong> tab above for spawn locations.</p>
       </div>`;
     }
 
     // --- WEAKNESSES ---
-    const weaknesses   = getWeaknesses(details.types.map((t) => t.type.name));
+    const weaknesses = getWeaknesses(details.types.map((t) => t.type.name));
     const weaknessHtml = Object.keys(weaknesses).length > 0 ? `
       <div class="info-card full-width weaknesses-card">
         <h4 class="section-title-danger">⚠️ Weaknesses</h4>
@@ -279,7 +256,7 @@ async function openModal(id, cleanName, megaCleanName = null) {
     const pokemonStats = dbEntry.stats || {};
     const totalBST = Object.values(pokemonStats).reduce((sum, val) => sum + (val || 0), 0);
     const megaBadge = megaCleanName ? '<span class="mega-boost-badge">⚡ Mega Boosted!</span>' : '';
-    const statsHtml    = Object.keys(pokemonStats).length > 0 ? `
+    const statsHtml = Object.keys(pokemonStats).length > 0 ? `
       <div class="info-card full-width stats-card">
         <h4 class="section-title">📊 Base Stats${megaBadge}</h4>
         ${statConfig.map((s) => {
@@ -294,7 +271,7 @@ async function openModal(id, cleanName, megaCleanName = null) {
         <div class="stat-total">Total BST: <strong>${totalBST}</strong></div>
       </div>` : "";
 
-    // --- EVOLUTION CHAIN (only for base form) ---
+    // --- EVOLUTION CHAIN ---
     let evoHtml = "";
     if (!megaCleanName) {
       try {
@@ -320,7 +297,7 @@ async function openModal(id, cleanName, megaCleanName = null) {
               </div>
             </div>`;
         }
-      } catch (e) { /* evo chain render failed silently */ }
+      } catch (e) { /* silent */ }
     }
 
     // --- IMMUNITIES ---
@@ -337,10 +314,14 @@ async function openModal(id, cleanName, megaCleanName = null) {
     const shareUrl     = `${window.location.origin}${window.location.pathname}?${shareParams.toString()}`;
     const shareBtnHtml = `<button id="shareBtn" title="Copy share link" class="share-btn">🔗 Share</button>`;
 
+    // Sprite: use PokéAPI sprite from fetched details (already correct form)
+    const normalSprite = details.sprites.front_default;
+    const shinySprite  = details.sprites.front_shiny;
+
     DOM.modalBody.innerHTML = `
       <div class="modal-header">
         <div class="sprite-container">
-          <img src="${details.sprites.front_default}" alt="${details.name}" class="modal-sprite" id="modalSprite">
+          <img src="${normalSprite}" alt="${details.name}" class="modal-sprite" id="modalSprite">
           <button class="shiny-btn" id="shinyBtn" title="Shiny Toggle">✨</button>
         </div>
         <div class="modal-title">
@@ -361,17 +342,15 @@ async function openModal(id, cleanName, megaCleanName = null) {
                   </div>`).join("")}
               </div>` : ""}
           </div>
+          ${megaToggleHtml}
         </div>
       </div>
-      ${megaToggleHtml}
       <div>
         ${weaknessHtml}${statsHtml}${evoHtml}${compHtml}
         <div class="info-card full-width locations-card">${locationsHtml}</div>
       </div>`;
 
     // Wire up shiny toggle
-    const normalSprite = details.sprites.front_default;
-    const shinySprite  = details.sprites.front_shiny;
     let isShiny = false;
     document.getElementById("shinyBtn").addEventListener("click", () => {
       isShiny = !isShiny;
