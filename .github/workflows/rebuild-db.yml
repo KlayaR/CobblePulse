@@ -1,0 +1,43 @@
+name: Rebuild Database
+
+on:
+  schedule:
+    - cron: '0 3 * * *'  # Daily at 3am UTC (right after Smogon updates)
+  workflow_dispatch:      # Manual trigger button in GitHub Actions tab
+  push:
+    paths:
+      - 'spawns.csv'      # Auto-rebuild when spawns.csv changes
+      - 'compiler.js'     # Auto-rebuild when compiler logic changes
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Install dependencies
+        run: npm install axios
+      
+      - name: Run compiler
+        run: node compiler.js
+      
+      - name: Commit and push if changed
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add localDB.js localDB.json
+          
+          # Only commit if files actually changed
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: auto-rebuild database [skip ci]"
+            git push
+          fi
