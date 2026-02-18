@@ -6,6 +6,11 @@ let currentTeamName = 'default';
 const MAX_TEAM_SIZE = 6;
 const MIN_COMPETITIVE_BST = 480; // Filter for competitive viability
 
+// Ensure favorites is available
+if (typeof favorites === 'undefined') {
+  var favorites = JSON.parse(localStorage.getItem('cobblePulseFavorites') || '[]');
+}
+
 // Load teams from localStorage
 function loadTeam() {
   const saved = localStorage.getItem('cobblePulseTeams');
@@ -41,14 +46,39 @@ function saveTeam() {
 
 // Initialize team builder
 function initTeamBuilder() {
-  loadTeam();
-  renderTeamBuilder();
+  try {
+    loadTeam();
+    renderTeamBuilder();
+  } catch (error) {
+    console.error('Team builder initialization error:', error);
+    const container = document.getElementById('teamBuilderContainer');
+    if (container) {
+      container.innerHTML = `
+        <div class="empty-team-message">
+          <div class="empty-icon">⚠️</div>
+          <h3>Error loading team builder</h3>
+          <p>${error.message}</p>
+          <p>Please refresh the page or check the console for details.</p>
+        </div>
+      `;
+    }
+  }
+}
+
+// Ensure isMegaForm is available
+if (typeof isMegaForm === 'undefined') {
+  function isMegaForm(cleanName) {
+    return cleanName && cleanName.includes('mega') && !cleanName.includes('meganium');
+  }
 }
 
 // Main render function
 function renderTeamBuilder() {
   const container = document.getElementById('teamBuilderContainer');
-  if (!container) return;
+  if (!container) {
+    console.error('Team builder container not found');
+    return;
+  }
 
   const teamNames = Object.keys(savedTeams);
   const teamSelector = teamNames.length > 0 ? `
@@ -319,6 +349,10 @@ function renderMoveCoverage() {
   const TYPE_CHART = window.TYPE_CHART_DATA;
   const allPokemonData = window.localDB?.pokemon || window.localDB || {};
   
+  if (!TYPE_CHART) {
+    return '<p>Type chart data not loaded yet</p>';
+  }
+  
   // For each type, check if any team member has moves that hit it super effectively
   Object.keys(TYPE_CHART).forEach(defenseType => {
     const typeData = TYPE_CHART[defenseType];
@@ -405,7 +439,7 @@ function getMoveType(moveName) {
     'blizzard': 'ice', 'ice shard': 'ice', 'icicle crash': 'ice', 'freeze-dry': 'ice',
     'close combat': 'fighting', 'superpower': 'fighting', 'high jump kick': 'fighting',
     'rock slide': 'rock', 'head smash': 'rock', 'power gem': 'rock', 'meteor beam': 'rock',
-    'meteor mash': 'steel', 'iron head': 'steel', 'bullet punch': 'steel', 'steel beam': 'steel',
+    'meteor mash': 'steel', 'bullet punch': 'steel', 'steel beam': 'steel',
     'outrage': 'dragon', 'draco meteor': 'dragon', 'dragon claw': 'dragon', 'dragon pulse': 'dragon',
     'tera blast': 'normal' // Would need tera type context
   };
@@ -622,6 +656,10 @@ function renderDefensiveWeaknesses() {
   const immunities = {};
   const TYPE_CHART = window.TYPE_CHART_DATA;
   
+  if (!TYPE_CHART) {
+    return '<p>Type chart data not loaded yet</p>';
+  }
+  
   currentTeam.forEach(pokemon => {
     if (!pokemon) return;
     
@@ -772,6 +810,11 @@ function suggestPokemon() {
   
   const TYPE_CHART = window.TYPE_CHART_DATA;
   const allPokemonData = window.localDB?.pokemon || window.localDB || {};
+  
+  if (!TYPE_CHART) {
+    alert('Type chart not loaded yet');
+    return;
+  }
   
   // === 1. ANALYZE TEAM NEEDS ===
   
