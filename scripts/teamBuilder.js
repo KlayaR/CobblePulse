@@ -86,6 +86,46 @@
     };
   }
 
+  // Helper function to extract ability names properly
+  function getAbilityText(pokemon) {
+    const allPokemonData = window.localDB?.pokemon || window.localDB || {};
+    const fullData = allPokemonData[pokemon.cleanName];
+    
+    if (!fullData || !fullData.abilities) return 'Unknown';
+    
+    const abilities = fullData.abilities;
+    
+    // Handle array of abilities
+    if (Array.isArray(abilities)) {
+      const abilityNames = [];
+      
+      abilities.forEach(ability => {
+        if (typeof ability === 'string') {
+          abilityNames.push(ability);
+        } else if (ability && typeof ability === 'object') {
+          // Handle objects with name or ability property
+          if (ability.name) abilityNames.push(ability.name);
+          else if (ability.ability && ability.ability.name) abilityNames.push(ability.ability.name);
+        }
+      });
+      
+      if (abilityNames.length > 0) {
+        return abilityNames.slice(0, 2).join(' / ');
+      }
+    }
+    // Handle single string ability
+    else if (typeof abilities === 'string') {
+      return abilities;
+    }
+    // Handle single object ability
+    else if (abilities && typeof abilities === 'object') {
+      if (abilities.name) return abilities.name;
+      if (abilities.ability && abilities.ability.name) return abilities.ability.name;
+    }
+    
+    return 'Unknown';
+  }
+
   function renderTeamBuilder() {
     const container = document.getElementById('teamBuilderContainer');
     if (!container) return;
@@ -197,24 +237,7 @@
         const types = pokemon.types.map(t => `<span class="type-badge type-${t}">${t}</span>`).join('');
         const role = determineRole(pokemon);
         const roleIcon = getRoleIcon(role);
-        
-        // FIX: Properly format abilities - check all possible cases
-        let abilitiesText = 'Unknown';
-        if (pokemon.abilities) {
-          if (Array.isArray(pokemon.abilities)) {
-            if (pokemon.abilities.length > 0) {
-              // Filter out any potential object entries and get only strings
-              const abilityNames = pokemon.abilities
-                .filter(a => typeof a === 'string')
-                .slice(0, 2);
-              if (abilityNames.length > 0) {
-                abilitiesText = abilityNames.join(' / ');
-              }
-            }
-          } else if (typeof pokemon.abilities === 'string') {
-            abilitiesText = pokemon.abilities;
-          }
-        }
+        const abilitiesText = getAbilityText(pokemon);
         
         html += `
           <div class="team-slot filled" draggable="true" data-slot="${i}">
