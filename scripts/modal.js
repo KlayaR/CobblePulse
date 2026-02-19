@@ -75,8 +75,6 @@ function fetchWithTimeout(url, ms = 8000) {
 }
 
 // --- SPRITE URL HELPERS ---
-// Compiler stores correct per-form sprite ID in dbEntry.id for all forms.
-// Megas are exception: their CDN uses named slugs instead of numeric IDs.
 const MEGA_SPRITE_SLUGS = {
   charizardmegax:  "charizard-mega-x",  charizardmegay:  "charizard-mega-y",
   venusaurmega:    "venusaur-mega",      blastoismega:    "blastoise-mega",
@@ -141,9 +139,35 @@ function abbreviateTier(tierName) {
   return tierName.length > 15 ? tierName.slice(0, 12) + "..." : tierName;
 }
 
+// --- HELPER: Tier rank for strategy dropdown sort order ---
+// Lower number = higher priority = appears first in the dropdown.
+const STRATEGY_TIER_ORDER = [
+  "ubers", "ou", "uu", "ru", "nu", "pu", "zu", "lc",
+  "doublesou", "vgc2025", "vgc2024", "monotype",
+  "nationaldex", "nationaldexuu", "nationaldexru", "nationaldexmonotype",
+  "balancedhackmons", "stabmons", "1v1", "godlygift",
+];
+
+function getTierSortRank(tier) {
+  if (!tier) return 999;
+  const idx = STRATEGY_TIER_ORDER.indexOf(tier.toLowerCase());
+  return idx === -1 ? 998 : idx;
+}
+
+// Sort strategies by tier rank. Stable-sorts: same-tier strategies keep
+// their original relative order (e.g. two OU sets stay in DB order).
+function sortStrategiesByTier(strategies) {
+  return strategies
+    .map((s, i) => ({ s, i }))             // attach original index
+    .sort((a, b) => {
+      const rankDiff = getTierSortRank(a.s.tier) - getTierSortRank(b.s.tier);
+      return rankDiff !== 0 ? rankDiff : a.i - b.i;  // stable tiebreak
+    })
+    .map(({ s }) => s);
+}
+
 // --- HELPER: Format Pokémon display name from base name + optional form badge ---
 function getDisplayName(baseName, isAltForm) {
-  // Base name (e.g. "Ninetales") with proper capitalization
   return baseName.charAt(0).toUpperCase() + baseName.slice(1).replace(/-/g, " ");
 }
 
@@ -262,7 +286,6 @@ async function openModal(id, cleanName, altFormCleanName = null) {
   const pokemonStats = dbEntry.stats || {};
   const totalBST     = Object.values(pokemonStats).reduce((sum, val) => sum + (val || 0), 0);
 
-  // Form badge: detect form type, show badge in stats section
   let formBadge = "";
   if (altFormCleanName) {
     const matched = FORM_SUFFIXES.find((f) => altFormCleanName.includes(f.suffix));
@@ -284,7 +307,7 @@ async function openModal(id, cleanName, altFormCleanName = null) {
       <div class="stat-total">Total BST: <strong>${totalBST}</strong></div>
     </div>` : "";
 
-  // Strategies
+  // Strategies — sort by tier before rendering the dropdown
   let stats = null;
   if (dbEntry.allRanks && dbEntry.allRanks.length > 0) {
     stats = currentTab === "all"
@@ -294,13 +317,14 @@ async function openModal(id, cleanName, altFormCleanName = null) {
   const hasStrategies = dbEntry.strategies && dbEntry.strategies.length > 0;
   if (hasStrategies) {
     window.smogonUrl         = `https://www.smogon.com/dex/sv/pokemon/${actualCleanName}/`;
-    window.currentStrategies = dbEntry.strategies;
+    // Sort strategies so the highest competitive tier appears first.
+    window.currentStrategies = sortStrategiesByTier(dbEntry.strategies);
   }
   const dropdownHtml = hasStrategies && dbEntry.strategies.length > 1
     ? `<div class="strategy-dropdown-container">
          <span class="strategy-label">Select Strategy:</span>
          <select onchange="renderStrategyView(this.value)" class="strategy-select">
-           ${dbEntry.strategies.map((s, i) => {
+           ${window.currentStrategies.map((s, i) => {
              const tierBadge = s.tier ? `[${abbreviateTier(s.tier)}] ` : "";
              return `<option value="${i}">${tierBadge}${s.name}</option>`;
            }).join("")}
@@ -310,7 +334,7 @@ async function openModal(id, cleanName, altFormCleanName = null) {
       ? `<div class="strategy-single-container">
            <span class="strategy-label">Strategy:</span>
            <span class="strategy-single-name">
-             ${dbEntry.strategies[0].tier ? `[${abbreviateTier(dbEntry.strategies[0].tier)}] ` : ""}${dbEntry.strategies[0].name}
+             ${window.currentStrategies[0].tier ? `[${abbreviateTier(window.currentStrategies[0].tier)}] ` : ""}${window.currentStrategies[0].name}
            </span>
          </div>`
       : "";
@@ -364,11 +388,9 @@ async function openModal(id, cleanName, altFormCleanName = null) {
         </button>`).join("")}
     </div>` : "";
 
-  // Display name: use dbEntry.name (proper capitalization) from base entry
   const baseEntry = allPokemonData[cleanName] || dbEntry;
   const displayName = getDisplayName(baseEntry.name || cleanName);
 
-  // Badges & buttons
   const currentBadge = stats ? stats.tier.toUpperCase() : "UNTIERED";
   const usageBadge   = stats && parseFloat(stats.usage) > 0 ? `<span class="usage-badge">${stats.usage}% usage</span>` : "";
   const sourceTag    = dbEntry.source ? `<span class="source-tag">[Source: ${dbEntry.source}]</span>` : "";
