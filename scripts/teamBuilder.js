@@ -194,27 +194,43 @@
   }
 
   // ============================================================
-  // TIER QUALITY SCORE  (replaces raw BST bonus)
+  // TIER QUALITY SCORE
   //
   // Tier hierarchy (most → least competitive):
   //   ubers → ou → uu → ru → nu → pu → zu → lc → Untiered
   //
-  // For each Pokémon we find its BEST tier across allRanks and award
-  // a base bonus.  Usage % within that tier adds a fine-grained bonus
-  // on top (max +5), so a heavily-used Ubers mon beats a barely-used one.
+  // A tier is only credited if the Pokémon has meaningful usage there:
+  //   - ubers / ou / uu : requires usage >= 1.0%
+  //   - ru and below   : requires usage >= 0.5%
+  // This prevents Pokémon that are merely *legal* in a tier (e.g.
+  // Chesnaught in Ubers with 0.16%) from being labelled as that tier.
   //
-  // Returns { score, tierLabel } for use in smartSuggest display.
+  // Falls back down the ladder until a valid tier is found.
+  // Returns { score, tierLabel } for use in smartSuggest + display.
   // ============================================================
   const TIER_SCORES = {
-    'ubers':       20,
-    'ou':          16,
-    'uu':          12,
-    'ru':           9,
-    'nu':           6,
-    'pu':           4,
-    'zu':           2,
-    'lc':           1,
-    'Untiered':     0
+    'ubers':    20,
+    'ou':       16,
+    'uu':       12,
+    'ru':        9,
+    'nu':        6,
+    'pu':        4,
+    'zu':        2,
+    'lc':        1,
+    'Untiered':  0
+  };
+
+  // Minimum usage % required to credit a tier as the Pokémon's home.
+  // High-profile tiers need a higher bar to avoid ghost appearances.
+  const TIER_MIN_USAGE = {
+    'ubers': 1.0,
+    'ou':    1.0,
+    'uu':    1.0,
+    'ru':    0.5,
+    'nu':    0.5,
+    'pu':    0.5,
+    'zu':    0.5,
+    'lc':    0.5
   };
 
   // Tiers we ignore for the "best tier" calculation — format-specific or
@@ -238,14 +254,21 @@
     let bestUsage = 0;
 
     fullData.allRanks.forEach(entry => {
-      const tier = entry.tier;
+      const tier  = entry.tier;
       if (IGNORED_TIERS.has(tier)) return;
 
+      const usage   = parseFloat(entry.usage) || 0;
+      const minUsage = TIER_MIN_USAGE[tier] ?? 0.5;
+
+      // Skip this tier if the Pokémon doesn't have enough usage to
+      // genuinely belong there (avoids ghost Ubers/OU labels).
+      if (usage < minUsage) return;
+
       const base = TIER_SCORES[tier] ?? 0;
-      if (base > bestScore || (base === bestScore && parseFloat(entry.usage) > bestUsage)) {
+      if (base > bestScore || (base === bestScore && usage > bestUsage)) {
         bestScore = base;
         bestTier  = tier;
-        bestUsage = parseFloat(entry.usage) || 0;
+        bestUsage = usage;
       }
     });
 
@@ -642,7 +665,7 @@
   //   B. Defensive synergy   — up to +36 pts
   //   C. Role balance        — up to +20 pts
   //   D. Type overlap penalty — up to -20 pts
-  //   E. Tier quality        — up to +25 pts  ← NEW (replaces BST bonus)
+  //   E. Tier quality        — up to +25 pts
   //   F. Easy spawn bonus    — +10 pts (easy mode only)
   // ============================================================
   function buildCandidates(allowLegendaries, difficulty) {
@@ -671,12 +694,10 @@
     if (!TYPE_CHART) return [];
     const filled = currentTeam.filter(p => p);
 
-    // Analyse current team
     const teamSTABCoverage = new Set();
     filled.forEach(p => {
       getSTABCoverage(p.types).forEach(t => teamSTABCoverage.add(t));
     });
-    const uncoveredOffensive = Object.keys(TYPE_CHART).filter(t => !teamSTABCoverage.has(t)); // eslint-disable-line no-unused-vars
 
     const sharedWeaknesses = {};
     filled.forEach(p => {
@@ -761,7 +782,7 @@
       score -= overlapPenalty;
       if (overlapPenalty >= 10) reasons.push('⚠️ Type overlap with team');
 
-      // --- E. Tier quality score (replaces BST bonus) ---
+      // --- E. Tier quality score ---
       const { score: tierScore, tierLabel } = getTierScore(p);
       score += Math.min(tierScore, 25);
       if (tierLabel === 'ubers') {
