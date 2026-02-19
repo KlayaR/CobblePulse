@@ -405,6 +405,11 @@ function parseCSV(text) {
   return result;
 }
 
+// --- HELPER: Format a single EV spread object into a display string ---
+function formatEvSpread(evs) {
+  return Object.entries(evs).map(([s, v]) => `${v} ${s.toUpperCase()}`).join(" / ");
+}
+
 // --- HELPER: Map one set's details to a strategy object ---
 function mapSetDetails(setName, details, stats, tierName) {
   let rawAbility = details.abilities || details.ability || details.Abilities || details.Ability;
@@ -423,7 +428,9 @@ function mapSetDetails(setName, details, stats, tierName) {
     teraType: Array.isArray(details.teratypes || details.teraType)
                 ? (details.teratypes || details.teraType).join(" / ")
                 : (details.teraType || "Normal"),
-    evs:      Object.entries(details.evs || {}).map(([s, v]) => `${v} ${s.toUpperCase()}`).join(" / ") || "None",
+    evs:      Array.isArray(details.evs)
+                ? details.evs.map(formatEvSpread).join(" OR ")
+                : formatEvSpread(details.evs || {}) || "None",
     moves:    (details.moves || []).map((m) => (Array.isArray(m) ? m.join(" / ") : m)),
   };
 }
