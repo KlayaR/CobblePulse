@@ -80,7 +80,6 @@
 
   // ============================================================
   // TYPE CHART HELPERS
-  // Full offensive effectiveness: returns multiplier for attackType vs defenderTypes[]
   // ============================================================
   function getOffensiveEffectiveness(attackType, defenderTypes) {
     const TYPE_CHART = window.TYPE_CHART_DATA;
@@ -96,7 +95,6 @@
     return mult;
   }
 
-  // Returns effectiveness multiplier of attackType vs a single defType
   function getSingleEffectiveness(attackType, defType) {
     const TYPE_CHART = window.TYPE_CHART_DATA;
     if (!TYPE_CHART || !TYPE_CHART[defType]) return 1;
@@ -107,12 +105,10 @@
     return 1;
   }
 
-  // For a Pokémon's STAB types, calculate overall defensive effectiveness against attackType
   function getDefensiveEffectiveness(attackType, defenderTypes) {
     return getOffensiveEffectiveness(attackType, defenderTypes);
   }
 
-  // Returns Set of type names that a given type array covers super-effectively (>= 2x)
   function getSTABCoverage(types) {
     const TYPE_CHART = window.TYPE_CHART_DATA;
     if (!TYPE_CHART) return new Set();
@@ -155,7 +151,7 @@
   }
 
   // ============================================================
-  // ROLE CLASSIFICATION — Accurate thresholds
+  // ROLE CLASSIFICATION
   // ============================================================
   function determineRole(pokemon) {
     const allPokemonData = window.localDB?.pokemon || window.localDB || {};
@@ -171,26 +167,16 @@
     const spe = s.speed || 0;
 
     const bestOffense  = Math.max(atk, spa);
-    const bulkScore    = hp * (def + spd) / 250; // standard bulk formula
+    const bulkScore    = hp * (def + spd) / 250;
     const offenseScore = bestOffense;
 
-    // Support: low offense, good utility stats or just low BST
     const bst = atk + spa + def + spd + hp + spe;
     if (offenseScore < 80 && bulkScore > 60) return 'Support/Utility';
     if (bst < 430) return 'Support/Utility';
-
-    // Wall / Tank: excellent bulk, not primarily offensive
     if (bulkScore >= 90 && offenseScore < 110) return 'Wall/Tank';
-
-    // Fast Sweeper: high speed + strong offense
     if (spe >= 100 && offenseScore >= 100) return 'Fast Sweeper';
-
-    // Bulky Attacker: decent bulk AND decent offense
     if (bulkScore >= 65 && offenseScore >= 90) return 'Bulky Attacker';
-
-    // Slow Sweeper: big offense, low speed
     if (offenseScore >= 110 && spe < 100) return 'Slow Sweeper';
-
     return 'Balanced';
   }
 
@@ -205,6 +191,85 @@
       'Unknown':         '❓'
     };
     return icons[role] || '❓';
+  }
+
+  // ============================================================
+  // TIER QUALITY SCORE  (replaces raw BST bonus)
+  //
+  // Tier hierarchy (most → least competitive):
+  //   ubers → ou → uu → ru → nu → pu → zu → lc → Untiered
+  //
+  // For each Pokémon we find its BEST tier across allRanks and award
+  // a base bonus.  Usage % within that tier adds a fine-grained bonus
+  // on top (max +5), so a heavily-used Ubers mon beats a barely-used one.
+  //
+  // Returns { score, tierLabel } for use in smartSuggest display.
+  // ============================================================
+  const TIER_SCORES = {
+    'ubers':       20,
+    'ou':          16,
+    'uu':          12,
+    'ru':           9,
+    'nu':           6,
+    'pu':           4,
+    'zu':           2,
+    'lc':           1,
+    'Untiered':     0
+  };
+
+  // Tiers we ignore for the "best tier" calculation — format-specific or
+  // non-standard tiers that don't map cleanly to the main ladder.
+  const IGNORED_TIERS = new Set([
+    'vgc2025', 'vgc2024', 'doublesou', 'monotype', 'nationaldex',
+    'nationaldexuu', 'nationaldexru', 'nationaldexmonotype', 'nationaldexdoubles',
+    'godlygift', 'balancedhackmons', 'stabmons', 'battlestadiumsingles',
+    'ubersuu', '1v1', 'nfe'
+  ]);
+
+  function getTierScore(pokemon) {
+    const allPokemonData = window.localDB?.pokemon || window.localDB || {};
+    const fullData = allPokemonData[pokemon.cleanName];
+    if (!fullData?.allRanks || fullData.allRanks.length === 0) {
+      return { score: 0, tierLabel: 'Untiered' };
+    }
+
+    let bestScore = 0;
+    let bestTier  = 'Untiered';
+    let bestUsage = 0;
+
+    fullData.allRanks.forEach(entry => {
+      const tier = entry.tier;
+      if (IGNORED_TIERS.has(tier)) return;
+
+      const base = TIER_SCORES[tier] ?? 0;
+      if (base > bestScore || (base === bestScore && parseFloat(entry.usage) > bestUsage)) {
+        bestScore = base;
+        bestTier  = tier;
+        bestUsage = parseFloat(entry.usage) || 0;
+      }
+    });
+
+    // Fine-grained bonus from usage % within best tier (capped at +5)
+    const usageBonus = Math.min(bestUsage / 3, 5);
+    const totalScore = Math.round(bestScore + usageBonus);
+
+    return { score: totalScore, tierLabel: bestTier };
+  }
+
+  // Human-readable tier label for the UI
+  function formatTierLabel(tierLabel) {
+    const map = {
+      'ubers': '🔥 Ubers',
+      'ou':    '⚡ OU',
+      'uu':    '🟡 UU',
+      'ru':    '🟠 RU',
+      'nu':    '🟢 NU',
+      'pu':    '🔵 PU',
+      'zu':    '⚪ ZU',
+      'lc':    '🐣 LC',
+      'Untiered': '— Untiered'
+    };
+    return map[tierLabel] || tierLabel;
   }
 
   // ============================================================
@@ -378,7 +443,7 @@
   }
 
   // ============================================================
-  // TEAM ROLES — Accurate rendering + warnings
+  // TEAM ROLES
   // ============================================================
   function renderTeamRoles() {
     const roles    = {};
@@ -391,7 +456,6 @@
       roles[role].push(pokemon.name);
     });
 
-    // Only warn when team has enough members to judge
     if (filled.length >= 4) {
       const sweepers = (roles['Fast Sweeper']?.length || 0) + (roles['Slow Sweeper']?.length || 0);
       const walls    = (roles['Wall/Tank']?.length || 0) + (roles['Support/Utility']?.length || 0);
@@ -401,7 +465,6 @@
       if (walls >= filled.length - 1)    warnings.push('⚠️ Very passive team — add some offensive presence');
     }
 
-    // Type overlap warning (3+ of same type)
     const typeCount = {};
     filled.forEach(p => p.types.forEach(t => { typeCount[t] = (typeCount[t] || 0) + 1; }));
     Object.entries(typeCount).forEach(([type, count]) => {
@@ -425,19 +488,17 @@
   }
 
   // ============================================================
-  // TYPE COVERAGE — STAB only, honest & accurate
+  // TYPE COVERAGE
   // ============================================================
   function renderTypeCoverage() {
     const TYPE_CHART = window.TYPE_CHART_DATA;
     if (!TYPE_CHART) return '<p>Type chart not loaded</p>';
 
-    // coverage[defType] = array of Pokémon names that hit it super-effectively via STAB
     const coverage = {};
     currentTeam.forEach(pokemon => {
       if (!pokemon) return;
       pokemon.types.forEach(attackType => {
         Object.keys(TYPE_CHART).forEach(defType => {
-          // Use single-type check (STAB vs single defending type)
           if (getSingleEffectiveness(attackType, defType) >= 2) {
             if (!coverage[defType]) coverage[defType] = new Set();
             coverage[defType].add(`${pokemon.name} (${attackType})`);
@@ -474,15 +535,15 @@
   }
 
   // ============================================================
-  // DEFENSIVE ANALYSIS — Fixed immunity/resist separation
+  // DEFENSIVE ANALYSIS
   // ============================================================
   function renderDefensiveAnalysis() {
     const TYPE_CHART = window.TYPE_CHART_DATA;
     if (!TYPE_CHART) return '<p>Type chart not loaded</p>';
 
-    const weaknesses  = {}; // effectiveness >= 2
-    const resistances = {}; // effectiveness > 0 && < 1
-    const immunities  = {}; // effectiveness === 0
+    const weaknesses  = {};
+    const resistances = {};
+    const immunities  = {};
 
     currentTeam.forEach(pokemon => {
       if (!pokemon) return;
@@ -498,11 +559,9 @@
           if (!resistances[attackType]) resistances[attackType] = [];
           resistances[attackType].push(pokemon.name);
         }
-        // neutral (eff === 1) — not tracked
       });
     });
 
-    // Critical = 2+ Pokémon weak to same type
     const critical = Object.entries(weaknesses)
       .filter(([, pokes]) => pokes.length >= 2)
       .sort((a, b) => b[1].length - a[1].length);
@@ -577,6 +636,14 @@
 
   // ============================================================
   // SMART SUGGESTION — Real scoring formula
+  //
+  // Score breakdown:
+  //   A. Offensive coverage  — up to +40 pts
+  //   B. Defensive synergy   — up to +36 pts
+  //   C. Role balance        — up to +20 pts
+  //   D. Type overlap penalty — up to -20 pts
+  //   E. Tier quality        — up to +25 pts  ← NEW (replaces BST bonus)
+  //   F. Easy spawn bonus    — +10 pts (easy mode only)
   // ============================================================
   function buildCandidates(allowLegendaries, difficulty) {
     const allPokemonData = window.localDB?.pokemon || window.localDB || {};
@@ -602,19 +669,16 @@
   function smartSuggest(allowLegendaries, difficulty) {
     const TYPE_CHART = window.TYPE_CHART_DATA;
     if (!TYPE_CHART) return [];
-    const allPokemonData = window.localDB?.pokemon || window.localDB || {};
     const filled = currentTeam.filter(p => p);
 
-    // --- Analyse current team ---
-    // 1. Which types does the team already cover offensively (STAB)?
+    // Analyse current team
     const teamSTABCoverage = new Set();
     filled.forEach(p => {
       getSTABCoverage(p.types).forEach(t => teamSTABCoverage.add(t));
     });
-    const uncoveredOffensive = Object.keys(TYPE_CHART).filter(t => !teamSTABCoverage.has(t));
+    const uncoveredOffensive = Object.keys(TYPE_CHART).filter(t => !teamSTABCoverage.has(t)); // eslint-disable-line no-unused-vars
 
-    // 2. Which attack types does the team share weaknesses to?
-    const sharedWeaknesses = {}; // attackType -> count of team members weak to it
+    const sharedWeaknesses = {};
     filled.forEach(p => {
       Object.keys(TYPE_CHART).forEach(attackType => {
         const eff = getDefensiveEffectiveness(attackType, p.types);
@@ -622,7 +686,6 @@
       });
     });
 
-    // 3. Role distribution
     const teamRoles = {};
     filled.forEach(p => {
       const r = determineRole(p);
@@ -631,7 +694,6 @@
     const sweepers = (teamRoles['Fast Sweeper'] || 0) + (teamRoles['Slow Sweeper'] || 0);
     const walls    = (teamRoles['Wall/Tank'] || 0) + (teamRoles['Support/Utility'] || 0);
 
-    // 4. Type overlap penalty — penalise adding more of already-common types
     const teamTypeCount = {};
     filled.forEach(p => p.types.forEach(t => { teamTypeCount[t] = (teamTypeCount[t] || 0) + 1; }));
 
@@ -643,7 +705,6 @@
       const role = determineRole(p);
 
       // --- A. Offensive coverage score ---
-      // +8 per newly covered type, diminishing if already covered
       const myCoverage = getSTABCoverage(p.types);
       let newCoverage = 0;
       const coveredLabels = [];
@@ -660,10 +721,9 @@
       }
 
       // --- B. Defensive synergy score ---
-      // +12 for immunity to a shared team weakness, +6 for resistance
       let defScore = 0;
       Object.entries(sharedWeaknesses).forEach(([attackType, count]) => {
-        if (count < 2) return; // only care about shared weaknesses
+        if (count < 2) return;
         const eff = getDefensiveEffectiveness(attackType, p.types);
         if (eff === 0) {
           defScore += 12;
@@ -701,10 +761,16 @@
       score -= overlapPenalty;
       if (overlapPenalty >= 10) reasons.push('⚠️ Type overlap with team');
 
-      // --- E. BST quality bonus (small, not dominant) ---
-      const bst = Object.values(p.stats).reduce((a, b) => a + b, 0);
-      if (bst >= 600) { score += 8;  reasons.push('💪 High BST (600+)'); }
-      else if (bst >= 540) { score += 4; }
+      // --- E. Tier quality score (replaces BST bonus) ---
+      const { score: tierScore, tierLabel } = getTierScore(p);
+      score += Math.min(tierScore, 25);
+      if (tierLabel === 'ubers') {
+        reasons.push('🔥 Ubers-tier powerhouse');
+      } else if (tierLabel === 'ou') {
+        reasons.push('⚡ OU-tier — top competitive pick');
+      } else if (tierLabel === 'uu' || tierLabel === 'ru') {
+        reasons.push(`🏆 High-tier competitive (${tierLabel.toUpperCase()})`);
+      }
 
       // --- F. Easy difficulty: common spawn bonus ---
       let rarity = 'rare';
@@ -717,7 +783,8 @@
 
       if (reasons.length === 0) reasons.push('⚖️ General type synergy');
 
-      return { pokemon: p, score, role, reasons, rarity, bst };
+      const bst = Object.values(p.stats).reduce((a, b) => a + b, 0);
+      return { pokemon: p, score, role, reasons, rarity, bst, tierLabel };
     })
     .filter(s => s.score > 5)
     .sort((a, b) => b.score - a.score)
@@ -733,16 +800,14 @@
     const modalHtml = `
       <div class="pokemon-selector-modal">
         <h3>💡 Smart Suggestions for Slot ${slotIndex + 1}</h3>
-        <p style="color:var(--text-muted);margin-bottom:15px;font-size:0.85rem;">Ranked by type synergy, coverage & role balance</p>
+        <p style="color:var(--text-muted);margin-bottom:15px;font-size:0.85rem;">Ranked by type synergy, coverage, role balance & competitive tier</p>
         <div class="selector-results" style="max-height:60vh;overflow-y:auto;">
           ${suggestions.map((s, idx) => {
             const p = s.pokemon;
             const types = p.types.map(t => `<span class="type-badge type-${t}">${t}</span>`).join('');
-            const rarityLabel = (p.isLegendary || p.isMythical)
+            const tierDisplay = (p.isLegendary || p.isMythical)
               ? '<span style="color:#ffd700;">✨ Legendary</span>'
-              : s.rarity === 'common'
-                ? '<span style="color:#4ade80;">📍 Common spawn</span>'
-                : '<span style="color:#94a3b8;">📍 Rare spawn</span>';
+              : `<span style="color:#a78bfa;">${formatTierLabel(s.tierLabel)}</span>`;
             return `
               <div class="selector-pokemon" onclick="addToTeam(${slotIndex}, ${p.id}, '${p.cleanName}')" style="cursor:pointer;position:relative;">
                 <div style="position:absolute;top:5px;right:5px;background:rgba(0,0,0,0.85);padding:2px 7px;border-radius:4px;font-size:0.7rem;font-weight:bold;color:#4ade80;">
@@ -753,7 +818,7 @@
                 <div class="selector-pokemon-info">
                   <div class="selector-pokemon-name">${p.name}</div>
                   <div class="selector-pokemon-types">${types}</div>
-                  <div style="font-size:0.72rem;color:var(--text-muted);margin-top:4px;">BST: ${s.bst} | ${rarityLabel}</div>
+                  <div style="font-size:0.72rem;color:var(--text-muted);margin-top:4px;">BST: ${s.bst} | ${tierDisplay}</div>
                   <div style="font-size:0.68rem;color:var(--text-secondary);margin-top:5px;line-height:1.4;">${s.reasons.slice(0, 3).join('<br>')}</div>
                 </div>
               </div>`;
@@ -792,6 +857,7 @@
             const types = p.types.map(t => `<span class="type-badge type-${t}">${t}</span>`).join('');
             const role  = determineRole(p);
             const bst   = Object.values(p.stats).reduce((a,b)=>a+b,0);
+            const { tierLabel } = getTierScore(p);
             return `
               <div class="selector-pokemon" onclick="addToTeam(${slotIndex}, ${p.id}, '${p.cleanName}')" style="cursor:pointer;position:relative;">
                 <div style="position:absolute;top:5px;left:5px;font-size:1.2rem;" title="${role}">${getRoleIcon(role)}</div>
@@ -799,7 +865,7 @@
                 <div class="selector-pokemon-info">
                   <div class="selector-pokemon-name">${p.name}</div>
                   <div class="selector-pokemon-types">${types}</div>
-                  <div style="font-size:0.72rem;color:var(--text-muted);margin-top:4px;">BST: ${bst}</div>
+                  <div style="font-size:0.72rem;color:var(--text-muted);margin-top:4px;">BST: ${bst} | <span style="color:#a78bfa;">${formatTierLabel(tierLabel)}</span></div>
                 </div>
               </div>`;
           }).join('')}
