@@ -158,15 +158,31 @@ function getTierSortRank(tier) {
 // their original relative order (e.g. two OU sets stay in DB order).
 function sortStrategiesByTier(strategies) {
   return strategies
-    .map((s, i) => ({ s, i }))             // attach original index
+    .map((s, i) => ({ s, i }))
     .sort((a, b) => {
       const rankDiff = getTierSortRank(a.s.tier) - getTierSortRank(b.s.tier);
-      return rankDiff !== 0 ? rankDiff : a.i - b.i;  // stable tiebreak
+      return rankDiff !== 0 ? rankDiff : a.i - b.i;
     })
     .map(({ s }) => s);
 }
 
-// --- HELPER: Format Pokémon display name from base name + optional form badge ---
+// --- HELPER: Pick the best allRanks entry by tier hierarchy ---
+// Always returns the entry whose tier ranks highest in STRATEGY_TIER_ORDER,
+// regardless of which tab is active. Falls back to the highest-usage entry
+// for tiers not in the order list (e.g. obscure format entries).
+function getBestRankEntry(allRanks) {
+  if (!allRanks || allRanks.length === 0) return null;
+  return allRanks.reduce((best, cur) => {
+    const bestRank = getTierSortRank(best.tier);
+    const curRank  = getTierSortRank(cur.tier);
+    if (curRank < bestRank) return cur;
+    // Same rank (both unknown tiers) — prefer higher usage
+    if (curRank === bestRank && parseFloat(cur.usage) > parseFloat(best.usage)) return cur;
+    return best;
+  });
+}
+
+// --- HELPER: Format Pokémon display name ---
 function getDisplayName(baseName, isAltForm) {
   return baseName.charAt(0).toUpperCase() + baseName.slice(1).replace(/-/g, " ");
 }
@@ -307,17 +323,17 @@ async function openModal(id, cleanName, altFormCleanName = null) {
       <div class="stat-total">Total BST: <strong>${totalBST}</strong></div>
     </div>` : "";
 
+  // --- Tier badge: always show the highest-ranked tier from allRanks ---
+  const bestRank    = getBestRankEntry(dbEntry.allRanks);
+  const currentBadge = bestRank ? bestRank.tier.toUpperCase() : "UNTIERED";
+  const usageBadge   = bestRank && parseFloat(bestRank.usage) > 0
+    ? `<span class="usage-badge">${bestRank.usage}% usage</span>`
+    : "";
+
   // Strategies — sort by tier before rendering the dropdown
-  let stats = null;
-  if (dbEntry.allRanks && dbEntry.allRanks.length > 0) {
-    stats = currentTab === "all"
-      ? dbEntry.allRanks.reduce((prev, cur) => parseFloat(prev.usage) > parseFloat(cur.usage) ? prev : cur)
-      : (dbEntry.allRanks.find((r) => r.tier.toLowerCase().includes(currentTab.replace("s", ""))) || dbEntry.allRanks[0]);
-  }
   const hasStrategies = dbEntry.strategies && dbEntry.strategies.length > 0;
   if (hasStrategies) {
     window.smogonUrl         = `https://www.smogon.com/dex/sv/pokemon/${actualCleanName}/`;
-    // Sort strategies so the highest competitive tier appears first.
     window.currentStrategies = sortStrategiesByTier(dbEntry.strategies);
   }
   const dropdownHtml = hasStrategies && dbEntry.strategies.length > 1
@@ -388,11 +404,9 @@ async function openModal(id, cleanName, altFormCleanName = null) {
         </button>`).join("")}
     </div>` : "";
 
-  const baseEntry = allPokemonData[cleanName] || dbEntry;
+  const baseEntry   = allPokemonData[cleanName] || dbEntry;
   const displayName = getDisplayName(baseEntry.name || cleanName);
 
-  const currentBadge = stats ? stats.tier.toUpperCase() : "UNTIERED";
-  const usageBadge   = stats && parseFloat(stats.usage) > 0 ? `<span class="usage-badge">${stats.usage}% usage</span>` : "";
   const sourceTag    = dbEntry.source ? `<span class="source-tag">[Source: ${dbEntry.source}]</span>` : "";
   const isFav        = favorites.includes(altFormCleanName || cleanName);
   const favBtnHtml   = `<button class="fav-btn" id="favBtn" title="${isFav ? "Remove from favorites" : "Add to favorites"}">${isFav ? "⭐" : "🤍"}</button>`;
