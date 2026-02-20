@@ -80,14 +80,16 @@
         </div>
 
         <!-- Rarity dropdown -->
+        <!-- Bug fix #1: removed "active" class from non-legendary option.
+             Default is "All Pokémon" to match filterState.rarity = "all" in main.js. -->
         <div class="filter-dropdown-wrapper" id="rarityDropdownWrapper">
           <button class="filter-dropdown-btn" id="rarityDropdownBtn">
             ⭐ Rarity ▾
           </button>
           <div class="filter-dropdown-panel" id="rarityDropdownPanel">
-            <div class="rarity-option" data-value="all">All Pokémon</div>
+            <div class="rarity-option active" data-value="all">All Pokémon</div>
             <div class="rarity-option" data-value="legendary">Legendary/Mythical</div>
-            <div class="rarity-option active" data-value="non-legendary">Non-Legendary</div>
+            <div class="rarity-option" data-value="non-legendary">Non-Legendary</div>
           </div>
         </div>
 
@@ -103,12 +105,12 @@
       </div>
 
       <div id="aboutPanel" style="display:none" class="glass-panel"></div>
-      
+
       <!-- Team Builder Panel -->
       <div id="teamBuilderPanel" style="display:none" class="glass-panel">
         <div id="teamBuilderContainer"></div>
       </div>
-      
+
       <!-- Type Chart Panel -->
       <div id="typeChartPanel" style="display:none" class="glass-panel">
         <div id="typeChartContainer"></div>
@@ -148,7 +150,8 @@
     </footer>
 
     <!-- Scripts loaded in dependency order -->
-    <script src="./scripts/imageLoader.js"></script>
+    <!-- imageLoader.js intentionally removed: it was dead code (observe() was never called).
+         Native loading="lazy" on <img> tags handles lazy loading directly. -->
     <script src="./scripts/typeChart.js"></script>
     <script src="./scripts/typeEffectiveness.js"></script>
     <script src="./scripts/teamBuilder.js"></script>
