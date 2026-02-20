@@ -195,18 +195,6 @@
 
   // ============================================================
   // TIER QUALITY SCORE
-  //
-  // Tier hierarchy (most → least competitive):
-  //   ubers → ou → uu → ru → nu → pu → zu → lc → Untiered
-  //
-  // A tier is only credited if the Pokémon has meaningful usage there:
-  //   - ubers / ou / uu : requires usage >= 1.0%
-  //   - ru and below   : requires usage >= 0.5%
-  // This prevents Pokémon that are merely *legal* in a tier (e.g.
-  // Chesnaught in Ubers with 0.16%) from being labelled as that tier.
-  //
-  // Falls back down the ladder until a valid tier is found.
-  // Returns { score, tierLabel } for use in smartSuggest + display.
   // ============================================================
   const TIER_SCORES = {
     'ubers':    20,
@@ -220,8 +208,6 @@
     'Untiered':  0
   };
 
-  // Minimum usage % required to credit a tier as the Pokémon's home.
-  // High-profile tiers need a higher bar to avoid ghost appearances.
   const TIER_MIN_USAGE = {
     'ubers': 1.0,
     'ou':    1.0,
@@ -233,8 +219,6 @@
     'lc':    0.5
   };
 
-  // Tiers we ignore for the "best tier" calculation — format-specific or
-  // non-standard tiers that don't map cleanly to the main ladder.
   const IGNORED_TIERS = new Set([
     'vgc2025', 'vgc2024', 'doublesou', 'monotype', 'nationaldex',
     'nationaldexuu', 'nationaldexru', 'nationaldexmonotype', 'nationaldexdoubles',
@@ -254,16 +238,11 @@
     let bestUsage = 0;
 
     fullData.allRanks.forEach(entry => {
-      const tier  = entry.tier;
+      const tier = entry.tier;
       if (IGNORED_TIERS.has(tier)) return;
-
-      const usage   = parseFloat(entry.usage) || 0;
+      const usage    = parseFloat(entry.usage) || 0;
       const minUsage = TIER_MIN_USAGE[tier] ?? 0.5;
-
-      // Skip this tier if the Pokémon doesn't have enough usage to
-      // genuinely belong there (avoids ghost Ubers/OU labels).
       if (usage < minUsage) return;
-
       const base = TIER_SCORES[tier] ?? 0;
       if (base > bestScore || (base === bestScore && usage > bestUsage)) {
         bestScore = base;
@@ -272,14 +251,11 @@
       }
     });
 
-    // Fine-grained bonus from usage % within best tier (capped at +5)
     const usageBonus = Math.min(bestUsage / 3, 5);
     const totalScore = Math.round(bestScore + usageBonus);
-
     return { score: totalScore, tierLabel: bestTier };
   }
 
-  // Human-readable tier label for the UI
   function formatTierLabel(tierLabel) {
     const map = {
       'ubers': '🔥 Ubers',
@@ -658,34 +634,56 @@
   }
 
   // ============================================================
-  // SMART SUGGESTION — Real scoring formula
-  //
-  // Score breakdown:
-  //   A. Offensive coverage  — up to +40 pts
-  //   B. Defensive synergy   — up to +36 pts
-  //   C. Role balance        — up to +20 pts
-  //   D. Type overlap penalty — up to -20 pts
-  //   E. Tier quality        — up to +25 pts
-  //   F. Easy spawn bonus    — +10 pts (easy mode only)
+  // SMART SUGGESTION
   // ============================================================
+
+  // Bug fix #10: buildCandidates now has a two-phase approach for "easy" mode.
+  // Phase 1: try to find Pokémon with common/frequent spawn rarity (original behaviour).
+  // Phase 2: if phase 1 returns zero results (because localDB rarity strings don't
+  //          contain "common"/"frequent"), fall back to BST-range filter only so the
+  //          suggestion modal never shows an empty result / unexpected alert.
   function buildCandidates(allowLegendaries, difficulty) {
     const allPokemonData = window.localDB?.pokemon || window.localDB || {};
-    return Object.values(allPokemonData).filter(p => {
+
+    const baseFilter = p => {
       if (window.isMegaForm(p.cleanName)) return false;
       if (currentTeam.some(tp => tp && tp.id === p.id)) return false;
       if (!allowLegendaries && (p.isLegendary || p.isMythical)) return false;
       if (!p.stats) return false;
-      const bst = Object.values(p.stats).reduce((a, b) => a + b, 0);
-      if (difficulty === 'competitive' && bst < 520) return false;
-      if (difficulty === 'balanced'    && bst < 460) return false;
-      if (difficulty === 'easy') {
-        if (bst < 400 || bst > 570) return false;
-        const hasCommon = p.locations?.some(loc =>
-          loc.rarity && (loc.rarity.toLowerCase().includes('common') || loc.rarity.toLowerCase().includes('frequent'))
-        );
-        if (!hasCommon) return false;
-      }
       return true;
+    };
+
+    const bst = p => Object.values(p.stats).reduce((a, b) => a + b, 0);
+
+    if (difficulty === 'competitive') {
+      return Object.values(allPokemonData).filter(p => baseFilter(p) && bst(p) >= 520);
+    }
+    if (difficulty === 'balanced') {
+      return Object.values(allPokemonData).filter(p => baseFilter(p) && bst(p) >= 460);
+    }
+
+    // --- Easy mode ---
+    // Phase 1: prefer Pokémon with a common/frequent spawn entry in the BST window.
+    const easyPhase1 = Object.values(allPokemonData).filter(p => {
+      if (!baseFilter(p)) return false;
+      const b = bst(p);
+      if (b < 400 || b > 570) return false;
+      return p.locations?.some(loc =>
+        loc.rarity && (
+          loc.rarity.toLowerCase().includes('common') ||
+          loc.rarity.toLowerCase().includes('frequent')
+        )
+      );
+    });
+
+    if (easyPhase1.length > 0) return easyPhase1;
+
+    // Phase 2 fallback: no common-spawn Pokémon found — relax to BST range only.
+    // This prevents the Smart Suggest modal from returning 0 results.
+    return Object.values(allPokemonData).filter(p => {
+      if (!baseFilter(p)) return false;
+      const b = bst(p);
+      return b >= 400 && b <= 570;
     });
   }
 
@@ -804,8 +802,8 @@
 
       if (reasons.length === 0) reasons.push('⚖️ General type synergy');
 
-      const bst = Object.values(p.stats).reduce((a, b) => a + b, 0);
-      return { pokemon: p, score, role, reasons, rarity, bst, tierLabel };
+      const b = Object.values(p.stats).reduce((a, c) => a + c, 0);
+      return { pokemon: p, score, role, reasons, rarity, bst: b, tierLabel };
     })
     .filter(s => s.score > 5)
     .sort((a, b) => b.score - a.score)
@@ -846,7 +844,7 @@
           }).join('')}
         </div>
       </div>`;
-    const overlay  = document.getElementById('modalOverlay');
+    const overlay   = document.getElementById('modalOverlay');
     const modalBody = document.getElementById('modalBody');
     modalBody.innerHTML = modalHtml;
     overlay.classList.add('active');
@@ -877,7 +875,7 @@
           ${picks.map(p => {
             const types = p.types.map(t => `<span class="type-badge type-${t}">${t}</span>`).join('');
             const role  = determineRole(p);
-            const bst   = Object.values(p.stats).reduce((a,b)=>a+b,0);
+            const b     = Object.values(p.stats).reduce((a, c) => a + c, 0);
             const { tierLabel } = getTierScore(p);
             return `
               <div class="selector-pokemon" onclick="addToTeam(${slotIndex}, ${p.id}, '${p.cleanName}')" style="cursor:pointer;position:relative;">
@@ -886,7 +884,7 @@
                 <div class="selector-pokemon-info">
                   <div class="selector-pokemon-name">${p.name}</div>
                   <div class="selector-pokemon-types">${types}</div>
-                  <div style="font-size:0.72rem;color:var(--text-muted);margin-top:4px;">BST: ${bst} | <span style="color:#a78bfa;">${formatTierLabel(tierLabel)}</span></div>
+                  <div style="font-size:0.72rem;color:var(--text-muted);margin-top:4px;">BST: ${b} | <span style="color:#a78bfa;">${formatTierLabel(tierLabel)}</span></div>
                 </div>
               </div>`;
           }).join('')}

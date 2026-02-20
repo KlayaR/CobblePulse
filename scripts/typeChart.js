@@ -1,77 +1,75 @@
-// --- TYPE EFFECTIVENESS CHART ---
-const TYPE_CHART = {
-  normal:   { ghost: 0, fighting: 2 },
-  fire:     { fire: 0.5, water: 2, grass: 0.5, ice: 0.5, ground: 2, rock: 2, bug: 0.5, steel: 0.5, fairy: 0.5 },
-  water:    { fire: 0.5, water: 0.5, grass: 2, electric: 2, ice: 0.5, steel: 0.5 },
-  grass:    { fire: 2, water: 0.5, grass: 0.5, electric: 0.5, ice: 2, poison: 2, ground: 0.5, flying: 2, bug: 2 },
-  electric: { electric: 0.5, ground: 2, flying: 0.5, steel: 0.5 },
-  ice:      { fire: 2, water: 1, ice: 0.5, fighting: 2, rock: 2, steel: 2 },
-  fighting: { flying: 2, psychic: 2, bug: 0.5, rock: 0.5, dark: 0.5, fairy: 2 },
-  poison:   { grass: 0.5, fighting: 0.5, poison: 0.5, ground: 2, psychic: 2, bug: 0.5, fairy: 0.5 },
-  ground:   { water: 2, grass: 2, electric: 0, ice: 2, poison: 0.5, rock: 0.5 },
-  flying:   { grass: 0.5, electric: 2, fighting: 0.5, ground: 0, ice: 2, bug: 0.5, rock: 2 },
-  psychic:  { fighting: 0.5, psychic: 0.5, bug: 2, ghost: 2, dark: 2 },
-  bug:      { grass: 0.5, fire: 2, fighting: 0.5, ground: 0.5, flying: 2, rock: 2 },
-  rock:     { normal: 0.5, fire: 0.5, water: 2, grass: 2, fighting: 2, poison: 0.5, ground: 2, flying: 0.5, steel: 2 },
-  ghost:    { normal: 0, fighting: 0, poison: 0.5, bug: 0.5, ghost: 2, dark: 2 },
-  dragon:   { fire: 0.5, water: 0.5, grass: 0.5, electric: 0.5, ice: 2, dragon: 2, fairy: 2 },
-  dark:     { fighting: 2, psychic: 0, bug: 2, ghost: 0.5, dark: 0.5, fairy: 2 },
-  steel:    { normal: 0.5, grass: 0.5, ice: 0.5, poison: 0, flying: 0.5, psychic: 0.5, bug: 0.5, rock: 0.5, dragon: 0.5, steel: 0.5, fairy: 0.5, fire: 2, fighting: 2, ground: 2 },
-  fairy:    { fighting: 0.5, poison: 2, bug: 0.5, dragon: 0, dark: 0.5, steel: 2 },
-};
-
 // --- ABILITY IMMUNITIES MAP ---
+// (TYPE_CHART_DATA is defined in typeEffectiveness.js and exposed as window.TYPE_CHART_DATA)
+// Bug fix #9: removed the duplicate TYPE_CHART constant that lived here.
+// getWeaknesses() and getImmunities() now read from window.TYPE_CHART_DATA so there
+// is a single source of truth for type matchups shared by the modal, teamBuilder, and
+// the interactive type-chart tab.
+
 const ABILITY_IMMUNITIES = {
-  levitate:         { type: "ground",   label: "Ground (Levitate)" },
-  "flash-fire":     { type: "fire",     label: "Fire (Flash Fire)" },
-  "water-absorb":   { type: "water",    label: "Water (Water Absorb)" },
-  "dry-skin":       { type: "water",    label: "Water (Dry Skin)" },
-  "volt-absorb":    { type: "electric", label: "Electric (Volt Absorb)" },
-  "motor-drive":    { type: "electric", label: "Electric (Motor Drive)" },
-  "lightning-rod":  { type: "electric", label: "Electric (Lightning Rod)" },
-  "sap-sipper":     { type: "grass",    label: "Grass (Sap Sipper)" },
-  "earth-eater":    { type: "ground",   label: "Ground (Earth Eater)" },
-  "well-baked-body":{ type: "fire",     label: "Fire (Well-Baked Body)" },
-  "wind-rider":     { type: "flying",   label: "Flying (Wind Rider)" },
-  soundproof:       { type: "sound",    label: "Sound moves (Soundproof)" },
-  bulletproof:      { type: "bullet",   label: "Ball/Bomb moves (Bulletproof)" },
+  levitate:          { type: "ground",   label: "Ground (Levitate)" },
+  "flash-fire":      { type: "fire",     label: "Fire (Flash Fire)" },
+  "water-absorb":    { type: "water",    label: "Water (Water Absorb)" },
+  "dry-skin":        { type: "water",    label: "Water (Dry Skin)" },
+  "volt-absorb":     { type: "electric", label: "Electric (Volt Absorb)" },
+  "motor-drive":     { type: "electric", label: "Electric (Motor Drive)" },
+  "lightning-rod":   { type: "electric", label: "Electric (Lightning Rod)" },
+  "sap-sipper":      { type: "grass",    label: "Grass (Sap Sipper)" },
+  "earth-eater":     { type: "ground",   label: "Ground (Earth Eater)" },
+  "well-baked-body": { type: "fire",     label: "Fire (Well-Baked Body)" },
+  "wind-rider":      { type: "flying",   label: "Flying (Wind Rider)" },
+  soundproof:        { type: "sound",    label: "Sound moves (Soundproof)" },
+  bulletproof:       { type: "bullet",   label: "Ball/Bomb moves (Bulletproof)" },
 };
 
+// Bug fix #9: derive weaknesses from window.TYPE_CHART_DATA (weaknesses/resistances/immunities
+// format) instead of the old local TYPE_CHART (attacker-keyed multiplier format).
+// Falls back gracefully if TYPE_CHART_DATA is not yet loaded.
 function getWeaknesses(types) {
-  let multipliers = {};
-  for (let attacker in TYPE_CHART) {
+  const TC = window.TYPE_CHART_DATA;
+  if (!TC) return {};
+
+  const multipliers = {};
+
+  // For every possible attacking type, compute the combined multiplier
+  // against this Pokémon's type combination.
+  Object.keys(TC).forEach(attacker => {
     let mult = 1;
-    types.forEach((defender) => {
-      const row = TYPE_CHART[attacker] || {};
-      mult *= row[defender] !== undefined ? row[defender] : 1;
+    types.forEach(defender => {
+      const data = TC[defender];
+      if (!data) return;
+      if (data.immunities && data.immunities.includes(attacker))  { mult *= 0; }
+      else if (data.weaknesses  && data.weaknesses.includes(attacker))  { mult *= 2; }
+      else if (data.resistances && data.resistances.includes(attacker)) { mult *= 0.5; }
     });
     if (mult > 1) multipliers[attacker] = mult;
-  }
+  });
+
   return multipliers;
 }
 
 function getImmunities(types, abilities) {
-  let immunities = [];
+  const TC = window.TYPE_CHART_DATA;
+  const immunities = [];
 
-  const typeImmunityMap = {
-    normal: [], fire: [], water: [], electric: ["ground"], grass: [], ice: [],
-    fighting: ["ghost"], poison: [], ground: [], flying: ["ground"], psychic: [],
-    bug: [], rock: [], ghost: ["normal", "fighting"], dragon: [], dark: ["psychic"],
-    steel: ["poison"], fairy: ["dragon"],
-  };
-
-  types.forEach((t) => {
-    (typeImmunityMap[t] || []).forEach((immune) => {
-      if (!immunities.find((i) => i.type === immune)) {
-        immunities.push({ type: immune, label: immune, source: "typing" });
+  if (TC) {
+    // Derive type-based immunities directly from TYPE_CHART_DATA
+    Object.keys(TC).forEach(attacker => {
+      let mult = 1;
+      types.forEach(defender => {
+        const data = TC[defender];
+        if (!data) return;
+        if (data.immunities && data.immunities.includes(attacker)) mult *= 0;
+      });
+      if (mult === 0 && !immunities.find(i => i.type === attacker)) {
+        immunities.push({ type: attacker, label: attacker, source: "typing" });
       }
     });
-  });
+  }
 
-  (abilities || []).forEach((a) => {
-    const abilityImmunity = ABILITY_IMMUNITIES[a.name];
-    if (abilityImmunity && !immunities.find((i) => i.type === abilityImmunity.type)) {
-      immunities.push({ type: abilityImmunity.type, label: abilityImmunity.label, source: "ability", isHidden: a.isHidden });
+  (abilities || []).forEach(a => {
+    const ab = ABILITY_IMMUNITIES[a.name];
+    if (ab && !immunities.find(i => i.type === ab.type)) {
+      immunities.push({ type: ab.type, label: ab.label, source: "ability", isHidden: a.isHidden });
     }
   });
 
