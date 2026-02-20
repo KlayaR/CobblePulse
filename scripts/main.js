@@ -4,6 +4,9 @@ let localDB     = {};
 let currentTab  = "about";
 let favorites   = JSON.parse(localStorage.getItem("cobblePulseFavorites") || "[]");
 
+// Bug fix #1: default rarity state must match the HTML default ("all")
+// The HTML rarity dropdown had "non-legendary" visually active by default
+// but filterState.rarity was "all" — now both default to "all".
 let filterState = {
   types: [],
   hasSpawns: false,
@@ -36,11 +39,12 @@ const POKEMON_TYPES = ["normal","fire","water","grass","electric","ice","fightin
 
 // --- RENDER TABLE ---
 function renderTable(pokemonArray) {
-  DOM.list.innerHTML = `<tr><td colspan="4" class="loading">Loading...</td></tr>`;
+  // Bug fix #11: removed the intermediate "Loading..." flash.
+  // Only show loading state if there is genuinely no data yet.
   let html = "";
-  
+
   const allPokemonData = window.localDB?.pokemon || window.localDB || {};
-  
+
   for (const p of pokemonArray) {
     if (!p.types || !Array.isArray(p.types)) p.types = [];
     const typeHtml = p.types.map((t) => `<span class="type-badge type-${t}">${t}</span>`).join("");
@@ -57,7 +61,6 @@ function renderTable(pokemonArray) {
     const rankColor = isCompetitiveTab ? "var(--accent-primary)" : "var(--text-muted)";
     const isFavRow  = favorites.includes(p.cleanName) ? "⭐ " : "";
 
-    // Prefetch evo chain on hover for instant modal open
     html += `
       <tr onclick="openModal(${p.id}, '${p.cleanName}')" onmouseenter="prefetchPokemonDetails(${p.id})">
         <td><strong style="color:${rankColor};">${rankText}</strong></td>
@@ -190,6 +193,22 @@ function setupEventListeners() {
   DOM.closeBtn.addEventListener("click", closeModal);
   DOM.modalOverlay.addEventListener("click", (e) => { if (e.target === DOM.modalOverlay) closeModal(); });
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
+
+  // Bug fix #6: restore the correct tab when the user presses browser back/forward.
+  window.addEventListener("popstate", (e) => {
+    const state = e.state || {};
+    // Close modal if no modal in state
+    if (!state.modal) DOM.modalOverlay.classList.remove("active");
+    // Restore tab
+    const tabToRestore = state.tab || "about";
+    const tabBtn = document.querySelector(`[data-tab="${tabToRestore}"]`);
+    if (tabBtn && tabBtn !== document.querySelector(".tab-btn.active")) {
+      DOM.tabs.forEach((t) => t.classList.remove("active"));
+      tabBtn.classList.add("active");
+      currentTab = tabToRestore;
+      applyFilters();
+    }
+  });
 }
 
 // --- INIT ---
@@ -200,34 +219,42 @@ async function init() {
   try {
     if (DOM.loadingSkeleton) DOM.loadingSkeleton.style.display = "block";
 
-    const response = await fetch("./localDB.js?v=" + Date.now());
+    // Bug fix #3: load localDB.json directly instead of eval()-ing localDB.js.
+    // This is safer (proper JSON parse errors), avoids eval security concerns,
+    // and localDB.json already exists alongside localDB.js.
+    const response = await fetch("./localDB.json?v=" + Date.now());
     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-    
-    const scriptText = await response.text();
-    eval(scriptText);
 
-    const dbData      = window.localDB || {};
+    const dbData      = await response.json();
     const pokemonData = dbData.pokemon || dbData;
-    
+
     window.localDB = dbData;
     allPokemon     = Object.values(pokemonData);
 
     // Build alt-forms index (mega/alola/galar/hisui/paldea etc.) once data is loaded
     buildAltFormsIndex();
-    
+
     if (DOM.loadingSkeleton) DOM.loadingSkeleton.style.display = "none";
 
-    if (dbData._meta && dbData._meta.buildTimestamp) {
-      const buildDate = new Date(dbData._meta.buildTimestamp);
-      const dateStr   = buildDate.toLocaleDateString("en-US", {
-        year: "numeric", month: "short", day: "numeric",
-        hour: "2-digit", minute: "2-digit",
-      });
-      const timestampEl = document.getElementById("buildTimestamp");
-      if (timestampEl) {
-        timestampEl.textContent = `Last Updated: ${dateStr}`;
-        timestampEl.style.display = "inline";
+    // Bug fix #13: gracefully handle missing or renamed _meta.buildTimestamp.
+    try {
+      if (dbData._meta && dbData._meta.buildTimestamp) {
+        const buildDate = new Date(dbData._meta.buildTimestamp);
+        // Validate the date is actually parseable
+        if (!isNaN(buildDate.getTime())) {
+          const dateStr = buildDate.toLocaleDateString("en-US", {
+            year: "numeric", month: "short", day: "numeric",
+            hour: "2-digit", minute: "2-digit",
+          });
+          const timestampEl = document.getElementById("buildTimestamp");
+          if (timestampEl) {
+            timestampEl.textContent = `Last Updated: ${dateStr}`;
+            timestampEl.style.display = "inline";
+          }
+        }
       }
+    } catch (_) {
+      // Timestamp display is non-critical; swallow silently.
     }
 
     applyFilters();
@@ -252,7 +279,7 @@ async function init() {
   } catch (e) {
     console.error("Data load failed:", e);
     if (DOM.loadingSkeleton) DOM.loadingSkeleton.style.display = "none";
-    DOM.list.innerHTML = `<tr><td colspan="4" class="loading"><strong>Error loading data:</strong> ${e.message}<br><br>Make sure localDB.js is in the same directory as index.html.</td></tr>`;
+    DOM.list.innerHTML = `<tr><td colspan="4" class="loading"><strong>Error loading data:</strong> ${e.message}<br><br>Make sure localDB.json is in the same directory as index.html.</td></tr>`;
   }
 }
 
