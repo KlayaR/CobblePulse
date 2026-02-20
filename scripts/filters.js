@@ -53,6 +53,19 @@ function getTierRank(p) {
   return r ? (r.rank || 999) : 999;
 }
 
+// Bug fix #4 & #5: init guards so the Type Chart and Team Builder panels
+// are only built once, not torn down and rebuilt on every tab switch.
+// Switching away and back preserves any user interaction (selected type,
+// open suggestion modal state, scroll position).
+let _typeChartInitialized  = false;
+let _teamBuilderInitialized = false;
+
+// Call this whenever the DB reloads so panels are rebuilt with fresh data.
+function resetPanelInitFlags() {
+  _typeChartInitialized  = false;
+  _teamBuilderInitialized = false;
+}
+
 // --- MAIN FILTER & RENDER ORCHESTRATOR ---
 function applyFilters() {
   const query  = DOM.searchInput.value.toLowerCase();
@@ -65,7 +78,7 @@ function applyFilters() {
   }
 
   // Get special panel elements
-  const typeChartPanel = document.getElementById("typeChartPanel");
+  const typeChartPanel  = document.getElementById("typeChartPanel");
   const teamBuilderPanel = document.getElementById("teamBuilderPanel");
 
   // --- TEAM BUILDER TAB ---
@@ -75,18 +88,17 @@ function applyFilters() {
     if (typeChartPanel) typeChartPanel.style.display = "none";
     if (teamBuilderPanel) {
       teamBuilderPanel.style.display = "block";
-      // Initialize team builder if function exists
-      if (typeof initTeamBuilder === "function") {
+      // Bug fix #5: only call initTeamBuilder() once; guard against re-init.
+      if (!_teamBuilderInitialized && typeof initTeamBuilder === "function") {
         initTeamBuilder();
+        _teamBuilderInitialized = true;
       }
     }
     return;
   }
 
   // Hide team builder panel on other tabs
-  if (teamBuilderPanel) {
-    teamBuilderPanel.style.display = "none";
-  }
+  if (teamBuilderPanel) teamBuilderPanel.style.display = "none";
 
   // --- TYPE CHART TAB ---
   if (currentTab === "typechart") {
@@ -94,18 +106,17 @@ function applyFilters() {
     DOM.tableContainer.style.display = "none";
     if (typeChartPanel) {
       typeChartPanel.style.display = "block";
-      // Initialize type chart if function exists
-      if (typeof initTypeChart === "function") {
+      // Bug fix #4: only call initTypeChart() once; guard against re-init.
+      if (!_typeChartInitialized && typeof initTypeChart === "function") {
         initTypeChart();
+        _typeChartInitialized = true;
       }
     }
     return;
   }
 
   // Hide type chart panel on other tabs
-  if (typeChartPanel) {
-    typeChartPanel.style.display = "none";
-  }
+  if (typeChartPanel) typeChartPanel.style.display = "none";
 
   // --- ABOUT TAB ---
   if (currentTab === "about") {
@@ -172,12 +183,11 @@ function applyFilters() {
       return;
     }
   } else if (currentTab === "all") {
-    // NEW: Filter out Mega forms from main list
     filtered = allPokemon.filter((p) => !isMegaForm(p.cleanName));
   } else {
     // --- TIER TABS: filter to only Pokémon in this tier (and exclude Megas) ---
     filtered = allPokemon.filter((p) => {
-      if (isMegaForm(p.cleanName)) return false; // Hide Megas from tier tabs
+      if (isMegaForm(p.cleanName)) return false;
       const dbEntry = allPokemonData[p.cleanName] || allPokemonData[p.name];
       if (!dbEntry || !dbEntry.allRanks) return false;
       return dbEntry.allRanks.some((r) =>
@@ -185,7 +195,6 @@ function applyFilters() {
         (currentTab === "ubers" && r.tier.toLowerCase() === "uber")
       );
     });
-    // Tier tabs always pre-sorted by rank; slice to top 50 before user sort
     filtered.sort((a, b) => getTierRank(a) - getTierRank(b));
     filtered = filtered.slice(0, 50);
   }
@@ -197,8 +206,8 @@ function applyFilters() {
       const dbEntry = allPokemonData[p.cleanName] || allPokemonData[p.name] || {};
 
       if (searchFilters.text) {
-        const exactMatch = p.name.toLowerCase().includes(searchFilters.text) || 
-                          p.cleanName.includes(searchFilters.text) || 
+        const exactMatch = p.name.toLowerCase().includes(searchFilters.text) ||
+                          p.cleanName.includes(searchFilters.text) ||
                           p.id.toString() === searchFilters.text;
         const fuzzy = fuzzyMatch(searchFilters.text, p.name) || fuzzyMatch(searchFilters.text, p.cleanName);
         if (!exactMatch && !fuzzy) return false;
@@ -268,7 +277,6 @@ function applyFilters() {
     if (isTierTab) {
       // Already sorted by rank above — no-op
     } else {
-      // On All / Favorites, rank means nothing so fall back to dex
       filtered.sort((a, b) => (a.id || 0) - (b.id || 0));
     }
   }
