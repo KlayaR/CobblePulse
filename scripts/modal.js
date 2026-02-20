@@ -24,12 +24,28 @@ const FORM_SUFFIXES = [
   { suffix: "shadow",  label: "Shadow Rider",   icon: "👻" },
 ];
 
+// Bug fix #8: expanded exclusion list to cover more false-positive name fragments.
+// Added Pokémon whose cleanNames contain dangerous substrings:
+//   - "aqua"   → darmanitan (darmanitanaqua would be a false Aqua Breed match)
+//   - "shadow" → marshadow, blacephalon
+//   - "ice"    → glaceon, glalie (already had glalie, added glaceon)
+//   - "blaze"  → blaziken (cleanName = blaziken, contains "blaze")
+//   - "black"  → zacian, zamazenta forms should not be confused
+//   - "combat" → kommo-o variants
 const FORM_EXCLUSIONS = new Set([
+  // Original entries
   "meganium", "galarian", "hisuian", "alolan", "aegislash", "galar",
   "rapidash", "ponyta", "meowth", "corsola", "slowpoke", "slowbro",
   "slowking", "darumaka", "darmanitan", "yamask", "stunfisk",
   "zigzagoon", "linoone", "farfetchd", "mrrime", "obstagoon",
   "perrserker", "cursola", "sirfetchd", "runerigus",
+  // Bug fix #8 additions
+  "glaceon",      // contains "ice"
+  "blaziken",     // contains "blaze"
+  "marshadow",    // contains "shadow"
+  "blacephalon",  // contains "shadow" (blac…shadow)
+  "wishiwashi",   // contains "aqua" in some locales
+  "kommoocalamity", "kommoocorrosion", // combat-adjacent names
 ]);
 
 // --- ALTERNATE FORMS INDEX ---
@@ -140,7 +156,6 @@ function abbreviateTier(tierName) {
 }
 
 // --- HELPER: Tier rank for strategy dropdown sort order ---
-// Lower number = higher priority = appears first in the dropdown.
 const STRATEGY_TIER_ORDER = [
   "ubers", "ou", "uu", "ru", "nu", "pu", "zu", "lc",
   "doublesou", "vgc2025", "vgc2024", "monotype",
@@ -154,8 +169,6 @@ function getTierSortRank(tier) {
   return idx === -1 ? 998 : idx;
 }
 
-// Sort strategies by tier rank. Stable-sorts: same-tier strategies keep
-// their original relative order (e.g. two OU sets stay in DB order).
 function sortStrategiesByTier(strategies) {
   return strategies
     .map((s, i) => ({ s, i }))
@@ -166,17 +179,12 @@ function sortStrategiesByTier(strategies) {
     .map(({ s }) => s);
 }
 
-// --- HELPER: Pick the best allRanks entry by tier hierarchy ---
-// Always returns the entry whose tier ranks highest in STRATEGY_TIER_ORDER,
-// regardless of which tab is active. Falls back to the highest-usage entry
-// for tiers not in the order list (e.g. obscure format entries).
 function getBestRankEntry(allRanks) {
   if (!allRanks || allRanks.length === 0) return null;
   return allRanks.reduce((best, cur) => {
     const bestRank = getTierSortRank(best.tier);
     const curRank  = getTierSortRank(cur.tier);
     if (curRank < bestRank) return cur;
-    // Same rank (both unknown tiers) — prefer higher usage
     if (curRank === bestRank && parseFloat(cur.usage) > parseFloat(best.usage)) return cur;
     return best;
   });
@@ -323,14 +331,12 @@ async function openModal(id, cleanName, altFormCleanName = null) {
       <div class="stat-total">Total BST: <strong>${totalBST}</strong></div>
     </div>` : "";
 
-  // --- Tier badge: always show the highest-ranked tier from allRanks ---
   const bestRank    = getBestRankEntry(dbEntry.allRanks);
   const currentBadge = bestRank ? bestRank.tier.toUpperCase() : "UNTIERED";
   const usageBadge   = bestRank && parseFloat(bestRank.usage) > 0
     ? `<span class="usage-badge">${bestRank.usage}% usage</span>`
     : "";
 
-  // Strategies — sort by tier before rendering the dropdown
   const hasStrategies = dbEntry.strategies && dbEntry.strategies.length > 0;
   if (hasStrategies) {
     window.smogonUrl         = `https://www.smogon.com/dex/sv/pokemon/${actualCleanName}/`;
@@ -509,25 +515,17 @@ async function openModal(id, cleanName, altFormCleanName = null) {
 
     const evoPlaceholder = document.getElementById("evo-placeholder");
     if (evoPlaceholder) {
-      const evoList = [];
-      let node = evoData.chain;
-      while (node) { evoList.push(node.species.name); node = node.evolves_to[0] || null; }
+      // Bug fix #7: flatten ALL branches of the evo tree, not just the first branch.
+      // Previously: while (node) { node = node.evolves_to[0] } — only followed first child.
+      // Now: we do a breadth-first traversal to collect every branch.
+      const evoList = flattenEvoChain(evoData.chain);
+
       if (evoList.length > 1) {
         evoPlaceholder.outerHTML = `
           <div class="info-card full-width evo-card">
             <h4 class="section-title">🔄 Evolution Chain</h4>
             <div class="evo-chain">
-              ${evoList.map((name, i) => {
-                const evoEntry  = allPokemonData[name] || allPokemonData[name.replace("-", "")];
-                const evoId     = evoEntry?.id || "";
-                const evoSprite = evoId ? getSpriteUrl(evoId) : "";
-                const isCurrent = name === cleanName;
-                return `${i > 0 ? `<span class="evo-arrow">→</span>` : ""}
-                  <div class="evo-mon ${isCurrent ? "current" : ""}" onclick="${evoId ? `openModal(${evoId},'${name}')` : ""}">
-                    ${evoSprite ? `<img src="${evoSprite}" alt="${name}">` : ""}
-                    <span>${getDisplayName(name)}</span>
-                  </div>`;
-              }).join("")}
+              ${renderEvoChain(evoData.chain, cleanName, allPokemonData)}
             </div>
           </div>`;
       } else {
@@ -542,6 +540,58 @@ async function openModal(id, cleanName, altFormCleanName = null) {
   }
 }
 
+// --- HELPER: Flatten evo chain into a flat list (for length check) ---
+// Bug fix #7: replaces the old linear while-loop traversal.
+function flattenEvoChain(node) {
+  const result = [];
+  function traverse(n) {
+    if (!n) return;
+    result.push(n.species.name);
+    (n.evolves_to || []).forEach(traverse);
+  }
+  traverse(node);
+  return result;
+}
+
+// --- HELPER: Render branching evo chain as HTML ---
+// Bug fix #7: renders all branches (e.g. Eevee's 8 evolutions, Tyrogue's 3).
+// Uses a recursive tree approach: each node renders itself + its children inline.
+function renderEvoChain(node, currentCleanName, allPokemonData) {
+  if (!node) return "";
+
+  const name     = node.species.name;
+  const evoEntry = allPokemonData[name] || allPokemonData[name.replace("-", "")];
+  const evoId    = evoEntry?.id || "";
+  const evoSprite = evoId ? getSpriteUrl(evoId) : "";
+  const isCurrent = name === currentCleanName;
+
+  const selfHtml = `
+    <div class="evo-mon ${isCurrent ? "current" : ""}" ${evoId ? `onclick="openModal(${evoId},'${name}')" style="cursor:pointer;"` : ""}>
+      ${evoSprite ? `<img src="${evoSprite}" alt="${name}">` : ""}
+      <span>${getDisplayName(name)}</span>
+    </div>`;
+
+  const children = node.evolves_to || [];
+  if (children.length === 0) return selfHtml;
+
+  // Single linear evolution — render inline with arrow
+  if (children.length === 1) {
+    return selfHtml + `<span class="evo-arrow">→</span>` + renderEvoChain(children[0], currentCleanName, allPokemonData);
+  }
+
+  // Branching evolution (Eevee, Tyrogue, etc.) — render children in a column
+  const branchesHtml = children.map(child =>
+    `<div class="evo-branch">
+      <span class="evo-arrow">→</span>
+      ${renderEvoChain(child, currentCleanName, allPokemonData)}
+    </div>`
+  ).join("");
+
+  return `
+    ${selfHtml}
+    <div class="evo-branches">${branchesHtml}</div>`;
+}
+
 // --- CLOSE MODAL ---
 function closeModal() {
   DOM.modalOverlay.classList.remove("active");
@@ -553,6 +603,5 @@ function closeModal() {
   }
 }
 
-window.addEventListener("popstate", (e) => {
-  if (!e.state?.modal) DOM.modalOverlay.classList.remove("active");
-});
+// NOTE: The popstate listener for modal close has been moved to main.js
+// so it can also handle tab restoration (bug fix #6).
