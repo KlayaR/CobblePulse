@@ -126,11 +126,13 @@ function getSpriteUrl(spriteId) { return `https://raw.githubusercontent.com/Poke
 function getShinyUrl(spriteId)  { return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${spriteId}.png`; }
 
 // --- GET EVO CHAIN ---
-async function getEvoChain(dexId) {
-  if (pokeApiCache.has(dexId)) return pokeApiCache.get(dexId);
-  const speciesData = await fetchWithTimeout(`https://pokeapi.co/api/v2/pokemon-species/${dexId}`);
+// Bug fix #17: Use data.dex (national Pokédex number) instead of data.id (form sprite ID).
+// PokéAPI's pokemon-species endpoint requires the base national dex number, not form IDs.
+async function getEvoChain(baseDexNumber) {
+  if (pokeApiCache.has(baseDexNumber)) return pokeApiCache.get(baseDexNumber);
+  const speciesData = await fetchWithTimeout(`https://pokeapi.co/api/v2/pokemon-species/${baseDexNumber}`);
   const evoData     = await fetchWithTimeout(speciesData.evolution_chain.url);
-  pokeApiCache.set(dexId, evoData);
+  pokeApiCache.set(baseDexNumber, evoData);
   return evoData;
 }
 
@@ -195,14 +197,24 @@ function getDisplayName(baseName, isAltForm) {
   return baseName.charAt(0).toUpperCase() + baseName.slice(1).replace(/-/g, " ");
 }
 
+// --- HELPER: Simple HTML escape for XSS prevention ---
+// Bug fix #18: Escape untrusted strings before injecting into innerHTML.
+function escapeHtml(str) {
+  if (!str) return str;
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
 // --- LOCATION CARDS BUILDER ---
+// Bug fix #18: Escape loc.spawn, loc.rarity, loc.condition, loc.forms to prevent XSS.
 function buildLocationCards(locations, title) {
   const cards = locations.map((loc) => {
-    const conditionHtml = loc.condition ? `<div class="location-condition">⚠️ Condition: ${loc.condition}</div>` : "";
-    const formsHtml     = loc.forms     ? `<div class="location-forms">✨ Form Info: ${loc.forms}</div>` : "";
+    const conditionHtml = loc.condition ? `<div class="location-condition">⚠️ Condition: ${escapeHtml(loc.condition)}</div>` : "";
+    const formsHtml     = loc.forms     ? `<div class="location-forms">✨ Form Info: ${escapeHtml(loc.forms)}</div>` : "";
     return `<div class="location-card">
-      <div class="location-spawn">🌍 ${loc.spawn}</div>
-      <div class="location-rarity">🎯 Rarity: <strong>${loc.rarity}</strong></div>
+      <div class="location-spawn">🌍 ${escapeHtml(loc.spawn)}</div>
+      <div class="location-rarity">🎯 Rarity: <strong>${escapeHtml(loc.rarity)}</strong></div>
       ${conditionHtml}${formsHtml}
     </div>`;
   }).join("");
@@ -490,11 +502,14 @@ async function openModal(id, cleanName, altFormCleanName = null) {
 
   // ---------------------------------------------------------------
   // PHASE 2 — Background: evo chain only (non-legendary base forms)
+  // Bug fix #17: Pass dbEntry.dex (not dbEntry.id) to getEvoChain.
   // ---------------------------------------------------------------
   if (!needsEvoPh) return;
 
   try {
-    const evoData = await getEvoChain(id);
+    // Bug fix #17: use dex (national dex #) for pokemon-species endpoint
+    const dexNumber = dbEntry.dex || id;
+    const evoData = await getEvoChain(dexNumber);
     if (_latestModalRequestId !== id) return;
 
     const locPh = document.getElementById("locations-placeholder");
@@ -555,18 +570,24 @@ function flattenEvoChain(node) {
 
 // --- HELPER: Render branching evo chain as HTML ---
 // Bug fix #7: renders all branches (e.g. Eevee's 8 evolutions, Tyrogue's 3).
-// Uses a recursive tree approach: each node renders itself + its children inline.
+// Bug fix #19: escape PokéAPI names (e.g. farfetch'd) in onclick to prevent syntax errors.
 function renderEvoChain(node, currentCleanName, allPokemonData) {
   if (!node) return "";
 
   const name     = node.species.name;
   const evoEntry = allPokemonData[name] || allPokemonData[name.replace("-", "")];
   const evoId    = evoEntry?.id || "";
+  const evoDex   = evoEntry?.dex || "";
   const evoSprite = evoId ? getSpriteUrl(evoId) : "";
   const isCurrent = name === currentCleanName;
 
+  // Bug fix #19: Escape name for use in onclick handler.
+  // PokéAPI returns names like "farfetch'd" which breaks onclick="openModal(1,'farfetch'd')".
+  // Escape single quotes → farfetch\'d so the onclick remains syntactically valid.
+  const escapedName = name.replace(/'/g, "\\'");
+
   const selfHtml = `
-    <div class="evo-mon ${isCurrent ? "current" : ""}" ${evoId ? `onclick="openModal(${evoId},'${name}')" style="cursor:pointer;"` : ""}>
+    <div class="evo-mon ${isCurrent ? "current" : ""}" ${evoDex ? `onclick="openModal(${evoDex},'${escapedName}')" style="cursor:pointer;"` : ""}>
       ${evoSprite ? `<img src="${evoSprite}" alt="${name}">` : ""}
       <span>${getDisplayName(name)}</span>
     </div>`;
@@ -593,9 +614,12 @@ function renderEvoChain(node, currentCleanName, allPokemonData) {
 }
 
 // --- CLOSE MODAL ---
+// Bug fix #20: Reset _latestModalRequestId to null so stale async evo fetches
+// from a previously-closed modal don't try to write to DOM.
 function closeModal() {
   DOM.modalOverlay.classList.remove("active");
   _currentBaseCleanName = null;
+  _latestModalRequestId = null;  // Bug fix #20
   if (currentTab && currentTab !== "about") {
     history.pushState({ tab: currentTab }, "", `?tab=${currentTab}`);
   } else {
