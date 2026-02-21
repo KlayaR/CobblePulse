@@ -11,7 +11,7 @@
 
   let suggestionFilters = {
     allowLegendaries: JSON.parse(localStorage.getItem('cobblePulse_allowLegendaries') || 'true'),
-    difficulty: localStorage.getItem('cobblePulse_difficulty') || 'balanced')
+    difficulty: localStorage.getItem('cobblePulse_difficulty') || 'balanced'
   };
 
   if (typeof window.favorites === 'undefined') {
