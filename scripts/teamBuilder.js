@@ -11,7 +11,7 @@
 
   let suggestionFilters = {
     allowLegendaries: JSON.parse(localStorage.getItem('cobblePulse_allowLegendaries') || 'true'),
-    difficulty: localStorage.getItem('cobblePulse_difficulty') || 'balanced'
+    difficulty: localStorage.getItem('cobblePulse_difficulty') || 'balanced')
   };
 
   if (typeof window.favorites === 'undefined') {
@@ -873,4 +873,273 @@
     overlay.classList.add('active');
   };
 
-  // ... (rest of the file continues with random suggestion, selector, templates, import/export, team management - unchanged)
+  // ============================================================
+  // RANDOM SUGGESTION
+  // ============================================================
+  window.showRandomSuggestion = function(slotIndex) {
+    const candidates = buildCandidates(suggestionFilters.allowLegendaries, suggestionFilters.difficulty);
+    if (candidates.length === 0) {
+      alert('No Pokémon match the current filters.');
+      return;
+    }
+    const picks = [];
+    const used  = new Set();
+    while (picks.length < Math.min(12, candidates.length)) {
+      const idx = Math.floor(Math.random() * candidates.length);
+      if (!used.has(idx)) { used.add(idx); picks.push(candidates[idx]); }
+    }
+    const modalHtml = `
+      <div class="pokemon-selector-modal">
+        <h3>🎲 Random Picks for Slot ${slotIndex + 1}</h3>
+        <p style="color:var(--text-muted);margin-bottom:15px;font-size:0.85rem;">
+          ${suggestionFilters.difficulty} difficulty • ${suggestionFilters.allowLegendaries ? 'legendaries allowed' : 'no legendaries'}
+        </p>
+        <div class="selector-results" style="max-height:60vh;overflow-y:auto;">
+          ${picks.map(p => {
+            const types = p.types.map(t => `<span class="type-badge type-${t}">${t}</span>`).join('');
+            const role  = determineRole(p);
+            const b     = Object.values(p.stats).reduce((a, c) => a + c, 0);
+            const { tierLabel } = getTierScore(p);
+            return `
+              <div class="selector-pokemon" onclick="addToTeam(${slotIndex}, ${p.id}, '${p.cleanName}')" style="cursor:pointer;position:relative;">
+                <div style="position:absolute;top:5px;left:5px;font-size:1.2rem;" title="${role}">${getRoleIcon(role)}</div>
+                <img src="${p.sprite}" alt="${p.name}" loading="lazy">
+                <div class="selector-pokemon-info">
+                  <div class="selector-pokemon-name">${p.name}</div>
+                  <div class="selector-pokemon-types">${types}</div>
+                  <div style="font-size:0.72rem;color:var(--text-muted);margin-top:4px;">BST: ${b} | <span style="color:#a78bfa;">${formatTierLabel(tierLabel)}</span></div>
+                </div>
+              </div>`;
+          }).join('')}
+        </div>
+      </div>`;
+    const overlay   = document.getElementById('modalOverlay');
+    const modalBody = document.getElementById('modalBody');
+    modalBody.innerHTML = modalHtml;
+    overlay.classList.add('active');
+  };
+
+  // ============================================================
+  // POKEMON SELECTOR
+  // ============================================================
+  window.showPokemonSelector = function(slotIndex) {
+    const allPokemonData = window.localDB?.pokemon || window.localDB || {};
+    const favs = Object.values(allPokemonData).filter(p =>
+      window.favorites.includes(p.cleanName) && !window.isMegaForm(p.cleanName)
+    );
+    const modalHtml = `
+      <div class="pokemon-selector-modal">
+        <h3>Select Pokémon for Slot ${slotIndex + 1}</h3>
+        <div class="selector-search">
+          <input type="text" id="selectorSearch" placeholder="Search Pokémon..." oninput="filterSelectorResults()">
+        </div>
+        <div class="selector-tabs">
+          <button class="selector-tab active" data-tab="favorites" onclick="switchSelectorTab('favorites')">⭐ Favorites</button>
+          <button class="selector-tab" data-tab="all" onclick="switchSelectorTab('all')">All Pokémon</button>
+        </div>
+        <div class="selector-results" id="selectorResults">${renderSelectorPokemon(favs, slotIndex)}</div>
+      </div>`;
+    const overlay   = document.getElementById('modalOverlay');
+    const modalBody = document.getElementById('modalBody');
+    modalBody.innerHTML = modalHtml;
+    overlay.classList.add('active');
+    window.currentSelectorSlot = slotIndex;
+  };
+
+  window.switchSelectorTab = function(tab) {
+    currentSelectorTab = tab;
+    document.querySelectorAll('.selector-tab').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.tab === tab);
+    });
+    window.filterSelectorResults();
+  };
+
+  window.filterSelectorResults = function() {
+    const search = document.getElementById('selectorSearch')?.value.toLowerCase() || '';
+    const allPokemonData = window.localDB?.pokemon || window.localDB || {};
+    let list = currentSelectorTab === 'favorites'
+      ? Object.values(allPokemonData).filter(p => window.favorites.includes(p.cleanName) && !window.isMegaForm(p.cleanName))
+      : Object.values(allPokemonData).filter(p => !window.isMegaForm(p.cleanName));
+    if (search) list = list.filter(p => p.name.toLowerCase().includes(search) || p.id.toString() === search);
+    list.sort((a, b) => a.id - b.id);
+    const el = document.getElementById('selectorResults');
+    if (el) el.innerHTML = renderSelectorPokemon(list, window.currentSelectorSlot);
+  };
+
+  function renderSelectorPokemon(list, slotIndex) {
+    if (list.length === 0) return '<div class="no-selector-results">No Pokémon found.</div>';
+    return list.map(p => {
+      const types    = p.types.map(t => `<span class="type-badge type-${t}">${t}</span>`).join('');
+      const isInTeam = currentTeam.some(tp => tp && tp.id === p.id);
+      return `
+        <div class="selector-pokemon ${isInTeam ? 'in-team' : ''}" onclick="${isInTeam ? '' : `addToTeam(${slotIndex}, ${p.id}, '${p.cleanName}')`}" style="${isInTeam ? 'cursor:not-allowed;opacity:0.5;' : 'cursor:pointer;'}">
+          <img src="${p.sprite}" alt="${p.name}" loading="lazy">
+          <div class="selector-pokemon-info">
+            <div class="selector-pokemon-name">${p.name}</div>
+            <div class="selector-pokemon-types">${types}</div>
+          </div>
+          ${isInTeam ? '<span class="in-team-badge">✓ In Team</span>' : ''}
+        </div>`;
+    }).join('');
+  }
+
+  window.addToTeam = function(slotIndex, pokemonId, cleanName) {
+    const allPokemonData = window.localDB?.pokemon || window.localDB || {};
+    const pokemon = allPokemonData[cleanName];
+    if (!pokemon) return;
+    currentTeam[slotIndex] = {
+      id: pokemon.id, name: pokemon.name, cleanName: pokemon.cleanName,
+      types: pokemon.types, sprite: pokemon.sprite, abilities: pokemon.abilities || []
+    };
+    saveTeam();
+    if (window.closeModal) window.closeModal();
+    renderTeamBuilder();
+  };
+
+  window.removeFromTeam = function(slotIndex) {
+    currentTeam[slotIndex] = null;
+    saveTeam();
+    renderTeamBuilder();
+  };
+
+  window.confirmClearTeam = function() {
+    if (confirm('Clear this team? This cannot be undone.')) {
+      currentTeam = [];
+      saveTeam();
+      renderTeamBuilder();
+    }
+  };
+
+  // ============================================================
+  // TEMPLATES
+  // ============================================================
+  const TEAM_TEMPLATES = {
+    'Balanced Core':  { pokemon: ['Landorus','Toxapex','Corviknight','Heatran','Tapu Fini','Rillaboom'],  desc: 'Well-rounded competitive team' },
+    'Hyper Offense':  { pokemon: ['Dragapult','Garchomp','Volcarona','Kartana','Tapu Koko','Melmetal'],   desc: 'Fast aggressive sweepers' },
+    'Easy Starter':   { pokemon: ['Talonflame','Azumarill','Toxicroak','Ferrothorn','Hippowdon','Slowbro'], desc: 'Accessible with common spawns' },
+    'Rain Team':      { pokemon: ['Pelipper','Barraskewda','Kingdra','Ferrothorn','Toxapex','Rillaboom'],  desc: 'Rain weather strategy' },
+    'Sun Team':       { pokemon: ['Torkoal','Venusaur','Charizard','Heatran','Landorus','Tapu Fini'],      desc: 'Sun weather strategy' },
+    'Stall Team':     { pokemon: ['Toxapex','Ferrothorn','Chansey','Corviknight','Hippowdon','Slowbro'],   desc: 'Ultra defensive team' }
+  };
+
+  window.showTemplatesModal = function() {
+    const modalHtml = `
+      <div class="templates-modal">
+        <h3>📋 Team Templates</h3>
+        <p style="color:var(--text-muted);margin-bottom:20px;font-size:0.9rem;">Load a pre-built team:</p>
+        <div class="template-list">
+          ${Object.entries(TEAM_TEMPLATES).map(([name, data]) => `
+            <div class="template-item" onclick="loadTemplate('${name}')" style="cursor:pointer;">
+              <div class="template-name">${name}</div>
+              <div class="template-desc">${data.desc}</div>
+              <div class="template-pokemon">${data.pokemon.join(' • ')}</div>
+            </div>`).join('')}
+        </div>
+      </div>`;
+    document.getElementById('modalBody').innerHTML = modalHtml;
+    document.getElementById('modalOverlay').classList.add('active');
+  };
+
+  window.loadTemplate = function(templateName) {
+    const template = TEAM_TEMPLATES[templateName];
+    if (!template) return;
+    const allPokemonData = window.localDB?.pokemon || window.localDB || {};
+    const newTeam = template.pokemon.map(name => {
+      const p = allPokemonData[name.toLowerCase().replace(/[^a-z]/g, '')];
+      if (!p) return null;
+      return { id: p.id, name: p.name, cleanName: p.cleanName, types: p.types, sprite: p.sprite, abilities: p.abilities || [] };
+    }).filter(Boolean);
+    if (newTeam.length === 0) { alert('Could not load template.'); return; }
+    if (currentTeam.filter(p=>p).length > 0 && !confirm(`Replace current team with "${templateName}"?`)) return;
+    currentTeam = newTeam;
+    saveTeam();
+    if (window.closeModal) window.closeModal();
+    renderTeamBuilder();
+  };
+
+  // ============================================================
+  // IMPORT / EXPORT
+  // ============================================================
+  window.exportTeam = function() {
+    const code = btoa(JSON.stringify(currentTeam.map(p => p ? p.cleanName : null)));
+    const url  = `${window.location.origin}${window.location.pathname}?team=${code}`;
+    navigator.clipboard.writeText(url).then(() => alert('✅ Team link copied!')).catch(() => prompt('Copy this link:', url));
+  };
+
+  window.showImportModal = function() {
+    document.getElementById('modalBody').innerHTML = `
+      <div class="import-modal">
+        <h3>📥 Import Team</h3>
+        <p style="margin-bottom:15px;color:var(--text-muted);">Paste team link or code:</p>
+        <textarea id="importCode" placeholder="https://... or paste code" rows="4" style="width:100%;padding:10px;border:1px solid var(--border-color);border-radius:8px;background:var(--bg-secondary);color:var(--text-primary);font-family:monospace;"></textarea>
+        <div style="margin-top:15px;display:flex;gap:10px;">
+          <button class="btn-primary" onclick="importTeam()" style="flex:1;">Import</button>
+          <button class="btn-secondary" onclick="closeModal()" style="flex:1;">Cancel</button>
+        </div>
+      </div>`;
+    document.getElementById('modalOverlay').classList.add('active');
+  };
+
+  window.importTeam = function() {
+    const input    = document.getElementById('importCode').value.trim();
+    const teamCode = input.includes('?team=') ? input.split('?team=')[1].split('&')[0] : input;
+    try {
+      const cleanNames     = JSON.parse(atob(teamCode));
+      const allPokemonData = window.localDB?.pokemon || window.localDB || {};
+      const imported = cleanNames.map(cn => {
+        if (!cn) return null;
+        const p = allPokemonData[cn];
+        if (!p) return null;
+        return { id: p.id, name: p.name, cleanName: p.cleanName, types: p.types, sprite: p.sprite, abilities: p.abilities || [] };
+      });
+      if (imported.filter(p=>p).length === 0) { alert('❌ No valid Pokémon found.'); return; }
+      currentTeam = imported;
+      saveTeam();
+      if (window.closeModal) window.closeModal();
+      renderTeamBuilder();
+      alert('✅ Team imported!');
+    } catch (e) { alert('❌ Invalid code.'); }
+  };
+
+  // ============================================================
+  // TEAM MANAGEMENT
+  // ============================================================
+  window.switchTeam = function(name) {
+    currentTeamName = name;
+    currentTeam = savedTeams[name] || [];
+    renderTeamBuilder();
+  };
+
+  window.showNewTeamModal = function() {
+    const name = prompt('Enter new team name:');
+    if (!name?.trim()) return;
+    if (savedTeams[name]) { alert('Name already exists!'); return; }
+    savedTeams[name] = [];
+    currentTeamName  = name;
+    currentTeam      = [];
+    saveTeam();
+    renderTeamBuilder();
+  };
+
+  window.renameCurrentTeam = function() {
+    const newName = prompt('Rename team:', currentTeamName);
+    if (!newName?.trim() || newName === currentTeamName) return;
+    if (savedTeams[newName]) { alert('Name already exists!'); return; }
+    savedTeams[newName] = currentTeam;
+    delete savedTeams[currentTeamName];
+    currentTeamName = newName;
+    saveTeam();
+    renderTeamBuilder();
+  };
+
+  window.deleteCurrentTeam = function() {
+    if (Object.keys(savedTeams).length === 1) { alert('Cannot delete your only team!'); return; }
+    if (!confirm(`Delete "${currentTeamName}"?`)) return;
+    delete savedTeams[currentTeamName];
+    currentTeamName = Object.keys(savedTeams)[0];
+    currentTeam     = savedTeams[currentTeamName];
+    saveTeam();
+    renderTeamBuilder();
+  };
+
+})();
