@@ -571,13 +571,14 @@ function flattenEvoChain(node) {
 // --- HELPER: Render branching evo chain as HTML ---
 // Bug fix #7: renders all branches (e.g. Eevee's 8 evolutions, Tyrogue's 3).
 // Bug fix #19: escape PokéAPI names (e.g. farfetch'd) in onclick to prevent syntax errors.
+// Bug fix #21: changed evoDex fallback from || "" to || evoId to prevent syntax errors.
 function renderEvoChain(node, currentCleanName, allPokemonData) {
   if (!node) return "";
 
   const name     = node.species.name;
   const evoEntry = allPokemonData[name] || allPokemonData[name.replace("-", "")];
   const evoId    = evoEntry?.id || "";
-  const evoDex   = evoEntry?.dex || "";
+  const evoDex   = evoEntry?.dex || evoId;  // Bug fix #21: fallback to evoId instead of empty string
   const evoSprite = evoId ? getSpriteUrl(evoId) : "";
   const isCurrent = name === currentCleanName;
 
