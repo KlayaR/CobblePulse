@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "buildTimestamp": "2026-08-03T06:08:38.345Z"
+    "buildTimestamp": "2026-08-04T05:36:59.787Z"
   },
   "pokemon": {
     "bulbasaur": {
@@ -134,14 +134,14 @@
           "usage": "7.64"
         },
         {
-          "tier": "zu",
-          "rank": 7,
-          "usage": "17.66"
-        },
-        {
           "tier": "nu",
           "rank": 75,
           "usage": "1.40"
+        },
+        {
+          "tier": "zu",
+          "rank": 7,
+          "usage": "17.66"
         },
         {
           "tier": "pu",
@@ -154,14 +154,14 @@
           "usage": "0.20"
         },
         {
-          "tier": "uu",
-          "rank": 52,
-          "usage": "2.55"
-        },
-        {
           "tier": "monotype",
           "rank": 267,
           "usage": "0.05"
+        },
+        {
+          "tier": "uu",
+          "rank": 52,
+          "usage": "2.55"
         },
         {
           "tier": "ubers",
@@ -491,14 +491,14 @@
           "usage": "0.34"
         },
         {
-          "tier": "zu",
-          "rank": 9,
-          "usage": "16.89"
-        },
-        {
           "tier": "nu",
           "rank": 152,
           "usage": "0.10"
+        },
+        {
+          "tier": "zu",
+          "rank": 9,
+          "usage": "16.89"
         },
         {
           "tier": "pu",
@@ -511,14 +511,14 @@
           "usage": "0.32"
         },
         {
-          "tier": "uu",
-          "rank": 157,
-          "usage": "0.15"
-        },
-        {
           "tier": "monotype",
           "rank": 179,
           "usage": "0.23"
+        },
+        {
+          "tier": "uu",
+          "rank": 157,
+          "usage": "0.15"
         },
         {
           "tier": "ubers",
@@ -802,14 +802,14 @@
           "usage": "0.02"
         },
         {
-          "tier": "uu",
-          "rank": 84,
-          "usage": "1.01"
-        },
-        {
           "tier": "monotype",
           "rank": 284,
           "usage": "0.04"
+        },
+        {
+          "tier": "uu",
+          "rank": 84,
+          "usage": "1.01"
         },
         {
           "tier": "ubers",
@@ -1636,14 +1636,14 @@
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 138,
-          "usage": "0.24"
-        },
-        {
           "tier": "nu",
           "rank": 185,
           "usage": "0.03"
+        },
+        {
+          "tier": "zu",
+          "rank": 138,
+          "usage": "0.24"
         },
         {
           "tier": "pu",
@@ -1961,14 +1961,14 @@
           "usage": "0.13"
         },
         {
-          "tier": "zu",
-          "rank": 5,
-          "usage": "21.52"
-        },
-        {
           "tier": "nu",
           "rank": 108,
           "usage": "0.57"
+        },
+        {
+          "tier": "zu",
+          "rank": 5,
+          "usage": "21.52"
         },
         {
           "tier": "pu",
@@ -2731,14 +2731,14 @@
           "usage": "6.00"
         },
         {
-          "tier": "zu",
-          "rank": 162,
-          "usage": "0.14"
-        },
-        {
           "tier": "nu",
           "rank": 205,
           "usage": "0.01"
+        },
+        {
+          "tier": "zu",
+          "rank": 162,
+          "usage": "0.14"
         },
         {
           "tier": "vgc2025",
@@ -2746,14 +2746,14 @@
           "usage": "0.01"
         },
         {
-          "tier": "uu",
-          "rank": 51,
-          "usage": "2.65"
-        },
-        {
           "tier": "monotype",
           "rank": 78,
           "usage": "2.61"
+        },
+        {
+          "tier": "uu",
+          "rank": 51,
+          "usage": "2.65"
         },
         {
           "tier": "ubers",
@@ -2914,14 +2914,14 @@
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 163,
-          "usage": "0.14"
-        },
-        {
           "tier": "nu",
           "rank": 198,
           "usage": "0.02"
+        },
+        {
+          "tier": "zu",
+          "rank": 163,
+          "usage": "0.14"
         },
         {
           "tier": "pu",
@@ -3193,14 +3193,14 @@
           "usage": "1.46"
         },
         {
-          "tier": "uu",
-          "rank": 209,
-          "usage": "0.04"
-        },
-        {
           "tier": "monotype",
           "rank": 259,
           "usage": "0.06"
+        },
+        {
+          "tier": "uu",
+          "rank": 209,
+          "usage": "0.04"
         },
         {
           "tier": "ou",
@@ -3586,14 +3586,14 @@
           "usage": "0.14"
         },
         {
-          "tier": "uu",
-          "rank": 227,
-          "usage": "0.02"
-        },
-        {
           "tier": "monotype",
           "rank": 229,
           "usage": "0.10"
+        },
+        {
+          "tier": "uu",
+          "rank": 227,
+          "usage": "0.02"
         },
         {
           "tier": "ubers",
@@ -3848,14 +3848,14 @@
           "usage": "0.41"
         },
         {
-          "tier": "zu",
-          "rank": 100,
-          "usage": "0.66"
-        },
-        {
           "tier": "nu",
           "rank": 163,
           "usage": "0.07"
+        },
+        {
+          "tier": "zu",
+          "rank": 100,
+          "usage": "0.66"
         },
         {
           "tier": "pu",
@@ -4406,14 +4406,14 @@
           "usage": "0.34"
         },
         {
-          "tier": "zu",
-          "rank": 60,
-          "usage": "2.24"
-        },
-        {
           "tier": "nu",
           "rank": 105,
           "usage": "0.64"
+        },
+        {
+          "tier": "zu",
+          "rank": 60,
+          "usage": "2.24"
         },
         {
           "tier": "pu",
@@ -4954,14 +4954,14 @@
           "usage": "0.05"
         },
         {
-          "tier": "zu",
-          "rank": 185,
-          "usage": "0.07"
-        },
-        {
           "tier": "nu",
           "rank": 176,
           "usage": "0.05"
+        },
+        {
+          "tier": "zu",
+          "rank": 185,
+          "usage": "0.07"
         },
         {
           "tier": "nationaldex",
@@ -5109,14 +5109,14 @@
           "usage": "13.36"
         },
         {
-          "tier": "uu",
-          "rank": 124,
-          "usage": "0.33"
-        },
-        {
           "tier": "monotype",
           "rank": 130,
           "usage": "0.73"
+        },
+        {
+          "tier": "uu",
+          "rank": 124,
+          "usage": "0.33"
         },
         {
           "tier": "ubers",
@@ -5575,14 +5575,14 @@
           "usage": "10.45"
         },
         {
-          "tier": "uu",
-          "rank": 167,
-          "usage": "0.12"
-        },
-        {
           "tier": "monotype",
           "rank": 139,
           "usage": "0.54"
+        },
+        {
+          "tier": "uu",
+          "rank": 167,
+          "usage": "0.12"
         },
         {
           "tier": "ubers",
@@ -5844,14 +5844,14 @@
           "usage": "0.03"
         },
         {
-          "tier": "zu",
-          "rank": 21,
-          "usage": "9.31"
-        },
-        {
           "tier": "nu",
           "rank": 65,
           "usage": "1.80"
+        },
+        {
+          "tier": "zu",
+          "rank": 21,
+          "usage": "9.31"
         },
         {
           "tier": "pu",
@@ -6089,14 +6089,14 @@
           "usage": "0.01"
         },
         {
-          "tier": "zu",
-          "rank": 69,
-          "usage": "1.95"
-        },
-        {
           "tier": "nu",
           "rank": 158,
           "usage": "0.09"
+        },
+        {
+          "tier": "zu",
+          "rank": 69,
+          "usage": "1.95"
         },
         {
           "tier": "pu",
@@ -6332,14 +6332,14 @@
           "usage": "0.01"
         },
         {
-          "tier": "zu",
-          "rank": 20,
-          "usage": "9.36"
-        },
-        {
           "tier": "nu",
           "rank": 169,
           "usage": "0.06"
+        },
+        {
+          "tier": "zu",
+          "rank": 20,
+          "usage": "9.36"
         },
         {
           "tier": "pu",
@@ -6478,14 +6478,14 @@
           "usage": "2.33"
         },
         {
-          "tier": "uu",
-          "rank": 109,
-          "usage": "0.48"
-        },
-        {
           "tier": "monotype",
           "rank": 101,
           "usage": "1.75"
+        },
+        {
+          "tier": "uu",
+          "rank": 109,
+          "usage": "0.48"
         },
         {
           "tier": "ubers",
@@ -6793,14 +6793,14 @@
           "usage": "0.02"
         },
         {
-          "tier": "uu",
-          "rank": 59,
-          "usage": "2.20"
-        },
-        {
           "tier": "monotype",
           "rank": 127,
           "usage": "0.80"
+        },
+        {
+          "tier": "uu",
+          "rank": 59,
+          "usage": "2.20"
         },
         {
           "tier": "ubers",
@@ -7495,14 +7495,14 @@
           "usage": "0.06"
         },
         {
-          "tier": "zu",
-          "rank": 88,
-          "usage": "0.95"
-        },
-        {
           "tier": "nu",
           "rank": 183,
           "usage": "0.03"
+        },
+        {
+          "tier": "zu",
+          "rank": 88,
+          "usage": "0.95"
         },
         {
           "tier": "pu",
@@ -7708,14 +7708,14 @@
           "usage": "4.83"
         },
         {
-          "tier": "uu",
-          "rank": 228,
-          "usage": "0.02"
-        },
-        {
           "tier": "monotype",
           "rank": 282,
           "usage": "0.04"
+        },
+        {
+          "tier": "uu",
+          "rank": 228,
+          "usage": "0.02"
         },
         {
           "tier": "ubers",
@@ -7799,14 +7799,14 @@
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 76,
-          "usage": "1.37"
-        },
-        {
           "tier": "nu",
           "rank": 199,
           "usage": "0.02"
+        },
+        {
+          "tier": "zu",
+          "rank": 76,
+          "usage": "1.37"
         },
         {
           "tier": "pu",
@@ -8021,14 +8021,14 @@
           "usage": "0.15"
         },
         {
-          "tier": "zu",
-          "rank": 37,
-          "usage": "4.53"
-        },
-        {
           "tier": "nu",
           "rank": 120,
           "usage": "0.40"
+        },
+        {
+          "tier": "zu",
+          "rank": 37,
+          "usage": "4.53"
         },
         {
           "tier": "pu",
@@ -8306,13 +8306,13 @@
           "usage": "7.56"
         },
         {
-          "tier": "uu",
-          "rank": 191,
+          "tier": "monotype",
+          "rank": 257,
           "usage": "0.06"
         },
         {
-          "tier": "monotype",
-          "rank": 257,
+          "tier": "uu",
+          "rank": 191,
           "usage": "0.06"
         },
         {
@@ -9047,14 +9047,14 @@
           "usage": "0.04"
         },
         {
-          "tier": "uu",
-          "rank": 204,
-          "usage": "0.05"
-        },
-        {
           "tier": "monotype",
           "rank": 227,
           "usage": "0.10"
+        },
+        {
+          "tier": "uu",
+          "rank": 204,
+          "usage": "0.05"
         },
         {
           "tier": "doublesou",
@@ -9425,14 +9425,14 @@
           "usage": "0.31"
         },
         {
-          "tier": "zu",
-          "rank": 90,
-          "usage": "0.89"
-        },
-        {
           "tier": "nu",
           "rank": 125,
           "usage": "0.32"
+        },
+        {
+          "tier": "zu",
+          "rank": 90,
+          "usage": "0.89"
         },
         {
           "tier": "pu",
@@ -9582,14 +9582,14 @@
           "usage": "0.02"
         },
         {
-          "tier": "uu",
-          "rank": 73,
-          "usage": "1.52"
-        },
-        {
           "tier": "monotype",
           "rank": 56,
           "usage": "3.88"
+        },
+        {
+          "tier": "uu",
+          "rank": 73,
+          "usage": "1.52"
         },
         {
           "tier": "ubers",
@@ -9750,14 +9750,14 @@
           "usage": "1.07"
         },
         {
-          "tier": "zu",
-          "rank": 84,
-          "usage": "1.10"
-        },
-        {
           "tier": "nu",
           "rank": 62,
           "usage": "2.39"
+        },
+        {
+          "tier": "zu",
+          "rank": 84,
+          "usage": "1.10"
         },
         {
           "tier": "pu",
@@ -9765,14 +9765,14 @@
           "usage": "0.63"
         },
         {
-          "tier": "uu",
-          "rank": 260,
-          "usage": "0.01"
-        },
-        {
           "tier": "monotype",
           "rank": 287,
           "usage": "0.03"
+        },
+        {
+          "tier": "uu",
+          "rank": 260,
+          "usage": "0.01"
         },
         {
           "tier": "ubers",
@@ -9877,14 +9877,14 @@
           "usage": "1.24"
         },
         {
-          "tier": "zu",
-          "rank": 81,
-          "usage": "1.17"
-        },
-        {
           "tier": "nu",
           "rank": 116,
           "usage": "0.41"
+        },
+        {
+          "tier": "zu",
+          "rank": 81,
+          "usage": "1.17"
         },
         {
           "tier": "pu",
@@ -9897,14 +9897,14 @@
           "usage": "0.72"
         },
         {
-          "tier": "uu",
-          "rank": 83,
-          "usage": "1.13"
-        },
-        {
           "tier": "monotype",
           "rank": 114,
           "usage": "1.16"
+        },
+        {
+          "tier": "uu",
+          "rank": 83,
+          "usage": "1.13"
         },
         {
           "tier": "ubers",
@@ -10142,14 +10142,14 @@
           "usage": "0.01"
         },
         {
-          "tier": "uu",
-          "rank": 118,
-          "usage": "0.39"
-        },
-        {
           "tier": "monotype",
           "rank": 307,
           "usage": "0.02"
+        },
+        {
+          "tier": "uu",
+          "rank": 118,
+          "usage": "0.39"
         },
         {
           "tier": "ubers",
@@ -10249,14 +10249,14 @@
           "usage": "0.19"
         },
         {
-          "tier": "zu",
-          "rank": 4,
-          "usage": "21.74"
-        },
-        {
           "tier": "nu",
           "rank": 95,
           "usage": "0.77"
+        },
+        {
+          "tier": "zu",
+          "rank": 4,
+          "usage": "21.74"
         },
         {
           "tier": "pu",
@@ -10366,14 +10366,14 @@
           "usage": "0.05"
         },
         {
-          "tier": "zu",
-          "rank": 160,
-          "usage": "0.14"
-        },
-        {
           "tier": "nu",
           "rank": 145,
           "usage": "0.12"
+        },
+        {
+          "tier": "zu",
+          "rank": 160,
+          "usage": "0.14"
         },
         {
           "tier": "pu",
@@ -10825,14 +10825,14 @@
           "usage": "0.06"
         },
         {
-          "tier": "zu",
-          "rank": 144,
-          "usage": "0.19"
-        },
-        {
           "tier": "nu",
           "rank": 121,
           "usage": "0.38"
+        },
+        {
+          "tier": "zu",
+          "rank": 144,
+          "usage": "0.19"
         },
         {
           "tier": "pu",
@@ -10845,14 +10845,14 @@
           "usage": "0.02"
         },
         {
-          "tier": "uu",
-          "rank": 126,
-          "usage": "0.32"
-        },
-        {
           "tier": "monotype",
           "rank": 209,
           "usage": "0.15"
+        },
+        {
+          "tier": "uu",
+          "rank": 126,
+          "usage": "0.32"
         },
         {
           "tier": "ubers",
@@ -10966,14 +10966,14 @@
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 50,
-          "usage": "3.38"
-        },
-        {
           "tier": "nu",
           "rank": 175,
           "usage": "0.05"
+        },
+        {
+          "tier": "zu",
+          "rank": 50,
+          "usage": "3.38"
         },
         {
           "tier": "pu",
@@ -10986,14 +10986,14 @@
           "usage": "0.08"
         },
         {
-          "tier": "uu",
-          "rank": 273,
-          "usage": "0.01"
-        },
-        {
           "tier": "monotype",
           "rank": 36,
           "usage": "5.34"
+        },
+        {
+          "tier": "uu",
+          "rank": 273,
+          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -12448,14 +12448,14 @@
           "usage": "0.17"
         },
         {
-          "tier": "uu",
-          "rank": 65,
-          "usage": "1.92"
-        },
-        {
           "tier": "monotype",
           "rank": 199,
           "usage": "0.18"
+        },
+        {
+          "tier": "uu",
+          "rank": 65,
+          "usage": "1.92"
         },
         {
           "tier": "ubers",
@@ -13117,14 +13117,14 @@
           "usage": "1.62"
         },
         {
-          "tier": "uu",
-          "rank": 111,
-          "usage": "0.47"
-        },
-        {
           "tier": "monotype",
           "rank": 320,
           "usage": "0.02"
+        },
+        {
+          "tier": "uu",
+          "rank": 111,
+          "usage": "0.47"
         },
         {
           "tier": "ou",
@@ -13249,14 +13249,14 @@
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 167,
-          "usage": "0.12"
-        },
-        {
           "tier": "nu",
           "rank": 191,
           "usage": "0.03"
+        },
+        {
+          "tier": "zu",
+          "rank": 167,
+          "usage": "0.12"
         },
         {
           "tier": "pu",
@@ -13815,14 +13815,14 @@
           "usage": "0.58"
         },
         {
-          "tier": "zu",
-          "rank": 170,
-          "usage": "0.11"
-        },
-        {
           "tier": "nu",
           "rank": 196,
           "usage": "0.02"
+        },
+        {
+          "tier": "zu",
+          "rank": 170,
+          "usage": "0.11"
         },
         {
           "tier": "pu",
@@ -13830,14 +13830,14 @@
           "usage": "1.98"
         },
         {
-          "tier": "uu",
-          "rank": 266,
-          "usage": "0.01"
-        },
-        {
           "tier": "monotype",
           "rank": 300,
           "usage": "0.03"
+        },
+        {
+          "tier": "uu",
+          "rank": 266,
+          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -13917,8 +13917,30 @@
           "usage": "0.00"
         }
       ],
-      "types": [],
-      "strategies": []
+      "types": [
+        "electric"
+      ],
+      "strategies": [],
+      "abilities": [
+        {
+          "name": "static",
+          "isHidden": false
+        },
+        {
+          "name": "lightning-rod",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 20,
+        "attack": 40,
+        "defense": 15,
+        "special-attack": 35,
+        "special-defense": 35,
+        "speed": 60
+      },
+      "isLegendary": false,
+      "isMythical": false
     },
     "cleffa": {
       "name": "Cleffa",
@@ -14332,14 +14354,14 @@
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 117,
-          "usage": "0.41"
-        },
-        {
           "tier": "nu",
           "rank": 193,
           "usage": "0.03"
+        },
+        {
+          "tier": "zu",
+          "rank": 117,
+          "usage": "0.41"
         },
         {
           "tier": "pu",
@@ -14500,14 +14522,14 @@
           "usage": "0.03"
         },
         {
-          "tier": "uu",
-          "rank": 33,
-          "usage": "6.54"
-        },
-        {
           "tier": "monotype",
           "rank": 62,
           "usage": "3.48"
+        },
+        {
+          "tier": "uu",
+          "rank": 33,
+          "usage": "6.54"
         },
         {
           "tier": "ubers",
@@ -14832,14 +14854,14 @@
           "usage": "0.02"
         },
         {
-          "tier": "uu",
-          "rank": 62,
-          "usage": "2.01"
-        },
-        {
           "tier": "monotype",
           "rank": 170,
           "usage": "0.29"
+        },
+        {
+          "tier": "uu",
+          "rank": 62,
+          "usage": "2.01"
         },
         {
           "tier": "ubers",
@@ -15389,14 +15411,14 @@
           "usage": "11.55"
         },
         {
-          "tier": "uu",
-          "rank": 105,
-          "usage": "0.54"
-        },
-        {
           "tier": "monotype",
           "rank": 109,
           "usage": "1.45"
+        },
+        {
+          "tier": "uu",
+          "rank": 105,
+          "usage": "0.54"
         },
         {
           "tier": "ubers",
@@ -15566,14 +15588,14 @@
           "usage": "5.23"
         },
         {
-          "tier": "uu",
-          "rank": 93,
-          "usage": "0.83"
-        },
-        {
           "tier": "monotype",
           "rank": 232,
           "usage": "0.10"
+        },
+        {
+          "tier": "uu",
+          "rank": 93,
+          "usage": "0.83"
         },
         {
           "tier": "ubers",
@@ -15703,14 +15725,14 @@
           "usage": "9.36"
         },
         {
-          "tier": "uu",
-          "rank": 130,
-          "usage": "0.27"
-        },
-        {
           "tier": "monotype",
           "rank": 252,
           "usage": "0.07"
+        },
+        {
+          "tier": "uu",
+          "rank": 130,
+          "usage": "0.27"
         },
         {
           "tier": "ubers",
@@ -15922,14 +15944,14 @@
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 17,
-          "usage": "11.38"
-        },
-        {
           "tier": "monotype",
           "rank": 149,
           "usage": "0.47"
+        },
+        {
+          "tier": "uu",
+          "rank": 17,
+          "usage": "11.38"
         },
         {
           "tier": "ubers",
@@ -16422,14 +16444,14 @@
           "usage": "9.93"
         },
         {
-          "tier": "uu",
-          "rank": 57,
-          "usage": "2.23"
-        },
-        {
           "tier": "monotype",
           "rank": 91,
           "usage": "2.06"
+        },
+        {
+          "tier": "uu",
+          "rank": 57,
+          "usage": "2.23"
         },
         {
           "tier": "ubers",
@@ -17113,14 +17135,14 @@
           "usage": "0.17"
         },
         {
-          "tier": "uu",
-          "rank": 21,
-          "usage": "10.10"
-        },
-        {
           "tier": "monotype",
           "rank": 29,
           "usage": "6.61"
+        },
+        {
+          "tier": "uu",
+          "rank": 21,
+          "usage": "10.10"
         },
         {
           "tier": "ubers",
@@ -17542,14 +17564,14 @@
           "usage": "11.22"
         },
         {
-          "tier": "uu",
-          "rank": 190,
-          "usage": "0.06"
-        },
-        {
           "tier": "monotype",
           "rank": 122,
           "usage": "1.02"
+        },
+        {
+          "tier": "uu",
+          "rank": 190,
+          "usage": "0.06"
         },
         {
           "tier": "ubers",
@@ -17744,14 +17766,14 @@
           "usage": "1.15"
         },
         {
-          "tier": "zu",
-          "rank": 33,
-          "usage": "5.92"
-        },
-        {
           "tier": "nu",
           "rank": 154,
           "usage": "0.10"
+        },
+        {
+          "tier": "zu",
+          "rank": 33,
+          "usage": "5.92"
         },
         {
           "tier": "pu",
@@ -18077,14 +18099,14 @@
           "usage": "0.03"
         },
         {
-          "tier": "zu",
-          "rank": 131,
-          "usage": "0.30"
-        },
-        {
           "tier": "nu",
           "rank": 138,
           "usage": "0.16"
+        },
+        {
+          "tier": "zu",
+          "rank": 131,
+          "usage": "0.30"
         }
       ],
       "types": [
@@ -18590,14 +18612,14 @@
           "usage": "0.02"
         },
         {
-          "tier": "uu",
-          "rank": 8,
-          "usage": "16.21"
-        },
-        {
           "tier": "monotype",
           "rank": 6,
           "usage": "11.12"
+        },
+        {
+          "tier": "uu",
+          "rank": 8,
+          "usage": "16.21"
         },
         {
           "tier": "ubers",
@@ -18965,14 +18987,14 @@
           "usage": "0.05"
         },
         {
-          "tier": "uu",
-          "rank": 123,
-          "usage": "0.34"
-        },
-        {
           "tier": "monotype",
           "rank": 93,
           "usage": "2.03"
+        },
+        {
+          "tier": "uu",
+          "rank": 123,
+          "usage": "0.34"
         },
         {
           "tier": "ubers",
@@ -19178,14 +19200,14 @@
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 11,
-          "usage": "14.78"
-        },
-        {
           "tier": "monotype",
           "rank": 228,
           "usage": "0.10"
+        },
+        {
+          "tier": "uu",
+          "rank": 11,
+          "usage": "14.78"
         },
         {
           "tier": "ubers",
@@ -19300,14 +19322,14 @@
           "usage": "0.13"
         },
         {
-          "tier": "uu",
-          "rank": 127,
-          "usage": "0.29"
-        },
-        {
           "tier": "monotype",
           "rank": 88,
           "usage": "2.12"
+        },
+        {
+          "tier": "uu",
+          "rank": 127,
+          "usage": "0.29"
         },
         {
           "tier": "ubers",
@@ -19627,14 +19649,14 @@
           "usage": "1.46"
         },
         {
-          "tier": "zu",
-          "rank": 63,
-          "usage": "2.10"
-        },
-        {
           "tier": "nu",
           "rank": 123,
           "usage": "0.37"
+        },
+        {
+          "tier": "zu",
+          "rank": 63,
+          "usage": "2.10"
         },
         {
           "tier": "pu",
@@ -19647,14 +19669,14 @@
           "usage": "16.02"
         },
         {
-          "tier": "uu",
-          "rank": 158,
-          "usage": "0.14"
-        },
-        {
           "tier": "monotype",
           "rank": 111,
           "usage": "1.29"
+        },
+        {
+          "tier": "uu",
+          "rank": 158,
+          "usage": "0.14"
         },
         {
           "tier": "ubers",
@@ -19868,14 +19890,14 @@
           "usage": "0.14"
         },
         {
-          "tier": "zu",
-          "rank": 3,
-          "usage": "23.00"
-        },
-        {
           "tier": "nu",
           "rank": 114,
           "usage": "0.46"
+        },
+        {
+          "tier": "zu",
+          "rank": 3,
+          "usage": "23.00"
         },
         {
           "tier": "pu",
@@ -20178,14 +20200,14 @@
           "usage": "6.78"
         },
         {
-          "tier": "uu",
-          "rank": 45,
-          "usage": "4.41"
-        },
-        {
           "tier": "monotype",
           "rank": 90,
           "usage": "2.08"
+        },
+        {
+          "tier": "uu",
+          "rank": 45,
+          "usage": "4.41"
         },
         {
           "tier": "ubers",
@@ -20444,14 +20466,14 @@
           "usage": "9.07"
         },
         {
-          "tier": "uu",
-          "rank": 166,
-          "usage": "0.12"
-        },
-        {
           "tier": "monotype",
           "rank": 236,
           "usage": "0.09"
+        },
+        {
+          "tier": "uu",
+          "rank": 166,
+          "usage": "0.12"
         },
         {
           "tier": "ou",
@@ -20566,14 +20588,14 @@
           "usage": "0.23"
         },
         {
-          "tier": "uu",
-          "rank": 58,
-          "usage": "2.23"
-        },
-        {
           "tier": "monotype",
           "rank": 256,
           "usage": "0.06"
+        },
+        {
+          "tier": "uu",
+          "rank": 58,
+          "usage": "2.23"
         },
         {
           "tier": "ou",
@@ -20758,14 +20780,14 @@
           "usage": "6.66"
         },
         {
-          "tier": "uu",
-          "rank": 120,
-          "usage": "0.38"
-        },
-        {
           "tier": "monotype",
           "rank": 143,
           "usage": "0.52"
+        },
+        {
+          "tier": "uu",
+          "rank": 120,
+          "usage": "0.38"
         },
         {
           "tier": "ubers",
@@ -21045,14 +21067,14 @@
           "usage": "0.29"
         },
         {
-          "tier": "uu",
-          "rank": 15,
-          "usage": "11.89"
-        },
-        {
           "tier": "monotype",
           "rank": 63,
           "usage": "3.47"
+        },
+        {
+          "tier": "uu",
+          "rank": 15,
+          "usage": "11.89"
         },
         {
           "tier": "ubers",
@@ -21876,14 +21898,14 @@
           "usage": "1.13"
         },
         {
-          "tier": "zu",
-          "rank": 83,
-          "usage": "1.15"
-        },
-        {
           "tier": "nu",
           "rank": 92,
           "usage": "0.93"
+        },
+        {
+          "tier": "zu",
+          "rank": 83,
+          "usage": "1.15"
         },
         {
           "tier": "pu",
@@ -21891,14 +21913,14 @@
           "usage": "2.41"
         },
         {
-          "tier": "uu",
-          "rank": 202,
-          "usage": "0.05"
-        },
-        {
           "tier": "monotype",
           "rank": 315,
           "usage": "0.02"
+        },
+        {
+          "tier": "uu",
+          "rank": 202,
+          "usage": "0.05"
         },
         {
           "tier": "ubers",
@@ -22383,14 +22405,14 @@
           "usage": "0.04"
         },
         {
-          "tier": "uu",
-          "rank": 55,
-          "usage": "2.30"
-        },
-        {
           "tier": "monotype",
           "rank": 37,
           "usage": "5.33"
+        },
+        {
+          "tier": "uu",
+          "rank": 55,
+          "usage": "2.30"
         },
         {
           "tier": "ubers",
@@ -23167,14 +23189,14 @@
           "usage": "2.73"
         },
         {
-          "tier": "zu",
-          "rank": 93,
-          "usage": "0.83"
-        },
-        {
           "tier": "nu",
           "rank": 132,
           "usage": "0.25"
+        },
+        {
+          "tier": "zu",
+          "rank": 93,
+          "usage": "0.83"
         },
         {
           "tier": "pu",
@@ -23187,14 +23209,14 @@
           "usage": "1.00"
         },
         {
-          "tier": "uu",
-          "rank": 208,
-          "usage": "0.04"
-        },
-        {
           "tier": "monotype",
           "rank": 185,
           "usage": "0.21"
+        },
+        {
+          "tier": "uu",
+          "rank": 208,
+          "usage": "0.04"
         },
         {
           "tier": "ubers",
@@ -23385,14 +23407,14 @@
           "usage": "0.41"
         },
         {
-          "tier": "zu",
-          "rank": 108,
-          "usage": "0.55"
-        },
-        {
           "tier": "nu",
           "rank": 124,
           "usage": "0.33"
+        },
+        {
+          "tier": "zu",
+          "rank": 108,
+          "usage": "0.55"
         },
         {
           "tier": "pu",
@@ -23405,14 +23427,14 @@
           "usage": "0.02"
         },
         {
-          "tier": "uu",
-          "rank": 241,
-          "usage": "0.02"
-        },
-        {
           "tier": "monotype",
           "rank": 336,
           "usage": "0.01"
+        },
+        {
+          "tier": "uu",
+          "rank": 241,
+          "usage": "0.02"
         },
         {
           "tier": "ou",
@@ -24006,14 +24028,14 @@
           "usage": "0.02"
         },
         {
-          "tier": "uu",
-          "rank": 35,
-          "usage": "6.21"
-        },
-        {
           "tier": "monotype",
           "rank": 187,
           "usage": "0.21"
+        },
+        {
+          "tier": "uu",
+          "rank": 35,
+          "usage": "6.21"
         },
         {
           "tier": "ubers",
@@ -24250,14 +24272,14 @@
           "usage": "0.06"
         },
         {
-          "tier": "uu",
-          "rank": 192,
-          "usage": "0.06"
-        },
-        {
           "tier": "monotype",
           "rank": 206,
           "usage": "0.16"
+        },
+        {
+          "tier": "uu",
+          "rank": 192,
+          "usage": "0.06"
         },
         {
           "tier": "ou",
@@ -24377,14 +24399,14 @@
           "usage": "0.09"
         },
         {
-          "tier": "uu",
-          "rank": 149,
-          "usage": "0.18"
-        },
-        {
           "tier": "monotype",
           "rank": 119,
           "usage": "1.08"
+        },
+        {
+          "tier": "uu",
+          "rank": 149,
+          "usage": "0.18"
         },
         {
           "tier": "ubers",
@@ -24673,14 +24695,14 @@
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 97,
-          "usage": "0.69"
-        },
-        {
           "tier": "nu",
           "rank": 139,
           "usage": "0.16"
+        },
+        {
+          "tier": "zu",
+          "rank": 97,
+          "usage": "0.69"
         },
         {
           "tier": "pu",
@@ -24693,13 +24715,13 @@
           "usage": "0.06"
         },
         {
-          "tier": "uu",
-          "rank": 222,
+          "tier": "monotype",
+          "rank": 289,
           "usage": "0.03"
         },
         {
-          "tier": "monotype",
-          "rank": 289,
+          "tier": "uu",
+          "rank": 222,
           "usage": "0.03"
         },
         {
@@ -25116,14 +25138,14 @@
           "usage": "4.78"
         },
         {
-          "tier": "uu",
-          "rank": 253,
-          "usage": "0.02"
-        },
-        {
           "tier": "monotype",
           "rank": 215,
           "usage": "0.12"
+        },
+        {
+          "tier": "uu",
+          "rank": 253,
+          "usage": "0.02"
         },
         {
           "tier": "ou",
@@ -25314,14 +25336,14 @@
       ],
       "allRanks": [
         {
-          "tier": "lc",
-          "rank": 121,
-          "usage": "0.07"
-        },
-        {
           "tier": "nu",
           "rank": 130,
           "usage": "0.26"
+        },
+        {
+          "tier": "lc",
+          "rank": 121,
+          "usage": "0.07"
         },
         {
           "tier": "uu",
@@ -25484,14 +25506,14 @@
           "usage": "0.83"
         },
         {
-          "tier": "zu",
-          "rank": 44,
-          "usage": "3.86"
-        },
-        {
           "tier": "nu",
           "rank": 106,
           "usage": "0.64"
+        },
+        {
+          "tier": "zu",
+          "rank": 44,
+          "usage": "3.86"
         },
         {
           "tier": "pu",
@@ -25504,14 +25526,14 @@
           "usage": "0.78"
         },
         {
-          "tier": "uu",
-          "rank": 170,
-          "usage": "0.11"
-        },
-        {
           "tier": "monotype",
           "rank": 52,
           "usage": "4.27"
+        },
+        {
+          "tier": "uu",
+          "rank": 170,
+          "usage": "0.11"
         },
         {
           "tier": "ubers",
@@ -26005,14 +26027,14 @@
           "usage": "0.06"
         },
         {
-          "tier": "zu",
-          "rank": 46,
-          "usage": "3.69"
-        },
-        {
           "tier": "nu",
           "rank": 127,
           "usage": "0.27"
+        },
+        {
+          "tier": "zu",
+          "rank": 46,
+          "usage": "3.69"
         },
         {
           "tier": "pu",
@@ -26025,14 +26047,14 @@
           "usage": "0.03"
         },
         {
-          "tier": "uu",
-          "rank": 169,
-          "usage": "0.11"
-        },
-        {
           "tier": "monotype",
           "rank": 280,
           "usage": "0.04"
+        },
+        {
+          "tier": "uu",
+          "rank": 169,
+          "usage": "0.11"
         },
         {
           "tier": "ou",
@@ -26346,14 +26368,14 @@
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 104,
-          "usage": "0.59"
-        },
-        {
           "tier": "nu",
           "rank": 148,
           "usage": "0.11"
+        },
+        {
+          "tier": "zu",
+          "rank": 104,
+          "usage": "0.59"
         },
         {
           "tier": "pu",
@@ -27082,14 +27104,14 @@
           "usage": "2.45"
         },
         {
-          "tier": "zu",
-          "rank": 96,
-          "usage": "0.71"
-        },
-        {
           "tier": "nu",
           "rank": 161,
           "usage": "0.08"
+        },
+        {
+          "tier": "zu",
+          "rank": 96,
+          "usage": "0.71"
         },
         {
           "tier": "pu",
@@ -27102,14 +27124,14 @@
           "usage": "4.38"
         },
         {
-          "tier": "uu",
-          "rank": 76,
-          "usage": "1.44"
-        },
-        {
           "tier": "monotype",
           "rank": 112,
           "usage": "1.26"
+        },
+        {
+          "tier": "uu",
+          "rank": 76,
+          "usage": "1.44"
         },
         {
           "tier": "ubers",
@@ -27547,14 +27569,14 @@
           "usage": "24.22"
         },
         {
-          "tier": "uu",
-          "rank": 138,
-          "usage": "0.23"
-        },
-        {
           "tier": "monotype",
           "rank": 204,
           "usage": "0.17"
+        },
+        {
+          "tier": "uu",
+          "rank": 138,
+          "usage": "0.23"
         },
         {
           "tier": "ubers",
@@ -27772,14 +27794,14 @@
           "usage": "0.04"
         },
         {
-          "tier": "zu",
-          "rank": 123,
-          "usage": "0.36"
-        },
-        {
           "tier": "nu",
           "rank": 107,
           "usage": "0.59"
+        },
+        {
+          "tier": "zu",
+          "rank": 123,
+          "usage": "0.36"
         },
         {
           "tier": "pu",
@@ -27886,14 +27908,14 @@
           "usage": "4.82"
         },
         {
-          "tier": "uu",
-          "rank": 274,
-          "usage": "0.01"
-        },
-        {
           "tier": "monotype",
           "rank": 270,
           "usage": "0.05"
+        },
+        {
+          "tier": "uu",
+          "rank": 274,
+          "usage": "0.01"
         },
         {
           "tier": "ou",
@@ -28014,14 +28036,14 @@
           "usage": "0.24"
         },
         {
-          "tier": "uu",
-          "rank": 264,
-          "usage": "0.01"
-        },
-        {
           "tier": "monotype",
           "rank": 317,
           "usage": "0.02"
+        },
+        {
+          "tier": "uu",
+          "rank": 264,
+          "usage": "0.01"
         }
       ],
       "types": [
@@ -28279,14 +28301,14 @@
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 12,
-          "usage": "12.90"
-        },
-        {
           "tier": "nu",
           "rank": 207,
           "usage": "0.01"
+        },
+        {
+          "tier": "zu",
+          "rank": 12,
+          "usage": "12.90"
         },
         {
           "tier": "pu",
@@ -28432,14 +28454,14 @@
           "usage": "11.25"
         },
         {
-          "tier": "uu",
-          "rank": 147,
-          "usage": "0.20"
-        },
-        {
           "tier": "monotype",
           "rank": 163,
           "usage": "0.33"
+        },
+        {
+          "tier": "uu",
+          "rank": 147,
+          "usage": "0.20"
         },
         {
           "tier": "ubers",
@@ -28883,14 +28905,14 @@
           "usage": "0.04"
         },
         {
-          "tier": "uu",
-          "rank": 174,
-          "usage": "0.10"
-        },
-        {
           "tier": "monotype",
           "rank": 223,
           "usage": "0.11"
+        },
+        {
+          "tier": "uu",
+          "rank": 174,
+          "usage": "0.10"
         },
         {
           "tier": "ubers",
@@ -29400,14 +29422,14 @@
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 132,
-          "usage": "0.29"
-        },
-        {
           "tier": "nu",
           "rank": 200,
           "usage": "0.02"
+        },
+        {
+          "tier": "zu",
+          "rank": 132,
+          "usage": "0.29"
         },
         {
           "tier": "pu",
@@ -30174,14 +30196,14 @@
           "usage": "0.10"
         },
         {
-          "tier": "uu",
-          "rank": 42,
-          "usage": "4.58"
-        },
-        {
           "tier": "monotype",
           "rank": 160,
           "usage": "0.36"
+        },
+        {
+          "tier": "uu",
+          "rank": 42,
+          "usage": "4.58"
         },
         {
           "tier": "ubers",
@@ -30531,14 +30553,14 @@
           "usage": "0.05"
         },
         {
-          "tier": "uu",
-          "rank": 28,
-          "usage": "8.37"
-        },
-        {
           "tier": "monotype",
           "rank": 134,
           "usage": "0.64"
+        },
+        {
+          "tier": "uu",
+          "rank": 28,
+          "usage": "8.37"
         },
         {
           "tier": "ubers",
@@ -30789,14 +30811,14 @@
           "usage": "0.16"
         },
         {
-          "tier": "zu",
-          "rank": 25,
-          "usage": "7.36"
-        },
-        {
           "tier": "nu",
           "rank": 91,
           "usage": "0.93"
+        },
+        {
+          "tier": "zu",
+          "rank": 25,
+          "usage": "7.36"
         },
         {
           "tier": "pu",
@@ -30906,14 +30928,14 @@
           "usage": "0.25"
         },
         {
-          "tier": "zu",
-          "rank": 101,
-          "usage": "0.66"
-        },
-        {
           "tier": "nu",
           "rank": 209,
           "usage": "0.01"
+        },
+        {
+          "tier": "zu",
+          "rank": 101,
+          "usage": "0.66"
         },
         {
           "tier": "pu",
@@ -30921,14 +30943,14 @@
           "usage": "0.37"
         },
         {
-          "tier": "uu",
-          "rank": 207,
-          "usage": "0.05"
-        },
-        {
           "tier": "monotype",
           "rank": 303,
           "usage": "0.02"
+        },
+        {
+          "tier": "uu",
+          "rank": 207,
+          "usage": "0.05"
         },
         {
           "tier": "ubers",
@@ -31348,14 +31370,14 @@
           "usage": "0.06"
         },
         {
-          "tier": "uu",
-          "rank": 1,
-          "usage": "26.92"
-        },
-        {
           "tier": "monotype",
           "rank": 30,
           "usage": "6.58"
+        },
+        {
+          "tier": "uu",
+          "rank": 1,
+          "usage": "26.92"
         },
         {
           "tier": "ubers",
@@ -32217,14 +32239,14 @@
           "usage": "0.03"
         },
         {
-          "tier": "uu",
-          "rank": 60,
-          "usage": "2.13"
-        },
-        {
           "tier": "monotype",
           "rank": 144,
           "usage": "0.51"
+        },
+        {
+          "tier": "uu",
+          "rank": 60,
+          "usage": "2.13"
         },
         {
           "tier": "ubers",
@@ -32676,14 +32698,14 @@
           "usage": "0.16"
         },
         {
-          "tier": "uu",
-          "rank": 135,
-          "usage": "0.25"
-        },
-        {
           "tier": "monotype",
           "rank": 180,
           "usage": "0.23"
+        },
+        {
+          "tier": "uu",
+          "rank": 135,
+          "usage": "0.25"
         },
         {
           "tier": "ubers",
@@ -32963,14 +32985,14 @@
           "usage": "5.81"
         },
         {
-          "tier": "uu",
-          "rank": 104,
-          "usage": "0.60"
-        },
-        {
           "tier": "monotype",
           "rank": 164,
           "usage": "0.33"
+        },
+        {
+          "tier": "uu",
+          "rank": 104,
+          "usage": "0.60"
         },
         {
           "tier": "ubers",
@@ -33253,14 +33275,14 @@
           "usage": "7.24"
         },
         {
-          "tier": "uu",
-          "rank": 102,
-          "usage": "0.68"
-        },
-        {
           "tier": "monotype",
           "rank": 100,
           "usage": "1.78"
+        },
+        {
+          "tier": "uu",
+          "rank": 102,
+          "usage": "0.68"
         },
         {
           "tier": "ubers",
@@ -33550,14 +33572,14 @@
           "usage": "7.75"
         },
         {
-          "tier": "uu",
-          "rank": 95,
-          "usage": "0.81"
-        },
-        {
           "tier": "monotype",
           "rank": 83,
           "usage": "2.30"
+        },
+        {
+          "tier": "uu",
+          "rank": 95,
+          "usage": "0.81"
         },
         {
           "tier": "ubers",
@@ -34291,14 +34313,14 @@
           "usage": "0.01"
         },
         {
-          "tier": "zu",
-          "rank": 91,
-          "usage": "0.87"
-        },
-        {
           "tier": "nu",
           "rank": 170,
           "usage": "0.06"
+        },
+        {
+          "tier": "zu",
+          "rank": 91,
+          "usage": "0.87"
         },
         {
           "tier": "pu",
@@ -34306,14 +34328,14 @@
           "usage": "0.99"
         },
         {
-          "tier": "uu",
-          "rank": 237,
-          "usage": "0.02"
-        },
-        {
           "tier": "monotype",
           "rank": 335,
           "usage": "0.01"
+        },
+        {
+          "tier": "uu",
+          "rank": 237,
+          "usage": "0.02"
         },
         {
           "tier": "ubers",
@@ -34429,14 +34451,14 @@
           "usage": "0.91"
         },
         {
-          "tier": "zu",
-          "rank": 129,
-          "usage": "0.30"
-        },
-        {
           "tier": "nu",
           "rank": 122,
           "usage": "0.38"
+        },
+        {
+          "tier": "zu",
+          "rank": 129,
+          "usage": "0.30"
         },
         {
           "tier": "pu",
@@ -34704,14 +34726,14 @@
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 113,
-          "usage": "0.46"
-        },
-        {
           "tier": "nu",
           "rank": 143,
           "usage": "0.12"
+        },
+        {
+          "tier": "zu",
+          "rank": 113,
+          "usage": "0.46"
         }
       ],
       "types": [
@@ -35145,14 +35167,14 @@
           "usage": "0.19"
         },
         {
-          "tier": "uu",
-          "rank": 50,
-          "usage": "2.69"
-        },
-        {
           "tier": "monotype",
           "rank": 89,
           "usage": "2.09"
+        },
+        {
+          "tier": "uu",
+          "rank": 50,
+          "usage": "2.69"
         },
         {
           "tier": "ubers",
@@ -35357,14 +35379,14 @@
           "usage": "8.66"
         },
         {
-          "tier": "uu",
-          "rank": 144,
-          "usage": "0.21"
-        },
-        {
           "tier": "monotype",
           "rank": 250,
           "usage": "0.07"
+        },
+        {
+          "tier": "uu",
+          "rank": 144,
+          "usage": "0.21"
         },
         {
           "tier": "ou",
@@ -35530,14 +35552,14 @@
           "usage": "0.39"
         },
         {
-          "tier": "zu",
-          "rank": 51,
-          "usage": "3.31"
-        },
-        {
           "tier": "nu",
           "rank": 80,
           "usage": "1.27"
+        },
+        {
+          "tier": "zu",
+          "rank": 51,
+          "usage": "3.31"
         },
         {
           "tier": "pu",
@@ -35550,14 +35572,14 @@
           "usage": "0.06"
         },
         {
-          "tier": "uu",
-          "rank": 199,
-          "usage": "0.05"
-        },
-        {
           "tier": "monotype",
           "rank": 216,
           "usage": "0.12"
+        },
+        {
+          "tier": "uu",
+          "rank": 199,
+          "usage": "0.05"
         },
         {
           "tier": "ubers",
@@ -35911,14 +35933,14 @@
           "usage": "0.16"
         },
         {
-          "tier": "zu",
-          "rank": 45,
-          "usage": "3.73"
-        },
-        {
           "tier": "nu",
           "rank": 64,
           "usage": "1.97"
+        },
+        {
+          "tier": "zu",
+          "rank": 45,
+          "usage": "3.73"
         },
         {
           "tier": "pu",
@@ -35931,14 +35953,14 @@
           "usage": "0.01"
         },
         {
-          "tier": "uu",
-          "rank": 249,
-          "usage": "0.02"
-        },
-        {
           "tier": "monotype",
           "rank": 239,
           "usage": "0.08"
+        },
+        {
+          "tier": "uu",
+          "rank": 249,
+          "usage": "0.02"
         },
         {
           "tier": "ou",
@@ -36242,14 +36264,14 @@
           "usage": "0.12"
         },
         {
-          "tier": "zu",
-          "rank": 2,
-          "usage": "31.29"
-        },
-        {
           "tier": "nu",
           "rank": 153,
           "usage": "0.10"
+        },
+        {
+          "tier": "zu",
+          "rank": 2,
+          "usage": "31.29"
         },
         {
           "tier": "pu",
@@ -36445,14 +36467,14 @@
           "usage": "0.13"
         },
         {
-          "tier": "uu",
-          "rank": 213,
-          "usage": "0.04"
-        },
-        {
           "tier": "monotype",
           "rank": 126,
           "usage": "0.81"
+        },
+        {
+          "tier": "uu",
+          "rank": 213,
+          "usage": "0.04"
         },
         {
           "tier": "ou",
@@ -36799,14 +36821,14 @@
           "usage": "0.10"
         },
         {
-          "tier": "zu",
-          "rank": 13,
-          "usage": "11.03"
-        },
-        {
           "tier": "nu",
           "rank": 171,
           "usage": "0.06"
+        },
+        {
+          "tier": "zu",
+          "rank": 13,
+          "usage": "11.03"
         },
         {
           "tier": "pu",
@@ -37641,14 +37663,14 @@
           "usage": "0.72"
         },
         {
-          "tier": "uu",
-          "rank": 148,
-          "usage": "0.18"
-        },
-        {
           "tier": "monotype",
           "rank": 195,
           "usage": "0.19"
+        },
+        {
+          "tier": "uu",
+          "rank": 148,
+          "usage": "0.18"
         },
         {
           "tier": "ubers",
@@ -37813,6 +37835,11 @@
           "usage": "0.19"
         },
         {
+          "tier": "nu",
+          "rank": 144,
+          "usage": "0.12"
+        },
+        {
           "tier": "lc",
           "rank": 70,
           "usage": "0.55"
@@ -37821,11 +37848,6 @@
           "tier": "zu",
           "rank": 95,
           "usage": "0.71"
-        },
-        {
-          "tier": "nu",
-          "rank": 144,
-          "usage": "0.12"
         },
         {
           "tier": "pu",
@@ -37900,14 +37922,14 @@
           "usage": "0.03"
         },
         {
-          "tier": "uu",
-          "rank": 31,
-          "usage": "7.16"
-        },
-        {
           "tier": "monotype",
           "rank": 49,
           "usage": "4.38"
+        },
+        {
+          "tier": "uu",
+          "rank": 31,
+          "usage": "7.16"
         },
         {
           "tier": "ubers",
@@ -38281,14 +38303,14 @@
           "usage": "1.14"
         },
         {
-          "tier": "zu",
-          "rank": 26,
-          "usage": "7.31"
-        },
-        {
           "tier": "nu",
           "rank": 22,
           "usage": "8.75"
+        },
+        {
+          "tier": "zu",
+          "rank": 26,
+          "usage": "7.31"
         },
         {
           "tier": "pu",
@@ -38301,14 +38323,14 @@
           "usage": "0.16"
         },
         {
-          "tier": "uu",
-          "rank": 164,
-          "usage": "0.13"
-        },
-        {
           "tier": "monotype",
           "rank": 288,
           "usage": "0.03"
+        },
+        {
+          "tier": "uu",
+          "rank": 164,
+          "usage": "0.13"
         },
         {
           "tier": "ou",
@@ -38714,14 +38736,14 @@
           "usage": "0.29"
         },
         {
-          "tier": "zu",
-          "rank": 47,
-          "usage": "3.55"
-        },
-        {
           "tier": "nu",
           "rank": 172,
           "usage": "0.06"
+        },
+        {
+          "tier": "zu",
+          "rank": 47,
+          "usage": "3.55"
         },
         {
           "tier": "pu",
@@ -38729,14 +38751,14 @@
           "usage": "0.08"
         },
         {
-          "tier": "uu",
-          "rank": 252,
-          "usage": "0.02"
-        },
-        {
           "tier": "monotype",
           "rank": 242,
           "usage": "0.08"
+        },
+        {
+          "tier": "uu",
+          "rank": 252,
+          "usage": "0.02"
         },
         {
           "tier": "ubers",
@@ -38847,14 +38869,14 @@
           "usage": "0.01"
         },
         {
-          "tier": "uu",
-          "rank": 10,
-          "usage": "15.32"
-        },
-        {
           "tier": "monotype",
           "rank": 96,
           "usage": "1.89"
+        },
+        {
+          "tier": "uu",
+          "rank": 10,
+          "usage": "15.32"
         },
         {
           "tier": "ubers",
@@ -39065,14 +39087,14 @@
           "usage": "0.01"
         },
         {
-          "tier": "uu",
-          "rank": 49,
-          "usage": "2.72"
-        },
-        {
           "tier": "monotype",
           "rank": 150,
           "usage": "0.46"
+        },
+        {
+          "tier": "uu",
+          "rank": 49,
+          "usage": "2.72"
         },
         {
           "tier": "ubers",
@@ -39342,14 +39364,14 @@
           "usage": "0.06"
         },
         {
-          "tier": "uu",
-          "rank": 92,
-          "usage": "0.85"
-        },
-        {
           "tier": "monotype",
           "rank": 176,
           "usage": "0.25"
+        },
+        {
+          "tier": "uu",
+          "rank": 92,
+          "usage": "0.85"
         },
         {
           "tier": "doublesou",
@@ -39625,14 +39647,14 @@
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 86,
-          "usage": "1.00"
-        },
-        {
           "tier": "nu",
           "rank": 208,
           "usage": "0.01"
+        },
+        {
+          "tier": "zu",
+          "rank": 86,
+          "usage": "1.00"
         },
         {
           "tier": "pu",
@@ -39706,14 +39728,14 @@
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 55,
-          "usage": "2.85"
-        },
-        {
           "tier": "nu",
           "rank": 203,
           "usage": "0.01"
+        },
+        {
+          "tier": "zu",
+          "rank": 55,
+          "usage": "2.85"
         },
         {
           "tier": "pu",
@@ -39844,14 +39866,14 @@
           "usage": "0.03"
         },
         {
-          "tier": "uu",
-          "rank": 85,
-          "usage": "1.01"
-        },
-        {
           "tier": "monotype",
           "rank": 117,
           "usage": "1.11"
+        },
+        {
+          "tier": "uu",
+          "rank": 85,
+          "usage": "1.01"
         },
         {
           "tier": "ubers",
@@ -39981,14 +40003,14 @@
           "usage": "0.08"
         },
         {
-          "tier": "zu",
-          "rank": 154,
-          "usage": "0.15"
-        },
-        {
           "tier": "nu",
           "rank": 136,
           "usage": "0.16"
+        },
+        {
+          "tier": "zu",
+          "rank": 154,
+          "usage": "0.15"
         },
         {
           "tier": "pu",
@@ -40062,14 +40084,14 @@
           "usage": "0.05"
         },
         {
-          "tier": "zu",
-          "rank": 112,
-          "usage": "0.46"
-        },
-        {
           "tier": "nu",
           "rank": 155,
           "usage": "0.09"
+        },
+        {
+          "tier": "zu",
+          "rank": 112,
+          "usage": "0.46"
         },
         {
           "tier": "pu",
@@ -40077,14 +40099,14 @@
           "usage": "0.23"
         },
         {
-          "tier": "uu",
-          "rank": 185,
-          "usage": "0.08"
-        },
-        {
           "tier": "monotype",
           "rank": 319,
           "usage": "0.02"
+        },
+        {
+          "tier": "uu",
+          "rank": 185,
+          "usage": "0.08"
         },
         {
           "tier": "ou",
@@ -40495,14 +40517,14 @@
           "usage": "0.02"
         },
         {
-          "tier": "uu",
-          "rank": 47,
-          "usage": "3.16"
-        },
-        {
           "tier": "monotype",
           "rank": 25,
           "usage": "7.15"
+        },
+        {
+          "tier": "uu",
+          "rank": 47,
+          "usage": "3.16"
         },
         {
           "tier": "ubers",
@@ -40772,14 +40794,14 @@
           "usage": "2.67"
         },
         {
-          "tier": "uu",
-          "rank": 134,
-          "usage": "0.25"
-        },
-        {
           "tier": "monotype",
           "rank": 218,
           "usage": "0.12"
+        },
+        {
+          "tier": "uu",
+          "rank": 134,
+          "usage": "0.25"
         },
         {
           "tier": "ubers",
@@ -40963,14 +40985,14 @@
           "usage": "0.38"
         },
         {
-          "tier": "uu",
-          "rank": 75,
-          "usage": "1.45"
-        },
-        {
           "tier": "monotype",
           "rank": 45,
           "usage": "4.53"
+        },
+        {
+          "tier": "uu",
+          "rank": 75,
+          "usage": "1.45"
         },
         {
           "tier": "ubers",
@@ -41287,14 +41309,14 @@
           "usage": "0.02"
         },
         {
-          "tier": "zu",
-          "rank": 32,
-          "usage": "5.95"
-        },
-        {
           "tier": "nu",
           "rank": 159,
           "usage": "0.09"
+        },
+        {
+          "tier": "zu",
+          "rank": 32,
+          "usage": "5.95"
         },
         {
           "tier": "pu",
@@ -41374,14 +41396,14 @@
           "usage": "0.22"
         },
         {
-          "tier": "zu",
-          "rank": 16,
-          "usage": "10.06"
-        },
-        {
           "tier": "nu",
           "rank": 51,
           "usage": "3.41"
+        },
+        {
+          "tier": "zu",
+          "rank": 16,
+          "usage": "10.06"
         },
         {
           "tier": "pu",
@@ -41389,14 +41411,14 @@
           "usage": "7.12"
         },
         {
-          "tier": "uu",
-          "rank": 177,
-          "usage": "0.09"
-        },
-        {
           "tier": "monotype",
           "rank": 94,
           "usage": "2.03"
+        },
+        {
+          "tier": "uu",
+          "rank": 177,
+          "usage": "0.09"
         },
         {
           "tier": "ubers",
@@ -41552,14 +41574,14 @@
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 19,
-          "usage": "9.44"
-        },
-        {
           "tier": "nu",
           "rank": 162,
           "usage": "0.08"
+        },
+        {
+          "tier": "zu",
+          "rank": 19,
+          "usage": "9.44"
         },
         {
           "tier": "pu",
@@ -41656,14 +41678,14 @@
           "usage": "12.53"
         },
         {
-          "tier": "uu",
-          "rank": 187,
-          "usage": "0.07"
-        },
-        {
           "tier": "monotype",
           "rank": 271,
           "usage": "0.05"
+        },
+        {
+          "tier": "uu",
+          "rank": 187,
+          "usage": "0.07"
         },
         {
           "tier": "ubers",
@@ -41754,14 +41776,14 @@
           "usage": "0.01"
         },
         {
-          "tier": "zu",
-          "rank": 1,
-          "usage": "42.27"
-        },
-        {
           "tier": "nu",
           "rank": 72,
           "usage": "1.49"
+        },
+        {
+          "tier": "zu",
+          "rank": 1,
+          "usage": "42.27"
         },
         {
           "tier": "pu",
@@ -42321,14 +42343,14 @@
           "usage": "0.12"
         },
         {
-          "tier": "uu",
-          "rank": 13,
-          "usage": "13.49"
-        },
-        {
           "tier": "monotype",
           "rank": 12,
           "usage": "9.86"
+        },
+        {
+          "tier": "uu",
+          "rank": 13,
+          "usage": "13.49"
         },
         {
           "tier": "ubers",
@@ -42654,14 +42676,14 @@
           "usage": "0.02"
         },
         {
-          "tier": "uu",
-          "rank": 255,
-          "usage": "0.02"
-        },
-        {
           "tier": "monotype",
           "rank": 332,
           "usage": "0.01"
+        },
+        {
+          "tier": "uu",
+          "rank": 255,
+          "usage": "0.02"
         },
         {
           "tier": "ubers",
@@ -42819,14 +42841,14 @@
           "usage": "0.68"
         },
         {
-          "tier": "uu",
-          "rank": 88,
-          "usage": "0.94"
-        },
-        {
           "tier": "monotype",
           "rank": 231,
           "usage": "0.10"
+        },
+        {
+          "tier": "uu",
+          "rank": 88,
+          "usage": "0.94"
         },
         {
           "tier": "ubers",
@@ -43204,14 +43226,14 @@
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 7,
-          "usage": "16.52"
-        },
-        {
           "tier": "monotype",
           "rank": 177,
           "usage": "0.24"
+        },
+        {
+          "tier": "uu",
+          "rank": 7,
+          "usage": "16.52"
         },
         {
           "tier": "ubers",
@@ -43680,14 +43702,14 @@
           "usage": "0.45"
         },
         {
-          "tier": "zu",
-          "rank": 175,
-          "usage": "0.10"
-        },
-        {
           "tier": "nu",
           "rank": 134,
           "usage": "0.21"
+        },
+        {
+          "tier": "zu",
+          "rank": 175,
+          "usage": "0.10"
         },
         {
           "tier": "pu",
@@ -44173,14 +44195,14 @@
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 39,
-          "usage": "5.45"
-        },
-        {
           "tier": "monotype",
           "rank": 188,
           "usage": "0.21"
+        },
+        {
+          "tier": "uu",
+          "rank": 39,
+          "usage": "5.45"
         },
         {
           "tier": "ubers",
@@ -44549,14 +44571,14 @@
           "usage": "3.03"
         },
         {
-          "tier": "uu",
-          "rank": 211,
-          "usage": "0.04"
-        },
-        {
           "tier": "monotype",
           "rank": 254,
           "usage": "0.07"
+        },
+        {
+          "tier": "uu",
+          "rank": 211,
+          "usage": "0.04"
         },
         {
           "tier": "ou",
@@ -44754,14 +44776,14 @@
           "usage": "0.07"
         },
         {
-          "tier": "zu",
-          "rank": 40,
-          "usage": "4.17"
-        },
-        {
           "tier": "nu",
           "rank": 212,
           "usage": "0.01"
+        },
+        {
+          "tier": "zu",
+          "rank": 40,
+          "usage": "4.17"
         },
         {
           "tier": "pu",
@@ -45760,14 +45782,14 @@
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 149,
-          "usage": "0.17"
-        },
-        {
           "tier": "nu",
           "rank": 177,
           "usage": "0.04"
+        },
+        {
+          "tier": "zu",
+          "rank": 149,
+          "usage": "0.17"
         },
         {
           "tier": "vgc2025",
@@ -46148,14 +46170,14 @@
           "usage": "0.08"
         },
         {
-          "tier": "uu",
-          "rank": 2,
-          "usage": "25.78"
-        },
-        {
           "tier": "monotype",
           "rank": 38,
           "usage": "5.20"
+        },
+        {
+          "tier": "uu",
+          "rank": 2,
+          "usage": "25.78"
         },
         {
           "tier": "ubers",
@@ -46491,14 +46513,14 @@
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 41,
-          "usage": "4.10"
-        },
-        {
           "tier": "nu",
           "rank": 189,
           "usage": "0.03"
+        },
+        {
+          "tier": "zu",
+          "rank": 41,
+          "usage": "4.10"
         },
         {
           "tier": "pu",
@@ -46572,14 +46594,14 @@
           "usage": "0.01"
         },
         {
-          "tier": "uu",
-          "rank": 5,
-          "usage": "17.47"
-        },
-        {
           "tier": "monotype",
           "rank": 207,
           "usage": "0.16"
+        },
+        {
+          "tier": "uu",
+          "rank": 5,
+          "usage": "17.47"
         },
         {
           "tier": "ubers",
@@ -47082,14 +47104,14 @@
           "usage": "0.15"
         },
         {
-          "tier": "uu",
-          "rank": 239,
-          "usage": "0.02"
-        },
-        {
           "tier": "monotype",
           "rank": 168,
           "usage": "0.29"
+        },
+        {
+          "tier": "uu",
+          "rank": 239,
+          "usage": "0.02"
         },
         {
           "tier": "ubers",
@@ -47311,14 +47333,14 @@
       ],
       "allRanks": [
         {
-          "tier": "lc",
-          "rank": 40,
-          "usage": "1.57"
-        },
-        {
           "tier": "nu",
           "rank": 192,
           "usage": "0.03"
+        },
+        {
+          "tier": "lc",
+          "rank": 40,
+          "usage": "1.57"
         },
         {
           "tier": "ubers",
@@ -47393,14 +47415,14 @@
           "usage": "0.50"
         },
         {
-          "tier": "zu",
-          "rank": 6,
-          "usage": "19.98"
-        },
-        {
           "tier": "nu",
           "rank": 66,
           "usage": "1.79"
+        },
+        {
+          "tier": "zu",
+          "rank": 6,
+          "usage": "19.98"
         },
         {
           "tier": "pu",
@@ -47413,14 +47435,14 @@
           "usage": "17.12"
         },
         {
-          "tier": "uu",
-          "rank": 216,
-          "usage": "0.03"
-        },
-        {
           "tier": "monotype",
           "rank": 182,
           "usage": "0.22"
+        },
+        {
+          "tier": "uu",
+          "rank": 216,
+          "usage": "0.03"
         },
         {
           "tier": "ubers",
@@ -47881,14 +47903,14 @@
           "usage": "0.08"
         },
         {
-          "tier": "zu",
-          "rank": 8,
-          "usage": "16.96"
-        },
-        {
           "tier": "nu",
           "rank": 126,
           "usage": "0.28"
+        },
+        {
+          "tier": "zu",
+          "rank": 8,
+          "usage": "16.96"
         },
         {
           "tier": "pu",
@@ -48095,14 +48117,14 @@
           "usage": "18.66"
         },
         {
-          "tier": "uu",
-          "rank": 44,
-          "usage": "4.56"
-        },
-        {
           "tier": "monotype",
           "rank": 208,
           "usage": "0.15"
+        },
+        {
+          "tier": "uu",
+          "rank": 44,
+          "usage": "4.56"
         },
         {
           "tier": "ubers",
@@ -48583,14 +48605,14 @@
           "usage": "0.10"
         },
         {
-          "tier": "uu",
-          "rank": 205,
-          "usage": "0.05"
-        },
-        {
           "tier": "monotype",
           "rank": 121,
           "usage": "1.06"
+        },
+        {
+          "tier": "uu",
+          "rank": 205,
+          "usage": "0.05"
         },
         {
           "tier": "doublesou",
@@ -49191,14 +49213,14 @@
           "usage": "5.24"
         },
         {
-          "tier": "uu",
-          "rank": 251,
-          "usage": "0.02"
-        },
-        {
           "tier": "monotype",
           "rank": 295,
           "usage": "0.03"
+        },
+        {
+          "tier": "uu",
+          "rank": 251,
+          "usage": "0.02"
         },
         {
           "tier": "ubers",
@@ -49410,14 +49432,14 @@
           "usage": "0.01"
         },
         {
-          "tier": "uu",
-          "rank": 193,
-          "usage": "0.06"
-        },
-        {
           "tier": "monotype",
           "rank": 279,
           "usage": "0.04"
+        },
+        {
+          "tier": "uu",
+          "rank": 193,
+          "usage": "0.06"
         },
         {
           "tier": "ubers",
@@ -49637,14 +49659,14 @@
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 118,
-          "usage": "0.40"
-        },
-        {
           "tier": "nu",
           "rank": 210,
           "usage": "0.01"
+        },
+        {
+          "tier": "zu",
+          "rank": 118,
+          "usage": "0.40"
         },
         {
           "tier": "pu",
@@ -49929,14 +49951,14 @@
           "usage": "2.88"
         },
         {
-          "tier": "uu",
-          "rank": 122,
-          "usage": "0.36"
-        },
-        {
           "tier": "monotype",
           "rank": 212,
           "usage": "0.14"
+        },
+        {
+          "tier": "uu",
+          "rank": 122,
+          "usage": "0.36"
         },
         {
           "tier": "ubers",
@@ -50425,14 +50447,14 @@
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 155,
-          "usage": "0.15"
-        },
-        {
           "tier": "nu",
           "rank": 151,
           "usage": "0.10"
+        },
+        {
+          "tier": "zu",
+          "rank": 155,
+          "usage": "0.15"
         },
         {
           "tier": "pu",
@@ -50727,14 +50749,14 @@
           "usage": "15.64"
         },
         {
-          "tier": "uu",
-          "rank": 137,
-          "usage": "0.24"
-        },
-        {
           "tier": "monotype",
           "rank": 102,
           "usage": "1.69"
+        },
+        {
+          "tier": "uu",
+          "rank": 137,
+          "usage": "0.24"
         },
         {
           "tier": "ubers",
@@ -51389,14 +51411,14 @@
           "usage": "3.15"
         },
         {
-          "tier": "uu",
-          "rank": 182,
-          "usage": "0.08"
-        },
-        {
           "tier": "monotype",
           "rank": 146,
           "usage": "0.49"
+        },
+        {
+          "tier": "uu",
+          "rank": 182,
+          "usage": "0.08"
         },
         {
           "tier": "ubers",
@@ -51962,14 +51984,14 @@
           "usage": "0.09"
         },
         {
-          "tier": "zu",
-          "rank": 23,
-          "usage": "8.22"
-        },
-        {
           "tier": "nu",
           "rank": 181,
           "usage": "0.04"
+        },
+        {
+          "tier": "zu",
+          "rank": 23,
+          "usage": "8.22"
         },
         {
           "tier": "pu",
@@ -52308,14 +52330,14 @@
           "usage": "0.03"
         },
         {
-          "tier": "uu",
-          "rank": 133,
-          "usage": "0.25"
-        },
-        {
           "tier": "monotype",
           "rank": 172,
           "usage": "0.27"
+        },
+        {
+          "tier": "uu",
+          "rank": 133,
+          "usage": "0.25"
         },
         {
           "tier": "ubers",
@@ -52612,14 +52634,14 @@
           "usage": "0.01"
         },
         {
-          "tier": "uu",
-          "rank": 70,
-          "usage": "1.57"
-        },
-        {
           "tier": "monotype",
           "rank": 220,
           "usage": "0.11"
+        },
+        {
+          "tier": "uu",
+          "rank": 70,
+          "usage": "1.57"
         },
         {
           "tier": "ubers",
@@ -52818,14 +52840,14 @@
           "usage": "0.21"
         },
         {
-          "tier": "zu",
-          "rank": 57,
-          "usage": "2.53"
-        },
-        {
           "tier": "nu",
           "rank": 180,
           "usage": "0.04"
+        },
+        {
+          "tier": "zu",
+          "rank": 57,
+          "usage": "2.53"
         },
         {
           "tier": "pu",
@@ -52924,14 +52946,14 @@
           "usage": "0.08"
         },
         {
-          "tier": "zu",
-          "rank": 31,
-          "usage": "6.15"
-        },
-        {
           "tier": "nu",
           "rank": 182,
           "usage": "0.04"
+        },
+        {
+          "tier": "zu",
+          "rank": 31,
+          "usage": "6.15"
         },
         {
           "tier": "pu",
@@ -53279,14 +53301,14 @@
           "usage": "0.21"
         },
         {
-          "tier": "uu",
-          "rank": 100,
-          "usage": "0.70"
-        },
-        {
           "tier": "monotype",
           "rank": 273,
           "usage": "0.04"
+        },
+        {
+          "tier": "uu",
+          "rank": 100,
+          "usage": "0.70"
         },
         {
           "tier": "ou",
@@ -53516,14 +53538,14 @@
           "usage": "8.59"
         },
         {
-          "tier": "uu",
-          "rank": 223,
-          "usage": "0.03"
-        },
-        {
           "tier": "monotype",
           "rank": 142,
           "usage": "0.52"
+        },
+        {
+          "tier": "uu",
+          "rank": 223,
+          "usage": "0.03"
         },
         {
           "tier": "ou",
@@ -53760,14 +53782,14 @@
           "usage": "20.42"
         },
         {
-          "tier": "uu",
-          "rank": 41,
-          "usage": "4.68"
-        },
-        {
           "tier": "monotype",
           "rank": 51,
           "usage": "4.33"
+        },
+        {
+          "tier": "uu",
+          "rank": 41,
+          "usage": "4.68"
         },
         {
           "tier": "ubers",
@@ -54089,14 +54111,14 @@
           "usage": "0.05"
         },
         {
-          "tier": "uu",
-          "rank": 171,
-          "usage": "0.10"
-        },
-        {
           "tier": "monotype",
           "rank": 154,
           "usage": "0.40"
+        },
+        {
+          "tier": "uu",
+          "rank": 171,
+          "usage": "0.10"
         },
         {
           "tier": "doublesou",
@@ -54288,14 +54310,14 @@
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 4,
-          "usage": "19.23"
-        },
-        {
           "tier": "monotype",
           "rank": 40,
           "usage": "5.09"
+        },
+        {
+          "tier": "uu",
+          "rank": 4,
+          "usage": "19.23"
         },
         {
           "tier": "ubers",
@@ -54722,14 +54744,14 @@
           "usage": "0.01"
         },
         {
-          "tier": "uu",
-          "rank": 38,
-          "usage": "5.63"
-        },
-        {
           "tier": "monotype",
           "rank": 76,
           "usage": "2.66"
+        },
+        {
+          "tier": "uu",
+          "rank": 38,
+          "usage": "5.63"
         },
         {
           "tier": "ubers",
@@ -55437,14 +55459,14 @@
           "usage": "0.02"
         },
         {
-          "tier": "uu",
-          "rank": 37,
-          "usage": "5.89"
-        },
-        {
           "tier": "monotype",
           "rank": 135,
           "usage": "0.57"
+        },
+        {
+          "tier": "uu",
+          "rank": 37,
+          "usage": "5.89"
         },
         {
           "tier": "ubers",
@@ -55606,14 +55628,14 @@
           "usage": "0.01"
         },
         {
-          "tier": "uu",
-          "rank": 97,
-          "usage": "0.77"
-        },
-        {
           "tier": "monotype",
           "rank": 175,
           "usage": "0.26"
+        },
+        {
+          "tier": "uu",
+          "rank": 97,
+          "usage": "0.77"
         },
         {
           "tier": "ou",
@@ -55810,14 +55832,14 @@
           "usage": "0.04"
         },
         {
-          "tier": "zu",
-          "rank": 30,
-          "usage": "6.72"
-        },
-        {
           "tier": "nu",
           "rank": 119,
           "usage": "0.40"
+        },
+        {
+          "tier": "zu",
+          "rank": 30,
+          "usage": "6.72"
         },
         {
           "tier": "pu",
@@ -56156,14 +56178,14 @@
           "usage": "1.13"
         },
         {
-          "tier": "uu",
-          "rank": 34,
-          "usage": "6.29"
-        },
-        {
           "tier": "monotype",
           "rank": 198,
           "usage": "0.18"
+        },
+        {
+          "tier": "uu",
+          "rank": 34,
+          "usage": "6.29"
         },
         {
           "tier": "ubers",
@@ -57174,14 +57196,14 @@
           "usage": "0.02"
         },
         {
-          "tier": "uu",
-          "rank": 9,
-          "usage": "16.06"
-        },
-        {
           "tier": "monotype",
           "rank": 92,
           "usage": "2.04"
+        },
+        {
+          "tier": "uu",
+          "rank": 9,
+          "usage": "16.06"
         },
         {
           "tier": "ubers",
@@ -57433,14 +57455,14 @@
           "usage": "4.65"
         },
         {
-          "tier": "uu",
-          "rank": 262,
-          "usage": "0.01"
-        },
-        {
           "tier": "monotype",
           "rank": 148,
           "usage": "0.48"
+        },
+        {
+          "tier": "uu",
+          "rank": 262,
+          "usage": "0.01"
         },
         {
           "tier": "ubers",
@@ -57667,14 +57689,14 @@
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 209,
-          "usage": "0.03"
-        },
-        {
           "tier": "nu",
           "rank": 204,
           "usage": "0.01"
+        },
+        {
+          "tier": "zu",
+          "rank": 209,
+          "usage": "0.03"
         }
       ],
       "types": [
@@ -57744,14 +57766,14 @@
           "usage": "0.18"
         },
         {
-          "tier": "uu",
-          "rank": 117,
-          "usage": "0.39"
-        },
-        {
           "tier": "monotype",
           "rank": 243,
           "usage": "0.08"
+        },
+        {
+          "tier": "uu",
+          "rank": 117,
+          "usage": "0.39"
         },
         {
           "tier": "ubers",
@@ -58015,14 +58037,14 @@
           "usage": "5.10"
         },
         {
-          "tier": "uu",
-          "rank": 186,
-          "usage": "0.07"
-        },
-        {
           "tier": "monotype",
           "rank": 301,
           "usage": "0.03"
+        },
+        {
+          "tier": "uu",
+          "rank": 186,
+          "usage": "0.07"
         },
         {
           "tier": "ou",
@@ -58251,14 +58273,14 @@
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 19,
-          "usage": "10.60"
-        },
-        {
           "tier": "monotype",
           "rank": 4,
           "usage": "12.21"
+        },
+        {
+          "tier": "uu",
+          "rank": 19,
+          "usage": "10.60"
         },
         {
           "tier": "ubers",
@@ -58756,14 +58778,14 @@
           "usage": "0.18"
         },
         {
-          "tier": "uu",
-          "rank": 32,
-          "usage": "6.69"
-        },
-        {
           "tier": "monotype",
           "rank": 151,
           "usage": "0.44"
+        },
+        {
+          "tier": "uu",
+          "rank": 32,
+          "usage": "6.69"
         },
         {
           "tier": "ubers",
@@ -59331,14 +59353,14 @@
           "usage": "22.38"
         },
         {
-          "tier": "uu",
-          "rank": 161,
-          "usage": "0.13"
-        },
-        {
           "tier": "monotype",
           "rank": 299,
           "usage": "0.03"
+        },
+        {
+          "tier": "uu",
+          "rank": 161,
+          "usage": "0.13"
         },
         {
           "tier": "doublesou",
@@ -60274,14 +60296,14 @@
           "usage": "0.87"
         },
         {
-          "tier": "zu",
-          "rank": 36,
-          "usage": "4.77"
-        },
-        {
           "tier": "nu",
           "rank": 195,
           "usage": "0.02"
+        },
+        {
+          "tier": "zu",
+          "rank": 36,
+          "usage": "4.77"
         },
         {
           "tier": "pu",
@@ -60574,14 +60596,14 @@
           "usage": "0.02"
         },
         {
-          "tier": "uu",
-          "rank": 245,
-          "usage": "0.02"
-        },
-        {
           "tier": "monotype",
           "rank": 161,
           "usage": "0.34"
+        },
+        {
+          "tier": "uu",
+          "rank": 245,
+          "usage": "0.02"
         },
         {
           "tier": "ubers",
@@ -60728,14 +60750,14 @@
           "usage": "0.04"
         },
         {
-          "tier": "zu",
-          "rank": 10,
-          "usage": "13.71"
-        },
-        {
           "tier": "nu",
           "rank": 167,
           "usage": "0.06"
+        },
+        {
+          "tier": "zu",
+          "rank": 10,
+          "usage": "13.71"
         },
         {
           "tier": "pu",
@@ -60743,13 +60765,13 @@
           "usage": "0.49"
         },
         {
-          "tier": "uu",
-          "rank": 246,
+          "tier": "monotype",
+          "rank": 312,
           "usage": "0.02"
         },
         {
-          "tier": "monotype",
-          "rank": 312,
+          "tier": "uu",
+          "rank": 246,
           "usage": "0.02"
         },
         {
@@ -61121,14 +61143,14 @@
           "usage": "0.14"
         },
         {
-          "tier": "uu",
-          "rank": 87,
-          "usage": "0.96"
-        },
-        {
           "tier": "monotype",
           "rank": 244,
           "usage": "0.07"
+        },
+        {
+          "tier": "uu",
+          "rank": 87,
+          "usage": "0.96"
         },
         {
           "tier": "ubers",
@@ -61378,14 +61400,14 @@
           "usage": "0.01"
         },
         {
-          "tier": "uu",
-          "rank": 54,
-          "usage": "2.33"
-        },
-        {
           "tier": "monotype",
           "rank": 166,
           "usage": "0.31"
+        },
+        {
+          "tier": "uu",
+          "rank": 54,
+          "usage": "2.33"
         },
         {
           "tier": "ubers",
@@ -61561,14 +61583,14 @@
           "usage": "0.18"
         },
         {
-          "tier": "zu",
-          "rank": 42,
-          "usage": "4.06"
-        },
-        {
           "tier": "nu",
           "rank": 160,
           "usage": "0.08"
+        },
+        {
+          "tier": "zu",
+          "rank": 42,
+          "usage": "4.06"
         },
         {
           "tier": "pu",
@@ -61899,14 +61921,14 @@
           "usage": "0.03"
         },
         {
-          "tier": "uu",
-          "rank": 155,
-          "usage": "0.15"
-        },
-        {
           "tier": "monotype",
           "rank": 64,
           "usage": "3.41"
+        },
+        {
+          "tier": "uu",
+          "rank": 155,
+          "usage": "0.15"
         },
         {
           "tier": "ubers",
@@ -62133,14 +62155,14 @@
           "usage": "0.38"
         },
         {
-          "tier": "zu",
-          "rank": 71,
-          "usage": "1.60"
-        },
-        {
           "tier": "nu",
           "rank": 135,
           "usage": "0.19"
+        },
+        {
+          "tier": "zu",
+          "rank": 71,
+          "usage": "1.60"
         },
         {
           "tier": "pu",
@@ -62417,14 +62439,14 @@
           "usage": "3.24"
         },
         {
-          "tier": "uu",
-          "rank": 141,
-          "usage": "0.22"
-        },
-        {
           "tier": "monotype",
           "rank": 99,
           "usage": "1.78"
+        },
+        {
+          "tier": "uu",
+          "rank": 141,
+          "usage": "0.22"
         },
         {
           "tier": "ubers",
@@ -62609,14 +62631,14 @@
           "usage": "27.39"
         },
         {
-          "tier": "uu",
-          "rank": 119,
-          "usage": "0.38"
-        },
-        {
           "tier": "monotype",
           "rank": 155,
           "usage": "0.40"
+        },
+        {
+          "tier": "uu",
+          "rank": 119,
+          "usage": "0.38"
         },
         {
           "tier": "ubers",
@@ -62976,14 +62998,14 @@
           "usage": "0.22"
         },
         {
-          "tier": "uu",
-          "rank": 106,
-          "usage": "0.54"
-        },
-        {
           "tier": "monotype",
           "rank": 200,
           "usage": "0.18"
+        },
+        {
+          "tier": "uu",
+          "rank": 106,
+          "usage": "0.54"
         },
         {
           "tier": "ubers",
@@ -63210,14 +63232,14 @@
           "usage": "15.03"
         },
         {
-          "tier": "uu",
-          "rank": 142,
-          "usage": "0.22"
-        },
-        {
           "tier": "monotype",
           "rank": 306,
           "usage": "0.02"
+        },
+        {
+          "tier": "uu",
+          "rank": 142,
+          "usage": "0.22"
         },
         {
           "tier": "ou",
@@ -63359,14 +63381,14 @@
           "usage": "0.16"
         },
         {
-          "tier": "uu",
-          "rank": 67,
-          "usage": "1.81"
-        },
-        {
           "tier": "monotype",
           "rank": 86,
           "usage": "2.17"
+        },
+        {
+          "tier": "uu",
+          "rank": 67,
+          "usage": "1.81"
         },
         {
           "tier": "ubers",
@@ -63837,14 +63859,14 @@
           "usage": "4.14"
         },
         {
-          "tier": "uu",
-          "rank": 154,
-          "usage": "0.15"
-        },
-        {
           "tier": "monotype",
           "rank": 201,
           "usage": "0.17"
+        },
+        {
+          "tier": "uu",
+          "rank": 154,
+          "usage": "0.15"
         },
         {
           "tier": "ou",
@@ -64052,14 +64074,14 @@
           "usage": "39.43"
         },
         {
-          "tier": "uu",
-          "rank": 145,
-          "usage": "0.20"
-        },
-        {
           "tier": "monotype",
           "rank": 116,
           "usage": "1.13"
+        },
+        {
+          "tier": "uu",
+          "rank": 145,
+          "usage": "0.20"
         },
         {
           "tier": "ubers",
@@ -64877,14 +64899,14 @@
           "usage": "0.01"
         },
         {
-          "tier": "zu",
-          "rank": 134,
-          "usage": "0.27"
-        },
-        {
           "tier": "nu",
           "rank": 186,
           "usage": "0.03"
+        },
+        {
+          "tier": "zu",
+          "rank": 134,
+          "usage": "0.27"
         },
         {
           "tier": "pu",
@@ -65159,14 +65181,14 @@
           "usage": "0.08"
         },
         {
-          "tier": "zu",
-          "rank": 22,
-          "usage": "9.17"
-        },
-        {
           "tier": "nu",
           "rank": 147,
           "usage": "0.11"
+        },
+        {
+          "tier": "zu",
+          "rank": 22,
+          "usage": "9.17"
         },
         {
           "tier": "pu",
@@ -65179,14 +65201,14 @@
           "usage": "0.03"
         },
         {
-          "tier": "uu",
-          "rank": 139,
-          "usage": "0.23"
-        },
-        {
           "tier": "monotype",
           "rank": 205,
           "usage": "0.16"
+        },
+        {
+          "tier": "uu",
+          "rank": 139,
+          "usage": "0.23"
         },
         {
           "tier": "ubers",
@@ -65445,14 +65467,14 @@
           "usage": "0.15"
         },
         {
-          "tier": "zu",
-          "rank": 153,
-          "usage": "0.16"
-        },
-        {
           "tier": "nu",
           "rank": 71,
           "usage": "1.50"
+        },
+        {
+          "tier": "zu",
+          "rank": 153,
+          "usage": "0.16"
         },
         {
           "tier": "pu",
@@ -65611,14 +65633,14 @@
           "usage": "0.02"
         },
         {
-          "tier": "uu",
-          "rank": 78,
-          "usage": "1.35"
-        },
-        {
           "tier": "monotype",
           "rank": 125,
           "usage": "0.89"
+        },
+        {
+          "tier": "uu",
+          "rank": 78,
+          "usage": "1.35"
         },
         {
           "tier": "ubers",
@@ -65848,14 +65870,14 @@
           "usage": "0.09"
         },
         {
-          "tier": "zu",
-          "rank": 14,
-          "usage": "10.58"
-        },
-        {
           "tier": "nu",
           "rank": 115,
           "usage": "0.44"
+        },
+        {
+          "tier": "zu",
+          "rank": 14,
+          "usage": "10.58"
         },
         {
           "tier": "pu",
@@ -65863,14 +65885,14 @@
           "usage": "1.24"
         },
         {
-          "tier": "uu",
-          "rank": 195,
-          "usage": "0.06"
-        },
-        {
           "tier": "monotype",
           "rank": 240,
           "usage": "0.08"
+        },
+        {
+          "tier": "uu",
+          "rank": 195,
+          "usage": "0.06"
         },
         {
           "tier": "ubers",
@@ -66148,14 +66170,14 @@
           "usage": "0.16"
         },
         {
-          "tier": "uu",
-          "rank": 24,
-          "usage": "9.23"
-        },
-        {
           "tier": "monotype",
           "rank": 24,
           "usage": "7.19"
+        },
+        {
+          "tier": "uu",
+          "rank": 24,
+          "usage": "9.23"
         },
         {
           "tier": "ubers",
@@ -66700,14 +66722,14 @@
           "usage": "0.59"
         },
         {
-          "tier": "uu",
-          "rank": 79,
-          "usage": "1.31"
-        },
-        {
           "tier": "monotype",
           "rank": 53,
           "usage": "4.11"
+        },
+        {
+          "tier": "uu",
+          "rank": 79,
+          "usage": "1.31"
         },
         {
           "tier": "ubers",
@@ -67271,14 +67293,14 @@
           "usage": "6.07"
         },
         {
-          "tier": "uu",
-          "rank": 160,
-          "usage": "0.14"
-        },
-        {
           "tier": "monotype",
           "rank": 145,
           "usage": "0.51"
+        },
+        {
+          "tier": "uu",
+          "rank": 160,
+          "usage": "0.14"
         },
         {
           "tier": "ubers",
@@ -67606,14 +67628,14 @@
           "usage": "0.41"
         },
         {
-          "tier": "uu",
-          "rank": 150,
-          "usage": "0.18"
-        },
-        {
           "tier": "monotype",
           "rank": 321,
           "usage": "0.02"
+        },
+        {
+          "tier": "uu",
+          "rank": 150,
+          "usage": "0.18"
         },
         {
           "tier": "doublesou",
@@ -67742,14 +67764,14 @@
           "usage": "0.41"
         },
         {
-          "tier": "uu",
-          "rank": 108,
-          "usage": "0.50"
-        },
-        {
           "tier": "monotype",
           "rank": 260,
           "usage": "0.06"
+        },
+        {
+          "tier": "uu",
+          "rank": 108,
+          "usage": "0.50"
         },
         {
           "tier": "ubers",
@@ -67929,14 +67951,14 @@
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 177,
-          "usage": "0.10"
-        },
-        {
           "tier": "nu",
           "rank": 166,
           "usage": "0.07"
+        },
+        {
+          "tier": "zu",
+          "rank": 177,
+          "usage": "0.10"
         },
         {
           "tier": "pu",
@@ -68164,14 +68186,14 @@
           "usage": "8.87"
         },
         {
-          "tier": "uu",
-          "rank": 94,
-          "usage": "0.82"
-        },
-        {
           "tier": "monotype",
           "rank": 230,
           "usage": "0.10"
+        },
+        {
+          "tier": "uu",
+          "rank": 94,
+          "usage": "0.82"
         },
         {
           "tier": "ou",
@@ -68392,14 +68414,14 @@
           "usage": "0.06"
         },
         {
-          "tier": "zu",
-          "rank": 15,
-          "usage": "10.37"
-        },
-        {
           "tier": "nu",
           "rank": 48,
           "usage": "3.78"
+        },
+        {
+          "tier": "zu",
+          "rank": 15,
+          "usage": "10.37"
         },
         {
           "tier": "pu",
@@ -68516,14 +68538,14 @@
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 99,
-          "usage": "0.68"
-        },
-        {
           "tier": "nu",
           "rank": 140,
           "usage": "0.16"
+        },
+        {
+          "tier": "zu",
+          "rank": 99,
+          "usage": "0.68"
         },
         {
           "tier": "pu",
@@ -68687,14 +68709,14 @@
           "usage": "0.13"
         },
         {
-          "tier": "uu",
-          "rank": 68,
-          "usage": "1.77"
-        },
-        {
           "tier": "monotype",
           "rank": 82,
           "usage": "2.40"
+        },
+        {
+          "tier": "uu",
+          "rank": 68,
+          "usage": "1.77"
         },
         {
           "tier": "ubers",
@@ -68941,13 +68963,13 @@
           "usage": "0.08"
         },
         {
-          "tier": "uu",
-          "rank": 215,
+          "tier": "monotype",
+          "rank": 290,
           "usage": "0.03"
         },
         {
-          "tier": "monotype",
-          "rank": 290,
+          "tier": "uu",
+          "rank": 215,
           "usage": "0.03"
         },
         {
@@ -71201,14 +71223,14 @@
           "usage": "12.06"
         },
         {
-          "tier": "uu",
-          "rank": 90,
-          "usage": "0.86"
-        },
-        {
           "tier": "monotype",
           "rank": 153,
           "usage": "0.44"
+        },
+        {
+          "tier": "uu",
+          "rank": 90,
+          "usage": "0.86"
         },
         {
           "tier": "ubers",
@@ -73075,13 +73097,13 @@
           "usage": "9.68"
         },
         {
-          "tier": "uu",
-          "rank": 210,
+          "tier": "monotype",
+          "rank": 274,
           "usage": "0.04"
         },
         {
-          "tier": "monotype",
-          "rank": 274,
+          "tier": "uu",
+          "rank": 210,
           "usage": "0.04"
         },
         {
@@ -74304,14 +74326,14 @@
           "usage": "7.03"
         },
         {
-          "tier": "uu",
-          "rank": 238,
-          "usage": "0.02"
-        },
-        {
           "tier": "monotype",
           "rank": 281,
           "usage": "0.04"
+        },
+        {
+          "tier": "uu",
+          "rank": 238,
+          "usage": "0.02"
         },
         {
           "tier": "ubers",
@@ -74944,14 +74966,14 @@
           "usage": "0.07"
         },
         {
-          "tier": "zu",
-          "rank": 43,
-          "usage": "3.96"
-        },
-        {
           "tier": "nu",
           "rank": 150,
           "usage": "0.10"
+        },
+        {
+          "tier": "zu",
+          "rank": 43,
+          "usage": "3.96"
         },
         {
           "tier": "pu",
@@ -75095,14 +75117,14 @@
           "usage": "8.45"
         },
         {
-          "tier": "uu",
-          "rank": 219,
-          "usage": "0.03"
-        },
-        {
           "tier": "monotype",
           "rank": 217,
           "usage": "0.12"
+        },
+        {
+          "tier": "uu",
+          "rank": 219,
+          "usage": "0.03"
         },
         {
           "tier": "ubers",
@@ -75245,14 +75267,14 @@
           "usage": "0.02"
         },
         {
-          "tier": "uu",
-          "rank": 74,
-          "usage": "1.50"
-        },
-        {
           "tier": "monotype",
           "rank": 106,
           "usage": "1.60"
+        },
+        {
+          "tier": "uu",
+          "rank": 74,
+          "usage": "1.50"
         },
         {
           "tier": "ubers",
@@ -75448,14 +75470,14 @@
           "usage": "4.59"
         },
         {
-          "tier": "uu",
-          "rank": 121,
-          "usage": "0.37"
-        },
-        {
           "tier": "monotype",
           "rank": 263,
           "usage": "0.06"
+        },
+        {
+          "tier": "uu",
+          "rank": 121,
+          "usage": "0.37"
         },
         {
           "tier": "ubers",
@@ -75987,14 +76009,14 @@
           "usage": "0.36"
         },
         {
-          "tier": "zu",
-          "rank": 48,
-          "usage": "3.43"
-        },
-        {
           "tier": "nu",
           "rank": 112,
           "usage": "0.49"
+        },
+        {
+          "tier": "zu",
+          "rank": 48,
+          "usage": "3.43"
         },
         {
           "tier": "pu",
@@ -76574,14 +76596,14 @@
           "usage": "8.34"
         },
         {
-          "tier": "uu",
-          "rank": 48,
-          "usage": "2.96"
-        },
-        {
           "tier": "monotype",
           "rank": 77,
           "usage": "2.65"
+        },
+        {
+          "tier": "uu",
+          "rank": 48,
+          "usage": "2.96"
         },
         {
           "tier": "ubers",
@@ -76872,14 +76894,14 @@
           "usage": "0.02"
         },
         {
-          "tier": "zu",
-          "rank": 56,
-          "usage": "2.72"
-        },
-        {
           "tier": "nu",
           "rank": 110,
           "usage": "0.52"
+        },
+        {
+          "tier": "zu",
+          "rank": 56,
+          "usage": "2.72"
         },
         {
           "tier": "pu",
@@ -77282,14 +77304,14 @@
           "usage": "0.02"
         },
         {
-          "tier": "zu",
-          "rank": 107,
-          "usage": "0.56"
-        },
-        {
           "tier": "nu",
           "rank": 104,
           "usage": "0.65"
+        },
+        {
+          "tier": "zu",
+          "rank": 107,
+          "usage": "0.56"
         },
         {
           "tier": "pu",
@@ -77353,14 +77375,14 @@
           "usage": "0.39"
         },
         {
-          "tier": "zu",
-          "rank": 103,
-          "usage": "0.62"
-        },
-        {
           "tier": "nu",
           "rank": 78,
           "usage": "1.33"
+        },
+        {
+          "tier": "zu",
+          "rank": 103,
+          "usage": "0.62"
         },
         {
           "tier": "pu",
@@ -77368,14 +77390,14 @@
           "usage": "0.44"
         },
         {
-          "tier": "uu",
-          "rank": 114,
-          "usage": "0.41"
-        },
-        {
           "tier": "monotype",
           "rank": 184,
           "usage": "0.22"
+        },
+        {
+          "tier": "uu",
+          "rank": 114,
+          "usage": "0.41"
         },
         {
           "tier": "ubers",
@@ -77532,14 +77554,14 @@
           "usage": "0.05"
         },
         {
-          "tier": "uu",
-          "rank": 235,
-          "usage": "0.02"
-        },
-        {
           "tier": "monotype",
           "rank": 152,
           "usage": "0.44"
+        },
+        {
+          "tier": "uu",
+          "rank": 235,
+          "usage": "0.02"
         },
         {
           "tier": "ubers",
@@ -77717,14 +77739,14 @@
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 141,
-          "usage": "0.20"
-        },
-        {
           "tier": "nu",
           "rank": 211,
           "usage": "0.01"
+        },
+        {
+          "tier": "zu",
+          "rank": 141,
+          "usage": "0.20"
         },
         {
           "tier": "pu",
@@ -77799,14 +77821,14 @@
           "usage": "0.20"
         },
         {
-          "tier": "uu",
-          "rank": 81,
-          "usage": "1.25"
-        },
-        {
           "tier": "monotype",
           "rank": 69,
           "usage": "3.06"
+        },
+        {
+          "tier": "uu",
+          "rank": 81,
+          "usage": "1.25"
         },
         {
           "tier": "ubers",
@@ -78001,14 +78023,14 @@
           "usage": "0.06"
         },
         {
-          "tier": "zu",
-          "rank": 85,
-          "usage": "1.05"
-        },
-        {
           "tier": "nu",
           "rank": 178,
           "usage": "0.04"
+        },
+        {
+          "tier": "zu",
+          "rank": 85,
+          "usage": "1.05"
         },
         {
           "tier": "pu",
@@ -78016,14 +78038,14 @@
           "usage": "0.17"
         },
         {
-          "tier": "uu",
-          "rank": 267,
-          "usage": "0.01"
-        },
-        {
           "tier": "monotype",
           "rank": 241,
           "usage": "0.08"
+        },
+        {
+          "tier": "uu",
+          "rank": 267,
+          "usage": "0.01"
         },
         {
           "tier": "ubers",
@@ -78540,14 +78562,14 @@
           "usage": "18.41"
         },
         {
-          "tier": "uu",
-          "rank": 156,
-          "usage": "0.15"
-        },
-        {
           "tier": "monotype",
           "rank": 192,
           "usage": "0.20"
+        },
+        {
+          "tier": "uu",
+          "rank": 156,
+          "usage": "0.15"
         }
       ],
       "types": [
@@ -80217,14 +80239,14 @@
           "usage": "0.48"
         },
         {
-          "tier": "uu",
-          "rank": 72,
-          "usage": "1.53"
-        },
-        {
           "tier": "monotype",
           "rank": 133,
           "usage": "0.64"
+        },
+        {
+          "tier": "uu",
+          "rank": 72,
+          "usage": "1.53"
         },
         {
           "tier": "ubers",
@@ -80355,14 +80377,14 @@
           "usage": "0.04"
         },
         {
-          "tier": "uu",
-          "rank": 110,
-          "usage": "0.47"
-        },
-        {
           "tier": "monotype",
           "rank": 197,
           "usage": "0.19"
+        },
+        {
+          "tier": "uu",
+          "rank": 110,
+          "usage": "0.47"
         },
         {
           "tier": "ubers",
@@ -80533,14 +80555,14 @@
           "usage": "0.63"
         },
         {
-          "tier": "zu",
-          "rank": 11,
-          "usage": "12.96"
-        },
-        {
           "tier": "nu",
           "rank": 129,
           "usage": "0.26"
+        },
+        {
+          "tier": "zu",
+          "rank": 11,
+          "usage": "12.96"
         },
         {
           "tier": "pu",
@@ -80553,14 +80575,14 @@
           "usage": "0.05"
         },
         {
-          "tier": "uu",
-          "rank": 146,
-          "usage": "0.20"
-        },
-        {
           "tier": "monotype",
           "rank": 202,
           "usage": "0.17"
+        },
+        {
+          "tier": "uu",
+          "rank": 146,
+          "usage": "0.20"
         },
         {
           "tier": "ou",
@@ -80928,14 +80950,14 @@
           "usage": "0.03"
         },
         {
-          "tier": "uu",
-          "rank": 71,
-          "usage": "1.57"
-        },
-        {
           "tier": "monotype",
           "rank": 50,
           "usage": "4.35"
+        },
+        {
+          "tier": "uu",
+          "rank": 71,
+          "usage": "1.57"
         },
         {
           "tier": "ubers",
@@ -81427,14 +81449,14 @@
           "usage": "0.29"
         },
         {
-          "tier": "uu",
-          "rank": 140,
-          "usage": "0.23"
-        },
-        {
           "tier": "monotype",
           "rank": 120,
           "usage": "1.07"
+        },
+        {
+          "tier": "uu",
+          "rank": 140,
+          "usage": "0.23"
         },
         {
           "tier": "ubers",
@@ -82016,14 +82038,14 @@
           "usage": "0.05"
         },
         {
-          "tier": "uu",
-          "rank": 99,
-          "usage": "0.73"
-        },
-        {
           "tier": "monotype",
           "rank": 115,
           "usage": "1.15"
+        },
+        {
+          "tier": "uu",
+          "rank": 99,
+          "usage": "0.73"
         },
         {
           "tier": "ubers",
@@ -82848,14 +82870,14 @@
           "usage": "0.09"
         },
         {
-          "tier": "zu",
-          "rank": 164,
-          "usage": "0.14"
-        },
-        {
           "tier": "nu",
           "rank": 88,
           "usage": "0.97"
+        },
+        {
+          "tier": "zu",
+          "rank": 164,
+          "usage": "0.14"
         },
         {
           "tier": "pu",
@@ -82940,14 +82962,14 @@
           "usage": "0.04"
         },
         {
-          "tier": "uu",
-          "rank": 27,
-          "usage": "8.41"
-        },
-        {
           "tier": "monotype",
           "rank": 140,
           "usage": "0.54"
+        },
+        {
+          "tier": "uu",
+          "rank": 27,
+          "usage": "8.41"
         },
         {
           "tier": "ubers",
@@ -83799,14 +83821,14 @@
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 3,
-          "usage": "21.16"
-        },
-        {
           "tier": "monotype",
           "rank": 81,
           "usage": "2.45"
+        },
+        {
+          "tier": "uu",
+          "rank": 3,
+          "usage": "21.16"
         },
         {
           "tier": "ubers",
@@ -84173,14 +84195,14 @@
           "usage": "0.10"
         },
         {
-          "tier": "uu",
-          "rank": 86,
-          "usage": "0.99"
-        },
-        {
           "tier": "monotype",
           "rank": 165,
           "usage": "0.33"
+        },
+        {
+          "tier": "uu",
+          "rank": 86,
+          "usage": "0.99"
         },
         {
           "tier": "ubers",
@@ -84460,14 +84482,14 @@
           "usage": "0.57"
         },
         {
-          "tier": "uu",
-          "rank": 77,
-          "usage": "1.38"
-        },
-        {
           "tier": "monotype",
           "rank": 174,
           "usage": "0.26"
+        },
+        {
+          "tier": "uu",
+          "rank": 77,
+          "usage": "1.38"
         },
         {
           "tier": "ubers",
@@ -84662,14 +84684,14 @@
           "usage": "0.19"
         },
         {
-          "tier": "zu",
-          "rank": 102,
-          "usage": "0.64"
-        },
-        {
           "tier": "nu",
           "rank": 142,
           "usage": "0.13"
+        },
+        {
+          "tier": "zu",
+          "rank": 102,
+          "usage": "0.64"
         },
         {
           "tier": "pu",
@@ -84832,14 +84854,14 @@
           "usage": "0.15"
         },
         {
-          "tier": "zu",
-          "rank": 58,
-          "usage": "2.37"
-        },
-        {
           "tier": "nu",
           "rank": 128,
           "usage": "0.27"
+        },
+        {
+          "tier": "zu",
+          "rank": 58,
+          "usage": "2.37"
         },
         {
           "tier": "pu",
@@ -84852,14 +84874,14 @@
           "usage": "0.84"
         },
         {
-          "tier": "uu",
-          "rank": 200,
-          "usage": "0.05"
-        },
-        {
           "tier": "monotype",
           "rank": 237,
           "usage": "0.09"
+        },
+        {
+          "tier": "uu",
+          "rank": 200,
+          "usage": "0.05"
         },
         {
           "tier": "ubers",
@@ -85529,14 +85551,14 @@
           "usage": "0.23"
         },
         {
-          "tier": "uu",
-          "rank": 63,
-          "usage": "1.97"
-        },
-        {
           "tier": "monotype",
           "rank": 128,
           "usage": "0.78"
+        },
+        {
+          "tier": "uu",
+          "rank": 63,
+          "usage": "1.97"
         },
         {
           "tier": "ubers",
@@ -85960,14 +85982,14 @@
           "usage": "15.48"
         },
         {
-          "tier": "uu",
-          "rank": 152,
-          "usage": "0.17"
-        },
-        {
           "tier": "monotype",
           "rank": 286,
           "usage": "0.03"
+        },
+        {
+          "tier": "uu",
+          "rank": 152,
+          "usage": "0.17"
         },
         {
           "tier": "ubers",
@@ -86228,14 +86250,14 @@
           "usage": "0.02"
         },
         {
-          "tier": "uu",
-          "rank": 125,
-          "usage": "0.32"
-        },
-        {
           "tier": "monotype",
           "rank": 234,
           "usage": "0.09"
+        },
+        {
+          "tier": "uu",
+          "rank": 125,
+          "usage": "0.32"
         },
         {
           "tier": "ubers",
@@ -86674,13 +86696,13 @@
           "usage": "1.66"
         },
         {
-          "tier": "uu",
-          "rank": 194,
+          "tier": "monotype",
+          "rank": 262,
           "usage": "0.06"
         },
         {
-          "tier": "monotype",
-          "rank": 262,
+          "tier": "uu",
+          "rank": 194,
           "usage": "0.06"
         },
         {
@@ -86828,14 +86850,14 @@
           "usage": "7.24"
         },
         {
-          "tier": "uu",
-          "rank": 136,
-          "usage": "0.24"
-        },
-        {
           "tier": "monotype",
           "rank": 68,
           "usage": "3.26"
+        },
+        {
+          "tier": "uu",
+          "rank": 136,
+          "usage": "0.24"
         },
         {
           "tier": "ou",
@@ -87045,14 +87067,14 @@
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 53,
-          "usage": "3.09"
-        },
-        {
           "tier": "nu",
           "rank": 141,
           "usage": "0.15"
+        },
+        {
+          "tier": "zu",
+          "rank": 53,
+          "usage": "3.09"
         },
         {
           "tier": "pu",
@@ -87065,14 +87087,14 @@
           "usage": "0.02"
         },
         {
-          "tier": "uu",
-          "rank": 218,
-          "usage": "0.03"
-        },
-        {
           "tier": "monotype",
           "rank": 222,
           "usage": "0.11"
+        },
+        {
+          "tier": "uu",
+          "rank": 218,
+          "usage": "0.03"
         },
         {
           "tier": "ubers",
@@ -87164,14 +87186,14 @@
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 115,
-          "usage": "0.43"
-        },
-        {
           "tier": "nu",
           "rank": 213,
           "usage": "0.01"
+        },
+        {
+          "tier": "zu",
+          "rank": 115,
+          "usage": "0.43"
         },
         {
           "tier": "pu",
@@ -87284,14 +87306,14 @@
           "usage": "0.96"
         },
         {
-          "tier": "zu",
-          "rank": 122,
-          "usage": "0.37"
-        },
-        {
           "tier": "nu",
           "rank": 76,
           "usage": "1.38"
+        },
+        {
+          "tier": "zu",
+          "rank": 122,
+          "usage": "0.37"
         },
         {
           "tier": "pu",
@@ -87304,14 +87326,14 @@
           "usage": "0.08"
         },
         {
-          "tier": "uu",
-          "rank": 91,
-          "usage": "0.85"
-        },
-        {
           "tier": "monotype",
           "rank": 181,
           "usage": "0.23"
+        },
+        {
+          "tier": "uu",
+          "rank": 91,
+          "usage": "0.85"
         },
         {
           "tier": "ubers",
@@ -87537,14 +87559,14 @@
           "usage": "0.10"
         },
         {
-          "tier": "zu",
-          "rank": 67,
-          "usage": "1.99"
-        },
-        {
           "tier": "nu",
           "rank": 194,
           "usage": "0.03"
+        },
+        {
+          "tier": "zu",
+          "rank": 67,
+          "usage": "1.99"
         },
         {
           "tier": "pu",
@@ -87862,14 +87884,14 @@
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 124,
-          "usage": "0.35"
-        },
-        {
           "tier": "nu",
           "rank": 109,
           "usage": "0.56"
+        },
+        {
+          "tier": "zu",
+          "rank": 124,
+          "usage": "0.35"
         }
       ],
       "types": [
@@ -87969,14 +87991,14 @@
           "usage": "0.04"
         },
         {
-          "tier": "uu",
-          "rank": 20,
-          "usage": "10.17"
-        },
-        {
           "tier": "monotype",
           "rank": 95,
           "usage": "1.92"
+        },
+        {
+          "tier": "uu",
+          "rank": 20,
+          "usage": "10.17"
         },
         {
           "tier": "ubers",
@@ -88266,14 +88288,14 @@
           "usage": "0.07"
         },
         {
-          "tier": "zu",
-          "rank": 150,
-          "usage": "0.16"
-        },
-        {
           "tier": "nu",
           "rank": 201,
           "usage": "0.02"
+        },
+        {
+          "tier": "zu",
+          "rank": 150,
+          "usage": "0.16"
         }
       ],
       "types": [
@@ -88712,14 +88734,14 @@
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 29,
-          "usage": "8.27"
-        },
-        {
           "tier": "monotype",
           "rank": 178,
           "usage": "0.23"
+        },
+        {
+          "tier": "uu",
+          "rank": 29,
+          "usage": "8.27"
         },
         {
           "tier": "ubers",
@@ -88805,14 +88827,14 @@
           "usage": "15.52"
         },
         {
-          "tier": "uu",
-          "rank": 96,
-          "usage": "0.79"
-        },
-        {
           "tier": "monotype",
           "rank": 162,
           "usage": "0.33"
+        },
+        {
+          "tier": "uu",
+          "rank": 96,
+          "usage": "0.79"
         },
         {
           "tier": "ubers",
@@ -88953,14 +88975,14 @@
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 17,
-          "usage": "9.86"
-        },
-        {
           "tier": "nu",
           "rank": 87,
           "usage": "0.98"
+        },
+        {
+          "tier": "zu",
+          "rank": 17,
+          "usage": "9.86"
         },
         {
           "tier": "pu",
@@ -88968,14 +88990,14 @@
           "usage": "1.09"
         },
         {
-          "tier": "uu",
-          "rank": 176,
-          "usage": "0.10"
-        },
-        {
           "tier": "monotype",
           "rank": 269,
           "usage": "0.05"
+        },
+        {
+          "tier": "uu",
+          "rank": 176,
+          "usage": "0.10"
         },
         {
           "tier": "ubers",
@@ -89612,14 +89634,14 @@
           "usage": "9.36"
         },
         {
-          "tier": "uu",
-          "rank": 66,
-          "usage": "1.89"
-        },
-        {
           "tier": "monotype",
           "rank": 183,
           "usage": "0.22"
+        },
+        {
+          "tier": "uu",
+          "rank": 66,
+          "usage": "1.89"
         },
         {
           "tier": "ou",
@@ -89739,14 +89761,14 @@
           "usage": "0.69"
         },
         {
-          "tier": "uu",
-          "rank": 258,
-          "usage": "0.01"
-        },
-        {
           "tier": "monotype",
           "rank": 167,
           "usage": "0.30"
+        },
+        {
+          "tier": "uu",
+          "rank": 258,
+          "usage": "0.01"
         },
         {
           "tier": "ou",
@@ -89941,14 +89963,14 @@
           "usage": "2.82"
         },
         {
-          "tier": "uu",
-          "rank": 173,
-          "usage": "0.10"
-        },
-        {
           "tier": "monotype",
           "rank": 123,
           "usage": "1.01"
+        },
+        {
+          "tier": "uu",
+          "rank": 173,
+          "usage": "0.10"
         },
         {
           "tier": "ubers",
@@ -90037,14 +90059,14 @@
           "usage": "0.11"
         },
         {
-          "tier": "zu",
-          "rank": 49,
-          "usage": "3.39"
-        },
-        {
           "tier": "nu",
           "rank": 190,
           "usage": "0.03"
+        },
+        {
+          "tier": "zu",
+          "rank": 49,
+          "usage": "3.39"
         },
         {
           "tier": "pu",
@@ -90052,14 +90074,14 @@
           "usage": "0.66"
         },
         {
-          "tier": "uu",
-          "rank": 143,
-          "usage": "0.21"
-        },
-        {
           "tier": "monotype",
           "rank": 308,
           "usage": "0.02"
+        },
+        {
+          "tier": "uu",
+          "rank": 143,
+          "usage": "0.21"
         },
         {
           "tier": "ubers",
@@ -90551,14 +90573,14 @@
           "usage": "1.94"
         },
         {
-          "tier": "uu",
-          "rank": 256,
-          "usage": "0.01"
-        },
-        {
           "tier": "monotype",
           "rank": 191,
           "usage": "0.20"
+        },
+        {
+          "tier": "uu",
+          "rank": 256,
+          "usage": "0.01"
         },
         {
           "tier": "ubers",
@@ -90991,14 +91013,14 @@
           "usage": "0.34"
         },
         {
-          "tier": "uu",
-          "rank": 22,
-          "usage": "9.91"
-        },
-        {
           "tier": "monotype",
           "rank": 19,
           "usage": "7.73"
+        },
+        {
+          "tier": "uu",
+          "rank": 22,
+          "usage": "9.91"
         },
         {
           "tier": "ubers",
@@ -91253,14 +91275,14 @@
           "usage": "0.03"
         },
         {
-          "tier": "zu",
-          "rank": 39,
-          "usage": "4.18"
-        },
-        {
           "tier": "nu",
           "rank": 111,
           "usage": "0.52"
+        },
+        {
+          "tier": "zu",
+          "rank": 39,
+          "usage": "4.18"
         },
         {
           "tier": "pu",
@@ -91273,14 +91295,14 @@
           "usage": "13.70"
         },
         {
-          "tier": "uu",
-          "rank": 116,
-          "usage": "0.40"
-        },
-        {
           "tier": "monotype",
           "rank": 186,
           "usage": "0.21"
+        },
+        {
+          "tier": "uu",
+          "rank": 116,
+          "usage": "0.40"
         },
         {
           "tier": "ubers",
@@ -91480,13 +91502,13 @@
           "usage": "8.10"
         },
         {
-          "tier": "uu",
-          "rank": 254,
+          "tier": "monotype",
+          "rank": 309,
           "usage": "0.02"
         },
         {
-          "tier": "monotype",
-          "rank": 309,
+          "tier": "uu",
+          "rank": 254,
           "usage": "0.02"
         },
         {
@@ -92292,14 +92314,14 @@
           "usage": "1.39"
         },
         {
-          "tier": "uu",
-          "rank": 80,
-          "usage": "1.29"
-        },
-        {
           "tier": "monotype",
           "rank": 235,
           "usage": "0.09"
+        },
+        {
+          "tier": "uu",
+          "rank": 80,
+          "usage": "1.29"
         },
         {
           "tier": "ubers",
@@ -92576,14 +92598,14 @@
           "usage": "0.33"
         },
         {
-          "tier": "zu",
-          "rank": 24,
-          "usage": "7.51"
-        },
-        {
           "tier": "nu",
           "rank": 38,
           "usage": "5.02"
+        },
+        {
+          "tier": "zu",
+          "rank": 24,
+          "usage": "7.51"
         },
         {
           "tier": "pu",
@@ -92596,14 +92618,14 @@
           "usage": "4.57"
         },
         {
-          "tier": "uu",
-          "rank": 201,
-          "usage": "0.05"
-        },
-        {
           "tier": "monotype",
           "rank": 275,
           "usage": "0.04"
+        },
+        {
+          "tier": "uu",
+          "rank": 201,
+          "usage": "0.05"
         },
         {
           "tier": "ubers",
@@ -93079,14 +93101,14 @@
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 6,
-          "usage": "17.12"
-        },
-        {
           "tier": "monotype",
           "rank": 110,
           "usage": "1.44"
+        },
+        {
+          "tier": "uu",
+          "rank": 6,
+          "usage": "17.12"
         },
         {
           "tier": "ubers",
@@ -93333,14 +93355,14 @@
           "usage": "0.25"
         },
         {
-          "tier": "uu",
-          "rank": 26,
-          "usage": "8.50"
-        },
-        {
           "tier": "monotype",
           "rank": 113,
           "usage": "1.21"
+        },
+        {
+          "tier": "uu",
+          "rank": 26,
+          "usage": "8.50"
         },
         {
           "tier": "ubers",
@@ -94544,14 +94566,14 @@
           "usage": "1.03"
         },
         {
-          "tier": "uu",
-          "rank": 25,
-          "usage": "8.80"
-        },
-        {
           "tier": "monotype",
           "rank": 246,
           "usage": "0.07"
+        },
+        {
+          "tier": "uu",
+          "rank": 25,
+          "usage": "8.80"
         },
         {
           "tier": "ubers",
@@ -95122,14 +95144,14 @@
           "usage": "2.25"
         },
         {
-          "tier": "uu",
-          "rank": 103,
-          "usage": "0.63"
-        },
-        {
           "tier": "monotype",
           "rank": 214,
           "usage": "0.13"
+        },
+        {
+          "tier": "uu",
+          "rank": 103,
+          "usage": "0.63"
         },
         {
           "tier": "ou",
@@ -96049,14 +96071,14 @@
           "usage": "0.33"
         },
         {
-          "tier": "uu",
-          "rank": 203,
-          "usage": "0.05"
-        },
-        {
           "tier": "monotype",
           "rank": 283,
           "usage": "0.04"
+        },
+        {
+          "tier": "uu",
+          "rank": 203,
+          "usage": "0.05"
         },
         {
           "tier": "ubers",
@@ -98595,14 +98617,14 @@
           "usage": "0.09"
         },
         {
-          "tier": "uu",
-          "rank": 98,
-          "usage": "0.75"
-        },
-        {
           "tier": "monotype",
           "rank": 247,
           "usage": "0.07"
+        },
+        {
+          "tier": "uu",
+          "rank": 98,
+          "usage": "0.75"
         },
         {
           "tier": "ou",
@@ -98734,14 +98756,14 @@
           "usage": "0.08"
         },
         {
-          "tier": "uu",
-          "rank": 250,
-          "usage": "0.02"
-        },
-        {
           "tier": "monotype",
           "rank": 334,
           "usage": "0.01"
+        },
+        {
+          "tier": "uu",
+          "rank": 250,
+          "usage": "0.02"
         }
       ],
       "types": [
@@ -98873,14 +98895,14 @@
           "usage": "2.25"
         },
         {
-          "tier": "uu",
-          "rank": 14,
-          "usage": "12.05"
-        },
-        {
           "tier": "monotype",
           "rank": 105,
           "usage": "1.62"
+        },
+        {
+          "tier": "uu",
+          "rank": 14,
+          "usage": "12.05"
         },
         {
           "tier": "ubers",
@@ -99314,14 +99336,14 @@
           "usage": "19.89"
         },
         {
-          "tier": "uu",
-          "rank": 178,
-          "usage": "0.09"
-        },
-        {
           "tier": "monotype",
           "rank": 245,
           "usage": "0.07"
+        },
+        {
+          "tier": "uu",
+          "rank": 178,
+          "usage": "0.09"
         },
         {
           "tier": "ubers",
@@ -99482,14 +99504,14 @@
           "usage": "0.06"
         },
         {
-          "tier": "uu",
-          "rank": 30,
-          "usage": "7.23"
-        },
-        {
           "tier": "monotype",
           "rank": 141,
           "usage": "0.53"
+        },
+        {
+          "tier": "uu",
+          "rank": 30,
+          "usage": "7.23"
         },
         {
           "tier": "ubers",
@@ -100190,14 +100212,14 @@
           "usage": "0.03"
         },
         {
-          "tier": "uu",
-          "rank": 12,
-          "usage": "13.96"
-        },
-        {
           "tier": "monotype",
           "rank": 137,
           "usage": "0.55"
+        },
+        {
+          "tier": "uu",
+          "rank": 12,
+          "usage": "13.96"
         },
         {
           "tier": "ubers",
@@ -101409,14 +101431,14 @@
           "usage": "0.70"
         },
         {
-          "tier": "uu",
-          "rank": 46,
-          "usage": "4.24"
-        },
-        {
           "tier": "monotype",
           "rank": 118,
           "usage": "1.11"
+        },
+        {
+          "tier": "uu",
+          "rank": 46,
+          "usage": "4.24"
         },
         {
           "tier": "ubers",
@@ -102313,14 +102335,14 @@
           "usage": "0.75"
         },
         {
-          "tier": "uu",
-          "rank": 53,
-          "usage": "2.44"
-        },
-        {
           "tier": "monotype",
           "rank": 33,
           "usage": "6.22"
+        },
+        {
+          "tier": "uu",
+          "rank": 53,
+          "usage": "2.44"
         },
         {
           "tier": "ubers",
@@ -102528,14 +102550,14 @@
           "usage": "0.02"
         },
         {
-          "tier": "uu",
-          "rank": 64,
-          "usage": "1.93"
-        },
-        {
           "tier": "monotype",
           "rank": 131,
           "usage": "0.69"
+        },
+        {
+          "tier": "uu",
+          "rank": 64,
+          "usage": "1.93"
         },
         {
           "tier": "ubers",
@@ -102713,14 +102735,14 @@
           "usage": "0.04"
         },
         {
-          "tier": "uu",
-          "rank": 43,
-          "usage": "4.58"
-        },
-        {
           "tier": "monotype",
           "rank": 3,
           "usage": "13.79"
+        },
+        {
+          "tier": "uu",
+          "rank": 43,
+          "usage": "4.58"
         },
         {
           "tier": "ubers",
@@ -103013,14 +103035,14 @@
           "usage": "4.35"
         },
         {
-          "tier": "uu",
-          "rank": 89,
-          "usage": "0.94"
-        },
-        {
           "tier": "monotype",
           "rank": 189,
           "usage": "0.21"
+        },
+        {
+          "tier": "uu",
+          "rank": 89,
+          "usage": "0.94"
         },
         {
           "tier": "ubers",
@@ -103147,14 +103169,14 @@
           "usage": "0.50"
         },
         {
-          "tier": "uu",
-          "rank": 18,
-          "usage": "11.23"
-        },
-        {
           "tier": "monotype",
           "rank": 75,
           "usage": "2.72"
+        },
+        {
+          "tier": "uu",
+          "rank": 18,
+          "usage": "11.23"
         },
         {
           "tier": "ubers",
@@ -103539,14 +103561,14 @@
           "usage": "0.01"
         },
         {
-          "tier": "uu",
-          "rank": 175,
-          "usage": "0.10"
-        },
-        {
           "tier": "monotype",
           "rank": 194,
           "usage": "0.19"
+        },
+        {
+          "tier": "uu",
+          "rank": 175,
+          "usage": "0.10"
         },
         {
           "tier": "ubers",
@@ -103756,14 +103778,14 @@
           "usage": "24.64"
         },
         {
-          "tier": "uu",
-          "rank": 230,
-          "usage": "0.02"
-        },
-        {
           "tier": "monotype",
           "rank": 258,
           "usage": "0.06"
+        },
+        {
+          "tier": "uu",
+          "rank": 230,
+          "usage": "0.02"
         },
         {
           "tier": "ubers",
@@ -103907,14 +103929,14 @@
           "usage": "0.04"
         },
         {
-          "tier": "uu",
-          "rank": 131,
-          "usage": "0.27"
-        },
-        {
           "tier": "monotype",
           "rank": 249,
           "usage": "0.07"
+        },
+        {
+          "tier": "uu",
+          "rank": 131,
+          "usage": "0.27"
         },
         {
           "tier": "doublesou",
@@ -103999,14 +104021,14 @@
           "usage": "22.44"
         },
         {
-          "tier": "uu",
-          "rank": 107,
-          "usage": "0.53"
-        },
-        {
           "tier": "monotype",
           "rank": 313,
           "usage": "0.02"
+        },
+        {
+          "tier": "uu",
+          "rank": 107,
+          "usage": "0.53"
         },
         {
           "tier": "ubers",
@@ -104159,14 +104181,14 @@
           "usage": "16.37"
         },
         {
-          "tier": "uu",
-          "rank": 115,
-          "usage": "0.40"
-        },
-        {
           "tier": "monotype",
           "rank": 203,
           "usage": "0.17"
+        },
+        {
+          "tier": "uu",
+          "rank": 115,
+          "usage": "0.40"
         },
         {
           "tier": "ou",
@@ -104434,14 +104456,14 @@
           "usage": "0.30"
         },
         {
-          "tier": "zu",
-          "rank": 92,
-          "usage": "0.85"
-        },
-        {
           "tier": "nu",
           "rank": 81,
           "usage": "1.22"
+        },
+        {
+          "tier": "zu",
+          "rank": 92,
+          "usage": "0.85"
         },
         {
           "tier": "pu",
@@ -104454,14 +104476,14 @@
           "usage": "0.20"
         },
         {
-          "tier": "uu",
-          "rank": 188,
-          "usage": "0.07"
-        },
-        {
           "tier": "monotype",
           "rank": 233,
           "usage": "0.09"
+        },
+        {
+          "tier": "uu",
+          "rank": 188,
+          "usage": "0.07"
         },
         {
           "tier": "ubers",
@@ -104576,14 +104598,14 @@
           "usage": "8.55"
         },
         {
-          "tier": "uu",
-          "rank": 163,
-          "usage": "0.13"
-        },
-        {
           "tier": "monotype",
           "rank": 251,
           "usage": "0.07"
+        },
+        {
+          "tier": "uu",
+          "rank": 163,
+          "usage": "0.13"
         },
         {
           "tier": "ubers",
@@ -104676,14 +104698,14 @@
           "usage": "0.21"
         },
         {
-          "tier": "zu",
-          "rank": 219,
-          "usage": "0.02"
-        },
-        {
           "tier": "nu",
           "rank": 102,
           "usage": "0.67"
+        },
+        {
+          "tier": "zu",
+          "rank": 219,
+          "usage": "0.02"
         },
         {
           "tier": "pu",
@@ -104696,14 +104718,14 @@
           "usage": "0.02"
         },
         {
-          "tier": "uu",
-          "rank": 206,
-          "usage": "0.05"
-        },
-        {
           "tier": "monotype",
           "rank": 225,
           "usage": "0.11"
+        },
+        {
+          "tier": "uu",
+          "rank": 206,
+          "usage": "0.05"
         },
         {
           "tier": "doublesou",
@@ -104823,13 +104845,13 @@
           "usage": "0.33"
         },
         {
-          "tier": "uu",
-          "rank": 242,
+          "tier": "monotype",
+          "rank": 305,
           "usage": "0.02"
         },
         {
-          "tier": "monotype",
-          "rank": 305,
+          "tier": "uu",
+          "rank": 242,
           "usage": "0.02"
         },
         {
@@ -104913,14 +104935,14 @@
           "usage": "0.18"
         },
         {
-          "tier": "zu",
-          "rank": 65,
-          "usage": "2.06"
-        },
-        {
           "tier": "nu",
           "rank": 94,
           "usage": "0.78"
+        },
+        {
+          "tier": "zu",
+          "rank": 65,
+          "usage": "2.06"
         },
         {
           "tier": "pu",
@@ -104933,13 +104955,13 @@
           "usage": "0.06"
         },
         {
-          "tier": "uu",
-          "rank": 234,
+          "tier": "monotype",
+          "rank": 316,
           "usage": "0.02"
         },
         {
-          "tier": "monotype",
-          "rank": 316,
+          "tier": "uu",
+          "rank": 234,
           "usage": "0.02"
         },
         {
@@ -105074,14 +105096,14 @@
           "usage": "0.09"
         },
         {
-          "tier": "uu",
-          "rank": 151,
-          "usage": "0.17"
-        },
-        {
           "tier": "monotype",
           "rank": 304,
           "usage": "0.02"
+        },
+        {
+          "tier": "uu",
+          "rank": 151,
+          "usage": "0.17"
         },
         {
           "tier": "ubers",
@@ -105280,14 +105302,14 @@
           "usage": "0.01"
         },
         {
-          "tier": "uu",
-          "rank": 196,
-          "usage": "0.06"
-        },
-        {
           "tier": "monotype",
           "rank": 193,
           "usage": "0.19"
+        },
+        {
+          "tier": "uu",
+          "rank": 196,
+          "usage": "0.06"
         },
         {
           "tier": "ubers",
@@ -105395,14 +105417,14 @@
           "usage": "7.90"
         },
         {
-          "tier": "uu",
-          "rank": 259,
-          "usage": "0.01"
-        },
-        {
           "tier": "monotype",
           "rank": 248,
           "usage": "0.07"
+        },
+        {
+          "tier": "uu",
+          "rank": 259,
+          "usage": "0.01"
         },
         {
           "tier": "ou",
@@ -105558,14 +105580,14 @@
           "usage": "19.98"
         },
         {
-          "tier": "uu",
-          "rank": 181,
-          "usage": "0.09"
-        },
-        {
           "tier": "monotype",
           "rank": 276,
           "usage": "0.04"
+        },
+        {
+          "tier": "uu",
+          "rank": 181,
+          "usage": "0.09"
         },
         {
           "tier": "ubers",
@@ -105748,14 +105770,14 @@
           "usage": "0.68"
         },
         {
-          "tier": "uu",
-          "rank": 248,
-          "usage": "0.02"
-        },
-        {
           "tier": "monotype",
           "rank": 226,
           "usage": "0.11"
+        },
+        {
+          "tier": "uu",
+          "rank": 248,
+          "usage": "0.02"
         },
         {
           "tier": "ubers",
@@ -105883,14 +105905,14 @@
           "usage": "0.04"
         },
         {
-          "tier": "zu",
-          "rank": 27,
-          "usage": "7.30"
-        },
-        {
           "tier": "nu",
           "rank": 97,
           "usage": "0.73"
+        },
+        {
+          "tier": "zu",
+          "rank": 27,
+          "usage": "7.30"
         },
         {
           "tier": "pu",
@@ -105973,14 +105995,14 @@
           "usage": "0.03"
         },
         {
-          "tier": "zu",
-          "rank": 120,
-          "usage": "0.40"
-        },
-        {
           "tier": "nu",
           "rank": 74,
           "usage": "1.47"
+        },
+        {
+          "tier": "zu",
+          "rank": 120,
+          "usage": "0.40"
         },
         {
           "tier": "pu",
@@ -105998,6 +106020,654 @@
         "ghost"
       ],
       "strategies": [],
+      "abilities": [
+        {
+          "name": "levitate",
+          "isHidden": false
+        }
+      ],
+      "stats": {
+        "hp": 50,
+        "attack": 50,
+        "defense": 77,
+        "special-attack": 95,
+        "special-defense": 77,
+        "speed": 91
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
+    "persianalola": {
+      "name": "Persian-Alola",
+      "cleanName": "persianalola",
+      "dex": 53,
+      "id": 10108,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10108.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "nu",
+          "rank": 137,
+          "usage": "0.16"
+        },
+        {
+          "tier": "zu",
+          "rank": 87,
+          "usage": "0.96"
+        },
+        {
+          "tier": "pu",
+          "rank": 61,
+          "usage": "2.17"
+        },
+        {
+          "tier": "vgc2025",
+          "rank": 276,
+          "usage": "0.01"
+        },
+        {
+          "tier": "ou",
+          "rank": 212,
+          "usage": "0.06"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 354,
+          "usage": "0.01"
+        }
+      ],
+      "types": [
+        "dark"
+      ],
+      "strategies": [
+        {
+          "name": "Heavy-Duty Boots",
+          "tier": "pu",
+          "ability": "Fur Coat",
+          "item": "Heavy-Duty Boots",
+          "nature": "Jolly",
+          "teraType": "Ghost / Poison",
+          "evs": "4 ATK / 252 DEF / 252 SPE",
+          "moves": [
+            "Knock Off",
+            "Foul Play",
+            "Parting Shot / U-turn",
+            "Taunt / Thunder Wave"
+          ]
+        },
+        {
+          "name": "Choice Scarf",
+          "tier": "pu",
+          "ability": "Fur Coat",
+          "item": "Choice Scarf",
+          "nature": "Jolly",
+          "teraType": "Ghost / Poison",
+          "evs": "4 ATK / 252 DEF / 252 SPE",
+          "moves": [
+            "Parting Shot",
+            "Switcheroo",
+            "Foul Play",
+            "Knock Off"
+          ]
+        },
+        {
+          "name": "Defensive Pivot",
+          "tier": "zu",
+          "ability": "Fur Coat",
+          "item": "Heavy-Duty Boots",
+          "nature": "Jolly",
+          "teraType": "Poison / Ghost",
+          "evs": "252 HP / 4 DEF / 252 SPE",
+          "moves": [
+            "Parting Shot",
+            "Foul Play",
+            "Knock Off",
+            "Taunt"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "fur-coat",
+          "isHidden": false
+        },
+        {
+          "name": "technician",
+          "isHidden": false
+        },
+        {
+          "name": "rattled",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 65,
+        "attack": 60,
+        "defense": 60,
+        "special-attack": 75,
+        "special-defense": 65,
+        "speed": 115
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
+    "oricoriopau": {
+      "name": "Oricorio-Pa'u",
+      "cleanName": "oricoriopau",
+      "dex": 741,
+      "id": 741,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/741.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "nu",
+          "rank": 156,
+          "usage": "0.09"
+        },
+        {
+          "tier": "zu",
+          "rank": 148,
+          "usage": "0.17"
+        },
+        {
+          "tier": "pu",
+          "rank": 185,
+          "usage": "0.05"
+        }
+      ],
+      "types": [
+        "fire",
+        "flying"
+      ],
+      "strategies": [
+        {
+          "name": "Quiver Dance",
+          "tier": "pu",
+          "ability": "Dancer",
+          "item": "Heavy-Duty Boots / Grassy Seed",
+          "nature": "Timid",
+          "teraType": "Fighting / Fairy",
+          "evs": "252 SPA / 4 SPD / 252 SPE OR 252 HP / 4 SPA / 252 SPE",
+          "moves": [
+            "Quiver Dance",
+            "Hurricane / Air Slash",
+            "Revelation Dance / Taunt",
+            "Roost"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "dancer",
+          "isHidden": false
+        }
+      ],
+      "stats": {
+        "hp": 75,
+        "attack": 70,
+        "defense": 70,
+        "special-attack": 98,
+        "special-defense": 70,
+        "speed": 93
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
+    "dugtrioalola": {
+      "name": "Dugtrio-Alola",
+      "cleanName": "dugtrioalola",
+      "dex": 51,
+      "id": 10106,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10106.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "nu",
+          "rank": 173,
+          "usage": "0.06"
+        },
+        {
+          "tier": "zu",
+          "rank": 52,
+          "usage": "3.23"
+        },
+        {
+          "tier": "pu",
+          "rank": 159,
+          "usage": "0.11"
+        },
+        {
+          "tier": "monotype",
+          "rank": 329,
+          "usage": "0.01"
+        },
+        {
+          "tier": "ou",
+          "rank": 287,
+          "usage": "0.01"
+        }
+      ],
+      "types": [
+        "ground",
+        "steel"
+      ],
+      "strategies": [
+        {
+          "name": "Lead",
+          "tier": "zu",
+          "ability": "Tangling Hair",
+          "item": "Focus Sash",
+          "nature": "Jolly",
+          "teraType": "Normal",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Stealth Rock",
+            "Earthquake",
+            "Iron Head",
+            "Endeavor / Sucker Punch / Memento"
+          ]
+        },
+        {
+          "name": "Swords Dance",
+          "tier": "zu",
+          "ability": "Tangling Hair",
+          "item": "Life Orb",
+          "nature": "Jolly",
+          "teraType": "Grass / Water",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Swords Dance",
+            "Earthquake",
+            "Iron Head",
+            "Sucker Punch / Stone Edge / Substitute"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "sand-veil",
+          "isHidden": false
+        },
+        {
+          "name": "tangling-hair",
+          "isHidden": false
+        },
+        {
+          "name": "sand-force",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 35,
+        "attack": 100,
+        "defense": 60,
+        "special-attack": 50,
+        "special-defense": 70,
+        "speed": 110
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
+    "qwilfishhisui": {
+      "name": "Qwilfish-Hisui",
+      "cleanName": "qwilfishhisui",
+      "dex": 211,
+      "id": 10234,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10234.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "nu",
+          "rank": 174,
+          "usage": "0.05"
+        },
+        {
+          "tier": "pu",
+          "rank": 41,
+          "usage": "4.83"
+        },
+        {
+          "tier": "monotype",
+          "rank": 324,
+          "usage": "0.02"
+        },
+        {
+          "tier": "ubers",
+          "rank": 204,
+          "usage": "0.07"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 334,
+          "usage": "0.02"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 439,
+          "usage": "0.01"
+        }
+      ],
+      "types": [
+        "dark",
+        "poison"
+      ],
+      "strategies": [
+        {
+          "name": "Specially Defensive",
+          "tier": "pu",
+          "ability": "Intimidate",
+          "item": "Eviolite",
+          "nature": "Careful",
+          "teraType": "Normal",
+          "evs": "252 HP / 240 SPD / 16 SPE",
+          "moves": [
+            "Spikes",
+            "Barb Barrage",
+            "Crunch",
+            "Pain Split / Taunt / Toxic"
+          ]
+        },
+        {
+          "name": "Swords Dance",
+          "tier": "pu",
+          "ability": "Intimidate",
+          "item": "Eviolite",
+          "nature": "Jolly",
+          "teraType": "Water / Ghost",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Swords Dance",
+            "Gunk Shot",
+            "Crunch",
+            "Aqua Jet / Self-Destruct"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "poison-point",
+          "isHidden": false
+        },
+        {
+          "name": "swift-swim",
+          "isHidden": false
+        },
+        {
+          "name": "intimidate",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 65,
+        "attack": 95,
+        "defense": 85,
+        "special-attack": 55,
+        "special-defense": 55,
+        "speed": 85
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
+    "golemalola": {
+      "name": "Golem-Alola",
+      "cleanName": "golemalola",
+      "dex": 76,
+      "id": 10111,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10111.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "nu",
+          "rank": 179,
+          "usage": "0.04"
+        },
+        {
+          "tier": "zu",
+          "rank": 161,
+          "usage": "0.14"
+        },
+        {
+          "tier": "pu",
+          "rank": 170,
+          "usage": "0.09"
+        },
+        {
+          "tier": "vgc2025",
+          "rank": 246,
+          "usage": "0.02"
+        },
+        {
+          "tier": "monotype",
+          "rank": 338,
+          "usage": "0.01"
+        },
+        {
+          "tier": "uu",
+          "rank": 197,
+          "usage": "0.05"
+        },
+        {
+          "tier": "ubers",
+          "rank": 275,
+          "usage": "0.02"
+        },
+        {
+          "tier": "ou",
+          "rank": 281,
+          "usage": "0.02"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 183,
+          "usage": "0.18"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 450,
+          "usage": "0.01"
+        }
+      ],
+      "types": [
+        "rock",
+        "electric"
+      ],
+      "strategies": [
+        {
+          "name": "Choice Band (Rock)",
+          "tier": "monotype",
+          "ability": "Magnet Pull",
+          "item": "Choice Band",
+          "nature": "Adamant",
+          "teraType": "Normal",
+          "evs": "252 ATK / 4 DEF / 252 SPE",
+          "moves": [
+            "Wild Charge",
+            "Brick Break",
+            "Earthquake",
+            "Fire Punch"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "magnet-pull",
+          "isHidden": false
+        },
+        {
+          "name": "sturdy",
+          "isHidden": false
+        },
+        {
+          "name": "galvanize",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 80,
+        "attack": 120,
+        "defense": 130,
+        "special-attack": 55,
+        "special-defense": 65,
+        "speed": 45
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
+    "sliggoohisui": {
+      "name": "Sliggoo-Hisui",
+      "cleanName": "sliggoohisui",
+      "dex": 705,
+      "id": 10241,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10241.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "nu",
+          "rank": 202,
+          "usage": "0.02"
+        },
+        {
+          "tier": "zu",
+          "rank": 183,
+          "usage": "0.08"
+        }
+      ],
+      "types": [
+        "steel",
+        "dragon"
+      ],
+      "strategies": [
+        {
+          "name": "All-Out Attacker",
+          "tier": "nfe",
+          "ability": "Gooey / Sap Sipper",
+          "item": "Eviolite",
+          "nature": "Modest",
+          "teraType": "Normal",
+          "evs": "160 HP / 252 SPA / 96 SPE",
+          "moves": [
+            "Draco Meteor",
+            "Flash Cannon",
+            "Thunderbolt / Ice Beam",
+            "Acid Spray"
+          ]
+        },
+        {
+          "name": "RestTalk",
+          "tier": "nfe",
+          "ability": "Gooey / Sap Sipper",
+          "item": "Eviolite",
+          "nature": "Calm / Modest",
+          "teraType": "Normal",
+          "evs": "252 HP / 4 SPA / 252 SPD OR 252 HP / 252 SPA / 4 SPD",
+          "moves": [
+            "Acid Spray / Draco Meteor",
+            "Flash Cannon / Thunderbolt",
+            "Rest",
+            "Sleep Talk"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "sap-sipper",
+          "isHidden": false
+        },
+        {
+          "name": "shell-armor",
+          "isHidden": false
+        },
+        {
+          "name": "gooey",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 58,
+        "attack": 75,
+        "defense": 83,
+        "special-attack": 83,
+        "special-defense": 113,
+        "speed": 40
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
+    "rotomfrost": {
+      "name": "Rotom-Frost",
+      "cleanName": "rotomfrost",
+      "dex": 479,
+      "id": 479,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/479.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "nu",
+          "rank": 206,
+          "usage": "0.01"
+        },
+        {
+          "tier": "zu",
+          "rank": 137,
+          "usage": "0.26"
+        },
+        {
+          "tier": "pu",
+          "rank": 161,
+          "usage": "0.11"
+        },
+        {
+          "tier": "monotype",
+          "rank": 272,
+          "usage": "0.04"
+        },
+        {
+          "tier": "uu",
+          "rank": 231,
+          "usage": "0.02"
+        },
+        {
+          "tier": "ou",
+          "rank": 221,
+          "usage": "0.05"
+        }
+      ],
+      "types": [
+        "electric",
+        "ghost"
+      ],
+      "strategies": [
+        {
+          "name": "Nasty Plot",
+          "tier": "zu",
+          "ability": "Levitate",
+          "item": "Heavy-Duty Boots",
+          "nature": "Timid",
+          "teraType": "Ghost / Water",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Nasty Plot",
+            "Thunderbolt",
+            "Blizzard",
+            "Volt Switch"
+          ]
+        },
+        {
+          "name": "Choice Scarf",
+          "tier": "zu",
+          "ability": "Levitate",
+          "item": "Choice Scarf",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Volt Switch",
+            "Blizzard",
+            "Thunderbolt",
+            "Trick"
+          ]
+        }
+      ],
       "abilities": [
         {
           "name": "levitate",
@@ -106628,101 +107298,6 @@
       "isLegendary": false,
       "isMythical": false
     },
-    "dugtrioalola": {
-      "name": "Dugtrio-Alola",
-      "cleanName": "dugtrioalola",
-      "dex": 51,
-      "id": 10106,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10106.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "zu",
-          "rank": 52,
-          "usage": "3.23"
-        },
-        {
-          "tier": "nu",
-          "rank": 173,
-          "usage": "0.06"
-        },
-        {
-          "tier": "pu",
-          "rank": 159,
-          "usage": "0.11"
-        },
-        {
-          "tier": "monotype",
-          "rank": 329,
-          "usage": "0.01"
-        },
-        {
-          "tier": "ou",
-          "rank": 287,
-          "usage": "0.01"
-        }
-      ],
-      "types": [
-        "ground",
-        "steel"
-      ],
-      "strategies": [
-        {
-          "name": "Lead",
-          "tier": "zu",
-          "ability": "Tangling Hair",
-          "item": "Focus Sash",
-          "nature": "Jolly",
-          "teraType": "Normal",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Stealth Rock",
-            "Earthquake",
-            "Iron Head",
-            "Endeavor / Sucker Punch / Memento"
-          ]
-        },
-        {
-          "name": "Swords Dance",
-          "tier": "zu",
-          "ability": "Tangling Hair",
-          "item": "Life Orb",
-          "nature": "Jolly",
-          "teraType": "Grass / Water",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Swords Dance",
-            "Earthquake",
-            "Iron Head",
-            "Sucker Punch / Stone Edge / Substitute"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "sand-veil",
-          "isHidden": false
-        },
-        {
-          "name": "tangling-hair",
-          "isHidden": false
-        },
-        {
-          "name": "sand-force",
-          "isHidden": true
-        }
-      ],
-      "stats": {
-        "hp": 35,
-        "attack": 100,
-        "defense": 60,
-        "special-attack": 50,
-        "special-defense": 70,
-        "speed": 110
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
     "taurospaldeacombat": {
       "name": "Tauros-Paldea-Combat",
       "cleanName": "taurospaldeacombat",
@@ -106739,212 +107314,6 @@
       ],
       "types": [],
       "strategies": []
-    },
-    "persianalola": {
-      "name": "Persian-Alola",
-      "cleanName": "persianalola",
-      "dex": 53,
-      "id": 10108,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10108.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "zu",
-          "rank": 87,
-          "usage": "0.96"
-        },
-        {
-          "tier": "nu",
-          "rank": 137,
-          "usage": "0.16"
-        },
-        {
-          "tier": "pu",
-          "rank": 61,
-          "usage": "2.17"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 276,
-          "usage": "0.01"
-        },
-        {
-          "tier": "ou",
-          "rank": 212,
-          "usage": "0.06"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 354,
-          "usage": "0.01"
-        }
-      ],
-      "types": [
-        "dark"
-      ],
-      "strategies": [
-        {
-          "name": "Heavy-Duty Boots",
-          "tier": "pu",
-          "ability": "Fur Coat",
-          "item": "Heavy-Duty Boots",
-          "nature": "Jolly",
-          "teraType": "Ghost / Poison",
-          "evs": "4 ATK / 252 DEF / 252 SPE",
-          "moves": [
-            "Knock Off",
-            "Foul Play",
-            "Parting Shot / U-turn",
-            "Taunt / Thunder Wave"
-          ]
-        },
-        {
-          "name": "Choice Scarf",
-          "tier": "pu",
-          "ability": "Fur Coat",
-          "item": "Choice Scarf",
-          "nature": "Jolly",
-          "teraType": "Ghost / Poison",
-          "evs": "4 ATK / 252 DEF / 252 SPE",
-          "moves": [
-            "Parting Shot",
-            "Switcheroo",
-            "Foul Play",
-            "Knock Off"
-          ]
-        },
-        {
-          "name": "Defensive Pivot",
-          "tier": "zu",
-          "ability": "Fur Coat",
-          "item": "Heavy-Duty Boots",
-          "nature": "Jolly",
-          "teraType": "Poison / Ghost",
-          "evs": "252 HP / 4 DEF / 252 SPE",
-          "moves": [
-            "Parting Shot",
-            "Foul Play",
-            "Knock Off",
-            "Taunt"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "fur-coat",
-          "isHidden": false
-        },
-        {
-          "name": "technician",
-          "isHidden": false
-        },
-        {
-          "name": "rattled",
-          "isHidden": true
-        }
-      ],
-      "stats": {
-        "hp": 65,
-        "attack": 60,
-        "defense": 60,
-        "special-attack": 75,
-        "special-defense": 65,
-        "speed": 115
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "rotomfrost": {
-      "name": "Rotom-Frost",
-      "cleanName": "rotomfrost",
-      "dex": 479,
-      "id": 479,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/479.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "zu",
-          "rank": 137,
-          "usage": "0.26"
-        },
-        {
-          "tier": "nu",
-          "rank": 206,
-          "usage": "0.01"
-        },
-        {
-          "tier": "pu",
-          "rank": 161,
-          "usage": "0.11"
-        },
-        {
-          "tier": "uu",
-          "rank": 231,
-          "usage": "0.02"
-        },
-        {
-          "tier": "monotype",
-          "rank": 272,
-          "usage": "0.04"
-        },
-        {
-          "tier": "ou",
-          "rank": 221,
-          "usage": "0.05"
-        }
-      ],
-      "types": [
-        "electric",
-        "ghost"
-      ],
-      "strategies": [
-        {
-          "name": "Nasty Plot",
-          "tier": "zu",
-          "ability": "Levitate",
-          "item": "Heavy-Duty Boots",
-          "nature": "Timid",
-          "teraType": "Ghost / Water",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Nasty Plot",
-            "Thunderbolt",
-            "Blizzard",
-            "Volt Switch"
-          ]
-        },
-        {
-          "name": "Choice Scarf",
-          "tier": "zu",
-          "ability": "Levitate",
-          "item": "Choice Scarf",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Volt Switch",
-            "Blizzard",
-            "Thunderbolt",
-            "Trick"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "levitate",
-          "isHidden": false
-        }
-      ],
-      "stats": {
-        "hp": 50,
-        "attack": 50,
-        "defense": 77,
-        "special-attack": 95,
-        "special-defense": 77,
-        "speed": 91
-      },
-      "isLegendary": false,
-      "isMythical": false
     },
     "lycanrocmidnight": {
       "name": "Lycanroc-Midnight",
@@ -106999,68 +107368,6 @@
       "isLegendary": false,
       "isMythical": false
     },
-    "oricoriopau": {
-      "name": "Oricorio-Pa'u",
-      "cleanName": "oricoriopau",
-      "dex": 741,
-      "id": 741,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/741.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "zu",
-          "rank": 148,
-          "usage": "0.17"
-        },
-        {
-          "tier": "nu",
-          "rank": 156,
-          "usage": "0.09"
-        },
-        {
-          "tier": "pu",
-          "rank": 185,
-          "usage": "0.05"
-        }
-      ],
-      "types": [
-        "fire",
-        "flying"
-      ],
-      "strategies": [
-        {
-          "name": "Quiver Dance",
-          "tier": "pu",
-          "ability": "Dancer",
-          "item": "Heavy-Duty Boots / Grassy Seed",
-          "nature": "Timid",
-          "teraType": "Fighting / Fairy",
-          "evs": "252 SPA / 4 SPD / 252 SPE OR 252 HP / 4 SPA / 252 SPE",
-          "moves": [
-            "Quiver Dance",
-            "Hurricane / Air Slash",
-            "Revelation Dance / Taunt",
-            "Roost"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "dancer",
-          "isHidden": false
-        }
-      ],
-      "stats": {
-        "hp": 75,
-        "attack": 70,
-        "defense": 70,
-        "special-attack": 98,
-        "special-defense": 70,
-        "speed": 93
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
     "oinkolognef": {
       "name": "Oinkologne-F",
       "cleanName": "oinkolognef",
@@ -107077,111 +107384,6 @@
       ],
       "types": [],
       "strategies": []
-    },
-    "golemalola": {
-      "name": "Golem-Alola",
-      "cleanName": "golemalola",
-      "dex": 76,
-      "id": 10111,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10111.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "zu",
-          "rank": 161,
-          "usage": "0.14"
-        },
-        {
-          "tier": "nu",
-          "rank": 179,
-          "usage": "0.04"
-        },
-        {
-          "tier": "pu",
-          "rank": 170,
-          "usage": "0.09"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 246,
-          "usage": "0.02"
-        },
-        {
-          "tier": "uu",
-          "rank": 197,
-          "usage": "0.05"
-        },
-        {
-          "tier": "monotype",
-          "rank": 338,
-          "usage": "0.01"
-        },
-        {
-          "tier": "ubers",
-          "rank": 275,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ou",
-          "rank": 281,
-          "usage": "0.02"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 183,
-          "usage": "0.18"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 450,
-          "usage": "0.01"
-        }
-      ],
-      "types": [
-        "rock",
-        "electric"
-      ],
-      "strategies": [
-        {
-          "name": "Choice Band (Rock)",
-          "tier": "monotype",
-          "ability": "Galvanize",
-          "item": "Choice Band",
-          "nature": "Adamant",
-          "teraType": "Normal",
-          "evs": "252 ATK / 4 DEF / 252 SPE",
-          "moves": [
-            "Wild Charge",
-            "Brick Break",
-            "Earthquake",
-            "Fire Punch"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "magnet-pull",
-          "isHidden": false
-        },
-        {
-          "name": "sturdy",
-          "isHidden": false
-        },
-        {
-          "name": "galvanize",
-          "isHidden": true
-        }
-      ],
-      "stats": {
-        "hp": 80,
-        "attack": 120,
-        "defense": 130,
-        "special-attack": 55,
-        "special-defense": 65,
-        "speed": 45
-      },
-      "isLegendary": false,
-      "isMythical": false
     },
     "vivillon": {
       "name": "Vivillon",
@@ -107279,186 +107481,6 @@
         "special-attack": 90,
         "special-defense": 50,
         "speed": 89
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "sliggoohisui": {
-      "name": "Sliggoo-Hisui",
-      "cleanName": "sliggoohisui",
-      "dex": 705,
-      "id": 10241,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10241.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "zu",
-          "rank": 183,
-          "usage": "0.08"
-        },
-        {
-          "tier": "nu",
-          "rank": 202,
-          "usage": "0.02"
-        }
-      ],
-      "types": [
-        "steel",
-        "dragon"
-      ],
-      "strategies": [
-        {
-          "name": "All-Out Attacker",
-          "tier": "nfe",
-          "ability": "Gooey / Sap Sipper",
-          "item": "Eviolite",
-          "nature": "Modest",
-          "teraType": "Normal",
-          "evs": "160 HP / 252 SPA / 96 SPE",
-          "moves": [
-            "Draco Meteor",
-            "Flash Cannon",
-            "Thunderbolt / Ice Beam",
-            "Acid Spray"
-          ]
-        },
-        {
-          "name": "RestTalk",
-          "tier": "nfe",
-          "ability": "Gooey / Sap Sipper",
-          "item": "Eviolite",
-          "nature": "Calm / Modest",
-          "teraType": "Normal",
-          "evs": "252 HP / 4 SPA / 252 SPD OR 252 HP / 252 SPA / 4 SPD",
-          "moves": [
-            "Acid Spray / Draco Meteor",
-            "Flash Cannon / Thunderbolt",
-            "Rest",
-            "Sleep Talk"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "sap-sipper",
-          "isHidden": false
-        },
-        {
-          "name": "shell-armor",
-          "isHidden": false
-        },
-        {
-          "name": "gooey",
-          "isHidden": true
-        }
-      ],
-      "stats": {
-        "hp": 58,
-        "attack": 75,
-        "defense": 83,
-        "special-attack": 83,
-        "special-defense": 113,
-        "speed": 40
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "qwilfishhisui": {
-      "name": "Qwilfish-Hisui",
-      "cleanName": "qwilfishhisui",
-      "dex": 211,
-      "id": 10234,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10234.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "nu",
-          "rank": 174,
-          "usage": "0.05"
-        },
-        {
-          "tier": "pu",
-          "rank": 41,
-          "usage": "4.83"
-        },
-        {
-          "tier": "monotype",
-          "rank": 324,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ubers",
-          "rank": 204,
-          "usage": "0.07"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 334,
-          "usage": "0.02"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 439,
-          "usage": "0.01"
-        }
-      ],
-      "types": [
-        "dark",
-        "poison"
-      ],
-      "strategies": [
-        {
-          "name": "Specially Defensive",
-          "tier": "pu",
-          "ability": "Intimidate",
-          "item": "Eviolite",
-          "nature": "Careful",
-          "teraType": "Normal",
-          "evs": "252 HP / 240 SPD / 16 SPE",
-          "moves": [
-            "Spikes",
-            "Barb Barrage",
-            "Crunch",
-            "Pain Split / Taunt / Toxic"
-          ]
-        },
-        {
-          "name": "Swords Dance",
-          "tier": "pu",
-          "ability": "Intimidate",
-          "item": "Eviolite",
-          "nature": "Jolly",
-          "teraType": "Water / Ghost",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Swords Dance",
-            "Gunk Shot",
-            "Crunch",
-            "Aqua Jet / Self-Destruct"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "poison-point",
-          "isHidden": false
-        },
-        {
-          "name": "swift-swim",
-          "isHidden": false
-        },
-        {
-          "name": "intimidate",
-          "isHidden": true
-        }
-      ],
-      "stats": {
-        "hp": 65,
-        "attack": 95,
-        "defense": 85,
-        "special-attack": 55,
-        "special-defense": 55,
-        "speed": 85
       },
       "isLegendary": false,
       "isMythical": false
@@ -109427,14 +109449,14 @@
           "usage": "1.97"
         },
         {
-          "tier": "uu",
-          "rank": 56,
-          "usage": "2.27"
-        },
-        {
           "tier": "monotype",
           "rank": 136,
           "usage": "0.57"
+        },
+        {
+          "tier": "uu",
+          "rank": 56,
+          "usage": "2.27"
         },
         {
           "tier": "ubers",
@@ -110286,14 +110308,14 @@
           "usage": "0.50"
         },
         {
-          "tier": "uu",
-          "rank": 61,
-          "usage": "2.01"
-        },
-        {
           "tier": "monotype",
           "rank": 43,
           "usage": "4.64"
+        },
+        {
+          "tier": "uu",
+          "rank": 61,
+          "usage": "2.01"
         },
         {
           "tier": "ubers",
@@ -111853,14 +111875,14 @@
           "usage": "0.16"
         },
         {
-          "tier": "uu",
-          "rank": 23,
-          "usage": "9.83"
-        },
-        {
           "tier": "monotype",
           "rank": 70,
           "usage": "3.02"
+        },
+        {
+          "tier": "uu",
+          "rank": 23,
+          "usage": "9.83"
         },
         {
           "tier": "ubers",
@@ -112345,14 +112367,14 @@
           "usage": "0.10"
         },
         {
-          "tier": "uu",
-          "rank": 16,
-          "usage": "11.44"
-        },
-        {
           "tier": "monotype",
           "rank": 124,
           "usage": "0.98"
+        },
+        {
+          "tier": "uu",
+          "rank": 16,
+          "usage": "11.44"
         },
         {
           "tier": "ubers",
@@ -112733,14 +112755,14 @@
           "usage": "0.07"
         },
         {
-          "tier": "uu",
-          "rank": 82,
-          "usage": "1.16"
-        },
-        {
           "tier": "monotype",
           "rank": 294,
           "usage": "0.03"
+        },
+        {
+          "tier": "uu",
+          "rank": 82,
+          "usage": "1.16"
         },
         {
           "tier": "ou",
@@ -112904,14 +112926,14 @@
           "usage": "0.06"
         },
         {
-          "tier": "uu",
-          "rank": 40,
-          "usage": "5.37"
-        },
-        {
           "tier": "monotype",
           "rank": 54,
           "usage": "3.97"
+        },
+        {
+          "tier": "uu",
+          "rank": 40,
+          "usage": "5.37"
         },
         {
           "tier": "ubers",
@@ -114493,6 +114515,171 @@
       "isLegendary": false,
       "isMythical": true
     },
+    "tornadustherian": {
+      "name": "Tornadus-Therian",
+      "cleanName": "tornadustherian",
+      "dex": 641,
+      "id": 641,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/641.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "monotype",
+          "rank": 31,
+          "usage": "6.55"
+        },
+        {
+          "tier": "ubers",
+          "rank": 261,
+          "usage": "0.03"
+        },
+        {
+          "tier": "ou",
+          "rank": 33,
+          "usage": "5.62"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 323,
+          "usage": "0.02"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 31,
+          "usage": "6.73"
+        }
+      ],
+      "types": [
+        "flying"
+      ],
+      "strategies": [
+        {
+          "name": "Nasty Plot",
+          "tier": "ou",
+          "ability": "Regenerator",
+          "item": "Life Orb / Heavy-Duty Boots",
+          "nature": "Timid",
+          "teraType": "Steel / Flying",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Nasty Plot",
+            "Bleakwind Storm",
+            "Heat Wave",
+            "Grass Knot / Focus Blast / Knock Off"
+          ]
+        },
+        {
+          "name": "Boots Pivot",
+          "tier": "ou",
+          "ability": "Regenerator",
+          "item": "Heavy-Duty Boots",
+          "nature": "Timid",
+          "teraType": "Steel / Fairy",
+          "evs": "252 HP / 4 SPD / 252 SPE",
+          "moves": [
+            "Bleakwind Storm",
+            "U-turn",
+            "Knock Off",
+            "Heat Wave / Taunt"
+          ]
+        },
+        {
+          "name": "Assault Vest",
+          "tier": "ou",
+          "ability": "Regenerator",
+          "item": "Assault Vest",
+          "nature": "Timid",
+          "teraType": "Steel / Fairy",
+          "evs": "252 HP / 4 SPD / 252 SPE",
+          "moves": [
+            "Bleakwind Storm",
+            "U-turn",
+            "Knock Off",
+            "Heat Wave"
+          ]
+        },
+        {
+          "name": "Utility",
+          "tier": "stabmons",
+          "ability": "Regenerator",
+          "item": "Heavy-Duty Boots",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "204 HP / 8 DEF / 80 SPA / 216 SPE",
+          "moves": [
+            "Hurricane",
+            "Knock Off",
+            "U-turn",
+            "Defog / Taunt"
+          ]
+        },
+        {
+          "name": "Pivot",
+          "tier": "nationaldex",
+          "ability": "Regenerator",
+          "item": "Heavy-Duty Boots / Flyinium Z",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "184 HP / 108 DEF / 216 SPE",
+          "moves": [
+            "Bleakwind Storm / Hurricane",
+            "U-turn",
+            "Knock Off",
+            "Heat Wave / Defog"
+          ]
+        },
+        {
+          "name": "Utility Pivot (HP, Def, SpD)",
+          "tier": "godlygift",
+          "ability": "Regenerator",
+          "item": "Heavy-Duty Boots",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 HP / 4 SPA / 252 SPE",
+          "moves": [
+            "Bleakwind Storm",
+            "Knock Off",
+            "U-turn",
+            "Taunt"
+          ]
+        },
+        {
+          "name": "Nasty Plot Wallbreaker",
+          "tier": "nationaldexmonotype",
+          "ability": "Regenerator",
+          "item": "Flyinium Z / Heavy-Duty Boots",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Nasty Plot",
+            "Hurricane / Bleakwind Storm",
+            "Focus Blast / Heat Wave",
+            "Taunt / Knock Off"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "prankster",
+          "isHidden": false
+        },
+        {
+          "name": "defiant",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 79,
+        "attack": 115,
+        "defense": 70,
+        "special-attack": 125,
+        "special-defense": 80,
+        "speed": 111
+      },
+      "isLegendary": true,
+      "isMythical": false
+    },
     "rotomwash": {
       "name": "Rotom-Wash",
       "cleanName": "rotomwash",
@@ -114502,14 +114689,14 @@
       "locations": [],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 36,
-          "usage": "6.07"
-        },
-        {
           "tier": "monotype",
           "rank": 97,
           "usage": "1.88"
+        },
+        {
+          "tier": "uu",
+          "rank": 36,
+          "usage": "6.07"
         },
         {
           "tier": "ubers",
@@ -114718,238 +114905,6 @@
         "speed": 91
       },
       "isLegendary": false,
-      "isMythical": false
-    },
-    "oricoriopompom": {
-      "name": "Oricorio-Pom-Pom",
-      "cleanName": "oricoriopompom",
-      "dex": 741,
-      "id": 741,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/741.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "uu",
-          "rank": 129,
-          "usage": "0.28"
-        },
-        {
-          "tier": "monotype",
-          "rank": 210,
-          "usage": "0.14"
-        },
-        {
-          "tier": "ou",
-          "rank": 285,
-          "usage": "0.01"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 205,
-          "usage": "0.13"
-        }
-      ],
-      "types": [
-        "fire",
-        "flying"
-      ],
-      "strategies": [
-        {
-          "name": "Quiver Dance",
-          "tier": "uu",
-          "ability": "Dancer",
-          "item": "Kee Berry / Leftovers",
-          "nature": "Modest",
-          "teraType": "Ground / Dark",
-          "evs": "248 HP / 8 SPA / 252 SPE",
-          "moves": [
-            "Quiver Dance",
-            "Revelation Dance / Taunt",
-            "Air Slash",
-            "Roost"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "dancer",
-          "isHidden": false
-        }
-      ],
-      "stats": {
-        "hp": 75,
-        "attack": 70,
-        "defense": 70,
-        "special-attack": 98,
-        "special-defense": 70,
-        "speed": 93
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "tornadustherian": {
-      "name": "Tornadus-Therian",
-      "cleanName": "tornadustherian",
-      "dex": 641,
-      "id": 641,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/641.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "monotype",
-          "rank": 31,
-          "usage": "6.55"
-        },
-        {
-          "tier": "ubers",
-          "rank": 261,
-          "usage": "0.03"
-        },
-        {
-          "tier": "ou",
-          "rank": 33,
-          "usage": "5.62"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 323,
-          "usage": "0.02"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 31,
-          "usage": "6.73"
-        }
-      ],
-      "types": [
-        "flying"
-      ],
-      "strategies": [
-        {
-          "name": "Nasty Plot",
-          "tier": "ou",
-          "ability": "Regenerator",
-          "item": "Life Orb / Heavy-Duty Boots",
-          "nature": "Timid",
-          "teraType": "Steel / Flying",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Nasty Plot",
-            "Bleakwind Storm",
-            "Heat Wave",
-            "Grass Knot / Focus Blast / Knock Off"
-          ]
-        },
-        {
-          "name": "Boots Pivot",
-          "tier": "ou",
-          "ability": "Regenerator",
-          "item": "Heavy-Duty Boots",
-          "nature": "Timid",
-          "teraType": "Steel / Fairy",
-          "evs": "252 HP / 4 SPD / 252 SPE",
-          "moves": [
-            "Bleakwind Storm",
-            "U-turn",
-            "Knock Off",
-            "Heat Wave / Taunt"
-          ]
-        },
-        {
-          "name": "Assault Vest",
-          "tier": "ou",
-          "ability": "Regenerator",
-          "item": "Assault Vest",
-          "nature": "Timid",
-          "teraType": "Steel / Fairy",
-          "evs": "252 HP / 4 SPD / 252 SPE",
-          "moves": [
-            "Bleakwind Storm",
-            "U-turn",
-            "Knock Off",
-            "Heat Wave"
-          ]
-        },
-        {
-          "name": "Utility",
-          "tier": "stabmons",
-          "ability": "Regenerator",
-          "item": "Heavy-Duty Boots",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "204 HP / 8 DEF / 80 SPA / 216 SPE",
-          "moves": [
-            "Hurricane",
-            "Knock Off",
-            "U-turn",
-            "Defog / Taunt"
-          ]
-        },
-        {
-          "name": "Pivot",
-          "tier": "nationaldex",
-          "ability": "Regenerator",
-          "item": "Heavy-Duty Boots / Flyinium Z",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "184 HP / 108 DEF / 216 SPE",
-          "moves": [
-            "Bleakwind Storm / Hurricane",
-            "U-turn",
-            "Knock Off",
-            "Heat Wave / Defog"
-          ]
-        },
-        {
-          "name": "Utility Pivot (HP, Def, SpD)",
-          "tier": "godlygift",
-          "ability": "Regenerator",
-          "item": "Heavy-Duty Boots",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 HP / 4 SPA / 252 SPE",
-          "moves": [
-            "Bleakwind Storm",
-            "Knock Off",
-            "U-turn",
-            "Taunt"
-          ]
-        },
-        {
-          "name": "Nasty Plot Wallbreaker",
-          "tier": "nationaldexmonotype",
-          "ability": "Regenerator",
-          "item": "Flyinium Z / Heavy-Duty Boots",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Nasty Plot",
-            "Hurricane / Bleakwind Storm",
-            "Focus Blast / Heat Wave",
-            "Taunt / Knock Off"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "prankster",
-          "isHidden": false
-        },
-        {
-          "name": "defiant",
-          "isHidden": true
-        }
-      ],
-      "stats": {
-        "hp": 79,
-        "attack": 115,
-        "defense": 70,
-        "special-attack": 125,
-        "special-defense": 80,
-        "speed": 111
-      },
-      "isLegendary": true,
       "isMythical": false
     },
     "deoxysspeed": {
@@ -115197,6 +115152,73 @@
       },
       "isLegendary": false,
       "isMythical": true
+    },
+    "oricoriopompom": {
+      "name": "Oricorio-Pom-Pom",
+      "cleanName": "oricoriopompom",
+      "dex": 741,
+      "id": 741,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/741.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "monotype",
+          "rank": 210,
+          "usage": "0.14"
+        },
+        {
+          "tier": "uu",
+          "rank": 129,
+          "usage": "0.28"
+        },
+        {
+          "tier": "ou",
+          "rank": 285,
+          "usage": "0.01"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 205,
+          "usage": "0.13"
+        }
+      ],
+      "types": [
+        "fire",
+        "flying"
+      ],
+      "strategies": [
+        {
+          "name": "Quiver Dance",
+          "tier": "uu",
+          "ability": "Dancer",
+          "item": "Kee Berry / Leftovers",
+          "nature": "Modest",
+          "teraType": "Ground / Dark",
+          "evs": "248 HP / 8 SPA / 252 SPE",
+          "moves": [
+            "Quiver Dance",
+            "Revelation Dance / Taunt",
+            "Air Slash",
+            "Roost"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "dancer",
+          "isHidden": false
+        }
+      ],
+      "stats": {
+        "hp": 75,
+        "attack": 70,
+        "defense": 70,
+        "special-attack": 98,
+        "special-defense": 70,
+        "speed": 93
+      },
+      "isLegendary": false,
+      "isMythical": false
     },
     "arceuselectric": {
       "name": "Arceus-Electric",
