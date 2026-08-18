@@ -1,6 +1,6 @@
 window.localDB = {
   "_meta": {
-    "buildTimestamp": "2026-08-17T03:38:55.500Z"
+    "buildTimestamp": "2026-08-18T03:34:41.715Z"
   },
   "pokemon": {
     "bulbasaur": {
@@ -129,46 +129,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 52,
-          "usage": "2.55"
-        },
-        {
-          "tier": "ru",
-          "rank": 26,
-          "usage": "7.64"
-        },
-        {
-          "tier": "zu",
-          "rank": 7,
-          "usage": "17.66"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 120,
-          "usage": "0.20"
-        },
-        {
-          "tier": "ubers",
-          "rank": 160,
-          "usage": "0.14"
-        },
-        {
-          "tier": "ou",
-          "rank": 71,
-          "usage": "1.77"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 94,
-          "usage": "0.91"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 84,
-          "usage": "1.58"
-        },
-        {
           "tier": "nu",
           "rank": 75,
           "usage": "1.40"
@@ -179,9 +139,49 @@ window.localDB = {
           "usage": "3.52"
         },
         {
+          "tier": "vgc2025",
+          "rank": 120,
+          "usage": "0.20"
+        },
+        {
+          "tier": "zu",
+          "rank": 7,
+          "usage": "17.66"
+        },
+        {
+          "tier": "ru",
+          "rank": 26,
+          "usage": "7.64"
+        },
+        {
+          "tier": "uu",
+          "rank": 52,
+          "usage": "2.55"
+        },
+        {
+          "tier": "ou",
+          "rank": 71,
+          "usage": "1.77"
+        },
+        {
           "tier": "monotype",
           "rank": 267,
           "usage": "0.05"
+        },
+        {
+          "tier": "ubers",
+          "rank": 160,
+          "usage": "0.14"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 94,
+          "usage": "0.91"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 84,
+          "usage": "1.58"
         }
       ],
       "types": [
@@ -486,46 +486,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 157,
-          "usage": "0.15"
-        },
-        {
-          "tier": "ru",
-          "rank": 139,
-          "usage": "0.34"
-        },
-        {
-          "tier": "zu",
-          "rank": 9,
-          "usage": "16.89"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 101,
-          "usage": "0.32"
-        },
-        {
-          "tier": "ubers",
-          "rank": 224,
-          "usage": "0.05"
-        },
-        {
-          "tier": "ou",
-          "rank": 166,
-          "usage": "0.13"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 121,
-          "usage": "0.59"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 226,
-          "usage": "0.15"
-        },
-        {
           "tier": "nu",
           "rank": 152,
           "usage": "0.10"
@@ -536,9 +496,49 @@ window.localDB = {
           "usage": "0.38"
         },
         {
+          "tier": "vgc2025",
+          "rank": 101,
+          "usage": "0.32"
+        },
+        {
+          "tier": "zu",
+          "rank": 9,
+          "usage": "16.89"
+        },
+        {
+          "tier": "ru",
+          "rank": 139,
+          "usage": "0.34"
+        },
+        {
+          "tier": "uu",
+          "rank": 157,
+          "usage": "0.15"
+        },
+        {
+          "tier": "ou",
+          "rank": 166,
+          "usage": "0.13"
+        },
+        {
           "tier": "monotype",
           "rank": 179,
           "usage": "0.23"
+        },
+        {
+          "tier": "ubers",
+          "rank": 224,
+          "usage": "0.05"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 121,
+          "usage": "0.59"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 226,
+          "usage": "0.15"
         }
       ],
       "types": [
@@ -797,24 +797,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 84,
-          "usage": "1.01"
-        },
-        {
           "tier": "vgc2025",
           "rank": 241,
           "usage": "0.02"
         },
         {
-          "tier": "ubers",
-          "rank": 186,
-          "usage": "0.08"
+          "tier": "uu",
+          "rank": 84,
+          "usage": "1.01"
         },
         {
           "tier": "ou",
           "rank": 230,
           "usage": "0.04"
+        },
+        {
+          "tier": "monotype",
+          "rank": 284,
+          "usage": "0.04"
+        },
+        {
+          "tier": "ubers",
+          "rank": 186,
+          "usage": "0.08"
         },
         {
           "tier": "doublesou",
@@ -825,11 +830,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 214,
           "usage": "0.18"
-        },
-        {
-          "tier": "monotype",
-          "rank": 284,
-          "usage": "0.04"
         }
       ],
       "types": [
@@ -839,7 +839,7 @@ window.localDB = {
         {
           "name": "Shell Smash",
           "tier": "uu",
-          "ability": "Torrent",
+          "ability": "Rain Dish",
           "item": "White Herb",
           "nature": "Modest",
           "teraType": "Normal",
@@ -854,7 +854,7 @@ window.localDB = {
         {
           "name": "Shell Smash (SpA)",
           "tier": "godlygift",
-          "ability": "Torrent",
+          "ability": "Rain Dish",
           "item": "White Herb",
           "nature": "Modest",
           "teraType": "Normal",
@@ -1636,6 +1636,16 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "nu",
+          "rank": 185,
+          "usage": "0.03"
+        },
+        {
+          "tier": "pu",
+          "rank": 167,
+          "usage": "0.10"
+        },
+        {
           "tier": "zu",
           "rank": 138,
           "usage": "0.24"
@@ -1649,16 +1659,6 @@ window.localDB = {
           "tier": "doublesou",
           "rank": 359,
           "usage": "0.01"
-        },
-        {
-          "tier": "nu",
-          "rank": 185,
-          "usage": "0.03"
-        },
-        {
-          "tier": "pu",
-          "rank": 167,
-          "usage": "0.10"
         }
       ],
       "types": [
@@ -1706,9 +1706,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 214,
-          "usage": "0.03"
+          "tier": "pu",
+          "rank": 179,
+          "usage": "0.06"
         },
         {
           "tier": "zu",
@@ -1716,13 +1716,18 @@ window.localDB = {
           "usage": "0.09"
         },
         {
-          "tier": "ubers",
-          "rank": 284,
-          "usage": "0.02"
+          "tier": "uu",
+          "rank": 214,
+          "usage": "0.03"
         },
         {
           "tier": "ou",
           "rank": 265,
+          "usage": "0.02"
+        },
+        {
+          "tier": "ubers",
+          "rank": 284,
           "usage": "0.02"
         },
         {
@@ -1734,11 +1739,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 259,
           "usage": "0.09"
-        },
-        {
-          "tier": "pu",
-          "rank": 179,
-          "usage": "0.06"
         }
       ],
       "types": [
@@ -1813,9 +1813,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 180,
-          "usage": "0.09"
+          "tier": "pu",
+          "rank": 117,
+          "usage": "0.39"
+        },
+        {
+          "tier": "vgc2025",
+          "rank": 87,
+          "usage": "0.48"
         },
         {
           "tier": "zu",
@@ -1823,9 +1828,9 @@ window.localDB = {
           "usage": "0.06"
         },
         {
-          "tier": "vgc2025",
-          "rank": 87,
-          "usage": "0.48"
+          "tier": "uu",
+          "rank": 180,
+          "usage": "0.09"
         },
         {
           "tier": "ubers",
@@ -1836,11 +1841,6 @@ window.localDB = {
           "tier": "doublesou",
           "rank": 185,
           "usage": "0.18"
-        },
-        {
-          "tier": "pu",
-          "rank": 117,
-          "usage": "0.39"
         }
       ],
       "types": [
@@ -1884,11 +1884,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 268,
-          "usage": "0.01"
-        },
-        {
           "tier": "lc",
           "rank": 62,
           "usage": "0.70"
@@ -1897,6 +1892,11 @@ window.localDB = {
           "tier": "zu",
           "rank": 194,
           "usage": "0.06"
+        },
+        {
+          "tier": "uu",
+          "rank": 268,
+          "usage": "0.01"
         }
       ],
       "types": [
@@ -1956,21 +1956,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 240,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ru",
-          "rank": 185,
-          "usage": "0.13"
-        },
-        {
-          "tier": "zu",
-          "rank": 5,
-          "usage": "21.52"
-        },
-        {
           "tier": "nu",
           "rank": 108,
           "usage": "0.57"
@@ -1979,6 +1964,21 @@ window.localDB = {
           "tier": "pu",
           "rank": 90,
           "usage": "0.71"
+        },
+        {
+          "tier": "zu",
+          "rank": 5,
+          "usage": "21.52"
+        },
+        {
+          "tier": "ru",
+          "rank": 185,
+          "usage": "0.13"
+        },
+        {
+          "tier": "uu",
+          "rank": 240,
+          "usage": "0.02"
         }
       ],
       "types": [
@@ -2388,9 +2388,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 128,
-          "usage": "0.32"
+          "tier": "pu",
+          "rank": 188,
+          "usage": "0.04"
         },
         {
           "tier": "vgc2025",
@@ -2398,14 +2398,14 @@ window.localDB = {
           "usage": "2.06"
         },
         {
+          "tier": "zu",
+          "rank": 128,
+          "usage": "0.32"
+        },
+        {
           "tier": "doublesou",
           "rank": 76,
           "usage": "1.39"
-        },
-        {
-          "tier": "pu",
-          "rank": 188,
-          "usage": "0.04"
         }
       ],
       "types": [
@@ -2519,14 +2519,19 @@ window.localDB = {
           "usage": "0.01"
         },
         {
-          "tier": "ubers",
-          "rank": 96,
-          "usage": "0.56"
-        },
-        {
           "tier": "ou",
           "rank": 36,
           "usage": "5.17"
+        },
+        {
+          "tier": "monotype",
+          "rank": 129,
+          "usage": "0.76"
+        },
+        {
+          "tier": "ubers",
+          "rank": 96,
+          "usage": "0.56"
         },
         {
           "tier": "doublesou",
@@ -2537,11 +2542,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 59,
           "usage": "2.66"
-        },
-        {
-          "tier": "monotype",
-          "rank": 129,
-          "usage": "0.76"
         }
       ],
       "types": [
@@ -2726,19 +2726,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 51,
-          "usage": "2.65"
-        },
-        {
-          "tier": "ru",
-          "rank": 38,
-          "usage": "6.00"
-        },
-        {
-          "tier": "zu",
-          "rank": 162,
-          "usage": "0.14"
+          "tier": "nu",
+          "rank": 205,
+          "usage": "0.01"
         },
         {
           "tier": "vgc2025",
@@ -2746,14 +2736,34 @@ window.localDB = {
           "usage": "0.01"
         },
         {
-          "tier": "ubers",
-          "rank": 271,
-          "usage": "0.02"
+          "tier": "zu",
+          "rank": 162,
+          "usage": "0.14"
+        },
+        {
+          "tier": "ru",
+          "rank": 38,
+          "usage": "6.00"
+        },
+        {
+          "tier": "uu",
+          "rank": 51,
+          "usage": "2.65"
         },
         {
           "tier": "ou",
           "rank": 45,
           "usage": "3.49"
+        },
+        {
+          "tier": "monotype",
+          "rank": 78,
+          "usage": "2.61"
+        },
+        {
+          "tier": "ubers",
+          "rank": 271,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -2764,16 +2774,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 154,
           "usage": "0.42"
-        },
-        {
-          "tier": "nu",
-          "rank": 205,
-          "usage": "0.01"
-        },
-        {
-          "tier": "monotype",
-          "rank": 78,
-          "usage": "2.61"
         }
       ],
       "types": [
@@ -2914,21 +2914,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 163,
-          "usage": "0.14"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 360,
-          "usage": "0.01"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 297,
-          "usage": "0.06"
-        },
-        {
           "tier": "nu",
           "rank": 198,
           "usage": "0.02"
@@ -2939,9 +2924,24 @@ window.localDB = {
           "usage": "0.12"
         },
         {
+          "tier": "zu",
+          "rank": 163,
+          "usage": "0.14"
+        },
+        {
           "tier": "monotype",
           "rank": 337,
           "usage": "0.01"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 360,
+          "usage": "0.01"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 297,
+          "usage": "0.06"
         }
       ],
       "types": [
@@ -3178,26 +3178,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 209,
-          "usage": "0.04"
-        },
-        {
-          "tier": "ru",
-          "rank": 136,
-          "usage": "0.38"
-        },
-        {
-          "tier": "ou",
-          "rank": 294,
-          "usage": "0.01"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 254,
-          "usage": "0.10"
-        },
-        {
           "tier": "nu",
           "rank": 113,
           "usage": "0.48"
@@ -3208,9 +3188,29 @@ window.localDB = {
           "usage": "1.46"
         },
         {
+          "tier": "ru",
+          "rank": 136,
+          "usage": "0.38"
+        },
+        {
+          "tier": "uu",
+          "rank": 209,
+          "usage": "0.04"
+        },
+        {
+          "tier": "ou",
+          "rank": 294,
+          "usage": "0.01"
+        },
+        {
           "tier": "monotype",
           "rank": 259,
           "usage": "0.06"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 254,
+          "usage": "0.10"
         }
       ],
       "types": [
@@ -3424,16 +3424,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 154,
-          "usage": "0.23"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 202,
-          "usage": "0.04"
-        },
-        {
           "tier": "nu",
           "rank": 101,
           "usage": "0.68"
@@ -3442,6 +3432,16 @@ window.localDB = {
           "tier": "pu",
           "rank": 109,
           "usage": "0.50"
+        },
+        {
+          "tier": "vgc2025",
+          "rank": 202,
+          "usage": "0.04"
+        },
+        {
+          "tier": "ru",
+          "rank": 154,
+          "usage": "0.23"
         }
       ],
       "types": [
@@ -3571,9 +3571,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 227,
-          "usage": "0.02"
+          "tier": "pu",
+          "rank": 197,
+          "usage": "0.04"
+        },
+        {
+          "tier": "vgc2025",
+          "rank": 138,
+          "usage": "0.14"
         },
         {
           "tier": "zu",
@@ -3581,9 +3586,14 @@ window.localDB = {
           "usage": "0.49"
         },
         {
-          "tier": "vgc2025",
-          "rank": 138,
-          "usage": "0.14"
+          "tier": "uu",
+          "rank": 227,
+          "usage": "0.02"
+        },
+        {
+          "tier": "monotype",
+          "rank": 229,
+          "usage": "0.10"
         },
         {
           "tier": "ubers",
@@ -3594,16 +3604,6 @@ window.localDB = {
           "tier": "doublesou",
           "rank": 357,
           "usage": "0.01"
-        },
-        {
-          "tier": "pu",
-          "rank": 197,
-          "usage": "0.04"
-        },
-        {
-          "tier": "monotype",
-          "rank": 229,
-          "usage": "0.10"
         }
       ],
       "types": [
@@ -3717,14 +3717,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 168,
-          "usage": "0.12"
-        },
-        {
           "tier": "pu",
           "rank": 219,
           "usage": "0.01"
+        },
+        {
+          "tier": "zu",
+          "rank": 168,
+          "usage": "0.12"
         }
       ],
       "types": [
@@ -3843,9 +3843,19 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 128,
-          "usage": "0.41"
+          "tier": "nu",
+          "rank": 163,
+          "usage": "0.07"
+        },
+        {
+          "tier": "pu",
+          "rank": 139,
+          "usage": "0.24"
+        },
+        {
+          "tier": "vgc2025",
+          "rank": 265,
+          "usage": "0.01"
         },
         {
           "tier": "zu",
@@ -3853,9 +3863,9 @@ window.localDB = {
           "usage": "0.66"
         },
         {
-          "tier": "vgc2025",
-          "rank": 265,
-          "usage": "0.01"
+          "tier": "ru",
+          "rank": 128,
+          "usage": "0.41"
         },
         {
           "tier": "ou",
@@ -3871,16 +3881,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 393,
           "usage": "0.03"
-        },
-        {
-          "tier": "nu",
-          "rank": 163,
-          "usage": "0.07"
-        },
-        {
-          "tier": "pu",
-          "rank": 139,
-          "usage": "0.24"
         }
       ],
       "types": [
@@ -3994,9 +3994,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 247,
-          "usage": "0.02"
+          "tier": "pu",
+          "rank": 88,
+          "usage": "0.79"
+        },
+        {
+          "tier": "zu",
+          "rank": 28,
+          "usage": "7.18"
         },
         {
           "tier": "ru",
@@ -4004,9 +4009,9 @@ window.localDB = {
           "usage": "0.11"
         },
         {
-          "tier": "zu",
-          "rank": 28,
-          "usage": "7.18"
+          "tier": "uu",
+          "rank": 247,
+          "usage": "0.02"
         },
         {
           "tier": "ou",
@@ -4017,11 +4022,6 @@ window.localDB = {
           "tier": "doublesou",
           "rank": 227,
           "usage": "0.09"
-        },
-        {
-          "tier": "pu",
-          "rank": 88,
-          "usage": "0.79"
         }
       ],
       "types": [
@@ -4150,14 +4150,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 165,
-          "usage": "0.12"
+          "tier": "nu",
+          "rank": 56,
+          "usage": "3.03"
         },
         {
-          "tier": "ru",
-          "rank": 192,
-          "usage": "0.11"
+          "tier": "pu",
+          "rank": 12,
+          "usage": "14.40"
         },
         {
           "tier": "vgc2025",
@@ -4165,14 +4165,24 @@ window.localDB = {
           "usage": "0.02"
         },
         {
-          "tier": "ubers",
-          "rank": 290,
-          "usage": "0.02"
+          "tier": "ru",
+          "rank": 192,
+          "usage": "0.11"
+        },
+        {
+          "tier": "uu",
+          "rank": 165,
+          "usage": "0.12"
         },
         {
           "tier": "ou",
           "rank": 244,
           "usage": "0.03"
+        },
+        {
+          "tier": "ubers",
+          "rank": 290,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -4183,16 +4193,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 126,
           "usage": "0.67"
-        },
-        {
-          "tier": "nu",
-          "rank": 56,
-          "usage": "3.03"
-        },
-        {
-          "tier": "pu",
-          "rank": 12,
-          "usage": "14.40"
         }
       ],
       "types": [
@@ -4401,14 +4401,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 224,
-          "usage": "0.03"
+          "tier": "nu",
+          "rank": 105,
+          "usage": "0.64"
         },
         {
-          "tier": "ru",
-          "rank": 140,
-          "usage": "0.34"
+          "tier": "pu",
+          "rank": 103,
+          "usage": "0.61"
         },
         {
           "tier": "zu",
@@ -4416,14 +4416,24 @@ window.localDB = {
           "usage": "2.24"
         },
         {
-          "tier": "ubers",
-          "rank": 277,
-          "usage": "0.02"
+          "tier": "ru",
+          "rank": 140,
+          "usage": "0.34"
+        },
+        {
+          "tier": "uu",
+          "rank": 224,
+          "usage": "0.03"
         },
         {
           "tier": "ou",
           "rank": 195,
           "usage": "0.07"
+        },
+        {
+          "tier": "ubers",
+          "rank": 277,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -4434,16 +4444,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 467,
           "usage": "0.01"
-        },
-        {
-          "tier": "nu",
-          "rank": 105,
-          "usage": "0.64"
-        },
-        {
-          "tier": "pu",
-          "rank": 103,
-          "usage": "0.61"
         }
       ],
       "types": [
@@ -4949,8 +4949,8 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 223,
+          "tier": "nu",
+          "rank": 176,
           "usage": "0.05"
         },
         {
@@ -4959,14 +4959,14 @@ window.localDB = {
           "usage": "0.07"
         },
         {
+          "tier": "ru",
+          "rank": 223,
+          "usage": "0.05"
+        },
+        {
           "tier": "nationaldex",
           "rank": 451,
           "usage": "0.01"
-        },
-        {
-          "tier": "nu",
-          "rank": 176,
-          "usage": "0.05"
         }
       ],
       "types": [
@@ -5094,31 +5094,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 124,
-          "usage": "0.33"
-        },
-        {
-          "tier": "ru",
-          "rank": 42,
-          "usage": "5.37"
-        },
-        {
-          "tier": "ubers",
-          "rank": 253,
-          "usage": "0.03"
-        },
-        {
-          "tier": "ou",
-          "rank": 144,
-          "usage": "0.18"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 213,
-          "usage": "0.18"
-        },
-        {
           "tier": "nu",
           "rank": 93,
           "usage": "0.86"
@@ -5129,9 +5104,34 @@ window.localDB = {
           "usage": "13.36"
         },
         {
+          "tier": "ru",
+          "rank": 42,
+          "usage": "5.37"
+        },
+        {
+          "tier": "uu",
+          "rank": 124,
+          "usage": "0.33"
+        },
+        {
+          "tier": "ou",
+          "rank": 144,
+          "usage": "0.18"
+        },
+        {
           "tier": "monotype",
           "rank": 130,
           "usage": "0.73"
+        },
+        {
+          "tier": "ubers",
+          "rank": 253,
+          "usage": "0.03"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 213,
+          "usage": "0.18"
         }
       ],
       "types": [
@@ -5343,14 +5343,19 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 204,
-          "usage": "0.08"
+          "tier": "pu",
+          "rank": 181,
+          "usage": "0.05"
         },
         {
           "tier": "zu",
           "rank": 70,
           "usage": "1.87"
+        },
+        {
+          "tier": "ru",
+          "rank": 204,
+          "usage": "0.08"
         },
         {
           "tier": "doublesou",
@@ -5361,11 +5366,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 445,
           "usage": "0.01"
-        },
-        {
-          "tier": "pu",
-          "rank": 181,
-          "usage": "0.05"
         }
       ],
       "types": [
@@ -5570,24 +5570,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 167,
-          "usage": "0.12"
-        },
-        {
           "tier": "ru",
           "rank": 18,
           "usage": "10.45"
         },
         {
-          "tier": "ubers",
-          "rank": 126,
-          "usage": "0.32"
+          "tier": "uu",
+          "rank": 167,
+          "usage": "0.12"
         },
         {
           "tier": "ou",
           "rank": 197,
           "usage": "0.07"
+        },
+        {
+          "tier": "monotype",
+          "rank": 139,
+          "usage": "0.54"
+        },
+        {
+          "tier": "ubers",
+          "rank": 126,
+          "usage": "0.32"
         },
         {
           "tier": "doublesou",
@@ -5598,11 +5603,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 45,
           "usage": "3.69"
-        },
-        {
-          "tier": "monotype",
-          "rank": 139,
-          "usage": "0.54"
         }
       ],
       "types": [
@@ -5839,16 +5839,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 232,
-          "usage": "0.03"
-        },
-        {
-          "tier": "zu",
-          "rank": 21,
-          "usage": "9.31"
-        },
-        {
           "tier": "nu",
           "rank": 65,
           "usage": "1.80"
@@ -5857,6 +5847,16 @@ window.localDB = {
           "tier": "pu",
           "rank": 85,
           "usage": "0.97"
+        },
+        {
+          "tier": "zu",
+          "rank": 21,
+          "usage": "9.31"
+        },
+        {
+          "tier": "ru",
+          "rank": 232,
+          "usage": "0.03"
         }
       ],
       "types": [
@@ -6084,16 +6084,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 254,
-          "usage": "0.01"
-        },
-        {
-          "tier": "zu",
-          "rank": 69,
-          "usage": "1.95"
-        },
-        {
           "tier": "nu",
           "rank": 158,
           "usage": "0.09"
@@ -6102,6 +6092,16 @@ window.localDB = {
           "tier": "pu",
           "rank": 189,
           "usage": "0.04"
+        },
+        {
+          "tier": "zu",
+          "rank": 69,
+          "usage": "1.95"
+        },
+        {
+          "tier": "ru",
+          "rank": 254,
+          "usage": "0.01"
         }
       ],
       "types": [
@@ -6216,14 +6216,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 110,
-          "usage": "0.53"
-        },
-        {
           "tier": "vgc2025",
           "rank": 208,
           "usage": "0.03"
+        },
+        {
+          "tier": "zu",
+          "rank": 110,
+          "usage": "0.53"
         },
         {
           "tier": "monotype",
@@ -6327,16 +6327,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 259,
-          "usage": "0.01"
-        },
-        {
-          "tier": "zu",
-          "rank": 20,
-          "usage": "9.36"
-        },
-        {
           "tier": "nu",
           "rank": 169,
           "usage": "0.06"
@@ -6345,6 +6335,16 @@ window.localDB = {
           "tier": "pu",
           "rank": 111,
           "usage": "0.48"
+        },
+        {
+          "tier": "zu",
+          "rank": 20,
+          "usage": "9.36"
+        },
+        {
+          "tier": "ru",
+          "rank": 259,
+          "usage": "0.01"
         }
       ],
       "types": [
@@ -6473,24 +6473,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 109,
-          "usage": "0.48"
-        },
-        {
           "tier": "ru",
           "rank": 61,
           "usage": "2.33"
         },
         {
-          "tier": "ubers",
-          "rank": 178,
-          "usage": "0.09"
+          "tier": "uu",
+          "rank": 109,
+          "usage": "0.48"
         },
         {
           "tier": "ou",
           "rank": 192,
           "usage": "0.07"
+        },
+        {
+          "tier": "monotype",
+          "rank": 101,
+          "usage": "1.75"
+        },
+        {
+          "tier": "ubers",
+          "rank": 178,
+          "usage": "0.09"
         },
         {
           "tier": "doublesou",
@@ -6501,11 +6506,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 193,
           "usage": "0.25"
-        },
-        {
-          "tier": "monotype",
-          "rank": 101,
-          "usage": "1.75"
         }
       ],
       "types": [
@@ -6704,6 +6704,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "pu",
+          "rank": 73,
+          "usage": "1.36"
+        },
+        {
           "tier": "zu",
           "rank": 59,
           "usage": "2.36"
@@ -6714,19 +6719,14 @@ window.localDB = {
           "usage": "0.06"
         },
         {
-          "tier": "nationaldex",
-          "rank": 446,
-          "usage": "0.01"
-        },
-        {
-          "tier": "pu",
-          "rank": 73,
-          "usage": "1.36"
-        },
-        {
           "tier": "monotype",
           "rank": 169,
           "usage": "0.29"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 446,
+          "usage": "0.01"
         }
       ],
       "types": [
@@ -6783,9 +6783,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 59,
-          "usage": "2.20"
+          "tier": "vgc2025",
+          "rank": 256,
+          "usage": "0.02"
         },
         {
           "tier": "ru",
@@ -6793,19 +6793,24 @@ window.localDB = {
           "usage": "13.71"
         },
         {
-          "tier": "vgc2025",
-          "rank": 256,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ubers",
-          "rank": 111,
-          "usage": "0.41"
+          "tier": "uu",
+          "rank": 59,
+          "usage": "2.20"
         },
         {
           "tier": "ou",
           "rank": 126,
           "usage": "0.28"
+        },
+        {
+          "tier": "monotype",
+          "rank": 127,
+          "usage": "0.80"
+        },
+        {
+          "tier": "ubers",
+          "rank": 111,
+          "usage": "0.41"
         },
         {
           "tier": "doublesou",
@@ -6816,11 +6821,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 88,
           "usage": "1.44"
-        },
-        {
-          "tier": "monotype",
-          "rank": 127,
-          "usage": "0.80"
         }
       ],
       "types": [
@@ -7123,14 +7123,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 265,
-          "usage": "0.01"
-        },
-        {
           "tier": "lc",
           "rank": 142,
           "usage": "0.03"
+        },
+        {
+          "tier": "uu",
+          "rank": 265,
+          "usage": "0.01"
         }
       ],
       "types": [
@@ -7378,6 +7378,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "pu",
+          "rank": 225,
+          "usage": "0.01"
+        },
+        {
           "tier": "zu",
           "rank": 135,
           "usage": "0.27"
@@ -7391,11 +7396,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 385,
           "usage": "0.03"
-        },
-        {
-          "tier": "pu",
-          "rank": 225,
-          "usage": "0.01"
         }
       ],
       "types": [
@@ -7490,14 +7490,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 213,
-          "usage": "0.06"
+          "tier": "nu",
+          "rank": 183,
+          "usage": "0.03"
         },
         {
-          "tier": "zu",
-          "rank": 88,
-          "usage": "0.95"
+          "tier": "pu",
+          "rank": 168,
+          "usage": "0.10"
         },
         {
           "tier": "vgc2025",
@@ -7505,13 +7505,23 @@ window.localDB = {
           "usage": "0.10"
         },
         {
-          "tier": "ubers",
-          "rank": 309,
-          "usage": "0.02"
+          "tier": "zu",
+          "rank": 88,
+          "usage": "0.95"
+        },
+        {
+          "tier": "ru",
+          "rank": 213,
+          "usage": "0.06"
         },
         {
           "tier": "ou",
           "rank": 277,
+          "usage": "0.02"
+        },
+        {
+          "tier": "ubers",
+          "rank": 309,
           "usage": "0.02"
         },
         {
@@ -7523,16 +7533,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 442,
           "usage": "0.01"
-        },
-        {
-          "tier": "nu",
-          "rank": 183,
-          "usage": "0.03"
-        },
-        {
-          "tier": "pu",
-          "rank": 168,
-          "usage": "0.10"
         }
       ],
       "types": [
@@ -7543,7 +7543,7 @@ window.localDB = {
         {
           "name": "Choice Specs",
           "tier": "pu",
-          "ability": "Chlorophyll",
+          "ability": "Harvest",
           "item": "Choice Specs",
           "nature": "Modest",
           "teraType": "Steel / Grass",
@@ -7693,36 +7693,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 228,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ru",
-          "rank": 94,
-          "usage": "1.02"
-        },
-        {
-          "tier": "ubers",
-          "rank": 234,
-          "usage": "0.04"
-        },
-        {
-          "tier": "ou",
-          "rank": 284,
-          "usage": "0.01"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 317,
-          "usage": "0.02"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 345,
-          "usage": "0.04"
-        },
-        {
           "tier": "nu",
           "rank": 83,
           "usage": "1.14"
@@ -7733,8 +7703,38 @@ window.localDB = {
           "usage": "4.83"
         },
         {
+          "tier": "ru",
+          "rank": 94,
+          "usage": "1.02"
+        },
+        {
+          "tier": "uu",
+          "rank": 228,
+          "usage": "0.02"
+        },
+        {
+          "tier": "ou",
+          "rank": 284,
+          "usage": "0.01"
+        },
+        {
           "tier": "monotype",
           "rank": 282,
+          "usage": "0.04"
+        },
+        {
+          "tier": "ubers",
+          "rank": 234,
+          "usage": "0.04"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 317,
+          "usage": "0.02"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 345,
           "usage": "0.04"
         }
       ],
@@ -7799,16 +7799,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 76,
-          "usage": "1.37"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 192,
-          "usage": "0.17"
-        },
-        {
           "tier": "nu",
           "rank": 199,
           "usage": "0.02"
@@ -7819,9 +7809,19 @@ window.localDB = {
           "usage": "0.45"
         },
         {
+          "tier": "zu",
+          "rank": 76,
+          "usage": "1.37"
+        },
+        {
           "tier": "monotype",
           "rank": 255,
           "usage": "0.06"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 192,
+          "usage": "0.17"
         }
       ],
       "types": [
@@ -8016,31 +8016,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 172,
-          "usage": "0.10"
-        },
-        {
-          "tier": "ru",
-          "rank": 178,
-          "usage": "0.15"
-        },
-        {
-          "tier": "zu",
-          "rank": 37,
-          "usage": "4.53"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 65,
-          "usage": "0.81"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 164,
-          "usage": "0.32"
-        },
-        {
           "tier": "nu",
           "rank": 120,
           "usage": "0.40"
@@ -8049,6 +8024,31 @@ window.localDB = {
           "tier": "pu",
           "rank": 104,
           "usage": "0.59"
+        },
+        {
+          "tier": "vgc2025",
+          "rank": 65,
+          "usage": "0.81"
+        },
+        {
+          "tier": "zu",
+          "rank": 37,
+          "usage": "4.53"
+        },
+        {
+          "tier": "ru",
+          "rank": 178,
+          "usage": "0.15"
+        },
+        {
+          "tier": "uu",
+          "rank": 172,
+          "usage": "0.10"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 164,
+          "usage": "0.32"
         }
       ],
       "types": [
@@ -8194,23 +8194,23 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "vgc2025",
-          "rank": 83,
-          "usage": "0.52"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 330,
-          "usage": "0.02"
-        },
-        {
           "tier": "pu",
           "rank": 1,
           "usage": "33.48"
         },
         {
+          "tier": "vgc2025",
+          "rank": 83,
+          "usage": "0.52"
+        },
+        {
           "tier": "monotype",
           "rank": 322,
+          "usage": "0.02"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 330,
           "usage": "0.02"
         }
       ],
@@ -8291,36 +8291,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 191,
-          "usage": "0.06"
-        },
-        {
-          "tier": "ru",
-          "rank": 44,
-          "usage": "4.44"
-        },
-        {
-          "tier": "ubers",
-          "rank": 124,
-          "usage": "0.33"
-        },
-        {
-          "tier": "ou",
-          "rank": 180,
-          "usage": "0.09"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 122,
-          "usage": "0.59"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 63,
-          "usage": "2.47"
-        },
-        {
           "tier": "nu",
           "rank": 57,
           "usage": "2.88"
@@ -8331,9 +8301,39 @@ window.localDB = {
           "usage": "7.56"
         },
         {
+          "tier": "ru",
+          "rank": 44,
+          "usage": "4.44"
+        },
+        {
+          "tier": "uu",
+          "rank": 191,
+          "usage": "0.06"
+        },
+        {
+          "tier": "ou",
+          "rank": 180,
+          "usage": "0.09"
+        },
+        {
           "tier": "monotype",
           "rank": 257,
           "usage": "0.06"
+        },
+        {
+          "tier": "ubers",
+          "rank": 124,
+          "usage": "0.33"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 122,
+          "usage": "0.59"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 63,
+          "usage": "2.47"
         }
       ],
       "types": [
@@ -9032,9 +9032,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 204,
-          "usage": "0.05"
+          "tier": "nu",
+          "rank": 7,
+          "usage": "17.74"
+        },
+        {
+          "tier": "vgc2025",
+          "rank": 195,
+          "usage": "0.04"
         },
         {
           "tier": "ru",
@@ -9042,9 +9047,14 @@ window.localDB = {
           "usage": "0.57"
         },
         {
-          "tier": "vgc2025",
-          "rank": 195,
-          "usage": "0.04"
+          "tier": "uu",
+          "rank": 204,
+          "usage": "0.05"
+        },
+        {
+          "tier": "monotype",
+          "rank": 227,
+          "usage": "0.10"
         },
         {
           "tier": "doublesou",
@@ -9055,16 +9065,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 425,
           "usage": "0.02"
-        },
-        {
-          "tier": "nu",
-          "rank": 7,
-          "usage": "17.74"
-        },
-        {
-          "tier": "monotype",
-          "rank": 227,
-          "usage": "0.10"
         }
       ],
       "types": [
@@ -9195,14 +9195,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 226,
-          "usage": "0.01"
-        },
-        {
           "tier": "vgc2025",
           "rank": 169,
           "usage": "0.07"
+        },
+        {
+          "tier": "zu",
+          "rank": 226,
+          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -9282,6 +9282,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "pu",
+          "rank": 187,
+          "usage": "0.05"
+        },
+        {
           "tier": "vgc2025",
           "rank": 105,
           "usage": "0.26"
@@ -9290,11 +9295,6 @@ window.localDB = {
           "tier": "doublesou",
           "rank": 313,
           "usage": "0.02"
-        },
-        {
-          "tier": "pu",
-          "rank": 187,
-          "usage": "0.05"
         }
       ],
       "types": [
@@ -9420,26 +9420,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 144,
-          "usage": "0.31"
-        },
-        {
-          "tier": "zu",
-          "rank": 90,
-          "usage": "0.89"
-        },
-        {
-          "tier": "ou",
-          "rank": 228,
-          "usage": "0.04"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 429,
-          "usage": "0.02"
-        },
-        {
           "tier": "nu",
           "rank": 125,
           "usage": "0.32"
@@ -9450,8 +9430,28 @@ window.localDB = {
           "usage": "0.57"
         },
         {
+          "tier": "zu",
+          "rank": 90,
+          "usage": "0.89"
+        },
+        {
+          "tier": "ru",
+          "rank": 144,
+          "usage": "0.31"
+        },
+        {
+          "tier": "ou",
+          "rank": 228,
+          "usage": "0.04"
+        },
+        {
           "tier": "monotype",
           "rank": 323,
+          "usage": "0.02"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 429,
           "usage": "0.02"
         }
       ],
@@ -9577,23 +9577,28 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 73,
-          "usage": "1.52"
-        },
-        {
           "tier": "vgc2025",
           "rank": 240,
           "usage": "0.02"
         },
         {
-          "tier": "ubers",
-          "rank": 210,
-          "usage": "0.06"
+          "tier": "uu",
+          "rank": 73,
+          "usage": "1.52"
         },
         {
           "tier": "ou",
           "rank": 207,
+          "usage": "0.06"
+        },
+        {
+          "tier": "monotype",
+          "rank": 56,
+          "usage": "3.88"
+        },
+        {
+          "tier": "ubers",
+          "rank": 210,
           "usage": "0.06"
         },
         {
@@ -9605,11 +9610,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 190,
           "usage": "0.26"
-        },
-        {
-          "tier": "monotype",
-          "rank": 56,
-          "usage": "3.88"
         }
       ],
       "types": [
@@ -9635,7 +9635,7 @@ window.localDB = {
         {
           "name": "Physically Defensive (Flying)",
           "tier": "monotype",
-          "ability": "Moxie",
+          "ability": "Intimidate",
           "item": "Heavy-Duty Boots",
           "nature": "Impish",
           "teraType": "Normal",
@@ -9650,7 +9650,7 @@ window.localDB = {
         {
           "name": "Dragon Dance (Flying)",
           "tier": "monotype",
-          "ability": "Moxie",
+          "ability": "Intimidate",
           "item": "Leftovers",
           "nature": "Jolly",
           "teraType": "Normal",
@@ -9665,7 +9665,7 @@ window.localDB = {
         {
           "name": "Bulky Pivot",
           "tier": "vgc2023",
-          "ability": "Moxie",
+          "ability": "Intimidate",
           "item": "Sitrus Berry / Leftovers / Rocky Helmet",
           "nature": "Careful",
           "teraType": "Normal",
@@ -9680,7 +9680,7 @@ window.localDB = {
         {
           "name": "Rocky Helmet",
           "tier": "battlestadiumsingles",
-          "ability": "Moxie",
+          "ability": "Intimidate",
           "item": "Rocky Helmet",
           "nature": "Impish",
           "teraType": "Steel / Ground",
@@ -9695,7 +9695,7 @@ window.localDB = {
         {
           "name": "Dragon Dance (HP, Def, Spe)",
           "tier": "godlygift",
-          "ability": "Moxie",
+          "ability": "Intimidate",
           "item": "Heavy-Duty Boots",
           "nature": "Adamant",
           "teraType": "Normal",
@@ -9745,41 +9745,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 260,
-          "usage": "0.01"
-        },
-        {
-          "tier": "ru",
-          "rank": 93,
-          "usage": "1.07"
-        },
-        {
-          "tier": "zu",
-          "rank": 84,
-          "usage": "1.10"
-        },
-        {
-          "tier": "ubers",
-          "rank": 191,
-          "usage": "0.08"
-        },
-        {
-          "tier": "ou",
-          "rank": 272,
-          "usage": "0.02"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 191,
-          "usage": "0.17"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 366,
-          "usage": "0.03"
-        },
-        {
           "tier": "nu",
           "rank": 62,
           "usage": "2.39"
@@ -9790,8 +9755,43 @@ window.localDB = {
           "usage": "0.63"
         },
         {
+          "tier": "zu",
+          "rank": 84,
+          "usage": "1.10"
+        },
+        {
+          "tier": "ru",
+          "rank": 93,
+          "usage": "1.07"
+        },
+        {
+          "tier": "uu",
+          "rank": 260,
+          "usage": "0.01"
+        },
+        {
+          "tier": "ou",
+          "rank": 272,
+          "usage": "0.02"
+        },
+        {
           "tier": "monotype",
           "rank": 287,
+          "usage": "0.03"
+        },
+        {
+          "tier": "ubers",
+          "rank": 191,
+          "usage": "0.08"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 191,
+          "usage": "0.17"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 366,
           "usage": "0.03"
         }
       ],
@@ -9872,46 +9872,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 83,
-          "usage": "1.13"
-        },
-        {
-          "tier": "ru",
-          "rank": 86,
-          "usage": "1.24"
-        },
-        {
-          "tier": "zu",
-          "rank": 81,
-          "usage": "1.17"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 70,
-          "usage": "0.72"
-        },
-        {
-          "tier": "ubers",
-          "rank": 30,
-          "usage": "4.28"
-        },
-        {
-          "tier": "ou",
-          "rank": 153,
-          "usage": "0.16"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 166,
-          "usage": "0.28"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 95,
-          "usage": "1.19"
-        },
-        {
           "tier": "nu",
           "rank": 116,
           "usage": "0.41"
@@ -9922,9 +9882,49 @@ window.localDB = {
           "usage": "0.68"
         },
         {
+          "tier": "vgc2025",
+          "rank": 70,
+          "usage": "0.72"
+        },
+        {
+          "tier": "zu",
+          "rank": 81,
+          "usage": "1.17"
+        },
+        {
+          "tier": "ru",
+          "rank": 86,
+          "usage": "1.24"
+        },
+        {
+          "tier": "uu",
+          "rank": 83,
+          "usage": "1.13"
+        },
+        {
+          "tier": "ou",
+          "rank": 153,
+          "usage": "0.16"
+        },
+        {
           "tier": "monotype",
           "rank": 114,
           "usage": "1.16"
+        },
+        {
+          "tier": "ubers",
+          "rank": 30,
+          "usage": "4.28"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 166,
+          "usage": "0.28"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 95,
+          "usage": "1.19"
         }
       ],
       "types": [
@@ -10127,14 +10127,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 118,
-          "usage": "0.39"
-        },
-        {
-          "tier": "ru",
-          "rank": 108,
-          "usage": "0.68"
+          "tier": "nu",
+          "rank": 12,
+          "usage": "12.93"
         },
         {
           "tier": "vgc2025",
@@ -10142,14 +10137,29 @@ window.localDB = {
           "usage": "0.01"
         },
         {
-          "tier": "ubers",
-          "rank": 347,
-          "usage": "0.01"
+          "tier": "ru",
+          "rank": 108,
+          "usage": "0.68"
+        },
+        {
+          "tier": "uu",
+          "rank": 118,
+          "usage": "0.39"
         },
         {
           "tier": "ou",
           "rank": 149,
           "usage": "0.18"
+        },
+        {
+          "tier": "monotype",
+          "rank": 307,
+          "usage": "0.02"
+        },
+        {
+          "tier": "ubers",
+          "rank": 347,
+          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -10160,16 +10170,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 323,
           "usage": "0.05"
-        },
-        {
-          "tier": "nu",
-          "rank": 12,
-          "usage": "12.93"
-        },
-        {
-          "tier": "monotype",
-          "rank": 307,
-          "usage": "0.02"
         }
       ],
       "types": [
@@ -10244,14 +10244,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 112,
-          "usage": "0.43"
+          "tier": "nu",
+          "rank": 95,
+          "usage": "0.77"
         },
         {
-          "tier": "ru",
-          "rank": 169,
-          "usage": "0.19"
+          "tier": "pu",
+          "rank": 79,
+          "usage": "1.12"
         },
         {
           "tier": "zu",
@@ -10259,14 +10259,24 @@ window.localDB = {
           "usage": "21.74"
         },
         {
-          "tier": "ubers",
-          "rank": 326,
-          "usage": "0.01"
+          "tier": "ru",
+          "rank": 169,
+          "usage": "0.19"
+        },
+        {
+          "tier": "uu",
+          "rank": 112,
+          "usage": "0.43"
         },
         {
           "tier": "ou",
           "rank": 170,
           "usage": "0.12"
+        },
+        {
+          "tier": "ubers",
+          "rank": 326,
+          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -10277,16 +10287,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 332,
           "usage": "0.05"
-        },
-        {
-          "tier": "nu",
-          "rank": 95,
-          "usage": "0.77"
-        },
-        {
-          "tier": "pu",
-          "rank": 79,
-          "usage": "1.12"
         }
       ],
       "types": [
@@ -10361,16 +10361,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 218,
-          "usage": "0.05"
-        },
-        {
-          "tier": "zu",
-          "rank": 160,
-          "usage": "0.14"
-        },
-        {
           "tier": "nu",
           "rank": 145,
           "usage": "0.12"
@@ -10379,6 +10369,16 @@ window.localDB = {
           "tier": "pu",
           "rank": 193,
           "usage": "0.04"
+        },
+        {
+          "tier": "zu",
+          "rank": 160,
+          "usage": "0.14"
+        },
+        {
+          "tier": "ru",
+          "rank": 218,
+          "usage": "0.05"
         }
       ],
       "types": [
@@ -10820,19 +10820,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 126,
-          "usage": "0.32"
+          "tier": "nu",
+          "rank": 121,
+          "usage": "0.38"
         },
         {
-          "tier": "ru",
-          "rank": 216,
-          "usage": "0.06"
-        },
-        {
-          "tier": "zu",
-          "rank": 144,
-          "usage": "0.19"
+          "tier": "pu",
+          "rank": 58,
+          "usage": "2.42"
         },
         {
           "tier": "vgc2025",
@@ -10840,13 +10835,33 @@ window.localDB = {
           "usage": "0.02"
         },
         {
-          "tier": "ubers",
-          "rank": 251,
-          "usage": "0.03"
+          "tier": "zu",
+          "rank": 144,
+          "usage": "0.19"
+        },
+        {
+          "tier": "ru",
+          "rank": 216,
+          "usage": "0.06"
+        },
+        {
+          "tier": "uu",
+          "rank": 126,
+          "usage": "0.32"
         },
         {
           "tier": "ou",
           "rank": 248,
+          "usage": "0.03"
+        },
+        {
+          "tier": "monotype",
+          "rank": 209,
+          "usage": "0.15"
+        },
+        {
+          "tier": "ubers",
+          "rank": 251,
           "usage": "0.03"
         },
         {
@@ -10858,21 +10873,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 200,
           "usage": "0.23"
-        },
-        {
-          "tier": "nu",
-          "rank": 121,
-          "usage": "0.38"
-        },
-        {
-          "tier": "pu",
-          "rank": 58,
-          "usage": "2.42"
-        },
-        {
-          "tier": "monotype",
-          "rank": 209,
-          "usage": "0.15"
         }
       ],
       "types": [
@@ -10966,31 +10966,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 273,
-          "usage": "0.01"
-        },
-        {
-          "tier": "zu",
-          "rank": 50,
-          "usage": "3.38"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 166,
-          "usage": "0.08"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 118,
-          "usage": "0.61"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 390,
-          "usage": "0.03"
-        },
-        {
           "tier": "nu",
           "rank": 175,
           "usage": "0.05"
@@ -11001,9 +10976,34 @@ window.localDB = {
           "usage": "0.26"
         },
         {
+          "tier": "vgc2025",
+          "rank": 166,
+          "usage": "0.08"
+        },
+        {
+          "tier": "zu",
+          "rank": 50,
+          "usage": "3.38"
+        },
+        {
+          "tier": "uu",
+          "rank": 273,
+          "usage": "0.01"
+        },
+        {
           "tier": "monotype",
           "rank": 36,
           "usage": "5.34"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 118,
+          "usage": "0.61"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 390,
+          "usage": "0.03"
         }
       ],
       "types": [
@@ -11124,14 +11124,19 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ubers",
-          "rank": 135,
-          "usage": "0.27"
-        },
-        {
           "tier": "ou",
           "rank": 28,
           "usage": "6.71"
+        },
+        {
+          "tier": "monotype",
+          "rank": 107,
+          "usage": "1.60"
+        },
+        {
+          "tier": "ubers",
+          "rank": 135,
+          "usage": "0.27"
         },
         {
           "tier": "doublesou",
@@ -11142,11 +11147,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 6,
           "usage": "14.80"
-        },
-        {
-          "tier": "monotype",
-          "rank": 107,
-          "usage": "1.60"
         }
       ],
       "types": [
@@ -11477,14 +11477,19 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ubers",
-          "rank": 248,
-          "usage": "0.03"
-        },
-        {
           "tier": "ou",
           "rank": 32,
           "usage": "5.74"
+        },
+        {
+          "tier": "monotype",
+          "rank": 73,
+          "usage": "2.86"
+        },
+        {
+          "tier": "ubers",
+          "rank": 248,
+          "usage": "0.03"
         },
         {
           "tier": "doublesou",
@@ -11495,11 +11500,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 29,
           "usage": "6.97"
-        },
-        {
-          "tier": "monotype",
-          "rank": 73,
-          "usage": "2.86"
         }
       ],
       "types": [
@@ -11748,14 +11748,19 @@ window.localDB = {
           "usage": "6.96"
         },
         {
-          "tier": "ubers",
-          "rank": 104,
-          "usage": "0.48"
-        },
-        {
           "tier": "ou",
           "rank": 5,
           "usage": "19.49"
+        },
+        {
+          "tier": "monotype",
+          "rank": 23,
+          "usage": "7.39"
+        },
+        {
+          "tier": "ubers",
+          "rank": 104,
+          "usage": "0.48"
         },
         {
           "tier": "doublesou",
@@ -11766,11 +11771,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 21,
           "usage": "8.70"
-        },
-        {
-          "tier": "monotype",
-          "rank": 23,
-          "usage": "7.39"
         }
       ],
       "types": [
@@ -12438,9 +12438,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 65,
-          "usage": "1.92"
+          "tier": "vgc2025",
+          "rank": 127,
+          "usage": "0.17"
         },
         {
           "tier": "ru",
@@ -12448,19 +12448,24 @@ window.localDB = {
           "usage": "13.98"
         },
         {
-          "tier": "vgc2025",
-          "rank": 127,
-          "usage": "0.17"
-        },
-        {
-          "tier": "ubers",
-          "rank": 180,
-          "usage": "0.09"
+          "tier": "uu",
+          "rank": 65,
+          "usage": "1.92"
         },
         {
           "tier": "ou",
           "rank": 133,
           "usage": "0.23"
+        },
+        {
+          "tier": "monotype",
+          "rank": 199,
+          "usage": "0.18"
+        },
+        {
+          "tier": "ubers",
+          "rank": 180,
+          "usage": "0.09"
         },
         {
           "tier": "doublesou",
@@ -12471,11 +12476,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 138,
           "usage": "0.51"
-        },
-        {
-          "tier": "monotype",
-          "rank": 199,
-          "usage": "0.18"
         }
       ],
       "types": [
@@ -12743,14 +12743,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 196,
-          "usage": "0.05"
-        },
-        {
           "tier": "pu",
           "rank": 216,
           "usage": "0.02"
+        },
+        {
+          "tier": "zu",
+          "rank": 196,
+          "usage": "0.05"
         }
       ],
       "types": [
@@ -12902,9 +12902,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 243,
-          "usage": "0.02"
+          "tier": "pu",
+          "rank": 94,
+          "usage": "0.68"
+        },
+        {
+          "tier": "zu",
+          "rank": 29,
+          "usage": "7.16"
         },
         {
           "tier": "ru",
@@ -12912,9 +12917,9 @@ window.localDB = {
           "usage": "0.23"
         },
         {
-          "tier": "zu",
-          "rank": 29,
-          "usage": "7.16"
+          "tier": "uu",
+          "rank": 243,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -12925,11 +12930,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 280,
           "usage": "0.07"
-        },
-        {
-          "tier": "pu",
-          "rank": 94,
-          "usage": "0.68"
         }
       ],
       "types": [
@@ -13112,19 +13112,24 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 111,
-          "usage": "0.47"
-        },
-        {
           "tier": "ru",
           "rank": 73,
           "usage": "1.62"
         },
         {
+          "tier": "uu",
+          "rank": 111,
+          "usage": "0.47"
+        },
+        {
           "tier": "ou",
           "rank": 190,
           "usage": "0.08"
+        },
+        {
+          "tier": "monotype",
+          "rank": 320,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -13135,11 +13140,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 351,
           "usage": "0.04"
-        },
-        {
-          "tier": "monotype",
-          "rank": 320,
-          "usage": "0.02"
         }
       ],
       "types": [
@@ -13249,16 +13249,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 167,
-          "usage": "0.12"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 315,
-          "usage": "0.05"
-        },
-        {
           "tier": "nu",
           "rank": 191,
           "usage": "0.03"
@@ -13267,6 +13257,16 @@ window.localDB = {
           "tier": "pu",
           "rank": 199,
           "usage": "0.03"
+        },
+        {
+          "tier": "zu",
+          "rank": 167,
+          "usage": "0.12"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 315,
+          "usage": "0.05"
         }
       ],
       "types": [
@@ -13365,6 +13365,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "pu",
+          "rank": 183,
+          "usage": "0.05"
+        },
+        {
           "tier": "zu",
           "rank": 82,
           "usage": "1.15"
@@ -13372,11 +13377,6 @@ window.localDB = {
         {
           "tier": "doublesou",
           "rank": 273,
-          "usage": "0.05"
-        },
-        {
-          "tier": "pu",
-          "rank": 183,
           "usage": "0.05"
         }
       ],
@@ -13584,6 +13584,11 @@ window.localDB = {
           "usage": "0.11"
         },
         {
+          "tier": "monotype",
+          "rank": 171,
+          "usage": "0.28"
+        },
+        {
           "tier": "ubers",
           "rank": 183,
           "usage": "0.08"
@@ -13592,11 +13597,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 380,
           "usage": "0.03"
-        },
-        {
-          "tier": "monotype",
-          "rank": 171,
-          "usage": "0.28"
         }
       ],
       "types": [
@@ -13810,31 +13810,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 266,
-          "usage": "0.01"
-        },
-        {
-          "tier": "ru",
-          "rank": 113,
-          "usage": "0.58"
-        },
-        {
-          "tier": "zu",
-          "rank": 170,
-          "usage": "0.11"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 336,
-          "usage": "0.02"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 381,
-          "usage": "0.03"
-        },
-        {
           "tier": "nu",
           "rank": 196,
           "usage": "0.02"
@@ -13845,8 +13820,33 @@ window.localDB = {
           "usage": "1.98"
         },
         {
+          "tier": "zu",
+          "rank": 170,
+          "usage": "0.11"
+        },
+        {
+          "tier": "ru",
+          "rank": 113,
+          "usage": "0.58"
+        },
+        {
+          "tier": "uu",
+          "rank": 266,
+          "usage": "0.01"
+        },
+        {
           "tier": "monotype",
           "rank": 300,
+          "usage": "0.03"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 336,
+          "usage": "0.02"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 381,
           "usage": "0.03"
         }
       ],
@@ -14354,16 +14354,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 117,
-          "usage": "0.41"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 183,
-          "usage": "0.05"
-        },
-        {
           "tier": "nu",
           "rank": 193,
           "usage": "0.03"
@@ -14372,6 +14362,16 @@ window.localDB = {
           "tier": "pu",
           "rank": 223,
           "usage": "0.01"
+        },
+        {
+          "tier": "vgc2025",
+          "rank": 183,
+          "usage": "0.05"
+        },
+        {
+          "tier": "zu",
+          "rank": 117,
+          "usage": "0.41"
         }
       ],
       "types": [
@@ -14517,24 +14517,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 33,
-          "usage": "6.54"
-        },
-        {
           "tier": "vgc2025",
           "rank": 227,
           "usage": "0.03"
         },
         {
-          "tier": "ubers",
-          "rank": 184,
-          "usage": "0.08"
+          "tier": "uu",
+          "rank": 33,
+          "usage": "6.54"
         },
         {
           "tier": "ou",
           "rank": 86,
           "usage": "0.87"
+        },
+        {
+          "tier": "monotype",
+          "rank": 62,
+          "usage": "3.48"
+        },
+        {
+          "tier": "ubers",
+          "rank": 184,
+          "usage": "0.08"
         },
         {
           "tier": "doublesou",
@@ -14545,11 +14550,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 136,
           "usage": "0.55"
-        },
-        {
-          "tier": "monotype",
-          "rank": 62,
-          "usage": "3.48"
         }
       ],
       "types": [
@@ -14779,6 +14779,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "pu",
+          "rank": 196,
+          "usage": "0.04"
+        },
+        {
           "tier": "ubers",
           "rank": 217,
           "usage": "0.05"
@@ -14792,11 +14797,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 251,
           "usage": "0.10"
-        },
-        {
-          "tier": "pu",
-          "rank": 196,
-          "usage": "0.04"
         }
       ],
       "types": [
@@ -14844,9 +14844,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 62,
-          "usage": "2.01"
+          "tier": "vgc2025",
+          "rank": 253,
+          "usage": "0.02"
         },
         {
           "tier": "ru",
@@ -14854,19 +14854,24 @@ window.localDB = {
           "usage": "6.08"
         },
         {
-          "tier": "vgc2025",
-          "rank": 253,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ubers",
-          "rank": 213,
-          "usage": "0.06"
+          "tier": "uu",
+          "rank": 62,
+          "usage": "2.01"
         },
         {
           "tier": "ou",
           "rank": 236,
           "usage": "0.04"
+        },
+        {
+          "tier": "monotype",
+          "rank": 170,
+          "usage": "0.29"
+        },
+        {
+          "tier": "ubers",
+          "rank": 213,
+          "usage": "0.06"
         },
         {
           "tier": "doublesou",
@@ -14877,11 +14882,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 267,
           "usage": "0.08"
-        },
-        {
-          "tier": "monotype",
-          "rank": 170,
-          "usage": "0.29"
         }
       ],
       "types": [
@@ -15062,9 +15062,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 222,
-          "usage": "0.01"
+          "tier": "pu",
+          "rank": 215,
+          "usage": "0.02"
         },
         {
           "tier": "vgc2025",
@@ -15072,14 +15072,14 @@ window.localDB = {
           "usage": "0.22"
         },
         {
+          "tier": "zu",
+          "rank": 222,
+          "usage": "0.01"
+        },
+        {
           "tier": "doublesou",
           "rank": 141,
           "usage": "0.45"
-        },
-        {
-          "tier": "pu",
-          "rank": 215,
-          "usage": "0.02"
         }
       ],
       "types": [
@@ -15244,6 +15244,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "pu",
+          "rank": 226,
+          "usage": "0.01"
+        },
+        {
           "tier": "zu",
           "rank": 217,
           "usage": "0.02"
@@ -15252,11 +15257,6 @@ window.localDB = {
           "tier": "ubers",
           "rank": 285,
           "usage": "0.02"
-        },
-        {
-          "tier": "pu",
-          "rank": 226,
-          "usage": "0.01"
         }
       ],
       "types": [
@@ -15406,24 +15406,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 105,
-          "usage": "0.54"
-        },
-        {
           "tier": "ru",
           "rank": 15,
           "usage": "11.55"
         },
         {
-          "tier": "ubers",
-          "rank": 103,
-          "usage": "0.48"
+          "tier": "uu",
+          "rank": 105,
+          "usage": "0.54"
         },
         {
           "tier": "ou",
           "rank": 140,
           "usage": "0.20"
+        },
+        {
+          "tier": "monotype",
+          "rank": 109,
+          "usage": "1.45"
+        },
+        {
+          "tier": "ubers",
+          "rank": 103,
+          "usage": "0.48"
         },
         {
           "tier": "doublesou",
@@ -15434,11 +15439,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 212,
           "usage": "0.19"
-        },
-        {
-          "tier": "monotype",
-          "rank": 109,
-          "usage": "1.45"
         }
       ],
       "types": [
@@ -15578,9 +15578,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 93,
-          "usage": "0.83"
+          "tier": "nu",
+          "rank": 36,
+          "usage": "5.23"
         },
         {
           "tier": "ru",
@@ -15588,14 +15588,24 @@ window.localDB = {
           "usage": "1.31"
         },
         {
-          "tier": "ubers",
-          "rank": 134,
-          "usage": "0.28"
+          "tier": "uu",
+          "rank": 93,
+          "usage": "0.83"
         },
         {
           "tier": "ou",
           "rank": 104,
           "usage": "0.50"
+        },
+        {
+          "tier": "monotype",
+          "rank": 232,
+          "usage": "0.10"
+        },
+        {
+          "tier": "ubers",
+          "rank": 134,
+          "usage": "0.28"
         },
         {
           "tier": "doublesou",
@@ -15606,16 +15616,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 180,
           "usage": "0.31"
-        },
-        {
-          "tier": "nu",
-          "rank": 36,
-          "usage": "5.23"
-        },
-        {
-          "tier": "monotype",
-          "rank": 232,
-          "usage": "0.10"
         }
       ],
       "types": [
@@ -15720,24 +15720,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 130,
-          "usage": "0.27"
-        },
-        {
           "tier": "ru",
           "rank": 21,
           "usage": "9.36"
         },
         {
-          "tier": "ubers",
-          "rank": 212,
-          "usage": "0.06"
+          "tier": "uu",
+          "rank": 130,
+          "usage": "0.27"
         },
         {
           "tier": "ou",
           "rank": 89,
           "usage": "0.77"
+        },
+        {
+          "tier": "monotype",
+          "rank": 252,
+          "usage": "0.07"
+        },
+        {
+          "tier": "ubers",
+          "rank": 212,
+          "usage": "0.06"
         },
         {
           "tier": "doublesou",
@@ -15748,11 +15753,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 208,
           "usage": "0.20"
-        },
-        {
-          "tier": "monotype",
-          "rank": 252,
-          "usage": "0.07"
         }
       ],
       "types": [
@@ -15857,9 +15857,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 252,
-          "usage": "0.01"
+          "tier": "vgc2025",
+          "rank": 82,
+          "usage": "0.53"
         },
         {
           "tier": "zu",
@@ -15867,9 +15867,9 @@ window.localDB = {
           "usage": "0.04"
         },
         {
-          "tier": "vgc2025",
-          "rank": 82,
-          "usage": "0.53"
+          "tier": "ru",
+          "rank": 252,
+          "usage": "0.01"
         },
         {
           "tier": "ubers",
@@ -15949,14 +15949,19 @@ window.localDB = {
           "usage": "11.38"
         },
         {
-          "tier": "ubers",
-          "rank": 229,
-          "usage": "0.05"
-        },
-        {
           "tier": "ou",
           "rank": 127,
           "usage": "0.27"
+        },
+        {
+          "tier": "monotype",
+          "rank": 149,
+          "usage": "0.47"
+        },
+        {
+          "tier": "ubers",
+          "rank": 229,
+          "usage": "0.05"
         },
         {
           "tier": "doublesou",
@@ -15967,11 +15972,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 141,
           "usage": "0.49"
-        },
-        {
-          "tier": "monotype",
-          "rank": 149,
-          "usage": "0.47"
         }
       ],
       "types": [
@@ -16171,14 +16171,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 197,
-          "usage": "0.05"
-        },
-        {
           "tier": "pu",
           "rank": 217,
           "usage": "0.02"
+        },
+        {
+          "tier": "zu",
+          "rank": 197,
+          "usage": "0.05"
         }
       ],
       "types": [
@@ -16306,14 +16306,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 241,
-          "usage": "0.02"
-        },
-        {
           "tier": "zu",
           "rank": 224,
           "usage": "0.01"
+        },
+        {
+          "tier": "ru",
+          "rank": 241,
+          "usage": "0.02"
         }
       ],
       "types": [
@@ -16439,24 +16439,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 57,
-          "usage": "2.23"
-        },
-        {
           "tier": "ru",
           "rank": 20,
           "usage": "9.93"
         },
         {
-          "tier": "ubers",
-          "rank": 105,
-          "usage": "0.47"
+          "tier": "uu",
+          "rank": 57,
+          "usage": "2.23"
         },
         {
           "tier": "ou",
           "rank": 208,
           "usage": "0.06"
+        },
+        {
+          "tier": "monotype",
+          "rank": 91,
+          "usage": "2.06"
+        },
+        {
+          "tier": "ubers",
+          "rank": 105,
+          "usage": "0.47"
         },
         {
           "tier": "doublesou",
@@ -16467,11 +16472,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 321,
           "usage": "0.05"
-        },
-        {
-          "tier": "monotype",
-          "rank": 91,
-          "usage": "2.06"
         }
       ],
       "types": [
@@ -16577,23 +16577,23 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 136,
-          "usage": "0.26"
-        },
-        {
-          "tier": "ubers",
-          "rank": 301,
-          "usage": "0.02"
-        },
-        {
           "tier": "pu",
           "rank": 213,
           "usage": "0.02"
         },
         {
+          "tier": "zu",
+          "rank": 136,
+          "usage": "0.26"
+        },
+        {
           "tier": "monotype",
           "rank": 311,
+          "usage": "0.02"
+        },
+        {
+          "tier": "ubers",
+          "rank": 301,
           "usage": "0.02"
         }
       ],
@@ -16688,9 +16688,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 168,
-          "usage": "0.12"
+          "tier": "nu",
+          "rank": 16,
+          "usage": "11.58"
         },
         {
           "tier": "ru",
@@ -16698,9 +16698,9 @@ window.localDB = {
           "usage": "3.85"
         },
         {
-          "tier": "nu",
-          "rank": 16,
-          "usage": "11.58"
+          "tier": "uu",
+          "rank": 168,
+          "usage": "0.12"
         }
       ],
       "types": [
@@ -16973,14 +16973,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 179,
-          "usage": "0.09"
-        },
-        {
           "tier": "pu",
           "rank": 184,
           "usage": "0.05"
+        },
+        {
+          "tier": "zu",
+          "rank": 179,
+          "usage": "0.09"
         }
       ],
       "types": [
@@ -17028,16 +17028,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 202,
-          "usage": "0.08"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 434,
-          "usage": "0.02"
-        },
-        {
           "tier": "nu",
           "rank": 49,
           "usage": "3.76"
@@ -17048,9 +17038,19 @@ window.localDB = {
           "usage": "5.50"
         },
         {
+          "tier": "ru",
+          "rank": 202,
+          "usage": "0.08"
+        },
+        {
           "tier": "monotype",
           "rank": 238,
           "usage": "0.09"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 434,
+          "usage": "0.02"
         }
       ],
       "types": [
@@ -17130,24 +17130,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 21,
-          "usage": "10.10"
-        },
-        {
           "tier": "vgc2025",
           "rank": 126,
           "usage": "0.17"
         },
         {
-          "tier": "ubers",
-          "rank": 108,
-          "usage": "0.45"
+          "tier": "uu",
+          "rank": 21,
+          "usage": "10.10"
         },
         {
           "tier": "ou",
           "rank": 50,
           "usage": "3.14"
+        },
+        {
+          "tier": "monotype",
+          "rank": 29,
+          "usage": "6.61"
+        },
+        {
+          "tier": "ubers",
+          "rank": 108,
+          "usage": "0.45"
         },
         {
           "tier": "doublesou",
@@ -17158,11 +17163,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 108,
           "usage": "0.88"
-        },
-        {
-          "tier": "monotype",
-          "rank": 29,
-          "usage": "6.61"
         }
       ],
       "types": [
@@ -17549,36 +17549,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 190,
-          "usage": "0.06"
-        },
-        {
-          "tier": "ru",
-          "rank": 92,
-          "usage": "1.13"
-        },
-        {
-          "tier": "ubers",
-          "rank": 342,
-          "usage": "0.01"
-        },
-        {
-          "tier": "ou",
-          "rank": 258,
-          "usage": "0.02"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 347,
-          "usage": "0.02"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 311,
-          "usage": "0.05"
-        },
-        {
           "tier": "nu",
           "rank": 96,
           "usage": "0.75"
@@ -17589,9 +17559,39 @@ window.localDB = {
           "usage": "11.22"
         },
         {
+          "tier": "ru",
+          "rank": 92,
+          "usage": "1.13"
+        },
+        {
+          "tier": "uu",
+          "rank": 190,
+          "usage": "0.06"
+        },
+        {
+          "tier": "ou",
+          "rank": 258,
+          "usage": "0.02"
+        },
+        {
           "tier": "monotype",
           "rank": 122,
           "usage": "1.02"
+        },
+        {
+          "tier": "ubers",
+          "rank": 342,
+          "usage": "0.01"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 347,
+          "usage": "0.02"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 311,
+          "usage": "0.05"
         }
       ],
       "types": [
@@ -17761,21 +17761,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 261,
-          "usage": "0.01"
-        },
-        {
-          "tier": "ru",
-          "rank": 89,
-          "usage": "1.15"
-        },
-        {
-          "tier": "zu",
-          "rank": 33,
-          "usage": "5.92"
-        },
-        {
           "tier": "nu",
           "rank": 154,
           "usage": "0.10"
@@ -17784,6 +17769,21 @@ window.localDB = {
           "tier": "pu",
           "rank": 30,
           "usage": "7.14"
+        },
+        {
+          "tier": "zu",
+          "rank": 33,
+          "usage": "5.92"
+        },
+        {
+          "tier": "ru",
+          "rank": 89,
+          "usage": "1.15"
+        },
+        {
+          "tier": "uu",
+          "rank": 261,
+          "usage": "0.01"
         }
       ],
       "types": [
@@ -17928,14 +17928,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 183,
-          "usage": "0.08"
-        },
-        {
-          "tier": "ru",
-          "rank": 229,
-          "usage": "0.04"
+          "tier": "pu",
+          "rank": 95,
+          "usage": "0.67"
         },
         {
           "tier": "zu",
@@ -17943,14 +17938,19 @@ window.localDB = {
           "usage": "1.27"
         },
         {
+          "tier": "ru",
+          "rank": 229,
+          "usage": "0.04"
+        },
+        {
+          "tier": "uu",
+          "rank": 183,
+          "usage": "0.08"
+        },
+        {
           "tier": "nationaldex",
           "rank": 456,
           "usage": "0.01"
-        },
-        {
-          "tier": "pu",
-          "rank": 95,
-          "usage": "0.67"
         }
       ],
       "types": [
@@ -18094,9 +18094,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 233,
-          "usage": "0.03"
+          "tier": "nu",
+          "rank": 138,
+          "usage": "0.16"
         },
         {
           "tier": "zu",
@@ -18104,9 +18104,9 @@ window.localDB = {
           "usage": "0.30"
         },
         {
-          "tier": "nu",
-          "rank": 138,
-          "usage": "0.16"
+          "tier": "ru",
+          "rank": 233,
+          "usage": "0.03"
         }
       ],
       "types": [
@@ -18206,8 +18206,8 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 222,
+          "tier": "pu",
+          "rank": 186,
           "usage": "0.05"
         },
         {
@@ -18216,19 +18216,19 @@ window.localDB = {
           "usage": "1.98"
         },
         {
-          "tier": "nationaldex",
-          "rank": 460,
-          "usage": "0.01"
-        },
-        {
-          "tier": "pu",
-          "rank": 186,
+          "tier": "ru",
+          "rank": 222,
           "usage": "0.05"
         },
         {
           "tier": "monotype",
           "rank": 224,
           "usage": "0.11"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 460,
+          "usage": "0.01"
         }
       ],
       "types": [
@@ -18607,24 +18607,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 8,
-          "usage": "16.21"
-        },
-        {
           "tier": "vgc2025",
           "rank": 247,
           "usage": "0.02"
         },
         {
-          "tier": "ubers",
-          "rank": 87,
-          "usage": "0.65"
+          "tier": "uu",
+          "rank": 8,
+          "usage": "16.21"
         },
         {
           "tier": "ou",
           "rank": 66,
           "usage": "2.04"
+        },
+        {
+          "tier": "monotype",
+          "rank": 6,
+          "usage": "11.12"
+        },
+        {
+          "tier": "ubers",
+          "rank": 87,
+          "usage": "0.65"
         },
         {
           "tier": "doublesou",
@@ -18635,11 +18640,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 64,
           "usage": "2.38"
-        },
-        {
-          "tier": "monotype",
-          "rank": 6,
-          "usage": "11.12"
         }
       ],
       "types": [
@@ -18860,14 +18860,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 18,
-          "usage": "9.75"
-        },
-        {
           "tier": "pu",
           "rank": 75,
           "usage": "1.31"
+        },
+        {
+          "tier": "zu",
+          "rank": 18,
+          "usage": "9.75"
         },
         {
           "tier": "monotype",
@@ -18967,41 +18967,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 123,
-          "usage": "0.34"
-        },
-        {
-          "tier": "ru",
-          "rank": 106,
-          "usage": "0.72"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 184,
-          "usage": "0.05"
-        },
-        {
-          "tier": "ubers",
-          "rank": 226,
-          "usage": "0.05"
-        },
-        {
-          "tier": "ou",
-          "rank": 87,
-          "usage": "0.87"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 131,
-          "usage": "0.53"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 109,
-          "usage": "0.86"
-        },
-        {
           "tier": "nu",
           "rank": 44,
           "usage": "4.24"
@@ -19012,9 +18977,44 @@ window.localDB = {
           "usage": "0.99"
         },
         {
+          "tier": "vgc2025",
+          "rank": 184,
+          "usage": "0.05"
+        },
+        {
+          "tier": "ru",
+          "rank": 106,
+          "usage": "0.72"
+        },
+        {
+          "tier": "uu",
+          "rank": 123,
+          "usage": "0.34"
+        },
+        {
+          "tier": "ou",
+          "rank": 87,
+          "usage": "0.87"
+        },
+        {
           "tier": "monotype",
           "rank": 93,
           "usage": "2.03"
+        },
+        {
+          "tier": "ubers",
+          "rank": 226,
+          "usage": "0.05"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 131,
+          "usage": "0.53"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 109,
+          "usage": "0.86"
         }
       ],
       "types": [
@@ -19205,13 +19205,18 @@ window.localDB = {
           "usage": "14.78"
         },
         {
-          "tier": "ubers",
-          "rank": 222,
+          "tier": "ou",
+          "rank": 223,
           "usage": "0.05"
         },
         {
-          "tier": "ou",
-          "rank": 223,
+          "tier": "monotype",
+          "rank": 228,
+          "usage": "0.10"
+        },
+        {
+          "tier": "ubers",
+          "rank": 222,
           "usage": "0.05"
         },
         {
@@ -19223,11 +19228,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 258,
           "usage": "0.09"
-        },
-        {
-          "tier": "monotype",
-          "rank": 228,
-          "usage": "0.10"
         }
       ],
       "types": [
@@ -19302,41 +19302,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 127,
-          "usage": "0.29"
-        },
-        {
-          "tier": "ru",
-          "rank": 167,
-          "usage": "0.19"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 139,
-          "usage": "0.13"
-        },
-        {
-          "tier": "ubers",
-          "rank": 201,
-          "usage": "0.07"
-        },
-        {
-          "tier": "ou",
-          "rank": 125,
-          "usage": "0.28"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 67,
-          "usage": "1.80"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 99,
-          "usage": "1.05"
-        },
-        {
           "tier": "nu",
           "rank": 85,
           "usage": "1.05"
@@ -19347,9 +19312,44 @@ window.localDB = {
           "usage": "9.08"
         },
         {
+          "tier": "vgc2025",
+          "rank": 139,
+          "usage": "0.13"
+        },
+        {
+          "tier": "ru",
+          "rank": 167,
+          "usage": "0.19"
+        },
+        {
+          "tier": "uu",
+          "rank": 127,
+          "usage": "0.29"
+        },
+        {
+          "tier": "ou",
+          "rank": 125,
+          "usage": "0.28"
+        },
+        {
           "tier": "monotype",
           "rank": 88,
           "usage": "2.12"
+        },
+        {
+          "tier": "ubers",
+          "rank": 201,
+          "usage": "0.07"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 67,
+          "usage": "1.80"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 99,
+          "usage": "1.05"
         }
       ],
       "types": [
@@ -19464,7 +19464,7 @@ window.localDB = {
         {
           "name": "Specially Defensive",
           "tier": "stabmons",
-          "ability": "Download",
+          "ability": "Trace",
           "item": "Eviolite",
           "nature": "Calm",
           "teraType": "Normal",
@@ -19479,7 +19479,7 @@ window.localDB = {
         {
           "name": "Defensive (HP, Def, SpD)",
           "tier": "godlygift",
-          "ability": "Download",
+          "ability": "Trace",
           "item": "Eviolite",
           "nature": "Calm",
           "teraType": "Normal",
@@ -19509,7 +19509,7 @@ window.localDB = {
         {
           "name": "Physically Defensive",
           "tier": "nationaldexmonotype",
-          "ability": "Download",
+          "ability": "Trace",
           "item": "Eviolite",
           "nature": "Bold",
           "teraType": "Normal",
@@ -19644,46 +19644,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 158,
-          "usage": "0.14"
-        },
-        {
-          "tier": "ru",
-          "rank": 79,
-          "usage": "1.46"
-        },
-        {
-          "tier": "zu",
-          "rank": 63,
-          "usage": "2.10"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 13,
-          "usage": "16.02"
-        },
-        {
-          "tier": "ubers",
-          "rank": 88,
-          "usage": "0.64"
-        },
-        {
-          "tier": "ou",
-          "rank": 130,
-          "usage": "0.24"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 50,
-          "usage": "2.54"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 231,
-          "usage": "0.13"
-        },
-        {
           "tier": "nu",
           "rank": 123,
           "usage": "0.37"
@@ -19694,9 +19654,49 @@ window.localDB = {
           "usage": "1.42"
         },
         {
+          "tier": "vgc2025",
+          "rank": 13,
+          "usage": "16.02"
+        },
+        {
+          "tier": "zu",
+          "rank": 63,
+          "usage": "2.10"
+        },
+        {
+          "tier": "ru",
+          "rank": 79,
+          "usage": "1.46"
+        },
+        {
+          "tier": "uu",
+          "rank": 158,
+          "usage": "0.14"
+        },
+        {
+          "tier": "ou",
+          "rank": 130,
+          "usage": "0.24"
+        },
+        {
           "tier": "monotype",
           "rank": 111,
           "usage": "1.29"
+        },
+        {
+          "tier": "ubers",
+          "rank": 88,
+          "usage": "0.64"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 50,
+          "usage": "2.54"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 231,
+          "usage": "0.13"
         }
       ],
       "types": [
@@ -19885,14 +19885,19 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 270,
-          "usage": "0.01"
+          "tier": "nu",
+          "rank": 114,
+          "usage": "0.46"
         },
         {
-          "tier": "ru",
-          "rank": 181,
-          "usage": "0.14"
+          "tier": "pu",
+          "rank": 101,
+          "usage": "0.61"
+        },
+        {
+          "tier": "vgc2025",
+          "rank": 165,
+          "usage": "0.08"
         },
         {
           "tier": "zu",
@@ -19900,9 +19905,14 @@ window.localDB = {
           "usage": "23.00"
         },
         {
-          "tier": "vgc2025",
-          "rank": 165,
-          "usage": "0.08"
+          "tier": "ru",
+          "rank": 181,
+          "usage": "0.14"
+        },
+        {
+          "tier": "uu",
+          "rank": 270,
+          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -19913,16 +19923,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 405,
           "usage": "0.02"
-        },
-        {
-          "tier": "nu",
-          "rank": 114,
-          "usage": "0.46"
-        },
-        {
-          "tier": "pu",
-          "rank": 101,
-          "usage": "0.61"
         }
       ],
       "types": [
@@ -20195,24 +20195,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 45,
-          "usage": "4.41"
-        },
-        {
           "tier": "ru",
           "rank": 31,
           "usage": "6.78"
         },
         {
-          "tier": "ubers",
-          "rank": 31,
-          "usage": "4.15"
+          "tier": "uu",
+          "rank": 45,
+          "usage": "4.41"
         },
         {
           "tier": "ou",
           "rank": 46,
           "usage": "3.49"
+        },
+        {
+          "tier": "monotype",
+          "rank": 90,
+          "usage": "2.08"
+        },
+        {
+          "tier": "ubers",
+          "rank": 31,
+          "usage": "4.15"
         },
         {
           "tier": "doublesou",
@@ -20223,11 +20228,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 51,
           "usage": "3.03"
-        },
-        {
-          "tier": "monotype",
-          "rank": 90,
-          "usage": "2.08"
         }
       ],
       "types": [
@@ -20456,9 +20456,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 166,
-          "usage": "0.12"
+          "tier": "nu",
+          "rank": 21,
+          "usage": "9.07"
         },
         {
           "tier": "ru",
@@ -20466,9 +20466,19 @@ window.localDB = {
           "usage": "0.40"
         },
         {
+          "tier": "uu",
+          "rank": 166,
+          "usage": "0.12"
+        },
+        {
           "tier": "ou",
           "rank": 255,
           "usage": "0.03"
+        },
+        {
+          "tier": "monotype",
+          "rank": 236,
+          "usage": "0.09"
         },
         {
           "tier": "doublesou",
@@ -20479,16 +20489,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 156,
           "usage": "0.40"
-        },
-        {
-          "tier": "nu",
-          "rank": 21,
-          "usage": "9.07"
-        },
-        {
-          "tier": "monotype",
-          "rank": 236,
-          "usage": "0.09"
         }
       ],
       "types": [
@@ -20578,9 +20578,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 58,
-          "usage": "2.23"
+          "tier": "vgc2025",
+          "rank": 111,
+          "usage": "0.23"
         },
         {
           "tier": "ru",
@@ -20588,14 +20588,19 @@ window.localDB = {
           "usage": "18.77"
         },
         {
-          "tier": "vgc2025",
-          "rank": 111,
-          "usage": "0.23"
+          "tier": "uu",
+          "rank": 58,
+          "usage": "2.23"
         },
         {
           "tier": "ou",
           "rank": 200,
           "usage": "0.07"
+        },
+        {
+          "tier": "monotype",
+          "rank": 256,
+          "usage": "0.06"
         },
         {
           "tier": "doublesou",
@@ -20606,11 +20611,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 153,
           "usage": "0.42"
-        },
-        {
-          "tier": "monotype",
-          "rank": 256,
-          "usage": "0.06"
         }
       ],
       "types": [
@@ -20775,24 +20775,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 120,
-          "usage": "0.38"
-        },
-        {
           "tier": "ru",
           "rank": 32,
           "usage": "6.66"
         },
         {
-          "tier": "ubers",
-          "rank": 336,
-          "usage": "0.01"
+          "tier": "uu",
+          "rank": 120,
+          "usage": "0.38"
         },
         {
           "tier": "ou",
           "rank": 176,
           "usage": "0.10"
+        },
+        {
+          "tier": "monotype",
+          "rank": 143,
+          "usage": "0.52"
+        },
+        {
+          "tier": "ubers",
+          "rank": 336,
+          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -20803,11 +20808,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 161,
           "usage": "0.38"
-        },
-        {
-          "tier": "monotype",
-          "rank": 143,
-          "usage": "0.52"
         }
       ],
       "types": [
@@ -21062,24 +21062,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 15,
-          "usage": "11.89"
-        },
-        {
           "tier": "vgc2025",
           "rank": 102,
           "usage": "0.29"
         },
         {
-          "tier": "ubers",
-          "rank": 47,
-          "usage": "1.78"
+          "tier": "uu",
+          "rank": 15,
+          "usage": "11.89"
         },
         {
           "tier": "ou",
           "rank": 43,
           "usage": "3.77"
+        },
+        {
+          "tier": "monotype",
+          "rank": 63,
+          "usage": "3.47"
+        },
+        {
+          "tier": "ubers",
+          "rank": 47,
+          "usage": "1.78"
         },
         {
           "tier": "doublesou",
@@ -21090,11 +21095,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 48,
           "usage": "3.42"
-        },
-        {
-          "tier": "monotype",
-          "rank": 63,
-          "usage": "3.47"
         }
       ],
       "types": [
@@ -21893,14 +21893,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 202,
-          "usage": "0.05"
+          "tier": "nu",
+          "rank": 92,
+          "usage": "0.93"
         },
         {
-          "tier": "ru",
-          "rank": 91,
-          "usage": "1.13"
+          "tier": "pu",
+          "rank": 59,
+          "usage": "2.41"
         },
         {
           "tier": "zu",
@@ -21908,13 +21908,28 @@ window.localDB = {
           "usage": "1.15"
         },
         {
-          "tier": "ubers",
-          "rank": 299,
-          "usage": "0.02"
+          "tier": "ru",
+          "rank": 91,
+          "usage": "1.13"
+        },
+        {
+          "tier": "uu",
+          "rank": 202,
+          "usage": "0.05"
         },
         {
           "tier": "ou",
           "rank": 269,
+          "usage": "0.02"
+        },
+        {
+          "tier": "monotype",
+          "rank": 315,
+          "usage": "0.02"
+        },
+        {
+          "tier": "ubers",
+          "rank": 299,
           "usage": "0.02"
         },
         {
@@ -21926,21 +21941,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 335,
           "usage": "0.04"
-        },
-        {
-          "tier": "nu",
-          "rank": 92,
-          "usage": "0.93"
-        },
-        {
-          "tier": "pu",
-          "rank": 59,
-          "usage": "2.41"
-        },
-        {
-          "tier": "monotype",
-          "rank": 315,
-          "usage": "0.02"
         }
       ],
       "types": [
@@ -22091,14 +22091,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 174,
-          "usage": "0.10"
-        },
-        {
           "tier": "pu",
           "rank": 214,
           "usage": "0.02"
+        },
+        {
+          "tier": "zu",
+          "rank": 174,
+          "usage": "0.10"
         }
       ],
       "types": [
@@ -22143,14 +22143,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ubers",
-          "rank": 158,
-          "usage": "0.14"
-        },
-        {
           "tier": "ou",
           "rank": 74,
           "usage": "1.64"
+        },
+        {
+          "tier": "ubers",
+          "rank": 158,
+          "usage": "0.14"
         },
         {
           "tier": "doublesou",
@@ -22390,14 +22390,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 55,
-          "usage": "2.30"
-        },
-        {
-          "tier": "ru",
-          "rank": 41,
-          "usage": "5.63"
+          "tier": "nu",
+          "rank": 4,
+          "usage": "20.49"
         },
         {
           "tier": "vgc2025",
@@ -22405,14 +22400,29 @@ window.localDB = {
           "usage": "0.04"
         },
         {
-          "tier": "ubers",
-          "rank": 214,
-          "usage": "0.06"
+          "tier": "ru",
+          "rank": 41,
+          "usage": "5.63"
+        },
+        {
+          "tier": "uu",
+          "rank": 55,
+          "usage": "2.30"
         },
         {
           "tier": "ou",
           "rank": 172,
           "usage": "0.12"
+        },
+        {
+          "tier": "monotype",
+          "rank": 37,
+          "usage": "5.33"
+        },
+        {
+          "tier": "ubers",
+          "rank": 214,
+          "usage": "0.06"
         },
         {
           "tier": "doublesou",
@@ -22423,16 +22433,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 188,
           "usage": "0.27"
-        },
-        {
-          "tier": "nu",
-          "rank": 4,
-          "usage": "20.49"
-        },
-        {
-          "tier": "monotype",
-          "rank": 37,
-          "usage": "5.33"
         }
       ],
       "types": [
@@ -23184,19 +23184,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 208,
-          "usage": "0.04"
+          "tier": "nu",
+          "rank": 132,
+          "usage": "0.25"
         },
         {
-          "tier": "ru",
-          "rank": 54,
-          "usage": "2.73"
-        },
-        {
-          "tier": "zu",
-          "rank": 93,
-          "usage": "0.83"
+          "tier": "pu",
+          "rank": 153,
+          "usage": "0.13"
         },
         {
           "tier": "vgc2025",
@@ -23204,13 +23199,33 @@ window.localDB = {
           "usage": "1.00"
         },
         {
-          "tier": "ubers",
-          "rank": 273,
-          "usage": "0.02"
+          "tier": "zu",
+          "rank": 93,
+          "usage": "0.83"
+        },
+        {
+          "tier": "ru",
+          "rank": 54,
+          "usage": "2.73"
+        },
+        {
+          "tier": "uu",
+          "rank": 208,
+          "usage": "0.04"
         },
         {
           "tier": "ou",
           "rank": 274,
+          "usage": "0.02"
+        },
+        {
+          "tier": "monotype",
+          "rank": 185,
+          "usage": "0.21"
+        },
+        {
+          "tier": "ubers",
+          "rank": 273,
           "usage": "0.02"
         },
         {
@@ -23222,21 +23237,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 314,
           "usage": "0.05"
-        },
-        {
-          "tier": "nu",
-          "rank": 132,
-          "usage": "0.25"
-        },
-        {
-          "tier": "pu",
-          "rank": 153,
-          "usage": "0.13"
-        },
-        {
-          "tier": "monotype",
-          "rank": 185,
-          "usage": "0.21"
         }
       ],
       "types": [
@@ -23402,19 +23402,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 241,
-          "usage": "0.02"
+          "tier": "nu",
+          "rank": 124,
+          "usage": "0.33"
         },
         {
-          "tier": "ru",
-          "rank": 127,
-          "usage": "0.41"
-        },
-        {
-          "tier": "zu",
-          "rank": 108,
-          "usage": "0.55"
+          "tier": "pu",
+          "rank": 100,
+          "usage": "0.62"
         },
         {
           "tier": "vgc2025",
@@ -23422,8 +23417,28 @@ window.localDB = {
           "usage": "0.02"
         },
         {
+          "tier": "zu",
+          "rank": 108,
+          "usage": "0.55"
+        },
+        {
+          "tier": "ru",
+          "rank": 127,
+          "usage": "0.41"
+        },
+        {
+          "tier": "uu",
+          "rank": 241,
+          "usage": "0.02"
+        },
+        {
           "tier": "ou",
           "rank": 292,
+          "usage": "0.01"
+        },
+        {
+          "tier": "monotype",
+          "rank": 336,
           "usage": "0.01"
         },
         {
@@ -23435,21 +23450,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 312,
           "usage": "0.05"
-        },
-        {
-          "tier": "nu",
-          "rank": 124,
-          "usage": "0.33"
-        },
-        {
-          "tier": "pu",
-          "rank": 100,
-          "usage": "0.62"
-        },
-        {
-          "tier": "monotype",
-          "rank": 336,
-          "usage": "0.01"
         }
       ],
       "types": [
@@ -23664,14 +23664,19 @@ window.localDB = {
           "usage": "3.55"
         },
         {
-          "tier": "ubers",
-          "rank": 140,
-          "usage": "0.23"
-        },
-        {
           "tier": "ou",
           "rank": 42,
           "usage": "3.90"
+        },
+        {
+          "tier": "monotype",
+          "rank": 55,
+          "usage": "3.95"
+        },
+        {
+          "tier": "ubers",
+          "rank": 140,
+          "usage": "0.23"
         },
         {
           "tier": "doublesou",
@@ -23682,11 +23687,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 42,
           "usage": "4.22"
-        },
-        {
-          "tier": "monotype",
-          "rank": 55,
-          "usage": "3.95"
         }
       ],
       "types": [
@@ -24018,9 +24018,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 35,
-          "usage": "6.21"
+          "tier": "vgc2025",
+          "rank": 255,
+          "usage": "0.02"
         },
         {
           "tier": "ru",
@@ -24028,19 +24028,24 @@ window.localDB = {
           "usage": "6.21"
         },
         {
-          "tier": "vgc2025",
-          "rank": 255,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ubers",
-          "rank": 192,
-          "usage": "0.07"
+          "tier": "uu",
+          "rank": 35,
+          "usage": "6.21"
         },
         {
           "tier": "ou",
           "rank": 148,
           "usage": "0.18"
+        },
+        {
+          "tier": "monotype",
+          "rank": 187,
+          "usage": "0.21"
+        },
+        {
+          "tier": "ubers",
+          "rank": 192,
+          "usage": "0.07"
         },
         {
           "tier": "doublesou",
@@ -24051,11 +24056,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 342,
           "usage": "0.04"
-        },
-        {
-          "tier": "monotype",
-          "rank": 187,
-          "usage": "0.21"
         }
       ],
       "types": [
@@ -24257,14 +24257,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 192,
+          "tier": "pu",
+          "rank": 180,
           "usage": "0.06"
-        },
-        {
-          "tier": "ru",
-          "rank": 253,
-          "usage": "0.01"
         },
         {
           "tier": "zu",
@@ -24272,9 +24267,24 @@ window.localDB = {
           "usage": "0.90"
         },
         {
+          "tier": "ru",
+          "rank": 253,
+          "usage": "0.01"
+        },
+        {
+          "tier": "uu",
+          "rank": 192,
+          "usage": "0.06"
+        },
+        {
           "tier": "ou",
           "rank": 283,
           "usage": "0.01"
+        },
+        {
+          "tier": "monotype",
+          "rank": 206,
+          "usage": "0.16"
         },
         {
           "tier": "doublesou",
@@ -24285,16 +24295,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 382,
           "usage": "0.03"
-        },
-        {
-          "tier": "pu",
-          "rank": 180,
-          "usage": "0.06"
-        },
-        {
-          "tier": "monotype",
-          "rank": 206,
-          "usage": "0.16"
         }
       ],
       "types": [
@@ -24389,9 +24389,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 149,
-          "usage": "0.18"
+          "tier": "vgc2025",
+          "rank": 162,
+          "usage": "0.09"
         },
         {
           "tier": "ru",
@@ -24399,19 +24399,24 @@ window.localDB = {
           "usage": "4.35"
         },
         {
-          "tier": "vgc2025",
-          "rank": 162,
-          "usage": "0.09"
-        },
-        {
-          "tier": "ubers",
-          "rank": 263,
-          "usage": "0.03"
+          "tier": "uu",
+          "rank": 149,
+          "usage": "0.18"
         },
         {
           "tier": "ou",
           "rank": 168,
           "usage": "0.13"
+        },
+        {
+          "tier": "monotype",
+          "rank": 119,
+          "usage": "1.08"
+        },
+        {
+          "tier": "ubers",
+          "rank": 263,
+          "usage": "0.03"
         },
         {
           "tier": "doublesou",
@@ -24422,11 +24427,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 132,
           "usage": "0.58"
-        },
-        {
-          "tier": "monotype",
-          "rank": 119,
-          "usage": "1.08"
         }
       ],
       "types": [
@@ -24695,41 +24695,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 222,
-          "usage": "0.03"
-        },
-        {
-          "tier": "zu",
-          "rank": 97,
-          "usage": "0.69"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 178,
-          "usage": "0.06"
-        },
-        {
-          "tier": "ubers",
-          "rank": 262,
-          "usage": "0.03"
-        },
-        {
-          "tier": "ou",
-          "rank": 300,
-          "usage": "0.01"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 154,
-          "usage": "0.36"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 372,
-          "usage": "0.03"
-        },
-        {
           "tier": "nu",
           "rank": 139,
           "usage": "0.16"
@@ -24740,8 +24705,43 @@ window.localDB = {
           "usage": "0.11"
         },
         {
+          "tier": "vgc2025",
+          "rank": 178,
+          "usage": "0.06"
+        },
+        {
+          "tier": "zu",
+          "rank": 97,
+          "usage": "0.69"
+        },
+        {
+          "tier": "uu",
+          "rank": 222,
+          "usage": "0.03"
+        },
+        {
+          "tier": "ou",
+          "rank": 300,
+          "usage": "0.01"
+        },
+        {
           "tier": "monotype",
           "rank": 289,
+          "usage": "0.03"
+        },
+        {
+          "tier": "ubers",
+          "rank": 262,
+          "usage": "0.03"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 154,
+          "usage": "0.36"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 372,
           "usage": "0.03"
         }
       ],
@@ -25123,31 +25123,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 253,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ru",
-          "rank": 208,
-          "usage": "0.07"
-        },
-        {
-          "tier": "ou",
-          "rank": 289,
-          "usage": "0.01"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 162,
-          "usage": "0.33"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 453,
-          "usage": "0.01"
-        },
-        {
           "tier": "nu",
           "rank": 73,
           "usage": "1.48"
@@ -25158,9 +25133,34 @@ window.localDB = {
           "usage": "4.78"
         },
         {
+          "tier": "ru",
+          "rank": 208,
+          "usage": "0.07"
+        },
+        {
+          "tier": "uu",
+          "rank": 253,
+          "usage": "0.02"
+        },
+        {
+          "tier": "ou",
+          "rank": 289,
+          "usage": "0.01"
+        },
+        {
           "tier": "monotype",
           "rank": 215,
           "usage": "0.12"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 162,
+          "usage": "0.33"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 453,
+          "usage": "0.01"
         }
       ],
       "types": [
@@ -25336,24 +25336,24 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 271,
-          "usage": "0.01"
-        },
-        {
           "tier": "lc",
           "rank": 121,
           "usage": "0.07"
         },
         {
-          "tier": "ubers",
-          "rank": 272,
-          "usage": "0.02"
-        },
-        {
           "tier": "nu",
           "rank": 130,
           "usage": "0.26"
+        },
+        {
+          "tier": "uu",
+          "rank": 271,
+          "usage": "0.01"
+        },
+        {
+          "tier": "ubers",
+          "rank": 272,
+          "usage": "0.02"
         }
       ],
       "types": [
@@ -25501,46 +25501,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 170,
-          "usage": "0.11"
-        },
-        {
-          "tier": "ru",
-          "rank": 103,
-          "usage": "0.83"
-        },
-        {
-          "tier": "zu",
-          "rank": 44,
-          "usage": "3.86"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 66,
-          "usage": "0.78"
-        },
-        {
-          "tier": "ubers",
-          "rank": 74,
-          "usage": "0.86"
-        },
-        {
-          "tier": "ou",
-          "rank": 296,
-          "usage": "0.01"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 87,
-          "usage": "1.08"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 290,
-          "usage": "0.06"
-        },
-        {
           "tier": "nu",
           "rank": 106,
           "usage": "0.64"
@@ -25551,9 +25511,49 @@ window.localDB = {
           "usage": "3.55"
         },
         {
+          "tier": "vgc2025",
+          "rank": 66,
+          "usage": "0.78"
+        },
+        {
+          "tier": "zu",
+          "rank": 44,
+          "usage": "3.86"
+        },
+        {
+          "tier": "ru",
+          "rank": 103,
+          "usage": "0.83"
+        },
+        {
+          "tier": "uu",
+          "rank": 170,
+          "usage": "0.11"
+        },
+        {
+          "tier": "ou",
+          "rank": 296,
+          "usage": "0.01"
+        },
+        {
           "tier": "monotype",
           "rank": 52,
           "usage": "4.27"
+        },
+        {
+          "tier": "ubers",
+          "rank": 74,
+          "usage": "0.86"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 87,
+          "usage": "1.08"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 290,
+          "usage": "0.06"
         }
       ],
       "types": [
@@ -26022,41 +26022,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 169,
-          "usage": "0.11"
-        },
-        {
-          "tier": "ru",
-          "rank": 214,
-          "usage": "0.06"
-        },
-        {
-          "tier": "zu",
-          "rank": 46,
-          "usage": "3.69"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 209,
-          "usage": "0.03"
-        },
-        {
-          "tier": "ou",
-          "rank": 242,
-          "usage": "0.03"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 270,
-          "usage": "0.05"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 397,
-          "usage": "0.02"
-        },
-        {
           "tier": "nu",
           "rank": 127,
           "usage": "0.27"
@@ -26067,9 +26032,44 @@ window.localDB = {
           "usage": "0.20"
         },
         {
+          "tier": "vgc2025",
+          "rank": 209,
+          "usage": "0.03"
+        },
+        {
+          "tier": "zu",
+          "rank": 46,
+          "usage": "3.69"
+        },
+        {
+          "tier": "ru",
+          "rank": 214,
+          "usage": "0.06"
+        },
+        {
+          "tier": "uu",
+          "rank": 169,
+          "usage": "0.11"
+        },
+        {
+          "tier": "ou",
+          "rank": 242,
+          "usage": "0.03"
+        },
+        {
           "tier": "monotype",
           "rank": 280,
           "usage": "0.04"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 270,
+          "usage": "0.05"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 397,
+          "usage": "0.02"
         }
       ],
       "types": [
@@ -26368,16 +26368,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 104,
-          "usage": "0.59"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 239,
-          "usage": "0.08"
-        },
-        {
           "tier": "nu",
           "rank": 148,
           "usage": "0.11"
@@ -26388,9 +26378,19 @@ window.localDB = {
           "usage": "1.87"
         },
         {
+          "tier": "zu",
+          "rank": 104,
+          "usage": "0.59"
+        },
+        {
           "tier": "monotype",
           "rank": 310,
           "usage": "0.02"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 239,
+          "usage": "0.08"
         }
       ],
       "types": [
@@ -26438,9 +26438,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 256,
-          "usage": "0.01"
+          "tier": "pu",
+          "rank": 177,
+          "usage": "0.07"
+        },
+        {
+          "tier": "vgc2025",
+          "rank": 174,
+          "usage": "0.06"
         },
         {
           "tier": "zu",
@@ -26448,9 +26453,9 @@ window.localDB = {
           "usage": "0.01"
         },
         {
-          "tier": "vgc2025",
-          "rank": 174,
-          "usage": "0.06"
+          "tier": "ru",
+          "rank": 256,
+          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -26461,11 +26466,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 379,
           "usage": "0.03"
-        },
-        {
-          "tier": "pu",
-          "rank": 177,
-          "usage": "0.07"
         }
       ],
       "types": [
@@ -26614,14 +26614,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 114,
-          "usage": "0.43"
-        },
-        {
           "tier": "pu",
           "rank": 156,
           "usage": "0.12"
+        },
+        {
+          "tier": "zu",
+          "rank": 114,
+          "usage": "0.43"
         }
       ],
       "types": [
@@ -27012,14 +27012,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 237,
-          "usage": "0.03"
-        },
-        {
-          "tier": "zu",
-          "rank": 72,
-          "usage": "1.58"
+          "tier": "pu",
+          "rank": 126,
+          "usage": "0.31"
         },
         {
           "tier": "vgc2025",
@@ -27027,14 +27022,19 @@ window.localDB = {
           "usage": "0.05"
         },
         {
+          "tier": "zu",
+          "rank": 72,
+          "usage": "1.58"
+        },
+        {
+          "tier": "ru",
+          "rank": 237,
+          "usage": "0.03"
+        },
+        {
           "tier": "doublesou",
           "rank": 278,
           "usage": "0.05"
-        },
-        {
-          "tier": "pu",
-          "rank": 126,
-          "usage": "0.31"
         }
       ],
       "types": [
@@ -27099,46 +27099,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 76,
-          "usage": "1.44"
-        },
-        {
-          "tier": "ru",
-          "rank": 60,
-          "usage": "2.45"
-        },
-        {
-          "tier": "zu",
-          "rank": 96,
-          "usage": "0.71"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 34,
-          "usage": "4.38"
-        },
-        {
-          "tier": "ubers",
-          "rank": 129,
-          "usage": "0.30"
-        },
-        {
-          "tier": "ou",
-          "rank": 56,
-          "usage": "2.63"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 4,
-          "usage": "18.88"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 68,
-          "usage": "2.16"
-        },
-        {
           "tier": "nu",
           "rank": 161,
           "usage": "0.08"
@@ -27149,9 +27109,49 @@ window.localDB = {
           "usage": "0.24"
         },
         {
+          "tier": "vgc2025",
+          "rank": 34,
+          "usage": "4.38"
+        },
+        {
+          "tier": "zu",
+          "rank": 96,
+          "usage": "0.71"
+        },
+        {
+          "tier": "ru",
+          "rank": 60,
+          "usage": "2.45"
+        },
+        {
+          "tier": "uu",
+          "rank": 76,
+          "usage": "1.44"
+        },
+        {
+          "tier": "ou",
+          "rank": 56,
+          "usage": "2.63"
+        },
+        {
           "tier": "monotype",
           "rank": 112,
           "usage": "1.26"
+        },
+        {
+          "tier": "ubers",
+          "rank": 129,
+          "usage": "0.30"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 4,
+          "usage": "18.88"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 68,
+          "usage": "2.16"
         }
       ],
       "types": [
@@ -27340,14 +27340,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 145,
-          "usage": "0.18"
-        },
-        {
           "tier": "pu",
           "rank": 173,
           "usage": "0.08"
+        },
+        {
+          "tier": "zu",
+          "rank": 145,
+          "usage": "0.18"
         }
       ],
       "types": [
@@ -27559,9 +27559,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 138,
-          "usage": "0.23"
+          "tier": "nu",
+          "rank": 3,
+          "usage": "24.22"
         },
         {
           "tier": "ru",
@@ -27569,14 +27569,24 @@ window.localDB = {
           "usage": "4.08"
         },
         {
-          "tier": "ubers",
-          "rank": 330,
-          "usage": "0.01"
+          "tier": "uu",
+          "rank": 138,
+          "usage": "0.23"
         },
         {
           "tier": "ou",
           "rank": 233,
           "usage": "0.04"
+        },
+        {
+          "tier": "monotype",
+          "rank": 204,
+          "usage": "0.17"
+        },
+        {
+          "tier": "ubers",
+          "rank": 330,
+          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -27587,16 +27597,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 300,
           "usage": "0.06"
-        },
-        {
-          "tier": "nu",
-          "rank": 3,
-          "usage": "24.22"
-        },
-        {
-          "tier": "monotype",
-          "rank": 204,
-          "usage": "0.17"
         }
       ],
       "types": [
@@ -27789,16 +27789,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 224,
-          "usage": "0.04"
-        },
-        {
-          "tier": "zu",
-          "rank": 123,
-          "usage": "0.36"
-        },
-        {
           "tier": "nu",
           "rank": 107,
           "usage": "0.59"
@@ -27807,6 +27797,16 @@ window.localDB = {
           "tier": "pu",
           "rank": 157,
           "usage": "0.12"
+        },
+        {
+          "tier": "zu",
+          "rank": 123,
+          "usage": "0.36"
+        },
+        {
+          "tier": "ru",
+          "rank": 224,
+          "usage": "0.04"
         }
       ],
       "types": [
@@ -27898,9 +27898,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 274,
-          "usage": "0.01"
+          "tier": "nu",
+          "rank": 40,
+          "usage": "4.82"
         },
         {
           "tier": "ru",
@@ -27908,9 +27908,19 @@ window.localDB = {
           "usage": "1.42"
         },
         {
+          "tier": "uu",
+          "rank": 274,
+          "usage": "0.01"
+        },
+        {
           "tier": "ou",
           "rank": 254,
           "usage": "0.03"
+        },
+        {
+          "tier": "monotype",
+          "rank": 270,
+          "usage": "0.05"
         },
         {
           "tier": "doublesou",
@@ -27921,16 +27931,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 225,
           "usage": "0.15"
-        },
-        {
-          "tier": "nu",
-          "rank": 40,
-          "usage": "4.82"
-        },
-        {
-          "tier": "monotype",
-          "rank": 270,
-          "usage": "0.05"
         }
       ],
       "types": [
@@ -28021,14 +28021,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 264,
-          "usage": "0.01"
-        },
-        {
-          "tier": "ru",
-          "rank": 221,
-          "usage": "0.05"
+          "tier": "pu",
+          "rank": 137,
+          "usage": "0.24"
         },
         {
           "tier": "zu",
@@ -28036,9 +28031,14 @@ window.localDB = {
           "usage": "1.45"
         },
         {
-          "tier": "pu",
-          "rank": 137,
-          "usage": "0.24"
+          "tier": "ru",
+          "rank": 221,
+          "usage": "0.05"
+        },
+        {
+          "tier": "uu",
+          "rank": 264,
+          "usage": "0.01"
         },
         {
           "tier": "monotype",
@@ -28103,9 +28103,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 239,
-          "usage": "0.02"
+          "tier": "pu",
+          "rank": 201,
+          "usage": "0.03"
         },
         {
           "tier": "zu",
@@ -28113,14 +28113,14 @@ window.localDB = {
           "usage": "0.03"
         },
         {
+          "tier": "ru",
+          "rank": 239,
+          "usage": "0.02"
+        },
+        {
           "tier": "ou",
           "rank": 301,
           "usage": "0.01"
-        },
-        {
-          "tier": "pu",
-          "rank": 201,
-          "usage": "0.03"
         }
       ],
       "types": [
@@ -28301,16 +28301,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 257,
-          "usage": "0.01"
-        },
-        {
-          "tier": "zu",
-          "rank": 12,
-          "usage": "12.90"
-        },
-        {
           "tier": "nu",
           "rank": 207,
           "usage": "0.01"
@@ -28319,6 +28309,16 @@ window.localDB = {
           "tier": "pu",
           "rank": 128,
           "usage": "0.30"
+        },
+        {
+          "tier": "zu",
+          "rank": 12,
+          "usage": "12.90"
+        },
+        {
+          "tier": "uu",
+          "rank": 257,
+          "usage": "0.01"
         }
       ],
       "types": [
@@ -28449,24 +28449,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 147,
-          "usage": "0.20"
-        },
-        {
           "tier": "ru",
           "rank": 17,
           "usage": "11.25"
         },
         {
-          "tier": "ubers",
-          "rank": 208,
-          "usage": "0.06"
+          "tier": "uu",
+          "rank": 147,
+          "usage": "0.20"
         },
         {
           "tier": "ou",
           "rank": 155,
           "usage": "0.16"
+        },
+        {
+          "tier": "monotype",
+          "rank": 163,
+          "usage": "0.33"
+        },
+        {
+          "tier": "ubers",
+          "rank": 208,
+          "usage": "0.06"
         },
         {
           "tier": "doublesou",
@@ -28477,11 +28482,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 202,
           "usage": "0.23"
-        },
-        {
-          "tier": "monotype",
-          "rank": 163,
-          "usage": "0.33"
         }
       ],
       "types": [
@@ -28885,41 +28885,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 174,
-          "usage": "0.10"
-        },
-        {
-          "tier": "ru",
-          "rank": 96,
-          "usage": "0.97"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 199,
-          "usage": "0.04"
-        },
-        {
-          "tier": "ubers",
-          "rank": 236,
-          "usage": "0.04"
-        },
-        {
-          "tier": "ou",
-          "rank": 151,
-          "usage": "0.17"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 98,
-          "usage": "0.86"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 189,
-          "usage": "0.27"
-        },
-        {
           "tier": "nu",
           "rank": 70,
           "usage": "1.53"
@@ -28930,9 +28895,44 @@ window.localDB = {
           "usage": "18.44"
         },
         {
+          "tier": "vgc2025",
+          "rank": 199,
+          "usage": "0.04"
+        },
+        {
+          "tier": "ru",
+          "rank": 96,
+          "usage": "0.97"
+        },
+        {
+          "tier": "uu",
+          "rank": 174,
+          "usage": "0.10"
+        },
+        {
+          "tier": "ou",
+          "rank": 151,
+          "usage": "0.17"
+        },
+        {
           "tier": "monotype",
           "rank": 223,
           "usage": "0.11"
+        },
+        {
+          "tier": "ubers",
+          "rank": 236,
+          "usage": "0.04"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 98,
+          "usage": "0.86"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 189,
+          "usage": "0.27"
         }
       ],
       "types": [
@@ -28957,7 +28957,7 @@ window.localDB = {
         {
           "name": "Bulky Pivot (Def)",
           "tier": "godlygift",
-          "ability": "Competitive",
+          "ability": "Marvel Scale",
           "item": "Leftovers",
           "nature": "Bold",
           "teraType": "Normal",
@@ -28987,7 +28987,7 @@ window.localDB = {
         {
           "name": "Defensive",
           "tier": "nationaldexru",
-          "ability": "Competitive",
+          "ability": "Marvel Scale",
           "item": "Heavy-Duty Boots / Leftovers",
           "nature": "Bold",
           "teraType": "Normal",
@@ -29179,14 +29179,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 66,
-          "usage": "1.99"
-        },
-        {
           "tier": "pu",
           "rank": 203,
           "usage": "0.03"
+        },
+        {
+          "tier": "zu",
+          "rank": 66,
+          "usage": "1.99"
         }
       ],
       "types": [
@@ -29280,9 +29280,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 142,
-          "usage": "0.32"
+          "tier": "pu",
+          "rank": 178,
+          "usage": "0.07"
+        },
+        {
+          "tier": "vgc2025",
+          "rank": 110,
+          "usage": "0.25"
         },
         {
           "tier": "zu",
@@ -29290,9 +29295,14 @@ window.localDB = {
           "usage": "0.69"
         },
         {
-          "tier": "vgc2025",
-          "rank": 110,
-          "usage": "0.25"
+          "tier": "ru",
+          "rank": 142,
+          "usage": "0.32"
+        },
+        {
+          "tier": "monotype",
+          "rank": 277,
+          "usage": "0.04"
         },
         {
           "tier": "ubers",
@@ -29307,16 +29317,6 @@ window.localDB = {
         {
           "tier": "nationaldex",
           "rank": 339,
-          "usage": "0.04"
-        },
-        {
-          "tier": "pu",
-          "rank": 178,
-          "usage": "0.07"
-        },
-        {
-          "tier": "monotype",
-          "rank": 277,
           "usage": "0.04"
         }
       ],
@@ -29361,9 +29361,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 233,
-          "usage": "0.02"
+          "tier": "pu",
+          "rank": 224,
+          "usage": "0.01"
         },
         {
           "tier": "zu",
@@ -29371,9 +29371,9 @@ window.localDB = {
           "usage": "0.06"
         },
         {
-          "tier": "pu",
-          "rank": 224,
-          "usage": "0.01"
+          "tier": "uu",
+          "rank": 233,
+          "usage": "0.02"
         }
       ],
       "types": [
@@ -29422,11 +29422,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 132,
-          "usage": "0.29"
-        },
-        {
           "tier": "nu",
           "rank": 200,
           "usage": "0.02"
@@ -29435,6 +29430,11 @@ window.localDB = {
           "tier": "pu",
           "rank": 208,
           "usage": "0.02"
+        },
+        {
+          "tier": "zu",
+          "rank": 132,
+          "usage": "0.29"
         }
       ],
       "types": [
@@ -30191,24 +30191,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 42,
-          "usage": "4.58"
-        },
-        {
           "tier": "vgc2025",
           "rank": 150,
           "usage": "0.10"
         },
         {
-          "tier": "ubers",
-          "rank": 220,
-          "usage": "0.05"
+          "tier": "uu",
+          "rank": 42,
+          "usage": "4.58"
         },
         {
           "tier": "ou",
           "rank": 134,
           "usage": "0.22"
+        },
+        {
+          "tier": "monotype",
+          "rank": 160,
+          "usage": "0.36"
+        },
+        {
+          "tier": "ubers",
+          "rank": 220,
+          "usage": "0.05"
         },
         {
           "tier": "doublesou",
@@ -30219,11 +30224,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 114,
           "usage": "0.79"
-        },
-        {
-          "tier": "monotype",
-          "rank": 160,
-          "usage": "0.36"
         }
       ],
       "types": [
@@ -30496,14 +30496,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 205,
-          "usage": "0.03"
-        },
-        {
           "tier": "pu",
           "rank": 221,
           "usage": "0.01"
+        },
+        {
+          "tier": "zu",
+          "rank": 205,
+          "usage": "0.03"
         }
       ],
       "types": [
@@ -30548,24 +30548,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 28,
-          "usage": "8.37"
-        },
-        {
           "tier": "vgc2025",
           "rank": 190,
           "usage": "0.05"
         },
         {
-          "tier": "ubers",
-          "rank": 176,
-          "usage": "0.10"
+          "tier": "uu",
+          "rank": 28,
+          "usage": "8.37"
         },
         {
           "tier": "ou",
           "rank": 152,
           "usage": "0.17"
+        },
+        {
+          "tier": "monotype",
+          "rank": 134,
+          "usage": "0.64"
+        },
+        {
+          "tier": "ubers",
+          "rank": 176,
+          "usage": "0.10"
         },
         {
           "tier": "doublesou",
@@ -30576,11 +30581,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 197,
           "usage": "0.24"
-        },
-        {
-          "tier": "monotype",
-          "rank": 134,
-          "usage": "0.64"
         }
       ],
       "types": [
@@ -30806,14 +30806,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 229,
-          "usage": "0.02"
+          "tier": "nu",
+          "rank": 91,
+          "usage": "0.93"
         },
         {
-          "tier": "ru",
-          "rank": 173,
-          "usage": "0.16"
+          "tier": "pu",
+          "rank": 72,
+          "usage": "1.41"
         },
         {
           "tier": "zu",
@@ -30821,13 +30821,23 @@ window.localDB = {
           "usage": "7.36"
         },
         {
-          "tier": "ubers",
-          "rank": 325,
-          "usage": "0.01"
+          "tier": "ru",
+          "rank": 173,
+          "usage": "0.16"
+        },
+        {
+          "tier": "uu",
+          "rank": 229,
+          "usage": "0.02"
         },
         {
           "tier": "ou",
           "rank": 293,
+          "usage": "0.01"
+        },
+        {
+          "tier": "ubers",
+          "rank": 325,
           "usage": "0.01"
         },
         {
@@ -30839,16 +30849,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 395,
           "usage": "0.02"
-        },
-        {
-          "tier": "nu",
-          "rank": 91,
-          "usage": "0.93"
-        },
-        {
-          "tier": "pu",
-          "rank": 72,
-          "usage": "1.41"
         }
       ],
       "types": [
@@ -30923,41 +30923,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 207,
-          "usage": "0.05"
-        },
-        {
-          "tier": "ru",
-          "rank": 152,
-          "usage": "0.25"
-        },
-        {
-          "tier": "zu",
-          "rank": 101,
-          "usage": "0.66"
-        },
-        {
-          "tier": "ubers",
-          "rank": 334,
-          "usage": "0.01"
-        },
-        {
-          "tier": "ou",
-          "rank": 178,
-          "usage": "0.10"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 197,
-          "usage": "0.16"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 224,
-          "usage": "0.16"
-        },
-        {
           "tier": "nu",
           "rank": 209,
           "usage": "0.01"
@@ -30968,9 +30933,44 @@ window.localDB = {
           "usage": "0.37"
         },
         {
+          "tier": "zu",
+          "rank": 101,
+          "usage": "0.66"
+        },
+        {
+          "tier": "ru",
+          "rank": 152,
+          "usage": "0.25"
+        },
+        {
+          "tier": "uu",
+          "rank": 207,
+          "usage": "0.05"
+        },
+        {
+          "tier": "ou",
+          "rank": 178,
+          "usage": "0.10"
+        },
+        {
           "tier": "monotype",
           "rank": 303,
           "usage": "0.02"
+        },
+        {
+          "tier": "ubers",
+          "rank": 334,
+          "usage": "0.01"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 197,
+          "usage": "0.16"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 224,
+          "usage": "0.16"
         }
       ],
       "types": [
@@ -31014,24 +31014,24 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 220,
-          "usage": "0.03"
-        },
-        {
           "tier": "ru",
           "rank": 22,
           "usage": "8.95"
         },
         {
-          "tier": "ubers",
-          "rank": 306,
-          "usage": "0.02"
+          "tier": "uu",
+          "rank": 220,
+          "usage": "0.03"
         },
         {
           "tier": "ou",
           "rank": 229,
           "usage": "0.04"
+        },
+        {
+          "tier": "ubers",
+          "rank": 306,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -31136,14 +31136,19 @@ window.localDB = {
           "usage": "0.01"
         },
         {
-          "tier": "ubers",
-          "rank": 255,
-          "usage": "0.03"
-        },
-        {
           "tier": "ou",
           "rank": 73,
           "usage": "1.70"
+        },
+        {
+          "tier": "monotype",
+          "rank": 61,
+          "usage": "3.64"
+        },
+        {
+          "tier": "ubers",
+          "rank": 255,
+          "usage": "0.03"
         },
         {
           "tier": "doublesou",
@@ -31154,11 +31159,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 217,
           "usage": "0.17"
-        },
-        {
-          "tier": "monotype",
-          "rank": 61,
-          "usage": "3.64"
         }
       ],
       "types": [
@@ -31365,24 +31365,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 1,
-          "usage": "26.92"
-        },
-        {
           "tier": "vgc2025",
           "rank": 176,
           "usage": "0.06"
         },
         {
-          "tier": "ubers",
-          "rank": 241,
-          "usage": "0.04"
+          "tier": "uu",
+          "rank": 1,
+          "usage": "26.92"
         },
         {
           "tier": "ou",
           "rank": 68,
           "usage": "2.03"
+        },
+        {
+          "tier": "monotype",
+          "rank": 30,
+          "usage": "6.58"
+        },
+        {
+          "tier": "ubers",
+          "rank": 241,
+          "usage": "0.04"
         },
         {
           "tier": "doublesou",
@@ -31393,11 +31398,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 97,
           "usage": "1.08"
-        },
-        {
-          "tier": "monotype",
-          "rank": 30,
-          "usage": "6.58"
         }
       ],
       "types": [
@@ -32229,9 +32229,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 60,
-          "usage": "2.13"
+          "tier": "vgc2025",
+          "rank": 217,
+          "usage": "0.03"
         },
         {
           "tier": "ru",
@@ -32239,19 +32239,24 @@ window.localDB = {
           "usage": "11.38"
         },
         {
-          "tier": "vgc2025",
-          "rank": 217,
-          "usage": "0.03"
-        },
-        {
-          "tier": "ubers",
-          "rank": 164,
-          "usage": "0.12"
+          "tier": "uu",
+          "rank": 60,
+          "usage": "2.13"
         },
         {
           "tier": "ou",
           "rank": 137,
           "usage": "0.21"
+        },
+        {
+          "tier": "monotype",
+          "rank": 144,
+          "usage": "0.51"
+        },
+        {
+          "tier": "ubers",
+          "rank": 164,
+          "usage": "0.12"
         },
         {
           "tier": "doublesou",
@@ -32262,11 +32267,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 94,
           "usage": "1.21"
-        },
-        {
-          "tier": "monotype",
-          "rank": 144,
-          "usage": "0.51"
         }
       ],
       "types": [
@@ -32688,9 +32688,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 135,
-          "usage": "0.25"
+          "tier": "vgc2025",
+          "rank": 134,
+          "usage": "0.16"
         },
         {
           "tier": "ru",
@@ -32698,19 +32698,24 @@ window.localDB = {
           "usage": "6.54"
         },
         {
-          "tier": "vgc2025",
-          "rank": 134,
-          "usage": "0.16"
-        },
-        {
-          "tier": "ubers",
-          "rank": 282,
-          "usage": "0.02"
+          "tier": "uu",
+          "rank": 135,
+          "usage": "0.25"
         },
         {
           "tier": "ou",
           "rank": 138,
           "usage": "0.21"
+        },
+        {
+          "tier": "monotype",
+          "rank": 180,
+          "usage": "0.23"
+        },
+        {
+          "tier": "ubers",
+          "rank": 282,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -32721,11 +32726,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 291,
           "usage": "0.06"
-        },
-        {
-          "tier": "monotype",
-          "rank": 180,
-          "usage": "0.23"
         }
       ],
       "types": [
@@ -32736,7 +32736,7 @@ window.localDB = {
         {
           "name": "Shell Smash",
           "tier": "ru",
-          "ability": "Overgrow",
+          "ability": "Shell Armor",
           "item": "Loaded Dice / White Herb",
           "nature": "Jolly",
           "teraType": "Fairy / Fire / Steel",
@@ -32766,7 +32766,7 @@ window.localDB = {
         {
           "name": "Shell Smash (Spe)",
           "tier": "godlygift",
-          "ability": "Overgrow",
+          "ability": "Shell Armor",
           "item": "White Herb",
           "nature": "Adamant",
           "teraType": "Normal",
@@ -32975,9 +32975,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 104,
-          "usage": "0.60"
+          "tier": "nu",
+          "rank": 35,
+          "usage": "5.81"
         },
         {
           "tier": "ru",
@@ -32985,14 +32985,24 @@ window.localDB = {
           "usage": "1.49"
         },
         {
-          "tier": "ubers",
-          "rank": 345,
-          "usage": "0.01"
+          "tier": "uu",
+          "rank": 104,
+          "usage": "0.60"
         },
         {
           "tier": "ou",
           "rank": 181,
           "usage": "0.09"
+        },
+        {
+          "tier": "monotype",
+          "rank": 164,
+          "usage": "0.33"
+        },
+        {
+          "tier": "ubers",
+          "rank": 345,
+          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -33003,16 +33013,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 252,
           "usage": "0.10"
-        },
-        {
-          "tier": "nu",
-          "rank": 35,
-          "usage": "5.81"
-        },
-        {
-          "tier": "monotype",
-          "rank": 164,
-          "usage": "0.33"
         }
       ],
       "types": [
@@ -33270,24 +33270,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 102,
-          "usage": "0.68"
-        },
-        {
           "tier": "ru",
           "rank": 29,
           "usage": "7.24"
         },
         {
-          "tier": "ubers",
-          "rank": 179,
-          "usage": "0.09"
+          "tier": "uu",
+          "rank": 102,
+          "usage": "0.68"
         },
         {
           "tier": "ou",
           "rank": 119,
           "usage": "0.32"
+        },
+        {
+          "tier": "monotype",
+          "rank": 100,
+          "usage": "1.78"
+        },
+        {
+          "tier": "ubers",
+          "rank": 179,
+          "usage": "0.09"
         },
         {
           "tier": "doublesou",
@@ -33298,11 +33303,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 183,
           "usage": "0.29"
-        },
-        {
-          "tier": "monotype",
-          "rank": 100,
-          "usage": "1.78"
         }
       ],
       "types": [
@@ -33562,9 +33562,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 95,
-          "usage": "0.81"
+          "tier": "nu",
+          "rank": 27,
+          "usage": "7.75"
         },
         {
           "tier": "ru",
@@ -33572,14 +33572,24 @@ window.localDB = {
           "usage": "0.58"
         },
         {
-          "tier": "ubers",
-          "rank": 265,
-          "usage": "0.03"
+          "tier": "uu",
+          "rank": 95,
+          "usage": "0.81"
         },
         {
           "tier": "ou",
           "rank": 231,
           "usage": "0.04"
+        },
+        {
+          "tier": "monotype",
+          "rank": 83,
+          "usage": "2.30"
+        },
+        {
+          "tier": "ubers",
+          "rank": 265,
+          "usage": "0.03"
         },
         {
           "tier": "doublesou",
@@ -33590,16 +33600,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 243,
           "usage": "0.11"
-        },
-        {
-          "tier": "nu",
-          "rank": 27,
-          "usage": "7.75"
-        },
-        {
-          "tier": "monotype",
-          "rank": 83,
-          "usage": "2.30"
         }
       ],
       "types": [
@@ -33882,6 +33882,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "pu",
+          "rank": 212,
+          "usage": "0.02"
+        },
+        {
           "tier": "zu",
           "rank": 184,
           "usage": "0.08"
@@ -33890,11 +33895,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 471,
           "usage": "0.01"
-        },
-        {
-          "tier": "pu",
-          "rank": 212,
-          "usage": "0.02"
         }
       ],
       "types": [
@@ -34038,6 +34038,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "pu",
+          "rank": 162,
+          "usage": "0.11"
+        },
+        {
           "tier": "zu",
           "rank": 181,
           "usage": "0.08"
@@ -34046,11 +34051,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 402,
           "usage": "0.02"
-        },
-        {
-          "tier": "pu",
-          "rank": 162,
-          "usage": "0.11"
         }
       ],
       "types": [
@@ -34308,41 +34308,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 237,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ru",
-          "rank": 261,
-          "usage": "0.01"
-        },
-        {
-          "tier": "zu",
-          "rank": 91,
-          "usage": "0.87"
-        },
-        {
-          "tier": "ubers",
-          "rank": 298,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ou",
-          "rank": 246,
-          "usage": "0.03"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 214,
-          "usage": "0.11"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 375,
-          "usage": "0.03"
-        },
-        {
           "tier": "nu",
           "rank": 170,
           "usage": "0.06"
@@ -34353,9 +34318,44 @@ window.localDB = {
           "usage": "0.99"
         },
         {
+          "tier": "zu",
+          "rank": 91,
+          "usage": "0.87"
+        },
+        {
+          "tier": "ru",
+          "rank": 261,
+          "usage": "0.01"
+        },
+        {
+          "tier": "uu",
+          "rank": 237,
+          "usage": "0.02"
+        },
+        {
+          "tier": "ou",
+          "rank": 246,
+          "usage": "0.03"
+        },
+        {
           "tier": "monotype",
           "rank": 335,
           "usage": "0.01"
+        },
+        {
+          "tier": "ubers",
+          "rank": 298,
+          "usage": "0.02"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 214,
+          "usage": "0.11"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 375,
+          "usage": "0.03"
         }
       ],
       "types": [
@@ -34446,9 +34446,19 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 98,
-          "usage": "0.91"
+          "tier": "nu",
+          "rank": 122,
+          "usage": "0.38"
+        },
+        {
+          "tier": "pu",
+          "rank": 190,
+          "usage": "0.04"
+        },
+        {
+          "tier": "vgc2025",
+          "rank": 279,
+          "usage": "0.01"
         },
         {
           "tier": "zu",
@@ -34456,9 +34466,9 @@ window.localDB = {
           "usage": "0.30"
         },
         {
-          "tier": "vgc2025",
-          "rank": 279,
-          "usage": "0.01"
+          "tier": "ru",
+          "rank": 98,
+          "usage": "0.91"
         },
         {
           "tier": "ubers",
@@ -34469,16 +34479,6 @@ window.localDB = {
           "tier": "doublesou",
           "rank": 266,
           "usage": "0.05"
-        },
-        {
-          "tier": "nu",
-          "rank": 122,
-          "usage": "0.38"
-        },
-        {
-          "tier": "pu",
-          "rank": 190,
-          "usage": "0.04"
         }
       ],
       "types": [
@@ -34726,14 +34726,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 113,
-          "usage": "0.46"
-        },
-        {
           "tier": "nu",
           "rank": 143,
           "usage": "0.12"
+        },
+        {
+          "tier": "zu",
+          "rank": 113,
+          "usage": "0.46"
         }
       ],
       "types": [
@@ -34778,13 +34778,13 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 207,
+          "tier": "vgc2025",
+          "rank": 210,
           "usage": "0.03"
         },
         {
-          "tier": "vgc2025",
-          "rank": 210,
+          "tier": "zu",
+          "rank": 207,
           "usage": "0.03"
         },
         {
@@ -34900,14 +34900,24 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 159,
-          "usage": "0.14"
+          "tier": "nu",
+          "rank": 187,
+          "usage": "0.03"
+        },
+        {
+          "tier": "pu",
+          "rank": 57,
+          "usage": "2.61"
         },
         {
           "tier": "ru",
           "rank": 231,
           "usage": "0.04"
+        },
+        {
+          "tier": "uu",
+          "rank": 159,
+          "usage": "0.14"
         },
         {
           "tier": "ou",
@@ -34923,16 +34933,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 371,
           "usage": "0.03"
-        },
-        {
-          "tier": "nu",
-          "rank": 187,
-          "usage": "0.03"
-        },
-        {
-          "tier": "pu",
-          "rank": 57,
-          "usage": "2.61"
         }
       ],
       "types": [
@@ -34957,7 +34957,7 @@ window.localDB = {
         {
           "name": "Swift Weasel",
           "tier": "battlestadiumsingles",
-          "ability": "Swift Swim",
+          "ability": "Water Veil",
           "item": "Choice Band / Mystic Water",
           "nature": "Adamant",
           "teraType": "Normal",
@@ -35157,9 +35157,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 50,
-          "usage": "2.69"
+          "tier": "vgc2025",
+          "rank": 123,
+          "usage": "0.19"
         },
         {
           "tier": "ru",
@@ -35167,19 +35167,24 @@ window.localDB = {
           "usage": "8.14"
         },
         {
-          "tier": "vgc2025",
-          "rank": 123,
-          "usage": "0.19"
-        },
-        {
-          "tier": "ubers",
-          "rank": 113,
-          "usage": "0.41"
+          "tier": "uu",
+          "rank": 50,
+          "usage": "2.69"
         },
         {
           "tier": "ou",
           "rank": 241,
           "usage": "0.04"
+        },
+        {
+          "tier": "monotype",
+          "rank": 89,
+          "usage": "2.09"
+        },
+        {
+          "tier": "ubers",
+          "rank": 113,
+          "usage": "0.41"
         },
         {
           "tier": "doublesou",
@@ -35190,11 +35195,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 150,
           "usage": "0.43"
-        },
-        {
-          "tier": "monotype",
-          "rank": 89,
-          "usage": "2.09"
         }
       ],
       "types": [
@@ -35364,31 +35364,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 144,
-          "usage": "0.21"
-        },
-        {
-          "tier": "ru",
-          "rank": 155,
-          "usage": "0.23"
-        },
-        {
-          "tier": "ou",
-          "rank": 295,
-          "usage": "0.01"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 331,
-          "usage": "0.02"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 376,
-          "usage": "0.03"
-        },
-        {
           "tier": "nu",
           "rank": 23,
           "usage": "8.69"
@@ -35399,9 +35374,34 @@ window.localDB = {
           "usage": "8.66"
         },
         {
+          "tier": "ru",
+          "rank": 155,
+          "usage": "0.23"
+        },
+        {
+          "tier": "uu",
+          "rank": 144,
+          "usage": "0.21"
+        },
+        {
+          "tier": "ou",
+          "rank": 295,
+          "usage": "0.01"
+        },
+        {
           "tier": "monotype",
           "rank": 250,
           "usage": "0.07"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 331,
+          "usage": "0.02"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 376,
+          "usage": "0.03"
         }
       ],
       "types": [
@@ -35547,46 +35547,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 199,
-          "usage": "0.05"
-        },
-        {
-          "tier": "ru",
-          "rank": 132,
-          "usage": "0.39"
-        },
-        {
-          "tier": "zu",
-          "rank": 51,
-          "usage": "3.31"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 172,
-          "usage": "0.06"
-        },
-        {
-          "tier": "ubers",
-          "rank": 319,
-          "usage": "0.01"
-        },
-        {
-          "tier": "ou",
-          "rank": 215,
-          "usage": "0.05"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 279,
-          "usage": "0.05"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 353,
-          "usage": "0.04"
-        },
-        {
           "tier": "nu",
           "rank": 80,
           "usage": "1.27"
@@ -35597,9 +35557,49 @@ window.localDB = {
           "usage": "0.84"
         },
         {
+          "tier": "vgc2025",
+          "rank": 172,
+          "usage": "0.06"
+        },
+        {
+          "tier": "zu",
+          "rank": 51,
+          "usage": "3.31"
+        },
+        {
+          "tier": "ru",
+          "rank": 132,
+          "usage": "0.39"
+        },
+        {
+          "tier": "uu",
+          "rank": 199,
+          "usage": "0.05"
+        },
+        {
+          "tier": "ou",
+          "rank": 215,
+          "usage": "0.05"
+        },
+        {
           "tier": "monotype",
           "rank": 216,
           "usage": "0.12"
+        },
+        {
+          "tier": "ubers",
+          "rank": 319,
+          "usage": "0.01"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 279,
+          "usage": "0.05"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 353,
+          "usage": "0.04"
         }
       ],
       "types": [
@@ -35625,7 +35625,7 @@ window.localDB = {
         {
           "name": "Defog",
           "tier": "zu",
-          "ability": "Aftermath",
+          "ability": "Unburden",
           "item": "Heavy-Duty Boots",
           "nature": "Timid / Bold",
           "teraType": "Normal",
@@ -35825,6 +35825,16 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "nu",
+          "rank": 197,
+          "usage": "0.02"
+        },
+        {
+          "tier": "pu",
+          "rank": 86,
+          "usage": "0.86"
+        },
+        {
           "tier": "ru",
           "rank": 133,
           "usage": "0.39"
@@ -35832,6 +35842,11 @@ window.localDB = {
         {
           "tier": "ou",
           "rank": 291,
+          "usage": "0.01"
+        },
+        {
+          "tier": "monotype",
+          "rank": 328,
           "usage": "0.01"
         },
         {
@@ -35843,21 +35858,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 330,
           "usage": "0.05"
-        },
-        {
-          "tier": "nu",
-          "rank": 197,
-          "usage": "0.02"
-        },
-        {
-          "tier": "pu",
-          "rank": 86,
-          "usage": "0.86"
-        },
-        {
-          "tier": "monotype",
-          "rank": 328,
-          "usage": "0.01"
         }
       ],
       "types": [
@@ -35928,36 +35928,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 249,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ru",
-          "rank": 174,
-          "usage": "0.16"
-        },
-        {
-          "tier": "zu",
-          "rank": 45,
-          "usage": "3.73"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 280,
-          "usage": "0.01"
-        },
-        {
-          "tier": "ou",
-          "rank": 177,
-          "usage": "0.10"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 437,
-          "usage": "0.01"
-        },
-        {
           "tier": "nu",
           "rank": 64,
           "usage": "1.97"
@@ -35968,9 +35938,39 @@ window.localDB = {
           "usage": "3.40"
         },
         {
+          "tier": "vgc2025",
+          "rank": 280,
+          "usage": "0.01"
+        },
+        {
+          "tier": "zu",
+          "rank": 45,
+          "usage": "3.73"
+        },
+        {
+          "tier": "ru",
+          "rank": 174,
+          "usage": "0.16"
+        },
+        {
+          "tier": "uu",
+          "rank": 249,
+          "usage": "0.02"
+        },
+        {
+          "tier": "ou",
+          "rank": 177,
+          "usage": "0.10"
+        },
+        {
           "tier": "monotype",
           "rank": 239,
           "usage": "0.08"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 437,
+          "usage": "0.01"
         }
       ],
       "types": [
@@ -36259,16 +36259,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 187,
-          "usage": "0.12"
-        },
-        {
-          "tier": "zu",
-          "rank": 2,
-          "usage": "31.29"
-        },
-        {
           "tier": "nu",
           "rank": 153,
           "usage": "0.10"
@@ -36277,6 +36267,16 @@ window.localDB = {
           "tier": "pu",
           "rank": 29,
           "usage": "7.16"
+        },
+        {
+          "tier": "zu",
+          "rank": 2,
+          "usage": "31.29"
+        },
+        {
+          "tier": "ru",
+          "rank": 187,
+          "usage": "0.12"
         },
         {
           "tier": "monotype",
@@ -36452,14 +36452,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 213,
-          "usage": "0.04"
-        },
-        {
-          "tier": "ru",
-          "rank": 76,
-          "usage": "1.54"
+          "tier": "nu",
+          "rank": 19,
+          "usage": "9.97"
         },
         {
           "tier": "vgc2025",
@@ -36467,9 +36462,24 @@ window.localDB = {
           "usage": "0.13"
         },
         {
+          "tier": "ru",
+          "rank": 76,
+          "usage": "1.54"
+        },
+        {
+          "tier": "uu",
+          "rank": 213,
+          "usage": "0.04"
+        },
+        {
           "tier": "ou",
           "rank": 165,
           "usage": "0.13"
+        },
+        {
+          "tier": "monotype",
+          "rank": 126,
+          "usage": "0.81"
         },
         {
           "tier": "doublesou",
@@ -36480,16 +36490,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 245,
           "usage": "0.11"
-        },
-        {
-          "tier": "nu",
-          "rank": 19,
-          "usage": "9.97"
-        },
-        {
-          "tier": "monotype",
-          "rank": 126,
-          "usage": "0.81"
         }
       ],
       "types": [
@@ -36816,26 +36816,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 194,
-          "usage": "0.10"
-        },
-        {
-          "tier": "zu",
-          "rank": 13,
-          "usage": "11.03"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 292,
-          "usage": "0.04"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 309,
-          "usage": "0.05"
-        },
-        {
           "tier": "nu",
           "rank": 171,
           "usage": "0.06"
@@ -36846,9 +36826,29 @@ window.localDB = {
           "usage": "0.28"
         },
         {
+          "tier": "zu",
+          "rank": 13,
+          "usage": "11.03"
+        },
+        {
+          "tier": "ru",
+          "rank": 194,
+          "usage": "0.10"
+        },
+        {
           "tier": "monotype",
           "rank": 196,
           "usage": "0.19"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 292,
+          "usage": "0.04"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 309,
+          "usage": "0.05"
         }
       ],
       "types": [
@@ -37002,9 +37002,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 198,
-          "usage": "0.05"
+          "tier": "pu",
+          "rank": 204,
+          "usage": "0.03"
         },
         {
           "tier": "zu",
@@ -37012,9 +37012,9 @@ window.localDB = {
           "usage": "0.13"
         },
         {
-          "tier": "pu",
-          "rank": 204,
-          "usage": "0.03"
+          "tier": "uu",
+          "rank": 198,
+          "usage": "0.05"
         }
       ],
       "types": [
@@ -37095,14 +37095,19 @@ window.localDB = {
           "usage": "0.05"
         },
         {
-          "tier": "ubers",
-          "rank": 119,
-          "usage": "0.36"
-        },
-        {
           "tier": "ou",
           "rank": 34,
           "usage": "5.37"
+        },
+        {
+          "tier": "monotype",
+          "rank": 26,
+          "usage": "6.89"
+        },
+        {
+          "tier": "ubers",
+          "rank": 119,
+          "usage": "0.36"
         },
         {
           "tier": "doublesou",
@@ -37113,11 +37118,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 12,
           "usage": "11.62"
-        },
-        {
-          "tier": "monotype",
-          "rank": 26,
-          "usage": "6.89"
         }
       ],
       "types": [
@@ -37658,24 +37658,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 148,
-          "usage": "0.18"
-        },
-        {
           "tier": "ru",
           "rank": 105,
           "usage": "0.72"
         },
         {
-          "tier": "ubers",
-          "rank": 237,
-          "usage": "0.04"
+          "tier": "uu",
+          "rank": 148,
+          "usage": "0.18"
         },
         {
           "tier": "ou",
           "rank": 251,
           "usage": "0.03"
+        },
+        {
+          "tier": "monotype",
+          "rank": 195,
+          "usage": "0.19"
+        },
+        {
+          "tier": "ubers",
+          "rank": 237,
+          "usage": "0.04"
         },
         {
           "tier": "doublesou",
@@ -37686,11 +37691,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 261,
           "usage": "0.09"
-        },
-        {
-          "tier": "monotype",
-          "rank": 195,
-          "usage": "0.19"
         }
       ],
       "types": [
@@ -37835,21 +37835,6 @@ window.localDB = {
           "usage": "0.55"
         },
         {
-          "tier": "ru",
-          "rank": 166,
-          "usage": "0.19"
-        },
-        {
-          "tier": "zu",
-          "rank": 95,
-          "usage": "0.71"
-        },
-        {
-          "tier": "ubers",
-          "rank": 286,
-          "usage": "0.02"
-        },
-        {
           "tier": "nu",
           "rank": 144,
           "usage": "0.12"
@@ -37858,6 +37843,21 @@ window.localDB = {
           "tier": "pu",
           "rank": 192,
           "usage": "0.04"
+        },
+        {
+          "tier": "zu",
+          "rank": 95,
+          "usage": "0.71"
+        },
+        {
+          "tier": "ru",
+          "rank": 166,
+          "usage": "0.19"
+        },
+        {
+          "tier": "ubers",
+          "rank": 286,
+          "usage": "0.02"
         }
       ],
       "types": [
@@ -37917,24 +37917,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 31,
-          "usage": "7.16"
-        },
-        {
           "tier": "vgc2025",
           "rank": 215,
           "usage": "0.03"
         },
         {
-          "tier": "ubers",
-          "rank": 239,
-          "usage": "0.04"
+          "tier": "uu",
+          "rank": 31,
+          "usage": "7.16"
         },
         {
           "tier": "ou",
           "rank": 116,
           "usage": "0.35"
+        },
+        {
+          "tier": "monotype",
+          "rank": 49,
+          "usage": "4.38"
+        },
+        {
+          "tier": "ubers",
+          "rank": 239,
+          "usage": "0.04"
         },
         {
           "tier": "doublesou",
@@ -37945,11 +37950,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 104,
           "usage": "0.98"
-        },
-        {
-          "tier": "monotype",
-          "rank": 49,
-          "usage": "4.38"
         }
       ],
       "types": [
@@ -38298,41 +38298,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 164,
-          "usage": "0.13"
-        },
-        {
-          "tier": "ru",
-          "rank": 90,
-          "usage": "1.14"
-        },
-        {
-          "tier": "zu",
-          "rank": 26,
-          "usage": "7.31"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 129,
-          "usage": "0.16"
-        },
-        {
-          "tier": "ou",
-          "rank": 120,
-          "usage": "0.32"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 300,
-          "usage": "0.03"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 151,
-          "usage": "0.43"
-        },
-        {
           "tier": "nu",
           "rank": 22,
           "usage": "8.75"
@@ -38343,9 +38308,44 @@ window.localDB = {
           "usage": "4.81"
         },
         {
+          "tier": "vgc2025",
+          "rank": 129,
+          "usage": "0.16"
+        },
+        {
+          "tier": "zu",
+          "rank": 26,
+          "usage": "7.31"
+        },
+        {
+          "tier": "ru",
+          "rank": 90,
+          "usage": "1.14"
+        },
+        {
+          "tier": "uu",
+          "rank": 164,
+          "usage": "0.13"
+        },
+        {
+          "tier": "ou",
+          "rank": 120,
+          "usage": "0.32"
+        },
+        {
           "tier": "monotype",
           "rank": 288,
           "usage": "0.03"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 300,
+          "usage": "0.03"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 151,
+          "usage": "0.43"
         }
       ],
       "types": [
@@ -38731,36 +38731,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 252,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ru",
-          "rank": 147,
-          "usage": "0.29"
-        },
-        {
-          "tier": "zu",
-          "rank": 47,
-          "usage": "3.55"
-        },
-        {
-          "tier": "ubers",
-          "rank": 317,
-          "usage": "0.01"
-        },
-        {
-          "tier": "ou",
-          "rank": 206,
-          "usage": "0.07"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 173,
-          "usage": "0.24"
-        },
-        {
           "tier": "nu",
           "rank": 172,
           "usage": "0.06"
@@ -38771,9 +38741,39 @@ window.localDB = {
           "usage": "0.08"
         },
         {
+          "tier": "zu",
+          "rank": 47,
+          "usage": "3.55"
+        },
+        {
+          "tier": "ru",
+          "rank": 147,
+          "usage": "0.29"
+        },
+        {
+          "tier": "uu",
+          "rank": 252,
+          "usage": "0.02"
+        },
+        {
+          "tier": "ou",
+          "rank": 206,
+          "usage": "0.07"
+        },
+        {
           "tier": "monotype",
           "rank": 242,
           "usage": "0.08"
+        },
+        {
+          "tier": "ubers",
+          "rank": 317,
+          "usage": "0.01"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 173,
+          "usage": "0.24"
         }
       ],
       "types": [
@@ -38864,24 +38864,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 10,
-          "usage": "15.32"
-        },
-        {
           "tier": "vgc2025",
           "rank": 266,
           "usage": "0.01"
         },
         {
-          "tier": "ubers",
-          "rank": 187,
-          "usage": "0.08"
+          "tier": "uu",
+          "rank": 10,
+          "usage": "15.32"
         },
         {
           "tier": "ou",
           "rank": 54,
           "usage": "2.74"
+        },
+        {
+          "tier": "monotype",
+          "rank": 96,
+          "usage": "1.89"
+        },
+        {
+          "tier": "ubers",
+          "rank": 187,
+          "usage": "0.08"
         },
         {
           "tier": "doublesou",
@@ -38892,11 +38897,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 70,
           "usage": "2.05"
-        },
-        {
-          "tier": "monotype",
-          "rank": 96,
-          "usage": "1.89"
         }
       ],
       "types": [
@@ -38922,7 +38922,7 @@ window.localDB = {
         {
           "name": "Boots Attacker",
           "tier": "ou",
-          "ability": "Pickpocket",
+          "ability": "Pressure",
           "item": "Heavy-Duty Boots",
           "nature": "Jolly",
           "teraType": "Ice / Ghost",
@@ -38937,7 +38937,7 @@ window.localDB = {
         {
           "name": "Choice Band",
           "tier": "ou",
-          "ability": "Pickpocket",
+          "ability": "Pressure",
           "item": "Choice Band",
           "nature": "Jolly",
           "teraType": "Normal",
@@ -38952,7 +38952,7 @@ window.localDB = {
         {
           "name": "Swords Dance (Dark)",
           "tier": "monotype",
-          "ability": "Pickpocket",
+          "ability": "Pressure",
           "item": "Heavy-Duty Boots",
           "nature": "Jolly",
           "teraType": "Normal",
@@ -38967,7 +38967,7 @@ window.localDB = {
         {
           "name": "Swords Dance (Ice)",
           "tier": "monotype",
-          "ability": "Pickpocket",
+          "ability": "Pressure",
           "item": "Heavy-Duty Boots",
           "nature": "Jolly",
           "teraType": "Normal",
@@ -38982,7 +38982,7 @@ window.localDB = {
         {
           "name": "Offensive Pivot",
           "tier": "stabmons",
-          "ability": "Pickpocket",
+          "ability": "Pressure",
           "item": "Heavy-Duty Boots",
           "nature": "Jolly",
           "teraType": "Normal",
@@ -38997,7 +38997,7 @@ window.localDB = {
         {
           "name": "Choice Band (Atk)",
           "tier": "godlygift",
-          "ability": "Pickpocket",
+          "ability": "Pressure",
           "item": "Choice Band",
           "nature": "Jolly",
           "teraType": "Normal",
@@ -39012,7 +39012,7 @@ window.localDB = {
         {
           "name": "Swords Dance (Atk)",
           "tier": "godlygift",
-          "ability": "Pickpocket",
+          "ability": "Pressure",
           "item": "Heavy-Duty Boots",
           "nature": "Jolly",
           "teraType": "Ice / Dark",
@@ -39027,7 +39027,7 @@ window.localDB = {
         {
           "name": "Choice Scarf (Ice)",
           "tier": "nationaldexmonotype",
-          "ability": "Pickpocket",
+          "ability": "Pressure",
           "item": "Choice Scarf",
           "nature": "Jolly",
           "teraType": "Normal",
@@ -39077,9 +39077,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 49,
-          "usage": "2.72"
+          "tier": "vgc2025",
+          "rank": 272,
+          "usage": "0.01"
         },
         {
           "tier": "ru",
@@ -39087,19 +39087,24 @@ window.localDB = {
           "usage": "4.24"
         },
         {
-          "tier": "vgc2025",
-          "rank": 272,
-          "usage": "0.01"
-        },
-        {
-          "tier": "ubers",
-          "rank": 243,
-          "usage": "0.04"
+          "tier": "uu",
+          "rank": 49,
+          "usage": "2.72"
         },
         {
           "tier": "ou",
           "rank": 139,
           "usage": "0.20"
+        },
+        {
+          "tier": "monotype",
+          "rank": 150,
+          "usage": "0.46"
+        },
+        {
+          "tier": "ubers",
+          "rank": 243,
+          "usage": "0.04"
         },
         {
           "tier": "doublesou",
@@ -39110,11 +39115,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 87,
           "usage": "1.47"
-        },
-        {
-          "tier": "monotype",
-          "rank": 150,
-          "usage": "0.46"
         }
       ],
       "types": [
@@ -39155,7 +39155,7 @@ window.localDB = {
         {
           "name": "Substitute + 3 Attacks",
           "tier": "nationaldexuu",
-          "ability": "Magnet Pull",
+          "ability": "Sturdy",
           "item": "Electrium Z / Steelium Z",
           "nature": "Timid",
           "teraType": "Normal",
@@ -39200,7 +39200,7 @@ window.localDB = {
         {
           "name": "Iron Defense",
           "tier": "stabmons",
-          "ability": "Magnet Pull",
+          "ability": "Sturdy",
           "item": "Chople Berry",
           "nature": "Bold",
           "teraType": "Normal",
@@ -39230,7 +39230,7 @@ window.localDB = {
         {
           "name": "Choice Scarf (Spe)",
           "tier": "godlygift",
-          "ability": "Magnet Pull",
+          "ability": "Sturdy",
           "item": "Choice Scarf",
           "nature": "Timid",
           "teraType": "Normal",
@@ -39245,7 +39245,7 @@ window.localDB = {
         {
           "name": "Air Balloon (Electric)",
           "tier": "nationaldexmonotype",
-          "ability": "Magnet Pull",
+          "ability": "Sturdy",
           "item": "Air Balloon",
           "nature": "Modest",
           "teraType": "Normal",
@@ -39349,9 +39349,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 92,
-          "usage": "0.85"
+          "tier": "nu",
+          "rank": 25,
+          "usage": "8.31"
+        },
+        {
+          "tier": "vgc2025",
+          "rank": 175,
+          "usage": "0.06"
         },
         {
           "tier": "ru",
@@ -39359,9 +39364,14 @@ window.localDB = {
           "usage": "2.47"
         },
         {
-          "tier": "vgc2025",
-          "rank": 175,
-          "usage": "0.06"
+          "tier": "uu",
+          "rank": 92,
+          "usage": "0.85"
+        },
+        {
+          "tier": "monotype",
+          "rank": 176,
+          "usage": "0.25"
         },
         {
           "tier": "doublesou",
@@ -39372,16 +39382,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 270,
           "usage": "0.08"
-        },
-        {
-          "tier": "nu",
-          "rank": 25,
-          "usage": "8.31"
-        },
-        {
-          "tier": "monotype",
-          "rank": 176,
-          "usage": "0.25"
         }
       ],
       "types": [
@@ -39647,9 +39647,19 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 184,
-          "usage": "0.08"
+          "tier": "nu",
+          "rank": 208,
+          "usage": "0.01"
+        },
+        {
+          "tier": "pu",
+          "rank": 116,
+          "usage": "0.42"
+        },
+        {
+          "tier": "vgc2025",
+          "rank": 206,
+          "usage": "0.04"
         },
         {
           "tier": "zu",
@@ -39657,9 +39667,9 @@ window.localDB = {
           "usage": "1.00"
         },
         {
-          "tier": "vgc2025",
-          "rank": 206,
-          "usage": "0.04"
+          "tier": "uu",
+          "rank": 184,
+          "usage": "0.08"
         },
         {
           "tier": "ou",
@@ -39675,16 +39685,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 387,
           "usage": "0.03"
-        },
-        {
-          "tier": "nu",
-          "rank": 208,
-          "usage": "0.01"
-        },
-        {
-          "tier": "pu",
-          "rank": 116,
-          "usage": "0.42"
         }
       ],
       "types": [
@@ -39728,16 +39728,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 55,
-          "usage": "2.85"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 285,
-          "usage": "0.04"
-        },
-        {
           "tier": "nu",
           "rank": 203,
           "usage": "0.01"
@@ -39746,6 +39736,16 @@ window.localDB = {
           "tier": "pu",
           "rank": 175,
           "usage": "0.08"
+        },
+        {
+          "tier": "zu",
+          "rank": 55,
+          "usage": "2.85"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 285,
+          "usage": "0.04"
         }
       ],
       "types": [
@@ -39856,9 +39856,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 85,
-          "usage": "1.01"
+          "tier": "vgc2025",
+          "rank": 219,
+          "usage": "0.03"
         },
         {
           "tier": "ru",
@@ -39866,14 +39866,9 @@ window.localDB = {
           "usage": "14.44"
         },
         {
-          "tier": "vgc2025",
-          "rank": 219,
-          "usage": "0.03"
-        },
-        {
-          "tier": "ubers",
-          "rank": 296,
-          "usage": "0.02"
+          "tier": "uu",
+          "rank": 85,
+          "usage": "1.01"
         },
         {
           "tier": "ou",
@@ -39881,14 +39876,19 @@ window.localDB = {
           "usage": "0.04"
         },
         {
-          "tier": "nationaldex",
-          "rank": 369,
-          "usage": "0.03"
-        },
-        {
           "tier": "monotype",
           "rank": 117,
           "usage": "1.11"
+        },
+        {
+          "tier": "ubers",
+          "rank": 296,
+          "usage": "0.02"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 369,
+          "usage": "0.03"
         }
       ],
       "types": [
@@ -39899,7 +39899,7 @@ window.localDB = {
         {
           "name": "Speed Boost Sweeper",
           "tier": "ru",
-          "ability": "Tinted Lens",
+          "ability": "Speed Boost",
           "item": "Throat Spray",
           "nature": "Modest",
           "teraType": "Normal",
@@ -39944,7 +39944,7 @@ window.localDB = {
         {
           "name": "Tail Glow",
           "tier": "stabmons",
-          "ability": "Tinted Lens",
+          "ability": "Speed Boost",
           "item": "Heavy-Duty Boots / Throat Spray / Focus Sash",
           "nature": "Modest",
           "teraType": "Normal",
@@ -39998,9 +39998,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 200,
-          "usage": "0.08"
+          "tier": "nu",
+          "rank": 136,
+          "usage": "0.16"
+        },
+        {
+          "tier": "pu",
+          "rank": 146,
+          "usage": "0.18"
         },
         {
           "tier": "zu",
@@ -40008,14 +40013,19 @@ window.localDB = {
           "usage": "0.15"
         },
         {
-          "tier": "ubers",
-          "rank": 260,
-          "usage": "0.03"
+          "tier": "ru",
+          "rank": 200,
+          "usage": "0.08"
         },
         {
           "tier": "ou",
           "rank": 282,
           "usage": "0.02"
+        },
+        {
+          "tier": "ubers",
+          "rank": 260,
+          "usage": "0.03"
         },
         {
           "tier": "doublesou",
@@ -40026,16 +40036,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 237,
           "usage": "0.12"
-        },
-        {
-          "tier": "nu",
-          "rank": 136,
-          "usage": "0.16"
-        },
-        {
-          "tier": "pu",
-          "rank": 146,
-          "usage": "0.18"
         }
       ],
       "types": [
@@ -40079,36 +40079,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 185,
-          "usage": "0.08"
-        },
-        {
-          "tier": "ru",
-          "rank": 219,
-          "usage": "0.05"
-        },
-        {
-          "tier": "zu",
-          "rank": 112,
-          "usage": "0.46"
-        },
-        {
-          "tier": "ou",
-          "rank": 256,
-          "usage": "0.02"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 289,
-          "usage": "0.04"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 421,
-          "usage": "0.02"
-        },
-        {
           "tier": "nu",
           "rank": 155,
           "usage": "0.09"
@@ -40119,8 +40089,38 @@ window.localDB = {
           "usage": "0.23"
         },
         {
+          "tier": "zu",
+          "rank": 112,
+          "usage": "0.46"
+        },
+        {
+          "tier": "ru",
+          "rank": 219,
+          "usage": "0.05"
+        },
+        {
+          "tier": "uu",
+          "rank": 185,
+          "usage": "0.08"
+        },
+        {
+          "tier": "ou",
+          "rank": 256,
+          "usage": "0.02"
+        },
+        {
           "tier": "monotype",
           "rank": 319,
+          "usage": "0.02"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 289,
+          "usage": "0.04"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 421,
           "usage": "0.02"
         }
       ],
@@ -40170,14 +40170,19 @@ window.localDB = {
           "usage": "0.01"
         },
         {
-          "tier": "ubers",
-          "rank": 27,
-          "usage": "5.17"
-        },
-        {
           "tier": "ou",
           "rank": 13,
           "usage": "12.93"
+        },
+        {
+          "tier": "monotype",
+          "rank": 7,
+          "usage": "11.06"
+        },
+        {
+          "tier": "ubers",
+          "rank": 27,
+          "usage": "5.17"
         },
         {
           "tier": "doublesou",
@@ -40188,11 +40193,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 17,
           "usage": "9.68"
-        },
-        {
-          "tier": "monotype",
-          "rank": 7,
-          "usage": "11.06"
         }
       ],
       "types": [
@@ -40512,24 +40512,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 47,
-          "usage": "3.16"
-        },
-        {
           "tier": "vgc2025",
           "rank": 249,
           "usage": "0.02"
         },
         {
-          "tier": "ubers",
-          "rank": 189,
-          "usage": "0.08"
+          "tier": "uu",
+          "rank": 47,
+          "usage": "3.16"
         },
         {
           "tier": "ou",
           "rank": 103,
           "usage": "0.52"
+        },
+        {
+          "tier": "monotype",
+          "rank": 25,
+          "usage": "7.15"
+        },
+        {
+          "tier": "ubers",
+          "rank": 189,
+          "usage": "0.08"
         },
         {
           "tier": "doublesou",
@@ -40540,11 +40545,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 148,
           "usage": "0.45"
-        },
-        {
-          "tier": "monotype",
-          "rank": 25,
-          "usage": "7.15"
         }
       ],
       "types": [
@@ -40735,7 +40735,7 @@ window.localDB = {
         {
           "name": "Entry Hazard Lead (Ice)",
           "tier": "nationaldexmonotype",
-          "ability": "Thick Fat",
+          "ability": "Oblivious",
           "item": "Focus Sash",
           "nature": "Jolly",
           "teraType": "Normal",
@@ -40789,24 +40789,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 134,
-          "usage": "0.25"
-        },
-        {
           "tier": "ru",
           "rank": 56,
           "usage": "2.67"
         },
         {
-          "tier": "ubers",
-          "rank": 230,
-          "usage": "0.05"
+          "tier": "uu",
+          "rank": 134,
+          "usage": "0.25"
         },
         {
           "tier": "ou",
           "rank": 123,
           "usage": "0.31"
+        },
+        {
+          "tier": "monotype",
+          "rank": 218,
+          "usage": "0.12"
+        },
+        {
+          "tier": "ubers",
+          "rank": 230,
+          "usage": "0.05"
         },
         {
           "tier": "doublesou",
@@ -40817,11 +40822,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 119,
           "usage": "0.77"
-        },
-        {
-          "tier": "monotype",
-          "rank": 218,
-          "usage": "0.12"
         }
       ],
       "types": [
@@ -40846,7 +40846,7 @@ window.localDB = {
         {
           "name": "Choice Specs",
           "tier": "1v1",
-          "ability": "Download",
+          "ability": "Adaptability",
           "item": "Choice Specs",
           "nature": "Modest",
           "teraType": "Normal",
@@ -40861,7 +40861,7 @@ window.localDB = {
         {
           "name": "Life Orb",
           "tier": "1v1",
-          "ability": "Download",
+          "ability": "Adaptability",
           "item": "Life Orb",
           "nature": "Modest",
           "teraType": "Normal",
@@ -40876,7 +40876,7 @@ window.localDB = {
         {
           "name": "Choice Scarf",
           "tier": "1v1",
-          "ability": "Download",
+          "ability": "Adaptability",
           "item": "Choice Scarf",
           "nature": "Timid / Modest",
           "teraType": "Normal",
@@ -40891,7 +40891,7 @@ window.localDB = {
         {
           "name": "Custap Berry",
           "tier": "1v1",
-          "ability": "Download",
+          "ability": "Adaptability",
           "item": "Custap Berry",
           "nature": "Modest",
           "teraType": "Normal",
@@ -40906,7 +40906,7 @@ window.localDB = {
         {
           "name": "Choice Specs (Spe)",
           "tier": "godlygift",
-          "ability": "Download",
+          "ability": "Adaptability",
           "item": "Choice Specs",
           "nature": "Timid",
           "teraType": "Normal",
@@ -40921,7 +40921,7 @@ window.localDB = {
         {
           "name": "Z-Conversion Sweeper",
           "tier": "nationaldexmonotype",
-          "ability": "Download",
+          "ability": "Adaptability",
           "item": "Normalium Z",
           "nature": "Timid",
           "teraType": "Normal",
@@ -40975,9 +40975,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 75,
-          "usage": "1.45"
+          "tier": "vgc2025",
+          "rank": 94,
+          "usage": "0.38"
         },
         {
           "tier": "ru",
@@ -40985,19 +40985,24 @@ window.localDB = {
           "usage": "5.64"
         },
         {
-          "tier": "vgc2025",
-          "rank": 94,
-          "usage": "0.38"
-        },
-        {
-          "tier": "ubers",
-          "rank": 218,
-          "usage": "0.05"
+          "tier": "uu",
+          "rank": 75,
+          "usage": "1.45"
         },
         {
           "tier": "ou",
           "rank": 128,
           "usage": "0.27"
+        },
+        {
+          "tier": "monotype",
+          "rank": 45,
+          "usage": "4.53"
+        },
+        {
+          "tier": "ubers",
+          "rank": 218,
+          "usage": "0.05"
         },
         {
           "tier": "doublesou",
@@ -41008,11 +41013,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 287,
           "usage": "0.06"
-        },
-        {
-          "tier": "monotype",
-          "rank": 45,
-          "usage": "4.53"
         }
       ],
       "types": [
@@ -41212,9 +41212,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 243,
-          "usage": "0.02"
+          "tier": "pu",
+          "rank": 91,
+          "usage": "0.69"
         },
         {
           "tier": "zu",
@@ -41222,9 +41222,9 @@ window.localDB = {
           "usage": "1.24"
         },
         {
-          "tier": "ubers",
-          "rank": 338,
-          "usage": "0.01"
+          "tier": "ru",
+          "rank": 243,
+          "usage": "0.02"
         },
         {
           "tier": "ou",
@@ -41232,14 +41232,14 @@ window.localDB = {
           "usage": "0.05"
         },
         {
-          "tier": "pu",
-          "rank": 91,
-          "usage": "0.69"
-        },
-        {
           "tier": "monotype",
           "rank": 298,
           "usage": "0.03"
+        },
+        {
+          "tier": "ubers",
+          "rank": 338,
+          "usage": "0.01"
         }
       ],
       "types": [
@@ -41304,21 +41304,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 249,
-          "usage": "0.02"
-        },
-        {
-          "tier": "zu",
-          "rank": 32,
-          "usage": "5.95"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 353,
-          "usage": "0.01"
-        },
-        {
           "tier": "nu",
           "rank": 159,
           "usage": "0.09"
@@ -41329,9 +41314,24 @@ window.localDB = {
           "usage": "0.08"
         },
         {
+          "tier": "zu",
+          "rank": 32,
+          "usage": "5.95"
+        },
+        {
+          "tier": "ru",
+          "rank": 249,
+          "usage": "0.02"
+        },
+        {
           "tier": "monotype",
           "rank": 296,
           "usage": "0.03"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 353,
+          "usage": "0.01"
         }
       ],
       "types": [
@@ -41391,41 +41391,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 177,
-          "usage": "0.09"
-        },
-        {
-          "tier": "ru",
-          "rank": 158,
-          "usage": "0.22"
-        },
-        {
-          "tier": "zu",
-          "rank": 16,
-          "usage": "10.06"
-        },
-        {
-          "tier": "ubers",
-          "rank": 335,
-          "usage": "0.01"
-        },
-        {
-          "tier": "ou",
-          "rank": 275,
-          "usage": "0.02"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 246,
-          "usage": "0.07"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 333,
-          "usage": "0.05"
-        },
-        {
           "tier": "nu",
           "rank": 51,
           "usage": "3.41"
@@ -41436,9 +41401,44 @@ window.localDB = {
           "usage": "7.12"
         },
         {
+          "tier": "zu",
+          "rank": 16,
+          "usage": "10.06"
+        },
+        {
+          "tier": "ru",
+          "rank": 158,
+          "usage": "0.22"
+        },
+        {
+          "tier": "uu",
+          "rank": 177,
+          "usage": "0.09"
+        },
+        {
+          "tier": "ou",
+          "rank": 275,
+          "usage": "0.02"
+        },
+        {
           "tier": "monotype",
           "rank": 94,
           "usage": "2.03"
+        },
+        {
+          "tier": "ubers",
+          "rank": 335,
+          "usage": "0.01"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 246,
+          "usage": "0.07"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 333,
+          "usage": "0.05"
         }
       ],
       "types": [
@@ -41574,6 +41574,16 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "nu",
+          "rank": 162,
+          "usage": "0.08"
+        },
+        {
+          "tier": "pu",
+          "rank": 108,
+          "usage": "0.50"
+        },
+        {
           "tier": "zu",
           "rank": 19,
           "usage": "9.44"
@@ -41587,16 +41597,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 362,
           "usage": "0.03"
-        },
-        {
-          "tier": "nu",
-          "rank": 162,
-          "usage": "0.08"
-        },
-        {
-          "tier": "pu",
-          "rank": 108,
-          "usage": "0.50"
         }
       ],
       "types": [
@@ -41668,9 +41668,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 187,
-          "usage": "0.07"
+          "tier": "nu",
+          "rank": 13,
+          "usage": "12.53"
         },
         {
           "tier": "ru",
@@ -41678,9 +41678,9 @@ window.localDB = {
           "usage": "0.11"
         },
         {
-          "tier": "ubers",
-          "rank": 316,
-          "usage": "0.01"
+          "tier": "uu",
+          "rank": 187,
+          "usage": "0.07"
         },
         {
           "tier": "ou",
@@ -41688,19 +41688,19 @@ window.localDB = {
           "usage": "0.02"
         },
         {
-          "tier": "doublesou",
-          "rank": 356,
-          "usage": "0.01"
-        },
-        {
-          "tier": "nu",
-          "rank": 13,
-          "usage": "12.53"
-        },
-        {
           "tier": "monotype",
           "rank": 271,
           "usage": "0.05"
+        },
+        {
+          "tier": "ubers",
+          "rank": 316,
+          "usage": "0.01"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 356,
+          "usage": "0.01"
         }
       ],
       "types": [
@@ -41771,21 +41771,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 232,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ru",
-          "rank": 257,
-          "usage": "0.01"
-        },
-        {
-          "tier": "zu",
-          "rank": 1,
-          "usage": "42.27"
-        },
-        {
           "tier": "nu",
           "rank": 72,
           "usage": "1.49"
@@ -41794,6 +41779,21 @@ window.localDB = {
           "tier": "pu",
           "rank": 56,
           "usage": "2.62"
+        },
+        {
+          "tier": "zu",
+          "rank": 1,
+          "usage": "42.27"
+        },
+        {
+          "tier": "ru",
+          "rank": 257,
+          "usage": "0.01"
+        },
+        {
+          "tier": "uu",
+          "rank": 232,
+          "usage": "0.02"
         }
       ],
       "types": [
@@ -41924,24 +41924,24 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 69,
-          "usage": "1.58"
-        },
-        {
           "tier": "ru",
           "rank": 87,
           "usage": "1.23"
         },
         {
-          "tier": "ubers",
-          "rank": 235,
-          "usage": "0.04"
+          "tier": "uu",
+          "rank": 69,
+          "usage": "1.58"
         },
         {
           "tier": "ou",
           "rank": 185,
           "usage": "0.09"
+        },
+        {
+          "tier": "ubers",
+          "rank": 235,
+          "usage": "0.04"
         },
         {
           "tier": "doublesou",
@@ -42338,24 +42338,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 13,
-          "usage": "13.49"
-        },
-        {
           "tier": "vgc2025",
           "rank": 146,
           "usage": "0.12"
         },
         {
-          "tier": "ubers",
-          "rank": 130,
-          "usage": "0.30"
+          "tier": "uu",
+          "rank": 13,
+          "usage": "13.49"
         },
         {
           "tier": "ou",
           "rank": 49,
           "usage": "3.19"
+        },
+        {
+          "tier": "monotype",
+          "rank": 12,
+          "usage": "9.86"
+        },
+        {
+          "tier": "ubers",
+          "rank": 130,
+          "usage": "0.30"
         },
         {
           "tier": "doublesou",
@@ -42366,11 +42371,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 30,
           "usage": "6.97"
-        },
-        {
-          "tier": "monotype",
-          "rank": 12,
-          "usage": "9.86"
         }
       ],
       "types": [
@@ -42656,14 +42656,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 255,
-          "usage": "0.02"
+          "tier": "pu",
+          "rank": 142,
+          "usage": "0.21"
         },
         {
-          "tier": "ru",
-          "rank": 236,
-          "usage": "0.03"
+          "tier": "vgc2025",
+          "rank": 243,
+          "usage": "0.02"
         },
         {
           "tier": "zu",
@@ -42671,9 +42671,19 @@ window.localDB = {
           "usage": "0.33"
         },
         {
-          "tier": "vgc2025",
-          "rank": 243,
+          "tier": "ru",
+          "rank": 236,
+          "usage": "0.03"
+        },
+        {
+          "tier": "uu",
+          "rank": 255,
           "usage": "0.02"
+        },
+        {
+          "tier": "monotype",
+          "rank": 332,
+          "usage": "0.01"
         },
         {
           "tier": "ubers",
@@ -42689,16 +42699,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 432,
           "usage": "0.02"
-        },
-        {
-          "tier": "pu",
-          "rank": 142,
-          "usage": "0.21"
-        },
-        {
-          "tier": "monotype",
-          "rank": 332,
-          "usage": "0.01"
         }
       ],
       "types": [
@@ -42831,9 +42831,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 88,
-          "usage": "0.94"
+          "tier": "vgc2025",
+          "rank": 74,
+          "usage": "0.68"
         },
         {
           "tier": "ru",
@@ -42841,19 +42841,24 @@ window.localDB = {
           "usage": "7.26"
         },
         {
-          "tier": "vgc2025",
-          "rank": 74,
-          "usage": "0.68"
-        },
-        {
-          "tier": "ubers",
-          "rank": 109,
-          "usage": "0.43"
+          "tier": "uu",
+          "rank": 88,
+          "usage": "0.94"
         },
         {
           "tier": "ou",
           "rank": 31,
           "usage": "6.25"
+        },
+        {
+          "tier": "monotype",
+          "rank": 231,
+          "usage": "0.10"
+        },
+        {
+          "tier": "ubers",
+          "rank": 109,
+          "usage": "0.43"
         },
         {
           "tier": "doublesou",
@@ -42864,11 +42869,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 79,
           "usage": "1.70"
-        },
-        {
-          "tier": "monotype",
-          "rank": 231,
-          "usage": "0.10"
         }
       ],
       "types": [
@@ -43179,14 +43179,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 188,
-          "usage": "0.12"
-        },
-        {
           "tier": "zu",
           "rank": 230,
           "usage": "0.01"
+        },
+        {
+          "tier": "ru",
+          "rank": 188,
+          "usage": "0.12"
         }
       ],
       "types": [
@@ -43231,14 +43231,19 @@ window.localDB = {
           "usage": "16.52"
         },
         {
-          "tier": "ubers",
-          "rank": 169,
-          "usage": "0.11"
-        },
-        {
           "tier": "ou",
           "rank": 75,
           "usage": "1.62"
+        },
+        {
+          "tier": "monotype",
+          "rank": 177,
+          "usage": "0.24"
+        },
+        {
+          "tier": "ubers",
+          "rank": 169,
+          "usage": "0.11"
         },
         {
           "tier": "doublesou",
@@ -43249,11 +43254,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 107,
           "usage": "0.93"
-        },
-        {
-          "tier": "monotype",
-          "rank": 177,
-          "usage": "0.24"
         }
       ],
       "types": [
@@ -43464,11 +43464,6 @@ window.localDB = {
           "usage": "0.75"
         },
         {
-          "tier": "ubers",
-          "rank": 110,
-          "usage": "0.42"
-        },
-        {
           "tier": "ou",
           "rank": 23,
           "usage": "9.38"
@@ -43477,6 +43472,11 @@ window.localDB = {
           "tier": "monotype",
           "rank": 74,
           "usage": "2.82"
+        },
+        {
+          "tier": "ubers",
+          "rank": 110,
+          "usage": "0.42"
         }
       ],
       "types": [
@@ -43697,26 +43697,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 125,
-          "usage": "0.45"
-        },
-        {
-          "tier": "zu",
-          "rank": 175,
-          "usage": "0.10"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 192,
-          "usage": "0.05"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 368,
-          "usage": "0.03"
-        },
-        {
           "tier": "nu",
           "rank": 134,
           "usage": "0.21"
@@ -43727,9 +43707,29 @@ window.localDB = {
           "usage": "5.69"
         },
         {
+          "tier": "vgc2025",
+          "rank": 192,
+          "usage": "0.05"
+        },
+        {
+          "tier": "zu",
+          "rank": 175,
+          "usage": "0.10"
+        },
+        {
+          "tier": "ru",
+          "rank": 125,
+          "usage": "0.45"
+        },
+        {
           "tier": "monotype",
           "rank": 190,
           "usage": "0.21"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 368,
+          "usage": "0.03"
         }
       ],
       "types": [
@@ -44200,14 +44200,19 @@ window.localDB = {
           "usage": "5.45"
         },
         {
-          "tier": "ubers",
-          "rank": 144,
-          "usage": "0.20"
-        },
-        {
           "tier": "ou",
           "rank": 78,
           "usage": "1.32"
+        },
+        {
+          "tier": "monotype",
+          "rank": 188,
+          "usage": "0.21"
+        },
+        {
+          "tier": "ubers",
+          "rank": 144,
+          "usage": "0.20"
         },
         {
           "tier": "doublesou",
@@ -44218,11 +44223,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 80,
           "usage": "1.68"
-        },
-        {
-          "tier": "monotype",
-          "rank": 188,
-          "usage": "0.21"
         }
       ],
       "types": [
@@ -44556,26 +44556,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 211,
-          "usage": "0.04"
-        },
-        {
-          "tier": "ru",
-          "rank": 179,
-          "usage": "0.14"
-        },
-        {
-          "tier": "ou",
-          "rank": 186,
-          "usage": "0.09"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 428,
-          "usage": "0.02"
-        },
-        {
           "tier": "nu",
           "rank": 157,
           "usage": "0.09"
@@ -44586,9 +44566,29 @@ window.localDB = {
           "usage": "3.03"
         },
         {
+          "tier": "ru",
+          "rank": 179,
+          "usage": "0.14"
+        },
+        {
+          "tier": "uu",
+          "rank": 211,
+          "usage": "0.04"
+        },
+        {
+          "tier": "ou",
+          "rank": 186,
+          "usage": "0.09"
+        },
+        {
           "tier": "monotype",
           "rank": 254,
           "usage": "0.07"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 428,
+          "usage": "0.02"
         }
       ],
       "types": [
@@ -44771,21 +44771,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 211,
-          "usage": "0.07"
-        },
-        {
-          "tier": "zu",
-          "rank": 40,
-          "usage": "4.17"
-        },
-        {
-          "tier": "ou",
-          "rank": 161,
-          "usage": "0.14"
-        },
-        {
           "tier": "nu",
           "rank": 212,
           "usage": "0.01"
@@ -44794,6 +44779,21 @@ window.localDB = {
           "tier": "pu",
           "rank": 205,
           "usage": "0.03"
+        },
+        {
+          "tier": "zu",
+          "rank": 40,
+          "usage": "4.17"
+        },
+        {
+          "tier": "ru",
+          "rank": 211,
+          "usage": "0.07"
+        },
+        {
+          "tier": "ou",
+          "rank": 161,
+          "usage": "0.14"
         }
       ],
       "types": [
@@ -45782,14 +45782,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 212,
+          "tier": "nu",
+          "rank": 177,
           "usage": "0.04"
-        },
-        {
-          "tier": "zu",
-          "rank": 149,
-          "usage": "0.17"
         },
         {
           "tier": "vgc2025",
@@ -45797,8 +45792,13 @@ window.localDB = {
           "usage": "0.03"
         },
         {
-          "tier": "nu",
-          "rank": 177,
+          "tier": "zu",
+          "rank": 149,
+          "usage": "0.17"
+        },
+        {
+          "tier": "uu",
+          "rank": 212,
           "usage": "0.04"
         }
       ],
@@ -46165,24 +46165,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 2,
-          "usage": "25.78"
-        },
-        {
           "tier": "vgc2025",
           "rank": 164,
           "usage": "0.08"
         },
         {
-          "tier": "ubers",
-          "rank": 106,
-          "usage": "0.47"
+          "tier": "uu",
+          "rank": 2,
+          "usage": "25.78"
         },
         {
           "tier": "ou",
           "rank": 55,
           "usage": "2.72"
+        },
+        {
+          "tier": "monotype",
+          "rank": 38,
+          "usage": "5.20"
+        },
+        {
+          "tier": "ubers",
+          "rank": 106,
+          "usage": "0.47"
         },
         {
           "tier": "doublesou",
@@ -46193,11 +46198,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 52,
           "usage": "2.93"
-        },
-        {
-          "tier": "monotype",
-          "rank": 38,
-          "usage": "5.20"
         }
       ],
       "types": [
@@ -46513,11 +46513,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 41,
-          "usage": "4.10"
-        },
-        {
           "tier": "nu",
           "rank": 189,
           "usage": "0.03"
@@ -46526,6 +46521,11 @@ window.localDB = {
           "tier": "pu",
           "rank": 169,
           "usage": "0.09"
+        },
+        {
+          "tier": "zu",
+          "rank": 41,
+          "usage": "4.10"
         }
       ],
       "types": [
@@ -46589,24 +46589,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 5,
-          "usage": "17.47"
-        },
-        {
           "tier": "vgc2025",
           "rank": 274,
           "usage": "0.01"
         },
         {
-          "tier": "ubers",
-          "rank": 203,
-          "usage": "0.07"
+          "tier": "uu",
+          "rank": 5,
+          "usage": "17.47"
         },
         {
           "tier": "ou",
           "rank": 147,
           "usage": "0.18"
+        },
+        {
+          "tier": "monotype",
+          "rank": 207,
+          "usage": "0.16"
+        },
+        {
+          "tier": "ubers",
+          "rank": 203,
+          "usage": "0.07"
         },
         {
           "tier": "doublesou",
@@ -46617,11 +46622,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 139,
           "usage": "0.50"
-        },
-        {
-          "tier": "monotype",
-          "rank": 207,
-          "usage": "0.16"
         }
       ],
       "types": [
@@ -47033,14 +47033,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "nationaldex",
-          "rank": 411,
-          "usage": "0.02"
-        },
-        {
           "tier": "monotype",
           "rank": 157,
           "usage": "0.38"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 411,
+          "usage": "0.02"
         }
       ],
       "types": [
@@ -47089,14 +47089,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 239,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ru",
-          "rank": 258,
-          "usage": "0.01"
+          "tier": "pu",
+          "rank": 152,
+          "usage": "0.15"
         },
         {
           "tier": "zu",
@@ -47104,14 +47099,29 @@ window.localDB = {
           "usage": "0.32"
         },
         {
-          "tier": "ubers",
-          "rank": 279,
+          "tier": "ru",
+          "rank": 258,
+          "usage": "0.01"
+        },
+        {
+          "tier": "uu",
+          "rank": 239,
           "usage": "0.02"
         },
         {
           "tier": "ou",
           "rank": 240,
           "usage": "0.04"
+        },
+        {
+          "tier": "monotype",
+          "rank": 168,
+          "usage": "0.29"
+        },
+        {
+          "tier": "ubers",
+          "rank": 279,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -47122,16 +47132,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 229,
           "usage": "0.14"
-        },
-        {
-          "tier": "pu",
-          "rank": 152,
-          "usage": "0.15"
-        },
-        {
-          "tier": "monotype",
-          "rank": 168,
-          "usage": "0.29"
         }
       ],
       "types": [
@@ -47338,14 +47338,14 @@ window.localDB = {
           "usage": "1.57"
         },
         {
-          "tier": "ubers",
-          "rank": 223,
-          "usage": "0.05"
-        },
-        {
           "tier": "nu",
           "rank": 192,
           "usage": "0.03"
+        },
+        {
+          "tier": "ubers",
+          "rank": 223,
+          "usage": "0.05"
         }
       ],
       "types": [
@@ -47410,46 +47410,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 216,
-          "usage": "0.03"
-        },
-        {
-          "tier": "ru",
-          "rank": 117,
-          "usage": "0.50"
-        },
-        {
-          "tier": "zu",
-          "rank": 6,
-          "usage": "19.98"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 10,
-          "usage": "17.12"
-        },
-        {
-          "tier": "ubers",
-          "rank": 118,
-          "usage": "0.36"
-        },
-        {
-          "tier": "ou",
-          "rank": 107,
-          "usage": "0.48"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 33,
-          "usage": "6.50"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 211,
-          "usage": "0.19"
-        },
-        {
           "tier": "nu",
           "rank": 66,
           "usage": "1.79"
@@ -47460,9 +47420,49 @@ window.localDB = {
           "usage": "1.90"
         },
         {
+          "tier": "vgc2025",
+          "rank": 10,
+          "usage": "17.12"
+        },
+        {
+          "tier": "zu",
+          "rank": 6,
+          "usage": "19.98"
+        },
+        {
+          "tier": "ru",
+          "rank": 117,
+          "usage": "0.50"
+        },
+        {
+          "tier": "uu",
+          "rank": 216,
+          "usage": "0.03"
+        },
+        {
+          "tier": "ou",
+          "rank": 107,
+          "usage": "0.48"
+        },
+        {
           "tier": "monotype",
           "rank": 182,
           "usage": "0.22"
+        },
+        {
+          "tier": "ubers",
+          "rank": 118,
+          "usage": "0.36"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 33,
+          "usage": "6.50"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 211,
+          "usage": "0.19"
         }
       ],
       "types": [
@@ -47802,9 +47802,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 129,
-          "usage": "0.41"
+          "tier": "pu",
+          "rank": 127,
+          "usage": "0.30"
+        },
+        {
+          "tier": "vgc2025",
+          "rank": 154,
+          "usage": "0.10"
         },
         {
           "tier": "zu",
@@ -47812,9 +47817,9 @@ window.localDB = {
           "usage": "2.11"
         },
         {
-          "tier": "vgc2025",
-          "rank": 154,
-          "usage": "0.10"
+          "tier": "ru",
+          "rank": 129,
+          "usage": "0.41"
         },
         {
           "tier": "ou",
@@ -47830,11 +47835,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 454,
           "usage": "0.01"
-        },
-        {
-          "tier": "pu",
-          "rank": 127,
-          "usage": "0.30"
         }
       ],
       "types": [
@@ -47844,7 +47844,7 @@ window.localDB = {
         {
           "name": "Quiver Dance",
           "tier": "zu",
-          "ability": "Chlorophyll",
+          "ability": "Own Tempo",
           "item": "Life Orb",
           "nature": "Modest",
           "teraType": "Poison / Fairy / Electric",
@@ -47898,16 +47898,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 201,
-          "usage": "0.08"
-        },
-        {
-          "tier": "zu",
-          "rank": 8,
-          "usage": "16.96"
-        },
-        {
           "tier": "nu",
           "rank": 126,
           "usage": "0.28"
@@ -47916,6 +47906,16 @@ window.localDB = {
           "tier": "pu",
           "rank": 154,
           "usage": "0.13"
+        },
+        {
+          "tier": "zu",
+          "rank": 8,
+          "usage": "16.96"
+        },
+        {
+          "tier": "ru",
+          "rank": 201,
+          "usage": "0.08"
         }
       ],
       "types": [
@@ -48112,24 +48112,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 44,
-          "usage": "4.56"
-        },
-        {
           "tier": "ru",
           "rank": 4,
           "usage": "18.66"
         },
         {
-          "tier": "ubers",
-          "rank": 202,
-          "usage": "0.07"
+          "tier": "uu",
+          "rank": 44,
+          "usage": "4.56"
         },
         {
           "tier": "ou",
           "rank": 156,
           "usage": "0.16"
+        },
+        {
+          "tier": "monotype",
+          "rank": 208,
+          "usage": "0.15"
+        },
+        {
+          "tier": "ubers",
+          "rank": 202,
+          "usage": "0.07"
         },
         {
           "tier": "doublesou",
@@ -48140,11 +48145,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 196,
           "usage": "0.24"
-        },
-        {
-          "tier": "monotype",
-          "rank": 208,
-          "usage": "0.15"
         }
       ],
       "types": [
@@ -48498,6 +48498,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "pu",
+          "rank": 211,
+          "usage": "0.02"
+        },
+        {
           "tier": "vgc2025",
           "rank": 132,
           "usage": "0.16"
@@ -48505,11 +48510,6 @@ window.localDB = {
         {
           "tier": "doublesou",
           "rank": 343,
-          "usage": "0.02"
-        },
-        {
-          "tier": "pu",
-          "rank": 211,
           "usage": "0.02"
         }
       ],
@@ -48521,7 +48521,7 @@ window.localDB = {
         {
           "name": "Bulk Up",
           "tier": "nfe",
-          "ability": "Intimidate",
+          "ability": "Shed Skin",
           "item": "Eviolite",
           "nature": "Careful",
           "teraType": "Normal",
@@ -48590,9 +48590,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 205,
-          "usage": "0.05"
+          "tier": "nu",
+          "rank": 39,
+          "usage": "4.85"
+        },
+        {
+          "tier": "vgc2025",
+          "rank": 152,
+          "usage": "0.10"
         },
         {
           "tier": "ru",
@@ -48600,9 +48605,14 @@ window.localDB = {
           "usage": "0.40"
         },
         {
-          "tier": "vgc2025",
-          "rank": 152,
-          "usage": "0.10"
+          "tier": "uu",
+          "rank": 205,
+          "usage": "0.05"
+        },
+        {
+          "tier": "monotype",
+          "rank": 121,
+          "usage": "1.06"
         },
         {
           "tier": "doublesou",
@@ -48613,16 +48623,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 386,
           "usage": "0.03"
-        },
-        {
-          "tier": "nu",
-          "rank": 39,
-          "usage": "4.85"
-        },
-        {
-          "tier": "monotype",
-          "rank": 121,
-          "usage": "1.06"
         }
       ],
       "types": [
@@ -49198,14 +49198,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 251,
-          "usage": "0.02"
+          "tier": "nu",
+          "rank": 117,
+          "usage": "0.41"
+        },
+        {
+          "tier": "pu",
+          "rank": 39,
+          "usage": "5.24"
         },
         {
           "tier": "ru",
           "rank": 225,
           "usage": "0.04"
+        },
+        {
+          "tier": "uu",
+          "rank": 251,
+          "usage": "0.02"
+        },
+        {
+          "tier": "monotype",
+          "rank": 295,
+          "usage": "0.03"
         },
         {
           "tier": "ubers",
@@ -49221,21 +49236,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 326,
           "usage": "0.05"
-        },
-        {
-          "tier": "nu",
-          "rank": 117,
-          "usage": "0.41"
-        },
-        {
-          "tier": "pu",
-          "rank": 39,
-          "usage": "5.24"
-        },
-        {
-          "tier": "monotype",
-          "rank": 295,
-          "usage": "0.03"
         }
       ],
       "types": [
@@ -49417,14 +49417,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 193,
-          "usage": "0.06"
-        },
-        {
-          "tier": "ru",
-          "rank": 75,
-          "usage": "1.54"
+          "tier": "nu",
+          "rank": 10,
+          "usage": "14.46"
         },
         {
           "tier": "vgc2025",
@@ -49432,14 +49427,29 @@ window.localDB = {
           "usage": "0.01"
         },
         {
-          "tier": "ubers",
-          "rank": 305,
-          "usage": "0.02"
+          "tier": "ru",
+          "rank": 75,
+          "usage": "1.54"
+        },
+        {
+          "tier": "uu",
+          "rank": 193,
+          "usage": "0.06"
         },
         {
           "tier": "ou",
           "rank": 253,
           "usage": "0.03"
+        },
+        {
+          "tier": "monotype",
+          "rank": 279,
+          "usage": "0.04"
+        },
+        {
+          "tier": "ubers",
+          "rank": 305,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -49450,16 +49460,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 319,
           "usage": "0.05"
-        },
-        {
-          "tier": "nu",
-          "rank": 10,
-          "usage": "14.46"
-        },
-        {
-          "tier": "monotype",
-          "rank": 279,
-          "usage": "0.04"
         }
       ],
       "types": [
@@ -49659,14 +49659,24 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 118,
-          "usage": "0.40"
+          "tier": "nu",
+          "rank": 210,
+          "usage": "0.01"
+        },
+        {
+          "tier": "pu",
+          "rank": 200,
+          "usage": "0.03"
         },
         {
           "tier": "vgc2025",
           "rank": 63,
           "usage": "0.89"
+        },
+        {
+          "tier": "zu",
+          "rank": 118,
+          "usage": "0.40"
         },
         {
           "tier": "ubers",
@@ -49677,16 +49687,6 @@ window.localDB = {
           "tier": "doublesou",
           "rank": 237,
           "usage": "0.08"
-        },
-        {
-          "tier": "nu",
-          "rank": 210,
-          "usage": "0.01"
-        },
-        {
-          "tier": "pu",
-          "rank": 200,
-          "usage": "0.03"
         }
       ],
       "types": [
@@ -49860,14 +49860,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 187,
-          "usage": "0.07"
-        },
-        {
           "tier": "pu",
           "rank": 194,
           "usage": "0.04"
+        },
+        {
+          "tier": "zu",
+          "rank": 187,
+          "usage": "0.07"
         }
       ],
       "types": [
@@ -49946,24 +49946,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 122,
-          "usage": "0.36"
-        },
-        {
           "tier": "ru",
           "rank": 52,
           "usage": "2.88"
         },
         {
-          "tier": "ubers",
-          "rank": 304,
-          "usage": "0.02"
+          "tier": "uu",
+          "rank": 122,
+          "usage": "0.36"
         },
         {
           "tier": "ou",
           "rank": 146,
           "usage": "0.18"
+        },
+        {
+          "tier": "monotype",
+          "rank": 212,
+          "usage": "0.14"
+        },
+        {
+          "tier": "ubers",
+          "rank": 304,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -49974,11 +49979,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 164,
           "usage": "0.36"
-        },
-        {
-          "tier": "monotype",
-          "rank": 212,
-          "usage": "0.14"
         }
       ],
       "types": [
@@ -50153,9 +50153,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 244,
-          "usage": "0.02"
+          "tier": "pu",
+          "rank": 141,
+          "usage": "0.22"
         },
         {
           "tier": "zu",
@@ -50163,9 +50163,9 @@ window.localDB = {
           "usage": "2.22"
         },
         {
-          "tier": "pu",
-          "rank": 141,
-          "usage": "0.22"
+          "tier": "uu",
+          "rank": 244,
+          "usage": "0.02"
         }
       ],
       "types": [
@@ -50447,16 +50447,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 155,
-          "usage": "0.15"
-        },
-        {
-          "tier": "ubers",
-          "rank": 310,
-          "usage": "0.02"
-        },
-        {
           "tier": "nu",
           "rank": 151,
           "usage": "0.10"
@@ -50467,8 +50457,18 @@ window.localDB = {
           "usage": "0.15"
         },
         {
+          "tier": "zu",
+          "rank": 155,
+          "usage": "0.15"
+        },
+        {
           "tier": "monotype",
           "rank": 314,
+          "usage": "0.02"
+        },
+        {
+          "tier": "ubers",
+          "rank": 310,
           "usage": "0.02"
         }
       ],
@@ -50729,41 +50729,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 137,
-          "usage": "0.24"
-        },
-        {
-          "tier": "ru",
-          "rank": 70,
-          "usage": "1.77"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 14,
-          "usage": "15.64"
-        },
-        {
-          "tier": "ubers",
-          "rank": 84,
-          "usage": "0.67"
-        },
-        {
-          "tier": "ou",
-          "rank": 94,
-          "usage": "0.70"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 20,
-          "usage": "9.82"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 152,
-          "usage": "0.42"
-        },
-        {
           "tier": "nu",
           "rank": 67,
           "usage": "1.72"
@@ -50774,9 +50739,44 @@ window.localDB = {
           "usage": "3.56"
         },
         {
+          "tier": "vgc2025",
+          "rank": 14,
+          "usage": "15.64"
+        },
+        {
+          "tier": "ru",
+          "rank": 70,
+          "usage": "1.77"
+        },
+        {
+          "tier": "uu",
+          "rank": 137,
+          "usage": "0.24"
+        },
+        {
+          "tier": "ou",
+          "rank": 94,
+          "usage": "0.70"
+        },
+        {
           "tier": "monotype",
           "rank": 102,
           "usage": "1.69"
+        },
+        {
+          "tier": "ubers",
+          "rank": 84,
+          "usage": "0.67"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 20,
+          "usage": "9.82"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 152,
+          "usage": "0.42"
         }
       ],
       "types": [
@@ -51124,14 +51124,19 @@ window.localDB = {
           "usage": "0.03"
         },
         {
-          "tier": "ubers",
-          "rank": 36,
-          "usage": "3.73"
-        },
-        {
           "tier": "ou",
           "rank": 21,
           "usage": "10.34"
+        },
+        {
+          "tier": "monotype",
+          "rank": 84,
+          "usage": "2.30"
+        },
+        {
+          "tier": "ubers",
+          "rank": 36,
+          "usage": "3.73"
         },
         {
           "tier": "doublesou",
@@ -51142,11 +51147,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 1,
           "usage": "21.85"
-        },
-        {
-          "tier": "monotype",
-          "rank": 84,
-          "usage": "2.30"
         }
       ],
       "types": [
@@ -51396,36 +51396,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 182,
-          "usage": "0.08"
-        },
-        {
-          "tier": "ru",
-          "rank": 104,
-          "usage": "0.75"
-        },
-        {
-          "tier": "ubers",
-          "rank": 101,
-          "usage": "0.53"
-        },
-        {
-          "tier": "ou",
-          "rank": 194,
-          "usage": "0.07"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 254,
-          "usage": "0.06"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 228,
-          "usage": "0.15"
-        },
-        {
           "tier": "nu",
           "rank": 99,
           "usage": "0.72"
@@ -51436,9 +51406,39 @@ window.localDB = {
           "usage": "3.15"
         },
         {
+          "tier": "ru",
+          "rank": 104,
+          "usage": "0.75"
+        },
+        {
+          "tier": "uu",
+          "rank": 182,
+          "usage": "0.08"
+        },
+        {
+          "tier": "ou",
+          "rank": 194,
+          "usage": "0.07"
+        },
+        {
           "tier": "monotype",
           "rank": 146,
           "usage": "0.49"
+        },
+        {
+          "tier": "ubers",
+          "rank": 101,
+          "usage": "0.53"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 254,
+          "usage": "0.06"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 228,
+          "usage": "0.15"
         }
       ],
       "types": [
@@ -51979,26 +51979,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 197,
-          "usage": "0.09"
-        },
-        {
-          "tier": "zu",
-          "rank": 23,
-          "usage": "8.22"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 325,
-          "usage": "0.02"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 401,
-          "usage": "0.02"
-        },
-        {
           "tier": "nu",
           "rank": 181,
           "usage": "0.04"
@@ -52009,9 +51989,29 @@ window.localDB = {
           "usage": "0.43"
         },
         {
+          "tier": "zu",
+          "rank": 23,
+          "usage": "8.22"
+        },
+        {
+          "tier": "ru",
+          "rank": 197,
+          "usage": "0.09"
+        },
+        {
           "tier": "monotype",
           "rank": 266,
           "usage": "0.05"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 325,
+          "usage": "0.02"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 401,
+          "usage": "0.02"
         }
       ],
       "types": [
@@ -52315,14 +52315,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 133,
-          "usage": "0.25"
-        },
-        {
-          "tier": "ru",
-          "rank": 81,
-          "usage": "1.44"
+          "tier": "nu",
+          "rank": 24,
+          "usage": "8.46"
         },
         {
           "tier": "vgc2025",
@@ -52330,14 +52325,29 @@ window.localDB = {
           "usage": "0.03"
         },
         {
-          "tier": "ubers",
-          "rank": 312,
-          "usage": "0.01"
+          "tier": "ru",
+          "rank": 81,
+          "usage": "1.44"
+        },
+        {
+          "tier": "uu",
+          "rank": 133,
+          "usage": "0.25"
         },
         {
           "tier": "ou",
           "rank": 227,
           "usage": "0.05"
+        },
+        {
+          "tier": "monotype",
+          "rank": 172,
+          "usage": "0.27"
+        },
+        {
+          "tier": "ubers",
+          "rank": 312,
+          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -52348,16 +52358,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 173,
           "usage": "0.33"
-        },
-        {
-          "tier": "nu",
-          "rank": 24,
-          "usage": "8.46"
-        },
-        {
-          "tier": "monotype",
-          "rank": 172,
-          "usage": "0.27"
         }
       ],
       "types": [
@@ -52368,7 +52368,7 @@ window.localDB = {
         {
           "name": "Choice Specs",
           "tier": "nu",
-          "ability": "Infiltrator",
+          "ability": "Flash Fire",
           "item": "Choice Specs",
           "nature": "Timid / Modest",
           "teraType": "Grass / Fire",
@@ -52383,7 +52383,7 @@ window.localDB = {
         {
           "name": "Choice Scarf",
           "tier": "nu",
-          "ability": "Infiltrator",
+          "ability": "Flash Fire",
           "item": "Choice Scarf",
           "nature": "Timid",
           "teraType": "Grass / Fire",
@@ -52413,7 +52413,7 @@ window.localDB = {
         {
           "name": "Choice Specs (Spe)",
           "tier": "godlygift",
-          "ability": "Infiltrator",
+          "ability": "Flash Fire",
           "item": "Choice Specs",
           "nature": "Timid",
           "teraType": "Normal",
@@ -52629,24 +52629,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 70,
-          "usage": "1.57"
-        },
-        {
           "tier": "vgc2025",
           "rank": 282,
           "usage": "0.01"
         },
         {
-          "tier": "ubers",
-          "rank": 221,
-          "usage": "0.05"
+          "tier": "uu",
+          "rank": 70,
+          "usage": "1.57"
         },
         {
           "tier": "ou",
           "rank": 114,
           "usage": "0.37"
+        },
+        {
+          "tier": "monotype",
+          "rank": 220,
+          "usage": "0.11"
+        },
+        {
+          "tier": "ubers",
+          "rank": 221,
+          "usage": "0.05"
         },
         {
           "tier": "doublesou",
@@ -52657,11 +52662,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 230,
           "usage": "0.14"
-        },
-        {
-          "tier": "monotype",
-          "rank": 220,
-          "usage": "0.11"
         }
       ],
       "types": [
@@ -52835,14 +52835,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 225,
-          "usage": "0.02"
+          "tier": "nu",
+          "rank": 180,
+          "usage": "0.04"
         },
         {
-          "tier": "ru",
-          "rank": 160,
-          "usage": "0.21"
+          "tier": "pu",
+          "rank": 132,
+          "usage": "0.27"
         },
         {
           "tier": "zu",
@@ -52850,14 +52850,24 @@ window.localDB = {
           "usage": "2.53"
         },
         {
-          "tier": "ubers",
-          "rank": 278,
+          "tier": "ru",
+          "rank": 160,
+          "usage": "0.21"
+        },
+        {
+          "tier": "uu",
+          "rank": 225,
           "usage": "0.02"
         },
         {
           "tier": "ou",
           "rank": 250,
           "usage": "0.03"
+        },
+        {
+          "tier": "ubers",
+          "rank": 278,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -52868,16 +52878,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 360,
           "usage": "0.03"
-        },
-        {
-          "tier": "nu",
-          "rank": 180,
-          "usage": "0.04"
-        },
-        {
-          "tier": "pu",
-          "rank": 132,
-          "usage": "0.27"
         }
       ],
       "types": [
@@ -52941,16 +52941,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 205,
-          "usage": "0.08"
-        },
-        {
-          "tier": "zu",
-          "rank": 31,
-          "usage": "6.15"
-        },
-        {
           "tier": "nu",
           "rank": 182,
           "usage": "0.04"
@@ -52959,6 +52949,16 @@ window.localDB = {
           "tier": "pu",
           "rank": 112,
           "usage": "0.46"
+        },
+        {
+          "tier": "zu",
+          "rank": 31,
+          "usage": "6.15"
+        },
+        {
+          "tier": "ru",
+          "rank": 205,
+          "usage": "0.08"
         },
         {
           "tier": "monotype",
@@ -53296,19 +53296,24 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 100,
-          "usage": "0.70"
-        },
-        {
           "tier": "vgc2025",
           "rank": 117,
           "usage": "0.21"
         },
         {
+          "tier": "uu",
+          "rank": 100,
+          "usage": "0.70"
+        },
+        {
           "tier": "ou",
           "rank": 218,
           "usage": "0.05"
+        },
+        {
+          "tier": "monotype",
+          "rank": 273,
+          "usage": "0.04"
         },
         {
           "tier": "doublesou",
@@ -53319,11 +53324,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 256,
           "usage": "0.09"
-        },
-        {
-          "tier": "monotype",
-          "rank": 273,
-          "usage": "0.04"
         }
       ],
       "types": [
@@ -53333,7 +53333,7 @@ window.localDB = {
         {
           "name": "Offensive Utility",
           "tier": "vgc2024",
-          "ability": "Regenerator",
+          "ability": "Inner Focus",
           "item": "Focus Sash",
           "nature": "Jolly / Adamant",
           "teraType": "Normal",
@@ -53523,31 +53523,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 223,
-          "usage": "0.03"
-        },
-        {
-          "tier": "ru",
-          "rank": 88,
-          "usage": "1.17"
-        },
-        {
-          "tier": "ou",
-          "rank": 270,
-          "usage": "0.02"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 249,
-          "usage": "0.06"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 262,
-          "usage": "0.09"
-        },
-        {
           "tier": "nu",
           "rank": 60,
           "usage": "2.75"
@@ -53558,9 +53533,34 @@ window.localDB = {
           "usage": "8.59"
         },
         {
+          "tier": "ru",
+          "rank": 88,
+          "usage": "1.17"
+        },
+        {
+          "tier": "uu",
+          "rank": 223,
+          "usage": "0.03"
+        },
+        {
+          "tier": "ou",
+          "rank": 270,
+          "usage": "0.02"
+        },
+        {
           "tier": "monotype",
           "rank": 142,
           "usage": "0.52"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 249,
+          "usage": "0.06"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 262,
+          "usage": "0.09"
         }
       ],
       "types": [
@@ -53690,13 +53690,13 @@ window.localDB = {
           "usage": "1.86"
         },
         {
-          "tier": "zu",
-          "rank": 221,
+          "tier": "pu",
+          "rank": 210,
           "usage": "0.02"
         },
         {
-          "tier": "pu",
-          "rank": 210,
+          "tier": "zu",
+          "rank": 221,
           "usage": "0.02"
         }
       ],
@@ -53777,24 +53777,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 41,
-          "usage": "4.68"
-        },
-        {
           "tier": "ru",
           "rank": 2,
           "usage": "20.42"
         },
         {
-          "tier": "ubers",
-          "rank": 267,
-          "usage": "0.03"
+          "tier": "uu",
+          "rank": 41,
+          "usage": "4.68"
         },
         {
           "tier": "ou",
           "rank": 216,
           "usage": "0.05"
+        },
+        {
+          "tier": "monotype",
+          "rank": 51,
+          "usage": "4.33"
+        },
+        {
+          "tier": "ubers",
+          "rank": 267,
+          "usage": "0.03"
         },
         {
           "tier": "doublesou",
@@ -53805,11 +53810,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 174,
           "usage": "0.32"
-        },
-        {
-          "tier": "monotype",
-          "rank": 51,
-          "usage": "4.33"
         }
       ],
       "types": [
@@ -54096,14 +54096,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 171,
-          "usage": "0.10"
-        },
-        {
-          "tier": "ru",
-          "rank": 143,
-          "usage": "0.32"
+          "tier": "nu",
+          "rank": 37,
+          "usage": "5.08"
         },
         {
           "tier": "vgc2025",
@@ -54111,19 +54106,24 @@ window.localDB = {
           "usage": "0.05"
         },
         {
-          "tier": "doublesou",
-          "rank": 352,
-          "usage": "0.01"
+          "tier": "ru",
+          "rank": 143,
+          "usage": "0.32"
         },
         {
-          "tier": "nu",
-          "rank": 37,
-          "usage": "5.08"
+          "tier": "uu",
+          "rank": 171,
+          "usage": "0.10"
         },
         {
           "tier": "monotype",
           "rank": 154,
           "usage": "0.40"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 352,
+          "usage": "0.01"
         }
       ],
       "types": [
@@ -54208,14 +54208,14 @@ window.localDB = {
           "usage": "69.58"
         },
         {
-          "tier": "zu",
-          "rank": 116,
-          "usage": "0.41"
-        },
-        {
           "tier": "pu",
           "rank": 220,
           "usage": "0.01"
+        },
+        {
+          "tier": "zu",
+          "rank": 116,
+          "usage": "0.41"
         }
       ],
       "types": [
@@ -54315,14 +54315,19 @@ window.localDB = {
           "usage": "19.23"
         },
         {
-          "tier": "ubers",
-          "rank": 114,
-          "usage": "0.41"
-        },
-        {
           "tier": "ou",
           "rank": 70,
           "usage": "1.77"
+        },
+        {
+          "tier": "monotype",
+          "rank": 40,
+          "usage": "5.09"
+        },
+        {
+          "tier": "ubers",
+          "rank": 114,
+          "usage": "0.41"
         },
         {
           "tier": "doublesou",
@@ -54333,11 +54338,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 191,
           "usage": "0.26"
-        },
-        {
-          "tier": "monotype",
-          "rank": 40,
-          "usage": "5.09"
         }
       ],
       "types": [
@@ -54739,24 +54739,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 38,
-          "usage": "5.63"
-        },
-        {
           "tier": "vgc2025",
           "rank": 262,
           "usage": "0.01"
         },
         {
-          "tier": "ubers",
-          "rank": 228,
-          "usage": "0.05"
+          "tier": "uu",
+          "rank": 38,
+          "usage": "5.63"
         },
         {
           "tier": "ou",
           "rank": 76,
           "usage": "1.55"
+        },
+        {
+          "tier": "monotype",
+          "rank": 76,
+          "usage": "2.66"
+        },
+        {
+          "tier": "ubers",
+          "rank": 228,
+          "usage": "0.05"
         },
         {
           "tier": "doublesou",
@@ -54767,11 +54772,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 91,
           "usage": "1.26"
-        },
-        {
-          "tier": "monotype",
-          "rank": 76,
-          "usage": "2.66"
         }
       ],
       "types": [
@@ -55106,6 +55106,11 @@ window.localDB = {
           "usage": "10.21"
         },
         {
+          "tier": "monotype",
+          "rank": 20,
+          "usage": "7.64"
+        },
+        {
           "tier": "ubers",
           "rank": 60,
           "usage": "1.25"
@@ -55119,11 +55124,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 28,
           "usage": "7.40"
-        },
-        {
-          "tier": "monotype",
-          "rank": 20,
-          "usage": "7.64"
         }
       ],
       "types": [
@@ -55454,24 +55454,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 37,
-          "usage": "5.89"
-        },
-        {
           "tier": "vgc2025",
           "rank": 248,
           "usage": "0.02"
         },
         {
-          "tier": "ubers",
-          "rank": 307,
-          "usage": "0.02"
+          "tier": "uu",
+          "rank": 37,
+          "usage": "5.89"
         },
         {
           "tier": "ou",
           "rank": 171,
           "usage": "0.12"
+        },
+        {
+          "tier": "monotype",
+          "rank": 135,
+          "usage": "0.57"
+        },
+        {
+          "tier": "ubers",
+          "rank": 307,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -55482,11 +55487,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 301,
           "usage": "0.06"
-        },
-        {
-          "tier": "monotype",
-          "rank": 135,
-          "usage": "0.57"
         }
       ],
       "types": [
@@ -55618,9 +55618,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 97,
-          "usage": "0.77"
+          "tier": "vgc2025",
+          "rank": 267,
+          "usage": "0.01"
         },
         {
           "tier": "ru",
@@ -55628,14 +55628,19 @@ window.localDB = {
           "usage": "6.28"
         },
         {
-          "tier": "vgc2025",
-          "rank": 267,
-          "usage": "0.01"
+          "tier": "uu",
+          "rank": 97,
+          "usage": "0.77"
         },
         {
           "tier": "ou",
           "rank": 267,
           "usage": "0.02"
+        },
+        {
+          "tier": "monotype",
+          "rank": 175,
+          "usage": "0.26"
         },
         {
           "tier": "doublesou",
@@ -55646,11 +55651,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 406,
           "usage": "0.02"
-        },
-        {
-          "tier": "monotype",
-          "rank": 175,
-          "usage": "0.26"
         }
       ],
       "types": [
@@ -55827,16 +55827,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 230,
-          "usage": "0.04"
-        },
-        {
-          "tier": "zu",
-          "rank": 30,
-          "usage": "6.72"
-        },
-        {
           "tier": "nu",
           "rank": 119,
           "usage": "0.40"
@@ -55845,6 +55835,16 @@ window.localDB = {
           "tier": "pu",
           "rank": 70,
           "usage": "1.44"
+        },
+        {
+          "tier": "zu",
+          "rank": 30,
+          "usage": "6.72"
+        },
+        {
+          "tier": "ru",
+          "rank": 230,
+          "usage": "0.04"
         }
       ],
       "types": [
@@ -55901,9 +55901,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 128,
-          "usage": "0.29"
+          "tier": "nu",
+          "rank": 34,
+          "usage": "6.74"
+        },
+        {
+          "tier": "vgc2025",
+          "rank": 11,
+          "usage": "17.12"
         },
         {
           "tier": "ru",
@@ -55911,9 +55916,9 @@ window.localDB = {
           "usage": "2.17"
         },
         {
-          "tier": "vgc2025",
-          "rank": 11,
-          "usage": "17.12"
+          "tier": "uu",
+          "rank": 128,
+          "usage": "0.29"
         },
         {
           "tier": "ou",
@@ -55929,11 +55934,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 286,
           "usage": "0.06"
-        },
-        {
-          "tier": "nu",
-          "rank": 34,
-          "usage": "6.74"
         }
       ],
       "types": [
@@ -56173,24 +56173,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 34,
-          "usage": "6.29"
-        },
-        {
           "tier": "vgc2025",
           "rank": 57,
           "usage": "1.13"
         },
         {
-          "tier": "ubers",
-          "rank": 264,
-          "usage": "0.03"
+          "tier": "uu",
+          "rank": 34,
+          "usage": "6.29"
         },
         {
           "tier": "ou",
           "rank": 179,
           "usage": "0.10"
+        },
+        {
+          "tier": "monotype",
+          "rank": 198,
+          "usage": "0.18"
+        },
+        {
+          "tier": "ubers",
+          "rank": 264,
+          "usage": "0.03"
         },
         {
           "tier": "doublesou",
@@ -56201,11 +56206,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 247,
           "usage": "0.11"
-        },
-        {
-          "tier": "monotype",
-          "rank": 198,
-          "usage": "0.18"
         }
       ],
       "types": [
@@ -56514,6 +56514,11 @@ window.localDB = {
           "usage": "11.83"
         },
         {
+          "tier": "monotype",
+          "rank": 5,
+          "usage": "11.88"
+        },
+        {
           "tier": "ubers",
           "rank": 100,
           "usage": "0.54"
@@ -56522,11 +56527,6 @@ window.localDB = {
           "tier": "doublesou",
           "rank": 2,
           "usage": "19.36"
-        },
-        {
-          "tier": "monotype",
-          "rank": 5,
-          "usage": "11.88"
         }
       ],
       "types": [
@@ -56857,14 +56857,19 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ubers",
-          "rank": 195,
-          "usage": "0.07"
-        },
-        {
           "tier": "ou",
           "rank": 6,
           "usage": "17.65"
+        },
+        {
+          "tier": "monotype",
+          "rank": 32,
+          "usage": "6.47"
+        },
+        {
+          "tier": "ubers",
+          "rank": 195,
+          "usage": "0.07"
         },
         {
           "tier": "doublesou",
@@ -56875,11 +56880,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 24,
           "usage": "7.95"
-        },
-        {
-          "tier": "monotype",
-          "rank": 32,
-          "usage": "6.47"
         }
       ],
       "types": [
@@ -57191,24 +57191,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 9,
-          "usage": "16.06"
-        },
-        {
           "tier": "vgc2025",
           "rank": 257,
           "usage": "0.02"
         },
         {
-          "tier": "ubers",
-          "rank": 152,
-          "usage": "0.17"
+          "tier": "uu",
+          "rank": 9,
+          "usage": "16.06"
         },
         {
           "tier": "ou",
           "rank": 62,
           "usage": "2.27"
+        },
+        {
+          "tier": "monotype",
+          "rank": 92,
+          "usage": "2.04"
+        },
+        {
+          "tier": "ubers",
+          "rank": 152,
+          "usage": "0.17"
         },
         {
           "tier": "doublesou",
@@ -57219,11 +57224,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 78,
           "usage": "1.74"
-        },
-        {
-          "tier": "monotype",
-          "rank": 92,
-          "usage": "2.04"
         }
       ],
       "types": [
@@ -57445,9 +57445,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 262,
-          "usage": "0.01"
+          "tier": "nu",
+          "rank": 41,
+          "usage": "4.65"
         },
         {
           "tier": "ru",
@@ -57455,14 +57455,24 @@ window.localDB = {
           "usage": "0.69"
         },
         {
-          "tier": "ubers",
-          "rank": 324,
+          "tier": "uu",
+          "rank": 262,
           "usage": "0.01"
         },
         {
           "tier": "ou",
           "rank": 167,
           "usage": "0.13"
+        },
+        {
+          "tier": "monotype",
+          "rank": 148,
+          "usage": "0.48"
+        },
+        {
+          "tier": "ubers",
+          "rank": 324,
+          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -57473,16 +57483,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 285,
           "usage": "0.06"
-        },
-        {
-          "tier": "nu",
-          "rank": 41,
-          "usage": "4.65"
-        },
-        {
-          "tier": "monotype",
-          "rank": 148,
-          "usage": "0.48"
         }
       ],
       "types": [
@@ -57689,14 +57689,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 209,
-          "usage": "0.03"
-        },
-        {
           "tier": "nu",
           "rank": 204,
           "usage": "0.01"
+        },
+        {
+          "tier": "zu",
+          "rank": 209,
+          "usage": "0.03"
         }
       ],
       "types": [
@@ -57756,9 +57756,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 117,
-          "usage": "0.39"
+          "tier": "vgc2025",
+          "rank": 125,
+          "usage": "0.18"
         },
         {
           "tier": "ru",
@@ -57766,19 +57766,24 @@ window.localDB = {
           "usage": "16.17"
         },
         {
-          "tier": "vgc2025",
-          "rank": 125,
-          "usage": "0.18"
-        },
-        {
-          "tier": "ubers",
-          "rank": 331,
-          "usage": "0.01"
+          "tier": "uu",
+          "rank": 117,
+          "usage": "0.39"
         },
         {
           "tier": "ou",
           "rank": 105,
           "usage": "0.49"
+        },
+        {
+          "tier": "monotype",
+          "rank": 243,
+          "usage": "0.08"
+        },
+        {
+          "tier": "ubers",
+          "rank": 331,
+          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -57789,11 +57794,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 218,
           "usage": "0.17"
-        },
-        {
-          "tier": "monotype",
-          "rank": 243,
-          "usage": "0.08"
         }
       ],
       "types": [
@@ -58022,31 +58022,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 186,
-          "usage": "0.07"
-        },
-        {
-          "tier": "ru",
-          "rank": 153,
-          "usage": "0.24"
-        },
-        {
-          "tier": "ou",
-          "rank": 264,
-          "usage": "0.02"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 263,
-          "usage": "0.05"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 423,
-          "usage": "0.02"
-        },
-        {
           "tier": "nu",
           "rank": 79,
           "usage": "1.32"
@@ -58057,9 +58032,34 @@ window.localDB = {
           "usage": "5.10"
         },
         {
+          "tier": "ru",
+          "rank": 153,
+          "usage": "0.24"
+        },
+        {
+          "tier": "uu",
+          "rank": 186,
+          "usage": "0.07"
+        },
+        {
+          "tier": "ou",
+          "rank": 264,
+          "usage": "0.02"
+        },
+        {
           "tier": "monotype",
           "rank": 301,
           "usage": "0.03"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 263,
+          "usage": "0.05"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 423,
+          "usage": "0.02"
         }
       ],
       "types": [
@@ -58070,7 +58070,7 @@ window.localDB = {
         {
           "name": "Nasty Plot",
           "tier": "pu",
-          "ability": "Blaze",
+          "ability": "Magician",
           "item": "Heavy-Duty Boots",
           "nature": "Timid",
           "teraType": "Normal",
@@ -58085,7 +58085,7 @@ window.localDB = {
         {
           "name": "Nasty Plot (Psychic)",
           "tier": "monotype",
-          "ability": "Blaze",
+          "ability": "Magician",
           "item": "Heavy-Duty Boots",
           "nature": "Timid",
           "teraType": "Normal",
@@ -58278,14 +58278,19 @@ window.localDB = {
           "usage": "10.60"
         },
         {
-          "tier": "ubers",
-          "rank": 149,
-          "usage": "0.18"
-        },
-        {
           "tier": "ou",
           "rank": 101,
           "usage": "0.59"
+        },
+        {
+          "tier": "monotype",
+          "rank": 4,
+          "usage": "12.21"
+        },
+        {
+          "tier": "ubers",
+          "rank": 149,
+          "usage": "0.18"
         },
         {
           "tier": "doublesou",
@@ -58296,11 +58301,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 53,
           "usage": "2.81"
-        },
-        {
-          "tier": "monotype",
-          "rank": 4,
-          "usage": "12.21"
         }
       ],
       "types": [
@@ -58690,14 +58690,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 218,
-          "usage": "0.02"
-        },
-        {
           "tier": "pu",
           "rank": 195,
           "usage": "0.04"
+        },
+        {
+          "tier": "zu",
+          "rank": 218,
+          "usage": "0.02"
         }
       ],
       "types": [
@@ -58708,7 +58708,7 @@ window.localDB = {
         {
           "name": "Utility",
           "tier": "nfe",
-          "ability": "Flame Body",
+          "ability": "Gale Wings",
           "item": "Heavy-Duty Boots",
           "nature": "Jolly",
           "teraType": "Normal",
@@ -58723,7 +58723,7 @@ window.localDB = {
         {
           "name": "Swords Dance",
           "tier": "nfe",
-          "ability": "Flame Body",
+          "ability": "Gale Wings",
           "item": "Heavy-Duty Boots",
           "nature": "Jolly",
           "teraType": "Normal",
@@ -58773,24 +58773,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 32,
-          "usage": "6.69"
-        },
-        {
           "tier": "vgc2025",
           "rank": 124,
           "usage": "0.18"
         },
         {
-          "tier": "ubers",
-          "rank": 64,
-          "usage": "1.14"
+          "tier": "uu",
+          "rank": 32,
+          "usage": "6.69"
         },
         {
           "tier": "ou",
           "rank": 108,
           "usage": "0.45"
+        },
+        {
+          "tier": "monotype",
+          "rank": 151,
+          "usage": "0.44"
+        },
+        {
+          "tier": "ubers",
+          "rank": 64,
+          "usage": "1.14"
         },
         {
           "tier": "doublesou",
@@ -58801,11 +58806,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 241,
           "usage": "0.11"
-        },
-        {
-          "tier": "monotype",
-          "rank": 151,
-          "usage": "0.44"
         }
       ],
       "types": [
@@ -58816,7 +58816,7 @@ window.localDB = {
         {
           "name": "Fast Pivot",
           "tier": "uu",
-          "ability": "Flame Body",
+          "ability": "Gale Wings",
           "item": "Heavy-Duty Boots",
           "nature": "Jolly / Timid",
           "teraType": "Grass / Ground",
@@ -58831,7 +58831,7 @@ window.localDB = {
         {
           "name": "Defog",
           "tier": "ou",
-          "ability": "Flame Body",
+          "ability": "Gale Wings",
           "item": "Heavy-Duty Boots",
           "nature": "Bold",
           "teraType": "Normal",
@@ -58921,7 +58921,7 @@ window.localDB = {
         {
           "name": "Utility",
           "tier": "nationaldexru",
-          "ability": "Flame Body",
+          "ability": "Gale Wings",
           "item": "Heavy-Duty Boots",
           "nature": "Jolly",
           "teraType": "Normal",
@@ -59169,6 +59169,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "pu",
+          "rank": 202,
+          "usage": "0.03"
+        },
+        {
           "tier": "zu",
           "rank": 38,
           "usage": "4.23"
@@ -59177,11 +59182,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 413,
           "usage": "0.02"
-        },
-        {
-          "tier": "pu",
-          "rank": 202,
-          "usage": "0.03"
         }
       ],
       "types": [
@@ -59338,26 +59338,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 161,
-          "usage": "0.13"
-        },
-        {
-          "tier": "ru",
-          "rank": 150,
-          "usage": "0.27"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 202,
-          "usage": "0.13"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 288,
-          "usage": "0.06"
-        },
-        {
           "tier": "nu",
           "rank": 90,
           "usage": "0.94"
@@ -59368,9 +59348,29 @@ window.localDB = {
           "usage": "22.38"
         },
         {
+          "tier": "ru",
+          "rank": 150,
+          "usage": "0.27"
+        },
+        {
+          "tier": "uu",
+          "rank": 161,
+          "usage": "0.13"
+        },
+        {
           "tier": "monotype",
           "rank": 299,
           "usage": "0.03"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 202,
+          "usage": "0.13"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 288,
+          "usage": "0.06"
         }
       ],
       "types": [
@@ -59521,9 +59521,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 220,
-          "usage": "0.05"
+          "tier": "pu",
+          "rank": 227,
+          "usage": "0.01"
         },
         {
           "tier": "zu",
@@ -59531,9 +59531,9 @@ window.localDB = {
           "usage": "0.04"
         },
         {
-          "tier": "pu",
-          "rank": 227,
-          "usage": "0.01"
+          "tier": "ru",
+          "rank": 220,
+          "usage": "0.05"
         }
       ],
       "types": [
@@ -59770,9 +59770,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 248,
-          "usage": "0.02"
+          "tier": "vgc2025",
+          "rank": 121,
+          "usage": "0.19"
         },
         {
           "tier": "zu",
@@ -59780,9 +59780,14 @@ window.localDB = {
           "usage": "0.35"
         },
         {
-          "tier": "vgc2025",
-          "rank": 121,
-          "usage": "0.19"
+          "tier": "ru",
+          "rank": 248,
+          "usage": "0.02"
+        },
+        {
+          "tier": "monotype",
+          "rank": 221,
+          "usage": "0.11"
         },
         {
           "tier": "ubers",
@@ -59798,11 +59803,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 469,
           "usage": "0.01"
-        },
-        {
-          "tier": "monotype",
-          "rank": 221,
-          "usage": "0.11"
         }
       ],
       "types": [
@@ -60291,9 +60291,19 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 101,
-          "usage": "0.87"
+          "tier": "nu",
+          "rank": 195,
+          "usage": "0.02"
+        },
+        {
+          "tier": "pu",
+          "rank": 60,
+          "usage": "2.23"
+        },
+        {
+          "tier": "vgc2025",
+          "rank": 156,
+          "usage": "0.10"
         },
         {
           "tier": "zu",
@@ -60301,9 +60311,14 @@ window.localDB = {
           "usage": "4.77"
         },
         {
-          "tier": "vgc2025",
-          "rank": 156,
-          "usage": "0.10"
+          "tier": "ru",
+          "rank": 101,
+          "usage": "0.87"
+        },
+        {
+          "tier": "monotype",
+          "rank": 293,
+          "usage": "0.03"
         },
         {
           "tier": "ubers",
@@ -60318,21 +60333,6 @@ window.localDB = {
         {
           "tier": "nationaldex",
           "rank": 365,
-          "usage": "0.03"
-        },
-        {
-          "tier": "nu",
-          "rank": 195,
-          "usage": "0.02"
-        },
-        {
-          "tier": "pu",
-          "rank": 60,
-          "usage": "2.23"
-        },
-        {
-          "tier": "monotype",
-          "rank": 293,
           "usage": "0.03"
         }
       ],
@@ -60581,8 +60581,13 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 245,
+          "tier": "nu",
+          "rank": 63,
+          "usage": "2.33"
+        },
+        {
+          "tier": "vgc2025",
+          "rank": 238,
           "usage": "0.02"
         },
         {
@@ -60591,19 +60596,24 @@ window.localDB = {
           "usage": "0.28"
         },
         {
-          "tier": "vgc2025",
-          "rank": 238,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ubers",
-          "rank": 297,
+          "tier": "uu",
+          "rank": 245,
           "usage": "0.02"
         },
         {
           "tier": "ou",
           "rank": 141,
           "usage": "0.20"
+        },
+        {
+          "tier": "monotype",
+          "rank": 161,
+          "usage": "0.34"
+        },
+        {
+          "tier": "ubers",
+          "rank": 297,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -60614,16 +60624,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 354,
           "usage": "0.04"
-        },
-        {
-          "tier": "nu",
-          "rank": 63,
-          "usage": "2.33"
-        },
-        {
-          "tier": "monotype",
-          "rank": 161,
-          "usage": "0.34"
         }
       ],
       "types": [
@@ -60745,31 +60745,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 246,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ru",
-          "rank": 227,
-          "usage": "0.04"
-        },
-        {
-          "tier": "zu",
-          "rank": 10,
-          "usage": "13.71"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 268,
-          "usage": "0.05"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 374,
-          "usage": "0.03"
-        },
-        {
           "tier": "nu",
           "rank": 167,
           "usage": "0.06"
@@ -60780,9 +60755,34 @@ window.localDB = {
           "usage": "0.49"
         },
         {
+          "tier": "zu",
+          "rank": 10,
+          "usage": "13.71"
+        },
+        {
+          "tier": "ru",
+          "rank": 227,
+          "usage": "0.04"
+        },
+        {
+          "tier": "uu",
+          "rank": 246,
+          "usage": "0.02"
+        },
+        {
           "tier": "monotype",
           "rank": 312,
           "usage": "0.02"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 268,
+          "usage": "0.05"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 374,
+          "usage": "0.03"
         }
       ],
       "types": [
@@ -61128,14 +61128,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 87,
-          "usage": "0.96"
-        },
-        {
-          "tier": "ru",
-          "rank": 118,
-          "usage": "0.48"
+          "tier": "nu",
+          "rank": 28,
+          "usage": "7.70"
         },
         {
           "tier": "vgc2025",
@@ -61143,14 +61138,29 @@ window.localDB = {
           "usage": "0.14"
         },
         {
-          "tier": "ubers",
-          "rank": 215,
-          "usage": "0.06"
+          "tier": "ru",
+          "rank": 118,
+          "usage": "0.48"
+        },
+        {
+          "tier": "uu",
+          "rank": 87,
+          "usage": "0.96"
         },
         {
           "tier": "ou",
           "rank": 198,
           "usage": "0.07"
+        },
+        {
+          "tier": "monotype",
+          "rank": 244,
+          "usage": "0.07"
+        },
+        {
+          "tier": "ubers",
+          "rank": 215,
+          "usage": "0.06"
         },
         {
           "tier": "doublesou",
@@ -61161,16 +61171,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 272,
           "usage": "0.08"
-        },
-        {
-          "tier": "nu",
-          "rank": 28,
-          "usage": "7.70"
-        },
-        {
-          "tier": "monotype",
-          "rank": 244,
-          "usage": "0.07"
         }
       ],
       "types": [
@@ -61395,24 +61395,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 54,
-          "usage": "2.33"
-        },
-        {
           "tier": "vgc2025",
           "rank": 275,
           "usage": "0.01"
         },
         {
-          "tier": "ubers",
-          "rank": 157,
-          "usage": "0.15"
+          "tier": "uu",
+          "rank": 54,
+          "usage": "2.33"
         },
         {
           "tier": "ou",
           "rank": 53,
           "usage": "2.86"
+        },
+        {
+          "tier": "monotype",
+          "rank": 166,
+          "usage": "0.31"
+        },
+        {
+          "tier": "ubers",
+          "rank": 157,
+          "usage": "0.15"
         },
         {
           "tier": "doublesou",
@@ -61423,11 +61428,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 69,
           "usage": "2.10"
-        },
-        {
-          "tier": "monotype",
-          "rank": 166,
-          "usage": "0.31"
         }
       ],
       "types": [
@@ -61522,14 +61522,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 159,
-          "usage": "0.14"
-        },
-        {
           "tier": "pu",
           "rank": 122,
           "usage": "0.36"
+        },
+        {
+          "tier": "zu",
+          "rank": 159,
+          "usage": "0.14"
         }
       ],
       "types": [
@@ -61578,14 +61578,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 272,
-          "usage": "0.01"
+          "tier": "nu",
+          "rank": 160,
+          "usage": "0.08"
         },
         {
-          "tier": "ru",
-          "rank": 172,
-          "usage": "0.18"
+          "tier": "pu",
+          "rank": 129,
+          "usage": "0.29"
         },
         {
           "tier": "zu",
@@ -61593,14 +61593,24 @@ window.localDB = {
           "usage": "4.06"
         },
         {
-          "tier": "ubers",
-          "rank": 137,
-          "usage": "0.26"
+          "tier": "ru",
+          "rank": 172,
+          "usage": "0.18"
+        },
+        {
+          "tier": "uu",
+          "rank": 272,
+          "usage": "0.01"
         },
         {
           "tier": "ou",
           "rank": 306,
           "usage": "0.01"
+        },
+        {
+          "tier": "ubers",
+          "rank": 137,
+          "usage": "0.26"
         },
         {
           "tier": "doublesou",
@@ -61611,16 +61621,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 356,
           "usage": "0.04"
-        },
-        {
-          "tier": "nu",
-          "rank": 160,
-          "usage": "0.08"
-        },
-        {
-          "tier": "pu",
-          "rank": 129,
-          "usage": "0.29"
         }
       ],
       "types": [
@@ -61765,9 +61765,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 236,
-          "usage": "0.02"
+          "tier": "nu",
+          "rank": 17,
+          "usage": "11.05"
         },
         {
           "tier": "ru",
@@ -61775,14 +61775,19 @@ window.localDB = {
           "usage": "0.45"
         },
         {
-          "tier": "ubers",
-          "rank": 343,
-          "usage": "0.01"
+          "tier": "uu",
+          "rank": 236,
+          "usage": "0.02"
         },
         {
           "tier": "ou",
           "rank": 278,
           "usage": "0.02"
+        },
+        {
+          "tier": "ubers",
+          "rank": 343,
+          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -61793,11 +61798,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 276,
           "usage": "0.07"
-        },
-        {
-          "tier": "nu",
-          "rank": 17,
-          "usage": "11.05"
         }
       ],
       "types": [
@@ -61906,14 +61906,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 155,
-          "usage": "0.15"
-        },
-        {
-          "tier": "ru",
-          "rank": 95,
-          "usage": "0.99"
+          "tier": "nu",
+          "rank": 18,
+          "usage": "10.54"
         },
         {
           "tier": "vgc2025",
@@ -61921,14 +61916,29 @@ window.localDB = {
           "usage": "0.03"
         },
         {
-          "tier": "ubers",
-          "rank": 168,
-          "usage": "0.12"
+          "tier": "ru",
+          "rank": 95,
+          "usage": "0.99"
+        },
+        {
+          "tier": "uu",
+          "rank": 155,
+          "usage": "0.15"
         },
         {
           "tier": "ou",
           "rank": 90,
           "usage": "0.77"
+        },
+        {
+          "tier": "monotype",
+          "rank": 64,
+          "usage": "3.41"
+        },
+        {
+          "tier": "ubers",
+          "rank": 168,
+          "usage": "0.12"
         },
         {
           "tier": "doublesou",
@@ -61939,16 +61949,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 163,
           "usage": "0.37"
-        },
-        {
-          "tier": "nu",
-          "rank": 18,
-          "usage": "10.54"
-        },
-        {
-          "tier": "monotype",
-          "rank": 64,
-          "usage": "3.41"
         }
       ],
       "types": [
@@ -62150,41 +62150,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 137,
-          "usage": "0.38"
-        },
-        {
-          "tier": "zu",
-          "rank": 71,
-          "usage": "1.60"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 135,
-          "usage": "0.15"
-        },
-        {
-          "tier": "ubers",
-          "rank": 173,
-          "usage": "0.10"
-        },
-        {
-          "tier": "ou",
-          "rank": 304,
-          "usage": "0.01"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 247,
-          "usage": "0.06"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 324,
-          "usage": "0.05"
-        },
-        {
           "tier": "nu",
           "rank": 135,
           "usage": "0.19"
@@ -62195,9 +62160,44 @@ window.localDB = {
           "usage": "0.25"
         },
         {
+          "tier": "vgc2025",
+          "rank": 135,
+          "usage": "0.15"
+        },
+        {
+          "tier": "zu",
+          "rank": 71,
+          "usage": "1.60"
+        },
+        {
+          "tier": "ru",
+          "rank": 137,
+          "usage": "0.38"
+        },
+        {
+          "tier": "ou",
+          "rank": 304,
+          "usage": "0.01"
+        },
+        {
           "tier": "monotype",
           "rank": 253,
           "usage": "0.07"
+        },
+        {
+          "tier": "ubers",
+          "rank": 173,
+          "usage": "0.10"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 247,
+          "usage": "0.06"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 324,
+          "usage": "0.05"
         }
       ],
       "types": [
@@ -62429,9 +62429,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 141,
-          "usage": "0.22"
+          "tier": "nu",
+          "rank": 55,
+          "usage": "3.24"
         },
         {
           "tier": "ru",
@@ -62439,14 +62439,24 @@ window.localDB = {
           "usage": "0.08"
         },
         {
-          "tier": "ubers",
-          "rank": 303,
-          "usage": "0.02"
+          "tier": "uu",
+          "rank": 141,
+          "usage": "0.22"
         },
         {
           "tier": "ou",
           "rank": 210,
           "usage": "0.06"
+        },
+        {
+          "tier": "monotype",
+          "rank": 99,
+          "usage": "1.78"
+        },
+        {
+          "tier": "ubers",
+          "rank": 303,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -62457,16 +62467,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 422,
           "usage": "0.02"
-        },
-        {
-          "tier": "nu",
-          "rank": 55,
-          "usage": "3.24"
-        },
-        {
-          "tier": "monotype",
-          "rank": 99,
-          "usage": "1.78"
         }
       ],
       "types": [
@@ -62626,24 +62626,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 119,
-          "usage": "0.38"
-        },
-        {
           "tier": "ru",
           "rank": 1,
           "usage": "27.39"
         },
         {
-          "tier": "ubers",
-          "rank": 171,
-          "usage": "0.11"
+          "tier": "uu",
+          "rank": 119,
+          "usage": "0.38"
         },
         {
           "tier": "ou",
           "rank": 196,
           "usage": "0.07"
+        },
+        {
+          "tier": "monotype",
+          "rank": 155,
+          "usage": "0.40"
+        },
+        {
+          "tier": "ubers",
+          "rank": 171,
+          "usage": "0.11"
         },
         {
           "tier": "doublesou",
@@ -62654,11 +62659,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 340,
           "usage": "0.04"
-        },
-        {
-          "tier": "monotype",
-          "rank": 155,
-          "usage": "0.40"
         }
       ],
       "types": [
@@ -62684,7 +62684,7 @@ window.localDB = {
         {
           "name": "Bulky Support",
           "tier": "ru",
-          "ability": "Frisk",
+          "ability": "Infiltrator",
           "item": "Heavy-Duty Boots",
           "nature": "Timid",
           "teraType": "Steel / Fairy / Water",
@@ -62988,9 +62988,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 106,
-          "usage": "0.54"
+          "tier": "vgc2025",
+          "rank": 114,
+          "usage": "0.22"
         },
         {
           "tier": "ru",
@@ -62998,19 +62998,24 @@ window.localDB = {
           "usage": "10.06"
         },
         {
-          "tier": "vgc2025",
-          "rank": 114,
-          "usage": "0.22"
-        },
-        {
-          "tier": "ubers",
-          "rank": 280,
-          "usage": "0.02"
+          "tier": "uu",
+          "rank": 106,
+          "usage": "0.54"
         },
         {
           "tier": "ou",
           "rank": 106,
           "usage": "0.48"
+        },
+        {
+          "tier": "monotype",
+          "rank": 200,
+          "usage": "0.18"
+        },
+        {
+          "tier": "ubers",
+          "rank": 280,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -63021,11 +63026,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 325,
           "usage": "0.05"
-        },
-        {
-          "tier": "monotype",
-          "rank": 200,
-          "usage": "0.18"
         }
       ],
       "types": [
@@ -63217,31 +63217,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 142,
-          "usage": "0.22"
-        },
-        {
-          "tier": "ru",
-          "rank": 120,
-          "usage": "0.46"
-        },
-        {
-          "tier": "ou",
-          "rank": 193,
-          "usage": "0.07"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 368,
-          "usage": "0.01"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 334,
-          "usage": "0.05"
-        },
-        {
           "tier": "nu",
           "rank": 52,
           "usage": "3.36"
@@ -63252,9 +63227,34 @@ window.localDB = {
           "usage": "15.03"
         },
         {
+          "tier": "ru",
+          "rank": 120,
+          "usage": "0.46"
+        },
+        {
+          "tier": "uu",
+          "rank": 142,
+          "usage": "0.22"
+        },
+        {
+          "tier": "ou",
+          "rank": 193,
+          "usage": "0.07"
+        },
+        {
           "tier": "monotype",
           "rank": 306,
           "usage": "0.02"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 368,
+          "usage": "0.01"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 334,
+          "usage": "0.05"
         }
       ],
       "types": [
@@ -63371,9 +63371,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 67,
-          "usage": "1.81"
+          "tier": "vgc2025",
+          "rank": 133,
+          "usage": "0.16"
         },
         {
           "tier": "ru",
@@ -63381,19 +63381,24 @@ window.localDB = {
           "usage": "13.16"
         },
         {
-          "tier": "vgc2025",
-          "rank": 133,
-          "usage": "0.16"
-        },
-        {
-          "tier": "ubers",
-          "rank": 211,
-          "usage": "0.06"
+          "tier": "uu",
+          "rank": 67,
+          "usage": "1.81"
         },
         {
           "tier": "ou",
           "rank": 67,
           "usage": "2.04"
+        },
+        {
+          "tier": "monotype",
+          "rank": 86,
+          "usage": "2.17"
+        },
+        {
+          "tier": "ubers",
+          "rank": 211,
+          "usage": "0.06"
         },
         {
           "tier": "doublesou",
@@ -63404,11 +63409,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 116,
           "usage": "0.78"
-        },
-        {
-          "tier": "monotype",
-          "rank": 86,
-          "usage": "2.17"
         }
       ],
       "types": [
@@ -63849,9 +63849,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 154,
-          "usage": "0.15"
+          "tier": "nu",
+          "rank": 46,
+          "usage": "4.14"
         },
         {
           "tier": "ru",
@@ -63859,24 +63859,24 @@ window.localDB = {
           "usage": "0.39"
         },
         {
+          "tier": "uu",
+          "rank": 154,
+          "usage": "0.15"
+        },
+        {
           "tier": "ou",
           "rank": 298,
           "usage": "0.01"
         },
         {
-          "tier": "nationaldex",
-          "rank": 404,
-          "usage": "0.02"
-        },
-        {
-          "tier": "nu",
-          "rank": 46,
-          "usage": "4.14"
-        },
-        {
           "tier": "monotype",
           "rank": 201,
           "usage": "0.17"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 404,
+          "usage": "0.02"
         }
       ],
       "types": [
@@ -64059,14 +64059,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 145,
-          "usage": "0.20"
-        },
-        {
-          "tier": "ru",
-          "rank": 99,
-          "usage": "0.90"
+          "tier": "nu",
+          "rank": 2,
+          "usage": "25.25"
         },
         {
           "tier": "vgc2025",
@@ -64074,14 +64069,29 @@ window.localDB = {
           "usage": "39.43"
         },
         {
-          "tier": "ubers",
-          "rank": 85,
-          "usage": "0.66"
+          "tier": "ru",
+          "rank": 99,
+          "usage": "0.90"
+        },
+        {
+          "tier": "uu",
+          "rank": 145,
+          "usage": "0.20"
         },
         {
           "tier": "ou",
           "rank": 136,
           "usage": "0.22"
+        },
+        {
+          "tier": "monotype",
+          "rank": 116,
+          "usage": "1.13"
+        },
+        {
+          "tier": "ubers",
+          "rank": 85,
+          "usage": "0.66"
         },
         {
           "tier": "doublesou",
@@ -64092,16 +64102,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 181,
           "usage": "0.30"
-        },
-        {
-          "tier": "nu",
-          "rank": 2,
-          "usage": "25.25"
-        },
-        {
-          "tier": "monotype",
-          "rank": 116,
-          "usage": "1.13"
         }
       ],
       "types": [
@@ -64364,14 +64364,19 @@ window.localDB = {
           "usage": "0.12"
         },
         {
-          "tier": "ubers",
-          "rank": 161,
-          "usage": "0.13"
-        },
-        {
           "tier": "ou",
           "rank": 38,
           "usage": "4.90"
+        },
+        {
+          "tier": "monotype",
+          "rank": 46,
+          "usage": "4.48"
+        },
+        {
+          "tier": "ubers",
+          "rank": 161,
+          "usage": "0.13"
         },
         {
           "tier": "doublesou",
@@ -64382,11 +64387,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 135,
           "usage": "0.55"
-        },
-        {
-          "tier": "monotype",
-          "rank": 46,
-          "usage": "4.48"
         }
       ],
       "types": [
@@ -64894,21 +64894,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 260,
-          "usage": "0.01"
-        },
-        {
-          "tier": "zu",
-          "rank": 134,
-          "usage": "0.27"
-        },
-        {
-          "tier": "ou",
-          "rank": 145,
-          "usage": "0.18"
-        },
-        {
           "tier": "nu",
           "rank": 186,
           "usage": "0.03"
@@ -64917,6 +64902,21 @@ window.localDB = {
           "tier": "pu",
           "rank": 165,
           "usage": "0.10"
+        },
+        {
+          "tier": "zu",
+          "rank": 134,
+          "usage": "0.27"
+        },
+        {
+          "tier": "ru",
+          "rank": 260,
+          "usage": "0.01"
+        },
+        {
+          "tier": "ou",
+          "rank": 145,
+          "usage": "0.18"
         }
       ],
       "types": [
@@ -65107,13 +65107,13 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 216,
+          "tier": "vgc2025",
+          "rank": 242,
           "usage": "0.02"
         },
         {
-          "tier": "vgc2025",
-          "rank": 242,
+          "tier": "zu",
+          "rank": 216,
           "usage": "0.02"
         },
         {
@@ -65176,46 +65176,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 139,
-          "usage": "0.23"
-        },
-        {
-          "tier": "ru",
-          "rank": 203,
-          "usage": "0.08"
-        },
-        {
-          "tier": "zu",
-          "rank": 22,
-          "usage": "9.17"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 214,
-          "usage": "0.03"
-        },
-        {
-          "tier": "ubers",
-          "rank": 328,
-          "usage": "0.01"
-        },
-        {
-          "tier": "ou",
-          "rank": 205,
-          "usage": "0.07"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 293,
-          "usage": "0.04"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 234,
-          "usage": "0.13"
-        },
-        {
           "tier": "nu",
           "rank": 147,
           "usage": "0.11"
@@ -65226,9 +65186,49 @@ window.localDB = {
           "usage": "1.44"
         },
         {
+          "tier": "vgc2025",
+          "rank": 214,
+          "usage": "0.03"
+        },
+        {
+          "tier": "zu",
+          "rank": 22,
+          "usage": "9.17"
+        },
+        {
+          "tier": "ru",
+          "rank": 203,
+          "usage": "0.08"
+        },
+        {
+          "tier": "uu",
+          "rank": 139,
+          "usage": "0.23"
+        },
+        {
+          "tier": "ou",
+          "rank": 205,
+          "usage": "0.07"
+        },
+        {
           "tier": "monotype",
           "rank": 205,
           "usage": "0.16"
+        },
+        {
+          "tier": "ubers",
+          "rank": 328,
+          "usage": "0.01"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 293,
+          "usage": "0.04"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 234,
+          "usage": "0.13"
         }
       ],
       "types": [
@@ -65462,16 +65462,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 175,
-          "usage": "0.15"
-        },
-        {
-          "tier": "zu",
-          "rank": 153,
-          "usage": "0.16"
-        },
-        {
           "tier": "nu",
           "rank": 71,
           "usage": "1.50"
@@ -65480,6 +65470,16 @@ window.localDB = {
           "tier": "pu",
           "rank": 99,
           "usage": "0.62"
+        },
+        {
+          "tier": "zu",
+          "rank": 153,
+          "usage": "0.16"
+        },
+        {
+          "tier": "ru",
+          "rank": 175,
+          "usage": "0.15"
         },
         {
           "tier": "monotype",
@@ -65623,9 +65623,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 78,
-          "usage": "1.35"
+          "tier": "vgc2025",
+          "rank": 232,
+          "usage": "0.02"
         },
         {
           "tier": "ru",
@@ -65633,19 +65633,24 @@ window.localDB = {
           "usage": "4.16"
         },
         {
-          "tier": "vgc2025",
-          "rank": 232,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ubers",
-          "rank": 13,
-          "usage": "11.71"
+          "tier": "uu",
+          "rank": 78,
+          "usage": "1.35"
         },
         {
           "tier": "ou",
           "rank": 63,
           "usage": "2.18"
+        },
+        {
+          "tier": "monotype",
+          "rank": 125,
+          "usage": "0.89"
+        },
+        {
+          "tier": "ubers",
+          "rank": 13,
+          "usage": "11.71"
         },
         {
           "tier": "doublesou",
@@ -65656,11 +65661,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 83,
           "usage": "1.60"
-        },
-        {
-          "tier": "monotype",
-          "rank": 125,
-          "usage": "0.89"
         }
       ],
       "types": [
@@ -65865,9 +65865,19 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 195,
-          "usage": "0.06"
+          "tier": "nu",
+          "rank": 115,
+          "usage": "0.44"
+        },
+        {
+          "tier": "pu",
+          "rank": 77,
+          "usage": "1.24"
+        },
+        {
+          "tier": "zu",
+          "rank": 14,
+          "usage": "10.58"
         },
         {
           "tier": "ru",
@@ -65875,9 +65885,14 @@ window.localDB = {
           "usage": "0.09"
         },
         {
-          "tier": "zu",
-          "rank": 14,
-          "usage": "10.58"
+          "tier": "uu",
+          "rank": 195,
+          "usage": "0.06"
+        },
+        {
+          "tier": "monotype",
+          "rank": 240,
+          "usage": "0.08"
         },
         {
           "tier": "ubers",
@@ -65893,21 +65908,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 412,
           "usage": "0.02"
-        },
-        {
-          "tier": "nu",
-          "rank": 115,
-          "usage": "0.44"
-        },
-        {
-          "tier": "pu",
-          "rank": 77,
-          "usage": "1.24"
-        },
-        {
-          "tier": "monotype",
-          "rank": 240,
-          "usage": "0.08"
         }
       ],
       "types": [
@@ -66063,14 +66063,14 @@ window.localDB = {
           "usage": "24.93"
         },
         {
-          "tier": "zu",
-          "rank": 186,
-          "usage": "0.07"
-        },
-        {
           "tier": "pu",
           "rank": 123,
           "usage": "0.34"
+        },
+        {
+          "tier": "zu",
+          "rank": 186,
+          "usage": "0.07"
         }
       ],
       "types": [
@@ -66165,24 +66165,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 24,
-          "usage": "9.23"
-        },
-        {
           "tier": "vgc2025",
           "rank": 128,
           "usage": "0.16"
         },
         {
-          "tier": "ubers",
-          "rank": 56,
-          "usage": "1.36"
+          "tier": "uu",
+          "rank": 24,
+          "usage": "9.23"
         },
         {
           "tier": "ou",
           "rank": 52,
           "usage": "2.88"
+        },
+        {
+          "tier": "monotype",
+          "rank": 24,
+          "usage": "7.19"
+        },
+        {
+          "tier": "ubers",
+          "rank": 56,
+          "usage": "1.36"
         },
         {
           "tier": "doublesou",
@@ -66193,11 +66198,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 33,
           "usage": "6.61"
-        },
-        {
-          "tier": "monotype",
-          "rank": 24,
-          "usage": "7.19"
         }
       ],
       "types": [
@@ -66523,8 +66523,18 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 226,
+          "tier": "nu",
+          "rank": 100,
+          "usage": "0.69"
+        },
+        {
+          "tier": "pu",
+          "rank": 10,
+          "usage": "14.64"
+        },
+        {
+          "tier": "vgc2025",
+          "rank": 229,
           "usage": "0.02"
         },
         {
@@ -66533,8 +66543,8 @@ window.localDB = {
           "usage": "0.20"
         },
         {
-          "tier": "vgc2025",
-          "rank": 229,
+          "tier": "uu",
+          "rank": 226,
           "usage": "0.02"
         },
         {
@@ -66551,16 +66561,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 389,
           "usage": "0.03"
-        },
-        {
-          "tier": "nu",
-          "rank": 100,
-          "usage": "0.69"
-        },
-        {
-          "tier": "pu",
-          "rank": 10,
-          "usage": "14.64"
         }
       ],
       "types": [
@@ -66702,41 +66702,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 79,
-          "usage": "1.31"
-        },
-        {
-          "tier": "ru",
-          "rank": 80,
-          "usage": "1.46"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 78,
-          "usage": "0.59"
-        },
-        {
-          "tier": "ubers",
-          "rank": 127,
-          "usage": "0.31"
-        },
-        {
-          "tier": "ou",
-          "rank": 48,
-          "usage": "3.28"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 103,
-          "usage": "0.79"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 110,
-          "usage": "0.86"
-        },
-        {
           "tier": "nu",
           "rank": 59,
           "usage": "2.86"
@@ -66747,9 +66712,44 @@ window.localDB = {
           "usage": "11.38"
         },
         {
+          "tier": "vgc2025",
+          "rank": 78,
+          "usage": "0.59"
+        },
+        {
+          "tier": "ru",
+          "rank": 80,
+          "usage": "1.46"
+        },
+        {
+          "tier": "uu",
+          "rank": 79,
+          "usage": "1.31"
+        },
+        {
+          "tier": "ou",
+          "rank": 48,
+          "usage": "3.28"
+        },
+        {
           "tier": "monotype",
           "rank": 53,
           "usage": "4.11"
+        },
+        {
+          "tier": "ubers",
+          "rank": 127,
+          "usage": "0.31"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 103,
+          "usage": "0.79"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 110,
+          "usage": "0.86"
         }
       ],
       "types": [
@@ -67006,9 +67006,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 217,
-          "usage": "0.03"
+          "tier": "pu",
+          "rank": 80,
+          "usage": "1.11"
+        },
+        {
+          "tier": "zu",
+          "rank": 80,
+          "usage": "1.21"
         },
         {
           "tier": "ru",
@@ -67016,9 +67021,9 @@ window.localDB = {
           "usage": "0.01"
         },
         {
-          "tier": "zu",
-          "rank": 80,
-          "usage": "1.21"
+          "tier": "uu",
+          "rank": 217,
+          "usage": "0.03"
         },
         {
           "tier": "ubers",
@@ -67034,11 +67039,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 463,
           "usage": "0.01"
-        },
-        {
-          "tier": "pu",
-          "rank": 80,
-          "usage": "1.11"
         }
       ],
       "types": [
@@ -67278,9 +67278,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 160,
-          "usage": "0.14"
+          "tier": "nu",
+          "rank": 86,
+          "usage": "1.00"
+        },
+        {
+          "tier": "pu",
+          "rank": 33,
+          "usage": "6.07"
         },
         {
           "tier": "ru",
@@ -67288,13 +67293,23 @@ window.localDB = {
           "usage": "0.45"
         },
         {
-          "tier": "ubers",
-          "rank": 219,
-          "usage": "0.05"
+          "tier": "uu",
+          "rank": 160,
+          "usage": "0.14"
         },
         {
           "tier": "ou",
           "rank": 225,
+          "usage": "0.05"
+        },
+        {
+          "tier": "monotype",
+          "rank": 145,
+          "usage": "0.51"
+        },
+        {
+          "tier": "ubers",
+          "rank": 219,
           "usage": "0.05"
         },
         {
@@ -67306,21 +67321,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 248,
           "usage": "0.11"
-        },
-        {
-          "tier": "nu",
-          "rank": 86,
-          "usage": "1.00"
-        },
-        {
-          "tier": "pu",
-          "rank": 33,
-          "usage": "6.07"
-        },
-        {
-          "tier": "monotype",
-          "rank": 145,
-          "usage": "0.51"
         }
       ],
       "types": [
@@ -67613,9 +67613,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 150,
-          "usage": "0.18"
+          "tier": "nu",
+          "rank": 14,
+          "usage": "12.16"
+        },
+        {
+          "tier": "vgc2025",
+          "rank": 90,
+          "usage": "0.41"
         },
         {
           "tier": "ru",
@@ -67623,9 +67628,14 @@ window.localDB = {
           "usage": "1.98"
         },
         {
-          "tier": "vgc2025",
-          "rank": 90,
-          "usage": "0.41"
+          "tier": "uu",
+          "rank": 150,
+          "usage": "0.18"
+        },
+        {
+          "tier": "monotype",
+          "rank": 321,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -67635,16 +67645,6 @@ window.localDB = {
         {
           "tier": "nationaldex",
           "rank": 407,
-          "usage": "0.02"
-        },
-        {
-          "tier": "nu",
-          "rank": 14,
-          "usage": "12.16"
-        },
-        {
-          "tier": "monotype",
-          "rank": 321,
           "usage": "0.02"
         }
       ],
@@ -67754,9 +67754,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 108,
-          "usage": "0.50"
+          "tier": "vgc2025",
+          "rank": 91,
+          "usage": "0.41"
         },
         {
           "tier": "ru",
@@ -67764,19 +67764,24 @@ window.localDB = {
           "usage": "7.44"
         },
         {
-          "tier": "vgc2025",
-          "rank": 91,
-          "usage": "0.41"
-        },
-        {
-          "tier": "ubers",
-          "rank": 172,
-          "usage": "0.11"
+          "tier": "uu",
+          "rank": 108,
+          "usage": "0.50"
         },
         {
           "tier": "ou",
           "rank": 131,
           "usage": "0.24"
+        },
+        {
+          "tier": "monotype",
+          "rank": 260,
+          "usage": "0.06"
+        },
+        {
+          "tier": "ubers",
+          "rank": 172,
+          "usage": "0.11"
         },
         {
           "tier": "doublesou",
@@ -67787,11 +67792,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 271,
           "usage": "0.08"
-        },
-        {
-          "tier": "monotype",
-          "rank": 260,
-          "usage": "0.06"
         }
       ],
       "types": [
@@ -67885,9 +67885,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 255,
-          "usage": "0.01"
+          "tier": "vgc2025",
+          "rank": 84,
+          "usage": "0.51"
         },
         {
           "tier": "zu",
@@ -67895,9 +67895,9 @@ window.localDB = {
           "usage": "0.05"
         },
         {
-          "tier": "vgc2025",
-          "rank": 84,
-          "usage": "0.51"
+          "tier": "ru",
+          "rank": 255,
+          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -67951,6 +67951,16 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "nu",
+          "rank": 166,
+          "usage": "0.07"
+        },
+        {
+          "tier": "pu",
+          "rank": 64,
+          "usage": "1.98"
+        },
+        {
           "tier": "zu",
           "rank": 177,
           "usage": "0.10"
@@ -67964,16 +67974,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 361,
           "usage": "0.03"
-        },
-        {
-          "tier": "nu",
-          "rank": 166,
-          "usage": "0.07"
-        },
-        {
-          "tier": "pu",
-          "rank": 64,
-          "usage": "1.98"
         }
       ],
       "types": [
@@ -68171,26 +68171,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 94,
-          "usage": "0.82"
-        },
-        {
-          "tier": "ru",
-          "rank": 163,
-          "usage": "0.20"
-        },
-        {
-          "tier": "ou",
-          "rank": 257,
-          "usage": "0.02"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 304,
-          "usage": "0.03"
-        },
-        {
           "tier": "nu",
           "rank": 164,
           "usage": "0.07"
@@ -68201,9 +68181,29 @@ window.localDB = {
           "usage": "8.87"
         },
         {
+          "tier": "ru",
+          "rank": 163,
+          "usage": "0.20"
+        },
+        {
+          "tier": "uu",
+          "rank": 94,
+          "usage": "0.82"
+        },
+        {
+          "tier": "ou",
+          "rank": 257,
+          "usage": "0.02"
+        },
+        {
           "tier": "monotype",
           "rank": 230,
           "usage": "0.10"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 304,
+          "usage": "0.03"
         }
       ],
       "types": [
@@ -68409,36 +68409,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 215,
-          "usage": "0.06"
-        },
-        {
-          "tier": "zu",
-          "rank": 15,
-          "usage": "10.37"
-        },
-        {
-          "tier": "ubers",
-          "rank": 332,
-          "usage": "0.01"
-        },
-        {
-          "tier": "ou",
-          "rank": 237,
-          "usage": "0.04"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 327,
-          "usage": "0.02"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 394,
-          "usage": "0.02"
-        },
-        {
           "tier": "nu",
           "rank": 48,
           "usage": "3.78"
@@ -68449,9 +68419,39 @@ window.localDB = {
           "usage": "2.05"
         },
         {
+          "tier": "zu",
+          "rank": 15,
+          "usage": "10.37"
+        },
+        {
+          "tier": "ru",
+          "rank": 215,
+          "usage": "0.06"
+        },
+        {
+          "tier": "ou",
+          "rank": 237,
+          "usage": "0.04"
+        },
+        {
           "tier": "monotype",
           "rank": 156,
           "usage": "0.40"
+        },
+        {
+          "tier": "ubers",
+          "rank": 332,
+          "usage": "0.01"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 327,
+          "usage": "0.02"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 394,
+          "usage": "0.02"
         }
       ],
       "types": [
@@ -68538,14 +68538,24 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 221,
-          "usage": "0.03"
+          "tier": "nu",
+          "rank": 140,
+          "usage": "0.16"
+        },
+        {
+          "tier": "pu",
+          "rank": 89,
+          "usage": "0.72"
         },
         {
           "tier": "zu",
           "rank": 99,
           "usage": "0.68"
+        },
+        {
+          "tier": "uu",
+          "rank": 221,
+          "usage": "0.03"
         },
         {
           "tier": "ou",
@@ -68556,16 +68566,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 464,
           "usage": "0.01"
-        },
-        {
-          "tier": "nu",
-          "rank": 140,
-          "usage": "0.16"
-        },
-        {
-          "tier": "pu",
-          "rank": 89,
-          "usage": "0.72"
         }
       ],
       "types": [
@@ -68699,9 +68699,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 68,
-          "usage": "1.77"
+          "tier": "vgc2025",
+          "rank": 142,
+          "usage": "0.13"
         },
         {
           "tier": "ru",
@@ -68709,19 +68709,24 @@ window.localDB = {
           "usage": "17.73"
         },
         {
-          "tier": "vgc2025",
-          "rank": 142,
-          "usage": "0.13"
-        },
-        {
-          "tier": "ubers",
-          "rank": 80,
-          "usage": "0.75"
+          "tier": "uu",
+          "rank": 68,
+          "usage": "1.77"
         },
         {
           "tier": "ou",
           "rank": 92,
           "usage": "0.74"
+        },
+        {
+          "tier": "monotype",
+          "rank": 82,
+          "usage": "2.40"
+        },
+        {
+          "tier": "ubers",
+          "rank": 80,
+          "usage": "0.75"
         },
         {
           "tier": "doublesou",
@@ -68732,11 +68737,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 155,
           "usage": "0.42"
-        },
-        {
-          "tier": "monotype",
-          "rank": 82,
-          "usage": "2.40"
         }
       ],
       "types": [
@@ -68943,31 +68943,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 215,
-          "usage": "0.03"
-        },
-        {
-          "tier": "ru",
-          "rank": 198,
-          "usage": "0.09"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 163,
-          "usage": "0.08"
-        },
-        {
-          "tier": "ou",
-          "rank": 303,
-          "usage": "0.01"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 172,
-          "usage": "0.25"
-        },
-        {
           "tier": "nu",
           "rank": 165,
           "usage": "0.07"
@@ -68978,9 +68953,34 @@ window.localDB = {
           "usage": "10.80"
         },
         {
+          "tier": "vgc2025",
+          "rank": 163,
+          "usage": "0.08"
+        },
+        {
+          "tier": "ru",
+          "rank": 198,
+          "usage": "0.09"
+        },
+        {
+          "tier": "uu",
+          "rank": 215,
+          "usage": "0.03"
+        },
+        {
+          "tier": "ou",
+          "rank": 303,
+          "usage": "0.01"
+        },
+        {
           "tier": "monotype",
           "rank": 290,
           "usage": "0.03"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 172,
+          "usage": "0.25"
         }
       ],
       "types": [
@@ -69235,14 +69235,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 227,
-          "usage": "0.01"
-        },
-        {
           "tier": "pu",
           "rank": 207,
           "usage": "0.02"
+        },
+        {
+          "tier": "zu",
+          "rank": 227,
+          "usage": "0.01"
         }
       ],
       "types": [
@@ -69327,14 +69327,19 @@ window.localDB = {
           "usage": "0.03"
         },
         {
-          "tier": "ubers",
-          "rank": 249,
-          "usage": "0.03"
-        },
-        {
           "tier": "ou",
           "rank": 77,
           "usage": "1.32"
+        },
+        {
+          "tier": "monotype",
+          "rank": 98,
+          "usage": "1.82"
+        },
+        {
+          "tier": "ubers",
+          "rank": 249,
+          "usage": "0.03"
         },
         {
           "tier": "doublesou",
@@ -69345,11 +69350,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 49,
           "usage": "3.22"
-        },
-        {
-          "tier": "monotype",
-          "rank": 98,
-          "usage": "1.82"
         }
       ],
       "types": [
@@ -71218,24 +71218,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 90,
-          "usage": "0.86"
-        },
-        {
           "tier": "ru",
           "rank": 13,
           "usage": "12.06"
         },
         {
-          "tier": "ubers",
-          "rank": 257,
-          "usage": "0.03"
+          "tier": "uu",
+          "rank": 90,
+          "usage": "0.86"
         },
         {
           "tier": "ou",
           "rank": 175,
           "usage": "0.11"
+        },
+        {
+          "tier": "monotype",
+          "rank": 153,
+          "usage": "0.44"
+        },
+        {
+          "tier": "ubers",
+          "rank": 257,
+          "usage": "0.03"
         },
         {
           "tier": "doublesou",
@@ -71246,11 +71251,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 219,
           "usage": "0.17"
-        },
-        {
-          "tier": "monotype",
-          "rank": 153,
-          "usage": "0.44"
         }
       ],
       "types": [
@@ -72179,11 +72179,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 153,
-          "usage": "0.16"
-        },
-        {
           "tier": "lc",
           "rank": 23,
           "usage": "4.81"
@@ -72192,6 +72187,11 @@ window.localDB = {
           "tier": "zu",
           "rank": 157,
           "usage": "0.15"
+        },
+        {
+          "tier": "uu",
+          "rank": 153,
+          "usage": "0.16"
         }
       ],
       "types": [
@@ -72251,14 +72251,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 132,
-          "usage": "0.27"
-        },
-        {
           "tier": "ru",
           "rank": 65,
           "usage": "2.18"
+        },
+        {
+          "tier": "uu",
+          "rank": 132,
+          "usage": "0.27"
         }
       ],
       "types": [
@@ -72353,14 +72353,19 @@ window.localDB = {
           "usage": "21.72"
         },
         {
-          "tier": "ubers",
-          "rank": 159,
-          "usage": "0.14"
-        },
-        {
           "tier": "ou",
           "rank": 26,
           "usage": "7.29"
+        },
+        {
+          "tier": "monotype",
+          "rank": 132,
+          "usage": "0.68"
+        },
+        {
+          "tier": "ubers",
+          "rank": 159,
+          "usage": "0.14"
         },
         {
           "tier": "doublesou",
@@ -72371,11 +72376,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 40,
           "usage": "5.13"
-        },
-        {
-          "tier": "monotype",
-          "rank": 132,
-          "usage": "0.68"
         }
       ],
       "types": [
@@ -72721,14 +72721,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 146,
-          "usage": "0.17"
-        },
-        {
           "tier": "pu",
           "rank": 198,
           "usage": "0.04"
+        },
+        {
+          "tier": "zu",
+          "rank": 146,
+          "usage": "0.17"
         }
       ],
       "types": [
@@ -72803,14 +72803,19 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ubers",
-          "rank": 102,
-          "usage": "0.52"
-        },
-        {
           "tier": "ou",
           "rank": 15,
           "usage": "12.76"
+        },
+        {
+          "tier": "monotype",
+          "rank": 44,
+          "usage": "4.63"
+        },
+        {
+          "tier": "ubers",
+          "rank": 102,
+          "usage": "0.52"
         },
         {
           "tier": "doublesou",
@@ -72821,11 +72826,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 41,
           "usage": "4.31"
-        },
-        {
-          "tier": "monotype",
-          "rank": 44,
-          "usage": "4.63"
         }
       ],
       "types": [
@@ -73082,31 +73082,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 210,
-          "usage": "0.04"
-        },
-        {
-          "tier": "ru",
-          "rank": 148,
-          "usage": "0.29"
-        },
-        {
-          "tier": "ou",
-          "rank": 286,
-          "usage": "0.01"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 282,
-          "usage": "0.05"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 294,
-          "usage": "0.06"
-        },
-        {
           "tier": "nu",
           "rank": 47,
           "usage": "4.09"
@@ -73117,9 +73092,34 @@ window.localDB = {
           "usage": "9.68"
         },
         {
+          "tier": "ru",
+          "rank": 148,
+          "usage": "0.29"
+        },
+        {
+          "tier": "uu",
+          "rank": 210,
+          "usage": "0.04"
+        },
+        {
+          "tier": "ou",
+          "rank": 286,
+          "usage": "0.01"
+        },
+        {
           "tier": "monotype",
           "rank": 274,
           "usage": "0.04"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 282,
+          "usage": "0.05"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 294,
+          "usage": "0.06"
         }
       ],
       "types": [
@@ -73129,7 +73129,7 @@ window.localDB = {
         {
           "name": "Choice Specs",
           "tier": "nu",
-          "ability": "Sniper",
+          "ability": "Torrent",
           "item": "Choice Specs",
           "nature": "Timid",
           "teraType": "Water / Ghost",
@@ -73396,14 +73396,19 @@ window.localDB = {
           "usage": "0.02"
         },
         {
-          "tier": "ubers",
-          "rank": 42,
-          "usage": "2.35"
-        },
-        {
           "tier": "ou",
           "rank": 19,
           "usage": "10.94"
+        },
+        {
+          "tier": "monotype",
+          "rank": 14,
+          "usage": "9.41"
+        },
+        {
+          "tier": "ubers",
+          "rank": 42,
+          "usage": "2.35"
         },
         {
           "tier": "doublesou",
@@ -73414,11 +73419,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 14,
           "usage": "10.26"
-        },
-        {
-          "tier": "monotype",
-          "rank": 14,
-          "usage": "9.41"
         }
       ],
       "types": [
@@ -74316,9 +74316,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 238,
-          "usage": "0.02"
+          "tier": "nu",
+          "rank": 32,
+          "usage": "7.03"
         },
         {
           "tier": "ru",
@@ -74326,9 +74326,9 @@ window.localDB = {
           "usage": "0.31"
         },
         {
-          "tier": "ubers",
-          "rank": 196,
-          "usage": "0.07"
+          "tier": "uu",
+          "rank": 238,
+          "usage": "0.02"
         },
         {
           "tier": "ou",
@@ -74336,19 +74336,19 @@ window.localDB = {
           "usage": "0.02"
         },
         {
-          "tier": "doublesou",
-          "rank": 326,
-          "usage": "0.02"
-        },
-        {
-          "tier": "nu",
-          "rank": 32,
-          "usage": "7.03"
-        },
-        {
           "tier": "monotype",
           "rank": 281,
           "usage": "0.04"
+        },
+        {
+          "tier": "ubers",
+          "rank": 196,
+          "usage": "0.07"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 326,
+          "usage": "0.02"
         }
       ],
       "types": [
@@ -74606,31 +74606,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "vgc2025",
-          "rank": 277,
-          "usage": "0.01"
-        },
-        {
-          "tier": "ubers",
-          "rank": 252,
-          "usage": "0.03"
-        },
-        {
-          "tier": "ou",
-          "rank": 299,
-          "usage": "0.01"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 212,
-          "usage": "0.12"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 449,
-          "usage": "0.01"
-        },
-        {
           "tier": "nu",
           "rank": 98,
           "usage": "0.73"
@@ -74641,9 +74616,34 @@ window.localDB = {
           "usage": "3.23"
         },
         {
+          "tier": "vgc2025",
+          "rank": 277,
+          "usage": "0.01"
+        },
+        {
+          "tier": "ou",
+          "rank": 299,
+          "usage": "0.01"
+        },
+        {
           "tier": "monotype",
           "rank": 213,
           "usage": "0.13"
+        },
+        {
+          "tier": "ubers",
+          "rank": 252,
+          "usage": "0.03"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 212,
+          "usage": "0.12"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 449,
+          "usage": "0.01"
         }
       ],
       "types": [
@@ -74774,14 +74774,19 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 130,
-          "usage": "0.30"
+          "tier": "pu",
+          "rank": 134,
+          "usage": "0.26"
         },
         {
           "tier": "vgc2025",
           "rank": 235,
           "usage": "0.02"
+        },
+        {
+          "tier": "zu",
+          "rank": 130,
+          "usage": "0.30"
         },
         {
           "tier": "doublesou",
@@ -74792,11 +74797,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 458,
           "usage": "0.01"
-        },
-        {
-          "tier": "pu",
-          "rank": 134,
-          "usage": "0.26"
         }
       ],
       "types": [
@@ -74845,9 +74845,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 189,
-          "usage": "0.07"
+          "tier": "pu",
+          "rank": 145,
+          "usage": "0.19"
         },
         {
           "tier": "zu",
@@ -74855,14 +74855,14 @@ window.localDB = {
           "usage": "5.56"
         },
         {
+          "tier": "uu",
+          "rank": 189,
+          "usage": "0.07"
+        },
+        {
           "tier": "doublesou",
           "rank": 312,
           "usage": "0.03"
-        },
-        {
-          "tier": "pu",
-          "rank": 145,
-          "usage": "0.19"
         }
       ],
       "types": [
@@ -74961,26 +74961,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 207,
-          "usage": "0.07"
-        },
-        {
-          "tier": "zu",
-          "rank": 43,
-          "usage": "3.96"
-        },
-        {
-          "tier": "ubers",
-          "rank": 322,
-          "usage": "0.01"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 365,
-          "usage": "0.01"
-        },
-        {
           "tier": "nu",
           "rank": 150,
           "usage": "0.10"
@@ -74991,9 +74971,29 @@ window.localDB = {
           "usage": "3.36"
         },
         {
+          "tier": "zu",
+          "rank": 43,
+          "usage": "3.96"
+        },
+        {
+          "tier": "ru",
+          "rank": 207,
+          "usage": "0.07"
+        },
+        {
           "tier": "monotype",
           "rank": 302,
           "usage": "0.03"
+        },
+        {
+          "tier": "ubers",
+          "rank": 322,
+          "usage": "0.01"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 365,
+          "usage": "0.01"
         }
       ],
       "types": [
@@ -75102,31 +75102,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 219,
-          "usage": "0.03"
-        },
-        {
-          "tier": "ru",
-          "rank": 157,
-          "usage": "0.22"
-        },
-        {
-          "tier": "ubers",
-          "rank": 281,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ou",
-          "rank": 220,
-          "usage": "0.05"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 282,
-          "usage": "0.07"
-        },
-        {
           "tier": "nu",
           "rank": 84,
           "usage": "1.14"
@@ -75137,9 +75112,34 @@ window.localDB = {
           "usage": "8.45"
         },
         {
+          "tier": "ru",
+          "rank": 157,
+          "usage": "0.22"
+        },
+        {
+          "tier": "uu",
+          "rank": 219,
+          "usage": "0.03"
+        },
+        {
+          "tier": "ou",
+          "rank": 220,
+          "usage": "0.05"
+        },
+        {
           "tier": "monotype",
           "rank": 217,
           "usage": "0.12"
+        },
+        {
+          "tier": "ubers",
+          "rank": 281,
+          "usage": "0.02"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 282,
+          "usage": "0.07"
         }
       ],
       "types": [
@@ -75257,9 +75257,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 74,
-          "usage": "1.50"
+          "tier": "vgc2025",
+          "rank": 251,
+          "usage": "0.02"
         },
         {
           "tier": "ru",
@@ -75267,19 +75267,24 @@ window.localDB = {
           "usage": "5.92"
         },
         {
-          "tier": "vgc2025",
-          "rank": 251,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ubers",
-          "rank": 188,
-          "usage": "0.08"
+          "tier": "uu",
+          "rank": 74,
+          "usage": "1.50"
         },
         {
           "tier": "ou",
           "rank": 79,
           "usage": "1.16"
+        },
+        {
+          "tier": "monotype",
+          "rank": 106,
+          "usage": "1.60"
+        },
+        {
+          "tier": "ubers",
+          "rank": 188,
+          "usage": "0.08"
         },
         {
           "tier": "doublesou",
@@ -75290,11 +75295,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 112,
           "usage": "0.84"
-        },
-        {
-          "tier": "monotype",
-          "rank": 106,
-          "usage": "1.60"
         }
       ],
       "types": [
@@ -75465,24 +75465,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 121,
-          "usage": "0.37"
-        },
-        {
           "tier": "ru",
           "rank": 43,
           "usage": "4.59"
         },
         {
-          "tier": "ubers",
-          "rank": 256,
-          "usage": "0.03"
+          "tier": "uu",
+          "rank": 121,
+          "usage": "0.37"
         },
         {
           "tier": "ou",
           "rank": 100,
           "usage": "0.61"
+        },
+        {
+          "tier": "monotype",
+          "rank": 263,
+          "usage": "0.06"
+        },
+        {
+          "tier": "ubers",
+          "rank": 256,
+          "usage": "0.03"
         },
         {
           "tier": "doublesou",
@@ -75493,11 +75498,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 283,
           "usage": "0.07"
-        },
-        {
-          "tier": "monotype",
-          "rank": 263,
-          "usage": "0.06"
         }
       ],
       "types": [
@@ -75806,14 +75806,14 @@ window.localDB = {
           "usage": "0.15"
         },
         {
-          "tier": "zu",
-          "rank": 195,
-          "usage": "0.05"
-        },
-        {
           "tier": "pu",
           "rank": 176,
           "usage": "0.07"
+        },
+        {
+          "tier": "zu",
+          "rank": 195,
+          "usage": "0.05"
         }
       ],
       "types": [
@@ -75857,14 +75857,19 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ubers",
-          "rank": 73,
-          "usage": "0.87"
-        },
-        {
           "tier": "ou",
           "rank": 97,
           "usage": "0.66"
+        },
+        {
+          "tier": "monotype",
+          "rank": 159,
+          "usage": "0.38"
+        },
+        {
+          "tier": "ubers",
+          "rank": 73,
+          "usage": "0.87"
         },
         {
           "tier": "doublesou",
@@ -75875,11 +75880,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 106,
           "usage": "0.94"
-        },
-        {
-          "tier": "monotype",
-          "rank": 159,
-          "usage": "0.38"
         }
       ],
       "types": [
@@ -76004,26 +76004,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 113,
-          "usage": "0.42"
-        },
-        {
-          "tier": "ru",
-          "rank": 138,
-          "usage": "0.36"
-        },
-        {
-          "tier": "zu",
-          "rank": 48,
-          "usage": "3.43"
-        },
-        {
-          "tier": "ubers",
-          "rank": 209,
-          "usage": "0.06"
-        },
-        {
           "tier": "nu",
           "rank": 112,
           "usage": "0.49"
@@ -76032,6 +76012,26 @@ window.localDB = {
           "tier": "pu",
           "rank": 78,
           "usage": "1.18"
+        },
+        {
+          "tier": "zu",
+          "rank": 48,
+          "usage": "3.43"
+        },
+        {
+          "tier": "ru",
+          "rank": 138,
+          "usage": "0.36"
+        },
+        {
+          "tier": "uu",
+          "rank": 113,
+          "usage": "0.42"
+        },
+        {
+          "tier": "ubers",
+          "rank": 209,
+          "usage": "0.06"
         }
       ],
       "types": [
@@ -76115,14 +76115,19 @@ window.localDB = {
           "usage": "0.40"
         },
         {
-          "tier": "ubers",
-          "rank": 11,
-          "usage": "12.85"
-        },
-        {
           "tier": "ou",
           "rank": 10,
           "usage": "14.75"
+        },
+        {
+          "tier": "monotype",
+          "rank": 41,
+          "usage": "5.07"
+        },
+        {
+          "tier": "ubers",
+          "rank": 11,
+          "usage": "12.85"
         },
         {
           "tier": "doublesou",
@@ -76133,11 +76138,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 23,
           "usage": "8.18"
-        },
-        {
-          "tier": "monotype",
-          "rank": 41,
-          "usage": "5.07"
         }
       ],
       "types": [
@@ -76576,41 +76576,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 48,
-          "usage": "2.96"
-        },
-        {
-          "tier": "ru",
-          "rank": 126,
-          "usage": "0.44"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 25,
-          "usage": "8.34"
-        },
-        {
-          "tier": "ubers",
-          "rank": 24,
-          "usage": "5.74"
-        },
-        {
-          "tier": "ou",
-          "rank": 96,
-          "usage": "0.66"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 25,
-          "usage": "8.23"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 96,
-          "usage": "1.09"
-        },
-        {
           "tier": "nu",
           "rank": 69,
           "usage": "1.57"
@@ -76621,9 +76586,44 @@ window.localDB = {
           "usage": "6.11"
         },
         {
+          "tier": "vgc2025",
+          "rank": 25,
+          "usage": "8.34"
+        },
+        {
+          "tier": "ru",
+          "rank": 126,
+          "usage": "0.44"
+        },
+        {
+          "tier": "uu",
+          "rank": 48,
+          "usage": "2.96"
+        },
+        {
+          "tier": "ou",
+          "rank": 96,
+          "usage": "0.66"
+        },
+        {
           "tier": "monotype",
           "rank": 77,
           "usage": "2.65"
+        },
+        {
+          "tier": "ubers",
+          "rank": 24,
+          "usage": "5.74"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 25,
+          "usage": "8.23"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 96,
+          "usage": "1.09"
         }
       ],
       "types": [
@@ -76889,14 +76889,24 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 245,
-          "usage": "0.02"
+          "tier": "nu",
+          "rank": 110,
+          "usage": "0.52"
+        },
+        {
+          "tier": "pu",
+          "rank": 149,
+          "usage": "0.16"
         },
         {
           "tier": "zu",
           "rank": 56,
           "usage": "2.72"
+        },
+        {
+          "tier": "ru",
+          "rank": 245,
+          "usage": "0.02"
         },
         {
           "tier": "ubers",
@@ -76907,16 +76917,6 @@ window.localDB = {
           "tier": "doublesou",
           "rank": 156,
           "usage": "0.34"
-        },
-        {
-          "tier": "nu",
-          "rank": 110,
-          "usage": "0.52"
-        },
-        {
-          "tier": "pu",
-          "rank": 149,
-          "usage": "0.16"
         }
       ],
       "types": [
@@ -77212,14 +77212,24 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
+          "tier": "nu",
           "rank": 184,
-          "usage": "0.13"
+          "usage": "0.03"
+        },
+        {
+          "tier": "pu",
+          "rank": 121,
+          "usage": "0.36"
         },
         {
           "tier": "vgc2025",
           "rank": 211,
           "usage": "0.03"
+        },
+        {
+          "tier": "ru",
+          "rank": 184,
+          "usage": "0.13"
         },
         {
           "tier": "ou",
@@ -77230,16 +77240,6 @@ window.localDB = {
           "tier": "doublesou",
           "rank": 86,
           "usage": "1.10"
-        },
-        {
-          "tier": "nu",
-          "rank": 184,
-          "usage": "0.03"
-        },
-        {
-          "tier": "pu",
-          "rank": 121,
-          "usage": "0.36"
         }
       ],
       "types": [
@@ -77299,14 +77299,24 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 244,
-          "usage": "0.02"
+          "tier": "nu",
+          "rank": 104,
+          "usage": "0.65"
+        },
+        {
+          "tier": "pu",
+          "rank": 150,
+          "usage": "0.16"
         },
         {
           "tier": "zu",
           "rank": 107,
           "usage": "0.56"
+        },
+        {
+          "tier": "ru",
+          "rank": 244,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -77317,16 +77327,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 452,
           "usage": "0.01"
-        },
-        {
-          "tier": "nu",
-          "rank": 104,
-          "usage": "0.65"
-        },
-        {
-          "tier": "pu",
-          "rank": 150,
-          "usage": "0.16"
         }
       ],
       "types": [
@@ -77370,36 +77370,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 114,
-          "usage": "0.41"
-        },
-        {
-          "tier": "ru",
-          "rank": 134,
-          "usage": "0.39"
-        },
-        {
-          "tier": "zu",
-          "rank": 103,
-          "usage": "0.62"
-        },
-        {
-          "tier": "ubers",
-          "rank": 232,
-          "usage": "0.05"
-        },
-        {
-          "tier": "ou",
-          "rank": 142,
-          "usage": "0.20"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 213,
-          "usage": "0.11"
-        },
-        {
           "tier": "nu",
           "rank": 78,
           "usage": "1.33"
@@ -77410,9 +77380,39 @@ window.localDB = {
           "usage": "0.44"
         },
         {
+          "tier": "zu",
+          "rank": 103,
+          "usage": "0.62"
+        },
+        {
+          "tier": "ru",
+          "rank": 134,
+          "usage": "0.39"
+        },
+        {
+          "tier": "uu",
+          "rank": 114,
+          "usage": "0.41"
+        },
+        {
+          "tier": "ou",
+          "rank": 142,
+          "usage": "0.20"
+        },
+        {
           "tier": "monotype",
           "rank": 184,
           "usage": "0.22"
+        },
+        {
+          "tier": "ubers",
+          "rank": 232,
+          "usage": "0.05"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 213,
+          "usage": "0.11"
         }
       ],
       "types": [
@@ -77534,36 +77534,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 235,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ru",
-          "rank": 234,
-          "usage": "0.03"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 193,
-          "usage": "0.05"
-        },
-        {
-          "tier": "ubers",
-          "rank": 227,
-          "usage": "0.05"
-        },
-        {
-          "tier": "ou",
-          "rank": 110,
-          "usage": "0.44"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 218,
-          "usage": "0.11"
-        },
-        {
           "tier": "nu",
           "rank": 131,
           "usage": "0.25"
@@ -77574,9 +77544,39 @@ window.localDB = {
           "usage": "3.94"
         },
         {
+          "tier": "vgc2025",
+          "rank": 193,
+          "usage": "0.05"
+        },
+        {
+          "tier": "ru",
+          "rank": 234,
+          "usage": "0.03"
+        },
+        {
+          "tier": "uu",
+          "rank": 235,
+          "usage": "0.02"
+        },
+        {
+          "tier": "ou",
+          "rank": 110,
+          "usage": "0.44"
+        },
+        {
           "tier": "monotype",
           "rank": 152,
           "usage": "0.44"
+        },
+        {
+          "tier": "ubers",
+          "rank": 227,
+          "usage": "0.05"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 218,
+          "usage": "0.11"
         }
       ],
       "types": [
@@ -77682,24 +77682,24 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 139,
-          "usage": "0.24"
-        },
-        {
           "tier": "vgc2025",
           "rank": 205,
           "usage": "0.04"
         },
         {
-          "tier": "doublesou",
-          "rank": 181,
-          "usage": "0.20"
+          "tier": "zu",
+          "rank": 139,
+          "usage": "0.24"
         },
         {
           "tier": "monotype",
           "rank": 318,
           "usage": "0.02"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 181,
+          "usage": "0.20"
         }
       ],
       "types": [
@@ -77739,14 +77739,24 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 263,
+          "tier": "nu",
+          "rank": 211,
           "usage": "0.01"
+        },
+        {
+          "tier": "pu",
+          "rank": 206,
+          "usage": "0.03"
         },
         {
           "tier": "zu",
           "rank": 141,
           "usage": "0.20"
+        },
+        {
+          "tier": "uu",
+          "rank": 263,
+          "usage": "0.01"
         },
         {
           "tier": "ubers",
@@ -77757,16 +77767,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 255,
           "usage": "0.09"
-        },
-        {
-          "tier": "nu",
-          "rank": 211,
-          "usage": "0.01"
-        },
-        {
-          "tier": "pu",
-          "rank": 206,
-          "usage": "0.03"
         }
       ],
       "types": [
@@ -77806,14 +77806,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 81,
-          "usage": "1.25"
-        },
-        {
-          "tier": "ru",
-          "rank": 84,
-          "usage": "1.35"
+          "tier": "nu",
+          "rank": 82,
+          "usage": "1.18"
         },
         {
           "tier": "vgc2025",
@@ -77821,14 +77816,29 @@ window.localDB = {
           "usage": "0.20"
         },
         {
-          "tier": "ubers",
-          "rank": 95,
-          "usage": "0.57"
+          "tier": "ru",
+          "rank": 84,
+          "usage": "1.35"
+        },
+        {
+          "tier": "uu",
+          "rank": 81,
+          "usage": "1.25"
         },
         {
           "tier": "ou",
           "rank": 82,
           "usage": "1.01"
+        },
+        {
+          "tier": "monotype",
+          "rank": 69,
+          "usage": "3.06"
+        },
+        {
+          "tier": "ubers",
+          "rank": 95,
+          "usage": "0.57"
         },
         {
           "tier": "doublesou",
@@ -77839,16 +77849,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 176,
           "usage": "0.32"
-        },
-        {
-          "tier": "nu",
-          "rank": 82,
-          "usage": "1.18"
-        },
-        {
-          "tier": "monotype",
-          "rank": 69,
-          "usage": "3.06"
         }
       ],
       "types": [
@@ -78018,36 +78018,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 267,
-          "usage": "0.01"
-        },
-        {
-          "tier": "ru",
-          "rank": 217,
-          "usage": "0.06"
-        },
-        {
-          "tier": "zu",
-          "rank": 85,
-          "usage": "1.05"
-        },
-        {
-          "tier": "ubers",
-          "rank": 177,
-          "usage": "0.10"
-        },
-        {
-          "tier": "ou",
-          "rank": 305,
-          "usage": "0.01"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 466,
-          "usage": "0.01"
-        },
-        {
           "tier": "nu",
           "rank": 178,
           "usage": "0.04"
@@ -78058,9 +78028,39 @@ window.localDB = {
           "usage": "0.17"
         },
         {
+          "tier": "zu",
+          "rank": 85,
+          "usage": "1.05"
+        },
+        {
+          "tier": "ru",
+          "rank": 217,
+          "usage": "0.06"
+        },
+        {
+          "tier": "uu",
+          "rank": 267,
+          "usage": "0.01"
+        },
+        {
+          "tier": "ou",
+          "rank": 305,
+          "usage": "0.01"
+        },
+        {
           "tier": "monotype",
           "rank": 241,
           "usage": "0.08"
+        },
+        {
+          "tier": "ubers",
+          "rank": 177,
+          "usage": "0.10"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 466,
+          "usage": "0.01"
         }
       ],
       "types": [
@@ -78178,6 +78178,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "nu",
+          "rank": 8,
+          "usage": "15.56"
+        },
+        {
           "tier": "ru",
           "rank": 186,
           "usage": "0.13"
@@ -78186,11 +78191,6 @@ window.localDB = {
           "tier": "ou",
           "rank": 222,
           "usage": "0.05"
-        },
-        {
-          "tier": "nu",
-          "rank": 8,
-          "usage": "15.56"
         },
         {
           "tier": "monotype",
@@ -78205,7 +78205,7 @@ window.localDB = {
         {
           "name": "Stealth Rock",
           "tier": "nu",
-          "ability": "Heavy Metal",
+          "ability": "Sheer Force",
           "item": "Leftovers",
           "nature": "Careful",
           "teraType": "Dragon / Fairy",
@@ -78220,7 +78220,7 @@ window.localDB = {
         {
           "name": "Assault Vest",
           "tier": "nu",
-          "ability": "Heavy Metal",
+          "ability": "Sheer Force",
           "item": "Assault Vest",
           "nature": "Adamant",
           "teraType": "Dragon / Fairy",
@@ -78552,9 +78552,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 156,
-          "usage": "0.15"
+          "tier": "nu",
+          "rank": 6,
+          "usage": "18.41"
         },
         {
           "tier": "ru",
@@ -78562,9 +78562,9 @@ window.localDB = {
           "usage": "0.18"
         },
         {
-          "tier": "nu",
-          "rank": 6,
-          "usage": "18.41"
+          "tier": "uu",
+          "rank": 156,
+          "usage": "0.15"
         },
         {
           "tier": "monotype",
@@ -78817,24 +78817,24 @@ window.localDB = {
           "usage": "0.19"
         },
         {
-          "tier": "ubers",
-          "rank": 91,
-          "usage": "0.61"
-        },
-        {
           "tier": "ou",
           "rank": 18,
           "usage": "11.40"
         },
         {
-          "tier": "doublesou",
-          "rank": 48,
-          "usage": "2.60"
-        },
-        {
           "tier": "monotype",
           "rank": 2,
           "usage": "17.31"
+        },
+        {
+          "tier": "ubers",
+          "rank": 91,
+          "usage": "0.61"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 48,
+          "usage": "2.60"
         }
       ],
       "types": [
@@ -79242,14 +79242,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ubers",
-          "rank": 154,
-          "usage": "0.16"
-        },
-        {
           "tier": "ou",
           "rank": 4,
           "usage": "21.27"
+        },
+        {
+          "tier": "ubers",
+          "rank": 154,
+          "usage": "0.16"
         },
         {
           "tier": "nationaldex",
@@ -80070,6 +80070,11 @@ window.localDB = {
           "usage": "0.72"
         },
         {
+          "tier": "monotype",
+          "rank": 268,
+          "usage": "0.05"
+        },
+        {
           "tier": "doublesou",
           "rank": 314,
           "usage": "0.02"
@@ -80078,11 +80083,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 201,
           "usage": "0.23"
-        },
-        {
-          "tier": "monotype",
-          "rank": 268,
-          "usage": "0.05"
         }
       ],
       "types": [
@@ -80229,9 +80229,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 72,
-          "usage": "1.53"
+          "tier": "vgc2025",
+          "rank": 88,
+          "usage": "0.48"
         },
         {
           "tier": "ru",
@@ -80239,19 +80239,24 @@ window.localDB = {
           "usage": "6.57"
         },
         {
-          "tier": "vgc2025",
-          "rank": 88,
-          "usage": "0.48"
-        },
-        {
-          "tier": "ubers",
-          "rank": 52,
-          "usage": "1.54"
+          "tier": "uu",
+          "rank": 72,
+          "usage": "1.53"
         },
         {
           "tier": "ou",
           "rank": 83,
           "usage": "0.92"
+        },
+        {
+          "tier": "monotype",
+          "rank": 133,
+          "usage": "0.64"
+        },
+        {
+          "tier": "ubers",
+          "rank": 52,
+          "usage": "1.54"
         },
         {
           "tier": "doublesou",
@@ -80262,11 +80267,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 158,
           "usage": "0.40"
-        },
-        {
-          "tier": "monotype",
-          "rank": 133,
-          "usage": "0.64"
         }
       ],
       "types": [
@@ -80367,9 +80367,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 110,
-          "usage": "0.47"
+          "tier": "vgc2025",
+          "rank": 197,
+          "usage": "0.04"
         },
         {
           "tier": "ru",
@@ -80377,19 +80377,24 @@ window.localDB = {
           "usage": "2.22"
         },
         {
-          "tier": "vgc2025",
-          "rank": 197,
-          "usage": "0.04"
-        },
-        {
-          "tier": "ubers",
-          "rank": 276,
-          "usage": "0.02"
+          "tier": "uu",
+          "rank": 110,
+          "usage": "0.47"
         },
         {
           "tier": "ou",
           "rank": 154,
           "usage": "0.16"
+        },
+        {
+          "tier": "monotype",
+          "rank": 197,
+          "usage": "0.19"
+        },
+        {
+          "tier": "ubers",
+          "rank": 276,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -80399,11 +80404,6 @@ window.localDB = {
         {
           "tier": "nationaldex",
           "rank": 210,
-          "usage": "0.19"
-        },
-        {
-          "tier": "monotype",
-          "rank": 197,
           "usage": "0.19"
         }
       ],
@@ -80550,41 +80550,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 146,
-          "usage": "0.20"
-        },
-        {
-          "tier": "ru",
-          "rank": 110,
-          "usage": "0.63"
-        },
-        {
-          "tier": "zu",
-          "rank": 11,
-          "usage": "12.96"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 187,
-          "usage": "0.05"
-        },
-        {
-          "tier": "ou",
-          "rank": 189,
-          "usage": "0.08"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 174,
-          "usage": "0.24"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 388,
-          "usage": "0.03"
-        },
-        {
           "tier": "nu",
           "rank": 129,
           "usage": "0.26"
@@ -80595,9 +80560,44 @@ window.localDB = {
           "usage": "0.64"
         },
         {
+          "tier": "vgc2025",
+          "rank": 187,
+          "usage": "0.05"
+        },
+        {
+          "tier": "zu",
+          "rank": 11,
+          "usage": "12.96"
+        },
+        {
+          "tier": "ru",
+          "rank": 110,
+          "usage": "0.63"
+        },
+        {
+          "tier": "uu",
+          "rank": 146,
+          "usage": "0.20"
+        },
+        {
+          "tier": "ou",
+          "rank": 189,
+          "usage": "0.08"
+        },
+        {
           "tier": "monotype",
           "rank": 202,
           "usage": "0.17"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 174,
+          "usage": "0.24"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 388,
+          "usage": "0.03"
         }
       ],
       "types": [
@@ -80668,6 +80668,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "monotype",
+          "rank": 48,
+          "usage": "4.42"
+        },
+        {
           "tier": "ubers",
           "rank": 107,
           "usage": "0.46"
@@ -80676,11 +80681,6 @@ window.localDB = {
           "tier": "doublesou",
           "rank": 143,
           "usage": "0.43"
-        },
-        {
-          "tier": "monotype",
-          "rank": 48,
-          "usage": "4.42"
         }
       ],
       "types": [
@@ -80826,14 +80826,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 189,
-          "usage": "0.07"
-        },
-        {
           "tier": "pu",
           "rank": 222,
           "usage": "0.01"
+        },
+        {
+          "tier": "zu",
+          "rank": 189,
+          "usage": "0.07"
         }
       ],
       "types": [
@@ -80874,24 +80874,24 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 158,
-          "usage": "0.15"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 137,
-          "usage": "0.48"
-        },
-        {
           "tier": "pu",
           "rank": 218,
           "usage": "0.02"
         },
         {
+          "tier": "zu",
+          "rank": 158,
+          "usage": "0.15"
+        },
+        {
           "tier": "monotype",
           "rank": 219,
           "usage": "0.11"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 137,
+          "usage": "0.48"
         }
       ],
       "types": [
@@ -80940,9 +80940,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 71,
-          "usage": "1.57"
+          "tier": "vgc2025",
+          "rank": 221,
+          "usage": "0.03"
         },
         {
           "tier": "ru",
@@ -80950,19 +80950,24 @@ window.localDB = {
           "usage": "11.88"
         },
         {
-          "tier": "vgc2025",
-          "rank": 221,
-          "usage": "0.03"
-        },
-        {
-          "tier": "ubers",
-          "rank": 163,
-          "usage": "0.13"
+          "tier": "uu",
+          "rank": 71,
+          "usage": "1.57"
         },
         {
           "tier": "ou",
           "rank": 183,
           "usage": "0.09"
+        },
+        {
+          "tier": "monotype",
+          "rank": 50,
+          "usage": "4.35"
+        },
+        {
+          "tier": "ubers",
+          "rank": 163,
+          "usage": "0.13"
         },
         {
           "tier": "doublesou",
@@ -80973,11 +80978,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 203,
           "usage": "0.22"
-        },
-        {
-          "tier": "monotype",
-          "rank": 50,
-          "usage": "4.35"
         }
       ],
       "types": [
@@ -81137,14 +81137,19 @@ window.localDB = {
           "usage": "10.51"
         },
         {
-          "tier": "ubers",
-          "rank": 55,
-          "usage": "1.39"
-        },
-        {
           "tier": "ou",
           "rank": 51,
           "usage": "2.96"
+        },
+        {
+          "tier": "monotype",
+          "rank": 58,
+          "usage": "3.79"
+        },
+        {
+          "tier": "ubers",
+          "rank": 55,
+          "usage": "1.39"
         },
         {
           "tier": "doublesou",
@@ -81155,11 +81160,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 54,
           "usage": "2.80"
-        },
-        {
-          "tier": "monotype",
-          "rank": 58,
-          "usage": "3.79"
         }
       ],
       "types": [
@@ -81434,14 +81434,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 140,
-          "usage": "0.23"
-        },
-        {
-          "tier": "ru",
-          "rank": 77,
-          "usage": "1.51"
+          "tier": "nu",
+          "rank": 11,
+          "usage": "14.34"
         },
         {
           "tier": "vgc2025",
@@ -81449,9 +81444,14 @@ window.localDB = {
           "usage": "0.29"
         },
         {
-          "tier": "ubers",
-          "rank": 182,
-          "usage": "0.08"
+          "tier": "ru",
+          "rank": 77,
+          "usage": "1.51"
+        },
+        {
+          "tier": "uu",
+          "rank": 140,
+          "usage": "0.23"
         },
         {
           "tier": "ou",
@@ -81459,19 +81459,19 @@ window.localDB = {
           "usage": "0.25"
         },
         {
-          "tier": "nationaldex",
-          "rank": 206,
-          "usage": "0.20"
-        },
-        {
-          "tier": "nu",
-          "rank": 11,
-          "usage": "14.34"
-        },
-        {
           "tier": "monotype",
           "rank": 120,
           "usage": "1.07"
+        },
+        {
+          "tier": "ubers",
+          "rank": 182,
+          "usage": "0.08"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 206,
+          "usage": "0.20"
         }
       ],
       "types": [
@@ -81736,6 +81736,11 @@ window.localDB = {
           "usage": "1.34"
         },
         {
+          "tier": "monotype",
+          "rank": 27,
+          "usage": "6.81"
+        },
+        {
           "tier": "ubers",
           "rank": 43,
           "usage": "2.10"
@@ -81744,11 +81749,6 @@ window.localDB = {
           "tier": "doublesou",
           "rank": 34,
           "usage": "6.45"
-        },
-        {
-          "tier": "monotype",
-          "rank": 27,
-          "usage": "6.81"
         }
       ],
       "types": [
@@ -82023,14 +82023,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 99,
-          "usage": "0.73"
-        },
-        {
-          "tier": "ru",
-          "rank": 123,
-          "usage": "0.45"
+          "tier": "nu",
+          "rank": 15,
+          "usage": "12.03"
         },
         {
           "tier": "vgc2025",
@@ -82038,14 +82033,29 @@ window.localDB = {
           "usage": "0.05"
         },
         {
-          "tier": "ubers",
-          "rank": 244,
-          "usage": "0.04"
+          "tier": "ru",
+          "rank": 123,
+          "usage": "0.45"
+        },
+        {
+          "tier": "uu",
+          "rank": 99,
+          "usage": "0.73"
         },
         {
           "tier": "ou",
           "rank": 85,
           "usage": "0.89"
+        },
+        {
+          "tier": "monotype",
+          "rank": 115,
+          "usage": "1.15"
+        },
+        {
+          "tier": "ubers",
+          "rank": 244,
+          "usage": "0.04"
         },
         {
           "tier": "doublesou",
@@ -82056,16 +82066,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 172,
           "usage": "0.33"
-        },
-        {
-          "tier": "nu",
-          "rank": 15,
-          "usage": "12.03"
-        },
-        {
-          "tier": "monotype",
-          "rank": 115,
-          "usage": "1.15"
         }
       ],
       "types": [
@@ -82180,14 +82180,19 @@ window.localDB = {
           "usage": "0.02"
         },
         {
-          "tier": "ubers",
-          "rank": 190,
-          "usage": "0.08"
-        },
-        {
           "tier": "ou",
           "rank": 37,
           "usage": "5.12"
+        },
+        {
+          "tier": "monotype",
+          "rank": 47,
+          "usage": "4.46"
+        },
+        {
+          "tier": "ubers",
+          "rank": 190,
+          "usage": "0.08"
         },
         {
           "tier": "doublesou",
@@ -82198,11 +82203,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 105,
           "usage": "0.98"
-        },
-        {
-          "tier": "monotype",
-          "rank": 47,
-          "usage": "4.46"
         }
       ],
       "types": [
@@ -82525,14 +82525,19 @@ window.localDB = {
           "usage": "0.05"
         },
         {
-          "tier": "ubers",
-          "rank": 132,
-          "usage": "0.29"
-        },
-        {
           "tier": "ou",
           "rank": 69,
           "usage": "1.92"
+        },
+        {
+          "tier": "monotype",
+          "rank": 11,
+          "usage": "10.29"
+        },
+        {
+          "tier": "ubers",
+          "rank": 132,
+          "usage": "0.29"
         },
         {
           "tier": "doublesou",
@@ -82543,11 +82548,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 62,
           "usage": "2.53"
-        },
-        {
-          "tier": "monotype",
-          "rank": 11,
-          "usage": "10.29"
         }
       ],
       "types": [
@@ -82865,16 +82865,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 199,
-          "usage": "0.09"
-        },
-        {
-          "tier": "zu",
-          "rank": 164,
-          "usage": "0.14"
-        },
-        {
           "tier": "nu",
           "rank": 88,
           "usage": "0.97"
@@ -82883,6 +82873,16 @@ window.localDB = {
           "tier": "pu",
           "rank": 160,
           "usage": "0.11"
+        },
+        {
+          "tier": "zu",
+          "rank": 164,
+          "usage": "0.14"
+        },
+        {
+          "tier": "ru",
+          "rank": 199,
+          "usage": "0.09"
         }
       ],
       "types": [
@@ -82957,24 +82957,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 27,
-          "usage": "8.41"
-        },
-        {
           "tier": "vgc2025",
           "rank": 200,
           "usage": "0.04"
         },
         {
-          "tier": "ubers",
-          "rank": 34,
-          "usage": "3.77"
+          "tier": "uu",
+          "rank": 27,
+          "usage": "8.41"
         },
         {
           "tier": "ou",
           "rank": 95,
           "usage": "0.67"
+        },
+        {
+          "tier": "monotype",
+          "rank": 140,
+          "usage": "0.54"
+        },
+        {
+          "tier": "ubers",
+          "rank": 34,
+          "usage": "3.77"
         },
         {
           "tier": "doublesou",
@@ -82985,11 +82990,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 137,
           "usage": "0.52"
-        },
-        {
-          "tier": "monotype",
-          "rank": 140,
-          "usage": "0.54"
         }
       ],
       "types": [
@@ -83277,14 +83277,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 240,
-          "usage": "0.02"
-        },
-        {
           "tier": "zu",
           "rank": 133,
           "usage": "0.28"
+        },
+        {
+          "tier": "ru",
+          "rank": 240,
+          "usage": "0.02"
         }
       ],
       "types": [
@@ -83294,7 +83294,7 @@ window.localDB = {
         {
           "name": "Defensive",
           "tier": "nfe",
-          "ability": "Moxie",
+          "ability": "Torrent",
           "item": "Eviolite",
           "nature": "Impish / Bold",
           "teraType": "Normal",
@@ -83344,14 +83344,19 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ubers",
-          "rank": 162,
-          "usage": "0.13"
-        },
-        {
           "tier": "ou",
           "rank": 99,
           "usage": "0.62"
+        },
+        {
+          "tier": "monotype",
+          "rank": 87,
+          "usage": "2.16"
+        },
+        {
+          "tier": "ubers",
+          "rank": 162,
+          "usage": "0.13"
         },
         {
           "tier": "doublesou",
@@ -83362,11 +83367,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 145,
           "usage": "0.47"
-        },
-        {
-          "tier": "monotype",
-          "rank": 87,
-          "usage": "2.16"
         }
       ],
       "types": [
@@ -83693,9 +83693,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 247,
-          "usage": "0.02"
+          "tier": "pu",
+          "rank": 182,
+          "usage": "0.05"
         },
         {
           "tier": "zu",
@@ -83703,9 +83703,9 @@ window.localDB = {
           "usage": "1.35"
         },
         {
-          "tier": "ubers",
-          "rank": 259,
-          "usage": "0.03"
+          "tier": "ru",
+          "rank": 247,
+          "usage": "0.02"
         },
         {
           "tier": "ou",
@@ -83713,9 +83713,9 @@ window.localDB = {
           "usage": "0.01"
         },
         {
-          "tier": "pu",
-          "rank": 182,
-          "usage": "0.05"
+          "tier": "ubers",
+          "rank": 259,
+          "usage": "0.03"
         }
       ],
       "types": [
@@ -83826,14 +83826,19 @@ window.localDB = {
           "usage": "21.16"
         },
         {
-          "tier": "ubers",
-          "rank": 250,
-          "usage": "0.03"
-        },
-        {
           "tier": "ou",
           "rank": 58,
           "usage": "2.45"
+        },
+        {
+          "tier": "monotype",
+          "rank": 81,
+          "usage": "2.45"
+        },
+        {
+          "tier": "ubers",
+          "rank": 250,
+          "usage": "0.03"
         },
         {
           "tier": "doublesou",
@@ -83844,11 +83849,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 186,
           "usage": "0.29"
-        },
-        {
-          "tier": "monotype",
-          "rank": 81,
-          "usage": "2.45"
         }
       ],
       "types": [
@@ -84175,41 +84175,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 86,
-          "usage": "0.99"
-        },
-        {
-          "tier": "ru",
-          "rank": 100,
-          "usage": "0.87"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 157,
-          "usage": "0.10"
-        },
-        {
-          "tier": "ubers",
-          "rank": 300,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ou",
-          "rank": 98,
-          "usage": "0.62"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 163,
-          "usage": "0.33"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 184,
-          "usage": "0.29"
-        },
-        {
           "tier": "nu",
           "rank": 58,
           "usage": "2.87"
@@ -84220,9 +84185,44 @@ window.localDB = {
           "usage": "9.41"
         },
         {
+          "tier": "vgc2025",
+          "rank": 157,
+          "usage": "0.10"
+        },
+        {
+          "tier": "ru",
+          "rank": 100,
+          "usage": "0.87"
+        },
+        {
+          "tier": "uu",
+          "rank": 86,
+          "usage": "0.99"
+        },
+        {
+          "tier": "ou",
+          "rank": 98,
+          "usage": "0.62"
+        },
+        {
           "tier": "monotype",
           "rank": 165,
           "usage": "0.33"
+        },
+        {
+          "tier": "ubers",
+          "rank": 300,
+          "usage": "0.02"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 163,
+          "usage": "0.33"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 184,
+          "usage": "0.29"
         }
       ],
       "types": [
@@ -84472,9 +84472,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 77,
-          "usage": "1.38"
+          "tier": "vgc2025",
+          "rank": 80,
+          "usage": "0.57"
         },
         {
           "tier": "ru",
@@ -84482,19 +84482,24 @@ window.localDB = {
           "usage": "13.18"
         },
         {
-          "tier": "vgc2025",
-          "rank": 80,
-          "usage": "0.57"
-        },
-        {
-          "tier": "ubers",
-          "rank": 117,
-          "usage": "0.38"
+          "tier": "uu",
+          "rank": 77,
+          "usage": "1.38"
         },
         {
           "tier": "ou",
           "rank": 81,
           "usage": "1.06"
+        },
+        {
+          "tier": "monotype",
+          "rank": 174,
+          "usage": "0.26"
+        },
+        {
+          "tier": "ubers",
+          "rank": 117,
+          "usage": "0.38"
         },
         {
           "tier": "doublesou",
@@ -84505,11 +84510,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 222,
           "usage": "0.16"
-        },
-        {
-          "tier": "monotype",
-          "rank": 174,
-          "usage": "0.26"
         }
       ],
       "types": [
@@ -84564,7 +84564,7 @@ window.localDB = {
         {
           "name": "Bulky Support",
           "tier": "vgc2025",
-          "ability": "Technician",
+          "ability": "Friend Guard",
           "item": "Safety Goggles",
           "nature": "Jolly",
           "teraType": "Ghost / Fairy",
@@ -84679,31 +84679,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 165,
-          "usage": "0.19"
-        },
-        {
-          "tier": "zu",
-          "rank": 102,
-          "usage": "0.64"
-        },
-        {
-          "tier": "ubers",
-          "rank": 82,
-          "usage": "0.72"
-        },
-        {
-          "tier": "ou",
-          "rank": 266,
-          "usage": "0.02"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 250,
-          "usage": "0.06"
-        },
-        {
           "tier": "nu",
           "rank": 142,
           "usage": "0.13"
@@ -84712,6 +84687,31 @@ window.localDB = {
           "tier": "pu",
           "rank": 148,
           "usage": "0.16"
+        },
+        {
+          "tier": "zu",
+          "rank": 102,
+          "usage": "0.64"
+        },
+        {
+          "tier": "ru",
+          "rank": 165,
+          "usage": "0.19"
+        },
+        {
+          "tier": "ou",
+          "rank": 266,
+          "usage": "0.02"
+        },
+        {
+          "tier": "ubers",
+          "rank": 82,
+          "usage": "0.72"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 250,
+          "usage": "0.06"
         }
       ],
       "types": [
@@ -84849,46 +84849,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 200,
-          "usage": "0.05"
-        },
-        {
-          "tier": "ru",
-          "rank": 176,
-          "usage": "0.15"
-        },
-        {
-          "tier": "zu",
-          "rank": 58,
-          "usage": "2.37"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 64,
-          "usage": "0.84"
-        },
-        {
-          "tier": "ubers",
-          "rank": 291,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ou",
-          "rank": 160,
-          "usage": "0.14"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 251,
-          "usage": "0.06"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 265,
-          "usage": "0.09"
-        },
-        {
           "tier": "nu",
           "rank": 128,
           "usage": "0.27"
@@ -84899,8 +84859,48 @@ window.localDB = {
           "usage": "0.58"
         },
         {
+          "tier": "vgc2025",
+          "rank": 64,
+          "usage": "0.84"
+        },
+        {
+          "tier": "zu",
+          "rank": 58,
+          "usage": "2.37"
+        },
+        {
+          "tier": "ru",
+          "rank": 176,
+          "usage": "0.15"
+        },
+        {
+          "tier": "uu",
+          "rank": 200,
+          "usage": "0.05"
+        },
+        {
+          "tier": "ou",
+          "rank": 160,
+          "usage": "0.14"
+        },
+        {
           "tier": "monotype",
           "rank": 237,
+          "usage": "0.09"
+        },
+        {
+          "tier": "ubers",
+          "rank": 291,
+          "usage": "0.02"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 251,
+          "usage": "0.06"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 265,
           "usage": "0.09"
         }
       ],
@@ -85022,9 +85022,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 196,
-          "usage": "0.09"
+          "tier": "pu",
+          "rank": 131,
+          "usage": "0.28"
         },
         {
           "tier": "zu",
@@ -85032,9 +85032,9 @@ window.localDB = {
           "usage": "0.74"
         },
         {
-          "tier": "pu",
-          "rank": 131,
-          "usage": "0.28"
+          "tier": "ru",
+          "rank": 196,
+          "usage": "0.09"
         }
       ],
       "types": [
@@ -85133,9 +85133,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 250,
-          "usage": "0.02"
+          "tier": "pu",
+          "rank": 74,
+          "usage": "1.33"
         },
         {
           "tier": "zu",
@@ -85143,9 +85143,9 @@ window.localDB = {
           "usage": "5.29"
         },
         {
-          "tier": "pu",
-          "rank": 74,
-          "usage": "1.33"
+          "tier": "ru",
+          "rank": 250,
+          "usage": "0.02"
         },
         {
           "tier": "monotype",
@@ -85249,14 +85249,19 @@ window.localDB = {
           "usage": "0.75"
         },
         {
-          "tier": "ubers",
-          "rank": 45,
-          "usage": "1.91"
-        },
-        {
           "tier": "ou",
           "rank": 40,
           "usage": "4.74"
+        },
+        {
+          "tier": "monotype",
+          "rank": 79,
+          "usage": "2.51"
+        },
+        {
+          "tier": "ubers",
+          "rank": 45,
+          "usage": "1.91"
         },
         {
           "tier": "doublesou",
@@ -85267,11 +85272,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 118,
           "usage": "0.77"
-        },
-        {
-          "tier": "monotype",
-          "rank": 79,
-          "usage": "2.51"
         }
       ],
       "types": [
@@ -85546,24 +85546,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 63,
-          "usage": "1.97"
-        },
-        {
           "tier": "vgc2025",
           "rank": 112,
           "usage": "0.23"
         },
         {
-          "tier": "ubers",
-          "rank": 205,
-          "usage": "0.06"
+          "tier": "uu",
+          "rank": 63,
+          "usage": "1.97"
         },
         {
           "tier": "ou",
           "rank": 91,
           "usage": "0.76"
+        },
+        {
+          "tier": "monotype",
+          "rank": 128,
+          "usage": "0.78"
+        },
+        {
+          "tier": "ubers",
+          "rank": 205,
+          "usage": "0.06"
         },
         {
           "tier": "doublesou",
@@ -85574,11 +85579,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 149,
           "usage": "0.45"
-        },
-        {
-          "tier": "monotype",
-          "rank": 128,
-          "usage": "0.78"
         }
       ],
       "types": [
@@ -85734,14 +85734,19 @@ window.localDB = {
           "usage": "0.94"
         },
         {
-          "tier": "ubers",
-          "rank": 89,
-          "usage": "0.63"
-        },
-        {
           "tier": "ou",
           "rank": 27,
           "usage": "7.06"
+        },
+        {
+          "tier": "monotype",
+          "rank": 15,
+          "usage": "9.25"
+        },
+        {
+          "tier": "ubers",
+          "rank": 89,
+          "usage": "0.63"
         },
         {
           "tier": "doublesou",
@@ -85752,11 +85757,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 36,
           "usage": "6.17"
-        },
-        {
-          "tier": "monotype",
-          "rank": 15,
-          "usage": "9.25"
         }
       ],
       "types": [
@@ -85972,9 +85972,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 152,
-          "usage": "0.17"
+          "tier": "nu",
+          "rank": 9,
+          "usage": "15.48"
         },
         {
           "tier": "ru",
@@ -85982,14 +85982,24 @@ window.localDB = {
           "usage": "0.85"
         },
         {
-          "tier": "ubers",
-          "rank": 274,
-          "usage": "0.02"
+          "tier": "uu",
+          "rank": 152,
+          "usage": "0.17"
         },
         {
           "tier": "ou",
           "rank": 202,
           "usage": "0.07"
+        },
+        {
+          "tier": "monotype",
+          "rank": 286,
+          "usage": "0.03"
+        },
+        {
+          "tier": "ubers",
+          "rank": 274,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -86000,16 +86010,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 327,
           "usage": "0.05"
-        },
-        {
-          "tier": "nu",
-          "rank": 9,
-          "usage": "15.48"
-        },
-        {
-          "tier": "monotype",
-          "rank": 286,
-          "usage": "0.03"
         }
       ],
       "types": [
@@ -86230,14 +86230,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 125,
-          "usage": "0.32"
+          "tier": "nu",
+          "rank": 53,
+          "usage": "3.26"
         },
         {
-          "tier": "ru",
-          "rank": 63,
-          "usage": "2.23"
+          "tier": "pu",
+          "rank": 6,
+          "usage": "18.21"
         },
         {
           "tier": "vgc2025",
@@ -86245,13 +86245,28 @@ window.localDB = {
           "usage": "0.02"
         },
         {
-          "tier": "ubers",
-          "rank": 240,
-          "usage": "0.04"
+          "tier": "ru",
+          "rank": 63,
+          "usage": "2.23"
+        },
+        {
+          "tier": "uu",
+          "rank": 125,
+          "usage": "0.32"
         },
         {
           "tier": "ou",
           "rank": 239,
+          "usage": "0.04"
+        },
+        {
+          "tier": "monotype",
+          "rank": 234,
+          "usage": "0.09"
+        },
+        {
+          "tier": "ubers",
+          "rank": 240,
           "usage": "0.04"
         },
         {
@@ -86263,21 +86278,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 284,
           "usage": "0.07"
-        },
-        {
-          "tier": "nu",
-          "rank": 53,
-          "usage": "3.26"
-        },
-        {
-          "tier": "pu",
-          "rank": 6,
-          "usage": "18.21"
-        },
-        {
-          "tier": "monotype",
-          "rank": 234,
-          "usage": "0.09"
         }
       ],
       "types": [
@@ -86498,14 +86498,19 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 246,
-          "usage": "0.02"
+          "tier": "pu",
+          "rank": 118,
+          "usage": "0.38"
         },
         {
           "tier": "zu",
           "rank": 73,
           "usage": "1.53"
+        },
+        {
+          "tier": "ru",
+          "rank": 246,
+          "usage": "0.02"
         },
         {
           "tier": "ou",
@@ -86516,11 +86521,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 435,
           "usage": "0.02"
-        },
-        {
-          "tier": "pu",
-          "rank": 118,
-          "usage": "0.38"
         }
       ],
       "types": [
@@ -86686,9 +86686,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 194,
-          "usage": "0.06"
+          "tier": "nu",
+          "rank": 68,
+          "usage": "1.66"
         },
         {
           "tier": "ru",
@@ -86696,14 +86696,24 @@ window.localDB = {
           "usage": "2.01"
         },
         {
-          "tier": "ubers",
-          "rank": 143,
-          "usage": "0.20"
+          "tier": "uu",
+          "rank": 194,
+          "usage": "0.06"
         },
         {
           "tier": "ou",
           "rank": 238,
           "usage": "0.04"
+        },
+        {
+          "tier": "monotype",
+          "rank": 262,
+          "usage": "0.06"
+        },
+        {
+          "tier": "ubers",
+          "rank": 143,
+          "usage": "0.20"
         },
         {
           "tier": "doublesou",
@@ -86714,16 +86724,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 427,
           "usage": "0.02"
-        },
-        {
-          "tier": "nu",
-          "rank": 68,
-          "usage": "1.66"
-        },
-        {
-          "tier": "monotype",
-          "rank": 262,
-          "usage": "0.06"
         }
       ],
       "types": [
@@ -86840,9 +86840,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 136,
-          "usage": "0.24"
+          "tier": "nu",
+          "rank": 30,
+          "usage": "7.24"
         },
         {
           "tier": "ru",
@@ -86850,9 +86850,19 @@ window.localDB = {
           "usage": "2.46"
         },
         {
+          "tier": "uu",
+          "rank": 136,
+          "usage": "0.24"
+        },
+        {
           "tier": "ou",
           "rank": 235,
           "usage": "0.04"
+        },
+        {
+          "tier": "monotype",
+          "rank": 68,
+          "usage": "3.26"
         },
         {
           "tier": "doublesou",
@@ -86863,16 +86873,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 273,
           "usage": "0.08"
-        },
-        {
-          "tier": "nu",
-          "rank": 30,
-          "usage": "7.24"
-        },
-        {
-          "tier": "monotype",
-          "rank": 68,
-          "usage": "3.26"
         }
       ],
       "types": [
@@ -87067,14 +87067,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 218,
-          "usage": "0.03"
+          "tier": "nu",
+          "rank": 141,
+          "usage": "0.15"
         },
         {
-          "tier": "zu",
-          "rank": 53,
-          "usage": "3.09"
+          "tier": "pu",
+          "rank": 107,
+          "usage": "0.50"
         },
         {
           "tier": "vgc2025",
@@ -87082,13 +87082,28 @@ window.localDB = {
           "usage": "0.02"
         },
         {
-          "tier": "ubers",
-          "rank": 294,
-          "usage": "0.02"
+          "tier": "zu",
+          "rank": 53,
+          "usage": "3.09"
+        },
+        {
+          "tier": "uu",
+          "rank": 218,
+          "usage": "0.03"
         },
         {
           "tier": "ou",
           "rank": 262,
+          "usage": "0.02"
+        },
+        {
+          "tier": "monotype",
+          "rank": 222,
+          "usage": "0.11"
+        },
+        {
+          "tier": "ubers",
+          "rank": 294,
           "usage": "0.02"
         },
         {
@@ -87100,21 +87115,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 455,
           "usage": "0.01"
-        },
-        {
-          "tier": "nu",
-          "rank": 141,
-          "usage": "0.15"
-        },
-        {
-          "tier": "pu",
-          "rank": 107,
-          "usage": "0.50"
-        },
-        {
-          "tier": "monotype",
-          "rank": 222,
-          "usage": "0.11"
         }
       ],
       "types": [
@@ -87186,16 +87186,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 179,
-          "usage": "0.09"
-        },
-        {
-          "tier": "zu",
-          "rank": 115,
-          "usage": "0.43"
-        },
-        {
           "tier": "nu",
           "rank": 213,
           "usage": "0.01"
@@ -87204,6 +87194,16 @@ window.localDB = {
           "tier": "pu",
           "rank": 143,
           "usage": "0.20"
+        },
+        {
+          "tier": "zu",
+          "rank": 115,
+          "usage": "0.43"
+        },
+        {
+          "tier": "uu",
+          "rank": 179,
+          "usage": "0.09"
         }
       ],
       "types": [
@@ -87301,46 +87301,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 91,
-          "usage": "0.85"
-        },
-        {
-          "tier": "ru",
-          "rank": 97,
-          "usage": "0.96"
-        },
-        {
-          "tier": "zu",
-          "rank": 122,
-          "usage": "0.37"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 168,
-          "usage": "0.08"
-        },
-        {
-          "tier": "ubers",
-          "rank": 314,
-          "usage": "0.01"
-        },
-        {
-          "tier": "ou",
-          "rank": 252,
-          "usage": "0.03"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 225,
-          "usage": "0.10"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 216,
-          "usage": "0.18"
-        },
-        {
           "tier": "nu",
           "rank": 76,
           "usage": "1.38"
@@ -87351,9 +87311,49 @@ window.localDB = {
           "usage": "1.27"
         },
         {
+          "tier": "vgc2025",
+          "rank": 168,
+          "usage": "0.08"
+        },
+        {
+          "tier": "zu",
+          "rank": 122,
+          "usage": "0.37"
+        },
+        {
+          "tier": "ru",
+          "rank": 97,
+          "usage": "0.96"
+        },
+        {
+          "tier": "uu",
+          "rank": 91,
+          "usage": "0.85"
+        },
+        {
+          "tier": "ou",
+          "rank": 252,
+          "usage": "0.03"
+        },
+        {
           "tier": "monotype",
           "rank": 181,
           "usage": "0.23"
+        },
+        {
+          "tier": "ubers",
+          "rank": 314,
+          "usage": "0.01"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 225,
+          "usage": "0.10"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 216,
+          "usage": "0.18"
         }
       ],
       "types": [
@@ -87554,36 +87554,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 193,
-          "usage": "0.10"
-        },
-        {
-          "tier": "zu",
-          "rank": 67,
-          "usage": "1.99"
-        },
-        {
-          "tier": "ubers",
-          "rank": 245,
-          "usage": "0.04"
-        },
-        {
-          "tier": "ou",
-          "rank": 243,
-          "usage": "0.03"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 207,
-          "usage": "0.13"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 414,
-          "usage": "0.02"
-        },
-        {
           "tier": "nu",
           "rank": 194,
           "usage": "0.03"
@@ -87594,9 +87564,39 @@ window.localDB = {
           "usage": "0.02"
         },
         {
+          "tier": "zu",
+          "rank": 67,
+          "usage": "1.99"
+        },
+        {
+          "tier": "ru",
+          "rank": 193,
+          "usage": "0.10"
+        },
+        {
+          "tier": "ou",
+          "rank": 243,
+          "usage": "0.03"
+        },
+        {
           "tier": "monotype",
           "rank": 330,
           "usage": "0.01"
+        },
+        {
+          "tier": "ubers",
+          "rank": 245,
+          "usage": "0.04"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 207,
+          "usage": "0.13"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 414,
+          "usage": "0.02"
         }
       ],
       "types": [
@@ -87884,14 +87884,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 124,
-          "usage": "0.35"
-        },
-        {
           "tier": "nu",
           "rank": 109,
           "usage": "0.56"
+        },
+        {
+          "tier": "zu",
+          "rank": 124,
+          "usage": "0.35"
         }
       ],
       "types": [
@@ -87986,24 +87986,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 20,
-          "usage": "10.17"
-        },
-        {
           "tier": "vgc2025",
           "rank": 196,
           "usage": "0.04"
         },
         {
-          "tier": "ubers",
-          "rank": 193,
-          "usage": "0.07"
+          "tier": "uu",
+          "rank": 20,
+          "usage": "10.17"
         },
         {
           "tier": "ou",
           "rank": 57,
           "usage": "2.61"
+        },
+        {
+          "tier": "monotype",
+          "rank": 95,
+          "usage": "1.92"
+        },
+        {
+          "tier": "ubers",
+          "rank": 193,
+          "usage": "0.07"
         },
         {
           "tier": "doublesou",
@@ -88014,11 +88019,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 199,
           "usage": "0.24"
-        },
-        {
-          "tier": "monotype",
-          "rank": 95,
-          "usage": "1.92"
         }
       ],
       "types": [
@@ -88059,7 +88059,7 @@ window.localDB = {
         {
           "name": "The Tink",
           "tier": "1v1",
-          "ability": "Pickpocket",
+          "ability": "Own Tempo",
           "item": "Life Orb",
           "nature": "Impish",
           "teraType": "Normal",
@@ -88089,7 +88089,7 @@ window.localDB = {
         {
           "name": "Swords Dance (Fairy)",
           "tier": "monotype",
-          "ability": "Pickpocket",
+          "ability": "Own Tempo",
           "item": "Leftovers",
           "nature": "Jolly",
           "teraType": "Normal",
@@ -88104,7 +88104,7 @@ window.localDB = {
         {
           "name": "Offensive Support",
           "tier": "battlestadiumsingles",
-          "ability": "Pickpocket",
+          "ability": "Own Tempo",
           "item": "Air Balloon / Focus Sash",
           "nature": "Jolly / Adamant",
           "teraType": "Water / Flying / Fairy / Ground",
@@ -88149,7 +88149,7 @@ window.localDB = {
         {
           "name": "Swords Dance (Atk)",
           "tier": "godlygift",
-          "ability": "Pickpocket",
+          "ability": "Own Tempo",
           "item": "Metal Coat",
           "nature": "Jolly",
           "teraType": "Normal",
@@ -88283,9 +88283,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 209,
-          "usage": "0.07"
+          "tier": "nu",
+          "rank": 201,
+          "usage": "0.02"
         },
         {
           "tier": "zu",
@@ -88293,9 +88293,9 @@ window.localDB = {
           "usage": "0.16"
         },
         {
-          "tier": "nu",
-          "rank": 201,
-          "usage": "0.02"
+          "tier": "ru",
+          "rank": 209,
+          "usage": "0.07"
         }
       ],
       "types": [
@@ -88343,11 +88343,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 242,
-          "usage": "0.02"
-        },
-        {
           "tier": "nu",
           "rank": 118,
           "usage": "0.40"
@@ -88356,6 +88351,11 @@ window.localDB = {
           "tier": "pu",
           "rank": 15,
           "usage": "12.23"
+        },
+        {
+          "tier": "ru",
+          "rank": 242,
+          "usage": "0.02"
         },
         {
           "tier": "monotype",
@@ -88371,7 +88371,7 @@ window.localDB = {
         {
           "name": "Offensive",
           "tier": "pu",
-          "ability": "Rocky Payload",
+          "ability": "Big Pecks",
           "item": "Heavy-Duty Boots",
           "nature": "Adamant",
           "teraType": "Normal",
@@ -88386,7 +88386,7 @@ window.localDB = {
         {
           "name": "Bulky Utility",
           "tier": "pu",
-          "ability": "Rocky Payload",
+          "ability": "Big Pecks",
           "item": "Heavy-Duty Boots",
           "nature": "Careful",
           "teraType": "Steel / Ground",
@@ -88416,7 +88416,7 @@ window.localDB = {
         {
           "name": "Offensive Support",
           "tier": "nu",
-          "ability": "Rocky Payload",
+          "ability": "Big Pecks",
           "item": "Heavy-Duty Boots",
           "nature": "Jolly",
           "teraType": "Dark / Electric / Steel",
@@ -88431,7 +88431,7 @@ window.localDB = {
         {
           "name": "Entry Hazard Support (Flying)",
           "tier": "monotype",
-          "ability": "Rocky Payload",
+          "ability": "Big Pecks",
           "item": "Heavy-Duty Boots",
           "nature": "Impish",
           "teraType": "Normal",
@@ -88739,14 +88739,19 @@ window.localDB = {
           "usage": "8.27"
         },
         {
-          "tier": "ubers",
-          "rank": 321,
-          "usage": "0.01"
-        },
-        {
           "tier": "ou",
           "rank": 191,
           "usage": "0.08"
+        },
+        {
+          "tier": "monotype",
+          "rank": 178,
+          "usage": "0.23"
+        },
+        {
+          "tier": "ubers",
+          "rank": 321,
+          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -88757,11 +88762,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 298,
           "usage": "0.06"
-        },
-        {
-          "tier": "monotype",
-          "rank": 178,
-          "usage": "0.23"
         }
       ],
       "types": [
@@ -88822,24 +88822,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 96,
-          "usage": "0.79"
-        },
-        {
           "tier": "ru",
           "rank": 7,
           "usage": "15.52"
         },
         {
-          "tier": "ubers",
-          "rank": 86,
-          "usage": "0.66"
+          "tier": "uu",
+          "rank": 96,
+          "usage": "0.79"
         },
         {
           "tier": "ou",
           "rank": 209,
           "usage": "0.06"
+        },
+        {
+          "tier": "monotype",
+          "rank": 162,
+          "usage": "0.33"
+        },
+        {
+          "tier": "ubers",
+          "rank": 86,
+          "usage": "0.66"
         },
         {
           "tier": "doublesou",
@@ -88850,11 +88855,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 238,
           "usage": "0.12"
-        },
-        {
-          "tier": "monotype",
-          "rank": 162,
-          "usage": "0.33"
         }
       ],
       "types": [
@@ -88975,14 +88975,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 176,
-          "usage": "0.10"
+          "tier": "nu",
+          "rank": 87,
+          "usage": "0.98"
+        },
+        {
+          "tier": "pu",
+          "rank": 81,
+          "usage": "1.09"
         },
         {
           "tier": "zu",
           "rank": 17,
           "usage": "9.86"
+        },
+        {
+          "tier": "uu",
+          "rank": 176,
+          "usage": "0.10"
+        },
+        {
+          "tier": "monotype",
+          "rank": 269,
+          "usage": "0.05"
         },
         {
           "tier": "ubers",
@@ -88998,21 +89013,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 440,
           "usage": "0.01"
-        },
-        {
-          "tier": "nu",
-          "rank": 87,
-          "usage": "0.98"
-        },
-        {
-          "tier": "pu",
-          "rank": 81,
-          "usage": "1.09"
-        },
-        {
-          "tier": "monotype",
-          "rank": 269,
-          "usage": "0.05"
         }
       ],
       "types": [
@@ -89167,14 +89167,14 @@ window.localDB = {
           "usage": "23.13"
         },
         {
-          "tier": "zu",
-          "rank": 172,
-          "usage": "0.11"
-        },
-        {
           "tier": "pu",
           "rank": 158,
           "usage": "0.12"
+        },
+        {
+          "tier": "zu",
+          "rank": 172,
+          "usage": "0.11"
         }
       ],
       "types": [
@@ -89270,14 +89270,19 @@ window.localDB = {
           "usage": "0.06"
         },
         {
-          "tier": "ubers",
-          "rank": 18,
-          "usage": "9.39"
-        },
-        {
           "tier": "ou",
           "rank": 17,
           "usage": "11.49"
+        },
+        {
+          "tier": "monotype",
+          "rank": 42,
+          "usage": "4.68"
+        },
+        {
+          "tier": "ubers",
+          "rank": 18,
+          "usage": "9.39"
         },
         {
           "tier": "doublesou",
@@ -89288,11 +89293,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 77,
           "usage": "1.75"
-        },
-        {
-          "tier": "monotype",
-          "rank": 42,
-          "usage": "4.68"
         }
       ],
       "types": [
@@ -89624,9 +89624,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 66,
-          "usage": "1.89"
+          "tier": "nu",
+          "rank": 20,
+          "usage": "9.36"
         },
         {
           "tier": "ru",
@@ -89634,9 +89634,19 @@ window.localDB = {
           "usage": "0.26"
         },
         {
+          "tier": "uu",
+          "rank": 66,
+          "usage": "1.89"
+        },
+        {
           "tier": "ou",
           "rank": 121,
           "usage": "0.31"
+        },
+        {
+          "tier": "monotype",
+          "rank": 183,
+          "usage": "0.22"
         },
         {
           "tier": "doublesou",
@@ -89647,16 +89657,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 344,
           "usage": "0.04"
-        },
-        {
-          "tier": "nu",
-          "rank": 20,
-          "usage": "9.36"
-        },
-        {
-          "tier": "monotype",
-          "rank": 183,
-          "usage": "0.22"
         }
       ],
       "types": [
@@ -89666,7 +89666,7 @@ window.localDB = {
         {
           "name": "Sand Sweeper",
           "tier": "uu",
-          "ability": "Sand Rush",
+          "ability": "Fluffy",
           "item": "Choice Band",
           "nature": "Adamant",
           "teraType": "Normal",
@@ -89746,14 +89746,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 258,
-          "usage": "0.01"
-        },
-        {
-          "tier": "ru",
-          "rank": 47,
-          "usage": "4.30"
+          "tier": "nu",
+          "rank": 1,
+          "usage": "27.67"
         },
         {
           "tier": "vgc2025",
@@ -89761,9 +89756,24 @@ window.localDB = {
           "usage": "0.69"
         },
         {
+          "tier": "ru",
+          "rank": 47,
+          "usage": "4.30"
+        },
+        {
+          "tier": "uu",
+          "rank": 258,
+          "usage": "0.01"
+        },
+        {
           "tier": "ou",
           "rank": 187,
           "usage": "0.08"
+        },
+        {
+          "tier": "monotype",
+          "rank": 167,
+          "usage": "0.30"
         },
         {
           "tier": "doublesou",
@@ -89774,16 +89784,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 438,
           "usage": "0.01"
-        },
-        {
-          "tier": "nu",
-          "rank": 1,
-          "usage": "27.67"
-        },
-        {
-          "tier": "monotype",
-          "rank": 167,
-          "usage": "0.30"
         }
       ],
       "types": [
@@ -89794,7 +89794,7 @@ window.localDB = {
         {
           "name": "Glass Cannon",
           "tier": "vgc2025",
-          "ability": "Costar",
+          "ability": "Scrappy",
           "item": "Focus Sash",
           "nature": "Jolly",
           "teraType": "Ghost / Stellar",
@@ -89809,7 +89809,7 @@ window.localDB = {
         {
           "name": "Choice Scarf",
           "tier": "ru",
-          "ability": "Costar",
+          "ability": "Scrappy",
           "item": "Choice Scarf",
           "nature": "Jolly",
           "teraType": "Normal",
@@ -89824,7 +89824,7 @@ window.localDB = {
         {
           "name": "Choice Item",
           "tier": "nu",
-          "ability": "Costar",
+          "ability": "Scrappy",
           "item": "Choice Scarf / Choice Band",
           "nature": "Jolly",
           "teraType": "Fighting / Flying / Electric",
@@ -89839,7 +89839,7 @@ window.localDB = {
         {
           "name": "Swords Dance",
           "tier": "nu",
-          "ability": "Costar",
+          "ability": "Scrappy",
           "item": "None",
           "nature": "Jolly / Adamant",
           "teraType": "Steel / Electric / Ground",
@@ -89854,7 +89854,7 @@ window.localDB = {
         {
           "name": "Scrappy Choice Item",
           "tier": "battlestadiumsingles",
-          "ability": "Costar",
+          "ability": "Scrappy",
           "item": "Choice Scarf / Choice Band",
           "nature": "Jolly",
           "teraType": "Fighting / Fire",
@@ -89958,24 +89958,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 173,
-          "usage": "0.10"
-        },
-        {
           "tier": "ru",
           "rank": 53,
           "usage": "2.82"
         },
         {
-          "tier": "ubers",
-          "rank": 337,
-          "usage": "0.01"
+          "tier": "uu",
+          "rank": 173,
+          "usage": "0.10"
         },
         {
           "tier": "ou",
           "rank": 132,
           "usage": "0.24"
+        },
+        {
+          "tier": "monotype",
+          "rank": 123,
+          "usage": "1.01"
+        },
+        {
+          "tier": "ubers",
+          "rank": 337,
+          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -89986,11 +89991,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 268,
           "usage": "0.08"
-        },
-        {
-          "tier": "monotype",
-          "rank": 123,
-          "usage": "1.01"
         }
       ],
       "types": [
@@ -90054,41 +90054,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 143,
-          "usage": "0.21"
-        },
-        {
-          "tier": "ru",
-          "rank": 191,
-          "usage": "0.11"
-        },
-        {
-          "tier": "zu",
-          "rank": 49,
-          "usage": "3.39"
-        },
-        {
-          "tier": "ubers",
-          "rank": 295,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ou",
-          "rank": 232,
-          "usage": "0.04"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 337,
-          "usage": "0.02"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 420,
-          "usage": "0.02"
-        },
-        {
           "tier": "nu",
           "rank": 190,
           "usage": "0.03"
@@ -90099,8 +90064,43 @@ window.localDB = {
           "usage": "0.66"
         },
         {
+          "tier": "zu",
+          "rank": 49,
+          "usage": "3.39"
+        },
+        {
+          "tier": "ru",
+          "rank": 191,
+          "usage": "0.11"
+        },
+        {
+          "tier": "uu",
+          "rank": 143,
+          "usage": "0.21"
+        },
+        {
+          "tier": "ou",
+          "rank": 232,
+          "usage": "0.04"
+        },
+        {
           "tier": "monotype",
           "rank": 308,
+          "usage": "0.02"
+        },
+        {
+          "tier": "ubers",
+          "rank": 295,
+          "usage": "0.02"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 337,
+          "usage": "0.02"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 420,
           "usage": "0.02"
         }
       ],
@@ -90182,14 +90182,19 @@ window.localDB = {
           "usage": "2.40"
         },
         {
-          "tier": "ubers",
-          "rank": 32,
-          "usage": "3.88"
-        },
-        {
           "tier": "ou",
           "rank": 39,
           "usage": "4.81"
+        },
+        {
+          "tier": "monotype",
+          "rank": 104,
+          "usage": "1.68"
+        },
+        {
+          "tier": "ubers",
+          "rank": 32,
+          "usage": "3.88"
         },
         {
           "tier": "doublesou",
@@ -90200,11 +90205,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 71,
           "usage": "1.96"
-        },
-        {
-          "tier": "monotype",
-          "rank": 104,
-          "usage": "1.68"
         }
       ],
       "types": [
@@ -90553,31 +90553,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 256,
-          "usage": "0.01"
-        },
-        {
-          "tier": "ru",
-          "rank": 164,
-          "usage": "0.20"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 47,
-          "usage": "1.94"
-        },
-        {
-          "tier": "ubers",
-          "rank": 247,
-          "usage": "0.03"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 287,
-          "usage": "0.04"
-        },
-        {
           "tier": "nu",
           "rank": 31,
           "usage": "7.15"
@@ -90588,9 +90563,34 @@ window.localDB = {
           "usage": "12.47"
         },
         {
+          "tier": "vgc2025",
+          "rank": 47,
+          "usage": "1.94"
+        },
+        {
+          "tier": "ru",
+          "rank": 164,
+          "usage": "0.20"
+        },
+        {
+          "tier": "uu",
+          "rank": 256,
+          "usage": "0.01"
+        },
+        {
           "tier": "monotype",
           "rank": 191,
           "usage": "0.20"
+        },
+        {
+          "tier": "ubers",
+          "rank": 247,
+          "usage": "0.03"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 287,
+          "usage": "0.04"
         }
       ],
       "types": [
@@ -91008,24 +91008,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 22,
-          "usage": "9.91"
-        },
-        {
           "tier": "vgc2025",
           "rank": 97,
           "usage": "0.34"
         },
         {
-          "tier": "ubers",
-          "rank": 38,
-          "usage": "3.23"
+          "tier": "uu",
+          "rank": 22,
+          "usage": "9.91"
         },
         {
           "tier": "ou",
           "rank": 44,
           "usage": "3.67"
+        },
+        {
+          "tier": "monotype",
+          "rank": 19,
+          "usage": "7.73"
+        },
+        {
+          "tier": "ubers",
+          "rank": 38,
+          "usage": "3.23"
         },
         {
           "tier": "doublesou",
@@ -91036,11 +91041,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 37,
           "usage": "5.62"
-        },
-        {
-          "tier": "monotype",
-          "rank": 19,
-          "usage": "7.73"
         }
       ],
       "types": [
@@ -91270,46 +91270,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 116,
-          "usage": "0.40"
-        },
-        {
-          "tier": "ru",
-          "rank": 235,
-          "usage": "0.03"
-        },
-        {
-          "tier": "zu",
-          "rank": 39,
-          "usage": "4.18"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 17,
-          "usage": "13.70"
-        },
-        {
-          "tier": "ubers",
-          "rank": 341,
-          "usage": "0.01"
-        },
-        {
-          "tier": "ou",
-          "rank": 158,
-          "usage": "0.15"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 13,
-          "usage": "12.26"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 430,
-          "usage": "0.02"
-        },
-        {
           "tier": "nu",
           "rank": 111,
           "usage": "0.52"
@@ -91320,9 +91280,49 @@ window.localDB = {
           "usage": "1.02"
         },
         {
+          "tier": "vgc2025",
+          "rank": 17,
+          "usage": "13.70"
+        },
+        {
+          "tier": "zu",
+          "rank": 39,
+          "usage": "4.18"
+        },
+        {
+          "tier": "ru",
+          "rank": 235,
+          "usage": "0.03"
+        },
+        {
+          "tier": "uu",
+          "rank": 116,
+          "usage": "0.40"
+        },
+        {
+          "tier": "ou",
+          "rank": 158,
+          "usage": "0.15"
+        },
+        {
           "tier": "monotype",
           "rank": 186,
           "usage": "0.21"
+        },
+        {
+          "tier": "ubers",
+          "rank": 341,
+          "usage": "0.01"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 13,
+          "usage": "12.26"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 430,
+          "usage": "0.02"
         }
       ],
       "types": [
@@ -91492,9 +91492,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 254,
-          "usage": "0.02"
+          "tier": "nu",
+          "rank": 26,
+          "usage": "8.10"
         },
         {
           "tier": "ru",
@@ -91502,9 +91502,19 @@ window.localDB = {
           "usage": "0.46"
         },
         {
+          "tier": "uu",
+          "rank": 254,
+          "usage": "0.02"
+        },
+        {
           "tier": "ou",
           "rank": 182,
           "usage": "0.09"
+        },
+        {
+          "tier": "monotype",
+          "rank": 309,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -91515,16 +91525,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 348,
           "usage": "0.04"
-        },
-        {
-          "tier": "nu",
-          "rank": 26,
-          "usage": "8.10"
-        },
-        {
-          "tier": "monotype",
-          "rank": 309,
-          "usage": "0.02"
         }
       ],
       "types": [
@@ -91608,14 +91608,14 @@ window.localDB = {
           "usage": "1.55"
         },
         {
-          "tier": "ubers",
-          "rank": 16,
-          "usage": "9.60"
-        },
-        {
           "tier": "ou",
           "rank": 3,
           "usage": "25.14"
+        },
+        {
+          "tier": "ubers",
+          "rank": 16,
+          "usage": "9.60"
         },
         {
           "tier": "doublesou",
@@ -91785,14 +91785,19 @@ window.localDB = {
           "usage": "0.01"
         },
         {
-          "tier": "ubers",
-          "rank": 40,
-          "usage": "2.44"
-        },
-        {
           "tier": "ou",
           "rank": 1,
           "usage": "32.17"
+        },
+        {
+          "tier": "monotype",
+          "rank": 17,
+          "usage": "8.07"
+        },
+        {
+          "tier": "ubers",
+          "rank": 40,
+          "usage": "2.44"
         },
         {
           "tier": "doublesou",
@@ -91803,11 +91808,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 5,
           "usage": "15.39"
-        },
-        {
-          "tier": "monotype",
-          "rank": 17,
-          "usage": "8.07"
         }
       ],
       "types": [
@@ -92299,14 +92299,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 80,
-          "usage": "1.29"
-        },
-        {
-          "tier": "ru",
-          "rank": 72,
-          "usage": "1.63"
+          "tier": "nu",
+          "rank": 42,
+          "usage": "4.64"
         },
         {
           "tier": "vgc2025",
@@ -92314,13 +92309,28 @@ window.localDB = {
           "usage": "1.39"
         },
         {
-          "tier": "ubers",
-          "rank": 181,
-          "usage": "0.09"
+          "tier": "ru",
+          "rank": 72,
+          "usage": "1.63"
+        },
+        {
+          "tier": "uu",
+          "rank": 80,
+          "usage": "1.29"
         },
         {
           "tier": "ou",
           "rank": 184,
+          "usage": "0.09"
+        },
+        {
+          "tier": "monotype",
+          "rank": 235,
+          "usage": "0.09"
+        },
+        {
+          "tier": "ubers",
+          "rank": 181,
           "usage": "0.09"
         },
         {
@@ -92332,16 +92342,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 242,
           "usage": "0.11"
-        },
-        {
-          "tier": "nu",
-          "rank": 42,
-          "usage": "4.64"
-        },
-        {
-          "tier": "monotype",
-          "rank": 235,
-          "usage": "0.09"
         }
       ],
       "types": [
@@ -92593,46 +92593,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 201,
-          "usage": "0.05"
-        },
-        {
-          "tier": "ru",
-          "rank": 141,
-          "usage": "0.33"
-        },
-        {
-          "tier": "zu",
-          "rank": 24,
-          "usage": "7.51"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 33,
-          "usage": "4.57"
-        },
-        {
-          "tier": "ubers",
-          "rank": 258,
-          "usage": "0.03"
-        },
-        {
-          "tier": "ou",
-          "rank": 249,
-          "usage": "0.03"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 85,
-          "usage": "1.11"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 336,
-          "usage": "0.04"
-        },
-        {
           "tier": "nu",
           "rank": 38,
           "usage": "5.02"
@@ -92643,8 +92603,48 @@ window.localDB = {
           "usage": "2.07"
         },
         {
+          "tier": "vgc2025",
+          "rank": 33,
+          "usage": "4.57"
+        },
+        {
+          "tier": "zu",
+          "rank": 24,
+          "usage": "7.51"
+        },
+        {
+          "tier": "ru",
+          "rank": 141,
+          "usage": "0.33"
+        },
+        {
+          "tier": "uu",
+          "rank": 201,
+          "usage": "0.05"
+        },
+        {
+          "tier": "ou",
+          "rank": 249,
+          "usage": "0.03"
+        },
+        {
           "tier": "monotype",
           "rank": 275,
+          "usage": "0.04"
+        },
+        {
+          "tier": "ubers",
+          "rank": 258,
+          "usage": "0.03"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 85,
+          "usage": "1.11"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 336,
           "usage": "0.04"
         }
       ],
@@ -92797,14 +92797,14 @@ window.localDB = {
           "usage": "13.52"
         },
         {
-          "tier": "ubers",
-          "rank": 19,
-          "usage": "8.91"
-        },
-        {
           "tier": "monotype",
           "rank": 10,
           "usage": "10.63"
+        },
+        {
+          "tier": "ubers",
+          "rank": 19,
+          "usage": "8.91"
         }
       ],
       "types": [
@@ -93106,14 +93106,19 @@ window.localDB = {
           "usage": "17.12"
         },
         {
-          "tier": "ubers",
-          "rank": 242,
-          "usage": "0.04"
-        },
-        {
           "tier": "ou",
           "rank": 61,
           "usage": "2.28"
+        },
+        {
+          "tier": "monotype",
+          "rank": 110,
+          "usage": "1.44"
+        },
+        {
+          "tier": "ubers",
+          "rank": 242,
+          "usage": "0.04"
         },
         {
           "tier": "doublesou",
@@ -93124,11 +93129,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 253,
           "usage": "0.10"
-        },
-        {
-          "tier": "monotype",
-          "rank": 110,
-          "usage": "1.44"
         }
       ],
       "types": [
@@ -93350,24 +93350,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 26,
-          "usage": "8.50"
-        },
-        {
           "tier": "vgc2025",
           "rank": 108,
           "usage": "0.25"
         },
         {
-          "tier": "ubers",
-          "rank": 200,
-          "usage": "0.07"
+          "tier": "uu",
+          "rank": 26,
+          "usage": "8.50"
         },
         {
           "tier": "ou",
           "rank": 162,
           "usage": "0.13"
+        },
+        {
+          "tier": "monotype",
+          "rank": 113,
+          "usage": "1.21"
+        },
+        {
+          "tier": "ubers",
+          "rank": 200,
+          "usage": "0.07"
         },
         {
           "tier": "doublesou",
@@ -93378,11 +93383,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 175,
           "usage": "0.32"
-        },
-        {
-          "tier": "monotype",
-          "rank": 113,
-          "usage": "1.21"
         }
       ],
       "types": [
@@ -93624,14 +93624,19 @@ window.localDB = {
           "usage": "1.64"
         },
         {
-          "tier": "ubers",
-          "rank": 70,
-          "usage": "1.00"
-        },
-        {
           "tier": "ou",
           "rank": 14,
           "usage": "12.88"
+        },
+        {
+          "tier": "monotype",
+          "rank": 21,
+          "usage": "7.53"
+        },
+        {
+          "tier": "ubers",
+          "rank": 70,
+          "usage": "1.00"
         },
         {
           "tier": "doublesou",
@@ -93642,11 +93647,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 11,
           "usage": "11.97"
-        },
-        {
-          "tier": "monotype",
-          "rank": 21,
-          "usage": "7.53"
         }
       ],
       "types": [
@@ -94152,14 +94152,19 @@ window.localDB = {
           "usage": "8.39"
         },
         {
-          "tier": "ubers",
-          "rank": 170,
-          "usage": "0.11"
-        },
-        {
           "tier": "ou",
           "rank": 65,
           "usage": "2.12"
+        },
+        {
+          "tier": "monotype",
+          "rank": 39,
+          "usage": "5.18"
+        },
+        {
+          "tier": "ubers",
+          "rank": 170,
+          "usage": "0.11"
         },
         {
           "tier": "doublesou",
@@ -94170,11 +94175,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 115,
           "usage": "0.79"
-        },
-        {
-          "tier": "monotype",
-          "rank": 39,
-          "usage": "5.18"
         }
       ],
       "types": [
@@ -94561,24 +94561,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 25,
-          "usage": "8.80"
-        },
-        {
           "tier": "vgc2025",
           "rank": 60,
           "usage": "1.03"
         },
         {
-          "tier": "ubers",
-          "rank": 268,
-          "usage": "0.02"
+          "tier": "uu",
+          "rank": 25,
+          "usage": "8.80"
         },
         {
           "tier": "ou",
           "rank": 118,
           "usage": "0.34"
+        },
+        {
+          "tier": "monotype",
+          "rank": 246,
+          "usage": "0.07"
+        },
+        {
+          "tier": "ubers",
+          "rank": 268,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -94589,11 +94594,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 178,
           "usage": "0.31"
-        },
-        {
-          "tier": "monotype",
-          "rank": 246,
-          "usage": "0.07"
         }
       ],
       "types": [
@@ -94790,14 +94790,19 @@ window.localDB = {
           "usage": "0.15"
         },
         {
-          "tier": "ubers",
-          "rank": 151,
-          "usage": "0.17"
-        },
-        {
           "tier": "ou",
           "rank": 24,
           "usage": "8.81"
+        },
+        {
+          "tier": "monotype",
+          "rank": 72,
+          "usage": "2.86"
+        },
+        {
+          "tier": "ubers",
+          "rank": 151,
+          "usage": "0.17"
         },
         {
           "tier": "doublesou",
@@ -94808,11 +94813,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 57,
           "usage": "2.69"
-        },
-        {
-          "tier": "monotype",
-          "rank": 72,
-          "usage": "2.86"
         }
       ],
       "types": [
@@ -95139,14 +95139,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 103,
-          "usage": "0.63"
-        },
-        {
           "tier": "ru",
           "rank": 62,
           "usage": "2.25"
+        },
+        {
+          "tier": "uu",
+          "rank": 103,
+          "usage": "0.63"
         },
         {
           "tier": "ou",
@@ -95154,14 +95154,14 @@ window.localDB = {
           "usage": "0.22"
         },
         {
-          "tier": "doublesou",
-          "rank": 306,
-          "usage": "0.03"
-        },
-        {
           "tier": "monotype",
           "rank": 214,
           "usage": "0.13"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 306,
+          "usage": "0.03"
         }
       ],
       "types": [
@@ -95627,14 +95627,19 @@ window.localDB = {
           "usage": "0.34"
         },
         {
-          "tier": "ubers",
-          "rank": 59,
-          "usage": "1.28"
-        },
-        {
           "tier": "ou",
           "rank": 2,
           "usage": "26.08"
+        },
+        {
+          "tier": "monotype",
+          "rank": 9,
+          "usage": "10.64"
+        },
+        {
+          "tier": "ubers",
+          "rank": 59,
+          "usage": "1.28"
         },
         {
           "tier": "doublesou",
@@ -95645,11 +95650,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 3,
           "usage": "17.93"
-        },
-        {
-          "tier": "monotype",
-          "rank": 9,
-          "usage": "10.64"
         }
       ],
       "types": [
@@ -96051,41 +96051,6 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 203,
-          "usage": "0.05"
-        },
-        {
-          "tier": "ru",
-          "rank": 82,
-          "usage": "1.43"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 99,
-          "usage": "0.33"
-        },
-        {
-          "tier": "ubers",
-          "rank": 141,
-          "usage": "0.22"
-        },
-        {
-          "tier": "ou",
-          "rank": 112,
-          "usage": "0.42"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 91,
-          "usage": "1.01"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 347,
-          "usage": "0.04"
-        },
-        {
           "tier": "nu",
           "rank": 29,
           "usage": "7.37"
@@ -96096,8 +96061,43 @@ window.localDB = {
           "usage": "14.44"
         },
         {
+          "tier": "vgc2025",
+          "rank": 99,
+          "usage": "0.33"
+        },
+        {
+          "tier": "ru",
+          "rank": 82,
+          "usage": "1.43"
+        },
+        {
+          "tier": "uu",
+          "rank": 203,
+          "usage": "0.05"
+        },
+        {
+          "tier": "ou",
+          "rank": 112,
+          "usage": "0.42"
+        },
+        {
           "tier": "monotype",
           "rank": 283,
+          "usage": "0.04"
+        },
+        {
+          "tier": "ubers",
+          "rank": 141,
+          "usage": "0.22"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 91,
+          "usage": "1.01"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 347,
           "usage": "0.04"
         }
       ],
@@ -96409,14 +96409,19 @@ window.localDB = {
           "usage": "1.95"
         },
         {
-          "tier": "ubers",
-          "rank": 26,
-          "usage": "5.26"
-        },
-        {
           "tier": "ou",
           "rank": 12,
           "usage": "13.06"
+        },
+        {
+          "tier": "monotype",
+          "rank": 13,
+          "usage": "9.68"
+        },
+        {
+          "tier": "ubers",
+          "rank": 26,
+          "usage": "5.26"
         },
         {
           "tier": "doublesou",
@@ -96427,11 +96432,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 22,
           "usage": "8.48"
-        },
-        {
-          "tier": "monotype",
-          "rank": 13,
-          "usage": "9.68"
         }
       ],
       "types": [
@@ -97072,6 +97072,11 @@ window.localDB = {
           "usage": "1.27"
         },
         {
+          "tier": "monotype",
+          "rank": 22,
+          "usage": "7.46"
+        },
+        {
           "tier": "ubers",
           "rank": 65,
           "usage": "1.10"
@@ -97080,11 +97085,6 @@ window.localDB = {
           "tier": "doublesou",
           "rank": 18,
           "usage": "10.76"
-        },
-        {
-          "tier": "monotype",
-          "rank": 22,
-          "usage": "7.46"
         }
       ],
       "types": [
@@ -97446,14 +97446,19 @@ window.localDB = {
           "usage": "1.98"
         },
         {
-          "tier": "ubers",
-          "rank": 116,
-          "usage": "0.38"
-        },
-        {
           "tier": "ou",
           "rank": 9,
           "usage": "15.59"
+        },
+        {
+          "tier": "monotype",
+          "rank": 16,
+          "usage": "8.56"
+        },
+        {
+          "tier": "ubers",
+          "rank": 116,
+          "usage": "0.38"
         },
         {
           "tier": "doublesou",
@@ -97464,11 +97469,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 15,
           "usage": "9.90"
-        },
-        {
-          "tier": "monotype",
-          "rank": 16,
-          "usage": "8.56"
         }
       ],
       "types": [
@@ -98238,24 +98238,24 @@ window.localDB = {
           "usage": "1.25"
         },
         {
-          "tier": "ubers",
-          "rank": 67,
-          "usage": "1.09"
-        },
-        {
           "tier": "ou",
           "rank": 29,
           "usage": "6.60"
         },
         {
-          "tier": "doublesou",
-          "rank": 19,
-          "usage": "10.31"
-        },
-        {
           "tier": "monotype",
           "rank": 65,
           "usage": "3.39"
+        },
+        {
+          "tier": "ubers",
+          "rank": 67,
+          "usage": "1.09"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 19,
+          "usage": "10.31"
         }
       ],
       "types": [
@@ -98612,19 +98612,24 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 98,
-          "usage": "0.75"
-        },
-        {
           "tier": "vgc2025",
           "rank": 161,
           "usage": "0.09"
         },
         {
+          "tier": "uu",
+          "rank": 98,
+          "usage": "0.75"
+        },
+        {
           "tier": "ou",
           "rank": 214,
           "usage": "0.05"
+        },
+        {
+          "tier": "monotype",
+          "rank": 247,
+          "usage": "0.07"
         },
         {
           "tier": "doublesou",
@@ -98635,11 +98640,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 249,
           "usage": "0.11"
-        },
-        {
-          "tier": "monotype",
-          "rank": 247,
-          "usage": "0.07"
         }
       ],
       "types": [
@@ -98741,14 +98741,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 250,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ru",
-          "rank": 210,
-          "usage": "0.07"
+          "tier": "pu",
+          "rank": 172,
+          "usage": "0.08"
         },
         {
           "tier": "zu",
@@ -98756,9 +98751,14 @@ window.localDB = {
           "usage": "1.40"
         },
         {
-          "tier": "pu",
-          "rank": 172,
-          "usage": "0.08"
+          "tier": "ru",
+          "rank": 210,
+          "usage": "0.07"
+        },
+        {
+          "tier": "uu",
+          "rank": 250,
+          "usage": "0.02"
         },
         {
           "tier": "monotype",
@@ -98890,24 +98890,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 14,
-          "usage": "12.05"
-        },
-        {
           "tier": "vgc2025",
           "rank": 42,
           "usage": "2.25"
         },
         {
-          "tier": "ubers",
-          "rank": 120,
-          "usage": "0.35"
+          "tier": "uu",
+          "rank": 14,
+          "usage": "12.05"
         },
         {
           "tier": "ou",
           "rank": 59,
           "usage": "2.44"
+        },
+        {
+          "tier": "monotype",
+          "rank": 105,
+          "usage": "1.62"
+        },
+        {
+          "tier": "ubers",
+          "rank": 120,
+          "usage": "0.35"
         },
         {
           "tier": "doublesou",
@@ -98918,11 +98923,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 102,
           "usage": "1.02"
-        },
-        {
-          "tier": "monotype",
-          "rank": 105,
-          "usage": "1.62"
         }
       ],
       "types": [
@@ -98933,7 +98933,7 @@ window.localDB = {
         {
           "name": "Trick Room Support",
           "tier": "vgc2025",
-          "ability": "Heatproof",
+          "ability": "Hospitality",
           "item": "Sitrus Berry",
           "nature": "Bold",
           "teraType": "Dark / Water",
@@ -98993,7 +98993,7 @@ window.localDB = {
         {
           "name": "Redirection Support",
           "tier": "vgc2024",
-          "ability": "Heatproof",
+          "ability": "Hospitality",
           "item": "Rocky Helmet",
           "nature": "Bold",
           "teraType": "Normal",
@@ -99023,7 +99023,7 @@ window.localDB = {
         {
           "name": "Hospitality Support",
           "tier": "partnersincrime",
-          "ability": "Heatproof",
+          "ability": "Hospitality",
           "item": "Sitrus Berry",
           "nature": "Bold",
           "teraType": "Water / Dark",
@@ -99083,7 +99083,7 @@ window.localDB = {
         {
           "name": "Trick Room",
           "tier": "doublesou",
-          "ability": "Heatproof",
+          "ability": "Hospitality",
           "item": "Sitrus Berry",
           "nature": "Quiet",
           "teraType": "Normal",
@@ -99138,14 +99138,19 @@ window.localDB = {
           "usage": "0.63"
         },
         {
-          "tier": "ubers",
-          "rank": 150,
-          "usage": "0.17"
-        },
-        {
           "tier": "ou",
           "rank": 80,
           "usage": "1.09"
+        },
+        {
+          "tier": "monotype",
+          "rank": 103,
+          "usage": "1.69"
+        },
+        {
+          "tier": "ubers",
+          "rank": 150,
+          "usage": "0.17"
         },
         {
           "tier": "doublesou",
@@ -99156,11 +99161,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 227,
           "usage": "0.15"
-        },
-        {
-          "tier": "monotype",
-          "rank": 103,
-          "usage": "1.69"
         }
       ],
       "types": [
@@ -99326,9 +99326,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 178,
-          "usage": "0.09"
+          "tier": "nu",
+          "rank": 5,
+          "usage": "19.89"
         },
         {
           "tier": "ru",
@@ -99336,14 +99336,24 @@ window.localDB = {
           "usage": "0.64"
         },
         {
-          "tier": "ubers",
-          "rank": 121,
-          "usage": "0.35"
+          "tier": "uu",
+          "rank": 178,
+          "usage": "0.09"
         },
         {
           "tier": "ou",
           "rank": 297,
           "usage": "0.01"
+        },
+        {
+          "tier": "monotype",
+          "rank": 245,
+          "usage": "0.07"
+        },
+        {
+          "tier": "ubers",
+          "rank": 121,
+          "usage": "0.35"
         },
         {
           "tier": "doublesou",
@@ -99354,16 +99364,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 398,
           "usage": "0.02"
-        },
-        {
-          "tier": "nu",
-          "rank": 5,
-          "usage": "19.89"
-        },
-        {
-          "tier": "monotype",
-          "rank": 245,
-          "usage": "0.07"
         }
       ],
       "types": [
@@ -99499,24 +99499,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 30,
-          "usage": "7.23"
-        },
-        {
           "tier": "vgc2025",
           "rank": 171,
           "usage": "0.06"
         },
         {
-          "tier": "ubers",
-          "rank": 148,
-          "usage": "0.18"
+          "tier": "uu",
+          "rank": 30,
+          "usage": "7.23"
         },
         {
           "tier": "ou",
           "rank": 115,
           "usage": "0.37"
+        },
+        {
+          "tier": "monotype",
+          "rank": 141,
+          "usage": "0.53"
+        },
+        {
+          "tier": "ubers",
+          "rank": 148,
+          "usage": "0.18"
         },
         {
           "tier": "doublesou",
@@ -99527,11 +99532,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 292,
           "usage": "0.06"
-        },
-        {
-          "tier": "monotype",
-          "rank": 141,
-          "usage": "0.53"
         }
       ],
       "types": [
@@ -99717,14 +99717,19 @@ window.localDB = {
           "usage": "0.11"
         },
         {
-          "tier": "ubers",
-          "rank": 318,
-          "usage": "0.01"
-        },
-        {
           "tier": "ou",
           "rank": 25,
           "usage": "8.32"
+        },
+        {
+          "tier": "monotype",
+          "rank": 292,
+          "usage": "0.03"
+        },
+        {
+          "tier": "ubers",
+          "rank": 318,
+          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -99735,11 +99740,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 195,
           "usage": "0.25"
-        },
-        {
-          "tier": "monotype",
-          "rank": 292,
-          "usage": "0.03"
         }
       ],
       "types": [
@@ -99890,6 +99890,11 @@ window.localDB = {
           "usage": "0.40"
         },
         {
+          "tier": "monotype",
+          "rank": 1,
+          "usage": "18.12"
+        },
+        {
           "tier": "ubers",
           "rank": 58,
           "usage": "1.30"
@@ -99898,11 +99903,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 73,
           "usage": "1.88"
-        },
-        {
-          "tier": "monotype",
-          "rank": 1,
-          "usage": "18.12"
         }
       ],
       "types": [
@@ -100207,24 +100207,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 12,
-          "usage": "13.96"
-        },
-        {
           "tier": "vgc2025",
           "rank": 212,
           "usage": "0.03"
         },
         {
-          "tier": "ubers",
-          "rank": 185,
-          "usage": "0.08"
+          "tier": "uu",
+          "rank": 12,
+          "usage": "13.96"
         },
         {
           "tier": "ou",
           "rank": 60,
           "usage": "2.32"
+        },
+        {
+          "tier": "monotype",
+          "rank": 137,
+          "usage": "0.55"
+        },
+        {
+          "tier": "ubers",
+          "rank": 185,
+          "usage": "0.08"
         },
         {
           "tier": "doublesou",
@@ -100235,11 +100240,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 121,
           "usage": "0.73"
-        },
-        {
-          "tier": "monotype",
-          "rank": 137,
-          "usage": "0.55"
         }
       ],
       "types": [
@@ -100310,7 +100310,7 @@ window.localDB = {
         {
           "name": "Haban Berry",
           "tier": "1v1",
-          "ability": "Regenerator",
+          "ability": "Supersweet Syrup",
           "item": "Haban Berry",
           "nature": "Modest",
           "teraType": "Normal",
@@ -100325,7 +100325,7 @@ window.localDB = {
         {
           "name": "Yache Berry",
           "tier": "1v1",
-          "ability": "Regenerator",
+          "ability": "Supersweet Syrup",
           "item": "Yache Berry",
           "nature": "Modest",
           "teraType": "Normal",
@@ -100753,14 +100753,19 @@ window.localDB = {
           "usage": "16.71"
         },
         {
-          "tier": "ubers",
-          "rank": 79,
-          "usage": "0.79"
-        },
-        {
           "tier": "ou",
           "rank": 8,
           "usage": "15.97"
+        },
+        {
+          "tier": "monotype",
+          "rank": 18,
+          "usage": "7.95"
+        },
+        {
+          "tier": "ubers",
+          "rank": 79,
+          "usage": "0.79"
         },
         {
           "tier": "doublesou",
@@ -100771,11 +100776,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 7,
           "usage": "14.33"
-        },
-        {
-          "tier": "monotype",
-          "rank": 18,
-          "usage": "7.95"
         }
       ],
       "types": [
@@ -101182,14 +101182,19 @@ window.localDB = {
           "usage": "0.13"
         },
         {
-          "tier": "ubers",
-          "rank": 231,
-          "usage": "0.05"
-        },
-        {
           "tier": "ou",
           "rank": 109,
           "usage": "0.45"
+        },
+        {
+          "tier": "monotype",
+          "rank": 59,
+          "usage": "3.73"
+        },
+        {
+          "tier": "ubers",
+          "rank": 231,
+          "usage": "0.05"
         },
         {
           "tier": "doublesou",
@@ -101200,11 +101205,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 122,
           "usage": "0.72"
-        },
-        {
-          "tier": "monotype",
-          "rank": 59,
-          "usage": "3.73"
         }
       ],
       "types": [
@@ -101426,24 +101426,29 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "uu",
-          "rank": 46,
-          "usage": "4.24"
-        },
-        {
           "tier": "vgc2025",
           "rank": 72,
           "usage": "0.70"
         },
         {
-          "tier": "ubers",
-          "rank": 287,
-          "usage": "0.02"
+          "tier": "uu",
+          "rank": 46,
+          "usage": "4.24"
         },
         {
           "tier": "ou",
           "rank": 35,
           "usage": "5.34"
+        },
+        {
+          "tier": "monotype",
+          "rank": 118,
+          "usage": "1.11"
+        },
+        {
+          "tier": "ubers",
+          "rank": 287,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -101454,11 +101459,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 61,
           "usage": "2.65"
-        },
-        {
-          "tier": "monotype",
-          "rank": 118,
-          "usage": "1.11"
         }
       ],
       "types": [
@@ -101820,6 +101820,11 @@ window.localDB = {
           "usage": "5.26"
         },
         {
+          "tier": "monotype",
+          "rank": 66,
+          "usage": "3.38"
+        },
+        {
           "tier": "ubers",
           "rank": 20,
           "usage": "8.59"
@@ -101828,11 +101833,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 10,
           "usage": "12.80"
-        },
-        {
-          "tier": "monotype",
-          "rank": 66,
-          "usage": "3.38"
         }
       ],
       "types": [
@@ -102013,14 +102013,19 @@ window.localDB = {
           "usage": "0.57"
         },
         {
-          "tier": "ubers",
-          "rank": 98,
-          "usage": "0.56"
-        },
-        {
           "tier": "ou",
           "rank": 22,
           "usage": "9.85"
+        },
+        {
+          "tier": "monotype",
+          "rank": 71,
+          "usage": "2.88"
+        },
+        {
+          "tier": "ubers",
+          "rank": 98,
+          "usage": "0.56"
         },
         {
           "tier": "doublesou",
@@ -102031,11 +102036,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 43,
           "usage": "4.11"
-        },
-        {
-          "tier": "monotype",
-          "rank": 71,
-          "usage": "2.88"
         }
       ],
       "types": [
@@ -102315,5362 +102315,6 @@ window.localDB = {
       },
       "isLegendary": false,
       "isMythical": true
-    },
-    "thundurustherian": {
-      "name": "Thundurus-Therian",
-      "cleanName": "thundurustherian",
-      "dex": 642,
-      "id": 642,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/642.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "uu",
-          "rank": 16,
-          "usage": "11.44"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 151,
-          "usage": "0.10"
-        },
-        {
-          "tier": "ubers",
-          "rank": 206,
-          "usage": "0.06"
-        },
-        {
-          "tier": "ou",
-          "rank": 117,
-          "usage": "0.35"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 158,
-          "usage": "0.33"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 142,
-          "usage": "0.48"
-        },
-        {
-          "tier": "monotype",
-          "rank": 124,
-          "usage": "0.98"
-        }
-      ],
-      "types": [
-        "electric",
-        "flying"
-      ],
-      "strategies": [
-        {
-          "name": "Pivot",
-          "tier": "uu",
-          "ability": "Volt Absorb",
-          "item": "Heavy-Duty Boots",
-          "nature": "Timid",
-          "teraType": "Poison / Steel",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Sludge Bomb",
-            "Focus Blast",
-            "Thunderbolt / Knock Off / Grass Knot",
-            "Volt Switch"
-          ]
-        },
-        {
-          "name": "Nasty Plot",
-          "tier": "uu",
-          "ability": "Volt Absorb",
-          "item": "Sitrus Berry",
-          "nature": "Modest",
-          "teraType": "Flying / Steel",
-          "evs": "244 HP / 152 SPA / 12 SPD / 100 SPE",
-          "moves": [
-            "Thunderbolt",
-            "Nasty Plot",
-            "Agility",
-            "Dark Pulse / Focus Blast"
-          ]
-        },
-        {
-          "name": "Offensive Pivot (Flying)",
-          "tier": "monotype",
-          "ability": "Volt Absorb",
-          "item": "Heavy-Duty Boots",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Thunderbolt",
-            "Volt Switch",
-            "Grass Knot",
-            "Focus Blast"
-          ]
-        },
-        {
-          "name": "Nasty Plot (Electric)",
-          "tier": "monotype",
-          "ability": "Volt Absorb",
-          "item": "Heavy-Duty Boots",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Nasty Plot",
-            "Thunderbolt",
-            "Psychic",
-            "Grass Knot"
-          ]
-        },
-        {
-          "name": "Nasty Plot (Spe)",
-          "tier": "godlygift",
-          "ability": "Volt Absorb",
-          "item": "Heavy-Duty Boots",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Thunderbolt",
-            "Grass Knot",
-            "Focus Blast",
-            "Nasty Plot"
-          ]
-        },
-        {
-          "name": "Choice Scarf",
-          "tier": "almostanyability",
-          "ability": "Beads of Ruin",
-          "item": "Choice Scarf",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Thunderbolt",
-            "Focus Blast",
-            "Psychic / Grass Knot",
-            "U-turn / Volt Switch"
-          ]
-        },
-        {
-          "name": "Electrium Z (Flying)",
-          "tier": "nationaldexmonotype",
-          "ability": "Volt Absorb",
-          "item": "Electrium Z",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "4 DEF / 252 SPA / 252 SPE",
-          "moves": [
-            "Thunderbolt",
-            "Hidden Power Ice",
-            "Grass Knot",
-            "Agility"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "prankster",
-          "isHidden": false
-        },
-        {
-          "name": "defiant",
-          "isHidden": true
-        }
-      ],
-      "stats": {
-        "hp": 79,
-        "attack": 115,
-        "defense": 70,
-        "special-attack": 125,
-        "special-defense": 80,
-        "speed": 111
-      },
-      "isLegendary": true,
-      "isMythical": false
-    },
-    "ninetalesalola": {
-      "name": "Ninetales-Alola",
-      "cleanName": "ninetalesalola",
-      "dex": 38,
-      "id": 10104,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10104.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "uu",
-          "rank": 18,
-          "usage": "11.23"
-        },
-        {
-          "tier": "ru",
-          "rank": 55,
-          "usage": "2.72"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 85,
-          "usage": "0.50"
-        },
-        {
-          "tier": "ubers",
-          "rank": 94,
-          "usage": "0.57"
-        },
-        {
-          "tier": "ou",
-          "rank": 72,
-          "usage": "1.73"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 32,
-          "usage": "6.88"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 81,
-          "usage": "1.67"
-        },
-        {
-          "tier": "nu",
-          "rank": 54,
-          "usage": "3.25"
-        },
-        {
-          "tier": "pu",
-          "rank": 47,
-          "usage": "3.71"
-        },
-        {
-          "tier": "monotype",
-          "rank": 75,
-          "usage": "2.72"
-        }
-      ],
-      "types": [
-        "ice",
-        "fairy"
-      ],
-      "strategies": [
-        {
-          "name": "Offensive",
-          "tier": "vgc2025",
-          "ability": "Snow Warning",
-          "item": "Focus Sash / Choice Specs / Never-Melt Ice",
-          "nature": "Timid",
-          "teraType": "Ghost / Ice",
-          "evs": "4 HP / 252 SPA / 252 SPE",
-          "moves": [
-            "Blizzard",
-            "Freeze-Dry / Encore",
-            "Aurora Veil / Encore / Moonblast",
-            "Icy Wind / Protect / Dazzling Gleam"
-          ]
-        },
-        {
-          "name": "Screens Setter",
-          "tier": "vgc2025",
-          "ability": "Snow Warning",
-          "item": "Covert Cloak / Light Clay",
-          "nature": "Timid",
-          "teraType": "Water / Ghost",
-          "evs": "228 HP / 36 DEF / 20 SPA / 76 SPD / 148 SPE",
-          "moves": [
-            "Blizzard",
-            "Aurora Veil",
-            "Encore",
-            "Icy Wind / Protect / Freeze-Dry"
-          ]
-        },
-        {
-          "name": "Screen Setter",
-          "tier": "vgc2024",
-          "ability": "Snow Warning",
-          "item": "Light Clay",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "84 HP / 132 DEF / 84 SPA / 4 SPD / 204 SPE",
-          "moves": [
-            "Blizzard",
-            "Moonblast",
-            "Aurora Veil",
-            "Helping Hand"
-          ]
-        },
-        {
-          "name": "Veil",
-          "tier": "uu",
-          "ability": "Snow Warning",
-          "item": "Light Clay",
-          "nature": "Timid",
-          "teraType": "Water / Steel",
-          "evs": "252 HP / 4 DEF / 252 SPE",
-          "moves": [
-            "Aurora Veil",
-            "Encore",
-            "Freeze-Dry / Blizzard",
-            "Moonblast / Snowscape"
-          ]
-        },
-        {
-          "name": "Aurora Veil",
-          "tier": "ubersuu",
-          "ability": "Snow Warning",
-          "item": "Light Clay",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "248 HP / 8 SPA / 252 SPE",
-          "moves": [
-            "Aurora Veil",
-            "Moonblast",
-            "Freeze-Dry / Blizzard",
-            "Encore / Hypnosis"
-          ]
-        },
-        {
-          "name": "Nasty Plot",
-          "tier": "ru",
-          "ability": "Snow Warning",
-          "item": "Heavy-Duty Boots",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Nasty Plot",
-            "Freeze-Dry / Blizzard",
-            "Tera Blast",
-            "Encore / Moonblast"
-          ]
-        },
-        {
-          "name": "Encore + Disable",
-          "tier": "1v1",
-          "ability": "Snow Warning",
-          "item": "Leftovers",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "216 HP / 40 DEF / 252 SPE",
-          "moves": [
-            "Protect",
-            "Encore",
-            "Disable",
-            "Moonblast"
-          ]
-        },
-        {
-          "name": "Sitrus Berry",
-          "tier": "1v1",
-          "ability": "Snow Warning",
-          "item": "Sitrus Berry",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "164 HP / 240 DEF / 104 SPE",
-          "moves": [
-            "Protect",
-            "Encore",
-            "Disable",
-            "Draining Kiss / Moonblast"
-          ]
-        },
-        {
-          "name": "Life Orb",
-          "tier": "1v1",
-          "ability": "Snow Warning",
-          "item": "Life Orb",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "208 HP / 156 SPA / 144 SPE",
-          "moves": [
-            "Moonblast",
-            "Freeze-Dry",
-            "Calm Mind",
-            "Encore / Disable"
-          ]
-        },
-        {
-          "name": "Support",
-          "tier": "pu",
-          "ability": "Snow Warning",
-          "item": "Icy Rock / Heavy-Duty Boots",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 HP / 4 SPD / 252 SPE",
-          "moves": [
-            "Aurora Veil",
-            "Freeze-Dry / Blizzard",
-            "Moonblast / Foul Play",
-            "Encore"
-          ]
-        },
-        {
-          "name": "Snow Setter",
-          "tier": "partnersincrime",
-          "ability": "Snow Warning",
-          "item": "Light Clay",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 HP / 4 SPA / 252 SPE",
-          "moves": [
-            "Blizzard / Moonblast",
-            "Aurora Veil",
-            "Icy Wind",
-            "Encore"
-          ]
-        },
-        {
-          "name": "Snow Support (Ice)",
-          "tier": "monotype",
-          "ability": "Snow Warning",
-          "item": "Icy Rock / Light Clay",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 HP / 4 SPD / 252 SPE",
-          "moves": [
-            "Aurora Veil",
-            "Freeze-Dry / Blizzard",
-            "Moonblast",
-            "Encore"
-          ]
-        },
-        {
-          "name": "Aurora Veil (HP, Def, SpA, SpD)",
-          "tier": "godlygift",
-          "ability": "Snow Warning",
-          "item": "Light Clay",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "248 HP / 8 SPA / 252 SPE",
-          "moves": [
-            "Moonblast",
-            "Freeze-Dry",
-            "Encore",
-            "Aurora Veil"
-          ]
-        },
-        {
-          "name": "Aurora Veil (Ice)",
-          "tier": "nationaldexmonotype",
-          "ability": "Snow Warning",
-          "item": "Light Clay",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Aurora Veil",
-            "Moonblast",
-            "Freeze-Dry",
-            "Encore"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "snow-cloak",
-          "isHidden": false
-        },
-        {
-          "name": "snow-warning",
-          "isHidden": true
-        }
-      ],
-      "stats": {
-        "hp": 73,
-        "attack": 67,
-        "defense": 75,
-        "special-attack": 81,
-        "special-defense": 100,
-        "speed": 109
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "arcaninehisui": {
-      "name": "Arcanine-Hisui",
-      "cleanName": "arcaninehisui",
-      "dex": 59,
-      "id": 10230,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10230.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "uu",
-          "rank": 23,
-          "usage": "9.83"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 130,
-          "usage": "0.16"
-        },
-        {
-          "tier": "ubers",
-          "rank": 216,
-          "usage": "0.06"
-        },
-        {
-          "tier": "ou",
-          "rank": 113,
-          "usage": "0.39"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 124,
-          "usage": "0.58"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 167,
-          "usage": "0.34"
-        },
-        {
-          "tier": "monotype",
-          "rank": 70,
-          "usage": "3.02"
-        }
-      ],
-      "types": [
-        "fire",
-        "rock"
-      ],
-      "strategies": [
-        {
-          "name": "Offensive",
-          "tier": "uu",
-          "ability": "Rock Head",
-          "item": "Heavy-Duty Boots / Focus Sash",
-          "nature": "Jolly",
-          "teraType": "Normal",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Head Smash",
-            "Flare Blitz",
-            "Extreme Speed",
-            "Stealth Rock / Morning Sun / Double-Edge"
-          ]
-        },
-        {
-          "name": "Choice Band",
-          "tier": "ou",
-          "ability": "Rock Head",
-          "item": "Choice Band",
-          "nature": "Jolly",
-          "teraType": "Normal / Rock / Fire",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Head Smash",
-            "Flare Blitz",
-            "Extreme Speed",
-            "Close Combat / Double-Edge"
-          ]
-        },
-        {
-          "name": "Choice Scarf",
-          "tier": "1v1",
-          "ability": "Rock Head",
-          "item": "Choice Scarf",
-          "nature": "Adamant / Jolly",
-          "teraType": "Normal",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Head Smash",
-            "Raging Fury",
-            "Close Combat",
-            "Outrage"
-          ]
-        },
-        {
-          "name": "Choice Band (Rock)",
-          "tier": "monotype",
-          "ability": "Rock Head",
-          "item": "Choice Band",
-          "nature": "Jolly",
-          "teraType": "Normal",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Head Smash",
-            "Flare Blitz",
-            "Close Combat",
-            "Extreme Speed"
-          ]
-        },
-        {
-          "name": "Choice Scarf (Rock)",
-          "tier": "monotype",
-          "ability": "Rock Head",
-          "item": "Choice Scarf",
-          "nature": "Jolly",
-          "teraType": "Normal",
-          "evs": "252 ATK / 4 DEF / 252 SPE",
-          "moves": [
-            "Flare Blitz",
-            "Head Smash",
-            "Wild Charge",
-            "Close Combat"
-          ]
-        },
-        {
-          "name": "Choice Scarf (Fire)",
-          "tier": "monotype",
-          "ability": "Rock Head",
-          "item": "Choice Scarf",
-          "nature": "Jolly",
-          "teraType": "Normal",
-          "evs": "252 ATK / 4 DEF / 252 SPE",
-          "moves": [
-            "Flare Blitz",
-            "Head Smash",
-            "Close Combat",
-            "Outrage / Stealth Rock"
-          ]
-        },
-        {
-          "name": "Substitute + 3 Attacks (Rock)",
-          "tier": "monotype",
-          "ability": "Rock Head",
-          "item": "Heavy-Duty Boots",
-          "nature": "Jolly",
-          "teraType": "Normal",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Substitute",
-            "Head Smash",
-            "Flare Blitz",
-            "Close Combat"
-          ]
-        },
-        {
-          "name": "Choice Band (Fire)",
-          "tier": "monotype",
-          "ability": "Rock Head",
-          "item": "Choice Band",
-          "nature": "Jolly",
-          "teraType": "Normal",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Flare Blitz",
-            "Head Smash",
-            "Extreme Speed",
-            "Close Combat / Wild Charge"
-          ]
-        },
-        {
-          "name": "Clear Amulet",
-          "tier": "vgc2025",
-          "ability": "Rock Head",
-          "item": "Clear Amulet",
-          "nature": "Jolly",
-          "teraType": "Water / Ghost",
-          "evs": "4 HP / 252 ATK / 252 SPE",
-          "moves": [
-            "Flare Blitz",
-            "Rock Slide",
-            "Extreme Speed",
-            "Protect"
-          ]
-        },
-        {
-          "name": "Mirror Herb",
-          "tier": "vgc2025",
-          "ability": "Rock Head",
-          "item": "Mirror Herb",
-          "nature": "Jolly",
-          "teraType": "Normal",
-          "evs": "180 HP / 44 ATK / 12 DEF / 20 SPD / 252 SPE",
-          "moves": [
-            "Flare Blitz",
-            "Rock Slide",
-            "Close Combat",
-            "Protect"
-          ]
-        },
-        {
-          "name": "Assault Vest",
-          "tier": "vgc2023",
-          "ability": "Rock Head",
-          "item": "Assault Vest",
-          "nature": "Adamant",
-          "teraType": "Fairy / Grass",
-          "evs": "172 HP / 116 ATK / 116 DEF / 76 SPD / 28 SPE",
-          "moves": [
-            "Rock Slide",
-            "Flare Blitz",
-            "Tera Blast",
-            "Extreme Speed"
-          ]
-        },
-        {
-          "name": "Offensive (Atk, Spe)",
-          "tier": "godlygift",
-          "ability": "Rock Head",
-          "item": "Heavy-Duty Boots",
-          "nature": "Jolly",
-          "teraType": "Normal",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Head Smash",
-            "Flare Blitz",
-            "Extreme Speed",
-            "Morning Sun"
-          ]
-        },
-        {
-          "name": "Altarianite",
-          "tier": "mixandmega",
-          "ability": "Rock Head",
-          "item": "Altarianite",
-          "nature": "Adamant",
-          "teraType": "Normal",
-          "evs": "160 HP / 252 ATK / 96 SPE",
-          "moves": [
-            "Extreme Speed",
-            "Flare Blitz",
-            "Stealth Rock / Stone Edge / Double-Edge",
-            "Morning Sun"
-          ]
-        },
-        {
-          "name": "Pinsirite Revenge Killer",
-          "tier": "mixandmega",
-          "ability": "Rock Head",
-          "item": "Pinsirite",
-          "nature": "Adamant",
-          "teraType": "Normal",
-          "evs": "160 HP / 252 ATK / 96 SPE",
-          "moves": [
-            "Extreme Speed",
-            "Flare Blitz",
-            "Double-Edge / Close Combat",
-            "Howl"
-          ]
-        },
-        {
-          "name": "Magic Guard",
-          "tier": "almostanyability",
-          "ability": "Magic Guard",
-          "item": "Life Orb",
-          "nature": "Jolly",
-          "teraType": "Normal",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Head Smash",
-            "Flare Blitz",
-            "Morning Sun",
-            "Extreme Speed / Stealth Rock / Will-O-Wisp"
-          ]
-        },
-        {
-          "name": "Choiced Attacker (Rock)",
-          "tier": "nationaldexmonotype",
-          "ability": "Rock Head",
-          "item": "Choice Band",
-          "nature": "Jolly",
-          "teraType": "Normal",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Flare Blitz",
-            "Head Smash",
-            "Extreme Speed",
-            "Close Combat"
-          ]
-        },
-        {
-          "name": "Non-Choice Item Attacker (Rock)",
-          "tier": "nationaldexmonotype",
-          "ability": "Rock Head",
-          "item": "Heavy-Duty Boots",
-          "nature": "Jolly",
-          "teraType": "Normal",
-          "evs": "228 ATK / 28 DEF / 252 SPE",
-          "moves": [
-            "Flare Blitz",
-            "Head Smash",
-            "Morning Sun",
-            "Substitute / Extreme Speed"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "intimidate",
-          "isHidden": false
-        },
-        {
-          "name": "flash-fire",
-          "isHidden": false
-        },
-        {
-          "name": "rock-head",
-          "isHidden": true
-        }
-      ],
-      "stats": {
-        "hp": 95,
-        "attack": 115,
-        "defense": 80,
-        "special-attack": 95,
-        "special-defense": 80,
-        "speed": 90
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "rotomwash": {
-      "name": "Rotom-Wash",
-      "cleanName": "rotomwash",
-      "dex": 479,
-      "id": 479,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/479.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "uu",
-          "rank": 36,
-          "usage": "6.07"
-        },
-        {
-          "tier": "ubers",
-          "rank": 155,
-          "usage": "0.16"
-        },
-        {
-          "tier": "ou",
-          "rank": 88,
-          "usage": "0.84"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 147,
-          "usage": "0.40"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 86,
-          "usage": "1.53"
-        },
-        {
-          "tier": "monotype",
-          "rank": 97,
-          "usage": "1.88"
-        }
-      ],
-      "types": [
-        "electric",
-        "ghost"
-      ],
-      "strategies": [
-        {
-          "name": "Physically Defensive",
-          "tier": "uu",
-          "ability": "Levitate",
-          "item": "Leftovers / Ability Shield",
-          "nature": "Bold",
-          "teraType": "Normal",
-          "evs": "252 HP / 160 DEF / 12 SPA / 84 SPD",
-          "moves": [
-            "Will-O-Wisp / Thunder Wave",
-            "Hydro Pump",
-            "Pain Split",
-            "Volt Switch"
-          ]
-        },
-        {
-          "name": "Specially Defensive",
-          "tier": "uu",
-          "ability": "Levitate",
-          "item": "Leftovers",
-          "nature": "Calm",
-          "teraType": "Normal",
-          "evs": "252 HP / 44 DEF / 12 SPA / 200 SPD",
-          "moves": [
-            "Thunder Wave / Will-O-Wisp",
-            "Hydro Pump",
-            "Pain Split",
-            "Volt Switch"
-          ]
-        },
-        {
-          "name": "Defensive Pivot",
-          "tier": "ou",
-          "ability": "Levitate",
-          "item": "Leftovers / Rocky Helmet",
-          "nature": "Bold",
-          "teraType": "Normal",
-          "evs": "252 HP / 212 DEF / 44 SPE",
-          "moves": [
-            "Volt Switch",
-            "Hydro Pump",
-            "Pain Split",
-            "Will-O-Wisp"
-          ]
-        },
-        {
-          "name": "Choice Scarf",
-          "tier": "nationaldexuu",
-          "ability": "Levitate",
-          "item": "Choice Scarf",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "240 HP / 32 SPA / 236 SPE",
-          "moves": [
-            "Hydro Pump",
-            "Volt Switch",
-            "Trick",
-            "Defog / Will-O-Wisp"
-          ]
-        },
-        {
-          "name": "Nasty Plot",
-          "tier": "nationaldexuu",
-          "ability": "Levitate",
-          "item": "Waterium Z",
-          "nature": "Bold",
-          "teraType": "Normal",
-          "evs": "252 HP / 200 DEF / 56 SPE",
-          "moves": [
-            "Nasty Plot",
-            "Hydro Pump",
-            "Volt Switch",
-            "Pain Split"
-          ]
-        },
-        {
-          "name": "Physically Defensive (Electric)",
-          "tier": "monotype",
-          "ability": "Levitate",
-          "item": "Leftovers",
-          "nature": "Bold",
-          "teraType": "Normal",
-          "evs": "248 HP / 252 DEF / 8 SPE",
-          "moves": [
-            "Will-O-Wisp",
-            "Hydro Pump",
-            "Volt Switch",
-            "Pain Split"
-          ]
-        },
-        {
-          "name": "Nasty Plot (Electric)",
-          "tier": "monotype",
-          "ability": "Levitate",
-          "item": "Leftovers",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "212 HP / 48 DEF / 248 SPE",
-          "moves": [
-            "Hydro Pump",
-            "Stored Power",
-            "Nasty Plot",
-            "Substitute"
-          ]
-        },
-        {
-          "name": "Nasty Plot (Water)",
-          "tier": "monotype",
-          "ability": "Levitate",
-          "item": "Leftovers",
-          "nature": "Modest",
-          "teraType": "Normal",
-          "evs": "144 HP / 112 DEF / 164 SPA / 88 SPE",
-          "moves": [
-            "Thunderbolt / Discharge",
-            "Stored Power",
-            "Nasty Plot",
-            "Substitute"
-          ]
-        },
-        {
-          "name": "Offensive",
-          "tier": "battlestadiumsingles",
-          "ability": "Levitate",
-          "item": "Choice Specs / Choice Scarf / Assault Vest",
-          "nature": "Modest / Timid",
-          "teraType": "Fairy / Electric / Ghost",
-          "evs": "252 HP / 252 SPA / 4 SPD",
-          "moves": [
-            "Volt Switch",
-            "Hydro Pump",
-            "Trick / Tera Blast",
-            "Thunderbolt / Discharge / Tera Blast / Shadow Ball"
-          ]
-        },
-        {
-          "name": "Defensive Pivot (HP)",
-          "tier": "godlygift",
-          "ability": "Levitate",
-          "item": "Leftovers",
-          "nature": "Bold",
-          "teraType": "Normal",
-          "evs": "252 HP / 252 DEF / 4 SPD",
-          "moves": [
-            "Hydro Pump",
-            "Volt Switch",
-            "Pain Split / Protect",
-            "Thunder Wave / Will-O-Wisp"
-          ]
-        },
-        {
-          "name": "Bulky Pivot (Electric)",
-          "tier": "nationaldexmonotype",
-          "ability": "Levitate",
-          "item": "Leftovers",
-          "nature": "Bold",
-          "teraType": "Normal",
-          "evs": "252 HP / 212 DEF / 44 SPE",
-          "moves": [
-            "Hydro Pump",
-            "Volt Switch",
-            "Will-O-Wisp / Toxic",
-            "Defog / Pain Split"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "levitate",
-          "isHidden": false
-        }
-      ],
-      "stats": {
-        "hp": 50,
-        "attack": 50,
-        "defense": 77,
-        "special-attack": 95,
-        "special-defense": 77,
-        "speed": 91
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "zapdosgalar": {
-      "name": "Zapdos-Galar",
-      "cleanName": "zapdosgalar",
-      "dex": 145,
-      "id": 10170,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10170.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "uu",
-          "rank": 40,
-          "usage": "5.37"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 180,
-          "usage": "0.06"
-        },
-        {
-          "tier": "ubers",
-          "rank": 269,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ou",
-          "rank": 124,
-          "usage": "0.30"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 90,
-          "usage": "1.04"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 169,
-          "usage": "0.33"
-        },
-        {
-          "tier": "monotype",
-          "rank": 54,
-          "usage": "3.97"
-        }
-      ],
-      "types": [
-        "fighting",
-        "flying"
-      ],
-      "strategies": [
-        {
-          "name": "Pivot",
-          "tier": "uu",
-          "ability": "Defiant",
-          "item": "Choice Scarf",
-          "nature": "Jolly",
-          "teraType": "Fighting / Flying / Steel",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Brave Bird",
-            "Close Combat",
-            "Knock Off",
-            "U-turn"
-          ]
-        },
-        {
-          "name": "Choice Band",
-          "tier": "1v1",
-          "ability": "Defiant",
-          "item": "Choice Band",
-          "nature": "Jolly / Adamant",
-          "teraType": "Normal",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Brave Bird",
-            "Close Combat",
-            "Thunderous Kick / Knock Off",
-            "U-turn / Knock Off"
-          ]
-        },
-        {
-          "name": "Choiced Attacker (Flying)",
-          "tier": "monotype",
-          "ability": "Defiant",
-          "item": "Choice Scarf / Choice Band",
-          "nature": "Jolly",
-          "teraType": "Normal",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Close Combat",
-            "Brave Bird",
-            "Knock Off",
-            "U-turn"
-          ]
-        },
-        {
-          "name": "Choice Band (Fighting)",
-          "tier": "monotype",
-          "ability": "Defiant",
-          "item": "Choice Band",
-          "nature": "Jolly",
-          "teraType": "Normal",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Brave Bird",
-            "Close Combat",
-            "Knock Off / Drill Peck",
-            "U-turn"
-          ]
-        },
-        {
-          "name": "Choice Scarf",
-          "tier": "vgc2024",
-          "ability": "Defiant",
-          "item": "Choice Scarf",
-          "nature": "Adamant",
-          "teraType": "Normal",
-          "evs": "60 HP / 196 ATK / 4 DEF / 12 SPD / 236 SPE",
-          "moves": [
-            "Brave Bird",
-            "Close Combat",
-            "Dual Wingbeat / U-turn / Taunt",
-            "Coaching"
-          ]
-        },
-        {
-          "name": "Offensive Scrappy (Decidueye-Hisui)",
-          "tier": "inheritance",
-          "ability": "Scrappy",
-          "item": "Life Orb / Leftovers",
-          "nature": "Jolly / Adamant",
-          "teraType": "Normal",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Triple Arrows / Close Combat",
-            "Brave Bird",
-            "Swords Dance",
-            "Roost / Substitute / Knock Off"
-          ]
-        },
-        {
-          "name": "Bulky Scrappy (Decidueye-Hisui)",
-          "tier": "inheritance",
-          "ability": "Scrappy",
-          "item": "Leftovers / Metronome",
-          "nature": "Careful",
-          "teraType": "Normal",
-          "evs": "252 HP / 252 SPD / 4 SPE",
-          "moves": [
-            "Triple Arrows / Close Combat",
-            "Bulk Up",
-            "Substitute",
-            "Roost"
-          ]
-        },
-        {
-          "name": "Tinted Lens (Braviary-Hisui)",
-          "tier": "inheritance",
-          "ability": "Tinted Lens",
-          "item": "Choice Band",
-          "nature": "Jolly / Adamant",
-          "teraType": "Normal",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Brave Bird",
-            "Close Combat",
-            "Shadow Claw / Dual Wingbeat",
-            "U-turn"
-          ]
-        },
-        {
-          "name": "Wallbreaker",
-          "tier": "partnersincrime",
-          "ability": "Defiant",
-          "item": "Life Orb",
-          "nature": "Jolly",
-          "teraType": "Normal",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Close Combat",
-            "Brave Bird",
-            "Tailwind / Coaching",
-            "Protect"
-          ]
-        },
-        {
-          "name": "All-Out Attacker",
-          "tier": "stabmons",
-          "ability": "Defiant",
-          "item": "Life Orb / Protective Pads",
-          "nature": "Adamant",
-          "teraType": "Normal",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Close Combat / Thunderous Kick",
-            "Dragon Ascent",
-            "Knock Off",
-            "Mach Punch / Roost"
-          ]
-        },
-        {
-          "name": "Choice Band (Spe)",
-          "tier": "godlygift",
-          "ability": "Defiant",
-          "item": "Choice Band",
-          "nature": "Jolly",
-          "teraType": "Normal",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Close Combat",
-            "Brave Bird",
-            "Knock Off",
-            "U-turn"
-          ]
-        },
-        {
-          "name": "Magic Guard",
-          "tier": "almostanyability",
-          "ability": "Magic Guard",
-          "item": "Life Orb",
-          "nature": "Jolly",
-          "teraType": "Normal",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Brave Bird",
-            "Thunderous Kick",
-            "Knock Off",
-            "U-turn / Close Combat"
-          ]
-        },
-        {
-          "name": "Choice Scarf (Fighting)",
-          "tier": "nationaldexmonotype",
-          "ability": "Defiant",
-          "item": "Choice Scarf",
-          "nature": "Jolly",
-          "teraType": "Normal",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Brave Bird",
-            "Close Combat",
-            "Steel Wing / Knock Off",
-            "U-turn"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "defiant",
-          "isHidden": false
-        }
-      ],
-      "stats": {
-        "hp": 90,
-        "attack": 125,
-        "defense": 90,
-        "special-attack": 85,
-        "special-defense": 90,
-        "speed": 100
-      },
-      "isLegendary": true,
-      "isMythical": false
-    },
-    "goodrahisui": {
-      "name": "Goodra-Hisui",
-      "cleanName": "goodrahisui",
-      "dex": 706,
-      "id": 10242,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10242.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "uu",
-          "rank": 43,
-          "usage": "4.58"
-        },
-        {
-          "tier": "ru",
-          "rank": 30,
-          "usage": "6.90"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 203,
-          "usage": "0.04"
-        },
-        {
-          "tier": "ubers",
-          "rank": 174,
-          "usage": "0.10"
-        },
-        {
-          "tier": "ou",
-          "rank": 102,
-          "usage": "0.55"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 68,
-          "usage": "1.77"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 133,
-          "usage": "0.57"
-        },
-        {
-          "tier": "monotype",
-          "rank": 3,
-          "usage": "13.79"
-        }
-      ],
-      "types": [
-        "steel",
-        "dragon"
-      ],
-      "strategies": [
-        {
-          "name": "AcidPress",
-          "tier": "vgc2023",
-          "ability": "Shell Armor",
-          "item": "Leftovers",
-          "nature": "Careful",
-          "teraType": "Flying / Fairy",
-          "evs": "252 HP / 4 ATK / 244 DEF / 4 SPD / 4 SPE",
-          "moves": [
-            "Heavy Slam",
-            "Body Press",
-            "Acid Armor / Shelter",
-            "Life Dew"
-          ]
-        },
-        {
-          "name": "Offensive Tank",
-          "tier": "uu",
-          "ability": "Gooey",
-          "item": "Leftovers",
-          "nature": "Modest",
-          "teraType": "Normal",
-          "evs": "72 HP / 252 SPA / 184 SPE",
-          "moves": [
-            "Draco Meteor",
-            "Flash Cannon",
-            "Thunderbolt",
-            "Surf"
-          ]
-        },
-        {
-          "name": "Bulky Attacker",
-          "tier": "ru",
-          "ability": "Sap Sipper / Gooey",
-          "item": "Leftovers / Assault Vest",
-          "nature": "Quiet",
-          "teraType": "Fairy / Ghost / Water",
-          "evs": "252 HP / 4 DEF / 252 SPA",
-          "moves": [
-            "Draco Meteor",
-            "Heavy Slam / Acid Spray",
-            "Knock Off / Earthquake / Flamethrower",
-            "Protect / Dragon Tail"
-          ]
-        },
-        {
-          "name": "Choice Specs",
-          "tier": "ru",
-          "ability": "Gooey",
-          "item": "Choice Specs",
-          "nature": "Modest",
-          "teraType": "Ghost / Dragon",
-          "evs": "40 HP / 252 SPA / 216 SPE",
-          "moves": [
-            "Flash Cannon",
-            "Draco Meteor",
-            "Thunderbolt",
-            "Flamethrower"
-          ]
-        },
-        {
-          "name": "Assault Vest",
-          "tier": "ou",
-          "ability": "Sap Sipper / Gooey",
-          "item": "Assault Vest",
-          "nature": "Modest",
-          "teraType": "Normal",
-          "evs": "248 HP / 252 SPA / 8 SPD",
-          "moves": [
-            "Flash Cannon",
-            "Dragon Tail / Draco Meteor",
-            "Flamethrower / Knock Off",
-            "Ice Beam / Knock Off"
-          ]
-        },
-        {
-          "name": "Custap Berry",
-          "tier": "1v1",
-          "ability": "Sap Sipper",
-          "item": "Custap Berry",
-          "nature": "Calm",
-          "teraType": "Normal",
-          "evs": "252 HP / 196 SPA / 60 SPD",
-          "moves": [
-            "Draco Meteor",
-            "Acid Spray",
-            "Sludge Wave / Flash Cannon",
-            "Endure"
-          ]
-        },
-        {
-          "name": "Chople Berry",
-          "tier": "1v1",
-          "ability": "Sap Sipper",
-          "item": "Chople Berry",
-          "nature": "Sassy",
-          "teraType": "Normal",
-          "evs": "252 HP / 32 ATK / 48 DEF / 88 SPA / 88 SPD",
-          "moves": [
-            "Draco Meteor",
-            "Heavy Slam",
-            "Acid Spray",
-            "Counter"
-          ]
-        },
-        {
-          "name": "Choice Band",
-          "tier": "1v1",
-          "ability": "Sap Sipper",
-          "item": "Choice Band",
-          "nature": "Adamant",
-          "teraType": "Normal",
-          "evs": "248 HP / 236 ATK / 24 DEF",
-          "moves": [
-            "Outrage",
-            "Heavy Slam",
-            "Skitter Smack",
-            "Earthquake"
-          ]
-        },
-        {
-          "name": "Specially Defensive (Steel)",
-          "tier": "monotype",
-          "ability": "Shell Armor",
-          "item": "Leftovers",
-          "nature": "Careful",
-          "teraType": "Normal",
-          "evs": "248 HP / 8 DEF / 252 SPD",
-          "moves": [
-            "Heavy Slam",
-            "Knock Off",
-            "Dragon Tail",
-            "Protect"
-          ]
-        },
-        {
-          "name": "Specially Defensive (Dragon)",
-          "tier": "monotype",
-          "ability": "Gooey",
-          "item": "Leftovers",
-          "nature": "Careful",
-          "teraType": "Normal",
-          "evs": "248 HP / 8 DEF / 252 SPD",
-          "moves": [
-            "Heavy Slam",
-            "Knock Off",
-            "Dragon Tail",
-            "Protect"
-          ]
-        },
-        {
-          "name": "Armor Press",
-          "tier": "battlestadiumsingles",
-          "ability": "Shell Armor",
-          "item": "Leftovers",
-          "nature": "Careful / Impish",
-          "teraType": "Flying / Fairy",
-          "evs": "252 HP / 252 SPD / 4 SPE",
-          "moves": [
-            "Acid Armor",
-            "Body Press",
-            "Heavy Slam",
-            "Protect / Draco Meteor / Ice Beam"
-          ]
-        },
-        {
-          "name": "RegenVest (Cyclizar)",
-          "tier": "inheritance",
-          "ability": "Regenerator",
-          "item": "Assault Vest",
-          "nature": "Sassy",
-          "teraType": "Normal",
-          "evs": "252 HP / 4 SPA / 252 SPD",
-          "moves": [
-            "U-turn",
-            "Knock Off",
-            "Rapid Spin / Overheat / Dragon Tail / Iron Head",
-            "Draco Meteor / Overheat / Iron Head / Dragon Tail"
-          ]
-        },
-        {
-          "name": "Assault Vest (HP, Atk)",
-          "tier": "godlygift",
-          "ability": "Gooey",
-          "item": "Assault Vest",
-          "nature": "Quiet",
-          "teraType": "Normal",
-          "evs": "252 HP / 4 ATK / 252 SPA",
-          "moves": [
-            "Draco Meteor",
-            "Heavy Slam",
-            "Knock Off",
-            "Dragon Tail"
-          ]
-        },
-        {
-          "name": "RegenVest",
-          "tier": "almostanyability",
-          "ability": "Regenerator",
-          "item": "Assault Vest",
-          "nature": "Sassy",
-          "teraType": "Normal",
-          "evs": "252 HP / 4 DEF / 252 SPD",
-          "moves": [
-            "Heavy Slam",
-            "Dragon Tail",
-            "Knock Off",
-            "Thunderbolt / Ice Beam / Flamethrower"
-          ]
-        },
-        {
-          "name": "AcidPress (Dragon)",
-          "tier": "nationaldexmonotype",
-          "ability": "Shell Armor / Sap Sipper",
-          "item": "Leftovers / Chesto Berry",
-          "nature": "Careful",
-          "teraType": "Normal",
-          "evs": "252 HP / 4 DEF / 252 SPD",
-          "moves": [
-            "Heavy Slam",
-            "Body Press",
-            "Acid Armor",
-            "Protect / Rest"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "sap-sipper",
-          "isHidden": false
-        },
-        {
-          "name": "shell-armor",
-          "isHidden": false
-        },
-        {
-          "name": "gooey",
-          "isHidden": true
-        }
-      ],
-      "stats": {
-        "hp": 80,
-        "attack": 100,
-        "defense": 100,
-        "special-attack": 110,
-        "special-defense": 150,
-        "speed": 60
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "mukalola": {
-      "name": "Muk-Alola",
-      "cleanName": "mukalola",
-      "dex": 89,
-      "id": 10113,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10113.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "uu",
-          "rank": 53,
-          "usage": "2.44"
-        },
-        {
-          "tier": "ru",
-          "rank": 24,
-          "usage": "7.96"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 68,
-          "usage": "0.75"
-        },
-        {
-          "tier": "ubers",
-          "rank": 142,
-          "usage": "0.20"
-        },
-        {
-          "tier": "ou",
-          "rank": 169,
-          "usage": "0.12"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 150,
-          "usage": "0.38"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 170,
-          "usage": "0.33"
-        },
-        {
-          "tier": "monotype",
-          "rank": 33,
-          "usage": "6.22"
-        }
-      ],
-      "types": [
-        "poison",
-        "dark"
-      ],
-      "strategies": [
-        {
-          "name": "RestTalk",
-          "tier": "ru",
-          "ability": "Poison Touch",
-          "item": "Leftovers",
-          "nature": "Careful",
-          "teraType": "Water / Fairy",
-          "evs": "252 HP / 4 DEF / 252 SPD",
-          "moves": [
-            "Knock Off",
-            "Poison Jab / Drain Punch / Haze",
-            "Rest",
-            "Sleep Talk"
-          ]
-        },
-        {
-          "name": "AV",
-          "tier": "1v1",
-          "ability": "Poison Touch",
-          "item": "Assault Vest",
-          "nature": "Adamant",
-          "teraType": "Normal",
-          "evs": "252 ATK / 236 DEF / 20 SPE",
-          "moves": [
-            "Gunk Shot",
-            "Knock Off",
-            "Drain Punch",
-            "Shadow Sneak"
-          ]
-        },
-        {
-          "name": "Specially Defensive (Poison)",
-          "tier": "monotype",
-          "ability": "Poison Touch",
-          "item": "Black Sludge",
-          "nature": "Careful",
-          "teraType": "Normal",
-          "evs": "252 HP / 4 ATK / 252 SPD",
-          "moves": [
-            "Knock Off",
-            "Drain Punch",
-            "Poison Jab / Curse / Rest",
-            "Protect / Sleep Talk"
-          ]
-        },
-        {
-          "name": "Specially Defensive (Dark)",
-          "tier": "monotype",
-          "ability": "Poison Touch",
-          "item": "Black Sludge",
-          "nature": "Careful",
-          "teraType": "Normal",
-          "evs": "252 HP / 4 ATK / 252 SPD",
-          "moves": [
-            "Poison Jab",
-            "Knock Off",
-            "Drain Punch",
-            "Protect"
-          ]
-        },
-        {
-          "name": "Ghostbuster (Stall)",
-          "tier": "battlestadiumsingles",
-          "ability": "Poison Touch",
-          "item": "Black Sludge",
-          "nature": "Careful",
-          "teraType": "Normal",
-          "evs": "252 HP / 4 DEF / 252 SPD",
-          "moves": [
-            "Knock Off",
-            "Poison Jab",
-            "Protect",
-            "Shadow Sneak / Toxic"
-          ]
-        },
-        {
-          "name": "RegenVest (Mienshao)",
-          "tier": "inheritance",
-          "ability": "Regenerator",
-          "item": "Assault Vest",
-          "nature": "Sassy",
-          "teraType": "Normal",
-          "evs": "252 HP / 4 ATK / 252 SPD OR 128 HP / 128 ATK / 252 SPD",
-          "moves": [
-            "U-turn",
-            "Knock Off",
-            "Poison Jab",
-            "Triple Axel / Ice Spinner / Low Kick"
-          ]
-        },
-        {
-          "name": "Curse (Def)",
-          "tier": "godlygift",
-          "ability": "Gluttony",
-          "item": "Iapapa Berry",
-          "nature": "Careful",
-          "teraType": "Normal",
-          "evs": "252 HP / 4 DEF / 252 SPD",
-          "moves": [
-            "Knock Off",
-            "Poison Jab",
-            "Curse",
-            "Recycle"
-          ]
-        },
-        {
-          "name": "Assault Vest (Poison)",
-          "tier": "nationaldexmonotype",
-          "ability": "Poison Touch",
-          "item": "Assault Vest",
-          "nature": "Careful",
-          "teraType": "Normal",
-          "evs": "248 HP / 12 DEF / 248 SPD",
-          "moves": [
-            "Knock Off",
-            "Poison Jab",
-            "Pursuit",
-            "Drain Punch / Shadow Sneak / Rock Slide"
-          ]
-        },
-        {
-          "name": "Specially Defensive",
-          "tier": "anythinggoes",
-          "ability": "Poison Touch",
-          "item": "Heavy-Duty Boots",
-          "nature": "Careful",
-          "teraType": "Normal",
-          "evs": "252 HP / 4 ATK / 252 SPD",
-          "moves": [
-            "Knock Off",
-            "Poison Jab / Clear Smog",
-            "Rest",
-            "Pain Split / Sleep Talk"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "poison-touch",
-          "isHidden": false
-        },
-        {
-          "name": "gluttony",
-          "isHidden": false
-        },
-        {
-          "name": "power-of-alchemy",
-          "isHidden": true
-        }
-      ],
-      "stats": {
-        "hp": 105,
-        "attack": 105,
-        "defense": 75,
-        "special-attack": 65,
-        "special-defense": 100,
-        "speed": 50
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "lilliganthisui": {
-      "name": "Lilligant-Hisui",
-      "cleanName": "lilliganthisui",
-      "dex": 549,
-      "id": 10237,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10237.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "uu",
-          "rank": 56,
-          "usage": "2.27"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 45,
-          "usage": "1.97"
-        },
-        {
-          "tier": "ubers",
-          "rank": 156,
-          "usage": "0.15"
-        },
-        {
-          "tier": "ou",
-          "rank": 111,
-          "usage": "0.44"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 38,
-          "usage": "5.31"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 192,
-          "usage": "0.25"
-        },
-        {
-          "tier": "monotype",
-          "rank": 136,
-          "usage": "0.57"
-        }
-      ],
-      "types": [
-        "grass",
-        "fighting"
-      ],
-      "strategies": [
-        {
-          "name": "Sun Sweeper",
-          "tier": "uu",
-          "ability": "Chlorophyll",
-          "item": "Life Orb",
-          "nature": "Adamant",
-          "teraType": "Ice / Fire / Ghost",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Solar Blade",
-            "Close Combat",
-            "Triple Axel",
-            "Healing Wish / Weather Ball / Tera Blast"
-          ]
-        },
-        {
-          "name": "Victory Dance (Fighting)",
-          "tier": "monotype",
-          "ability": "Hustle",
-          "item": "Wide Lens",
-          "nature": "Jolly",
-          "teraType": "Normal",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Victory Dance",
-            "Leaf Blade",
-            "Close Combat",
-            "Ice Spinner"
-          ]
-        },
-        {
-          "name": "Victory Dance Sweeper (Grass)",
-          "tier": "monotype",
-          "ability": "Hustle",
-          "item": "Wide Lens",
-          "nature": "Jolly",
-          "teraType": "Normal",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Victory Dance",
-            "Close Combat",
-            "Ice Spinner",
-            "Sleep Powder / Leaf Blade"
-          ]
-        },
-        {
-          "name": "Sun Wallbreaker",
-          "tier": "stabmons",
-          "ability": "Chlorophyll",
-          "item": "Life Orb / Choice Band",
-          "nature": "Adamant",
-          "teraType": "Normal",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Solar Blade / Ivy Cudgel",
-            "Close Combat",
-            "Ice Spinner",
-            "Healing Wish"
-          ]
-        },
-        {
-          "name": "Special-based Mixed Sun Sweeper (SpA)",
-          "tier": "godlygift",
-          "ability": "Chlorophyll",
-          "item": "Life Orb",
-          "nature": "Mild",
-          "teraType": "Normal",
-          "evs": "4 ATK / 252 SPA / 252 SPE",
-          "moves": [
-            "Solar Beam",
-            "Weather Ball",
-            "Close Combat",
-            "Growth"
-          ]
-        },
-        {
-          "name": "Physical-based Mixed Sun Sweeper (Atk)",
-          "tier": "godlygift",
-          "ability": "Chlorophyll",
-          "item": "Life Orb",
-          "nature": "Adamant",
-          "teraType": "Normal",
-          "evs": "4 HP / 252 ATK / 252 SPE",
-          "moves": [
-            "Close Combat",
-            "Solar Beam",
-            "Tera Blast",
-            "Growth"
-          ]
-        },
-        {
-          "name": "Sun Support",
-          "tier": "doublesou",
-          "ability": "Chlorophyll",
-          "item": "Focus Sash",
-          "nature": "Jolly",
-          "teraType": "Normal",
-          "evs": "252 ATK / 4 DEF / 252 SPE",
-          "moves": [
-            "Solar Blade / Close Combat",
-            "Sleep Powder",
-            "After You",
-            "Encore / Close Combat / Protect"
-          ]
-        },
-        {
-          "name": "Victory Dance (Grass)",
-          "tier": "nationaldexmonotype",
-          "ability": "Hustle",
-          "item": "Fightinium Z",
-          "nature": "Jolly",
-          "teraType": "Normal",
-          "evs": "252 ATK / 4 DEF / 252 SPE",
-          "moves": [
-            "Victory Dance",
-            "Close Combat",
-            "Leaf Blade / Sleep Powder",
-            "Ice Spinner"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "chlorophyll",
-          "isHidden": false
-        },
-        {
-          "name": "hustle",
-          "isHidden": false
-        },
-        {
-          "name": "leaf-guard",
-          "isHidden": true
-        }
-      ],
-      "stats": {
-        "hp": 70,
-        "attack": 105,
-        "defense": 75,
-        "special-attack": 50,
-        "special-defense": 75,
-        "speed": 105
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "zoroarkhisui": {
-      "name": "Zoroark-Hisui",
-      "cleanName": "zoroarkhisui",
-      "dex": 571,
-      "id": 10239,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10239.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "uu",
-          "rank": 61,
-          "usage": "2.01"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 86,
-          "usage": "0.50"
-        },
-        {
-          "tier": "ubers",
-          "rank": 136,
-          "usage": "0.26"
-        },
-        {
-          "tier": "ou",
-          "rank": 164,
-          "usage": "0.13"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 165,
-          "usage": "0.30"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 140,
-          "usage": "0.50"
-        },
-        {
-          "tier": "monotype",
-          "rank": 43,
-          "usage": "4.64"
-        }
-      ],
-      "types": [
-        "normal",
-        "ghost"
-      ],
-      "strategies": [
-        {
-          "name": "Nasty Plot",
-          "tier": "uu",
-          "ability": "Illusion",
-          "item": "Heavy-Duty Boots / Focus Sash",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Shadow Ball",
-            "Focus Blast",
-            "Hyper Voice / U-turn",
-            "Nasty Plot"
-          ]
-        },
-        {
-          "name": "Choice Specs",
-          "tier": "nationaldexuu",
-          "ability": "Illusion",
-          "item": "Choice Specs",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Shadow Ball",
-            "Focus Blast",
-            "Grass Knot",
-            "Trick"
-          ]
-        },
-        {
-          "name": "Choice Specs (Normal)",
-          "tier": "monotype",
-          "ability": "Illusion",
-          "item": "Choice Specs",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Shadow Ball",
-            "Flamethrower",
-            "Focus Blast",
-            "Trick"
-          ]
-        },
-        {
-          "name": "Swords Dance (Ghost)",
-          "tier": "monotype",
-          "ability": "Illusion",
-          "item": "Life Orb / Spooky Plate",
-          "nature": "Jolly",
-          "teraType": "Normal",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Swords Dance",
-            "Poltergeist",
-            "Low Kick",
-            "Shadow Sneak"
-          ]
-        },
-        {
-          "name": "Choice Scarf (Ghost)",
-          "tier": "monotype",
-          "ability": "Illusion",
-          "item": "Choice Scarf",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "4 DEF / 252 SPA / 252 SPE",
-          "moves": [
-            "Shadow Ball",
-            "Focus Blast",
-            "Flamethrower / U-turn / Grass Knot",
-            "U-turn / Trick"
-          ]
-        },
-        {
-          "name": "Choice Scarf (Normal)",
-          "tier": "monotype",
-          "ability": "Illusion",
-          "item": "Choice Scarf",
-          "nature": "Naive",
-          "teraType": "Normal",
-          "evs": "4 ATK / 252 SPA / 252 SPE",
-          "moves": [
-            "Shadow Ball",
-            "Flamethrower",
-            "Focus Blast / Psychic",
-            "U-turn"
-          ]
-        },
-        {
-          "name": "Sheer Force",
-          "tier": "almostanyability",
-          "ability": "Sheer Force",
-          "item": "Life Orb",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Nasty Plot / Body Slam",
-            "Shadow Ball",
-            "Focus Blast",
-            "Psychic / Knock Off"
-          ]
-        },
-        {
-          "name": "Magic Guard",
-          "tier": "almostanyability",
-          "ability": "Magic Guard",
-          "item": "Life Orb",
-          "nature": "Hasty",
-          "teraType": "Normal",
-          "evs": "4 ATK / 252 SPA / 252 SPE",
-          "moves": [
-            "Hex",
-            "Knock Off",
-            "Will-O-Wisp",
-            "U-turn / Taunt"
-          ]
-        },
-        {
-          "name": "Z-Happy Hour (Ghost)",
-          "tier": "nationaldexmonotype",
-          "ability": "Illusion",
-          "item": "Normalium Z",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "4 DEF / 252 SPA / 252 SPE",
-          "moves": [
-            "Shadow Ball",
-            "Focus Blast",
-            "Hyper Voice / Flamethrower",
-            "Happy Hour"
-          ]
-        },
-        {
-          "name": "Z-Happy Hour (Normal)",
-          "tier": "nationaldexmonotype",
-          "ability": "Illusion",
-          "item": "Normalium Z",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "4 DEF / 252 SPA / 252 SPE",
-          "moves": [
-            "Happy Hour",
-            "Shadow Ball",
-            "Focus Blast",
-            "Flamethrower / Hyper Voice"
-          ]
-        },
-        {
-          "name": "Choiced Attacker (Ghost)",
-          "tier": "nationaldexmonotype",
-          "ability": "Illusion",
-          "item": "Choice Scarf / Choice Specs",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Shadow Ball",
-            "Focus Blast",
-            "Hyper Voice / Flamethrower",
-            "Trick / U-turn"
-          ]
-        },
-        {
-          "name": "Utility (Ghost)",
-          "tier": "nationaldexmonotype",
-          "ability": "Illusion",
-          "item": "Leftovers",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 HP / 4 DEF / 252 SPE",
-          "moves": [
-            "Hex",
-            "Knock Off",
-            "Will-O-Wisp",
-            "Substitute"
-          ]
-        },
-        {
-          "name": "Utility (Normal)",
-          "tier": "nationaldexmonotype",
-          "ability": "Illusion",
-          "item": "Leftovers",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 HP / 4 DEF / 252 SPE",
-          "moves": [
-            "Hex",
-            "Knock Off",
-            "Will-O-Wisp",
-            "Substitute"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "illusion",
-          "isHidden": false
-        }
-      ],
-      "stats": {
-        "hp": 55,
-        "attack": 100,
-        "defense": 60,
-        "special-attack": 125,
-        "special-defense": 60,
-        "speed": 110
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "basculegionf": {
-      "name": "Basculegion-F",
-      "cleanName": "basculegionf",
-      "dex": 902,
-      "id": 902,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/902.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "uu",
-          "rank": 64,
-          "usage": "1.93"
-        },
-        {
-          "tier": "ru",
-          "rank": 25,
-          "usage": "7.76"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 254,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ubers",
-          "rank": 320,
-          "usage": "0.01"
-        },
-        {
-          "tier": "ou",
-          "rank": 188,
-          "usage": "0.08"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 56,
-          "usage": "2.31"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 198,
-          "usage": "0.24"
-        },
-        {
-          "tier": "monotype",
-          "rank": 131,
-          "usage": "0.69"
-        }
-      ],
-      "types": [
-        "water",
-        "ghost"
-      ],
-      "strategies": [
-        {
-          "name": "Choice Scarf",
-          "tier": "uu",
-          "ability": "Adaptability",
-          "item": "Choice Scarf",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "4 DEF / 252 SPA / 252 SPE",
-          "moves": [
-            "Shadow Ball",
-            "Surf / Hydro Pump",
-            "Ice Beam / Hex",
-            "Flip Turn"
-          ]
-        },
-        {
-          "name": "Agility",
-          "tier": "ru",
-          "ability": "Adaptability",
-          "item": "Weakness Policy / Life Orb",
-          "nature": "Modest",
-          "teraType": "Ghost / Water",
-          "evs": "52 DEF / 236 SPA / 24 SPD / 196 SPE",
-          "moves": [
-            "Agility",
-            "Shadow Ball",
-            "Surf",
-            "Ice Beam"
-          ]
-        },
-        {
-          "name": "Choice Specs",
-          "tier": "ru",
-          "ability": "Adaptability / Swift Swim",
-          "item": "Choice Specs",
-          "nature": "Modest",
-          "teraType": "Ghost / Water",
-          "evs": "4 DEF / 252 SPA / 252 SPE",
-          "moves": [
-            "Surf / Hydro Pump",
-            "Shadow Ball",
-            "Ice Beam",
-            "Flip Turn"
-          ]
-        },
-        {
-          "name": "Swift Swim Wallbreaker (Water)",
-          "tier": "monotype",
-          "ability": "Adaptability",
-          "item": "Choice Specs",
-          "nature": "Modest",
-          "teraType": "Normal",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Shadow Ball",
-            "Surf",
-            "Hydro Pump",
-            "Ice Beam"
-          ]
-        },
-        {
-          "name": "Rain Sweeper (SpA, Spe)",
-          "tier": "godlygift",
-          "ability": "Adaptability",
-          "item": "Choice Specs",
-          "nature": "Modest",
-          "teraType": "Normal",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Hydro Pump",
-            "Shadow Ball",
-            "Ice Beam",
-            "Surf"
-          ]
-        },
-        {
-          "name": "Rain Attacker",
-          "tier": "doublesou",
-          "ability": "Adaptability",
-          "item": "Life Orb / Choice Band",
-          "nature": "Adamant",
-          "teraType": "Dark / Water / Ghost",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Wave Crash",
-            "Last Respects",
-            "Aqua Jet",
-            "Protect / Flip Turn"
-          ]
-        },
-        {
-          "name": "Substitute Attacker",
-          "tier": "nationaldexru",
-          "ability": "Adaptability",
-          "item": "Leftovers / Waterium Z / Ghostium Z",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Substitute",
-            "Surf",
-            "Shadow Ball",
-            "Ice Beam"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "swift-swim",
-          "isHidden": false
-        },
-        {
-          "name": "adaptability",
-          "isHidden": false
-        },
-        {
-          "name": "mold-breaker",
-          "isHidden": true
-        }
-      ],
-      "stats": {
-        "hp": 120,
-        "attack": 112,
-        "defense": 65,
-        "special-attack": 80,
-        "special-defense": 75,
-        "speed": 78
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "enamorustherian": {
-      "name": "Enamorus-Therian",
-      "cleanName": "enamorustherian",
-      "dex": 905,
-      "id": 905,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/905.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "uu",
-          "rank": 82,
-          "usage": "1.16"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 170,
-          "usage": "0.07"
-        },
-        {
-          "tier": "ou",
-          "rank": 122,
-          "usage": "0.31"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 236,
-          "usage": "0.08"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 302,
-          "usage": "0.06"
-        },
-        {
-          "tier": "monotype",
-          "rank": 294,
-          "usage": "0.03"
-        }
-      ],
-      "types": [
-        "fairy",
-        "flying"
-      ],
-      "strategies": [
-        {
-          "name": "3 Attacks",
-          "tier": "uu",
-          "ability": "Overcoat",
-          "item": "Heavy-Duty Boots",
-          "nature": "Modest",
-          "teraType": "Fairy / Steel",
-          "evs": "120 HP / 136 SPA / 252 SPE",
-          "moves": [
-            "Moonblast",
-            "Earth Power",
-            "Mystical Fire / Taunt / Agility",
-            "Healing Wish"
-          ]
-        },
-        {
-          "name": "Choice Specs",
-          "tier": "uu",
-          "ability": "Overcoat",
-          "item": "Choice Specs",
-          "nature": "Modest",
-          "teraType": "Normal",
-          "evs": "4 DEF / 252 SPA / 252 SPE",
-          "moves": [
-            "Moonblast",
-            "Earth Power",
-            "Mystical Fire",
-            "Draining Kiss"
-          ]
-        },
-        {
-          "name": "Calm Mind",
-          "tier": "uu",
-          "ability": "Overcoat",
-          "item": "Heavy-Duty Boots",
-          "nature": "Modest",
-          "teraType": "Ground / Fairy / Steel",
-          "evs": "252 HP / 36 DEF / 56 SPA / 164 SPE",
-          "moves": [
-            "Calm Mind",
-            "Moonblast",
-            "Earth Power",
-            "Draining Kiss"
-          ]
-        },
-        {
-          "name": "Calm Mind (Fairy)",
-          "tier": "monotype",
-          "ability": "Overcoat",
-          "item": "Leftovers",
-          "nature": "Calm",
-          "teraType": "Normal",
-          "evs": "252 HP / 4 DEF / 252 SPD",
-          "moves": [
-            "Iron Defense",
-            "Draining Kiss",
-            "Calm Mind",
-            "Earth Power"
-          ]
-        },
-        {
-          "name": "Defensive (Clefable)",
-          "tier": "inheritance",
-          "ability": "Magic Guard / Unaware",
-          "item": "Leftovers / Heavy-Duty Boots / Life Orb",
-          "nature": "Bold",
-          "teraType": "Normal",
-          "evs": "248 HP / 252 DEF / 8 SPE",
-          "moves": [
-            "Moonblast",
-            "Flamethrower / Knock Off / Stored Power",
-            "Calm Mind / Stealth Rock / Thunder Wave",
-            "Moonlight"
-          ]
-        },
-        {
-          "name": "Calm Mind (HP, Spe)",
-          "tier": "godlygift",
-          "ability": "Overcoat",
-          "item": "Grassy Seed",
-          "nature": "Modest",
-          "teraType": "Normal",
-          "evs": "248 HP / 252 SPA / 8 SPD",
-          "moves": [
-            "Moonblast",
-            "Earth Power",
-            "Draining Kiss",
-            "Calm Mind"
-          ]
-        },
-        {
-          "name": "Sheer Force",
-          "tier": "almostanyability",
-          "ability": "Sheer Force",
-          "item": "Life Orb",
-          "nature": "Quiet / Modest",
-          "teraType": "Normal",
-          "evs": "248 HP / 252 SPA / 8 SPD OR 248 HP / 8 DEF / 252 SPA",
-          "moves": [
-            "Moonblast",
-            "Earth Power",
-            "Mystical Fire",
-            "Superpower / Grass Knot"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "cute-charm",
-          "isHidden": false
-        },
-        {
-          "name": "contrary",
-          "isHidden": true
-        }
-      ],
-      "stats": {
-        "hp": 74,
-        "attack": 115,
-        "defense": 70,
-        "special-attack": 135,
-        "special-defense": 80,
-        "speed": 106
-      },
-      "isLegendary": true,
-      "isMythical": false
-    },
-    "lycanrocdusk": {
-      "name": "Lycanroc-Dusk",
-      "cleanName": "lycanrocdusk",
-      "dex": 745,
-      "id": 745,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/745.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "uu",
-          "rank": 89,
-          "usage": "0.94"
-        },
-        {
-          "tier": "ru",
-          "rank": 45,
-          "usage": "4.35"
-        },
-        {
-          "tier": "ubers",
-          "rank": 254,
-          "usage": "0.03"
-        },
-        {
-          "tier": "ou",
-          "rank": 199,
-          "usage": "0.07"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 169,
-          "usage": "0.25"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 338,
-          "usage": "0.04"
-        },
-        {
-          "tier": "monotype",
-          "rank": 189,
-          "usage": "0.21"
-        }
-      ],
-      "types": [
-        "rock"
-      ],
-      "strategies": [
-        {
-          "name": "All-Out Attacker",
-          "tier": "ru",
-          "ability": "Tough Claws",
-          "item": "Choice Band / Life Orb",
-          "nature": "Jolly",
-          "teraType": "Fighting / Dark",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Accelerock",
-            "Stone Edge",
-            "Close Combat",
-            "Crunch"
-          ]
-        },
-        {
-          "name": "Swords Dance",
-          "tier": "ru",
-          "ability": "Tough Claws",
-          "item": "Life Orb",
-          "nature": "Jolly",
-          "teraType": "Fighting / Dark",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Swords Dance",
-            "Close Combat",
-            "Stone Edge",
-            "Accelerock / Sucker Punch"
-          ]
-        },
-        {
-          "name": "Choice Band (Rock)",
-          "tier": "monotype",
-          "ability": "Tough Claws",
-          "item": "Choice Band",
-          "nature": "Jolly",
-          "teraType": "Normal",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Stone Edge",
-            "Accelerock",
-            "Close Combat",
-            "Psychic Fangs / Play Rough"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "keen-eye",
-          "isHidden": false
-        },
-        {
-          "name": "sand-rush",
-          "isHidden": false
-        },
-        {
-          "name": "steadfast",
-          "isHidden": true
-        }
-      ],
-      "stats": {
-        "hp": 75,
-        "attack": 115,
-        "defense": 65,
-        "special-attack": 55,
-        "special-defense": 65,
-        "speed": 112
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "taurospaldeaaqua": {
-      "name": "Tauros-Paldea-Aqua",
-      "cleanName": "taurospaldeaaqua",
-      "dex": 128,
-      "id": 128,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/128.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "uu",
-          "rank": 101,
-          "usage": "0.70"
-        },
-        {
-          "tier": "ru",
-          "rank": 119,
-          "usage": "0.47"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 131,
-          "usage": "0.16"
-        },
-        {
-          "tier": "ou",
-          "rank": 290,
-          "usage": "0.01"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 248,
-          "usage": "0.06"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 396,
-          "usage": "0.02"
-        },
-        {
-          "tier": "nu",
-          "rank": 33,
-          "usage": "6.92"
-        }
-      ],
-      "types": [],
-      "strategies": [
-        {
-          "name": "Choice Item",
-          "tier": "nu",
-          "ability": "Intimidate",
-          "item": "Choice Band / Choice Scarf",
-          "nature": "Jolly",
-          "teraType": "Water / Fighting",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Wave Crash",
-            "Close Combat",
-            "Aqua Jet / Raging Bull",
-            "Zen Headbutt / Earthquake"
-          ]
-        },
-        {
-          "name": "Bulk Up",
-          "tier": "nu",
-          "ability": "Intimidate",
-          "item": "Leftovers / Lum Berry",
-          "nature": "Jolly",
-          "teraType": "Steel / Electric / Water",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Bulk Up",
-            "Wave Crash / Raging Bull",
-            "Close Combat",
-            "Aqua Jet / Zen Headbutt / Substitute"
-          ]
-        },
-        {
-          "name": "Choice Band",
-          "tier": "battlestadiumsingles",
-          "ability": "Intimidate",
-          "item": "Choice Band",
-          "nature": "Adamant / Jolly",
-          "teraType": "Fighting / Steel",
-          "evs": "4 HP / 252 ATK / 252 SPE",
-          "moves": [
-            "Close Combat",
-            "Raging Bull / Wave Crash",
-            "Aqua Jet",
-            "Earthquake / Iron Head"
-          ]
-        }
-      ]
-    },
-    "slowbrogalar": {
-      "name": "Slowbro-Galar",
-      "cleanName": "slowbrogalar",
-      "dex": 80,
-      "id": 10165,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10165.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "uu",
-          "rank": 107,
-          "usage": "0.53"
-        },
-        {
-          "tier": "ru",
-          "rank": 115,
-          "usage": "0.55"
-        },
-        {
-          "tier": "ubers",
-          "rank": 288,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ou",
-          "rank": 157,
-          "usage": "0.16"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 364,
-          "usage": "0.01"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 157,
-          "usage": "0.40"
-        },
-        {
-          "tier": "nu",
-          "rank": 45,
-          "usage": "4.15"
-        },
-        {
-          "tier": "pu",
-          "rank": 3,
-          "usage": "22.44"
-        },
-        {
-          "tier": "monotype",
-          "rank": 313,
-          "usage": "0.02"
-        }
-      ],
-      "types": [
-        "poison",
-        "psychic"
-      ],
-      "strategies": [
-        {
-          "name": "Calm Mind",
-          "tier": "ru",
-          "ability": "Regenerator",
-          "item": "Heavy-Duty Boots / Covert Cloak",
-          "nature": "Bold",
-          "teraType": "Normal",
-          "evs": "252 HP / 252 DEF / 4 SPD",
-          "moves": [
-            "Calm Mind",
-            "Sludge Bomb",
-            "Flamethrower",
-            "Slack Off"
-          ]
-        },
-        {
-          "name": "Defensive",
-          "tier": "ru",
-          "ability": "Regenerator",
-          "item": "Heavy-Duty Boots / Colbur Berry",
-          "nature": "Bold",
-          "teraType": "Water / Ghost",
-          "evs": "252 HP / 252 DEF / 4 SPD",
-          "moves": [
-            "Psyshock",
-            "Flamethrower",
-            "Slack Off",
-            "Toxic"
-          ]
-        },
-        {
-          "name": "Physically Defensive",
-          "tier": "pu",
-          "ability": "Regenerator",
-          "item": "Rocky Helmet / Eject Button / Heavy-Duty Boots / Leftovers",
-          "nature": "Relaxed / Bold",
-          "teraType": "Water / Fairy",
-          "evs": "248 HP / 252 DEF / 8 SPD",
-          "moves": [
-            "Slack Off",
-            "Toxic",
-            "Shell Side Arm / Sludge Bomb / Psyshock",
-            "Flamethrower / Surf"
-          ]
-        },
-        {
-          "name": "Assault Vest",
-          "tier": "pu",
-          "ability": "Regenerator",
-          "item": "Assault Vest",
-          "nature": "Relaxed",
-          "teraType": "Water / Fairy",
-          "evs": "248 HP / 128 DEF / 4 SPA / 128 SPD",
-          "moves": [
-            "Shell Side Arm",
-            "Psychic",
-            "Surf",
-            "Flamethrower / Earthquake"
-          ]
-        },
-        {
-          "name": "Physical Wall",
-          "tier": "nu",
-          "ability": "Regenerator",
-          "item": "Rocky Helmet / Heavy-Duty Boots / Leftovers",
-          "nature": "Bold",
-          "teraType": "Water / Fairy",
-          "evs": "252 HP / 228 DEF / 28 SPE",
-          "moves": [
-            "Sludge Bomb / Psyshock",
-            "Flamethrower / Surf",
-            "Calm Mind / Toxic / Thunder Wave",
-            "Slack Off"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "quick-draw",
-          "isHidden": false
-        },
-        {
-          "name": "own-tempo",
-          "isHidden": false
-        },
-        {
-          "name": "regenerator",
-          "isHidden": true
-        }
-      ],
-      "stats": {
-        "hp": 95,
-        "attack": 100,
-        "defense": 95,
-        "special-attack": 100,
-        "special-defense": 70,
-        "speed": 30
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "rotomheat": {
-      "name": "Rotom-Heat",
-      "cleanName": "rotomheat",
-      "dex": 479,
-      "id": 479,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/479.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "uu",
-          "rank": 115,
-          "usage": "0.40"
-        },
-        {
-          "tier": "ru",
-          "rank": 116,
-          "usage": "0.50"
-        },
-        {
-          "tier": "ou",
-          "rank": 159,
-          "usage": "0.15"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 231,
-          "usage": "0.08"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 160,
-          "usage": "0.38"
-        },
-        {
-          "tier": "nu",
-          "rank": 43,
-          "usage": "4.60"
-        },
-        {
-          "tier": "pu",
-          "rank": 8,
-          "usage": "16.37"
-        },
-        {
-          "tier": "monotype",
-          "rank": 203,
-          "usage": "0.17"
-        }
-      ],
-      "types": [
-        "electric",
-        "ghost"
-      ],
-      "strategies": [
-        {
-          "name": "Nasty Plot",
-          "tier": "ru",
-          "ability": "Levitate",
-          "item": "Heavy-Duty Boots",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "248 HP / 8 SPA / 252 SPE",
-          "moves": [
-            "Overheat",
-            "Volt Switch",
-            "Nasty Plot",
-            "Pain Split / Will-O-Wisp"
-          ]
-        },
-        {
-          "name": "Bulky Pivot",
-          "tier": "pu",
-          "ability": "Levitate",
-          "item": "Heavy-Duty Boots",
-          "nature": "Timid",
-          "teraType": "Steel / Poison",
-          "evs": "248 HP / 8 SPA / 252 SPE",
-          "moves": [
-            "Nasty Plot / Will-O-Wisp",
-            "Volt Switch",
-            "Overheat",
-            "Pain Split"
-          ]
-        },
-        {
-          "name": "Physically Defensive",
-          "tier": "stabmons",
-          "ability": "Levitate",
-          "item": "Heavy-Duty Boots",
-          "nature": "Bold",
-          "teraType": "Normal",
-          "evs": "248 HP / 204 DEF / 56 SPE",
-          "moves": [
-            "Volt Switch",
-            "Lava Plume",
-            "Will-O-Wisp / Burning Bulwark",
-            "Strength Sap / Roost"
-          ]
-        },
-        {
-          "name": "Offensive",
-          "tier": "stabmons",
-          "ability": "Levitate",
-          "item": "Heavy-Duty Boots",
-          "nature": "Bold",
-          "teraType": "Normal",
-          "evs": "248 HP / 68 DEF / 116 SPA / 76 SPE",
-          "moves": [
-            "Parabolic Charge",
-            "Blue Flare",
-            "Nasty Plot",
-            "Strength Sap / Roost"
-          ]
-        },
-        {
-          "name": "Defensive Pivot",
-          "tier": "nu",
-          "ability": "Levitate",
-          "item": "Heavy-Duty Boots",
-          "nature": "Timid",
-          "teraType": "Steel / Fairy / Water",
-          "evs": "248 HP / 8 DEF / 252 SPE",
-          "moves": [
-            "Overheat",
-            "Volt Switch",
-            "Pain Split",
-            "Will-O-Wisp / Nasty Plot"
-          ]
-        },
-        {
-          "name": "Choice Attacker",
-          "tier": "battlestadiumsingles",
-          "ability": "Levitate",
-          "item": "Choice Scarf / Choice Specs",
-          "nature": "Timid",
-          "teraType": "Electric / Fairy",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Volt Switch",
-            "Overheat",
-            "Trick",
-            "Thunderbolt / Tera Blast"
-          ]
-        },
-        {
-          "name": "Defensive Pivot (HP)",
-          "tier": "godlygift",
-          "ability": "Levitate",
-          "item": "Heavy-Duty Boots",
-          "nature": "Bold",
-          "teraType": "Normal",
-          "evs": "248 HP / 252 DEF / 8 SPD",
-          "moves": [
-            "Overheat",
-            "Volt Switch",
-            "Will-O-Wisp",
-            "Pain Split"
-          ]
-        },
-        {
-          "name": "Offensive Pivot",
-          "tier": "nationaldexru",
-          "ability": "Levitate",
-          "item": "Heavy-Duty Boots",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 HP / 44 DEF / 212 SPE",
-          "moves": [
-            "Overheat",
-            "Volt Switch",
-            "Defog / Toxic",
-            "Pain Split / Will-O-Wisp"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "levitate",
-          "isHidden": false
-        }
-      ],
-      "stats": {
-        "hp": 50,
-        "attack": 50,
-        "defense": 77,
-        "special-attack": 95,
-        "special-defense": 77,
-        "speed": 91
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "oricoriopompom": {
-      "name": "Oricorio-Pom-Pom",
-      "cleanName": "oricoriopompom",
-      "dex": 741,
-      "id": 741,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/741.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "uu",
-          "rank": 129,
-          "usage": "0.28"
-        },
-        {
-          "tier": "ou",
-          "rank": 285,
-          "usage": "0.01"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 205,
-          "usage": "0.13"
-        },
-        {
-          "tier": "monotype",
-          "rank": 210,
-          "usage": "0.14"
-        }
-      ],
-      "types": [
-        "fire",
-        "flying"
-      ],
-      "strategies": [
-        {
-          "name": "Quiver Dance",
-          "tier": "uu",
-          "ability": "Dancer",
-          "item": "Kee Berry / Leftovers",
-          "nature": "Modest",
-          "teraType": "Ground / Dark",
-          "evs": "248 HP / 8 SPA / 252 SPE",
-          "moves": [
-            "Quiver Dance",
-            "Revelation Dance / Taunt",
-            "Air Slash",
-            "Roost"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "dancer",
-          "isHidden": false
-        }
-      ],
-      "stats": {
-        "hp": 75,
-        "attack": 70,
-        "defense": 70,
-        "special-attack": 98,
-        "special-defense": 70,
-        "speed": 93
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "oricoriosensu": {
-      "name": "Oricorio-Sensu",
-      "cleanName": "oricoriosensu",
-      "dex": 741,
-      "id": 741,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/741.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "uu",
-          "rank": 131,
-          "usage": "0.27"
-        },
-        {
-          "tier": "ru",
-          "rank": 111,
-          "usage": "0.59"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 201,
-          "usage": "0.04"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 265,
-          "usage": "0.05"
-        },
-        {
-          "tier": "monotype",
-          "rank": 249,
-          "usage": "0.07"
-        }
-      ],
-      "types": [
-        "fire",
-        "flying"
-      ],
-      "strategies": [
-        {
-          "name": "Bulky Quiver Dance Sweeper",
-          "tier": "ru",
-          "ability": "Dancer",
-          "item": "Heavy-Duty Boots / Kee Berry",
-          "nature": "Timid",
-          "teraType": "Fairy / Steel",
-          "evs": "248 HP / 216 DEF / 44 SPE",
-          "moves": [
-            "Revelation Dance / Air Slash / Hurricane",
-            "Quiver Dance",
-            "Roost",
-            "Taunt"
-          ]
-        },
-        {
-          "name": "Offensive Quiver Dance",
-          "tier": "ru",
-          "ability": "Dancer",
-          "item": "Heavy-Duty Boots",
-          "nature": "Timid",
-          "teraType": "Fighting / Fairy",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Revelation Dance / Air Slash",
-            "Quiver Dance",
-            "Taunt / Air Slash",
-            "Roost"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "dancer",
-          "isHidden": false
-        }
-      ],
-      "stats": {
-        "hp": 75,
-        "attack": 70,
-        "defense": 70,
-        "special-attack": 98,
-        "special-defense": 70,
-        "speed": 93
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "typhlosionhisui": {
-      "name": "Typhlosion-Hisui",
-      "cleanName": "typhlosionhisui",
-      "dex": 157,
-      "id": 10233,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10233.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "uu",
-          "rank": 151,
-          "usage": "0.17"
-        },
-        {
-          "tier": "ru",
-          "rank": 177,
-          "usage": "0.15"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 159,
-          "usage": "0.09"
-        },
-        {
-          "tier": "ubers",
-          "rank": 283,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ou",
-          "rank": 201,
-          "usage": "0.07"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 40,
-          "usage": "4.24"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 289,
-          "usage": "0.06"
-        },
-        {
-          "tier": "nu",
-          "rank": 133,
-          "usage": "0.21"
-        },
-        {
-          "tier": "pu",
-          "rank": 34,
-          "usage": "5.92"
-        },
-        {
-          "tier": "monotype",
-          "rank": 304,
-          "usage": "0.02"
-        }
-      ],
-      "types": [
-        "fire",
-        "ghost"
-      ],
-      "strategies": [
-        {
-          "name": "Choice Item",
-          "tier": "pu",
-          "ability": "Blaze / Frisk",
-          "item": "Choice Specs / Choice Scarf",
-          "nature": "Timid",
-          "teraType": "Fire / Ghost / Fighting",
-          "evs": "4 DEF / 252 SPA / 252 SPE",
-          "moves": [
-            "Eruption",
-            "Fire Blast / Flamethrower / Overheat",
-            "Shadow Ball / Infernal Parade",
-            "Focus Blast / Infernal Parade"
-          ]
-        },
-        {
-          "name": "Heavy-Duty Boots",
-          "tier": "pu",
-          "ability": "Blaze / Frisk",
-          "item": "Heavy-Duty Boots",
-          "nature": "Timid",
-          "teraType": "Fire / Fairy",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Eruption",
-            "Lava Plume / Fire Blast",
-            "Infernal Parade / Shadow Ball",
-            "Focus Blast"
-          ]
-        },
-        {
-          "name": "Substitute + Calm Mind",
-          "tier": "pu",
-          "ability": "Blaze / Frisk",
-          "item": "Heavy-Duty Boots / Leftovers",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Substitute",
-            "Calm Mind",
-            "Infernal Parade / Shadow Ball",
-            "Flamethrower / Fire Blast"
-          ]
-        },
-        {
-          "name": "Glass Cannon",
-          "tier": "vgc2025",
-          "ability": "Blaze",
-          "item": "Choice Specs / Choice Scarf",
-          "nature": "Modest",
-          "teraType": "Normal",
-          "evs": "4 HP / 252 SPA / 252 SPE",
-          "moves": [
-            "Eruption",
-            "Heat Wave",
-            "Overheat",
-            "Shadow Ball"
-          ]
-        },
-        {
-          "name": "All-out Attacker",
-          "tier": "nu",
-          "ability": "Frisk",
-          "item": "Heavy-Duty Boots",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Eruption",
-            "Flamethrower",
-            "Shadow Ball",
-            "Focus Blast"
-          ]
-        },
-        {
-          "name": "Choice Scarf",
-          "tier": "nu",
-          "ability": "Frisk",
-          "item": "Choice Scarf",
-          "nature": "Timid",
-          "teraType": "Fire / Fighting",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Eruption",
-            "Fire Blast / Flamethrower",
-            "Shadow Ball",
-            "Focus Blast"
-          ]
-        },
-        {
-          "name": "Calm Mind",
-          "tier": "nationaldexru",
-          "ability": "Blaze",
-          "item": "Leftovers / Ghostium Z / Firium Z",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Calm Mind",
-            "Infernal Parade / Shadow Ball",
-            "Flamethrower",
-            "Substitute / Focus Blast"
-          ]
-        },
-        {
-          "name": "Choice Specs",
-          "tier": "nationaldexru",
-          "ability": "Frisk",
-          "item": "Choice Specs",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Eruption",
-            "Fire Blast",
-            "Shadow Ball",
-            "Focus Blast"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "blaze",
-          "isHidden": false
-        },
-        {
-          "name": "frisk",
-          "isHidden": true
-        }
-      ],
-      "stats": {
-        "hp": 73,
-        "attack": 84,
-        "defense": 78,
-        "special-attack": 119,
-        "special-defense": 85,
-        "speed": 95
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "articunogalar": {
-      "name": "Articuno-Galar",
-      "cleanName": "articunogalar",
-      "dex": 144,
-      "id": 10169,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10169.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "uu",
-          "rank": 162,
-          "usage": "0.13"
-        },
-        {
-          "tier": "ru",
-          "rank": 71,
-          "usage": "1.63"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 173,
-          "usage": "0.06"
-        },
-        {
-          "tier": "ou",
-          "rank": 150,
-          "usage": "0.17"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 95,
-          "usage": "0.91"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 310,
-          "usage": "0.05"
-        },
-        {
-          "tier": "nu",
-          "rank": 146,
-          "usage": "0.11"
-        }
-      ],
-      "types": [
-        "psychic",
-        "flying"
-      ],
-      "strategies": [],
-      "abilities": [
-        {
-          "name": "competitive",
-          "isHidden": false
-        }
-      ],
-      "stats": {
-        "hp": 90,
-        "attack": 85,
-        "defense": 85,
-        "special-attack": 125,
-        "special-defense": 100,
-        "speed": 95
-      },
-      "isLegendary": true,
-      "isMythical": false
-    },
-    "avalugghisui": {
-      "name": "Avalugg-Hisui",
-      "cleanName": "avalugghisui",
-      "dex": 713,
-      "id": 10243,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10243.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "uu",
-          "rank": 163,
-          "usage": "0.13"
-        },
-        {
-          "tier": "ru",
-          "rank": 159,
-          "usage": "0.22"
-        },
-        {
-          "tier": "ubers",
-          "rank": 112,
-          "usage": "0.41"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 310,
-          "usage": "0.03"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 275,
-          "usage": "0.08"
-        },
-        {
-          "tier": "nu",
-          "rank": 103,
-          "usage": "0.66"
-        },
-        {
-          "tier": "pu",
-          "rank": 25,
-          "usage": "8.55"
-        },
-        {
-          "tier": "monotype",
-          "rank": 251,
-          "usage": "0.07"
-        }
-      ],
-      "types": [
-        "ice",
-        "rock"
-      ],
-      "strategies": [
-        {
-          "name": "Offensive",
-          "tier": "pu",
-          "ability": "Sturdy",
-          "item": "Custap Berry / Loaded Dice",
-          "nature": "Adamant",
-          "teraType": "Normal",
-          "evs": "252 ATK / 4 DEF / 252 SPE",
-          "moves": [
-            "Stealth Rock",
-            "Mountain Gale / Icicle Spear",
-            "Body Press / Stone Edge / Rock Blast",
-            "Rapid Spin"
-          ]
-        },
-        {
-          "name": "Defensive",
-          "tier": "pu",
-          "ability": "Sturdy",
-          "item": "Heavy-Duty Boots",
-          "nature": "Impish",
-          "teraType": "Normal",
-          "evs": "252 HP / 236 DEF / 20 SPE",
-          "moves": [
-            "Recover",
-            "Mountain Gale",
-            "Body Press",
-            "Rapid Spin / Stealth Rock"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "strong-jaw",
-          "isHidden": false
-        },
-        {
-          "name": "ice-body",
-          "isHidden": false
-        },
-        {
-          "name": "sturdy",
-          "isHidden": true
-        }
-      ],
-      "stats": {
-        "hp": 95,
-        "attack": 127,
-        "defense": 184,
-        "special-attack": 34,
-        "special-defense": 36,
-        "speed": 38
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "deoxysdefense": {
-      "name": "Deoxys-Defense",
-      "cleanName": "deoxysdefense",
-      "dex": 386,
-      "id": 386,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/386.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "uu",
-          "rank": 175,
-          "usage": "0.10"
-        },
-        {
-          "tier": "ru",
-          "rank": 69,
-          "usage": "1.82"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 270,
-          "usage": "0.01"
-        },
-        {
-          "tier": "ubers",
-          "rank": 133,
-          "usage": "0.29"
-        },
-        {
-          "tier": "ou",
-          "rank": 204,
-          "usage": "0.07"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 243,
-          "usage": "0.07"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 260,
-          "usage": "0.09"
-        },
-        {
-          "tier": "monotype",
-          "rank": 194,
-          "usage": "0.19"
-        }
-      ],
-      "types": [
-        "psychic"
-      ],
-      "strategies": [
-        {
-          "name": "Utility",
-          "tier": "ru",
-          "ability": "Pressure",
-          "item": "Heavy-Duty Boots / Colbur Berry",
-          "nature": "Impish / Bold",
-          "teraType": "Ghost / Fairy / Water",
-          "evs": "252 HP / 240 DEF / 16 SPE OR 252 HP / 160 SPD / 96 SPE",
-          "moves": [
-            "Teleport",
-            "Recover",
-            "Knock Off / Thunder Wave / Psychic Noise",
-            "Spikes / Taunt / Thunder Wave"
-          ]
-        },
-        {
-          "name": "Stallbreaker (Psychic)",
-          "tier": "monotype",
-          "ability": "Pressure",
-          "item": "Heavy-Duty Boots",
-          "nature": "Bold",
-          "teraType": "Normal",
-          "evs": "248 HP / 84 DEF / 176 SPE",
-          "moves": [
-            "Cosmic Power",
-            "Taunt",
-            "Night Shade",
-            "Recover"
-          ]
-        },
-        {
-          "name": "Physically Defensive",
-          "tier": "monotype",
-          "ability": "Pressure",
-          "item": "Heavy-Duty Boots / Leftovers",
-          "nature": "Bold",
-          "teraType": "Normal",
-          "evs": "248 HP / 252 DEF / 8 SPD",
-          "moves": [
-            "Night Shade / Knock Off",
-            "Teleport / Taunt",
-            "Recover",
-            "Spikes / Thunder Wave"
-          ]
-        },
-        {
-          "name": "Physical Wall (HP)",
-          "tier": "godlygift",
-          "ability": "Pressure",
-          "item": "Heavy-Duty Boots",
-          "nature": "Bold",
-          "teraType": "Normal",
-          "evs": "248 HP / 252 DEF / 8 SPD",
-          "moves": [
-            "Spikes",
-            "Night Shade",
-            "Recover",
-            "Teleport"
-          ]
-        },
-        {
-          "name": "Defensive",
-          "tier": "almostanyability",
-          "ability": "Unaware / Fluffy / Intimidate",
-          "item": "Leftovers / Heavy-Duty Boots",
-          "nature": "Relaxed",
-          "teraType": "Normal",
-          "evs": "252 HP / 252 DEF / 4 SPD",
-          "moves": [
-            "Night Shade",
-            "Recover",
-            "Spikes / Stealth Rock / Knock Off",
-            "Teleport / Thunder Wave / Knock Off"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "pressure",
-          "isHidden": false
-        }
-      ],
-      "stats": {
-        "hp": 50,
-        "attack": 150,
-        "defense": 50,
-        "special-attack": 150,
-        "special-defense": 50,
-        "speed": 150
-      },
-      "isLegendary": false,
-      "isMythical": true
-    },
-    "indeedeef": {
-      "name": "Indeedee-F",
-      "cleanName": "indeedeef",
-      "dex": 876,
-      "id": 876,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/876.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "uu",
-          "rank": 181,
-          "usage": "0.09"
-        },
-        {
-          "tier": "ru",
-          "rank": 183,
-          "usage": "0.14"
-        },
-        {
-          "tier": "zu",
-          "rank": 64,
-          "usage": "2.08"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 8,
-          "usage": "19.98"
-        },
-        {
-          "tier": "ubers",
-          "rank": 115,
-          "usage": "0.39"
-        },
-        {
-          "tier": "ou",
-          "rank": 259,
-          "usage": "0.02"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 15,
-          "usage": "11.93"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 370,
-          "usage": "0.03"
-        },
-        {
-          "tier": "pu",
-          "rank": 46,
-          "usage": "3.93"
-        },
-        {
-          "tier": "monotype",
-          "rank": 276,
-          "usage": "0.04"
-        }
-      ],
-      "types": [
-        "psychic",
-        "normal"
-      ],
-      "strategies": [
-        {
-          "name": "Terrain Setter",
-          "tier": "pu",
-          "ability": "Psychic Surge",
-          "item": "Terrain Extender",
-          "nature": "Timid",
-          "teraType": "Fairy / Ghost / Steel",
-          "evs": "252 HP / 4 SPA / 252 SPE",
-          "moves": [
-            "Healing Wish",
-            "Psychic / Psyshock",
-            "Reflect",
-            "Alluring Voice"
-          ]
-        },
-        {
-          "name": "Bulky Support",
-          "tier": "vgc2025",
-          "ability": "Psychic Surge",
-          "item": "Safety Goggles / Psychic Seed / Rocky Helmet / Sitrus Berry",
-          "nature": "Relaxed",
-          "teraType": "Fairy / Grass",
-          "evs": "252 HP / 252 DEF / 4 SPD",
-          "moves": [
-            "Follow Me",
-            "Trick Room",
-            "Helping Hand / Imprison",
-            "Psychic / Dazzling Gleam"
-          ]
-        },
-        {
-          "name": "Trick Room Support",
-          "tier": "vgc2025",
-          "ability": "Psychic Surge",
-          "item": "Safety Goggles / Rocky Helmet / Psychic Seed",
-          "nature": "Bold / Relaxed",
-          "teraType": "Water / Fairy",
-          "evs": "252 HP / 252 DEF / 4 SPD",
-          "moves": [
-            "Psychic / Alluring Voice",
-            "Follow Me",
-            "Helping Hand",
-            "Trick Room"
-          ]
-        },
-        {
-          "name": "TR Support",
-          "tier": "vgc2023",
-          "ability": "Psychic Surge",
-          "item": "Psychic Seed / Safety Goggles / Rocky Helmet",
-          "nature": "Calm",
-          "teraType": "Normal",
-          "evs": "252 HP / 220 DEF / 36 SPD",
-          "moves": [
-            "Psychic / Dazzling Gleam",
-            "Follow Me",
-            "Trick Room",
-            "Helping Hand / Protect"
-          ]
-        },
-        {
-          "name": "Follow Me Support",
-          "tier": "partnersincrime",
-          "ability": "Psychic Surge",
-          "item": "Safety Goggles",
-          "nature": "Bold",
-          "teraType": "Normal",
-          "evs": "244 HP / 252 DEF / 12 SPD",
-          "moves": [
-            "Psychic",
-            "Follow Me",
-            "Trick Room",
-            "Helping Hand / Imprison"
-          ]
-        },
-        {
-          "name": "Choiced",
-          "tier": "zu",
-          "ability": "Psychic Surge",
-          "item": "Choice Scarf / Choice Specs",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Psychic",
-            "Alluring Voice",
-            "Hyper Voice",
-            "Healing Wish / Trick"
-          ]
-        },
-        {
-          "name": "Redirection Support",
-          "tier": "doublesou",
-          "ability": "Psychic Surge",
-          "item": "Sitrus Berry / Safety Goggles / Psychic Seed",
-          "nature": "Bold",
-          "teraType": "Normal",
-          "evs": "252 HP / 236 DEF / 20 SPD",
-          "moves": [
-            "Trick Room / Protect",
-            "Helping Hand / Protect",
-            "Psychic / Dazzling Gleam",
-            "Follow Me"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "inner-focus",
-          "isHidden": false
-        },
-        {
-          "name": "synchronize",
-          "isHidden": false
-        },
-        {
-          "name": "psychic-surge",
-          "isHidden": true
-        }
-      ],
-      "stats": {
-        "hp": 60,
-        "attack": 65,
-        "defense": 55,
-        "special-attack": 105,
-        "special-defense": 95,
-        "speed": 95
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "raichualola": {
-      "name": "Raichu-Alola",
-      "cleanName": "raichualola",
-      "dex": 26,
-      "id": 10100,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10100.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "uu",
-          "rank": 188,
-          "usage": "0.07"
-        },
-        {
-          "tier": "ru",
-          "rank": 146,
-          "usage": "0.30"
-        },
-        {
-          "tier": "zu",
-          "rank": 92,
-          "usage": "0.85"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 118,
-          "usage": "0.20"
-        },
-        {
-          "tier": "ubers",
-          "rank": 333,
-          "usage": "0.01"
-        },
-        {
-          "tier": "ou",
-          "rank": 173,
-          "usage": "0.11"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 367,
-          "usage": "0.01"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 120,
-          "usage": "0.74"
-        },
-        {
-          "tier": "nu",
-          "rank": 81,
-          "usage": "1.22"
-        },
-        {
-          "tier": "pu",
-          "rank": 102,
-          "usage": "0.61"
-        },
-        {
-          "tier": "monotype",
-          "rank": 233,
-          "usage": "0.09"
-        }
-      ],
-      "types": [
-        "electric",
-        "psychic"
-      ],
-      "strategies": [
-        {
-          "name": "Nasty Plot (SpA)",
-          "tier": "godlygift",
-          "ability": "Surge Surfer",
-          "item": "Life Orb",
-          "nature": "Modest",
-          "teraType": "Normal",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Thunderbolt",
-            "Grass Knot",
-            "Draining Kiss",
-            "Nasty Plot"
-          ]
-        },
-        {
-          "name": "Nasty Plot",
-          "tier": "zu",
-          "ability": "Surge Surfer",
-          "item": "Life Orb",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Nasty Plot",
-            "Thunderbolt / Volt Switch",
-            "Psyshock",
-            "Draining Kiss"
-          ]
-        },
-        {
-          "name": "Surge Surfer (Electric)",
-          "tier": "nationaldexmonotype",
-          "ability": "Surge Surfer",
-          "item": "Psychium Z / Life Orb",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Nasty Plot / Focus Blast",
-            "Psychic / Psyshock",
-            "Rising Voltage",
-            "Grass Knot"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "surge-surfer",
-          "isHidden": false
-        }
-      ],
-      "stats": {
-        "hp": 60,
-        "attack": 85,
-        "defense": 50,
-        "special-attack": 95,
-        "special-defense": 85,
-        "speed": 110
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "braviaryhisui": {
-      "name": "Braviary-Hisui",
-      "cleanName": "braviaryhisui",
-      "dex": 628,
-      "id": 10240,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10240.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "uu",
-          "rank": 196,
-          "usage": "0.06"
-        },
-        {
-          "tier": "ru",
-          "rank": 180,
-          "usage": "0.14"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 271,
-          "usage": "0.01"
-        },
-        {
-          "tier": "ubers",
-          "rank": 327,
-          "usage": "0.01"
-        },
-        {
-          "tier": "ou",
-          "rank": 247,
-          "usage": "0.03"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 152,
-          "usage": "0.37"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 266,
-          "usage": "0.09"
-        },
-        {
-          "tier": "nu",
-          "rank": 89,
-          "usage": "0.97"
-        },
-        {
-          "tier": "pu",
-          "rank": 36,
-          "usage": "5.54"
-        },
-        {
-          "tier": "monotype",
-          "rank": 193,
-          "usage": "0.19"
-        }
-      ],
-      "types": [
-        "psychic",
-        "flying"
-      ],
-      "strategies": [
-        {
-          "name": "Sheer Force",
-          "tier": "pu",
-          "ability": "Sheer Force",
-          "item": "Life Orb",
-          "nature": "Timid",
-          "teraType": "Fairy / Fire",
-          "evs": "4 DEF / 252 SPA / 252 SPE",
-          "moves": [
-            "Psychic",
-            "Hurricane",
-            "Heat Wave",
-            "Agility / Roost"
-          ]
-        },
-        {
-          "name": "Choice Specs",
-          "tier": "pu",
-          "ability": "Tinted Lens",
-          "item": "Choice Specs",
-          "nature": "Timid",
-          "teraType": "Flying / Psychic",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Esper Wing",
-            "Hurricane",
-            "Air Slash",
-            "Heat Wave / Vacuum Wave"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "keen-eye",
-          "isHidden": false
-        },
-        {
-          "name": "sheer-force",
-          "isHidden": false
-        },
-        {
-          "name": "tinted-lens",
-          "isHidden": true
-        }
-      ],
-      "stats": {
-        "hp": 110,
-        "attack": 83,
-        "defense": 70,
-        "special-attack": 112,
-        "special-defense": 70,
-        "speed": 65
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "golemalola": {
-      "name": "Golem-Alola",
-      "cleanName": "golemalola",
-      "dex": 76,
-      "id": 10111,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10111.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "uu",
-          "rank": 197,
-          "usage": "0.05"
-        },
-        {
-          "tier": "zu",
-          "rank": 161,
-          "usage": "0.14"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 246,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ubers",
-          "rank": 275,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ou",
-          "rank": 281,
-          "usage": "0.02"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 183,
-          "usage": "0.18"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 450,
-          "usage": "0.01"
-        },
-        {
-          "tier": "nu",
-          "rank": 179,
-          "usage": "0.04"
-        },
-        {
-          "tier": "pu",
-          "rank": 170,
-          "usage": "0.09"
-        },
-        {
-          "tier": "monotype",
-          "rank": 338,
-          "usage": "0.01"
-        }
-      ],
-      "types": [
-        "rock",
-        "electric"
-      ],
-      "strategies": [
-        {
-          "name": "Choice Band (Rock)",
-          "tier": "monotype",
-          "ability": "Magnet Pull",
-          "item": "Choice Band",
-          "nature": "Adamant",
-          "teraType": "Normal",
-          "evs": "252 ATK / 4 DEF / 252 SPE",
-          "moves": [
-            "Wild Charge",
-            "Brick Break",
-            "Earthquake",
-            "Fire Punch"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "magnet-pull",
-          "isHidden": false
-        },
-        {
-          "name": "sturdy",
-          "isHidden": false
-        },
-        {
-          "name": "galvanize",
-          "isHidden": true
-        }
-      ],
-      "stats": {
-        "hp": 80,
-        "attack": 120,
-        "defense": 130,
-        "special-attack": 55,
-        "special-defense": 65,
-        "speed": 45
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "rotommow": {
-      "name": "Rotom-Mow",
-      "cleanName": "rotommow",
-      "dex": 479,
-      "id": 479,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/479.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "uu",
-          "rank": 206,
-          "usage": "0.05"
-        },
-        {
-          "tier": "ru",
-          "rank": 161,
-          "usage": "0.21"
-        },
-        {
-          "tier": "zu",
-          "rank": 219,
-          "usage": "0.02"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 244,
-          "usage": "0.02"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 355,
-          "usage": "0.01"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 278,
-          "usage": "0.07"
-        },
-        {
-          "tier": "nu",
-          "rank": 102,
-          "usage": "0.67"
-        },
-        {
-          "tier": "pu",
-          "rank": 38,
-          "usage": "5.31"
-        },
-        {
-          "tier": "monotype",
-          "rank": 225,
-          "usage": "0.11"
-        }
-      ],
-      "types": [
-        "electric",
-        "ghost"
-      ],
-      "strategies": [
-        {
-          "name": "Choice Scarf",
-          "tier": "ru",
-          "ability": "Levitate",
-          "item": "Choice Scarf",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Volt Switch",
-            "Leaf Storm",
-            "Trick",
-            "Thunderbolt / Will-O-Wisp / Thunder Wave"
-          ]
-        },
-        {
-          "name": "Nasty Plot",
-          "tier": "ru",
-          "ability": "Levitate",
-          "item": "Heavy-Duty Boots",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "248 HP / 8 SPA / 252 SPE",
-          "moves": [
-            "Nasty Plot",
-            "Leaf Storm",
-            "Thunderbolt / Volt Switch",
-            "Pain Split / Thunder Wave / Will-O-Wisp"
-          ]
-        },
-        {
-          "name": "Utility",
-          "tier": "nu",
-          "ability": "Levitate",
-          "item": "Leftovers / Sitrus Berry",
-          "nature": "Timid",
-          "teraType": "Fairy / Ghost / Steel",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Leaf Storm",
-            "Volt Switch",
-            "Will-O-Wisp",
-            "Thunderbolt / Foul Play"
-          ]
-        },
-        {
-          "name": "Choice Specs (Grass)",
-          "tier": "monotype",
-          "ability": "Levitate",
-          "item": "Choice Specs",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Leaf Storm",
-            "Thunderbolt",
-            "Volt Switch",
-            "Trick"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "levitate",
-          "isHidden": false
-        }
-      ],
-      "stats": {
-        "hp": 50,
-        "attack": 50,
-        "defense": 77,
-        "special-attack": 95,
-        "special-defense": 77,
-        "speed": 91
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "decidueyehisui": {
-      "name": "Decidueye-Hisui",
-      "cleanName": "decidueyehisui",
-      "dex": 724,
-      "id": 10244,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10244.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "uu",
-          "rank": 230,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ru",
-          "rank": 74,
-          "usage": "1.56"
-        },
-        {
-          "tier": "ubers",
-          "rank": 323,
-          "usage": "0.01"
-        },
-        {
-          "tier": "ou",
-          "rank": 174,
-          "usage": "0.11"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 274,
-          "usage": "0.05"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 303,
-          "usage": "0.06"
-        },
-        {
-          "tier": "nu",
-          "rank": 61,
-          "usage": "2.72"
-        },
-        {
-          "tier": "pu",
-          "rank": 2,
-          "usage": "24.64"
-        },
-        {
-          "tier": "monotype",
-          "rank": 258,
-          "usage": "0.06"
-        }
-      ],
-      "types": [
-        "grass",
-        "fighting"
-      ],
-      "strategies": [
-        {
-          "name": "Swords Dance",
-          "tier": "pu",
-          "ability": "Scrappy",
-          "item": "Spell Tag / Covert Cloak",
-          "nature": "Adamant",
-          "teraType": "Ghost / Dark / Steel",
-          "evs": "252 ATK / 4 DEF / 252 SPE",
-          "moves": [
-            "Swords Dance",
-            "Triple Arrows",
-            "Shadow Claw / Knock Off",
-            "Shadow Sneak / Sucker Punch / Roost"
-          ]
-        },
-        {
-          "name": "Defog",
-          "tier": "pu",
-          "ability": "Scrappy",
-          "item": "Heavy-Duty Boots",
-          "nature": "Impish",
-          "teraType": "Normal",
-          "evs": "248 HP / 252 DEF / 8 SPD",
-          "moves": [
-            "Defog",
-            "Roost",
-            "Triple Arrows",
-            "U-turn / Knock Off"
-          ]
-        },
-        {
-          "name": "Choice Scarf",
-          "tier": "pu",
-          "ability": "Scrappy",
-          "item": "Choice Scarf",
-          "nature": "Jolly",
-          "teraType": "Normal",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Triple Arrows",
-            "U-turn",
-            "Leaf Blade",
-            "Brave Bird / Close Combat"
-          ]
-        },
-        {
-          "name": "Choice Band",
-          "tier": "nu",
-          "ability": "Scrappy",
-          "item": "Choice Band",
-          "nature": "Adamant",
-          "teraType": "Steel / Dark",
-          "evs": "252 ATK / 4 DEF / 252 SPE",
-          "moves": [
-            "Triple Arrows",
-            "Knock Off",
-            "Leaf Blade / Sucker Punch",
-            "U-turn"
-          ]
-        },
-        {
-          "name": "Choice Band (Spe)",
-          "tier": "godlygift",
-          "ability": "Scrappy",
-          "item": "Choice Band",
-          "nature": "Adamant",
-          "teraType": "Normal",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Close Combat",
-            "Leaf Blade",
-            "Knock Off",
-            "U-turn"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "overgrow",
-          "isHidden": false
-        },
-        {
-          "name": "scrappy",
-          "isHidden": true
-        }
-      ],
-      "stats": {
-        "hp": 88,
-        "attack": 112,
-        "defense": 80,
-        "special-attack": 95,
-        "special-defense": 95,
-        "speed": 60
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "rotomfrost": {
-      "name": "Rotom-Frost",
-      "cleanName": "rotomfrost",
-      "dex": 479,
-      "id": 479,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/479.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "uu",
-          "rank": 231,
-          "usage": "0.02"
-        },
-        {
-          "tier": "zu",
-          "rank": 137,
-          "usage": "0.26"
-        },
-        {
-          "tier": "ou",
-          "rank": 221,
-          "usage": "0.05"
-        },
-        {
-          "tier": "nu",
-          "rank": 206,
-          "usage": "0.01"
-        },
-        {
-          "tier": "pu",
-          "rank": 161,
-          "usage": "0.11"
-        },
-        {
-          "tier": "monotype",
-          "rank": 272,
-          "usage": "0.04"
-        }
-      ],
-      "types": [
-        "electric",
-        "ghost"
-      ],
-      "strategies": [
-        {
-          "name": "Nasty Plot",
-          "tier": "zu",
-          "ability": "Levitate",
-          "item": "Heavy-Duty Boots",
-          "nature": "Timid",
-          "teraType": "Ghost / Water",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Nasty Plot",
-            "Thunderbolt",
-            "Blizzard",
-            "Volt Switch"
-          ]
-        },
-        {
-          "name": "Choice Scarf",
-          "tier": "zu",
-          "ability": "Levitate",
-          "item": "Choice Scarf",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Volt Switch",
-            "Blizzard",
-            "Thunderbolt",
-            "Trick"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "levitate",
-          "isHidden": false
-        }
-      ],
-      "stats": {
-        "hp": 50,
-        "attack": 50,
-        "defense": 77,
-        "special-attack": 95,
-        "special-defense": 77,
-        "speed": 91
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "exeggutoralola": {
-      "name": "Exeggutor-Alola",
-      "cleanName": "exeggutoralola",
-      "dex": 103,
-      "id": 10114,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10114.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "uu",
-          "rank": 234,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ru",
-          "rank": 171,
-          "usage": "0.18"
-        },
-        {
-          "tier": "zu",
-          "rank": 65,
-          "usage": "2.06"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 177,
-          "usage": "0.06"
-        },
-        {
-          "tier": "ou",
-          "rank": 268,
-          "usage": "0.02"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 272,
-          "usage": "0.05"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 403,
-          "usage": "0.02"
-        },
-        {
-          "tier": "nu",
-          "rank": 94,
-          "usage": "0.78"
-        },
-        {
-          "tier": "pu",
-          "rank": 164,
-          "usage": "0.10"
-        },
-        {
-          "tier": "monotype",
-          "rank": 316,
-          "usage": "0.02"
-        }
-      ],
-      "types": [
-        "grass",
-        "dragon"
-      ],
-      "strategies": [
-        {
-          "name": "Choice Specs",
-          "tier": "pu",
-          "ability": "Frisk",
-          "item": "Choice Specs",
-          "nature": "Modest / Timid",
-          "teraType": "Normal",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Draco Meteor",
-            "Leaf Storm",
-            "Flamethrower",
-            "Giga Drain"
-          ]
-        },
-        {
-          "name": "Eject Pack",
-          "tier": "pu",
-          "ability": "Frisk",
-          "item": "Eject Pack",
-          "nature": "Modest",
-          "teraType": "Steel / Dragon",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Draco Meteor",
-            "Leaf Storm",
-            "Flamethrower",
-            "Giga Drain"
-          ]
-        },
-        {
-          "name": "Offensive Trick Room",
-          "tier": "zu",
-          "ability": "Frisk",
-          "item": "Eject Pack / White Herb / Life Orb",
-          "nature": "Quiet",
-          "teraType": "Dragon / Steel / Fire",
-          "evs": "252 HP / 252 SPA / 4 SPD",
-          "moves": [
-            "Trick Room",
-            "Draco Meteor",
-            "Giga Drain",
-            "Flamethrower"
-          ]
-        },
-        {
-          "name": "Bulky Attacker",
-          "tier": "zu",
-          "ability": "Frisk / Harvest",
-          "item": "Eject Pack / Sitrus Berry",
-          "nature": "Modest",
-          "teraType": "Steel / Water",
-          "evs": "248 HP / 252 SPA / 8 SPE",
-          "moves": [
-            "Draco Meteor",
-            "Giga Drain",
-            "Knock Off",
-            "Flamethrower"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "frisk",
-          "isHidden": false
-        },
-        {
-          "name": "harvest",
-          "isHidden": true
-        }
-      ],
-      "stats": {
-        "hp": 95,
-        "attack": 105,
-        "defense": 85,
-        "special-attack": 125,
-        "special-defense": 75,
-        "speed": 45
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "crabominable": {
-      "name": "Crabominable",
-      "cleanName": "crabominable",
-      "dex": 740,
-      "id": 740,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/740.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "uu",
-          "rank": 242,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ru",
-          "rank": 168,
-          "usage": "0.19"
-        },
-        {
-          "tier": "zu",
-          "rank": 106,
-          "usage": "0.57"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 321,
-          "usage": "0.02"
-        },
-        {
-          "tier": "pu",
-          "rank": 124,
-          "usage": "0.33"
-        },
-        {
-          "tier": "monotype",
-          "rank": 305,
-          "usage": "0.02"
-        }
-      ],
-      "types": [
-        "fighting",
-        "ice"
-      ],
-      "strategies": [
-        {
-          "name": "Choice Band",
-          "tier": "zu",
-          "ability": "Iron Fist",
-          "item": "Choice Band",
-          "nature": "Adamant",
-          "teraType": "Ice / Fighting",
-          "evs": "252 HP / 252 ATK / 4 SPD",
-          "moves": [
-            "Ice Hammer",
-            "Close Combat",
-            "Earthquake",
-            "Knock Off"
-          ]
-        },
-        {
-          "name": "Bulk Up",
-          "tier": "zu",
-          "ability": "Iron Fist",
-          "item": "Leftovers",
-          "nature": "Adamant",
-          "teraType": "Water / Fairy",
-          "evs": "252 HP / 252 ATK / 4 SPD",
-          "moves": [
-            "Bulk Up",
-            "Ice Hammer",
-            "Drain Punch",
-            "Earthquake"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "hyper-cutter",
-          "isHidden": false
-        },
-        {
-          "name": "iron-fist",
-          "isHidden": false
-        },
-        {
-          "name": "anger-point",
-          "isHidden": true
-        }
-      ],
-      "stats": {
-        "hp": 97,
-        "attack": 132,
-        "defense": 77,
-        "special-attack": 62,
-        "special-defense": 67,
-        "speed": 43
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "electrodehisui": {
-      "name": "Electrode-Hisui",
-      "cleanName": "electrodehisui",
-      "dex": 101,
-      "id": 10232,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10232.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "uu",
-          "rank": 248,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ru",
-          "rank": 226,
-          "usage": "0.04"
-        },
-        {
-          "tier": "ubers",
-          "rank": 246,
-          "usage": "0.04"
-        },
-        {
-          "tier": "ou",
-          "rank": 224,
-          "usage": "0.05"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 366,
-          "usage": "0.01"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 399,
-          "usage": "0.02"
-        },
-        {
-          "tier": "nu",
-          "rank": 149,
-          "usage": "0.11"
-        },
-        {
-          "tier": "pu",
-          "rank": 93,
-          "usage": "0.68"
-        },
-        {
-          "tier": "monotype",
-          "rank": 226,
-          "usage": "0.11"
-        }
-      ],
-      "types": [
-        "electric",
-        "grass"
-      ],
-      "strategies": [
-        {
-          "name": "Pivot",
-          "tier": "pu",
-          "ability": "Aftermath",
-          "item": "Heavy-Duty Boots",
-          "nature": "Timid",
-          "teraType": "Ghost / Steel",
-          "evs": "4 DEF / 252 SPA / 252 SPE",
-          "moves": [
-            "Volt Switch",
-            "Thunderbolt",
-            "Leaf Storm / Giga Drain",
-            "Taunt / Foul Play"
-          ]
-        },
-        {
-          "name": "Offensive Pivot (SpA)",
-          "tier": "godlygift",
-          "ability": "Static",
-          "item": "Heavy-Duty Boots",
-          "nature": "Timid",
-          "teraType": "Ice / Fire",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Thunderbolt",
-            "Leaf Storm",
-            "Tera Blast",
-            "Volt Switch"
-          ]
-        },
-        {
-          "name": "Offensive Pivot",
-          "tier": "almostanyability",
-          "ability": "Magic Guard / Hadron Engine",
-          "item": "Life Orb",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Chloroblast / Leaf Storm",
-            "Volt Switch",
-            "Thunderbolt",
-            "Thunder Wave / Worry Seed"
-          ]
-        },
-        {
-          "name": "Magic Guard",
-          "tier": "almostanyability",
-          "ability": "Magic Guard",
-          "item": "Life Orb",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Thunderbolt",
-            "Volt Switch",
-            "Chloroblast",
-            "Thunder Wave / Leech Seed / Worry Seed"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "soundproof",
-          "isHidden": false
-        },
-        {
-          "name": "static",
-          "isHidden": false
-        },
-        {
-          "name": "aftermath",
-          "isHidden": true
-        }
-      ],
-      "stats": {
-        "hp": 60,
-        "attack": 50,
-        "defense": 70,
-        "special-attack": 80,
-        "special-defense": 80,
-        "speed": 150
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "taurospaldeablaze": {
-      "name": "Tauros-Paldea-Blaze",
-      "cleanName": "taurospaldeablaze",
-      "dex": 128,
-      "id": 128,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/128.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "uu",
-          "rank": 259,
-          "usage": "0.01"
-        },
-        {
-          "tier": "ru",
-          "rank": 182,
-          "usage": "0.14"
-        },
-        {
-          "tier": "ou",
-          "rank": 260,
-          "usage": "0.02"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 99,
-          "usage": "0.85"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 459,
-          "usage": "0.01"
-        },
-        {
-          "tier": "nu",
-          "rank": 77,
-          "usage": "1.34"
-        },
-        {
-          "tier": "pu",
-          "rank": 27,
-          "usage": "7.90"
-        },
-        {
-          "tier": "monotype",
-          "rank": 248,
-          "usage": "0.07"
-        }
-      ],
-      "types": [],
-      "strategies": [
-        {
-          "name": "Bulk Up",
-          "tier": "pu",
-          "ability": "Intimidate",
-          "item": "Leftovers / Lum Berry",
-          "nature": "Jolly",
-          "teraType": "Grass / Steel",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Bulk Up",
-            "Close Combat",
-            "Flare Blitz / Raging Bull",
-            "Trailblaze / Stone Edge / Substitute"
-          ]
-        },
-        {
-          "name": "Choice Item",
-          "tier": "pu",
-          "ability": "Intimidate",
-          "item": "Choice Scarf / Choice Band",
-          "nature": "Jolly",
-          "teraType": "Fighting / Fire / Electric",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Close Combat",
-            "Flare Blitz",
-            "Earthquake",
-            "Stone Edge / Wild Charge"
-          ]
-        },
-        {
-          "name": "Bulk Up (Fighting)",
-          "tier": "monotype",
-          "ability": "Intimidate",
-          "item": "Leftovers",
-          "nature": "Jolly",
-          "teraType": "Normal",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Bulk Up",
-            "Close Combat / Body Press",
-            "Raging Bull",
-            "Earthquake / Wild Charge"
-          ]
-        },
-        {
-          "name": "FIREFIGHTER (Defensive)",
-          "tier": "battlestadiumsingles",
-          "ability": "Intimidate",
-          "item": "Sitrus Berry / Figy Berry / Rocky Helmet / Leftovers",
-          "nature": "Impish",
-          "teraType": "Normal",
-          "evs": "252 HP / 252 DEF / 4 SPD",
-          "moves": [
-            "Raging Bull",
-            "Body Press",
-            "Will-O-Wisp",
-            "Rock Tomb / Bulk Up"
-          ]
-        },
-        {
-          "name": "Offensive Screen Smasher",
-          "tier": "battlestadiumsingles",
-          "ability": "Intimidate",
-          "item": "Eject Pack",
-          "nature": "Jolly",
-          "teraType": "Grass / Fairy",
-          "evs": "4 HP / 252 ATK / 252 SPE",
-          "moves": [
-            "Close Combat",
-            "Raging Bull / Flare Blitz",
-            "Flame Charge / Earthquake / Rock Tomb",
-            "Earthquake / Tera Blast / Bulk Up"
-          ]
-        },
-        {
-          "name": "Assault Vest",
-          "tier": "battlestadiumsingles",
-          "ability": "Intimidate",
-          "item": "Assault Vest",
-          "nature": "Adamant",
-          "teraType": "Steel / Grass / Fire",
-          "evs": "244 HP / 12 ATK / 76 DEF / 36 SPD / 140 SPE",
-          "moves": [
-            "Close Combat",
-            "Raging Bull",
-            "Iron Head / Stone Edge",
-            "Trailblaze / Flame Charge"
-          ]
-        },
-        {
-          "name": "Choice Band (Atk)",
-          "tier": "godlygift",
-          "ability": "Intimidate",
-          "item": "Choice Band",
-          "nature": "Jolly",
-          "teraType": "Normal",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Close Combat",
-            "Flare Blitz",
-            "Earthquake",
-            "Wild Charge"
-          ]
-        }
-      ]
     },
     "sandshrewalola": {
       "name": "Sandshrew-Alola",
@@ -108285,6 +102929,451 @@ window.localDB = {
       "isLegendary": false,
       "isMythical": false
     },
+    "taurospaldeaaqua": {
+      "name": "Tauros-Paldea-Aqua",
+      "cleanName": "taurospaldeaaqua",
+      "dex": 128,
+      "id": 128,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/128.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "nu",
+          "rank": 33,
+          "usage": "6.92"
+        },
+        {
+          "tier": "vgc2025",
+          "rank": 131,
+          "usage": "0.16"
+        },
+        {
+          "tier": "ru",
+          "rank": 119,
+          "usage": "0.47"
+        },
+        {
+          "tier": "uu",
+          "rank": 101,
+          "usage": "0.70"
+        },
+        {
+          "tier": "ou",
+          "rank": 290,
+          "usage": "0.01"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 248,
+          "usage": "0.06"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 396,
+          "usage": "0.02"
+        }
+      ],
+      "types": [],
+      "strategies": [
+        {
+          "name": "Choice Item",
+          "tier": "nu",
+          "ability": "Intimidate",
+          "item": "Choice Band / Choice Scarf",
+          "nature": "Jolly",
+          "teraType": "Water / Fighting",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Wave Crash",
+            "Close Combat",
+            "Aqua Jet / Raging Bull",
+            "Zen Headbutt / Earthquake"
+          ]
+        },
+        {
+          "name": "Bulk Up",
+          "tier": "nu",
+          "ability": "Intimidate",
+          "item": "Leftovers / Lum Berry",
+          "nature": "Jolly",
+          "teraType": "Steel / Electric / Water",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Bulk Up",
+            "Wave Crash / Raging Bull",
+            "Close Combat",
+            "Aqua Jet / Zen Headbutt / Substitute"
+          ]
+        },
+        {
+          "name": "Choice Band",
+          "tier": "battlestadiumsingles",
+          "ability": "Intimidate",
+          "item": "Choice Band",
+          "nature": "Adamant / Jolly",
+          "teraType": "Fighting / Steel",
+          "evs": "4 HP / 252 ATK / 252 SPE",
+          "moves": [
+            "Close Combat",
+            "Raging Bull / Wave Crash",
+            "Aqua Jet",
+            "Earthquake / Iron Head"
+          ]
+        }
+      ]
+    },
+    "rotomheat": {
+      "name": "Rotom-Heat",
+      "cleanName": "rotomheat",
+      "dex": 479,
+      "id": 479,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/479.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "nu",
+          "rank": 43,
+          "usage": "4.60"
+        },
+        {
+          "tier": "pu",
+          "rank": 8,
+          "usage": "16.37"
+        },
+        {
+          "tier": "ru",
+          "rank": 116,
+          "usage": "0.50"
+        },
+        {
+          "tier": "uu",
+          "rank": 115,
+          "usage": "0.40"
+        },
+        {
+          "tier": "ou",
+          "rank": 159,
+          "usage": "0.15"
+        },
+        {
+          "tier": "monotype",
+          "rank": 203,
+          "usage": "0.17"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 231,
+          "usage": "0.08"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 160,
+          "usage": "0.38"
+        }
+      ],
+      "types": [
+        "electric",
+        "ghost"
+      ],
+      "strategies": [
+        {
+          "name": "Nasty Plot",
+          "tier": "ru",
+          "ability": "Levitate",
+          "item": "Heavy-Duty Boots",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "248 HP / 8 SPA / 252 SPE",
+          "moves": [
+            "Overheat",
+            "Volt Switch",
+            "Nasty Plot",
+            "Pain Split / Will-O-Wisp"
+          ]
+        },
+        {
+          "name": "Bulky Pivot",
+          "tier": "pu",
+          "ability": "Levitate",
+          "item": "Heavy-Duty Boots",
+          "nature": "Timid",
+          "teraType": "Steel / Poison",
+          "evs": "248 HP / 8 SPA / 252 SPE",
+          "moves": [
+            "Nasty Plot / Will-O-Wisp",
+            "Volt Switch",
+            "Overheat",
+            "Pain Split"
+          ]
+        },
+        {
+          "name": "Physically Defensive",
+          "tier": "stabmons",
+          "ability": "Levitate",
+          "item": "Heavy-Duty Boots",
+          "nature": "Bold",
+          "teraType": "Normal",
+          "evs": "248 HP / 204 DEF / 56 SPE",
+          "moves": [
+            "Volt Switch",
+            "Lava Plume",
+            "Will-O-Wisp / Burning Bulwark",
+            "Strength Sap / Roost"
+          ]
+        },
+        {
+          "name": "Offensive",
+          "tier": "stabmons",
+          "ability": "Levitate",
+          "item": "Heavy-Duty Boots",
+          "nature": "Bold",
+          "teraType": "Normal",
+          "evs": "248 HP / 68 DEF / 116 SPA / 76 SPE",
+          "moves": [
+            "Parabolic Charge",
+            "Blue Flare",
+            "Nasty Plot",
+            "Strength Sap / Roost"
+          ]
+        },
+        {
+          "name": "Defensive Pivot",
+          "tier": "nu",
+          "ability": "Levitate",
+          "item": "Heavy-Duty Boots",
+          "nature": "Timid",
+          "teraType": "Steel / Fairy / Water",
+          "evs": "248 HP / 8 DEF / 252 SPE",
+          "moves": [
+            "Overheat",
+            "Volt Switch",
+            "Pain Split",
+            "Will-O-Wisp / Nasty Plot"
+          ]
+        },
+        {
+          "name": "Choice Attacker",
+          "tier": "battlestadiumsingles",
+          "ability": "Levitate",
+          "item": "Choice Scarf / Choice Specs",
+          "nature": "Timid",
+          "teraType": "Electric / Fairy",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Volt Switch",
+            "Overheat",
+            "Trick",
+            "Thunderbolt / Tera Blast"
+          ]
+        },
+        {
+          "name": "Defensive Pivot (HP)",
+          "tier": "godlygift",
+          "ability": "Levitate",
+          "item": "Heavy-Duty Boots",
+          "nature": "Bold",
+          "teraType": "Normal",
+          "evs": "248 HP / 252 DEF / 8 SPD",
+          "moves": [
+            "Overheat",
+            "Volt Switch",
+            "Will-O-Wisp",
+            "Pain Split"
+          ]
+        },
+        {
+          "name": "Offensive Pivot",
+          "tier": "nationaldexru",
+          "ability": "Levitate",
+          "item": "Heavy-Duty Boots",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 HP / 44 DEF / 212 SPE",
+          "moves": [
+            "Overheat",
+            "Volt Switch",
+            "Defog / Toxic",
+            "Pain Split / Will-O-Wisp"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "levitate",
+          "isHidden": false
+        }
+      ],
+      "stats": {
+        "hp": 50,
+        "attack": 50,
+        "defense": 77,
+        "special-attack": 95,
+        "special-defense": 77,
+        "speed": 91
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
+    "slowbrogalar": {
+      "name": "Slowbro-Galar",
+      "cleanName": "slowbrogalar",
+      "dex": 80,
+      "id": 10165,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10165.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "nu",
+          "rank": 45,
+          "usage": "4.15"
+        },
+        {
+          "tier": "pu",
+          "rank": 3,
+          "usage": "22.44"
+        },
+        {
+          "tier": "ru",
+          "rank": 115,
+          "usage": "0.55"
+        },
+        {
+          "tier": "uu",
+          "rank": 107,
+          "usage": "0.53"
+        },
+        {
+          "tier": "ou",
+          "rank": 157,
+          "usage": "0.16"
+        },
+        {
+          "tier": "monotype",
+          "rank": 313,
+          "usage": "0.02"
+        },
+        {
+          "tier": "ubers",
+          "rank": 288,
+          "usage": "0.02"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 364,
+          "usage": "0.01"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 157,
+          "usage": "0.40"
+        }
+      ],
+      "types": [
+        "poison",
+        "psychic"
+      ],
+      "strategies": [
+        {
+          "name": "Calm Mind",
+          "tier": "ru",
+          "ability": "Regenerator",
+          "item": "Heavy-Duty Boots / Covert Cloak",
+          "nature": "Bold",
+          "teraType": "Normal",
+          "evs": "252 HP / 252 DEF / 4 SPD",
+          "moves": [
+            "Calm Mind",
+            "Sludge Bomb",
+            "Flamethrower",
+            "Slack Off"
+          ]
+        },
+        {
+          "name": "Defensive",
+          "tier": "ru",
+          "ability": "Regenerator",
+          "item": "Heavy-Duty Boots / Colbur Berry",
+          "nature": "Bold",
+          "teraType": "Water / Ghost",
+          "evs": "252 HP / 252 DEF / 4 SPD",
+          "moves": [
+            "Psyshock",
+            "Flamethrower",
+            "Slack Off",
+            "Toxic"
+          ]
+        },
+        {
+          "name": "Physically Defensive",
+          "tier": "pu",
+          "ability": "Regenerator",
+          "item": "Rocky Helmet / Eject Button / Heavy-Duty Boots / Leftovers",
+          "nature": "Relaxed / Bold",
+          "teraType": "Water / Fairy",
+          "evs": "248 HP / 252 DEF / 8 SPD",
+          "moves": [
+            "Slack Off",
+            "Toxic",
+            "Shell Side Arm / Sludge Bomb / Psyshock",
+            "Flamethrower / Surf"
+          ]
+        },
+        {
+          "name": "Assault Vest",
+          "tier": "pu",
+          "ability": "Regenerator",
+          "item": "Assault Vest",
+          "nature": "Relaxed",
+          "teraType": "Water / Fairy",
+          "evs": "248 HP / 128 DEF / 4 SPA / 128 SPD",
+          "moves": [
+            "Shell Side Arm",
+            "Psychic",
+            "Surf",
+            "Flamethrower / Earthquake"
+          ]
+        },
+        {
+          "name": "Physical Wall",
+          "tier": "nu",
+          "ability": "Regenerator",
+          "item": "Rocky Helmet / Heavy-Duty Boots / Leftovers",
+          "nature": "Bold",
+          "teraType": "Water / Fairy",
+          "evs": "252 HP / 228 DEF / 28 SPE",
+          "moves": [
+            "Sludge Bomb / Psyshock",
+            "Flamethrower / Surf",
+            "Calm Mind / Toxic / Thunder Wave",
+            "Slack Off"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "quick-draw",
+          "isHidden": false
+        },
+        {
+          "name": "own-tempo",
+          "isHidden": false
+        },
+        {
+          "name": "regenerator",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 95,
+        "attack": 100,
+        "defense": 95,
+        "special-attack": 100,
+        "special-defense": 70,
+        "speed": 30
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
     "sandslashalola": {
       "name": "Sandslash-Alola",
       "cleanName": "sandslashalola",
@@ -108293,31 +103382,6 @@ window.localDB = {
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10102.png",
       "locations": [],
       "allRanks": [
-        {
-          "tier": "ru",
-          "rank": 57,
-          "usage": "2.66"
-        },
-        {
-          "tier": "ubers",
-          "rank": 197,
-          "usage": "0.07"
-        },
-        {
-          "tier": "ou",
-          "rank": 213,
-          "usage": "0.06"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 332,
-          "usage": "0.02"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 296,
-          "usage": "0.06"
-        },
         {
           "tier": "nu",
           "rank": 50,
@@ -108329,9 +103393,34 @@ window.localDB = {
           "usage": "16.95"
         },
         {
+          "tier": "ru",
+          "rank": 57,
+          "usage": "2.66"
+        },
+        {
+          "tier": "ou",
+          "rank": 213,
+          "usage": "0.06"
+        },
+        {
           "tier": "monotype",
           "rank": 138,
           "usage": "0.54"
+        },
+        {
+          "tier": "ubers",
+          "rank": 197,
+          "usage": "0.07"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 332,
+          "usage": "0.02"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 296,
+          "usage": "0.06"
         }
       ],
       "types": [
@@ -108391,6 +103480,1070 @@ window.localDB = {
       "isLegendary": false,
       "isMythical": false
     },
+    "ninetalesalola": {
+      "name": "Ninetales-Alola",
+      "cleanName": "ninetalesalola",
+      "dex": 38,
+      "id": 10104,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10104.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "nu",
+          "rank": 54,
+          "usage": "3.25"
+        },
+        {
+          "tier": "pu",
+          "rank": 47,
+          "usage": "3.71"
+        },
+        {
+          "tier": "vgc2025",
+          "rank": 85,
+          "usage": "0.50"
+        },
+        {
+          "tier": "ru",
+          "rank": 55,
+          "usage": "2.72"
+        },
+        {
+          "tier": "uu",
+          "rank": 18,
+          "usage": "11.23"
+        },
+        {
+          "tier": "ou",
+          "rank": 72,
+          "usage": "1.73"
+        },
+        {
+          "tier": "monotype",
+          "rank": 75,
+          "usage": "2.72"
+        },
+        {
+          "tier": "ubers",
+          "rank": 94,
+          "usage": "0.57"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 32,
+          "usage": "6.88"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 81,
+          "usage": "1.67"
+        }
+      ],
+      "types": [
+        "ice",
+        "fairy"
+      ],
+      "strategies": [
+        {
+          "name": "Offensive",
+          "tier": "vgc2025",
+          "ability": "Snow Warning",
+          "item": "Focus Sash / Choice Specs / Never-Melt Ice",
+          "nature": "Timid",
+          "teraType": "Ghost / Ice",
+          "evs": "4 HP / 252 SPA / 252 SPE",
+          "moves": [
+            "Blizzard",
+            "Freeze-Dry / Encore",
+            "Aurora Veil / Encore / Moonblast",
+            "Icy Wind / Protect / Dazzling Gleam"
+          ]
+        },
+        {
+          "name": "Screens Setter",
+          "tier": "vgc2025",
+          "ability": "Snow Warning",
+          "item": "Covert Cloak / Light Clay",
+          "nature": "Timid",
+          "teraType": "Water / Ghost",
+          "evs": "228 HP / 36 DEF / 20 SPA / 76 SPD / 148 SPE",
+          "moves": [
+            "Blizzard",
+            "Aurora Veil",
+            "Encore",
+            "Icy Wind / Protect / Freeze-Dry"
+          ]
+        },
+        {
+          "name": "Screen Setter",
+          "tier": "vgc2024",
+          "ability": "Snow Warning",
+          "item": "Light Clay",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "84 HP / 132 DEF / 84 SPA / 4 SPD / 204 SPE",
+          "moves": [
+            "Blizzard",
+            "Moonblast",
+            "Aurora Veil",
+            "Helping Hand"
+          ]
+        },
+        {
+          "name": "Veil",
+          "tier": "uu",
+          "ability": "Snow Warning",
+          "item": "Light Clay",
+          "nature": "Timid",
+          "teraType": "Water / Steel",
+          "evs": "252 HP / 4 DEF / 252 SPE",
+          "moves": [
+            "Aurora Veil",
+            "Encore",
+            "Freeze-Dry / Blizzard",
+            "Moonblast / Snowscape"
+          ]
+        },
+        {
+          "name": "Aurora Veil",
+          "tier": "ubersuu",
+          "ability": "Snow Warning",
+          "item": "Light Clay",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "248 HP / 8 SPA / 252 SPE",
+          "moves": [
+            "Aurora Veil",
+            "Moonblast",
+            "Freeze-Dry / Blizzard",
+            "Encore / Hypnosis"
+          ]
+        },
+        {
+          "name": "Nasty Plot",
+          "tier": "ru",
+          "ability": "Snow Warning",
+          "item": "Heavy-Duty Boots",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Nasty Plot",
+            "Freeze-Dry / Blizzard",
+            "Tera Blast",
+            "Encore / Moonblast"
+          ]
+        },
+        {
+          "name": "Encore + Disable",
+          "tier": "1v1",
+          "ability": "Snow Warning",
+          "item": "Leftovers",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "216 HP / 40 DEF / 252 SPE",
+          "moves": [
+            "Protect",
+            "Encore",
+            "Disable",
+            "Moonblast"
+          ]
+        },
+        {
+          "name": "Sitrus Berry",
+          "tier": "1v1",
+          "ability": "Snow Warning",
+          "item": "Sitrus Berry",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "164 HP / 240 DEF / 104 SPE",
+          "moves": [
+            "Protect",
+            "Encore",
+            "Disable",
+            "Draining Kiss / Moonblast"
+          ]
+        },
+        {
+          "name": "Life Orb",
+          "tier": "1v1",
+          "ability": "Snow Warning",
+          "item": "Life Orb",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "208 HP / 156 SPA / 144 SPE",
+          "moves": [
+            "Moonblast",
+            "Freeze-Dry",
+            "Calm Mind",
+            "Encore / Disable"
+          ]
+        },
+        {
+          "name": "Support",
+          "tier": "pu",
+          "ability": "Snow Warning",
+          "item": "Icy Rock / Heavy-Duty Boots",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 HP / 4 SPD / 252 SPE",
+          "moves": [
+            "Aurora Veil",
+            "Freeze-Dry / Blizzard",
+            "Moonblast / Foul Play",
+            "Encore"
+          ]
+        },
+        {
+          "name": "Snow Setter",
+          "tier": "partnersincrime",
+          "ability": "Snow Warning",
+          "item": "Light Clay",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 HP / 4 SPA / 252 SPE",
+          "moves": [
+            "Blizzard / Moonblast",
+            "Aurora Veil",
+            "Icy Wind",
+            "Encore"
+          ]
+        },
+        {
+          "name": "Snow Support (Ice)",
+          "tier": "monotype",
+          "ability": "Snow Warning",
+          "item": "Icy Rock / Light Clay",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 HP / 4 SPD / 252 SPE",
+          "moves": [
+            "Aurora Veil",
+            "Freeze-Dry / Blizzard",
+            "Moonblast",
+            "Encore"
+          ]
+        },
+        {
+          "name": "Aurora Veil (HP, Def, SpA, SpD)",
+          "tier": "godlygift",
+          "ability": "Snow Warning",
+          "item": "Light Clay",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "248 HP / 8 SPA / 252 SPE",
+          "moves": [
+            "Moonblast",
+            "Freeze-Dry",
+            "Encore",
+            "Aurora Veil"
+          ]
+        },
+        {
+          "name": "Aurora Veil (Ice)",
+          "tier": "nationaldexmonotype",
+          "ability": "Snow Warning",
+          "item": "Light Clay",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Aurora Veil",
+            "Moonblast",
+            "Freeze-Dry",
+            "Encore"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "snow-cloak",
+          "isHidden": false
+        },
+        {
+          "name": "snow-warning",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 73,
+        "attack": 67,
+        "defense": 75,
+        "special-attack": 81,
+        "special-defense": 100,
+        "speed": 109
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
+    "decidueyehisui": {
+      "name": "Decidueye-Hisui",
+      "cleanName": "decidueyehisui",
+      "dex": 724,
+      "id": 10244,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10244.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "nu",
+          "rank": 61,
+          "usage": "2.72"
+        },
+        {
+          "tier": "pu",
+          "rank": 2,
+          "usage": "24.64"
+        },
+        {
+          "tier": "ru",
+          "rank": 74,
+          "usage": "1.56"
+        },
+        {
+          "tier": "uu",
+          "rank": 230,
+          "usage": "0.02"
+        },
+        {
+          "tier": "ou",
+          "rank": 174,
+          "usage": "0.11"
+        },
+        {
+          "tier": "monotype",
+          "rank": 258,
+          "usage": "0.06"
+        },
+        {
+          "tier": "ubers",
+          "rank": 323,
+          "usage": "0.01"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 274,
+          "usage": "0.05"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 303,
+          "usage": "0.06"
+        }
+      ],
+      "types": [
+        "grass",
+        "fighting"
+      ],
+      "strategies": [
+        {
+          "name": "Swords Dance",
+          "tier": "pu",
+          "ability": "Scrappy",
+          "item": "Spell Tag / Covert Cloak",
+          "nature": "Adamant",
+          "teraType": "Ghost / Dark / Steel",
+          "evs": "252 ATK / 4 DEF / 252 SPE",
+          "moves": [
+            "Swords Dance",
+            "Triple Arrows",
+            "Shadow Claw / Knock Off",
+            "Shadow Sneak / Sucker Punch / Roost"
+          ]
+        },
+        {
+          "name": "Defog",
+          "tier": "pu",
+          "ability": "Scrappy",
+          "item": "Heavy-Duty Boots",
+          "nature": "Impish",
+          "teraType": "Normal",
+          "evs": "248 HP / 252 DEF / 8 SPD",
+          "moves": [
+            "Defog",
+            "Roost",
+            "Triple Arrows",
+            "U-turn / Knock Off"
+          ]
+        },
+        {
+          "name": "Choice Scarf",
+          "tier": "pu",
+          "ability": "Scrappy",
+          "item": "Choice Scarf",
+          "nature": "Jolly",
+          "teraType": "Normal",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Triple Arrows",
+            "U-turn",
+            "Leaf Blade",
+            "Brave Bird / Close Combat"
+          ]
+        },
+        {
+          "name": "Choice Band",
+          "tier": "nu",
+          "ability": "Scrappy",
+          "item": "Choice Band",
+          "nature": "Adamant",
+          "teraType": "Steel / Dark",
+          "evs": "252 ATK / 4 DEF / 252 SPE",
+          "moves": [
+            "Triple Arrows",
+            "Knock Off",
+            "Leaf Blade / Sucker Punch",
+            "U-turn"
+          ]
+        },
+        {
+          "name": "Choice Band (Spe)",
+          "tier": "godlygift",
+          "ability": "Scrappy",
+          "item": "Choice Band",
+          "nature": "Adamant",
+          "teraType": "Normal",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Close Combat",
+            "Leaf Blade",
+            "Knock Off",
+            "U-turn"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "overgrow",
+          "isHidden": false
+        },
+        {
+          "name": "scrappy",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 88,
+        "attack": 112,
+        "defense": 80,
+        "special-attack": 95,
+        "special-defense": 95,
+        "speed": 60
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
+    "rotomfan": {
+      "name": "Rotom-Fan",
+      "cleanName": "rotomfan",
+      "dex": 479,
+      "id": 479,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/479.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "nu",
+          "rank": 74,
+          "usage": "1.47"
+        },
+        {
+          "tier": "pu",
+          "rank": 191,
+          "usage": "0.04"
+        },
+        {
+          "tier": "zu",
+          "rank": 120,
+          "usage": "0.40"
+        },
+        {
+          "tier": "ru",
+          "rank": 238,
+          "usage": "0.03"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 342,
+          "usage": "0.02"
+        }
+      ],
+      "types": [
+        "electric",
+        "ghost"
+      ],
+      "strategies": [],
+      "abilities": [
+        {
+          "name": "levitate",
+          "isHidden": false
+        }
+      ],
+      "stats": {
+        "hp": 50,
+        "attack": 50,
+        "defense": 77,
+        "special-attack": 95,
+        "special-defense": 77,
+        "speed": 91
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
+    "taurospaldeablaze": {
+      "name": "Tauros-Paldea-Blaze",
+      "cleanName": "taurospaldeablaze",
+      "dex": 128,
+      "id": 128,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/128.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "nu",
+          "rank": 77,
+          "usage": "1.34"
+        },
+        {
+          "tier": "pu",
+          "rank": 27,
+          "usage": "7.90"
+        },
+        {
+          "tier": "ru",
+          "rank": 182,
+          "usage": "0.14"
+        },
+        {
+          "tier": "uu",
+          "rank": 259,
+          "usage": "0.01"
+        },
+        {
+          "tier": "ou",
+          "rank": 260,
+          "usage": "0.02"
+        },
+        {
+          "tier": "monotype",
+          "rank": 248,
+          "usage": "0.07"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 99,
+          "usage": "0.85"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 459,
+          "usage": "0.01"
+        }
+      ],
+      "types": [],
+      "strategies": [
+        {
+          "name": "Bulk Up",
+          "tier": "pu",
+          "ability": "Intimidate",
+          "item": "Leftovers / Lum Berry",
+          "nature": "Jolly",
+          "teraType": "Grass / Steel",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Bulk Up",
+            "Close Combat",
+            "Flare Blitz / Raging Bull",
+            "Trailblaze / Stone Edge / Substitute"
+          ]
+        },
+        {
+          "name": "Choice Item",
+          "tier": "pu",
+          "ability": "Intimidate",
+          "item": "Choice Scarf / Choice Band",
+          "nature": "Jolly",
+          "teraType": "Fighting / Fire / Electric",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Close Combat",
+            "Flare Blitz",
+            "Earthquake",
+            "Stone Edge / Wild Charge"
+          ]
+        },
+        {
+          "name": "Bulk Up (Fighting)",
+          "tier": "monotype",
+          "ability": "Intimidate",
+          "item": "Leftovers",
+          "nature": "Jolly",
+          "teraType": "Normal",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Bulk Up",
+            "Close Combat / Body Press",
+            "Raging Bull",
+            "Earthquake / Wild Charge"
+          ]
+        },
+        {
+          "name": "FIREFIGHTER (Defensive)",
+          "tier": "battlestadiumsingles",
+          "ability": "Intimidate",
+          "item": "Sitrus Berry / Figy Berry / Rocky Helmet / Leftovers",
+          "nature": "Impish",
+          "teraType": "Normal",
+          "evs": "252 HP / 252 DEF / 4 SPD",
+          "moves": [
+            "Raging Bull",
+            "Body Press",
+            "Will-O-Wisp",
+            "Rock Tomb / Bulk Up"
+          ]
+        },
+        {
+          "name": "Offensive Screen Smasher",
+          "tier": "battlestadiumsingles",
+          "ability": "Intimidate",
+          "item": "Eject Pack",
+          "nature": "Jolly",
+          "teraType": "Grass / Fairy",
+          "evs": "4 HP / 252 ATK / 252 SPE",
+          "moves": [
+            "Close Combat",
+            "Raging Bull / Flare Blitz",
+            "Flame Charge / Earthquake / Rock Tomb",
+            "Earthquake / Tera Blast / Bulk Up"
+          ]
+        },
+        {
+          "name": "Assault Vest",
+          "tier": "battlestadiumsingles",
+          "ability": "Intimidate",
+          "item": "Assault Vest",
+          "nature": "Adamant",
+          "teraType": "Steel / Grass / Fire",
+          "evs": "244 HP / 12 ATK / 76 DEF / 36 SPD / 140 SPE",
+          "moves": [
+            "Close Combat",
+            "Raging Bull",
+            "Iron Head / Stone Edge",
+            "Trailblaze / Flame Charge"
+          ]
+        },
+        {
+          "name": "Choice Band (Atk)",
+          "tier": "godlygift",
+          "ability": "Intimidate",
+          "item": "Choice Band",
+          "nature": "Jolly",
+          "teraType": "Normal",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Close Combat",
+            "Flare Blitz",
+            "Earthquake",
+            "Wild Charge"
+          ]
+        }
+      ]
+    },
+    "raichualola": {
+      "name": "Raichu-Alola",
+      "cleanName": "raichualola",
+      "dex": 26,
+      "id": 10100,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10100.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "nu",
+          "rank": 81,
+          "usage": "1.22"
+        },
+        {
+          "tier": "pu",
+          "rank": 102,
+          "usage": "0.61"
+        },
+        {
+          "tier": "vgc2025",
+          "rank": 118,
+          "usage": "0.20"
+        },
+        {
+          "tier": "zu",
+          "rank": 92,
+          "usage": "0.85"
+        },
+        {
+          "tier": "ru",
+          "rank": 146,
+          "usage": "0.30"
+        },
+        {
+          "tier": "uu",
+          "rank": 188,
+          "usage": "0.07"
+        },
+        {
+          "tier": "ou",
+          "rank": 173,
+          "usage": "0.11"
+        },
+        {
+          "tier": "monotype",
+          "rank": 233,
+          "usage": "0.09"
+        },
+        {
+          "tier": "ubers",
+          "rank": 333,
+          "usage": "0.01"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 367,
+          "usage": "0.01"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 120,
+          "usage": "0.74"
+        }
+      ],
+      "types": [
+        "electric",
+        "psychic"
+      ],
+      "strategies": [
+        {
+          "name": "Nasty Plot (SpA)",
+          "tier": "godlygift",
+          "ability": "Surge Surfer",
+          "item": "Life Orb",
+          "nature": "Modest",
+          "teraType": "Normal",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Thunderbolt",
+            "Grass Knot",
+            "Draining Kiss",
+            "Nasty Plot"
+          ]
+        },
+        {
+          "name": "Nasty Plot",
+          "tier": "zu",
+          "ability": "Surge Surfer",
+          "item": "Life Orb",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Nasty Plot",
+            "Thunderbolt / Volt Switch",
+            "Psyshock",
+            "Draining Kiss"
+          ]
+        },
+        {
+          "name": "Surge Surfer (Electric)",
+          "tier": "nationaldexmonotype",
+          "ability": "Surge Surfer",
+          "item": "Psychium Z / Life Orb",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Nasty Plot / Focus Blast",
+            "Psychic / Psyshock",
+            "Rising Voltage",
+            "Grass Knot"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "surge-surfer",
+          "isHidden": false
+        }
+      ],
+      "stats": {
+        "hp": 60,
+        "attack": 85,
+        "defense": 50,
+        "special-attack": 95,
+        "special-defense": 85,
+        "speed": 110
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
+    "braviaryhisui": {
+      "name": "Braviary-Hisui",
+      "cleanName": "braviaryhisui",
+      "dex": 628,
+      "id": 10240,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10240.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "nu",
+          "rank": 89,
+          "usage": "0.97"
+        },
+        {
+          "tier": "pu",
+          "rank": 36,
+          "usage": "5.54"
+        },
+        {
+          "tier": "vgc2025",
+          "rank": 271,
+          "usage": "0.01"
+        },
+        {
+          "tier": "ru",
+          "rank": 180,
+          "usage": "0.14"
+        },
+        {
+          "tier": "uu",
+          "rank": 196,
+          "usage": "0.06"
+        },
+        {
+          "tier": "ou",
+          "rank": 247,
+          "usage": "0.03"
+        },
+        {
+          "tier": "monotype",
+          "rank": 193,
+          "usage": "0.19"
+        },
+        {
+          "tier": "ubers",
+          "rank": 327,
+          "usage": "0.01"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 152,
+          "usage": "0.37"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 266,
+          "usage": "0.09"
+        }
+      ],
+      "types": [
+        "psychic",
+        "flying"
+      ],
+      "strategies": [
+        {
+          "name": "Sheer Force",
+          "tier": "pu",
+          "ability": "Sheer Force",
+          "item": "Life Orb",
+          "nature": "Timid",
+          "teraType": "Fairy / Fire",
+          "evs": "4 DEF / 252 SPA / 252 SPE",
+          "moves": [
+            "Psychic",
+            "Hurricane",
+            "Heat Wave",
+            "Agility / Roost"
+          ]
+        },
+        {
+          "name": "Choice Specs",
+          "tier": "pu",
+          "ability": "Tinted Lens",
+          "item": "Choice Specs",
+          "nature": "Timid",
+          "teraType": "Flying / Psychic",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Esper Wing",
+            "Hurricane",
+            "Air Slash",
+            "Heat Wave / Vacuum Wave"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "keen-eye",
+          "isHidden": false
+        },
+        {
+          "name": "sheer-force",
+          "isHidden": false
+        },
+        {
+          "name": "tinted-lens",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 110,
+        "attack": 83,
+        "defense": 70,
+        "special-attack": 112,
+        "special-defense": 70,
+        "speed": 65
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
+    "exeggutoralola": {
+      "name": "Exeggutor-Alola",
+      "cleanName": "exeggutoralola",
+      "dex": 103,
+      "id": 10114,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10114.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "nu",
+          "rank": 94,
+          "usage": "0.78"
+        },
+        {
+          "tier": "pu",
+          "rank": 164,
+          "usage": "0.10"
+        },
+        {
+          "tier": "vgc2025",
+          "rank": 177,
+          "usage": "0.06"
+        },
+        {
+          "tier": "zu",
+          "rank": 65,
+          "usage": "2.06"
+        },
+        {
+          "tier": "ru",
+          "rank": 171,
+          "usage": "0.18"
+        },
+        {
+          "tier": "uu",
+          "rank": 234,
+          "usage": "0.02"
+        },
+        {
+          "tier": "ou",
+          "rank": 268,
+          "usage": "0.02"
+        },
+        {
+          "tier": "monotype",
+          "rank": 316,
+          "usage": "0.02"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 272,
+          "usage": "0.05"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 403,
+          "usage": "0.02"
+        }
+      ],
+      "types": [
+        "grass",
+        "dragon"
+      ],
+      "strategies": [
+        {
+          "name": "Choice Specs",
+          "tier": "pu",
+          "ability": "Harvest",
+          "item": "Choice Specs",
+          "nature": "Modest / Timid",
+          "teraType": "Normal",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Draco Meteor",
+            "Leaf Storm",
+            "Flamethrower",
+            "Giga Drain"
+          ]
+        },
+        {
+          "name": "Eject Pack",
+          "tier": "pu",
+          "ability": "Harvest",
+          "item": "Eject Pack",
+          "nature": "Modest",
+          "teraType": "Steel / Dragon",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Draco Meteor",
+            "Leaf Storm",
+            "Flamethrower",
+            "Giga Drain"
+          ]
+        },
+        {
+          "name": "Offensive Trick Room",
+          "tier": "zu",
+          "ability": "Harvest",
+          "item": "Eject Pack / White Herb / Life Orb",
+          "nature": "Quiet",
+          "teraType": "Dragon / Steel / Fire",
+          "evs": "252 HP / 252 SPA / 4 SPD",
+          "moves": [
+            "Trick Room",
+            "Draco Meteor",
+            "Giga Drain",
+            "Flamethrower"
+          ]
+        },
+        {
+          "name": "Bulky Attacker",
+          "tier": "zu",
+          "ability": "Frisk / Harvest",
+          "item": "Eject Pack / Sitrus Berry",
+          "nature": "Modest",
+          "teraType": "Steel / Water",
+          "evs": "248 HP / 252 SPA / 8 SPE",
+          "moves": [
+            "Draco Meteor",
+            "Giga Drain",
+            "Knock Off",
+            "Flamethrower"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "frisk",
+          "isHidden": false
+        },
+        {
+          "name": "harvest",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 95,
+        "attack": 105,
+        "defense": 85,
+        "special-attack": 125,
+        "special-defense": 75,
+        "speed": 45
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
     "sneaselhisui": {
       "name": "Sneasel-Hisui",
       "cleanName": "sneaselhisui",
@@ -108400,16 +104553,6 @@ window.localDB = {
       "locations": [],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 228,
-          "usage": "0.04"
-        },
-        {
-          "tier": "zu",
-          "rank": 27,
-          "usage": "7.30"
-        },
-        {
           "tier": "nu",
           "rank": 97,
           "usage": "0.73"
@@ -108418,6 +104561,16 @@ window.localDB = {
           "tier": "pu",
           "rank": 166,
           "usage": "0.10"
+        },
+        {
+          "tier": "zu",
+          "rank": 27,
+          "usage": "7.30"
+        },
+        {
+          "tier": "ru",
+          "rank": 228,
+          "usage": "0.04"
         }
       ],
       "types": [
@@ -108481,45 +104634,126 @@ window.localDB = {
       "isLegendary": false,
       "isMythical": false
     },
-    "rotomfan": {
-      "name": "Rotom-Fan",
-      "cleanName": "rotomfan",
+    "rotommow": {
+      "name": "Rotom-Mow",
+      "cleanName": "rotommow",
       "dex": 479,
       "id": 479,
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/479.png",
       "locations": [],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 238,
-          "usage": "0.03"
-        },
-        {
-          "tier": "zu",
-          "rank": 120,
-          "usage": "0.40"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 342,
-          "usage": "0.02"
-        },
-        {
           "tier": "nu",
-          "rank": 74,
-          "usage": "1.47"
+          "rank": 102,
+          "usage": "0.67"
         },
         {
           "tier": "pu",
-          "rank": 191,
-          "usage": "0.04"
+          "rank": 38,
+          "usage": "5.31"
+        },
+        {
+          "tier": "vgc2025",
+          "rank": 244,
+          "usage": "0.02"
+        },
+        {
+          "tier": "zu",
+          "rank": 219,
+          "usage": "0.02"
+        },
+        {
+          "tier": "ru",
+          "rank": 161,
+          "usage": "0.21"
+        },
+        {
+          "tier": "uu",
+          "rank": 206,
+          "usage": "0.05"
+        },
+        {
+          "tier": "monotype",
+          "rank": 225,
+          "usage": "0.11"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 355,
+          "usage": "0.01"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 278,
+          "usage": "0.07"
         }
       ],
       "types": [
         "electric",
         "ghost"
       ],
-      "strategies": [],
+      "strategies": [
+        {
+          "name": "Choice Scarf",
+          "tier": "ru",
+          "ability": "Levitate",
+          "item": "Choice Scarf",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Volt Switch",
+            "Leaf Storm",
+            "Trick",
+            "Thunderbolt / Will-O-Wisp / Thunder Wave"
+          ]
+        },
+        {
+          "name": "Nasty Plot",
+          "tier": "ru",
+          "ability": "Levitate",
+          "item": "Heavy-Duty Boots",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "248 HP / 8 SPA / 252 SPE",
+          "moves": [
+            "Nasty Plot",
+            "Leaf Storm",
+            "Thunderbolt / Volt Switch",
+            "Pain Split / Thunder Wave / Will-O-Wisp"
+          ]
+        },
+        {
+          "name": "Utility",
+          "tier": "nu",
+          "ability": "Levitate",
+          "item": "Leftovers / Sitrus Berry",
+          "nature": "Timid",
+          "teraType": "Fairy / Ghost / Steel",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Leaf Storm",
+            "Volt Switch",
+            "Will-O-Wisp",
+            "Thunderbolt / Foul Play"
+          ]
+        },
+        {
+          "name": "Choice Specs (Grass)",
+          "tier": "monotype",
+          "ability": "Levitate",
+          "item": "Choice Specs",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Leaf Storm",
+            "Thunderbolt",
+            "Volt Switch",
+            "Trick"
+          ]
+        }
+      ],
       "abilities": [
         {
           "name": "levitate",
@@ -108537,117 +104771,321 @@ window.localDB = {
       "isLegendary": false,
       "isMythical": false
     },
-    "dugtrioalola": {
-      "name": "Dugtrio-Alola",
-      "cleanName": "dugtrioalola",
-      "dex": 51,
-      "id": 10106,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10106.png",
+    "avalugghisui": {
+      "name": "Avalugg-Hisui",
+      "cleanName": "avalugghisui",
+      "dex": 713,
+      "id": 10243,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10243.png",
       "locations": [],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 52,
-          "usage": "3.23"
-        },
-        {
-          "tier": "ou",
-          "rank": 287,
-          "usage": "0.01"
-        },
-        {
           "tier": "nu",
-          "rank": 173,
-          "usage": "0.06"
+          "rank": 103,
+          "usage": "0.66"
         },
         {
           "tier": "pu",
+          "rank": 25,
+          "usage": "8.55"
+        },
+        {
+          "tier": "ru",
           "rank": 159,
-          "usage": "0.11"
+          "usage": "0.22"
+        },
+        {
+          "tier": "uu",
+          "rank": 163,
+          "usage": "0.13"
         },
         {
           "tier": "monotype",
-          "rank": 329,
-          "usage": "0.01"
+          "rank": 251,
+          "usage": "0.07"
+        },
+        {
+          "tier": "ubers",
+          "rank": 112,
+          "usage": "0.41"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 310,
+          "usage": "0.03"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 275,
+          "usage": "0.08"
         }
       ],
       "types": [
-        "ground",
-        "steel"
+        "ice",
+        "rock"
       ],
       "strategies": [
         {
-          "name": "Lead",
-          "tier": "zu",
-          "ability": "Tangling Hair",
-          "item": "Focus Sash",
-          "nature": "Jolly",
+          "name": "Offensive",
+          "tier": "pu",
+          "ability": "Sturdy",
+          "item": "Custap Berry / Loaded Dice",
+          "nature": "Adamant",
           "teraType": "Normal",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "evs": "252 ATK / 4 DEF / 252 SPE",
           "moves": [
             "Stealth Rock",
-            "Earthquake",
-            "Iron Head",
-            "Endeavor / Sucker Punch / Memento"
+            "Mountain Gale / Icicle Spear",
+            "Body Press / Stone Edge / Rock Blast",
+            "Rapid Spin"
           ]
         },
         {
-          "name": "Swords Dance",
-          "tier": "zu",
-          "ability": "Tangling Hair",
-          "item": "Life Orb",
-          "nature": "Jolly",
-          "teraType": "Grass / Water",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "name": "Defensive",
+          "tier": "pu",
+          "ability": "Sturdy",
+          "item": "Heavy-Duty Boots",
+          "nature": "Impish",
+          "teraType": "Normal",
+          "evs": "252 HP / 236 DEF / 20 SPE",
           "moves": [
-            "Swords Dance",
-            "Earthquake",
-            "Iron Head",
-            "Sucker Punch / Stone Edge / Substitute"
+            "Recover",
+            "Mountain Gale",
+            "Body Press",
+            "Rapid Spin / Stealth Rock"
           ]
         }
       ],
       "abilities": [
         {
-          "name": "sand-veil",
+          "name": "strong-jaw",
           "isHidden": false
         },
         {
-          "name": "tangling-hair",
+          "name": "ice-body",
           "isHidden": false
         },
         {
-          "name": "sand-force",
+          "name": "sturdy",
           "isHidden": true
         }
       ],
       "stats": {
-        "hp": 35,
-        "attack": 100,
-        "defense": 60,
-        "special-attack": 50,
-        "special-defense": 70,
-        "speed": 110
+        "hp": 95,
+        "attack": 127,
+        "defense": 184,
+        "special-attack": 34,
+        "special-defense": 36,
+        "speed": 38
       },
       "isLegendary": false,
       "isMythical": false
     },
-    "taurospaldeacombat": {
-      "name": "Tauros-Paldea-Combat",
-      "cleanName": "taurospaldeacombat",
-      "dex": 128,
-      "id": 128,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/128.png",
+    "typhlosionhisui": {
+      "name": "Typhlosion-Hisui",
+      "cleanName": "typhlosionhisui",
+      "dex": 157,
+      "id": 10233,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10233.png",
       "locations": [],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 54,
-          "usage": "2.88"
+          "tier": "nu",
+          "rank": 133,
+          "usage": "0.21"
+        },
+        {
+          "tier": "pu",
+          "rank": 34,
+          "usage": "5.92"
+        },
+        {
+          "tier": "vgc2025",
+          "rank": 159,
+          "usage": "0.09"
+        },
+        {
+          "tier": "ru",
+          "rank": 177,
+          "usage": "0.15"
+        },
+        {
+          "tier": "uu",
+          "rank": 151,
+          "usage": "0.17"
+        },
+        {
+          "tier": "ou",
+          "rank": 201,
+          "usage": "0.07"
+        },
+        {
+          "tier": "monotype",
+          "rank": 304,
+          "usage": "0.02"
+        },
+        {
+          "tier": "ubers",
+          "rank": 283,
+          "usage": "0.02"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 40,
+          "usage": "4.24"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 289,
+          "usage": "0.06"
         }
       ],
-      "types": [],
-      "strategies": []
+      "types": [
+        "fire",
+        "ghost"
+      ],
+      "strategies": [
+        {
+          "name": "Choice Item",
+          "tier": "pu",
+          "ability": "Blaze / Frisk",
+          "item": "Choice Specs / Choice Scarf",
+          "nature": "Timid",
+          "teraType": "Fire / Ghost / Fighting",
+          "evs": "4 DEF / 252 SPA / 252 SPE",
+          "moves": [
+            "Eruption",
+            "Fire Blast / Flamethrower / Overheat",
+            "Shadow Ball / Infernal Parade",
+            "Focus Blast / Infernal Parade"
+          ]
+        },
+        {
+          "name": "Heavy-Duty Boots",
+          "tier": "pu",
+          "ability": "Blaze / Frisk",
+          "item": "Heavy-Duty Boots",
+          "nature": "Timid",
+          "teraType": "Fire / Fairy",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Eruption",
+            "Lava Plume / Fire Blast",
+            "Infernal Parade / Shadow Ball",
+            "Focus Blast"
+          ]
+        },
+        {
+          "name": "Substitute + Calm Mind",
+          "tier": "pu",
+          "ability": "Blaze / Frisk",
+          "item": "Heavy-Duty Boots / Leftovers",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Substitute",
+            "Calm Mind",
+            "Infernal Parade / Shadow Ball",
+            "Flamethrower / Fire Blast"
+          ]
+        },
+        {
+          "name": "Glass Cannon",
+          "tier": "vgc2025",
+          "ability": "Blaze",
+          "item": "Choice Specs / Choice Scarf",
+          "nature": "Modest",
+          "teraType": "Normal",
+          "evs": "4 HP / 252 SPA / 252 SPE",
+          "moves": [
+            "Eruption",
+            "Heat Wave",
+            "Overheat",
+            "Shadow Ball"
+          ]
+        },
+        {
+          "name": "All-out Attacker",
+          "tier": "nu",
+          "ability": "Frisk",
+          "item": "Heavy-Duty Boots",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Eruption",
+            "Flamethrower",
+            "Shadow Ball",
+            "Focus Blast"
+          ]
+        },
+        {
+          "name": "Choice Scarf",
+          "tier": "nu",
+          "ability": "Frisk",
+          "item": "Choice Scarf",
+          "nature": "Timid",
+          "teraType": "Fire / Fighting",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Eruption",
+            "Fire Blast / Flamethrower",
+            "Shadow Ball",
+            "Focus Blast"
+          ]
+        },
+        {
+          "name": "Calm Mind",
+          "tier": "nationaldexru",
+          "ability": "Blaze",
+          "item": "Leftovers / Ghostium Z / Firium Z",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Calm Mind",
+            "Infernal Parade / Shadow Ball",
+            "Flamethrower",
+            "Substitute / Focus Blast"
+          ]
+        },
+        {
+          "name": "Choice Specs",
+          "tier": "nationaldexru",
+          "ability": "Frisk",
+          "item": "Choice Specs",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Eruption",
+            "Fire Blast",
+            "Shadow Ball",
+            "Focus Blast"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "blaze",
+          "isHidden": false
+        },
+        {
+          "name": "frisk",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 73,
+        "attack": 84,
+        "defense": 78,
+        "special-attack": 119,
+        "special-defense": 85,
+        "speed": 95
+      },
+      "isLegendary": false,
+      "isMythical": false
     },
     "persianalola": {
       "name": "Persian-Alola",
@@ -108658,14 +105096,24 @@ window.localDB = {
       "locations": [],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 87,
-          "usage": "0.96"
+          "tier": "nu",
+          "rank": 137,
+          "usage": "0.16"
+        },
+        {
+          "tier": "pu",
+          "rank": 61,
+          "usage": "2.17"
         },
         {
           "tier": "vgc2025",
           "rank": 276,
           "usage": "0.01"
+        },
+        {
+          "tier": "zu",
+          "rank": 87,
+          "usage": "0.96"
         },
         {
           "tier": "ou",
@@ -108676,16 +105124,6 @@ window.localDB = {
           "tier": "doublesou",
           "rank": 354,
           "usage": "0.01"
-        },
-        {
-          "tier": "nu",
-          "rank": 137,
-          "usage": "0.16"
-        },
-        {
-          "tier": "pu",
-          "rank": 61,
-          "usage": "2.17"
         }
       ],
       "types": [
@@ -108763,55 +105201,213 @@ window.localDB = {
       "isLegendary": false,
       "isMythical": false
     },
-    "lycanrocmidnight": {
-      "name": "Lycanroc-Midnight",
-      "cleanName": "lycanrocmidnight",
-      "dex": 745,
-      "id": 745,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/745.png",
+    "articunogalar": {
+      "name": "Articuno-Galar",
+      "cleanName": "articunogalar",
+      "dex": 144,
+      "id": 10169,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10169.png",
       "locations": [],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 147,
+          "tier": "nu",
+          "rank": 146,
+          "usage": "0.11"
+        },
+        {
+          "tier": "vgc2025",
+          "rank": 173,
+          "usage": "0.06"
+        },
+        {
+          "tier": "ru",
+          "rank": 71,
+          "usage": "1.63"
+        },
+        {
+          "tier": "uu",
+          "rank": 162,
+          "usage": "0.13"
+        },
+        {
+          "tier": "ou",
+          "rank": 150,
           "usage": "0.17"
         },
         {
-          "tier": "nationaldex",
-          "rank": 329,
-          "usage": "0.05"
+          "tier": "doublesou",
+          "rank": 95,
+          "usage": "0.91"
         },
         {
-          "tier": "pu",
-          "rank": 135,
-          "usage": "0.25"
+          "tier": "nationaldex",
+          "rank": 310,
+          "usage": "0.05"
         }
       ],
       "types": [
-        "rock"
+        "psychic",
+        "flying"
       ],
       "strategies": [],
       "abilities": [
         {
-          "name": "keen-eye",
+          "name": "competitive",
+          "isHidden": false
+        }
+      ],
+      "stats": {
+        "hp": 90,
+        "attack": 85,
+        "defense": 85,
+        "special-attack": 125,
+        "special-defense": 100,
+        "speed": 95
+      },
+      "isLegendary": true,
+      "isMythical": false
+    },
+    "electrodehisui": {
+      "name": "Electrode-Hisui",
+      "cleanName": "electrodehisui",
+      "dex": 101,
+      "id": 10232,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10232.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "nu",
+          "rank": 149,
+          "usage": "0.11"
+        },
+        {
+          "tier": "pu",
+          "rank": 93,
+          "usage": "0.68"
+        },
+        {
+          "tier": "ru",
+          "rank": 226,
+          "usage": "0.04"
+        },
+        {
+          "tier": "uu",
+          "rank": 248,
+          "usage": "0.02"
+        },
+        {
+          "tier": "ou",
+          "rank": 224,
+          "usage": "0.05"
+        },
+        {
+          "tier": "monotype",
+          "rank": 226,
+          "usage": "0.11"
+        },
+        {
+          "tier": "ubers",
+          "rank": 246,
+          "usage": "0.04"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 366,
+          "usage": "0.01"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 399,
+          "usage": "0.02"
+        }
+      ],
+      "types": [
+        "electric",
+        "grass"
+      ],
+      "strategies": [
+        {
+          "name": "Pivot",
+          "tier": "pu",
+          "ability": "Aftermath",
+          "item": "Heavy-Duty Boots",
+          "nature": "Timid",
+          "teraType": "Ghost / Steel",
+          "evs": "4 DEF / 252 SPA / 252 SPE",
+          "moves": [
+            "Volt Switch",
+            "Thunderbolt",
+            "Leaf Storm / Giga Drain",
+            "Taunt / Foul Play"
+          ]
+        },
+        {
+          "name": "Offensive Pivot (SpA)",
+          "tier": "godlygift",
+          "ability": "Static",
+          "item": "Heavy-Duty Boots",
+          "nature": "Timid",
+          "teraType": "Ice / Fire",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Thunderbolt",
+            "Leaf Storm",
+            "Tera Blast",
+            "Volt Switch"
+          ]
+        },
+        {
+          "name": "Offensive Pivot",
+          "tier": "almostanyability",
+          "ability": "Magic Guard / Hadron Engine",
+          "item": "Life Orb",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Chloroblast / Leaf Storm",
+            "Volt Switch",
+            "Thunderbolt",
+            "Thunder Wave / Worry Seed"
+          ]
+        },
+        {
+          "name": "Magic Guard",
+          "tier": "almostanyability",
+          "ability": "Magic Guard",
+          "item": "Life Orb",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Thunderbolt",
+            "Volt Switch",
+            "Chloroblast",
+            "Thunder Wave / Leech Seed / Worry Seed"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "soundproof",
           "isHidden": false
         },
         {
-          "name": "sand-rush",
+          "name": "static",
           "isHidden": false
         },
         {
-          "name": "steadfast",
+          "name": "aftermath",
           "isHidden": true
         }
       ],
       "stats": {
-        "hp": 75,
-        "attack": 115,
-        "defense": 65,
-        "special-attack": 55,
-        "special-defense": 65,
-        "speed": 112
+        "hp": 60,
+        "attack": 50,
+        "defense": 70,
+        "special-attack": 80,
+        "special-defense": 80,
+        "speed": 150
       },
       "isLegendary": false,
       "isMythical": false
@@ -108825,11 +105421,6 @@ window.localDB = {
       "locations": [],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 148,
-          "usage": "0.17"
-        },
-        {
           "tier": "nu",
           "rank": 156,
           "usage": "0.09"
@@ -108838,6 +105429,11 @@ window.localDB = {
           "tier": "pu",
           "rank": 185,
           "usage": "0.05"
+        },
+        {
+          "tier": "zu",
+          "rank": 148,
+          "usage": "0.17"
         }
       ],
       "types": [
@@ -108878,119 +105474,302 @@ window.localDB = {
       "isLegendary": false,
       "isMythical": false
     },
-    "oinkolognef": {
-      "name": "Oinkologne-F",
-      "cleanName": "oinkolognef",
-      "dex": null,
-      "id": 0,
-      "sprite": "",
+    "dugtrioalola": {
+      "name": "Dugtrio-Alola",
+      "cleanName": "dugtrioalola",
+      "dex": 51,
+      "id": 10106,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10106.png",
       "locations": [],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 152,
-          "usage": "0.16"
-        }
-      ],
-      "types": [],
-      "strategies": []
-    },
-    "vivillon": {
-      "name": "Vivillon",
-      "cleanName": "vivillon",
-      "dex": 666,
-      "id": 666,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/666.png",
-      "locations": [],
-      "allRanks": [
+          "tier": "nu",
+          "rank": 173,
+          "usage": "0.06"
+        },
+        {
+          "tier": "pu",
+          "rank": 159,
+          "usage": "0.11"
+        },
         {
           "tier": "zu",
-          "rank": 176,
-          "usage": "0.10"
+          "rank": 52,
+          "usage": "3.23"
         },
         {
-          "tier": "vgc2025",
-          "rank": 189,
-          "usage": "0.05"
-        },
-        {
-          "tier": "ubers",
-          "rank": 198,
-          "usage": "0.07"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 261,
-          "usage": "0.05"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 377,
-          "usage": "0.03"
+          "tier": "ou",
+          "rank": 287,
+          "usage": "0.01"
         },
         {
           "tier": "monotype",
-          "rank": 261,
-          "usage": "0.06"
+          "rank": 329,
+          "usage": "0.01"
         }
       ],
       "types": [
-        "bug",
-        "flying"
+        "ground",
+        "steel"
       ],
       "strategies": [
         {
-          "name": "Status Utility (Bug)",
-          "tier": "monotype",
-          "ability": "Compound Eyes",
+          "name": "Lead",
+          "tier": "zu",
+          "ability": "Tangling Hair",
           "item": "Focus Sash",
-          "nature": "Timid",
+          "nature": "Jolly",
           "teraType": "Normal",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
           "moves": [
-            "Hurricane",
-            "Sleep Powder",
-            "Stun Spore",
-            "Tailwind"
+            "Stealth Rock",
+            "Earthquake",
+            "Iron Head",
+            "Endeavor / Sucker Punch / Memento"
           ]
         },
         {
-          "name": "Support",
-          "tier": "vgc2025",
-          "ability": "Compound Eyes",
-          "item": "Focus Sash",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "4 HP / 252 SPA / 252 SPE",
+          "name": "Swords Dance",
+          "tier": "zu",
+          "ability": "Tangling Hair",
+          "item": "Life Orb",
+          "nature": "Jolly",
+          "teraType": "Grass / Water",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
           "moves": [
-            "Hurricane",
-            "Rage Powder",
-            "Sleep Powder",
-            "Protect"
+            "Swords Dance",
+            "Earthquake",
+            "Iron Head",
+            "Sucker Punch / Stone Edge / Substitute"
           ]
         }
       ],
       "abilities": [
         {
-          "name": "shield-dust",
+          "name": "sand-veil",
           "isHidden": false
         },
         {
-          "name": "compound-eyes",
+          "name": "tangling-hair",
           "isHidden": false
         },
         {
-          "name": "friend-guard",
+          "name": "sand-force",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 35,
+        "attack": 100,
+        "defense": 60,
+        "special-attack": 50,
+        "special-defense": 70,
+        "speed": 110
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
+    "qwilfishhisui": {
+      "name": "Qwilfish-Hisui",
+      "cleanName": "qwilfishhisui",
+      "dex": 211,
+      "id": 10234,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10234.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "nu",
+          "rank": 174,
+          "usage": "0.05"
+        },
+        {
+          "tier": "pu",
+          "rank": 41,
+          "usage": "4.83"
+        },
+        {
+          "tier": "monotype",
+          "rank": 324,
+          "usage": "0.02"
+        },
+        {
+          "tier": "ubers",
+          "rank": 204,
+          "usage": "0.07"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 334,
+          "usage": "0.02"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 439,
+          "usage": "0.01"
+        }
+      ],
+      "types": [
+        "dark",
+        "poison"
+      ],
+      "strategies": [
+        {
+          "name": "Specially Defensive",
+          "tier": "pu",
+          "ability": "Intimidate",
+          "item": "Eviolite",
+          "nature": "Careful",
+          "teraType": "Normal",
+          "evs": "252 HP / 240 SPD / 16 SPE",
+          "moves": [
+            "Spikes",
+            "Barb Barrage",
+            "Crunch",
+            "Pain Split / Taunt / Toxic"
+          ]
+        },
+        {
+          "name": "Swords Dance",
+          "tier": "pu",
+          "ability": "Intimidate",
+          "item": "Eviolite",
+          "nature": "Jolly",
+          "teraType": "Water / Ghost",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Swords Dance",
+            "Gunk Shot",
+            "Crunch",
+            "Aqua Jet / Self-Destruct"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "poison-point",
+          "isHidden": false
+        },
+        {
+          "name": "swift-swim",
+          "isHidden": false
+        },
+        {
+          "name": "intimidate",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 65,
+        "attack": 95,
+        "defense": 85,
+        "special-attack": 55,
+        "special-defense": 55,
+        "speed": 85
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
+    "golemalola": {
+      "name": "Golem-Alola",
+      "cleanName": "golemalola",
+      "dex": 76,
+      "id": 10111,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10111.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "nu",
+          "rank": 179,
+          "usage": "0.04"
+        },
+        {
+          "tier": "pu",
+          "rank": 170,
+          "usage": "0.09"
+        },
+        {
+          "tier": "vgc2025",
+          "rank": 246,
+          "usage": "0.02"
+        },
+        {
+          "tier": "zu",
+          "rank": 161,
+          "usage": "0.14"
+        },
+        {
+          "tier": "uu",
+          "rank": 197,
+          "usage": "0.05"
+        },
+        {
+          "tier": "ou",
+          "rank": 281,
+          "usage": "0.02"
+        },
+        {
+          "tier": "monotype",
+          "rank": 338,
+          "usage": "0.01"
+        },
+        {
+          "tier": "ubers",
+          "rank": 275,
+          "usage": "0.02"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 183,
+          "usage": "0.18"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 450,
+          "usage": "0.01"
+        }
+      ],
+      "types": [
+        "rock",
+        "electric"
+      ],
+      "strategies": [
+        {
+          "name": "Choice Band (Rock)",
+          "tier": "monotype",
+          "ability": "Magnet Pull",
+          "item": "Choice Band",
+          "nature": "Adamant",
+          "teraType": "Normal",
+          "evs": "252 ATK / 4 DEF / 252 SPE",
+          "moves": [
+            "Wild Charge",
+            "Brick Break",
+            "Earthquake",
+            "Fire Punch"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "magnet-pull",
+          "isHidden": false
+        },
+        {
+          "name": "sturdy",
+          "isHidden": false
+        },
+        {
+          "name": "galvanize",
           "isHidden": true
         }
       ],
       "stats": {
         "hp": 80,
-        "attack": 52,
-        "defense": 50,
-        "special-attack": 90,
-        "special-defense": 50,
-        "speed": 89
+        "attack": 120,
+        "defense": 130,
+        "special-attack": 55,
+        "special-defense": 65,
+        "speed": 45
       },
       "isLegendary": false,
       "isMythical": false
@@ -109004,14 +105783,14 @@ window.localDB = {
       "locations": [],
       "allRanks": [
         {
-          "tier": "zu",
-          "rank": 183,
-          "usage": "0.08"
-        },
-        {
           "tier": "nu",
           "rank": 202,
           "usage": "0.02"
+        },
+        {
+          "tier": "zu",
+          "rank": 183,
+          "usage": "0.08"
         }
       ],
       "types": [
@@ -109071,6 +105850,446 @@ window.localDB = {
         "special-attack": 83,
         "special-defense": 113,
         "speed": 40
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
+    "rotomfrost": {
+      "name": "Rotom-Frost",
+      "cleanName": "rotomfrost",
+      "dex": 479,
+      "id": 479,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/479.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "nu",
+          "rank": 206,
+          "usage": "0.01"
+        },
+        {
+          "tier": "pu",
+          "rank": 161,
+          "usage": "0.11"
+        },
+        {
+          "tier": "zu",
+          "rank": 137,
+          "usage": "0.26"
+        },
+        {
+          "tier": "uu",
+          "rank": 231,
+          "usage": "0.02"
+        },
+        {
+          "tier": "ou",
+          "rank": 221,
+          "usage": "0.05"
+        },
+        {
+          "tier": "monotype",
+          "rank": 272,
+          "usage": "0.04"
+        }
+      ],
+      "types": [
+        "electric",
+        "ghost"
+      ],
+      "strategies": [
+        {
+          "name": "Nasty Plot",
+          "tier": "zu",
+          "ability": "Levitate",
+          "item": "Heavy-Duty Boots",
+          "nature": "Timid",
+          "teraType": "Ghost / Water",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Nasty Plot",
+            "Thunderbolt",
+            "Blizzard",
+            "Volt Switch"
+          ]
+        },
+        {
+          "name": "Choice Scarf",
+          "tier": "zu",
+          "ability": "Levitate",
+          "item": "Choice Scarf",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Volt Switch",
+            "Blizzard",
+            "Thunderbolt",
+            "Trick"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "levitate",
+          "isHidden": false
+        }
+      ],
+      "stats": {
+        "hp": 50,
+        "attack": 50,
+        "defense": 77,
+        "special-attack": 95,
+        "special-defense": 77,
+        "speed": 91
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
+    "indeedeef": {
+      "name": "Indeedee-F",
+      "cleanName": "indeedeef",
+      "dex": 876,
+      "id": 876,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/876.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "pu",
+          "rank": 46,
+          "usage": "3.93"
+        },
+        {
+          "tier": "vgc2025",
+          "rank": 8,
+          "usage": "19.98"
+        },
+        {
+          "tier": "zu",
+          "rank": 64,
+          "usage": "2.08"
+        },
+        {
+          "tier": "ru",
+          "rank": 183,
+          "usage": "0.14"
+        },
+        {
+          "tier": "uu",
+          "rank": 181,
+          "usage": "0.09"
+        },
+        {
+          "tier": "ou",
+          "rank": 259,
+          "usage": "0.02"
+        },
+        {
+          "tier": "monotype",
+          "rank": 276,
+          "usage": "0.04"
+        },
+        {
+          "tier": "ubers",
+          "rank": 115,
+          "usage": "0.39"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 15,
+          "usage": "11.93"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 370,
+          "usage": "0.03"
+        }
+      ],
+      "types": [
+        "psychic",
+        "normal"
+      ],
+      "strategies": [
+        {
+          "name": "Terrain Setter",
+          "tier": "pu",
+          "ability": "Psychic Surge",
+          "item": "Terrain Extender",
+          "nature": "Timid",
+          "teraType": "Fairy / Ghost / Steel",
+          "evs": "252 HP / 4 SPA / 252 SPE",
+          "moves": [
+            "Healing Wish",
+            "Psychic / Psyshock",
+            "Reflect",
+            "Alluring Voice"
+          ]
+        },
+        {
+          "name": "Bulky Support",
+          "tier": "vgc2025",
+          "ability": "Psychic Surge",
+          "item": "Safety Goggles / Psychic Seed / Rocky Helmet / Sitrus Berry",
+          "nature": "Relaxed",
+          "teraType": "Fairy / Grass",
+          "evs": "252 HP / 252 DEF / 4 SPD",
+          "moves": [
+            "Follow Me",
+            "Trick Room",
+            "Helping Hand / Imprison",
+            "Psychic / Dazzling Gleam"
+          ]
+        },
+        {
+          "name": "Trick Room Support",
+          "tier": "vgc2025",
+          "ability": "Psychic Surge",
+          "item": "Safety Goggles / Rocky Helmet / Psychic Seed",
+          "nature": "Bold / Relaxed",
+          "teraType": "Water / Fairy",
+          "evs": "252 HP / 252 DEF / 4 SPD",
+          "moves": [
+            "Psychic / Alluring Voice",
+            "Follow Me",
+            "Helping Hand",
+            "Trick Room"
+          ]
+        },
+        {
+          "name": "TR Support",
+          "tier": "vgc2023",
+          "ability": "Psychic Surge",
+          "item": "Psychic Seed / Safety Goggles / Rocky Helmet",
+          "nature": "Calm",
+          "teraType": "Normal",
+          "evs": "252 HP / 220 DEF / 36 SPD",
+          "moves": [
+            "Psychic / Dazzling Gleam",
+            "Follow Me",
+            "Trick Room",
+            "Helping Hand / Protect"
+          ]
+        },
+        {
+          "name": "Follow Me Support",
+          "tier": "partnersincrime",
+          "ability": "Psychic Surge",
+          "item": "Safety Goggles",
+          "nature": "Bold",
+          "teraType": "Normal",
+          "evs": "244 HP / 252 DEF / 12 SPD",
+          "moves": [
+            "Psychic",
+            "Follow Me",
+            "Trick Room",
+            "Helping Hand / Imprison"
+          ]
+        },
+        {
+          "name": "Choiced",
+          "tier": "zu",
+          "ability": "Psychic Surge",
+          "item": "Choice Scarf / Choice Specs",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Psychic",
+            "Alluring Voice",
+            "Hyper Voice",
+            "Healing Wish / Trick"
+          ]
+        },
+        {
+          "name": "Redirection Support",
+          "tier": "doublesou",
+          "ability": "Psychic Surge",
+          "item": "Sitrus Berry / Safety Goggles / Psychic Seed",
+          "nature": "Bold",
+          "teraType": "Normal",
+          "evs": "252 HP / 236 DEF / 20 SPD",
+          "moves": [
+            "Trick Room / Protect",
+            "Helping Hand / Protect",
+            "Psychic / Dazzling Gleam",
+            "Follow Me"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "inner-focus",
+          "isHidden": false
+        },
+        {
+          "name": "synchronize",
+          "isHidden": false
+        },
+        {
+          "name": "psychic-surge",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 60,
+        "attack": 65,
+        "defense": 55,
+        "special-attack": 105,
+        "special-defense": 95,
+        "speed": 95
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
+    "crabominable": {
+      "name": "Crabominable",
+      "cleanName": "crabominable",
+      "dex": 740,
+      "id": 740,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/740.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "pu",
+          "rank": 124,
+          "usage": "0.33"
+        },
+        {
+          "tier": "zu",
+          "rank": 106,
+          "usage": "0.57"
+        },
+        {
+          "tier": "ru",
+          "rank": 168,
+          "usage": "0.19"
+        },
+        {
+          "tier": "uu",
+          "rank": 242,
+          "usage": "0.02"
+        },
+        {
+          "tier": "monotype",
+          "rank": 305,
+          "usage": "0.02"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 321,
+          "usage": "0.02"
+        }
+      ],
+      "types": [
+        "fighting",
+        "ice"
+      ],
+      "strategies": [
+        {
+          "name": "Choice Band",
+          "tier": "zu",
+          "ability": "Iron Fist",
+          "item": "Choice Band",
+          "nature": "Adamant",
+          "teraType": "Ice / Fighting",
+          "evs": "252 HP / 252 ATK / 4 SPD",
+          "moves": [
+            "Ice Hammer",
+            "Close Combat",
+            "Earthquake",
+            "Knock Off"
+          ]
+        },
+        {
+          "name": "Bulk Up",
+          "tier": "zu",
+          "ability": "Iron Fist",
+          "item": "Leftovers",
+          "nature": "Adamant",
+          "teraType": "Water / Fairy",
+          "evs": "252 HP / 252 ATK / 4 SPD",
+          "moves": [
+            "Bulk Up",
+            "Ice Hammer",
+            "Drain Punch",
+            "Earthquake"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "hyper-cutter",
+          "isHidden": false
+        },
+        {
+          "name": "iron-fist",
+          "isHidden": false
+        },
+        {
+          "name": "anger-point",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 97,
+        "attack": 132,
+        "defense": 77,
+        "special-attack": 62,
+        "special-defense": 67,
+        "speed": 43
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
+    "lycanrocmidnight": {
+      "name": "Lycanroc-Midnight",
+      "cleanName": "lycanrocmidnight",
+      "dex": 745,
+      "id": 745,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/745.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "pu",
+          "rank": 135,
+          "usage": "0.25"
+        },
+        {
+          "tier": "zu",
+          "rank": 147,
+          "usage": "0.17"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 329,
+          "usage": "0.05"
+        }
+      ],
+      "types": [
+        "rock"
+      ],
+      "strategies": [],
+      "abilities": [
+        {
+          "name": "keen-eye",
+          "isHidden": false
+        },
+        {
+          "name": "sand-rush",
+          "isHidden": false
+        },
+        {
+          "name": "steadfast",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 75,
+        "attack": 115,
+        "defense": 65,
+        "special-attack": 55,
+        "special-defense": 65,
+        "speed": 112
       },
       "isLegendary": false,
       "isMythical": false
@@ -109423,6 +106642,11 @@ window.localDB = {
           "usage": "29.18"
         },
         {
+          "tier": "monotype",
+          "rank": 28,
+          "usage": "6.67"
+        },
+        {
           "tier": "ubers",
           "rank": 75,
           "usage": "0.85"
@@ -109431,11 +106655,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 19,
           "usage": "9.28"
-        },
-        {
-          "tier": "monotype",
-          "rank": 28,
-          "usage": "6.67"
         }
       ],
       "types": [
@@ -109892,14 +107111,19 @@ window.localDB = {
           "usage": "6.07"
         },
         {
-          "tier": "ubers",
-          "rank": 131,
-          "usage": "0.30"
-        },
-        {
           "tier": "ou",
           "rank": 64,
           "usage": "2.16"
+        },
+        {
+          "tier": "monotype",
+          "rank": 67,
+          "usage": "3.38"
+        },
+        {
+          "tier": "ubers",
+          "rank": 131,
+          "usage": "0.30"
         },
         {
           "tier": "doublesou",
@@ -109910,11 +107134,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 75,
           "usage": "1.86"
-        },
-        {
-          "tier": "monotype",
-          "rank": 67,
-          "usage": "3.38"
         }
       ],
       "types": [
@@ -110250,6 +107469,11 @@ window.localDB = {
           "usage": "3.74"
         },
         {
+          "tier": "monotype",
+          "rank": 35,
+          "usage": "5.66"
+        },
+        {
           "tier": "ubers",
           "rank": 57,
           "usage": "1.33"
@@ -110258,11 +107482,6 @@ window.localDB = {
           "tier": "doublesou",
           "rank": 22,
           "usage": "9.49"
-        },
-        {
-          "tier": "monotype",
-          "rank": 35,
-          "usage": "5.66"
         }
       ],
       "types": [
@@ -110466,14 +107685,19 @@ window.localDB = {
           "usage": "3.50"
         },
         {
-          "tier": "ubers",
-          "rank": 83,
-          "usage": "0.71"
-        },
-        {
           "tier": "ou",
           "rank": 7,
           "usage": "16.73"
+        },
+        {
+          "tier": "monotype",
+          "rank": 57,
+          "usage": "3.82"
+        },
+        {
+          "tier": "ubers",
+          "rank": 83,
+          "usage": "0.71"
         },
         {
           "tier": "doublesou",
@@ -110484,11 +107708,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 9,
           "usage": "12.90"
-        },
-        {
-          "tier": "monotype",
-          "rank": 57,
-          "usage": "3.82"
         }
       ],
       "types": [
@@ -111025,6 +108244,201 @@ window.localDB = {
       "isLegendary": false,
       "isMythical": false
     },
+    "lilliganthisui": {
+      "name": "Lilligant-Hisui",
+      "cleanName": "lilliganthisui",
+      "dex": 549,
+      "id": 10237,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10237.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "vgc2025",
+          "rank": 45,
+          "usage": "1.97"
+        },
+        {
+          "tier": "uu",
+          "rank": 56,
+          "usage": "2.27"
+        },
+        {
+          "tier": "ou",
+          "rank": 111,
+          "usage": "0.44"
+        },
+        {
+          "tier": "monotype",
+          "rank": 136,
+          "usage": "0.57"
+        },
+        {
+          "tier": "ubers",
+          "rank": 156,
+          "usage": "0.15"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 38,
+          "usage": "5.31"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 192,
+          "usage": "0.25"
+        }
+      ],
+      "types": [
+        "grass",
+        "fighting"
+      ],
+      "strategies": [
+        {
+          "name": "Sun Sweeper",
+          "tier": "uu",
+          "ability": "Chlorophyll",
+          "item": "Life Orb",
+          "nature": "Adamant",
+          "teraType": "Ice / Fire / Ghost",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Solar Blade",
+            "Close Combat",
+            "Triple Axel",
+            "Healing Wish / Weather Ball / Tera Blast"
+          ]
+        },
+        {
+          "name": "Victory Dance (Fighting)",
+          "tier": "monotype",
+          "ability": "Hustle",
+          "item": "Wide Lens",
+          "nature": "Jolly",
+          "teraType": "Normal",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Victory Dance",
+            "Leaf Blade",
+            "Close Combat",
+            "Ice Spinner"
+          ]
+        },
+        {
+          "name": "Victory Dance Sweeper (Grass)",
+          "tier": "monotype",
+          "ability": "Hustle",
+          "item": "Wide Lens",
+          "nature": "Jolly",
+          "teraType": "Normal",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Victory Dance",
+            "Close Combat",
+            "Ice Spinner",
+            "Sleep Powder / Leaf Blade"
+          ]
+        },
+        {
+          "name": "Sun Wallbreaker",
+          "tier": "stabmons",
+          "ability": "Chlorophyll",
+          "item": "Life Orb / Choice Band",
+          "nature": "Adamant",
+          "teraType": "Normal",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Solar Blade / Ivy Cudgel",
+            "Close Combat",
+            "Ice Spinner",
+            "Healing Wish"
+          ]
+        },
+        {
+          "name": "Special-based Mixed Sun Sweeper (SpA)",
+          "tier": "godlygift",
+          "ability": "Chlorophyll",
+          "item": "Life Orb",
+          "nature": "Mild",
+          "teraType": "Normal",
+          "evs": "4 ATK / 252 SPA / 252 SPE",
+          "moves": [
+            "Solar Beam",
+            "Weather Ball",
+            "Close Combat",
+            "Growth"
+          ]
+        },
+        {
+          "name": "Physical-based Mixed Sun Sweeper (Atk)",
+          "tier": "godlygift",
+          "ability": "Chlorophyll",
+          "item": "Life Orb",
+          "nature": "Adamant",
+          "teraType": "Normal",
+          "evs": "4 HP / 252 ATK / 252 SPE",
+          "moves": [
+            "Close Combat",
+            "Solar Beam",
+            "Tera Blast",
+            "Growth"
+          ]
+        },
+        {
+          "name": "Sun Support",
+          "tier": "doublesou",
+          "ability": "Chlorophyll",
+          "item": "Focus Sash",
+          "nature": "Jolly",
+          "teraType": "Normal",
+          "evs": "252 ATK / 4 DEF / 252 SPE",
+          "moves": [
+            "Solar Blade / Close Combat",
+            "Sleep Powder",
+            "After You",
+            "Encore / Close Combat / Protect"
+          ]
+        },
+        {
+          "name": "Victory Dance (Grass)",
+          "tier": "nationaldexmonotype",
+          "ability": "Hustle",
+          "item": "Fightinium Z",
+          "nature": "Jolly",
+          "teraType": "Normal",
+          "evs": "252 ATK / 4 DEF / 252 SPE",
+          "moves": [
+            "Victory Dance",
+            "Close Combat",
+            "Leaf Blade / Sleep Powder",
+            "Ice Spinner"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "chlorophyll",
+          "isHidden": false
+        },
+        {
+          "name": "hustle",
+          "isHidden": false
+        },
+        {
+          "name": "leaf-guard",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 70,
+        "attack": 105,
+        "defense": 75,
+        "special-attack": 50,
+        "special-defense": 75,
+        "speed": 105
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
     "hoopaunbound": {
       "name": "Hoopa-Unbound",
       "cleanName": "hoopaunbound",
@@ -111039,14 +108453,19 @@ window.localDB = {
           "usage": "1.13"
         },
         {
-          "tier": "ubers",
-          "rank": 99,
-          "usage": "0.54"
-        },
-        {
           "tier": "ou",
           "rank": 47,
           "usage": "3.36"
+        },
+        {
+          "tier": "monotype",
+          "rank": 34,
+          "usage": "5.81"
+        },
+        {
+          "tier": "ubers",
+          "rank": 99,
+          "usage": "0.54"
         },
         {
           "tier": "doublesou",
@@ -111057,11 +108476,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 66,
           "usage": "2.34"
-        },
-        {
-          "tier": "monotype",
-          "rank": 34,
-          "usage": "5.81"
         }
       ],
       "types": [
@@ -111311,14 +108725,19 @@ window.localDB = {
           "usage": "1.10"
         },
         {
-          "tier": "ubers",
-          "rank": 49,
-          "usage": "1.75"
-        },
-        {
           "tier": "ou",
           "rank": 41,
           "usage": "4.34"
+        },
+        {
+          "tier": "monotype",
+          "rank": 60,
+          "usage": "3.73"
+        },
+        {
+          "tier": "ubers",
+          "rank": 49,
+          "usage": "1.75"
         },
         {
           "tier": "doublesou",
@@ -111329,11 +108748,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 111,
           "usage": "0.85"
-        },
-        {
-          "tier": "monotype",
-          "rank": 60,
-          "usage": "3.73"
         }
       ],
       "types": [
@@ -111453,6 +108867,221 @@ window.localDB = {
         "special-attack": 85,
         "special-defense": 70,
         "speed": 60
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
+    "mukalola": {
+      "name": "Muk-Alola",
+      "cleanName": "mukalola",
+      "dex": 89,
+      "id": 10113,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10113.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "vgc2025",
+          "rank": 68,
+          "usage": "0.75"
+        },
+        {
+          "tier": "ru",
+          "rank": 24,
+          "usage": "7.96"
+        },
+        {
+          "tier": "uu",
+          "rank": 53,
+          "usage": "2.44"
+        },
+        {
+          "tier": "ou",
+          "rank": 169,
+          "usage": "0.12"
+        },
+        {
+          "tier": "monotype",
+          "rank": 33,
+          "usage": "6.22"
+        },
+        {
+          "tier": "ubers",
+          "rank": 142,
+          "usage": "0.20"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 150,
+          "usage": "0.38"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 170,
+          "usage": "0.33"
+        }
+      ],
+      "types": [
+        "poison",
+        "dark"
+      ],
+      "strategies": [
+        {
+          "name": "RestTalk",
+          "tier": "ru",
+          "ability": "Power of Alchemy",
+          "item": "Leftovers",
+          "nature": "Careful",
+          "teraType": "Water / Fairy",
+          "evs": "252 HP / 4 DEF / 252 SPD",
+          "moves": [
+            "Knock Off",
+            "Poison Jab / Drain Punch / Haze",
+            "Rest",
+            "Sleep Talk"
+          ]
+        },
+        {
+          "name": "AV",
+          "tier": "1v1",
+          "ability": "Power of Alchemy",
+          "item": "Assault Vest",
+          "nature": "Adamant",
+          "teraType": "Normal",
+          "evs": "252 ATK / 236 DEF / 20 SPE",
+          "moves": [
+            "Gunk Shot",
+            "Knock Off",
+            "Drain Punch",
+            "Shadow Sneak"
+          ]
+        },
+        {
+          "name": "Specially Defensive (Poison)",
+          "tier": "monotype",
+          "ability": "Power of Alchemy",
+          "item": "Black Sludge",
+          "nature": "Careful",
+          "teraType": "Normal",
+          "evs": "252 HP / 4 ATK / 252 SPD",
+          "moves": [
+            "Knock Off",
+            "Drain Punch",
+            "Poison Jab / Curse / Rest",
+            "Protect / Sleep Talk"
+          ]
+        },
+        {
+          "name": "Specially Defensive (Dark)",
+          "tier": "monotype",
+          "ability": "Power of Alchemy",
+          "item": "Black Sludge",
+          "nature": "Careful",
+          "teraType": "Normal",
+          "evs": "252 HP / 4 ATK / 252 SPD",
+          "moves": [
+            "Poison Jab",
+            "Knock Off",
+            "Drain Punch",
+            "Protect"
+          ]
+        },
+        {
+          "name": "Ghostbuster (Stall)",
+          "tier": "battlestadiumsingles",
+          "ability": "Power of Alchemy",
+          "item": "Black Sludge",
+          "nature": "Careful",
+          "teraType": "Normal",
+          "evs": "252 HP / 4 DEF / 252 SPD",
+          "moves": [
+            "Knock Off",
+            "Poison Jab",
+            "Protect",
+            "Shadow Sneak / Toxic"
+          ]
+        },
+        {
+          "name": "RegenVest (Mienshao)",
+          "tier": "inheritance",
+          "ability": "Regenerator",
+          "item": "Assault Vest",
+          "nature": "Sassy",
+          "teraType": "Normal",
+          "evs": "252 HP / 4 ATK / 252 SPD OR 128 HP / 128 ATK / 252 SPD",
+          "moves": [
+            "U-turn",
+            "Knock Off",
+            "Poison Jab",
+            "Triple Axel / Ice Spinner / Low Kick"
+          ]
+        },
+        {
+          "name": "Curse (Def)",
+          "tier": "godlygift",
+          "ability": "Gluttony",
+          "item": "Iapapa Berry",
+          "nature": "Careful",
+          "teraType": "Normal",
+          "evs": "252 HP / 4 DEF / 252 SPD",
+          "moves": [
+            "Knock Off",
+            "Poison Jab",
+            "Curse",
+            "Recycle"
+          ]
+        },
+        {
+          "name": "Assault Vest (Poison)",
+          "tier": "nationaldexmonotype",
+          "ability": "Power of Alchemy",
+          "item": "Assault Vest",
+          "nature": "Careful",
+          "teraType": "Normal",
+          "evs": "248 HP / 12 DEF / 248 SPD",
+          "moves": [
+            "Knock Off",
+            "Poison Jab",
+            "Pursuit",
+            "Drain Punch / Shadow Sneak / Rock Slide"
+          ]
+        },
+        {
+          "name": "Specially Defensive",
+          "tier": "anythinggoes",
+          "ability": "Power of Alchemy",
+          "item": "Heavy-Duty Boots",
+          "nature": "Careful",
+          "teraType": "Normal",
+          "evs": "252 HP / 4 ATK / 252 SPD",
+          "moves": [
+            "Knock Off",
+            "Poison Jab / Clear Smog",
+            "Rest",
+            "Pain Split / Sleep Talk"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "poison-touch",
+          "isHidden": false
+        },
+        {
+          "name": "gluttony",
+          "isHidden": false
+        },
+        {
+          "name": "power-of-alchemy",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 105,
+        "attack": 105,
+        "defense": 75,
+        "special-attack": 65,
+        "special-defense": 100,
+        "speed": 50
       },
       "isLegendary": false,
       "isMythical": false
@@ -111688,6 +109317,268 @@ window.localDB = {
       },
       "isLegendary": false,
       "isMythical": true
+    },
+    "zoroarkhisui": {
+      "name": "Zoroark-Hisui",
+      "cleanName": "zoroarkhisui",
+      "dex": 571,
+      "id": 10239,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10239.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "vgc2025",
+          "rank": 86,
+          "usage": "0.50"
+        },
+        {
+          "tier": "uu",
+          "rank": 61,
+          "usage": "2.01"
+        },
+        {
+          "tier": "ou",
+          "rank": 164,
+          "usage": "0.13"
+        },
+        {
+          "tier": "monotype",
+          "rank": 43,
+          "usage": "4.64"
+        },
+        {
+          "tier": "ubers",
+          "rank": 136,
+          "usage": "0.26"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 165,
+          "usage": "0.30"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 140,
+          "usage": "0.50"
+        }
+      ],
+      "types": [
+        "normal",
+        "ghost"
+      ],
+      "strategies": [
+        {
+          "name": "Nasty Plot",
+          "tier": "uu",
+          "ability": "Illusion",
+          "item": "Heavy-Duty Boots / Focus Sash",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Shadow Ball",
+            "Focus Blast",
+            "Hyper Voice / U-turn",
+            "Nasty Plot"
+          ]
+        },
+        {
+          "name": "Choice Specs",
+          "tier": "nationaldexuu",
+          "ability": "Illusion",
+          "item": "Choice Specs",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Shadow Ball",
+            "Focus Blast",
+            "Grass Knot",
+            "Trick"
+          ]
+        },
+        {
+          "name": "Choice Specs (Normal)",
+          "tier": "monotype",
+          "ability": "Illusion",
+          "item": "Choice Specs",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Shadow Ball",
+            "Flamethrower",
+            "Focus Blast",
+            "Trick"
+          ]
+        },
+        {
+          "name": "Swords Dance (Ghost)",
+          "tier": "monotype",
+          "ability": "Illusion",
+          "item": "Life Orb / Spooky Plate",
+          "nature": "Jolly",
+          "teraType": "Normal",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Swords Dance",
+            "Poltergeist",
+            "Low Kick",
+            "Shadow Sneak"
+          ]
+        },
+        {
+          "name": "Choice Scarf (Ghost)",
+          "tier": "monotype",
+          "ability": "Illusion",
+          "item": "Choice Scarf",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "4 DEF / 252 SPA / 252 SPE",
+          "moves": [
+            "Shadow Ball",
+            "Focus Blast",
+            "Flamethrower / U-turn / Grass Knot",
+            "U-turn / Trick"
+          ]
+        },
+        {
+          "name": "Choice Scarf (Normal)",
+          "tier": "monotype",
+          "ability": "Illusion",
+          "item": "Choice Scarf",
+          "nature": "Naive",
+          "teraType": "Normal",
+          "evs": "4 ATK / 252 SPA / 252 SPE",
+          "moves": [
+            "Shadow Ball",
+            "Flamethrower",
+            "Focus Blast / Psychic",
+            "U-turn"
+          ]
+        },
+        {
+          "name": "Sheer Force",
+          "tier": "almostanyability",
+          "ability": "Sheer Force",
+          "item": "Life Orb",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Nasty Plot / Body Slam",
+            "Shadow Ball",
+            "Focus Blast",
+            "Psychic / Knock Off"
+          ]
+        },
+        {
+          "name": "Magic Guard",
+          "tier": "almostanyability",
+          "ability": "Magic Guard",
+          "item": "Life Orb",
+          "nature": "Hasty",
+          "teraType": "Normal",
+          "evs": "4 ATK / 252 SPA / 252 SPE",
+          "moves": [
+            "Hex",
+            "Knock Off",
+            "Will-O-Wisp",
+            "U-turn / Taunt"
+          ]
+        },
+        {
+          "name": "Z-Happy Hour (Ghost)",
+          "tier": "nationaldexmonotype",
+          "ability": "Illusion",
+          "item": "Normalium Z",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "4 DEF / 252 SPA / 252 SPE",
+          "moves": [
+            "Shadow Ball",
+            "Focus Blast",
+            "Hyper Voice / Flamethrower",
+            "Happy Hour"
+          ]
+        },
+        {
+          "name": "Z-Happy Hour (Normal)",
+          "tier": "nationaldexmonotype",
+          "ability": "Illusion",
+          "item": "Normalium Z",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "4 DEF / 252 SPA / 252 SPE",
+          "moves": [
+            "Happy Hour",
+            "Shadow Ball",
+            "Focus Blast",
+            "Flamethrower / Hyper Voice"
+          ]
+        },
+        {
+          "name": "Choiced Attacker (Ghost)",
+          "tier": "nationaldexmonotype",
+          "ability": "Illusion",
+          "item": "Choice Scarf / Choice Specs",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Shadow Ball",
+            "Focus Blast",
+            "Hyper Voice / Flamethrower",
+            "Trick / U-turn"
+          ]
+        },
+        {
+          "name": "Utility (Ghost)",
+          "tier": "nationaldexmonotype",
+          "ability": "Illusion",
+          "item": "Leftovers",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 HP / 4 DEF / 252 SPE",
+          "moves": [
+            "Hex",
+            "Knock Off",
+            "Will-O-Wisp",
+            "Substitute"
+          ]
+        },
+        {
+          "name": "Utility (Normal)",
+          "tier": "nationaldexmonotype",
+          "ability": "Illusion",
+          "item": "Leftovers",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 HP / 4 DEF / 252 SPE",
+          "moves": [
+            "Hex",
+            "Knock Off",
+            "Will-O-Wisp",
+            "Substitute"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "illusion",
+          "isHidden": false
+        }
+      ],
+      "stats": {
+        "hp": 55,
+        "attack": 100,
+        "defense": 60,
+        "special-attack": 125,
+        "special-defense": 60,
+        "speed": 110
+      },
+      "isLegendary": false,
+      "isMythical": false
     },
     "arceusground": {
       "name": "Arceus-Ground",
@@ -112056,14 +109947,19 @@ window.localDB = {
           "usage": "0.27"
         },
         {
-          "tier": "ubers",
-          "rank": 23,
-          "usage": "7.24"
-        },
-        {
           "tier": "ou",
           "rank": 20,
           "usage": "10.82"
+        },
+        {
+          "tier": "monotype",
+          "rank": 108,
+          "usage": "1.54"
+        },
+        {
+          "tier": "ubers",
+          "rank": 23,
+          "usage": "7.24"
         },
         {
           "tier": "doublesou",
@@ -112074,11 +109970,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 2,
           "usage": "19.28"
-        },
-        {
-          "tier": "monotype",
-          "rank": 108,
-          "usage": "1.54"
         }
       ],
       "types": [
@@ -112994,6 +110885,336 @@ window.localDB = {
       "isLegendary": true,
       "isMythical": false
     },
+    "arcaninehisui": {
+      "name": "Arcanine-Hisui",
+      "cleanName": "arcaninehisui",
+      "dex": 59,
+      "id": 10230,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10230.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "vgc2025",
+          "rank": 130,
+          "usage": "0.16"
+        },
+        {
+          "tier": "uu",
+          "rank": 23,
+          "usage": "9.83"
+        },
+        {
+          "tier": "ou",
+          "rank": 113,
+          "usage": "0.39"
+        },
+        {
+          "tier": "monotype",
+          "rank": 70,
+          "usage": "3.02"
+        },
+        {
+          "tier": "ubers",
+          "rank": 216,
+          "usage": "0.06"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 124,
+          "usage": "0.58"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 167,
+          "usage": "0.34"
+        }
+      ],
+      "types": [
+        "fire",
+        "rock"
+      ],
+      "strategies": [
+        {
+          "name": "Offensive",
+          "tier": "uu",
+          "ability": "Rock Head",
+          "item": "Heavy-Duty Boots / Focus Sash",
+          "nature": "Jolly",
+          "teraType": "Normal",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Head Smash",
+            "Flare Blitz",
+            "Extreme Speed",
+            "Stealth Rock / Morning Sun / Double-Edge"
+          ]
+        },
+        {
+          "name": "Choice Band",
+          "tier": "ou",
+          "ability": "Rock Head",
+          "item": "Choice Band",
+          "nature": "Jolly",
+          "teraType": "Normal / Rock / Fire",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Head Smash",
+            "Flare Blitz",
+            "Extreme Speed",
+            "Close Combat / Double-Edge"
+          ]
+        },
+        {
+          "name": "Choice Scarf",
+          "tier": "1v1",
+          "ability": "Intimidate",
+          "item": "Choice Scarf",
+          "nature": "Adamant / Jolly",
+          "teraType": "Normal",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Head Smash",
+            "Raging Fury",
+            "Close Combat",
+            "Outrage"
+          ]
+        },
+        {
+          "name": "Choice Band (Rock)",
+          "tier": "monotype",
+          "ability": "Rock Head",
+          "item": "Choice Band",
+          "nature": "Jolly",
+          "teraType": "Normal",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Head Smash",
+            "Flare Blitz",
+            "Close Combat",
+            "Extreme Speed"
+          ]
+        },
+        {
+          "name": "Choice Scarf (Rock)",
+          "tier": "monotype",
+          "ability": "Rock Head",
+          "item": "Choice Scarf",
+          "nature": "Jolly",
+          "teraType": "Normal",
+          "evs": "252 ATK / 4 DEF / 252 SPE",
+          "moves": [
+            "Flare Blitz",
+            "Head Smash",
+            "Wild Charge",
+            "Close Combat"
+          ]
+        },
+        {
+          "name": "Choice Scarf (Fire)",
+          "tier": "monotype",
+          "ability": "Rock Head",
+          "item": "Choice Scarf",
+          "nature": "Jolly",
+          "teraType": "Normal",
+          "evs": "252 ATK / 4 DEF / 252 SPE",
+          "moves": [
+            "Flare Blitz",
+            "Head Smash",
+            "Close Combat",
+            "Outrage / Stealth Rock"
+          ]
+        },
+        {
+          "name": "Substitute + 3 Attacks (Rock)",
+          "tier": "monotype",
+          "ability": "Rock Head",
+          "item": "Heavy-Duty Boots",
+          "nature": "Jolly",
+          "teraType": "Normal",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Substitute",
+            "Head Smash",
+            "Flare Blitz",
+            "Close Combat"
+          ]
+        },
+        {
+          "name": "Choice Band (Fire)",
+          "tier": "monotype",
+          "ability": "Rock Head",
+          "item": "Choice Band",
+          "nature": "Jolly",
+          "teraType": "Normal",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Flare Blitz",
+            "Head Smash",
+            "Extreme Speed",
+            "Close Combat / Wild Charge"
+          ]
+        },
+        {
+          "name": "Clear Amulet",
+          "tier": "vgc2025",
+          "ability": "Intimidate",
+          "item": "Clear Amulet",
+          "nature": "Jolly",
+          "teraType": "Water / Ghost",
+          "evs": "4 HP / 252 ATK / 252 SPE",
+          "moves": [
+            "Flare Blitz",
+            "Rock Slide",
+            "Extreme Speed",
+            "Protect"
+          ]
+        },
+        {
+          "name": "Mirror Herb",
+          "tier": "vgc2025",
+          "ability": "Intimidate",
+          "item": "Mirror Herb",
+          "nature": "Jolly",
+          "teraType": "Normal",
+          "evs": "180 HP / 44 ATK / 12 DEF / 20 SPD / 252 SPE",
+          "moves": [
+            "Flare Blitz",
+            "Rock Slide",
+            "Close Combat",
+            "Protect"
+          ]
+        },
+        {
+          "name": "Assault Vest",
+          "tier": "vgc2023",
+          "ability": "Intimidate",
+          "item": "Assault Vest",
+          "nature": "Adamant",
+          "teraType": "Fairy / Grass",
+          "evs": "172 HP / 116 ATK / 116 DEF / 76 SPD / 28 SPE",
+          "moves": [
+            "Rock Slide",
+            "Flare Blitz",
+            "Tera Blast",
+            "Extreme Speed"
+          ]
+        },
+        {
+          "name": "Offensive (Atk, Spe)",
+          "tier": "godlygift",
+          "ability": "Rock Head",
+          "item": "Heavy-Duty Boots",
+          "nature": "Jolly",
+          "teraType": "Normal",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Head Smash",
+            "Flare Blitz",
+            "Extreme Speed",
+            "Morning Sun"
+          ]
+        },
+        {
+          "name": "Altarianite",
+          "tier": "mixandmega",
+          "ability": "Intimidate",
+          "item": "Altarianite",
+          "nature": "Adamant",
+          "teraType": "Normal",
+          "evs": "160 HP / 252 ATK / 96 SPE",
+          "moves": [
+            "Extreme Speed",
+            "Flare Blitz",
+            "Stealth Rock / Stone Edge / Double-Edge",
+            "Morning Sun"
+          ]
+        },
+        {
+          "name": "Pinsirite Revenge Killer",
+          "tier": "mixandmega",
+          "ability": "Intimidate",
+          "item": "Pinsirite",
+          "nature": "Adamant",
+          "teraType": "Normal",
+          "evs": "160 HP / 252 ATK / 96 SPE",
+          "moves": [
+            "Extreme Speed",
+            "Flare Blitz",
+            "Double-Edge / Close Combat",
+            "Howl"
+          ]
+        },
+        {
+          "name": "Magic Guard",
+          "tier": "almostanyability",
+          "ability": "Magic Guard",
+          "item": "Life Orb",
+          "nature": "Jolly",
+          "teraType": "Normal",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Head Smash",
+            "Flare Blitz",
+            "Morning Sun",
+            "Extreme Speed / Stealth Rock / Will-O-Wisp"
+          ]
+        },
+        {
+          "name": "Choiced Attacker (Rock)",
+          "tier": "nationaldexmonotype",
+          "ability": "Rock Head",
+          "item": "Choice Band",
+          "nature": "Jolly",
+          "teraType": "Normal",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Flare Blitz",
+            "Head Smash",
+            "Extreme Speed",
+            "Close Combat"
+          ]
+        },
+        {
+          "name": "Non-Choice Item Attacker (Rock)",
+          "tier": "nationaldexmonotype",
+          "ability": "Rock Head",
+          "item": "Heavy-Duty Boots",
+          "nature": "Jolly",
+          "teraType": "Normal",
+          "evs": "228 ATK / 28 DEF / 252 SPE",
+          "moves": [
+            "Flare Blitz",
+            "Head Smash",
+            "Morning Sun",
+            "Substitute / Extreme Speed"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "intimidate",
+          "isHidden": false
+        },
+        {
+          "name": "flash-fire",
+          "isHidden": false
+        },
+        {
+          "name": "rock-head",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 95,
+        "attack": 115,
+        "defense": 80,
+        "special-attack": 95,
+        "special-defense": 80,
+        "speed": 90
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
     "arceusfire": {
       "name": "Arceus-Fire",
       "cleanName": "arceusfire",
@@ -113156,6 +111377,182 @@ window.localDB = {
       "isLegendary": true,
       "isMythical": false
     },
+    "thundurustherian": {
+      "name": "Thundurus-Therian",
+      "cleanName": "thundurustherian",
+      "dex": 642,
+      "id": 642,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/642.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "vgc2025",
+          "rank": 151,
+          "usage": "0.10"
+        },
+        {
+          "tier": "uu",
+          "rank": 16,
+          "usage": "11.44"
+        },
+        {
+          "tier": "ou",
+          "rank": 117,
+          "usage": "0.35"
+        },
+        {
+          "tier": "monotype",
+          "rank": 124,
+          "usage": "0.98"
+        },
+        {
+          "tier": "ubers",
+          "rank": 206,
+          "usage": "0.06"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 158,
+          "usage": "0.33"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 142,
+          "usage": "0.48"
+        }
+      ],
+      "types": [
+        "electric",
+        "flying"
+      ],
+      "strategies": [
+        {
+          "name": "Pivot",
+          "tier": "uu",
+          "ability": "Volt Absorb",
+          "item": "Heavy-Duty Boots",
+          "nature": "Timid",
+          "teraType": "Poison / Steel",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Sludge Bomb",
+            "Focus Blast",
+            "Thunderbolt / Knock Off / Grass Knot",
+            "Volt Switch"
+          ]
+        },
+        {
+          "name": "Nasty Plot",
+          "tier": "uu",
+          "ability": "Volt Absorb",
+          "item": "Sitrus Berry",
+          "nature": "Modest",
+          "teraType": "Flying / Steel",
+          "evs": "244 HP / 152 SPA / 12 SPD / 100 SPE",
+          "moves": [
+            "Thunderbolt",
+            "Nasty Plot",
+            "Agility",
+            "Dark Pulse / Focus Blast"
+          ]
+        },
+        {
+          "name": "Offensive Pivot (Flying)",
+          "tier": "monotype",
+          "ability": "Volt Absorb",
+          "item": "Heavy-Duty Boots",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Thunderbolt",
+            "Volt Switch",
+            "Grass Knot",
+            "Focus Blast"
+          ]
+        },
+        {
+          "name": "Nasty Plot (Electric)",
+          "tier": "monotype",
+          "ability": "Volt Absorb",
+          "item": "Heavy-Duty Boots",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Nasty Plot",
+            "Thunderbolt",
+            "Psychic",
+            "Grass Knot"
+          ]
+        },
+        {
+          "name": "Nasty Plot (Spe)",
+          "tier": "godlygift",
+          "ability": "Volt Absorb",
+          "item": "Heavy-Duty Boots",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Thunderbolt",
+            "Grass Knot",
+            "Focus Blast",
+            "Nasty Plot"
+          ]
+        },
+        {
+          "name": "Choice Scarf",
+          "tier": "almostanyability",
+          "ability": "Beads of Ruin",
+          "item": "Choice Scarf",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Thunderbolt",
+            "Focus Blast",
+            "Psychic / Grass Knot",
+            "U-turn / Volt Switch"
+          ]
+        },
+        {
+          "name": "Electrium Z (Flying)",
+          "tier": "nationaldexmonotype",
+          "ability": "Volt Absorb",
+          "item": "Electrium Z",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "4 DEF / 252 SPA / 252 SPE",
+          "moves": [
+            "Thunderbolt",
+            "Hidden Power Ice",
+            "Grass Knot",
+            "Agility"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "prankster",
+          "isHidden": false
+        },
+        {
+          "name": "defiant",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 79,
+        "attack": 115,
+        "defense": 70,
+        "special-attack": 125,
+        "special-defense": 80,
+        "speed": 111
+      },
+      "isLegendary": true,
+      "isMythical": false
+    },
     "moltresgalar": {
       "name": "Moltres-Galar",
       "cleanName": "moltresgalar",
@@ -113170,14 +111567,19 @@ window.localDB = {
           "usage": "0.09"
         },
         {
-          "tier": "ubers",
-          "rank": 308,
-          "usage": "0.02"
-        },
-        {
           "tier": "ou",
           "rank": 84,
           "usage": "0.90"
+        },
+        {
+          "tier": "monotype",
+          "rank": 85,
+          "usage": "2.23"
+        },
+        {
+          "tier": "ubers",
+          "rank": 308,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -113188,11 +111590,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 117,
           "usage": "0.78"
-        },
-        {
-          "tier": "monotype",
-          "rank": 85,
-          "usage": "2.23"
         }
       ],
       "types": [
@@ -113368,6 +111765,439 @@ window.localDB = {
       "isLegendary": true,
       "isMythical": false
     },
+    "enamorustherian": {
+      "name": "Enamorus-Therian",
+      "cleanName": "enamorustherian",
+      "dex": 905,
+      "id": 905,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/905.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "vgc2025",
+          "rank": 170,
+          "usage": "0.07"
+        },
+        {
+          "tier": "uu",
+          "rank": 82,
+          "usage": "1.16"
+        },
+        {
+          "tier": "ou",
+          "rank": 122,
+          "usage": "0.31"
+        },
+        {
+          "tier": "monotype",
+          "rank": 294,
+          "usage": "0.03"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 236,
+          "usage": "0.08"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 302,
+          "usage": "0.06"
+        }
+      ],
+      "types": [
+        "fairy",
+        "flying"
+      ],
+      "strategies": [
+        {
+          "name": "3 Attacks",
+          "tier": "uu",
+          "ability": "Overcoat",
+          "item": "Heavy-Duty Boots",
+          "nature": "Modest",
+          "teraType": "Fairy / Steel",
+          "evs": "120 HP / 136 SPA / 252 SPE",
+          "moves": [
+            "Moonblast",
+            "Earth Power",
+            "Mystical Fire / Taunt / Agility",
+            "Healing Wish"
+          ]
+        },
+        {
+          "name": "Choice Specs",
+          "tier": "uu",
+          "ability": "Overcoat",
+          "item": "Choice Specs",
+          "nature": "Modest",
+          "teraType": "Normal",
+          "evs": "4 DEF / 252 SPA / 252 SPE",
+          "moves": [
+            "Moonblast",
+            "Earth Power",
+            "Mystical Fire",
+            "Draining Kiss"
+          ]
+        },
+        {
+          "name": "Calm Mind",
+          "tier": "uu",
+          "ability": "Overcoat",
+          "item": "Heavy-Duty Boots",
+          "nature": "Modest",
+          "teraType": "Ground / Fairy / Steel",
+          "evs": "252 HP / 36 DEF / 56 SPA / 164 SPE",
+          "moves": [
+            "Calm Mind",
+            "Moonblast",
+            "Earth Power",
+            "Draining Kiss"
+          ]
+        },
+        {
+          "name": "Calm Mind (Fairy)",
+          "tier": "monotype",
+          "ability": "Overcoat",
+          "item": "Leftovers",
+          "nature": "Calm",
+          "teraType": "Normal",
+          "evs": "252 HP / 4 DEF / 252 SPD",
+          "moves": [
+            "Iron Defense",
+            "Draining Kiss",
+            "Calm Mind",
+            "Earth Power"
+          ]
+        },
+        {
+          "name": "Defensive (Clefable)",
+          "tier": "inheritance",
+          "ability": "Magic Guard / Unaware",
+          "item": "Leftovers / Heavy-Duty Boots / Life Orb",
+          "nature": "Bold",
+          "teraType": "Normal",
+          "evs": "248 HP / 252 DEF / 8 SPE",
+          "moves": [
+            "Moonblast",
+            "Flamethrower / Knock Off / Stored Power",
+            "Calm Mind / Stealth Rock / Thunder Wave",
+            "Moonlight"
+          ]
+        },
+        {
+          "name": "Calm Mind (HP, Spe)",
+          "tier": "godlygift",
+          "ability": "Overcoat",
+          "item": "Grassy Seed",
+          "nature": "Modest",
+          "teraType": "Normal",
+          "evs": "248 HP / 252 SPA / 8 SPD",
+          "moves": [
+            "Moonblast",
+            "Earth Power",
+            "Draining Kiss",
+            "Calm Mind"
+          ]
+        },
+        {
+          "name": "Sheer Force",
+          "tier": "almostanyability",
+          "ability": "Sheer Force",
+          "item": "Life Orb",
+          "nature": "Quiet / Modest",
+          "teraType": "Normal",
+          "evs": "248 HP / 252 SPA / 8 SPD OR 248 HP / 8 DEF / 252 SPA",
+          "moves": [
+            "Moonblast",
+            "Earth Power",
+            "Mystical Fire",
+            "Superpower / Grass Knot"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "cute-charm",
+          "isHidden": false
+        },
+        {
+          "name": "contrary",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 74,
+        "attack": 115,
+        "defense": 70,
+        "special-attack": 135,
+        "special-defense": 80,
+        "speed": 106
+      },
+      "isLegendary": true,
+      "isMythical": false
+    },
+    "zapdosgalar": {
+      "name": "Zapdos-Galar",
+      "cleanName": "zapdosgalar",
+      "dex": 145,
+      "id": 10170,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10170.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "vgc2025",
+          "rank": 180,
+          "usage": "0.06"
+        },
+        {
+          "tier": "uu",
+          "rank": 40,
+          "usage": "5.37"
+        },
+        {
+          "tier": "ou",
+          "rank": 124,
+          "usage": "0.30"
+        },
+        {
+          "tier": "monotype",
+          "rank": 54,
+          "usage": "3.97"
+        },
+        {
+          "tier": "ubers",
+          "rank": 269,
+          "usage": "0.02"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 90,
+          "usage": "1.04"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 169,
+          "usage": "0.33"
+        }
+      ],
+      "types": [
+        "fighting",
+        "flying"
+      ],
+      "strategies": [
+        {
+          "name": "Pivot",
+          "tier": "uu",
+          "ability": "Defiant",
+          "item": "Choice Scarf",
+          "nature": "Jolly",
+          "teraType": "Fighting / Flying / Steel",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Brave Bird",
+            "Close Combat",
+            "Knock Off",
+            "U-turn"
+          ]
+        },
+        {
+          "name": "Choice Band",
+          "tier": "1v1",
+          "ability": "Defiant",
+          "item": "Choice Band",
+          "nature": "Jolly / Adamant",
+          "teraType": "Normal",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Brave Bird",
+            "Close Combat",
+            "Thunderous Kick / Knock Off",
+            "U-turn / Knock Off"
+          ]
+        },
+        {
+          "name": "Choiced Attacker (Flying)",
+          "tier": "monotype",
+          "ability": "Defiant",
+          "item": "Choice Scarf / Choice Band",
+          "nature": "Jolly",
+          "teraType": "Normal",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Close Combat",
+            "Brave Bird",
+            "Knock Off",
+            "U-turn"
+          ]
+        },
+        {
+          "name": "Choice Band (Fighting)",
+          "tier": "monotype",
+          "ability": "Defiant",
+          "item": "Choice Band",
+          "nature": "Jolly",
+          "teraType": "Normal",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Brave Bird",
+            "Close Combat",
+            "Knock Off / Drill Peck",
+            "U-turn"
+          ]
+        },
+        {
+          "name": "Choice Scarf",
+          "tier": "vgc2024",
+          "ability": "Defiant",
+          "item": "Choice Scarf",
+          "nature": "Adamant",
+          "teraType": "Normal",
+          "evs": "60 HP / 196 ATK / 4 DEF / 12 SPD / 236 SPE",
+          "moves": [
+            "Brave Bird",
+            "Close Combat",
+            "Dual Wingbeat / U-turn / Taunt",
+            "Coaching"
+          ]
+        },
+        {
+          "name": "Offensive Scrappy (Decidueye-Hisui)",
+          "tier": "inheritance",
+          "ability": "Scrappy",
+          "item": "Life Orb / Leftovers",
+          "nature": "Jolly / Adamant",
+          "teraType": "Normal",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Triple Arrows / Close Combat",
+            "Brave Bird",
+            "Swords Dance",
+            "Roost / Substitute / Knock Off"
+          ]
+        },
+        {
+          "name": "Bulky Scrappy (Decidueye-Hisui)",
+          "tier": "inheritance",
+          "ability": "Scrappy",
+          "item": "Leftovers / Metronome",
+          "nature": "Careful",
+          "teraType": "Normal",
+          "evs": "252 HP / 252 SPD / 4 SPE",
+          "moves": [
+            "Triple Arrows / Close Combat",
+            "Bulk Up",
+            "Substitute",
+            "Roost"
+          ]
+        },
+        {
+          "name": "Tinted Lens (Braviary-Hisui)",
+          "tier": "inheritance",
+          "ability": "Tinted Lens",
+          "item": "Choice Band",
+          "nature": "Jolly / Adamant",
+          "teraType": "Normal",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Brave Bird",
+            "Close Combat",
+            "Shadow Claw / Dual Wingbeat",
+            "U-turn"
+          ]
+        },
+        {
+          "name": "Wallbreaker",
+          "tier": "partnersincrime",
+          "ability": "Defiant",
+          "item": "Life Orb",
+          "nature": "Jolly",
+          "teraType": "Normal",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Close Combat",
+            "Brave Bird",
+            "Tailwind / Coaching",
+            "Protect"
+          ]
+        },
+        {
+          "name": "All-Out Attacker",
+          "tier": "stabmons",
+          "ability": "Defiant",
+          "item": "Life Orb / Protective Pads",
+          "nature": "Adamant",
+          "teraType": "Normal",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Close Combat / Thunderous Kick",
+            "Dragon Ascent",
+            "Knock Off",
+            "Mach Punch / Roost"
+          ]
+        },
+        {
+          "name": "Choice Band (Spe)",
+          "tier": "godlygift",
+          "ability": "Defiant",
+          "item": "Choice Band",
+          "nature": "Jolly",
+          "teraType": "Normal",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Close Combat",
+            "Brave Bird",
+            "Knock Off",
+            "U-turn"
+          ]
+        },
+        {
+          "name": "Magic Guard",
+          "tier": "almostanyability",
+          "ability": "Magic Guard",
+          "item": "Life Orb",
+          "nature": "Jolly",
+          "teraType": "Normal",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Brave Bird",
+            "Thunderous Kick",
+            "Knock Off",
+            "U-turn / Close Combat"
+          ]
+        },
+        {
+          "name": "Choice Scarf (Fighting)",
+          "tier": "nationaldexmonotype",
+          "ability": "Defiant",
+          "item": "Choice Scarf",
+          "nature": "Jolly",
+          "teraType": "Normal",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Brave Bird",
+            "Close Combat",
+            "Steel Wing / Knock Off",
+            "U-turn"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "defiant",
+          "isHidden": false
+        }
+      ],
+      "stats": {
+        "hp": 90,
+        "attack": 125,
+        "defense": 90,
+        "special-attack": 85,
+        "special-defense": 90,
+        "speed": 100
+      },
+      "isLegendary": true,
+      "isMythical": false
+    },
     "arceusbug": {
       "name": "Arceus-Bug",
       "cleanName": "arceusbug",
@@ -113438,6 +112268,106 @@ window.localDB = {
       },
       "isLegendary": false,
       "isMythical": true
+    },
+    "vivillon": {
+      "name": "Vivillon",
+      "cleanName": "vivillon",
+      "dex": 666,
+      "id": 666,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/666.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "vgc2025",
+          "rank": 189,
+          "usage": "0.05"
+        },
+        {
+          "tier": "zu",
+          "rank": 176,
+          "usage": "0.10"
+        },
+        {
+          "tier": "monotype",
+          "rank": 261,
+          "usage": "0.06"
+        },
+        {
+          "tier": "ubers",
+          "rank": 198,
+          "usage": "0.07"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 261,
+          "usage": "0.05"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 377,
+          "usage": "0.03"
+        }
+      ],
+      "types": [
+        "bug",
+        "flying"
+      ],
+      "strategies": [
+        {
+          "name": "Status Utility (Bug)",
+          "tier": "monotype",
+          "ability": "Compound Eyes",
+          "item": "Focus Sash",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Hurricane",
+            "Sleep Powder",
+            "Stun Spore",
+            "Tailwind"
+          ]
+        },
+        {
+          "name": "Support",
+          "tier": "vgc2025",
+          "ability": "Compound Eyes",
+          "item": "Focus Sash",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "4 HP / 252 SPA / 252 SPE",
+          "moves": [
+            "Hurricane",
+            "Rage Powder",
+            "Sleep Powder",
+            "Protect"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "shield-dust",
+          "isHidden": false
+        },
+        {
+          "name": "compound-eyes",
+          "isHidden": false
+        },
+        {
+          "name": "friend-guard",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 80,
+        "attack": 52,
+        "defense": 50,
+        "special-attack": 90,
+        "special-defense": 50,
+        "speed": 89
+      },
+      "isLegendary": false,
+      "isMythical": false
     },
     "arceussteel": {
       "name": "Arceus-Steel",
@@ -113539,14 +112469,19 @@ window.localDB = {
           "usage": "0.04"
         },
         {
-          "tier": "ubers",
-          "rank": 76,
-          "usage": "0.83"
-        },
-        {
           "tier": "ou",
           "rank": 16,
           "usage": "12.50"
+        },
+        {
+          "tier": "monotype",
+          "rank": 8,
+          "usage": "10.66"
+        },
+        {
+          "tier": "ubers",
+          "rank": 76,
+          "usage": "0.83"
         },
         {
           "tier": "doublesou",
@@ -113557,11 +112492,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 34,
           "usage": "6.58"
-        },
-        {
-          "tier": "monotype",
-          "rank": 8,
-          "usage": "10.66"
         }
       ],
       "types": [
@@ -113831,6 +112761,398 @@ window.localDB = {
       "isLegendary": false,
       "isMythical": false
     },
+    "oricoriosensu": {
+      "name": "Oricorio-Sensu",
+      "cleanName": "oricoriosensu",
+      "dex": 741,
+      "id": 741,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/741.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "vgc2025",
+          "rank": 201,
+          "usage": "0.04"
+        },
+        {
+          "tier": "ru",
+          "rank": 111,
+          "usage": "0.59"
+        },
+        {
+          "tier": "uu",
+          "rank": 131,
+          "usage": "0.27"
+        },
+        {
+          "tier": "monotype",
+          "rank": 249,
+          "usage": "0.07"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 265,
+          "usage": "0.05"
+        }
+      ],
+      "types": [
+        "fire",
+        "flying"
+      ],
+      "strategies": [
+        {
+          "name": "Bulky Quiver Dance Sweeper",
+          "tier": "ru",
+          "ability": "Dancer",
+          "item": "Heavy-Duty Boots / Kee Berry",
+          "nature": "Timid",
+          "teraType": "Fairy / Steel",
+          "evs": "248 HP / 216 DEF / 44 SPE",
+          "moves": [
+            "Revelation Dance / Air Slash / Hurricane",
+            "Quiver Dance",
+            "Roost",
+            "Taunt"
+          ]
+        },
+        {
+          "name": "Offensive Quiver Dance",
+          "tier": "ru",
+          "ability": "Dancer",
+          "item": "Heavy-Duty Boots",
+          "nature": "Timid",
+          "teraType": "Fighting / Fairy",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Revelation Dance / Air Slash",
+            "Quiver Dance",
+            "Taunt / Air Slash",
+            "Roost"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "dancer",
+          "isHidden": false
+        }
+      ],
+      "stats": {
+        "hp": 75,
+        "attack": 70,
+        "defense": 70,
+        "special-attack": 98,
+        "special-defense": 70,
+        "speed": 93
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
+    "goodrahisui": {
+      "name": "Goodra-Hisui",
+      "cleanName": "goodrahisui",
+      "dex": 706,
+      "id": 10242,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10242.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "vgc2025",
+          "rank": 203,
+          "usage": "0.04"
+        },
+        {
+          "tier": "ru",
+          "rank": 30,
+          "usage": "6.90"
+        },
+        {
+          "tier": "uu",
+          "rank": 43,
+          "usage": "4.58"
+        },
+        {
+          "tier": "ou",
+          "rank": 102,
+          "usage": "0.55"
+        },
+        {
+          "tier": "monotype",
+          "rank": 3,
+          "usage": "13.79"
+        },
+        {
+          "tier": "ubers",
+          "rank": 174,
+          "usage": "0.10"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 68,
+          "usage": "1.77"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 133,
+          "usage": "0.57"
+        }
+      ],
+      "types": [
+        "steel",
+        "dragon"
+      ],
+      "strategies": [
+        {
+          "name": "AcidPress",
+          "tier": "vgc2023",
+          "ability": "Shell Armor",
+          "item": "Leftovers",
+          "nature": "Careful",
+          "teraType": "Flying / Fairy",
+          "evs": "252 HP / 4 ATK / 244 DEF / 4 SPD / 4 SPE",
+          "moves": [
+            "Heavy Slam",
+            "Body Press",
+            "Acid Armor / Shelter",
+            "Life Dew"
+          ]
+        },
+        {
+          "name": "Offensive Tank",
+          "tier": "uu",
+          "ability": "Gooey",
+          "item": "Leftovers",
+          "nature": "Modest",
+          "teraType": "Normal",
+          "evs": "72 HP / 252 SPA / 184 SPE",
+          "moves": [
+            "Draco Meteor",
+            "Flash Cannon",
+            "Thunderbolt",
+            "Surf"
+          ]
+        },
+        {
+          "name": "Bulky Attacker",
+          "tier": "ru",
+          "ability": "Sap Sipper / Gooey",
+          "item": "Leftovers / Assault Vest",
+          "nature": "Quiet",
+          "teraType": "Fairy / Ghost / Water",
+          "evs": "252 HP / 4 DEF / 252 SPA",
+          "moves": [
+            "Draco Meteor",
+            "Heavy Slam / Acid Spray",
+            "Knock Off / Earthquake / Flamethrower",
+            "Protect / Dragon Tail"
+          ]
+        },
+        {
+          "name": "Choice Specs",
+          "tier": "ru",
+          "ability": "Gooey",
+          "item": "Choice Specs",
+          "nature": "Modest",
+          "teraType": "Ghost / Dragon",
+          "evs": "40 HP / 252 SPA / 216 SPE",
+          "moves": [
+            "Flash Cannon",
+            "Draco Meteor",
+            "Thunderbolt",
+            "Flamethrower"
+          ]
+        },
+        {
+          "name": "Assault Vest",
+          "tier": "ou",
+          "ability": "Sap Sipper / Gooey",
+          "item": "Assault Vest",
+          "nature": "Modest",
+          "teraType": "Normal",
+          "evs": "248 HP / 252 SPA / 8 SPD",
+          "moves": [
+            "Flash Cannon",
+            "Dragon Tail / Draco Meteor",
+            "Flamethrower / Knock Off",
+            "Ice Beam / Knock Off"
+          ]
+        },
+        {
+          "name": "Custap Berry",
+          "tier": "1v1",
+          "ability": "Shell Armor",
+          "item": "Custap Berry",
+          "nature": "Calm",
+          "teraType": "Normal",
+          "evs": "252 HP / 196 SPA / 60 SPD",
+          "moves": [
+            "Draco Meteor",
+            "Acid Spray",
+            "Sludge Wave / Flash Cannon",
+            "Endure"
+          ]
+        },
+        {
+          "name": "Chople Berry",
+          "tier": "1v1",
+          "ability": "Shell Armor",
+          "item": "Chople Berry",
+          "nature": "Sassy",
+          "teraType": "Normal",
+          "evs": "252 HP / 32 ATK / 48 DEF / 88 SPA / 88 SPD",
+          "moves": [
+            "Draco Meteor",
+            "Heavy Slam",
+            "Acid Spray",
+            "Counter"
+          ]
+        },
+        {
+          "name": "Choice Band",
+          "tier": "1v1",
+          "ability": "Shell Armor",
+          "item": "Choice Band",
+          "nature": "Adamant",
+          "teraType": "Normal",
+          "evs": "248 HP / 236 ATK / 24 DEF",
+          "moves": [
+            "Outrage",
+            "Heavy Slam",
+            "Skitter Smack",
+            "Earthquake"
+          ]
+        },
+        {
+          "name": "Specially Defensive (Steel)",
+          "tier": "monotype",
+          "ability": "Shell Armor",
+          "item": "Leftovers",
+          "nature": "Careful",
+          "teraType": "Normal",
+          "evs": "248 HP / 8 DEF / 252 SPD",
+          "moves": [
+            "Heavy Slam",
+            "Knock Off",
+            "Dragon Tail",
+            "Protect"
+          ]
+        },
+        {
+          "name": "Specially Defensive (Dragon)",
+          "tier": "monotype",
+          "ability": "Gooey",
+          "item": "Leftovers",
+          "nature": "Careful",
+          "teraType": "Normal",
+          "evs": "248 HP / 8 DEF / 252 SPD",
+          "moves": [
+            "Heavy Slam",
+            "Knock Off",
+            "Dragon Tail",
+            "Protect"
+          ]
+        },
+        {
+          "name": "Armor Press",
+          "tier": "battlestadiumsingles",
+          "ability": "Shell Armor",
+          "item": "Leftovers",
+          "nature": "Careful / Impish",
+          "teraType": "Flying / Fairy",
+          "evs": "252 HP / 252 SPD / 4 SPE",
+          "moves": [
+            "Acid Armor",
+            "Body Press",
+            "Heavy Slam",
+            "Protect / Draco Meteor / Ice Beam"
+          ]
+        },
+        {
+          "name": "RegenVest (Cyclizar)",
+          "tier": "inheritance",
+          "ability": "Regenerator",
+          "item": "Assault Vest",
+          "nature": "Sassy",
+          "teraType": "Normal",
+          "evs": "252 HP / 4 SPA / 252 SPD",
+          "moves": [
+            "U-turn",
+            "Knock Off",
+            "Rapid Spin / Overheat / Dragon Tail / Iron Head",
+            "Draco Meteor / Overheat / Iron Head / Dragon Tail"
+          ]
+        },
+        {
+          "name": "Assault Vest (HP, Atk)",
+          "tier": "godlygift",
+          "ability": "Gooey",
+          "item": "Assault Vest",
+          "nature": "Quiet",
+          "teraType": "Normal",
+          "evs": "252 HP / 4 ATK / 252 SPA",
+          "moves": [
+            "Draco Meteor",
+            "Heavy Slam",
+            "Knock Off",
+            "Dragon Tail"
+          ]
+        },
+        {
+          "name": "RegenVest",
+          "tier": "almostanyability",
+          "ability": "Regenerator",
+          "item": "Assault Vest",
+          "nature": "Sassy",
+          "teraType": "Normal",
+          "evs": "252 HP / 4 DEF / 252 SPD",
+          "moves": [
+            "Heavy Slam",
+            "Dragon Tail",
+            "Knock Off",
+            "Thunderbolt / Ice Beam / Flamethrower"
+          ]
+        },
+        {
+          "name": "AcidPress (Dragon)",
+          "tier": "nationaldexmonotype",
+          "ability": "Shell Armor / Sap Sipper",
+          "item": "Leftovers / Chesto Berry",
+          "nature": "Careful",
+          "teraType": "Normal",
+          "evs": "252 HP / 4 DEF / 252 SPD",
+          "moves": [
+            "Heavy Slam",
+            "Body Press",
+            "Acid Armor",
+            "Protect / Rest"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "sap-sipper",
+          "isHidden": false
+        },
+        {
+          "name": "shell-armor",
+          "isHidden": false
+        },
+        {
+          "name": "gooey",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 80,
+        "attack": 100,
+        "defense": 100,
+        "special-attack": 110,
+        "special-defense": 150,
+        "speed": 60
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
     "kyuremblack": {
       "name": "Kyurem-Black",
       "cleanName": "kyuremblack",
@@ -114078,14 +113400,19 @@ window.localDB = {
           "usage": "0.03"
         },
         {
-          "tier": "ubers",
-          "rank": 128,
-          "usage": "0.31"
-        },
-        {
           "tier": "ou",
           "rank": 11,
           "usage": "14.16"
+        },
+        {
+          "tier": "monotype",
+          "rank": 80,
+          "usage": "2.46"
+        },
+        {
+          "tier": "ubers",
+          "rank": 128,
+          "usage": "0.31"
         },
         {
           "tier": "doublesou",
@@ -114096,11 +113423,6 @@ window.localDB = {
           "tier": "nationaldex",
           "rank": 20,
           "usage": "9.17"
-        },
-        {
-          "tier": "monotype",
-          "rank": 80,
-          "usage": "2.46"
         }
       ],
       "types": [
@@ -114492,6 +113814,191 @@ window.localDB = {
       "isLegendary": false,
       "isMythical": true
     },
+    "basculegionf": {
+      "name": "Basculegion-F",
+      "cleanName": "basculegionf",
+      "dex": 902,
+      "id": 902,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/902.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "vgc2025",
+          "rank": 254,
+          "usage": "0.02"
+        },
+        {
+          "tier": "ru",
+          "rank": 25,
+          "usage": "7.76"
+        },
+        {
+          "tier": "uu",
+          "rank": 64,
+          "usage": "1.93"
+        },
+        {
+          "tier": "ou",
+          "rank": 188,
+          "usage": "0.08"
+        },
+        {
+          "tier": "monotype",
+          "rank": 131,
+          "usage": "0.69"
+        },
+        {
+          "tier": "ubers",
+          "rank": 320,
+          "usage": "0.01"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 56,
+          "usage": "2.31"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 198,
+          "usage": "0.24"
+        }
+      ],
+      "types": [
+        "water",
+        "ghost"
+      ],
+      "strategies": [
+        {
+          "name": "Choice Scarf",
+          "tier": "uu",
+          "ability": "Adaptability",
+          "item": "Choice Scarf",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "4 DEF / 252 SPA / 252 SPE",
+          "moves": [
+            "Shadow Ball",
+            "Surf / Hydro Pump",
+            "Ice Beam / Hex",
+            "Flip Turn"
+          ]
+        },
+        {
+          "name": "Agility",
+          "tier": "ru",
+          "ability": "Adaptability",
+          "item": "Weakness Policy / Life Orb",
+          "nature": "Modest",
+          "teraType": "Ghost / Water",
+          "evs": "52 DEF / 236 SPA / 24 SPD / 196 SPE",
+          "moves": [
+            "Agility",
+            "Shadow Ball",
+            "Surf",
+            "Ice Beam"
+          ]
+        },
+        {
+          "name": "Choice Specs",
+          "tier": "ru",
+          "ability": "Adaptability / Swift Swim",
+          "item": "Choice Specs",
+          "nature": "Modest",
+          "teraType": "Ghost / Water",
+          "evs": "4 DEF / 252 SPA / 252 SPE",
+          "moves": [
+            "Surf / Hydro Pump",
+            "Shadow Ball",
+            "Ice Beam",
+            "Flip Turn"
+          ]
+        },
+        {
+          "name": "Swift Swim Wallbreaker (Water)",
+          "tier": "monotype",
+          "ability": "Adaptability",
+          "item": "Choice Specs",
+          "nature": "Modest",
+          "teraType": "Normal",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Shadow Ball",
+            "Surf",
+            "Hydro Pump",
+            "Ice Beam"
+          ]
+        },
+        {
+          "name": "Rain Sweeper (SpA, Spe)",
+          "tier": "godlygift",
+          "ability": "Adaptability",
+          "item": "Choice Specs",
+          "nature": "Modest",
+          "teraType": "Normal",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Hydro Pump",
+            "Shadow Ball",
+            "Ice Beam",
+            "Surf"
+          ]
+        },
+        {
+          "name": "Rain Attacker",
+          "tier": "doublesou",
+          "ability": "Adaptability",
+          "item": "Life Orb / Choice Band",
+          "nature": "Adamant",
+          "teraType": "Dark / Water / Ghost",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Wave Crash",
+            "Last Respects",
+            "Aqua Jet",
+            "Protect / Flip Turn"
+          ]
+        },
+        {
+          "name": "Substitute Attacker",
+          "tier": "nationaldexru",
+          "ability": "Adaptability",
+          "item": "Leftovers / Waterium Z / Ghostium Z",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Substitute",
+            "Surf",
+            "Shadow Ball",
+            "Ice Beam"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "swift-swim",
+          "isHidden": false
+        },
+        {
+          "name": "adaptability",
+          "isHidden": false
+        },
+        {
+          "name": "mold-breaker",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 120,
+        "attack": 112,
+        "defense": 65,
+        "special-attack": 80,
+        "special-defense": 75,
+        "speed": 78
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
     "arceusghost": {
       "name": "Arceus-Ghost",
       "cleanName": "arceusghost",
@@ -114709,6 +114216,599 @@ window.localDB = {
       "isLegendary": false,
       "isMythical": true
     },
+    "deoxysdefense": {
+      "name": "Deoxys-Defense",
+      "cleanName": "deoxysdefense",
+      "dex": 386,
+      "id": 386,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/386.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "vgc2025",
+          "rank": 270,
+          "usage": "0.01"
+        },
+        {
+          "tier": "ru",
+          "rank": 69,
+          "usage": "1.82"
+        },
+        {
+          "tier": "uu",
+          "rank": 175,
+          "usage": "0.10"
+        },
+        {
+          "tier": "ou",
+          "rank": 204,
+          "usage": "0.07"
+        },
+        {
+          "tier": "monotype",
+          "rank": 194,
+          "usage": "0.19"
+        },
+        {
+          "tier": "ubers",
+          "rank": 133,
+          "usage": "0.29"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 243,
+          "usage": "0.07"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 260,
+          "usage": "0.09"
+        }
+      ],
+      "types": [
+        "psychic"
+      ],
+      "strategies": [
+        {
+          "name": "Utility",
+          "tier": "ru",
+          "ability": "Pressure",
+          "item": "Heavy-Duty Boots / Colbur Berry",
+          "nature": "Impish / Bold",
+          "teraType": "Ghost / Fairy / Water",
+          "evs": "252 HP / 240 DEF / 16 SPE OR 252 HP / 160 SPD / 96 SPE",
+          "moves": [
+            "Teleport",
+            "Recover",
+            "Knock Off / Thunder Wave / Psychic Noise",
+            "Spikes / Taunt / Thunder Wave"
+          ]
+        },
+        {
+          "name": "Stallbreaker (Psychic)",
+          "tier": "monotype",
+          "ability": "Pressure",
+          "item": "Heavy-Duty Boots",
+          "nature": "Bold",
+          "teraType": "Normal",
+          "evs": "248 HP / 84 DEF / 176 SPE",
+          "moves": [
+            "Cosmic Power",
+            "Taunt",
+            "Night Shade",
+            "Recover"
+          ]
+        },
+        {
+          "name": "Physically Defensive",
+          "tier": "monotype",
+          "ability": "Pressure",
+          "item": "Heavy-Duty Boots / Leftovers",
+          "nature": "Bold",
+          "teraType": "Normal",
+          "evs": "248 HP / 252 DEF / 8 SPD",
+          "moves": [
+            "Night Shade / Knock Off",
+            "Teleport / Taunt",
+            "Recover",
+            "Spikes / Thunder Wave"
+          ]
+        },
+        {
+          "name": "Physical Wall (HP)",
+          "tier": "godlygift",
+          "ability": "Pressure",
+          "item": "Heavy-Duty Boots",
+          "nature": "Bold",
+          "teraType": "Normal",
+          "evs": "248 HP / 252 DEF / 8 SPD",
+          "moves": [
+            "Spikes",
+            "Night Shade",
+            "Recover",
+            "Teleport"
+          ]
+        },
+        {
+          "name": "Defensive",
+          "tier": "almostanyability",
+          "ability": "Unaware / Fluffy / Intimidate",
+          "item": "Leftovers / Heavy-Duty Boots",
+          "nature": "Relaxed",
+          "teraType": "Normal",
+          "evs": "252 HP / 252 DEF / 4 SPD",
+          "moves": [
+            "Night Shade",
+            "Recover",
+            "Spikes / Stealth Rock / Knock Off",
+            "Teleport / Thunder Wave / Knock Off"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "pressure",
+          "isHidden": false
+        }
+      ],
+      "stats": {
+        "hp": 50,
+        "attack": 150,
+        "defense": 50,
+        "special-attack": 150,
+        "special-defense": 50,
+        "speed": 150
+      },
+      "isLegendary": false,
+      "isMythical": true
+    },
+    "taurospaldeacombat": {
+      "name": "Tauros-Paldea-Combat",
+      "cleanName": "taurospaldeacombat",
+      "dex": 128,
+      "id": 128,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/128.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "zu",
+          "rank": 54,
+          "usage": "2.88"
+        }
+      ],
+      "types": [],
+      "strategies": []
+    },
+    "oinkolognef": {
+      "name": "Oinkologne-F",
+      "cleanName": "oinkolognef",
+      "dex": null,
+      "id": 0,
+      "sprite": "",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "zu",
+          "rank": 152,
+          "usage": "0.16"
+        }
+      ],
+      "types": [],
+      "strategies": []
+    },
+    "lycanrocdusk": {
+      "name": "Lycanroc-Dusk",
+      "cleanName": "lycanrocdusk",
+      "dex": 745,
+      "id": 745,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/745.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "ru",
+          "rank": 45,
+          "usage": "4.35"
+        },
+        {
+          "tier": "uu",
+          "rank": 89,
+          "usage": "0.94"
+        },
+        {
+          "tier": "ou",
+          "rank": 199,
+          "usage": "0.07"
+        },
+        {
+          "tier": "monotype",
+          "rank": 189,
+          "usage": "0.21"
+        },
+        {
+          "tier": "ubers",
+          "rank": 254,
+          "usage": "0.03"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 169,
+          "usage": "0.25"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 338,
+          "usage": "0.04"
+        }
+      ],
+      "types": [
+        "rock"
+      ],
+      "strategies": [
+        {
+          "name": "All-Out Attacker",
+          "tier": "ru",
+          "ability": "Tough Claws",
+          "item": "Choice Band / Life Orb",
+          "nature": "Jolly",
+          "teraType": "Fighting / Dark",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Accelerock",
+            "Stone Edge",
+            "Close Combat",
+            "Crunch"
+          ]
+        },
+        {
+          "name": "Swords Dance",
+          "tier": "ru",
+          "ability": "Tough Claws",
+          "item": "Life Orb",
+          "nature": "Jolly",
+          "teraType": "Fighting / Dark",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Swords Dance",
+            "Close Combat",
+            "Stone Edge",
+            "Accelerock / Sucker Punch"
+          ]
+        },
+        {
+          "name": "Choice Band (Rock)",
+          "tier": "monotype",
+          "ability": "Tough Claws",
+          "item": "Choice Band",
+          "nature": "Jolly",
+          "teraType": "Normal",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Stone Edge",
+            "Accelerock",
+            "Close Combat",
+            "Psychic Fangs / Play Rough"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "keen-eye",
+          "isHidden": false
+        },
+        {
+          "name": "sand-rush",
+          "isHidden": false
+        },
+        {
+          "name": "steadfast",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 75,
+        "attack": 115,
+        "defense": 65,
+        "special-attack": 55,
+        "special-defense": 65,
+        "speed": 112
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
+    "rotomwash": {
+      "name": "Rotom-Wash",
+      "cleanName": "rotomwash",
+      "dex": 479,
+      "id": 479,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/479.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "uu",
+          "rank": 36,
+          "usage": "6.07"
+        },
+        {
+          "tier": "ou",
+          "rank": 88,
+          "usage": "0.84"
+        },
+        {
+          "tier": "monotype",
+          "rank": 97,
+          "usage": "1.88"
+        },
+        {
+          "tier": "ubers",
+          "rank": 155,
+          "usage": "0.16"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 147,
+          "usage": "0.40"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 86,
+          "usage": "1.53"
+        }
+      ],
+      "types": [
+        "electric",
+        "ghost"
+      ],
+      "strategies": [
+        {
+          "name": "Physically Defensive",
+          "tier": "uu",
+          "ability": "Levitate",
+          "item": "Leftovers / Ability Shield",
+          "nature": "Bold",
+          "teraType": "Normal",
+          "evs": "252 HP / 160 DEF / 12 SPA / 84 SPD",
+          "moves": [
+            "Will-O-Wisp / Thunder Wave",
+            "Hydro Pump",
+            "Pain Split",
+            "Volt Switch"
+          ]
+        },
+        {
+          "name": "Specially Defensive",
+          "tier": "uu",
+          "ability": "Levitate",
+          "item": "Leftovers",
+          "nature": "Calm",
+          "teraType": "Normal",
+          "evs": "252 HP / 44 DEF / 12 SPA / 200 SPD",
+          "moves": [
+            "Thunder Wave / Will-O-Wisp",
+            "Hydro Pump",
+            "Pain Split",
+            "Volt Switch"
+          ]
+        },
+        {
+          "name": "Defensive Pivot",
+          "tier": "ou",
+          "ability": "Levitate",
+          "item": "Leftovers / Rocky Helmet",
+          "nature": "Bold",
+          "teraType": "Normal",
+          "evs": "252 HP / 212 DEF / 44 SPE",
+          "moves": [
+            "Volt Switch",
+            "Hydro Pump",
+            "Pain Split",
+            "Will-O-Wisp"
+          ]
+        },
+        {
+          "name": "Choice Scarf",
+          "tier": "nationaldexuu",
+          "ability": "Levitate",
+          "item": "Choice Scarf",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "240 HP / 32 SPA / 236 SPE",
+          "moves": [
+            "Hydro Pump",
+            "Volt Switch",
+            "Trick",
+            "Defog / Will-O-Wisp"
+          ]
+        },
+        {
+          "name": "Nasty Plot",
+          "tier": "nationaldexuu",
+          "ability": "Levitate",
+          "item": "Waterium Z",
+          "nature": "Bold",
+          "teraType": "Normal",
+          "evs": "252 HP / 200 DEF / 56 SPE",
+          "moves": [
+            "Nasty Plot",
+            "Hydro Pump",
+            "Volt Switch",
+            "Pain Split"
+          ]
+        },
+        {
+          "name": "Physically Defensive (Electric)",
+          "tier": "monotype",
+          "ability": "Levitate",
+          "item": "Leftovers",
+          "nature": "Bold",
+          "teraType": "Normal",
+          "evs": "248 HP / 252 DEF / 8 SPE",
+          "moves": [
+            "Will-O-Wisp",
+            "Hydro Pump",
+            "Volt Switch",
+            "Pain Split"
+          ]
+        },
+        {
+          "name": "Nasty Plot (Electric)",
+          "tier": "monotype",
+          "ability": "Levitate",
+          "item": "Leftovers",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "212 HP / 48 DEF / 248 SPE",
+          "moves": [
+            "Hydro Pump",
+            "Stored Power",
+            "Nasty Plot",
+            "Substitute"
+          ]
+        },
+        {
+          "name": "Nasty Plot (Water)",
+          "tier": "monotype",
+          "ability": "Levitate",
+          "item": "Leftovers",
+          "nature": "Modest",
+          "teraType": "Normal",
+          "evs": "144 HP / 112 DEF / 164 SPA / 88 SPE",
+          "moves": [
+            "Thunderbolt / Discharge",
+            "Stored Power",
+            "Nasty Plot",
+            "Substitute"
+          ]
+        },
+        {
+          "name": "Offensive",
+          "tier": "battlestadiumsingles",
+          "ability": "Levitate",
+          "item": "Choice Specs / Choice Scarf / Assault Vest",
+          "nature": "Modest / Timid",
+          "teraType": "Fairy / Electric / Ghost",
+          "evs": "252 HP / 252 SPA / 4 SPD",
+          "moves": [
+            "Volt Switch",
+            "Hydro Pump",
+            "Trick / Tera Blast",
+            "Thunderbolt / Discharge / Tera Blast / Shadow Ball"
+          ]
+        },
+        {
+          "name": "Defensive Pivot (HP)",
+          "tier": "godlygift",
+          "ability": "Levitate",
+          "item": "Leftovers",
+          "nature": "Bold",
+          "teraType": "Normal",
+          "evs": "252 HP / 252 DEF / 4 SPD",
+          "moves": [
+            "Hydro Pump",
+            "Volt Switch",
+            "Pain Split / Protect",
+            "Thunder Wave / Will-O-Wisp"
+          ]
+        },
+        {
+          "name": "Bulky Pivot (Electric)",
+          "tier": "nationaldexmonotype",
+          "ability": "Levitate",
+          "item": "Leftovers",
+          "nature": "Bold",
+          "teraType": "Normal",
+          "evs": "252 HP / 212 DEF / 44 SPE",
+          "moves": [
+            "Hydro Pump",
+            "Volt Switch",
+            "Will-O-Wisp / Toxic",
+            "Defog / Pain Split"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "levitate",
+          "isHidden": false
+        }
+      ],
+      "stats": {
+        "hp": 50,
+        "attack": 50,
+        "defense": 77,
+        "special-attack": 95,
+        "special-defense": 77,
+        "speed": 91
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
+    "oricoriopompom": {
+      "name": "Oricorio-Pom-Pom",
+      "cleanName": "oricoriopompom",
+      "dex": 741,
+      "id": 741,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/741.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "uu",
+          "rank": 129,
+          "usage": "0.28"
+        },
+        {
+          "tier": "ou",
+          "rank": 285,
+          "usage": "0.01"
+        },
+        {
+          "tier": "monotype",
+          "rank": 210,
+          "usage": "0.14"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 205,
+          "usage": "0.13"
+        }
+      ],
+      "types": [
+        "fire",
+        "flying"
+      ],
+      "strategies": [
+        {
+          "name": "Quiver Dance",
+          "tier": "uu",
+          "ability": "Dancer",
+          "item": "Kee Berry / Leftovers",
+          "nature": "Modest",
+          "teraType": "Ground / Dark",
+          "evs": "248 HP / 8 SPA / 252 SPE",
+          "moves": [
+            "Quiver Dance",
+            "Revelation Dance / Taunt",
+            "Air Slash",
+            "Roost"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "dancer",
+          "isHidden": false
+        }
+      ],
+      "stats": {
+        "hp": 75,
+        "attack": 70,
+        "defense": 70,
+        "special-attack": 98,
+        "special-defense": 70,
+        "speed": 93
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
     "deoxysspeed": {
       "name": "Deoxys-Speed",
       "cleanName": "deoxysspeed",
@@ -114718,24 +114818,24 @@ window.localDB = {
       "locations": [],
       "allRanks": [
         {
-          "tier": "ubers",
-          "rank": 21,
-          "usage": "8.34"
-        },
-        {
           "tier": "ou",
           "rank": 30,
           "usage": "6.45"
         },
         {
-          "tier": "doublesou",
-          "rank": 241,
-          "usage": "0.07"
-        },
-        {
           "tier": "monotype",
           "rank": 147,
           "usage": "0.48"
+        },
+        {
+          "tier": "ubers",
+          "rank": 21,
+          "usage": "8.34"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 241,
+          "usage": "0.07"
         }
       ],
       "types": [
@@ -114954,6 +115054,171 @@ window.localDB = {
       },
       "isLegendary": false,
       "isMythical": true
+    },
+    "tornadustherian": {
+      "name": "Tornadus-Therian",
+      "cleanName": "tornadustherian",
+      "dex": 641,
+      "id": 641,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/641.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "ou",
+          "rank": 33,
+          "usage": "5.62"
+        },
+        {
+          "tier": "monotype",
+          "rank": 31,
+          "usage": "6.55"
+        },
+        {
+          "tier": "ubers",
+          "rank": 261,
+          "usage": "0.03"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 323,
+          "usage": "0.02"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 31,
+          "usage": "6.73"
+        }
+      ],
+      "types": [
+        "flying"
+      ],
+      "strategies": [
+        {
+          "name": "Nasty Plot",
+          "tier": "ou",
+          "ability": "Regenerator",
+          "item": "Life Orb / Heavy-Duty Boots",
+          "nature": "Timid",
+          "teraType": "Steel / Flying",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Nasty Plot",
+            "Bleakwind Storm",
+            "Heat Wave",
+            "Grass Knot / Focus Blast / Knock Off"
+          ]
+        },
+        {
+          "name": "Boots Pivot",
+          "tier": "ou",
+          "ability": "Regenerator",
+          "item": "Heavy-Duty Boots",
+          "nature": "Timid",
+          "teraType": "Steel / Fairy",
+          "evs": "252 HP / 4 SPD / 252 SPE",
+          "moves": [
+            "Bleakwind Storm",
+            "U-turn",
+            "Knock Off",
+            "Heat Wave / Taunt"
+          ]
+        },
+        {
+          "name": "Assault Vest",
+          "tier": "ou",
+          "ability": "Regenerator",
+          "item": "Assault Vest",
+          "nature": "Timid",
+          "teraType": "Steel / Fairy",
+          "evs": "252 HP / 4 SPD / 252 SPE",
+          "moves": [
+            "Bleakwind Storm",
+            "U-turn",
+            "Knock Off",
+            "Heat Wave"
+          ]
+        },
+        {
+          "name": "Utility",
+          "tier": "stabmons",
+          "ability": "Regenerator",
+          "item": "Heavy-Duty Boots",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "204 HP / 8 DEF / 80 SPA / 216 SPE",
+          "moves": [
+            "Hurricane",
+            "Knock Off",
+            "U-turn",
+            "Defog / Taunt"
+          ]
+        },
+        {
+          "name": "Pivot",
+          "tier": "nationaldex",
+          "ability": "Regenerator",
+          "item": "Heavy-Duty Boots / Flyinium Z",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "184 HP / 108 DEF / 216 SPE",
+          "moves": [
+            "Bleakwind Storm / Hurricane",
+            "U-turn",
+            "Knock Off",
+            "Heat Wave / Defog"
+          ]
+        },
+        {
+          "name": "Utility Pivot (HP, Def, SpD)",
+          "tier": "godlygift",
+          "ability": "Regenerator",
+          "item": "Heavy-Duty Boots",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 HP / 4 SPA / 252 SPE",
+          "moves": [
+            "Bleakwind Storm",
+            "Knock Off",
+            "U-turn",
+            "Taunt"
+          ]
+        },
+        {
+          "name": "Nasty Plot Wallbreaker",
+          "tier": "nationaldexmonotype",
+          "ability": "Regenerator",
+          "item": "Flyinium Z / Heavy-Duty Boots",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Nasty Plot",
+            "Hurricane / Bleakwind Storm",
+            "Focus Blast / Heat Wave",
+            "Taunt / Knock Off"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "prankster",
+          "isHidden": false
+        },
+        {
+          "name": "defiant",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 79,
+        "attack": 115,
+        "defense": 70,
+        "special-attack": 125,
+        "special-defense": 80,
+        "speed": 111
+      },
+      "isLegendary": true,
+      "isMythical": false
     },
     "arceuselectric": {
       "name": "Arceus-Electric",
@@ -115491,271 +115756,6 @@ window.localDB = {
       },
       "isLegendary": false,
       "isMythical": true
-    },
-    "qwilfishhisui": {
-      "name": "Qwilfish-Hisui",
-      "cleanName": "qwilfishhisui",
-      "dex": 211,
-      "id": 10234,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10234.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "ubers",
-          "rank": 204,
-          "usage": "0.07"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 334,
-          "usage": "0.02"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 439,
-          "usage": "0.01"
-        },
-        {
-          "tier": "nu",
-          "rank": 174,
-          "usage": "0.05"
-        },
-        {
-          "tier": "pu",
-          "rank": 41,
-          "usage": "4.83"
-        },
-        {
-          "tier": "monotype",
-          "rank": 324,
-          "usage": "0.02"
-        }
-      ],
-      "types": [
-        "dark",
-        "poison"
-      ],
-      "strategies": [
-        {
-          "name": "Specially Defensive",
-          "tier": "pu",
-          "ability": "Intimidate",
-          "item": "Eviolite",
-          "nature": "Careful",
-          "teraType": "Normal",
-          "evs": "252 HP / 240 SPD / 16 SPE",
-          "moves": [
-            "Spikes",
-            "Barb Barrage",
-            "Crunch",
-            "Pain Split / Taunt / Toxic"
-          ]
-        },
-        {
-          "name": "Swords Dance",
-          "tier": "pu",
-          "ability": "Intimidate",
-          "item": "Eviolite",
-          "nature": "Jolly",
-          "teraType": "Water / Ghost",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
-          "moves": [
-            "Swords Dance",
-            "Gunk Shot",
-            "Crunch",
-            "Aqua Jet / Self-Destruct"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "poison-point",
-          "isHidden": false
-        },
-        {
-          "name": "swift-swim",
-          "isHidden": false
-        },
-        {
-          "name": "intimidate",
-          "isHidden": true
-        }
-      ],
-      "stats": {
-        "hp": 65,
-        "attack": 95,
-        "defense": 85,
-        "special-attack": 55,
-        "special-defense": 55,
-        "speed": 85
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "tornadustherian": {
-      "name": "Tornadus-Therian",
-      "cleanName": "tornadustherian",
-      "dex": 641,
-      "id": 641,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/641.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "ubers",
-          "rank": 261,
-          "usage": "0.03"
-        },
-        {
-          "tier": "ou",
-          "rank": 33,
-          "usage": "5.62"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 323,
-          "usage": "0.02"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 31,
-          "usage": "6.73"
-        },
-        {
-          "tier": "monotype",
-          "rank": 31,
-          "usage": "6.55"
-        }
-      ],
-      "types": [
-        "flying"
-      ],
-      "strategies": [
-        {
-          "name": "Nasty Plot",
-          "tier": "ou",
-          "ability": "Regenerator",
-          "item": "Life Orb / Heavy-Duty Boots",
-          "nature": "Timid",
-          "teraType": "Steel / Flying",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Nasty Plot",
-            "Bleakwind Storm",
-            "Heat Wave",
-            "Grass Knot / Focus Blast / Knock Off"
-          ]
-        },
-        {
-          "name": "Boots Pivot",
-          "tier": "ou",
-          "ability": "Regenerator",
-          "item": "Heavy-Duty Boots",
-          "nature": "Timid",
-          "teraType": "Steel / Fairy",
-          "evs": "252 HP / 4 SPD / 252 SPE",
-          "moves": [
-            "Bleakwind Storm",
-            "U-turn",
-            "Knock Off",
-            "Heat Wave / Taunt"
-          ]
-        },
-        {
-          "name": "Assault Vest",
-          "tier": "ou",
-          "ability": "Regenerator",
-          "item": "Assault Vest",
-          "nature": "Timid",
-          "teraType": "Steel / Fairy",
-          "evs": "252 HP / 4 SPD / 252 SPE",
-          "moves": [
-            "Bleakwind Storm",
-            "U-turn",
-            "Knock Off",
-            "Heat Wave"
-          ]
-        },
-        {
-          "name": "Utility",
-          "tier": "stabmons",
-          "ability": "Regenerator",
-          "item": "Heavy-Duty Boots",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "204 HP / 8 DEF / 80 SPA / 216 SPE",
-          "moves": [
-            "Hurricane",
-            "Knock Off",
-            "U-turn",
-            "Defog / Taunt"
-          ]
-        },
-        {
-          "name": "Pivot",
-          "tier": "nationaldex",
-          "ability": "Regenerator",
-          "item": "Heavy-Duty Boots / Flyinium Z",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "184 HP / 108 DEF / 216 SPE",
-          "moves": [
-            "Bleakwind Storm / Hurricane",
-            "U-turn",
-            "Knock Off",
-            "Heat Wave / Defog"
-          ]
-        },
-        {
-          "name": "Utility Pivot (HP, Def, SpD)",
-          "tier": "godlygift",
-          "ability": "Regenerator",
-          "item": "Heavy-Duty Boots",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 HP / 4 SPA / 252 SPE",
-          "moves": [
-            "Bleakwind Storm",
-            "Knock Off",
-            "U-turn",
-            "Taunt"
-          ]
-        },
-        {
-          "name": "Nasty Plot Wallbreaker",
-          "tier": "nationaldexmonotype",
-          "ability": "Regenerator",
-          "item": "Flyinium Z / Heavy-Duty Boots",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Nasty Plot",
-            "Hurricane / Bleakwind Storm",
-            "Focus Blast / Heat Wave",
-            "Taunt / Knock Off"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "prankster",
-          "isHidden": false
-        },
-        {
-          "name": "defiant",
-          "isHidden": true
-        }
-      ],
-      "stats": {
-        "hp": 79,
-        "attack": 115,
-        "defense": 70,
-        "special-attack": 125,
-        "special-defense": 80,
-        "speed": 111
-      },
-      "isLegendary": true,
-      "isMythical": false
     },
     "dianciemega": {
       "name": "Diancie-Mega",
