@@ -1,6 +1,6 @@
 window.localDB = {
   "_meta": {
-    "buildTimestamp": "2026-08-23T03:39:49.312Z"
+    "buildTimestamp": "2026-08-24T03:42:41.777Z"
   },
   "pokemon": {
     "bulbasaur": {
@@ -31,12 +31,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "chlorophyll",
-          "isHidden": true
-        },
-        {
           "name": "overgrow",
           "isHidden": false
+        },
+        {
+          "name": "chlorophyll",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -94,12 +94,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "chlorophyll",
-          "isHidden": true
-        },
-        {
           "name": "overgrow",
           "isHidden": false
+        },
+        {
+          "name": "chlorophyll",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -134,19 +134,24 @@ window.localDB = {
           "usage": "1.40"
         },
         {
+          "tier": "zu",
+          "rank": 7,
+          "usage": "17.66"
+        },
+        {
           "tier": "ru",
           "rank": 26,
           "usage": "7.64"
         },
         {
-          "tier": "pu",
-          "rank": 50,
-          "usage": "3.52"
-        },
-        {
           "tier": "vgc2025",
           "rank": 120,
           "usage": "0.20"
+        },
+        {
+          "tier": "pu",
+          "rank": 50,
+          "usage": "3.52"
         },
         {
           "tier": "monotype",
@@ -159,19 +164,14 @@ window.localDB = {
           "usage": "2.55"
         },
         {
-          "tier": "zu",
-          "rank": 7,
-          "usage": "17.66"
+          "tier": "ou",
+          "rank": 71,
+          "usage": "1.77"
         },
         {
           "tier": "ubers",
           "rank": 160,
           "usage": "0.14"
-        },
-        {
-          "tier": "ou",
-          "rank": 71,
-          "usage": "1.77"
         },
         {
           "tier": "doublesou",
@@ -327,12 +327,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "chlorophyll",
-          "isHidden": true
-        },
-        {
           "name": "overgrow",
           "isHidden": false
+        },
+        {
+          "name": "chlorophyll",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -491,19 +491,24 @@ window.localDB = {
           "usage": "0.10"
         },
         {
+          "tier": "zu",
+          "rank": 9,
+          "usage": "16.89"
+        },
+        {
           "tier": "ru",
           "rank": 139,
           "usage": "0.34"
         },
         {
-          "tier": "pu",
-          "rank": 119,
-          "usage": "0.38"
-        },
-        {
           "tier": "vgc2025",
           "rank": 101,
           "usage": "0.32"
+        },
+        {
+          "tier": "pu",
+          "rank": 119,
+          "usage": "0.38"
         },
         {
           "tier": "monotype",
@@ -516,19 +521,14 @@ window.localDB = {
           "usage": "0.15"
         },
         {
-          "tier": "zu",
-          "rank": 9,
-          "usage": "16.89"
+          "tier": "ou",
+          "rank": 166,
+          "usage": "0.13"
         },
         {
           "tier": "ubers",
           "rank": 224,
           "usage": "0.05"
-        },
-        {
-          "tier": "ou",
-          "rank": 166,
-          "usage": "0.13"
         },
         {
           "tier": "doublesou",
@@ -700,12 +700,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "rain-dish",
-          "isHidden": true
-        },
-        {
           "name": "torrent",
           "isHidden": false
+        },
+        {
+          "name": "rain-dish",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -762,12 +762,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "rain-dish",
-          "isHidden": true
-        },
-        {
           "name": "torrent",
           "isHidden": false
+        },
+        {
+          "name": "rain-dish",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -812,14 +812,14 @@ window.localDB = {
           "usage": "1.01"
         },
         {
-          "tier": "ubers",
-          "rank": 186,
-          "usage": "0.08"
-        },
-        {
           "tier": "ou",
           "rank": 230,
           "usage": "0.04"
+        },
+        {
+          "tier": "ubers",
+          "rank": 186,
+          "usage": "0.08"
         },
         {
           "tier": "doublesou",
@@ -869,12 +869,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "rain-dish",
-          "isHidden": true
-        },
-        {
           "name": "torrent",
           "isHidden": false
+        },
+        {
+          "name": "rain-dish",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -1391,12 +1391,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "hustle",
-          "isHidden": true
-        },
-        {
           "name": "guts",
           "isHidden": false
+        },
+        {
+          "name": "hustle",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -1441,12 +1441,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "hustle",
-          "isHidden": true
-        },
-        {
           "name": "guts",
           "isHidden": false
+        },
+        {
+          "name": "hustle",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -1641,14 +1641,14 @@ window.localDB = {
           "usage": "0.03"
         },
         {
-          "tier": "pu",
-          "rank": 167,
-          "usage": "0.10"
-        },
-        {
           "tier": "zu",
           "rank": 138,
           "usage": "0.24"
+        },
+        {
+          "tier": "pu",
+          "rank": 167,
+          "usage": "0.10"
         },
         {
           "tier": "ou",
@@ -1706,6 +1706,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "zu",
+          "rank": 180,
+          "usage": "0.09"
+        },
+        {
           "tier": "pu",
           "rank": 179,
           "usage": "0.06"
@@ -1716,18 +1721,13 @@ window.localDB = {
           "usage": "0.03"
         },
         {
-          "tier": "zu",
-          "rank": 180,
-          "usage": "0.09"
+          "tier": "ou",
+          "rank": 265,
+          "usage": "0.02"
         },
         {
           "tier": "ubers",
           "rank": 284,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ou",
-          "rank": 265,
           "usage": "0.02"
         },
         {
@@ -1813,9 +1813,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "pu",
-          "rank": 117,
-          "usage": "0.39"
+          "tier": "zu",
+          "rank": 190,
+          "usage": "0.06"
         },
         {
           "tier": "vgc2025",
@@ -1823,14 +1823,14 @@ window.localDB = {
           "usage": "0.48"
         },
         {
+          "tier": "pu",
+          "rank": 117,
+          "usage": "0.39"
+        },
+        {
           "tier": "uu",
           "rank": 180,
           "usage": "0.09"
-        },
-        {
-          "tier": "zu",
-          "rank": 190,
-          "usage": "0.06"
         },
         {
           "tier": "ubers",
@@ -1889,14 +1889,14 @@ window.localDB = {
           "usage": "0.70"
         },
         {
-          "tier": "uu",
-          "rank": 268,
-          "usage": "0.01"
-        },
-        {
           "tier": "zu",
           "rank": 194,
           "usage": "0.06"
+        },
+        {
+          "tier": "uu",
+          "rank": 268,
+          "usage": "0.01"
         }
       ],
       "types": [
@@ -1961,6 +1961,11 @@ window.localDB = {
           "usage": "0.57"
         },
         {
+          "tier": "zu",
+          "rank": 5,
+          "usage": "21.52"
+        },
+        {
           "tier": "ru",
           "rank": 185,
           "usage": "0.13"
@@ -1974,11 +1979,6 @@ window.localDB = {
           "tier": "uu",
           "rank": 240,
           "usage": "0.02"
-        },
-        {
-          "tier": "zu",
-          "rank": 5,
-          "usage": "21.52"
         }
       ],
       "types": [
@@ -2089,12 +2089,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "hustle",
-          "isHidden": true
-        },
-        {
           "name": "rivalry",
           "isHidden": false
+        },
+        {
+          "name": "hustle",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -2139,12 +2139,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "hustle",
-          "isHidden": true
-        },
-        {
           "name": "rivalry",
           "isHidden": false
+        },
+        {
+          "name": "hustle",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -2271,12 +2271,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "hustle",
-          "isHidden": true
-        },
-        {
           "name": "rivalry",
           "isHidden": false
+        },
+        {
+          "name": "hustle",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -2388,9 +2388,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "pu",
-          "rank": 188,
-          "usage": "0.04"
+          "tier": "zu",
+          "rank": 128,
+          "usage": "0.32"
         },
         {
           "tier": "vgc2025",
@@ -2398,9 +2398,9 @@ window.localDB = {
           "usage": "2.06"
         },
         {
-          "tier": "zu",
-          "rank": 128,
-          "usage": "0.32"
+          "tier": "pu",
+          "rank": 188,
+          "usage": "0.04"
         },
         {
           "tier": "doublesou",
@@ -2524,14 +2524,14 @@ window.localDB = {
           "usage": "0.76"
         },
         {
-          "tier": "ubers",
-          "rank": 96,
-          "usage": "0.56"
-        },
-        {
           "tier": "ou",
           "rank": 36,
           "usage": "5.17"
+        },
+        {
+          "tier": "ubers",
+          "rank": 96,
+          "usage": "0.56"
         },
         {
           "tier": "doublesou",
@@ -2731,6 +2731,11 @@ window.localDB = {
           "usage": "0.01"
         },
         {
+          "tier": "zu",
+          "rank": 162,
+          "usage": "0.14"
+        },
+        {
           "tier": "ru",
           "rank": 38,
           "usage": "6.00"
@@ -2751,19 +2756,14 @@ window.localDB = {
           "usage": "2.65"
         },
         {
-          "tier": "zu",
-          "rank": 162,
-          "usage": "0.14"
+          "tier": "ou",
+          "rank": 45,
+          "usage": "3.49"
         },
         {
           "tier": "ubers",
           "rank": 271,
           "usage": "0.02"
-        },
-        {
-          "tier": "ou",
-          "rank": 45,
-          "usage": "3.49"
         },
         {
           "tier": "doublesou",
@@ -2879,12 +2879,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "friend-guard",
-          "isHidden": true
-        },
-        {
           "name": "competitive",
           "isHidden": false
+        },
+        {
+          "name": "friend-guard",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -2919,6 +2919,11 @@ window.localDB = {
           "usage": "0.02"
         },
         {
+          "tier": "zu",
+          "rank": 163,
+          "usage": "0.14"
+        },
+        {
           "tier": "pu",
           "rank": 155,
           "usage": "0.12"
@@ -2927,11 +2932,6 @@ window.localDB = {
           "tier": "monotype",
           "rank": 337,
           "usage": "0.01"
-        },
-        {
-          "tier": "zu",
-          "rank": 163,
-          "usage": "0.14"
         },
         {
           "tier": "doublesou",
@@ -2955,12 +2955,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "frisk",
-          "isHidden": true
-        },
-        {
           "name": "competitive",
           "isHidden": false
+        },
+        {
+          "name": "frisk",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -3283,16 +3283,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "damp",
-          "isHidden": true
-        },
-        {
           "name": "effect-spore",
           "isHidden": false
         },
         {
           "name": "dry-skin",
           "isHidden": false
+        },
+        {
+          "name": "damp",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -3389,12 +3389,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "run-away",
-          "isHidden": true
-        },
-        {
           "name": "tinted-lens",
           "isHidden": false
+        },
+        {
+          "name": "run-away",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -3434,14 +3434,14 @@ window.localDB = {
           "usage": "0.23"
         },
         {
-          "tier": "pu",
-          "rank": 109,
-          "usage": "0.50"
-        },
-        {
           "tier": "vgc2025",
           "rank": 202,
           "usage": "0.04"
+        },
+        {
+          "tier": "pu",
+          "rank": 109,
+          "usage": "0.50"
         }
       ],
       "types": [
@@ -3571,14 +3571,19 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "pu",
-          "rank": 197,
-          "usage": "0.04"
+          "tier": "zu",
+          "rank": 111,
+          "usage": "0.49"
         },
         {
           "tier": "vgc2025",
           "rank": 138,
           "usage": "0.14"
+        },
+        {
+          "tier": "pu",
+          "rank": 197,
+          "usage": "0.04"
         },
         {
           "tier": "monotype",
@@ -3589,11 +3594,6 @@ window.localDB = {
           "tier": "uu",
           "rank": 227,
           "usage": "0.02"
-        },
-        {
-          "tier": "zu",
-          "rank": 111,
-          "usage": "0.49"
         },
         {
           "tier": "ubers",
@@ -3717,14 +3717,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "pu",
-          "rank": 219,
-          "usage": "0.01"
-        },
-        {
           "tier": "zu",
           "rank": 168,
           "usage": "0.12"
+        },
+        {
+          "tier": "pu",
+          "rank": 219,
+          "usage": "0.01"
         }
       ],
       "types": [
@@ -3848,14 +3848,14 @@ window.localDB = {
           "usage": "0.07"
         },
         {
+          "tier": "zu",
+          "rank": 100,
+          "usage": "0.66"
+        },
+        {
           "tier": "ru",
           "rank": 128,
           "usage": "0.41"
-        },
-        {
-          "tier": "pu",
-          "rank": 139,
-          "usage": "0.24"
         },
         {
           "tier": "vgc2025",
@@ -3863,9 +3863,9 @@ window.localDB = {
           "usage": "0.01"
         },
         {
-          "tier": "zu",
-          "rank": 100,
-          "usage": "0.66"
+          "tier": "pu",
+          "rank": 139,
+          "usage": "0.24"
         },
         {
           "tier": "ou",
@@ -3994,6 +3994,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "zu",
+          "rank": 28,
+          "usage": "7.18"
+        },
+        {
           "tier": "ru",
           "rank": 189,
           "usage": "0.11"
@@ -4007,11 +4012,6 @@ window.localDB = {
           "tier": "uu",
           "rank": 247,
           "usage": "0.02"
-        },
-        {
-          "tier": "zu",
-          "rank": 28,
-          "usage": "7.18"
         },
         {
           "tier": "ou",
@@ -4111,11 +4111,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "flash-fire",
+          "name": "intimidate",
           "isHidden": false
         },
         {
-          "name": "intimidate",
+          "name": "flash-fire",
           "isHidden": false
         },
         {
@@ -4160,14 +4160,14 @@ window.localDB = {
           "usage": "0.11"
         },
         {
-          "tier": "pu",
-          "rank": 12,
-          "usage": "14.40"
-        },
-        {
           "tier": "vgc2025",
           "rank": 258,
           "usage": "0.02"
+        },
+        {
+          "tier": "pu",
+          "rank": 12,
+          "usage": "14.40"
         },
         {
           "tier": "uu",
@@ -4175,14 +4175,14 @@ window.localDB = {
           "usage": "0.12"
         },
         {
-          "tier": "ubers",
-          "rank": 290,
-          "usage": "0.02"
-        },
-        {
           "tier": "ou",
           "rank": 244,
           "usage": "0.03"
+        },
+        {
+          "tier": "ubers",
+          "rank": 290,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -4262,11 +4262,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "flash-fire",
+          "name": "intimidate",
           "isHidden": false
         },
         {
-          "name": "intimidate",
+          "name": "flash-fire",
           "isHidden": false
         },
         {
@@ -4312,11 +4312,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "damp",
+          "name": "water-absorb",
           "isHidden": false
         },
         {
-          "name": "water-absorb",
+          "name": "damp",
           "isHidden": false
         },
         {
@@ -4362,11 +4362,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "damp",
+          "name": "water-absorb",
           "isHidden": false
         },
         {
-          "name": "water-absorb",
+          "name": "damp",
           "isHidden": false
         },
         {
@@ -4406,6 +4406,11 @@ window.localDB = {
           "usage": "0.64"
         },
         {
+          "tier": "zu",
+          "rank": 60,
+          "usage": "2.24"
+        },
+        {
           "tier": "ru",
           "rank": 140,
           "usage": "0.34"
@@ -4421,19 +4426,14 @@ window.localDB = {
           "usage": "0.03"
         },
         {
-          "tier": "zu",
-          "rank": 60,
-          "usage": "2.24"
+          "tier": "ou",
+          "rank": 195,
+          "usage": "0.07"
         },
         {
           "tier": "ubers",
           "rank": 277,
           "usage": "0.02"
-        },
-        {
-          "tier": "ou",
-          "rank": 195,
-          "usage": "0.07"
         },
         {
           "tier": "doublesou",
@@ -4469,11 +4469,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "damp",
+          "name": "water-absorb",
           "isHidden": false
         },
         {
-          "name": "water-absorb",
+          "name": "damp",
           "isHidden": false
         },
         {
@@ -4704,12 +4704,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "steadfast",
-          "isHidden": true
-        },
-        {
           "name": "no-guard",
           "isHidden": false
+        },
+        {
+          "name": "steadfast",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -4804,12 +4804,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "steadfast",
-          "isHidden": true
-        },
-        {
           "name": "no-guard",
           "isHidden": false
+        },
+        {
+          "name": "steadfast",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -4954,14 +4954,14 @@ window.localDB = {
           "usage": "0.05"
         },
         {
-          "tier": "ru",
-          "rank": 223,
-          "usage": "0.05"
-        },
-        {
           "tier": "zu",
           "rank": 185,
           "usage": "0.07"
+        },
+        {
+          "tier": "ru",
+          "rank": 223,
+          "usage": "0.05"
         },
         {
           "tier": "nationaldex",
@@ -5059,12 +5059,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "rain-dish",
-          "isHidden": true
-        },
-        {
           "name": "liquid-ooze",
           "isHidden": false
+        },
+        {
+          "name": "rain-dish",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -5119,14 +5119,14 @@ window.localDB = {
           "usage": "0.33"
         },
         {
-          "tier": "ubers",
-          "rank": 253,
-          "usage": "0.03"
-        },
-        {
           "tier": "ou",
           "rank": 144,
           "usage": "0.18"
+        },
+        {
+          "tier": "ubers",
+          "rank": 253,
+          "usage": "0.03"
         },
         {
           "tier": "nationaldex",
@@ -5206,12 +5206,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "rain-dish",
-          "isHidden": true
-        },
-        {
           "name": "liquid-ooze",
           "isHidden": false
+        },
+        {
+          "name": "rain-dish",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -5253,16 +5253,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
+          "name": "rock-head",
+          "isHidden": false
+        },
+        {
           "name": "sturdy",
           "isHidden": false
         },
         {
           "name": "sand-veil",
           "isHidden": true
-        },
-        {
-          "name": "rock-head",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -5343,6 +5343,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "zu",
+          "rank": 70,
+          "usage": "1.87"
+        },
+        {
           "tier": "ru",
           "rank": 204,
           "usage": "0.08"
@@ -5351,11 +5356,6 @@ window.localDB = {
           "tier": "pu",
           "rank": 181,
           "usage": "0.05"
-        },
-        {
-          "tier": "zu",
-          "rank": 70,
-          "usage": "1.87"
         },
         {
           "tier": "doublesou",
@@ -5375,16 +5375,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
+          "name": "rock-head",
+          "isHidden": false
+        },
+        {
           "name": "sturdy",
           "isHidden": false
         },
         {
           "name": "sand-veil",
           "isHidden": true
-        },
-        {
-          "name": "rock-head",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -5425,16 +5425,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
+          "name": "run-away",
+          "isHidden": false
+        },
+        {
           "name": "flash-fire",
           "isHidden": false
         },
         {
           "name": "flame-body",
           "isHidden": true
-        },
-        {
-          "name": "run-away",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -5475,16 +5475,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
+          "name": "run-away",
+          "isHidden": false
+        },
+        {
           "name": "flash-fire",
           "isHidden": false
         },
         {
           "name": "flame-body",
           "isHidden": true
-        },
-        {
-          "name": "run-away",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -5585,14 +5585,14 @@ window.localDB = {
           "usage": "0.12"
         },
         {
-          "tier": "ubers",
-          "rank": 126,
-          "usage": "0.32"
-        },
-        {
           "tier": "ou",
           "rank": 197,
           "usage": "0.07"
+        },
+        {
+          "tier": "ubers",
+          "rank": 126,
+          "usage": "0.32"
         },
         {
           "tier": "doublesou",
@@ -5800,11 +5800,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "sturdy",
+          "name": "magnet-pull",
           "isHidden": false
         },
         {
-          "name": "magnet-pull",
+          "name": "sturdy",
           "isHidden": false
         },
         {
@@ -5844,6 +5844,11 @@ window.localDB = {
           "usage": "1.80"
         },
         {
+          "tier": "zu",
+          "rank": 21,
+          "usage": "9.31"
+        },
+        {
           "tier": "ru",
           "rank": 232,
           "usage": "0.03"
@@ -5852,11 +5857,6 @@ window.localDB = {
           "tier": "pu",
           "rank": 85,
           "usage": "0.97"
-        },
-        {
-          "tier": "zu",
-          "rank": 21,
-          "usage": "9.31"
         }
       ],
       "types": [
@@ -5927,11 +5927,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "sturdy",
+          "name": "magnet-pull",
           "isHidden": false
         },
         {
-          "name": "magnet-pull",
+          "name": "sturdy",
           "isHidden": false
         },
         {
@@ -5978,11 +5978,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "inner-focus",
+          "name": "keen-eye",
           "isHidden": false
         },
         {
-          "name": "keen-eye",
+          "name": "inner-focus",
           "isHidden": false
         },
         {
@@ -6045,11 +6045,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "early-bird",
+          "name": "run-away",
           "isHidden": false
         },
         {
-          "name": "run-away",
+          "name": "early-bird",
           "isHidden": false
         },
         {
@@ -6089,6 +6089,11 @@ window.localDB = {
           "usage": "0.09"
         },
         {
+          "tier": "zu",
+          "rank": 69,
+          "usage": "1.95"
+        },
+        {
           "tier": "ru",
           "rank": 254,
           "usage": "0.01"
@@ -6097,11 +6102,6 @@ window.localDB = {
           "tier": "pu",
           "rank": 189,
           "usage": "0.04"
-        },
-        {
-          "tier": "zu",
-          "rank": 69,
-          "usage": "1.95"
         }
       ],
       "types": [
@@ -6127,11 +6127,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "early-bird",
+          "name": "run-away",
           "isHidden": false
         },
         {
-          "name": "run-away",
+          "name": "early-bird",
           "isHidden": false
         },
         {
@@ -6216,6 +6216,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "zu",
+          "rank": 110,
+          "usage": "0.53"
+        },
+        {
           "tier": "vgc2025",
           "rank": 208,
           "usage": "0.03"
@@ -6224,11 +6229,6 @@ window.localDB = {
           "tier": "monotype",
           "rank": 158,
           "usage": "0.38"
-        },
-        {
-          "tier": "zu",
-          "rank": 110,
-          "usage": "0.53"
         }
       ],
       "types": [
@@ -6332,6 +6332,11 @@ window.localDB = {
           "usage": "0.06"
         },
         {
+          "tier": "zu",
+          "rank": 20,
+          "usage": "9.36"
+        },
+        {
           "tier": "ru",
           "rank": 259,
           "usage": "0.01"
@@ -6340,11 +6345,6 @@ window.localDB = {
           "tier": "pu",
           "rank": 111,
           "usage": "0.48"
-        },
-        {
-          "tier": "zu",
-          "rank": 20,
-          "usage": "9.36"
         }
       ],
       "types": [
@@ -6488,14 +6488,14 @@ window.localDB = {
           "usage": "0.48"
         },
         {
-          "tier": "ubers",
-          "rank": 178,
-          "usage": "0.09"
-        },
-        {
           "tier": "ou",
           "rank": 192,
           "usage": "0.07"
+        },
+        {
+          "tier": "ubers",
+          "rank": 178,
+          "usage": "0.09"
         },
         {
           "tier": "doublesou",
@@ -6704,6 +6704,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "zu",
+          "rank": 59,
+          "usage": "2.36"
+        },
+        {
           "tier": "pu",
           "rank": 73,
           "usage": "1.36"
@@ -6712,11 +6717,6 @@ window.localDB = {
           "tier": "monotype",
           "rank": 169,
           "usage": "0.29"
-        },
-        {
-          "tier": "zu",
-          "rank": 59,
-          "usage": "2.36"
         },
         {
           "tier": "ou",
@@ -6803,14 +6803,14 @@ window.localDB = {
           "usage": "2.20"
         },
         {
-          "tier": "ubers",
-          "rank": 111,
-          "usage": "0.41"
-        },
-        {
           "tier": "ou",
           "rank": 126,
           "usage": "0.28"
+        },
+        {
+          "tier": "ubers",
+          "rank": 111,
+          "usage": "0.41"
         },
         {
           "tier": "doublesou",
@@ -7084,11 +7084,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "sturdy",
+          "name": "rock-head",
           "isHidden": false
         },
         {
-          "name": "rock-head",
+          "name": "sturdy",
           "isHidden": false
         },
         {
@@ -7143,12 +7143,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "inner-focus",
-          "isHidden": true
-        },
-        {
           "name": "forewarn",
           "isHidden": false
+        },
+        {
+          "name": "inner-focus",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -7193,12 +7193,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "inner-focus",
-          "isHidden": true
-        },
-        {
           "name": "forewarn",
           "isHidden": false
+        },
+        {
+          "name": "inner-focus",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -7339,11 +7339,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "static",
+          "name": "soundproof",
           "isHidden": false
         },
         {
-          "name": "soundproof",
+          "name": "static",
           "isHidden": false
         },
         {
@@ -7378,14 +7378,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "pu",
-          "rank": 225,
-          "usage": "0.01"
-        },
-        {
           "tier": "zu",
           "rank": 135,
           "usage": "0.27"
+        },
+        {
+          "tier": "pu",
+          "rank": 225,
+          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -7404,11 +7404,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "static",
+          "name": "soundproof",
           "isHidden": false
         },
         {
-          "name": "soundproof",
+          "name": "static",
           "isHidden": false
         },
         {
@@ -7495,14 +7495,14 @@ window.localDB = {
           "usage": "0.03"
         },
         {
+          "tier": "zu",
+          "rank": 88,
+          "usage": "0.95"
+        },
+        {
           "tier": "ru",
           "rank": 213,
           "usage": "0.06"
-        },
-        {
-          "tier": "pu",
-          "rank": 168,
-          "usage": "0.10"
         },
         {
           "tier": "vgc2025",
@@ -7510,18 +7510,18 @@ window.localDB = {
           "usage": "0.10"
         },
         {
-          "tier": "zu",
-          "rank": 88,
-          "usage": "0.95"
-        },
-        {
-          "tier": "ubers",
-          "rank": 309,
-          "usage": "0.02"
+          "tier": "pu",
+          "rank": 168,
+          "usage": "0.10"
         },
         {
           "tier": "ou",
           "rank": 277,
+          "usage": "0.02"
+        },
+        {
+          "tier": "ubers",
+          "rank": 309,
           "usage": "0.02"
         },
         {
@@ -7604,16 +7604,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "battle-armor",
-          "isHidden": true
+          "name": "rock-head",
+          "isHidden": false
         },
         {
           "name": "lightning-rod",
           "isHidden": false
         },
         {
-          "name": "rock-head",
-          "isHidden": false
+          "name": "battle-armor",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -7654,16 +7654,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "battle-armor",
-          "isHidden": true
+          "name": "rock-head",
+          "isHidden": false
         },
         {
           "name": "lightning-rod",
           "isHidden": false
         },
         {
-          "name": "rock-head",
-          "isHidden": false
+          "name": "battle-armor",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -7718,14 +7718,14 @@ window.localDB = {
           "usage": "0.02"
         },
         {
-          "tier": "ubers",
-          "rank": 234,
-          "usage": "0.04"
-        },
-        {
           "tier": "ou",
           "rank": 284,
           "usage": "0.01"
+        },
+        {
+          "tier": "ubers",
+          "rank": 234,
+          "usage": "0.04"
         },
         {
           "tier": "doublesou",
@@ -7764,12 +7764,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "unburden",
-          "isHidden": true
-        },
-        {
           "name": "reckless",
           "isHidden": false
+        },
+        {
+          "name": "unburden",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -7804,6 +7804,11 @@ window.localDB = {
           "usage": "0.02"
         },
         {
+          "tier": "zu",
+          "rank": 76,
+          "usage": "1.37"
+        },
+        {
           "tier": "pu",
           "rank": 113,
           "usage": "0.45"
@@ -7812,11 +7817,6 @@ window.localDB = {
           "tier": "monotype",
           "rank": 255,
           "usage": "0.06"
-        },
-        {
-          "tier": "zu",
-          "rank": 76,
-          "usage": "1.37"
         },
         {
           "tier": "doublesou",
@@ -7846,16 +7846,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "inner-focus",
-          "isHidden": true
-        },
-        {
           "name": "keen-eye",
           "isHidden": false
         },
         {
           "name": "iron-fist",
           "isHidden": false
+        },
+        {
+          "name": "inner-focus",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -7896,16 +7896,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
+          "name": "own-tempo",
+          "isHidden": false
+        },
+        {
           "name": "oblivious",
           "isHidden": false
         },
         {
           "name": "cloud-nine",
           "isHidden": true
-        },
-        {
-          "name": "own-tempo",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -7977,16 +7977,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "stench",
-          "isHidden": true
-        },
-        {
           "name": "levitate",
           "isHidden": false
         },
         {
           "name": "neutralizing-gas",
           "isHidden": false
+        },
+        {
+          "name": "stench",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -8021,14 +8021,14 @@ window.localDB = {
           "usage": "0.40"
         },
         {
+          "tier": "zu",
+          "rank": 37,
+          "usage": "4.53"
+        },
+        {
           "tier": "ru",
           "rank": 178,
           "usage": "0.15"
-        },
-        {
-          "tier": "pu",
-          "rank": 104,
-          "usage": "0.59"
         },
         {
           "tier": "vgc2025",
@@ -8036,14 +8036,14 @@ window.localDB = {
           "usage": "0.81"
         },
         {
+          "tier": "pu",
+          "rank": 104,
+          "usage": "0.59"
+        },
+        {
           "tier": "uu",
           "rank": 172,
           "usage": "0.10"
-        },
-        {
-          "tier": "zu",
-          "rank": 37,
-          "usage": "4.53"
         },
         {
           "tier": "doublesou",
@@ -8088,16 +8088,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "stench",
-          "isHidden": true
-        },
-        {
           "name": "levitate",
           "isHidden": false
         },
         {
           "name": "neutralizing-gas",
           "isHidden": false
+        },
+        {
+          "name": "stench",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -8194,14 +8194,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "pu",
-          "rank": 1,
-          "usage": "33.48"
-        },
-        {
           "tier": "vgc2025",
           "rank": 83,
           "usage": "0.52"
+        },
+        {
+          "tier": "pu",
+          "rank": 1,
+          "usage": "33.48"
         },
         {
           "tier": "monotype",
@@ -8316,14 +8316,14 @@ window.localDB = {
           "usage": "0.06"
         },
         {
-          "tier": "ubers",
-          "rank": 124,
-          "usage": "0.33"
-        },
-        {
           "tier": "ou",
           "rank": 180,
           "usage": "0.09"
+        },
+        {
+          "tier": "ubers",
+          "rank": 124,
+          "usage": "0.33"
         },
         {
           "tier": "doublesou",
@@ -8594,16 +8594,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "inner-focus",
-          "isHidden": true
-        },
-        {
           "name": "early-bird",
           "isHidden": false
         },
         {
           "name": "scrappy",
           "isHidden": false
+        },
+        {
+          "name": "inner-focus",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -8644,16 +8644,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "damp",
-          "isHidden": true
-        },
-        {
           "name": "swift-swim",
           "isHidden": false
         },
         {
           "name": "sniper",
           "isHidden": false
+        },
+        {
+          "name": "damp",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -8710,16 +8710,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "damp",
-          "isHidden": true
-        },
-        {
           "name": "poison-point",
           "isHidden": false
         },
         {
           "name": "sniper",
           "isHidden": false
+        },
+        {
+          "name": "damp",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -8760,16 +8760,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "lightning-rod",
-          "isHidden": true
-        },
-        {
           "name": "swift-swim",
           "isHidden": false
         },
         {
           "name": "water-veil",
           "isHidden": false
+        },
+        {
+          "name": "lightning-rod",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -8810,16 +8810,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "lightning-rod",
-          "isHidden": true
-        },
-        {
           "name": "swift-swim",
           "isHidden": false
         },
         {
           "name": "water-veil",
           "isHidden": false
+        },
+        {
+          "name": "lightning-rod",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -8942,11 +8942,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "natural-cure",
+          "name": "illuminate",
           "isHidden": false
         },
         {
-          "name": "illuminate",
+          "name": "natural-cure",
           "isHidden": false
         },
         {
@@ -8997,12 +8997,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "technician",
-          "isHidden": true
-        },
-        {
           "name": "filter",
           "isHidden": false
+        },
+        {
+          "name": "technician",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -9109,12 +9109,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "steadfast",
-          "isHidden": true
-        },
-        {
           "name": "technician",
           "isHidden": false
+        },
+        {
+          "name": "steadfast",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -9195,14 +9195,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "vgc2025",
-          "rank": 169,
-          "usage": "0.07"
-        },
-        {
           "tier": "zu",
           "rank": 226,
           "usage": "0.01"
+        },
+        {
+          "tier": "vgc2025",
+          "rank": 169,
+          "usage": "0.07"
         },
         {
           "tier": "doublesou",
@@ -9282,14 +9282,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "pu",
-          "rank": 187,
-          "usage": "0.05"
-        },
-        {
           "tier": "vgc2025",
           "rank": 105,
           "usage": "0.26"
+        },
+        {
+          "tier": "pu",
+          "rank": 187,
+          "usage": "0.05"
         },
         {
           "tier": "doublesou",
@@ -9425,6 +9425,11 @@ window.localDB = {
           "usage": "0.32"
         },
         {
+          "tier": "zu",
+          "rank": 90,
+          "usage": "0.89"
+        },
+        {
           "tier": "ru",
           "rank": 144,
           "usage": "0.31"
@@ -9438,11 +9443,6 @@ window.localDB = {
           "tier": "monotype",
           "rank": 323,
           "usage": "0.02"
-        },
-        {
-          "tier": "zu",
-          "rank": 90,
-          "usage": "0.89"
         },
         {
           "tier": "ou",
@@ -9592,13 +9592,13 @@ window.localDB = {
           "usage": "1.52"
         },
         {
-          "tier": "ubers",
-          "rank": 210,
+          "tier": "ou",
+          "rank": 207,
           "usage": "0.06"
         },
         {
-          "tier": "ou",
-          "rank": 207,
+          "tier": "ubers",
+          "rank": 210,
           "usage": "0.06"
         },
         {
@@ -9750,6 +9750,11 @@ window.localDB = {
           "usage": "2.39"
         },
         {
+          "tier": "zu",
+          "rank": 84,
+          "usage": "1.10"
+        },
+        {
           "tier": "ru",
           "rank": 93,
           "usage": "1.07"
@@ -9770,19 +9775,14 @@ window.localDB = {
           "usage": "0.01"
         },
         {
-          "tier": "zu",
-          "rank": 84,
-          "usage": "1.10"
+          "tier": "ou",
+          "rank": 272,
+          "usage": "0.02"
         },
         {
           "tier": "ubers",
           "rank": 191,
           "usage": "0.08"
-        },
-        {
-          "tier": "ou",
-          "rank": 272,
-          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -9877,19 +9877,24 @@ window.localDB = {
           "usage": "0.41"
         },
         {
+          "tier": "zu",
+          "rank": 81,
+          "usage": "1.17"
+        },
+        {
           "tier": "ru",
           "rank": 86,
           "usage": "1.24"
         },
         {
-          "tier": "pu",
-          "rank": 92,
-          "usage": "0.68"
-        },
-        {
           "tier": "vgc2025",
           "rank": 70,
           "usage": "0.72"
+        },
+        {
+          "tier": "pu",
+          "rank": 92,
+          "usage": "0.68"
         },
         {
           "tier": "monotype",
@@ -9902,19 +9907,14 @@ window.localDB = {
           "usage": "1.13"
         },
         {
-          "tier": "zu",
-          "rank": 81,
-          "usage": "1.17"
+          "tier": "ou",
+          "rank": 153,
+          "usage": "0.16"
         },
         {
           "tier": "ubers",
           "rank": 30,
           "usage": "4.28"
-        },
-        {
-          "tier": "ou",
-          "rank": 153,
-          "usage": "0.16"
         },
         {
           "tier": "doublesou",
@@ -10152,14 +10152,14 @@ window.localDB = {
           "usage": "0.39"
         },
         {
-          "tier": "ubers",
-          "rank": 347,
-          "usage": "0.01"
-        },
-        {
           "tier": "ou",
           "rank": 149,
           "usage": "0.18"
+        },
+        {
+          "tier": "ubers",
+          "rank": 347,
+          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -10249,6 +10249,11 @@ window.localDB = {
           "usage": "0.77"
         },
         {
+          "tier": "zu",
+          "rank": 4,
+          "usage": "21.74"
+        },
+        {
           "tier": "ru",
           "rank": 169,
           "usage": "0.19"
@@ -10264,19 +10269,14 @@ window.localDB = {
           "usage": "0.43"
         },
         {
-          "tier": "zu",
-          "rank": 4,
-          "usage": "21.74"
+          "tier": "ou",
+          "rank": 170,
+          "usage": "0.12"
         },
         {
           "tier": "ubers",
           "rank": 326,
           "usage": "0.01"
-        },
-        {
-          "tier": "ou",
-          "rank": 170,
-          "usage": "0.12"
         },
         {
           "tier": "doublesou",
@@ -10366,6 +10366,11 @@ window.localDB = {
           "usage": "0.12"
         },
         {
+          "tier": "zu",
+          "rank": 160,
+          "usage": "0.14"
+        },
+        {
           "tier": "ru",
           "rank": 218,
           "usage": "0.05"
@@ -10374,11 +10379,6 @@ window.localDB = {
           "tier": "pu",
           "rank": 193,
           "usage": "0.04"
-        },
-        {
-          "tier": "zu",
-          "rank": 160,
-          "usage": "0.14"
         }
       ],
       "types": [
@@ -10618,11 +10618,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "battle-armor",
+          "name": "swift-swim",
           "isHidden": false
         },
         {
-          "name": "swift-swim",
+          "name": "battle-armor",
           "isHidden": false
         },
         {
@@ -10669,11 +10669,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "battle-armor",
+          "name": "swift-swim",
           "isHidden": false
         },
         {
-          "name": "swift-swim",
+          "name": "battle-armor",
           "isHidden": false
         },
         {
@@ -10781,11 +10781,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "pressure",
+          "name": "rock-head",
           "isHidden": false
         },
         {
-          "name": "rock-head",
+          "name": "pressure",
           "isHidden": false
         },
         {
@@ -10825,19 +10825,24 @@ window.localDB = {
           "usage": "0.38"
         },
         {
+          "tier": "zu",
+          "rank": 144,
+          "usage": "0.19"
+        },
+        {
           "tier": "ru",
           "rank": 216,
           "usage": "0.06"
         },
         {
-          "tier": "pu",
-          "rank": 58,
-          "usage": "2.42"
-        },
-        {
           "tier": "vgc2025",
           "rank": 236,
           "usage": "0.02"
+        },
+        {
+          "tier": "pu",
+          "rank": 58,
+          "usage": "2.42"
         },
         {
           "tier": "monotype",
@@ -10850,18 +10855,13 @@ window.localDB = {
           "usage": "0.32"
         },
         {
-          "tier": "zu",
-          "rank": 144,
-          "usage": "0.19"
+          "tier": "ou",
+          "rank": 248,
+          "usage": "0.03"
         },
         {
           "tier": "ubers",
           "rank": 251,
-          "usage": "0.03"
-        },
-        {
-          "tier": "ou",
-          "rank": 248,
           "usage": "0.03"
         },
         {
@@ -10971,14 +10971,19 @@ window.localDB = {
           "usage": "0.05"
         },
         {
-          "tier": "pu",
-          "rank": 133,
-          "usage": "0.26"
+          "tier": "zu",
+          "rank": 50,
+          "usage": "3.38"
         },
         {
           "tier": "vgc2025",
           "rank": 166,
           "usage": "0.08"
+        },
+        {
+          "tier": "pu",
+          "rank": 133,
+          "usage": "0.26"
         },
         {
           "tier": "monotype",
@@ -10989,11 +10994,6 @@ window.localDB = {
           "tier": "uu",
           "rank": 273,
           "usage": "0.01"
-        },
-        {
-          "tier": "zu",
-          "rank": 50,
-          "usage": "3.38"
         },
         {
           "tier": "doublesou",
@@ -11129,14 +11129,14 @@ window.localDB = {
           "usage": "1.60"
         },
         {
-          "tier": "ubers",
-          "rank": 135,
-          "usage": "0.27"
-        },
-        {
           "tier": "ou",
           "rank": 28,
           "usage": "6.71"
+        },
+        {
+          "tier": "ubers",
+          "rank": 135,
+          "usage": "0.27"
         },
         {
           "tier": "doublesou",
@@ -11442,12 +11442,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "static",
-          "isHidden": true
-        },
-        {
           "name": "pressure",
           "isHidden": false
+        },
+        {
+          "name": "static",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -11482,14 +11482,14 @@ window.localDB = {
           "usage": "2.86"
         },
         {
-          "tier": "ubers",
-          "rank": 248,
-          "usage": "0.03"
-        },
-        {
           "tier": "ou",
           "rank": 32,
           "usage": "5.74"
+        },
+        {
+          "tier": "ubers",
+          "rank": 248,
+          "usage": "0.03"
         },
         {
           "tier": "doublesou",
@@ -11753,14 +11753,14 @@ window.localDB = {
           "usage": "7.39"
         },
         {
-          "tier": "ubers",
-          "rank": 104,
-          "usage": "0.48"
-        },
-        {
           "tier": "ou",
           "rank": 5,
           "usage": "19.49"
+        },
+        {
+          "tier": "ubers",
+          "rank": 104,
+          "usage": "0.48"
         },
         {
           "tier": "doublesou",
@@ -12458,14 +12458,14 @@ window.localDB = {
           "usage": "1.92"
         },
         {
-          "tier": "ubers",
-          "rank": 180,
-          "usage": "0.09"
-        },
-        {
           "tier": "ou",
           "rank": 133,
           "usage": "0.23"
+        },
+        {
+          "tier": "ubers",
+          "rank": 180,
+          "usage": "0.09"
         },
         {
           "tier": "doublesou",
@@ -12743,14 +12743,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "pu",
-          "rank": 216,
-          "usage": "0.02"
-        },
-        {
           "tier": "zu",
           "rank": 196,
           "usage": "0.05"
+        },
+        {
+          "tier": "pu",
+          "rank": 216,
+          "usage": "0.02"
         }
       ],
       "types": [
@@ -12805,12 +12805,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "flash-fire",
-          "isHidden": true
-        },
-        {
           "name": "blaze",
           "isHidden": false
+        },
+        {
+          "name": "flash-fire",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -12867,12 +12867,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "flash-fire",
-          "isHidden": true
-        },
-        {
           "name": "blaze",
           "isHidden": false
+        },
+        {
+          "name": "flash-fire",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -12902,6 +12902,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "zu",
+          "rank": 29,
+          "usage": "7.16"
+        },
+        {
           "tier": "ru",
           "rank": 156,
           "usage": "0.23"
@@ -12915,11 +12920,6 @@ window.localDB = {
           "tier": "uu",
           "rank": 243,
           "usage": "0.02"
-        },
-        {
-          "tier": "zu",
-          "rank": 29,
-          "usage": "7.16"
         },
         {
           "tier": "doublesou",
@@ -12969,12 +12969,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "flash-fire",
-          "isHidden": true
-        },
-        {
           "name": "blaze",
           "isHidden": false
+        },
+        {
+          "name": "flash-fire",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -13254,14 +13254,14 @@ window.localDB = {
           "usage": "0.03"
         },
         {
-          "tier": "pu",
-          "rank": 199,
-          "usage": "0.03"
-        },
-        {
           "tier": "zu",
           "rank": 167,
           "usage": "0.12"
+        },
+        {
+          "tier": "pu",
+          "rank": 199,
+          "usage": "0.03"
         },
         {
           "tier": "nationaldex",
@@ -13365,14 +13365,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "pu",
-          "rank": 183,
-          "usage": "0.05"
-        },
-        {
           "tier": "zu",
           "rank": 82,
           "usage": "1.15"
+        },
+        {
+          "tier": "pu",
+          "rank": 183,
+          "usage": "0.05"
         },
         {
           "tier": "doublesou",
@@ -13438,11 +13438,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "early-bird",
+          "name": "swarm",
           "isHidden": false
         },
         {
-          "name": "swarm",
+          "name": "early-bird",
           "isHidden": false
         },
         {
@@ -13489,11 +13489,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "early-bird",
+          "name": "swarm",
           "isHidden": false
         },
         {
-          "name": "swarm",
+          "name": "early-bird",
           "isHidden": false
         },
         {
@@ -13540,11 +13540,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "insomnia",
+          "name": "swarm",
           "isHidden": false
         },
         {
-          "name": "swarm",
+          "name": "insomnia",
           "isHidden": false
         },
         {
@@ -13579,14 +13579,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "monotype",
-          "rank": 171,
-          "usage": "0.28"
-        },
-        {
           "tier": "zu",
           "rank": 173,
           "usage": "0.11"
+        },
+        {
+          "tier": "monotype",
+          "rank": 171,
+          "usage": "0.28"
         },
         {
           "tier": "ubers",
@@ -13606,11 +13606,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "insomnia",
+          "name": "swarm",
           "isHidden": false
         },
         {
-          "name": "swarm",
+          "name": "insomnia",
           "isHidden": false
         },
         {
@@ -13775,12 +13775,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "water-absorb",
-          "isHidden": true
-        },
-        {
           "name": "illuminate",
           "isHidden": false
+        },
+        {
+          "name": "water-absorb",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -13815,6 +13815,11 @@ window.localDB = {
           "usage": "0.02"
         },
         {
+          "tier": "zu",
+          "rank": 170,
+          "usage": "0.11"
+        },
+        {
           "tier": "ru",
           "rank": 113,
           "usage": "0.58"
@@ -13833,11 +13838,6 @@ window.localDB = {
           "tier": "uu",
           "rank": 266,
           "usage": "0.01"
-        },
-        {
-          "tier": "zu",
-          "rank": 170,
-          "usage": "0.11"
         },
         {
           "tier": "doublesou",
@@ -13877,12 +13877,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "water-absorb",
-          "isHidden": true
-        },
-        {
           "name": "illuminate",
           "isHidden": false
+        },
+        {
+          "name": "water-absorb",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -14024,12 +14024,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "friend-guard",
-          "isHidden": true
-        },
-        {
           "name": "competitive",
           "isHidden": false
+        },
+        {
+          "name": "friend-guard",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -14121,11 +14121,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "serene-grace",
+          "name": "hustle",
           "isHidden": false
         },
         {
-          "name": "hustle",
+          "name": "serene-grace",
           "isHidden": false
         },
         {
@@ -14359,9 +14359,9 @@ window.localDB = {
           "usage": "0.03"
         },
         {
-          "tier": "pu",
-          "rank": 223,
-          "usage": "0.01"
+          "tier": "zu",
+          "rank": 117,
+          "usage": "0.41"
         },
         {
           "tier": "vgc2025",
@@ -14369,9 +14369,9 @@ window.localDB = {
           "usage": "0.05"
         },
         {
-          "tier": "zu",
-          "rank": 117,
-          "usage": "0.41"
+          "tier": "pu",
+          "rank": 223,
+          "usage": "0.01"
         }
       ],
       "types": [
@@ -14478,11 +14478,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "huge-power",
+          "name": "thick-fat",
           "isHidden": false
         },
         {
-          "name": "thick-fat",
+          "name": "huge-power",
           "isHidden": false
         },
         {
@@ -14532,14 +14532,14 @@ window.localDB = {
           "usage": "6.54"
         },
         {
-          "tier": "ubers",
-          "rank": 184,
-          "usage": "0.08"
-        },
-        {
           "tier": "ou",
           "rank": 86,
           "usage": "0.87"
+        },
+        {
+          "tier": "ubers",
+          "rank": 184,
+          "usage": "0.08"
         },
         {
           "tier": "doublesou",
@@ -14864,14 +14864,14 @@ window.localDB = {
           "usage": "2.01"
         },
         {
-          "tier": "ubers",
-          "rank": 213,
-          "usage": "0.06"
-        },
-        {
           "tier": "ou",
           "rank": 236,
           "usage": "0.04"
+        },
+        {
+          "tier": "ubers",
+          "rank": 213,
+          "usage": "0.06"
         },
         {
           "tier": "doublesou",
@@ -14921,16 +14921,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "drizzle",
-          "isHidden": true
+          "name": "water-absorb",
+          "isHidden": false
         },
         {
           "name": "damp",
           "isHidden": false
         },
         {
-          "name": "water-absorb",
-          "isHidden": false
+          "name": "drizzle",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -15062,9 +15062,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "pu",
-          "rank": 215,
-          "usage": "0.02"
+          "tier": "zu",
+          "rank": 222,
+          "usage": "0.01"
         },
         {
           "tier": "vgc2025",
@@ -15072,9 +15072,9 @@ window.localDB = {
           "usage": "0.22"
         },
         {
-          "tier": "zu",
-          "rank": 222,
-          "usage": "0.01"
+          "tier": "pu",
+          "rank": 215,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -15209,12 +15209,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "early-bird",
-          "isHidden": true
-        },
-        {
           "name": "solar-power",
           "isHidden": false
+        },
+        {
+          "name": "early-bird",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -15244,14 +15244,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "pu",
-          "rank": 226,
-          "usage": "0.01"
-        },
-        {
           "tier": "zu",
           "rank": 217,
           "usage": "0.02"
+        },
+        {
+          "tier": "pu",
+          "rank": 226,
+          "usage": "0.01"
         },
         {
           "tier": "ubers",
@@ -15269,12 +15269,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "early-bird",
-          "isHidden": true
-        },
-        {
           "name": "solar-power",
           "isHidden": false
+        },
+        {
+          "name": "early-bird",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -15421,14 +15421,14 @@ window.localDB = {
           "usage": "0.54"
         },
         {
-          "tier": "ubers",
-          "rank": 103,
-          "usage": "0.48"
-        },
-        {
           "tier": "ou",
           "rank": 140,
           "usage": "0.20"
+        },
+        {
+          "tier": "ubers",
+          "rank": 103,
+          "usage": "0.48"
         },
         {
           "tier": "doublesou",
@@ -15598,14 +15598,14 @@ window.localDB = {
           "usage": "0.83"
         },
         {
-          "tier": "ubers",
-          "rank": 134,
-          "usage": "0.28"
-        },
-        {
           "tier": "ou",
           "rank": 104,
           "usage": "0.50"
+        },
+        {
+          "tier": "ubers",
+          "rank": 134,
+          "usage": "0.28"
         },
         {
           "tier": "doublesou",
@@ -15735,14 +15735,14 @@ window.localDB = {
           "usage": "0.27"
         },
         {
-          "tier": "ubers",
-          "rank": 212,
-          "usage": "0.06"
-        },
-        {
           "tier": "ou",
           "rank": 89,
           "usage": "0.77"
+        },
+        {
+          "tier": "ubers",
+          "rank": 212,
+          "usage": "0.06"
         },
         {
           "tier": "doublesou",
@@ -15857,6 +15857,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "zu",
+          "rank": 201,
+          "usage": "0.04"
+        },
+        {
           "tier": "ru",
           "rank": 252,
           "usage": "0.01"
@@ -15865,11 +15870,6 @@ window.localDB = {
           "tier": "vgc2025",
           "rank": 82,
           "usage": "0.53"
-        },
-        {
-          "tier": "zu",
-          "rank": 201,
-          "usage": "0.04"
         },
         {
           "tier": "ubers",
@@ -15954,14 +15954,14 @@ window.localDB = {
           "usage": "11.38"
         },
         {
-          "tier": "ubers",
-          "rank": 229,
-          "usage": "0.05"
-        },
-        {
           "tier": "ou",
           "rank": 127,
           "usage": "0.27"
+        },
+        {
+          "tier": "ubers",
+          "rank": 229,
+          "usage": "0.05"
         },
         {
           "tier": "doublesou",
@@ -16171,14 +16171,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "pu",
-          "rank": 217,
-          "usage": "0.02"
-        },
-        {
           "tier": "zu",
           "rank": 197,
           "usage": "0.05"
+        },
+        {
+          "tier": "pu",
+          "rank": 217,
+          "usage": "0.02"
         }
       ],
       "types": [
@@ -16306,14 +16306,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 241,
-          "usage": "0.02"
-        },
-        {
           "tier": "zu",
           "rank": 224,
           "usage": "0.01"
+        },
+        {
+          "tier": "ru",
+          "rank": 241,
+          "usage": "0.02"
         }
       ],
       "types": [
@@ -16454,14 +16454,14 @@ window.localDB = {
           "usage": "2.23"
         },
         {
-          "tier": "ubers",
-          "rank": 105,
-          "usage": "0.47"
-        },
-        {
           "tier": "ou",
           "rank": 208,
           "usage": "0.06"
+        },
+        {
+          "tier": "ubers",
+          "rank": 105,
+          "usage": "0.47"
         },
         {
           "tier": "doublesou",
@@ -16577,6 +16577,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "zu",
+          "rank": 136,
+          "usage": "0.26"
+        },
+        {
           "tier": "pu",
           "rank": 213,
           "usage": "0.02"
@@ -16585,11 +16590,6 @@ window.localDB = {
           "tier": "monotype",
           "rank": 311,
           "usage": "0.02"
-        },
-        {
-          "tier": "zu",
-          "rank": 136,
-          "usage": "0.26"
         },
         {
           "tier": "ubers",
@@ -16771,16 +16771,16 @@ window.localDB = {
       ],
       "abilities": [
         {
+          "name": "hyper-cutter",
+          "isHidden": false
+        },
+        {
           "name": "sand-veil",
           "isHidden": false
         },
         {
           "name": "immunity",
           "isHidden": true
-        },
-        {
-          "name": "hyper-cutter",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -16868,11 +16868,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "sturdy",
+          "name": "rock-head",
           "isHidden": false
         },
         {
-          "name": "rock-head",
+          "name": "sturdy",
           "isHidden": false
         },
         {
@@ -16973,14 +16973,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "pu",
-          "rank": 184,
-          "usage": "0.05"
-        },
-        {
           "tier": "zu",
           "rank": 179,
           "usage": "0.09"
+        },
+        {
+          "tier": "pu",
+          "rank": 184,
+          "usage": "0.05"
         }
       ],
       "types": [
@@ -17091,16 +17091,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "intimidate",
-          "isHidden": true
+          "name": "poison-point",
+          "isHidden": false
         },
         {
           "name": "swift-swim",
           "isHidden": false
         },
         {
-          "name": "poison-point",
-          "isHidden": false
+          "name": "intimidate",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -17145,14 +17145,14 @@ window.localDB = {
           "usage": "10.10"
         },
         {
-          "tier": "ubers",
-          "rank": 108,
-          "usage": "0.45"
-        },
-        {
           "tier": "ou",
           "rank": 50,
           "usage": "3.14"
+        },
+        {
+          "tier": "ubers",
+          "rank": 108,
+          "usage": "0.45"
         },
         {
           "tier": "doublesou",
@@ -17574,14 +17574,14 @@ window.localDB = {
           "usage": "0.06"
         },
         {
-          "tier": "ubers",
-          "rank": 342,
-          "usage": "0.01"
-        },
-        {
           "tier": "ou",
           "rank": 258,
           "usage": "0.02"
+        },
+        {
+          "tier": "ubers",
+          "rank": 342,
+          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -17722,11 +17722,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "guts",
+          "name": "swarm",
           "isHidden": false
         },
         {
-          "name": "swarm",
+          "name": "guts",
           "isHidden": false
         },
         {
@@ -17766,6 +17766,11 @@ window.localDB = {
           "usage": "0.10"
         },
         {
+          "tier": "zu",
+          "rank": 33,
+          "usage": "5.92"
+        },
+        {
           "tier": "ru",
           "rank": 89,
           "usage": "1.15"
@@ -17779,11 +17784,6 @@ window.localDB = {
           "tier": "uu",
           "rank": 261,
           "usage": "0.01"
-        },
-        {
-          "tier": "zu",
-          "rank": 33,
-          "usage": "5.92"
         }
       ],
       "types": [
@@ -17928,6 +17928,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "zu",
+          "rank": 78,
+          "usage": "1.27"
+        },
+        {
           "tier": "ru",
           "rank": 229,
           "usage": "0.04"
@@ -17941,11 +17946,6 @@ window.localDB = {
           "tier": "uu",
           "rank": 183,
           "usage": "0.08"
-        },
-        {
-          "tier": "zu",
-          "rank": 78,
-          "usage": "1.27"
         },
         {
           "tier": "nationaldex",
@@ -18099,14 +18099,14 @@ window.localDB = {
           "usage": "0.16"
         },
         {
-          "tier": "ru",
-          "rank": 233,
-          "usage": "0.03"
-        },
-        {
           "tier": "zu",
           "rank": 131,
           "usage": "0.30"
+        },
+        {
+          "tier": "ru",
+          "rank": 233,
+          "usage": "0.03"
         }
       ],
       "types": [
@@ -18206,6 +18206,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "zu",
+          "rank": 68,
+          "usage": "1.98"
+        },
+        {
           "tier": "ru",
           "rank": 222,
           "usage": "0.05"
@@ -18219,11 +18224,6 @@ window.localDB = {
           "tier": "monotype",
           "rank": 224,
           "usage": "0.11"
-        },
-        {
-          "tier": "zu",
-          "rank": 68,
-          "usage": "1.98"
         },
         {
           "tier": "nationaldex",
@@ -18303,12 +18303,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "thick-fat",
-          "isHidden": true
-        },
-        {
           "name": "snow-cloak",
           "isHidden": false
+        },
+        {
+          "name": "thick-fat",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -18350,11 +18350,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "natural-cure",
+          "name": "hustle",
           "isHidden": false
         },
         {
-          "name": "hustle",
+          "name": "natural-cure",
           "isHidden": false
         },
         {
@@ -18568,11 +18568,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "water-absorb",
+          "name": "swift-swim",
           "isHidden": false
         },
         {
-          "name": "swift-swim",
+          "name": "water-absorb",
           "isHidden": false
         },
         {
@@ -18622,14 +18622,14 @@ window.localDB = {
           "usage": "16.21"
         },
         {
-          "tier": "ubers",
-          "rank": 87,
-          "usage": "0.65"
-        },
-        {
           "tier": "ou",
           "rank": 66,
           "usage": "2.04"
+        },
+        {
+          "tier": "ubers",
+          "rank": 87,
+          "usage": "0.65"
         },
         {
           "tier": "doublesou",
@@ -18770,11 +18770,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "sturdy",
+          "name": "keen-eye",
           "isHidden": false
         },
         {
-          "name": "keen-eye",
+          "name": "sturdy",
           "isHidden": false
         },
         {
@@ -18821,11 +18821,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "flash-fire",
+          "name": "early-bird",
           "isHidden": false
         },
         {
-          "name": "early-bird",
+          "name": "flash-fire",
           "isHidden": false
         },
         {
@@ -18860,6 +18860,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "zu",
+          "rank": 18,
+          "usage": "9.75"
+        },
+        {
           "tier": "pu",
           "rank": 75,
           "usage": "1.31"
@@ -18868,11 +18873,6 @@ window.localDB = {
           "tier": "monotype",
           "rank": 326,
           "usage": "0.01"
-        },
-        {
-          "tier": "zu",
-          "rank": 18,
-          "usage": "9.75"
         }
       ],
       "types": [
@@ -18928,11 +18928,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "flash-fire",
+          "name": "early-bird",
           "isHidden": false
         },
         {
-          "name": "early-bird",
+          "name": "flash-fire",
           "isHidden": false
         },
         {
@@ -18977,14 +18977,14 @@ window.localDB = {
           "usage": "0.72"
         },
         {
-          "tier": "pu",
-          "rank": 83,
-          "usage": "0.99"
-        },
-        {
           "tier": "vgc2025",
           "rank": 184,
           "usage": "0.05"
+        },
+        {
+          "tier": "pu",
+          "rank": 83,
+          "usage": "0.99"
         },
         {
           "tier": "monotype",
@@ -18997,14 +18997,14 @@ window.localDB = {
           "usage": "0.34"
         },
         {
-          "tier": "ubers",
-          "rank": 226,
-          "usage": "0.05"
-        },
-        {
           "tier": "ou",
           "rank": 87,
           "usage": "0.87"
+        },
+        {
+          "tier": "ubers",
+          "rank": 226,
+          "usage": "0.05"
         },
         {
           "tier": "doublesou",
@@ -19115,16 +19115,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "damp",
-          "isHidden": true
-        },
-        {
           "name": "swift-swim",
           "isHidden": false
         },
         {
           "name": "sniper",
           "isHidden": false
+        },
+        {
+          "name": "damp",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -19165,12 +19165,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "sand-veil",
-          "isHidden": true
-        },
-        {
           "name": "pickup",
           "isHidden": false
+        },
+        {
+          "name": "sand-veil",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -19210,13 +19210,13 @@ window.localDB = {
           "usage": "14.78"
         },
         {
-          "tier": "ubers",
-          "rank": 222,
+          "tier": "ou",
+          "rank": 223,
           "usage": "0.05"
         },
         {
-          "tier": "ou",
-          "rank": 223,
+          "tier": "ubers",
+          "rank": 222,
           "usage": "0.05"
         },
         {
@@ -19312,14 +19312,14 @@ window.localDB = {
           "usage": "0.19"
         },
         {
-          "tier": "pu",
-          "rank": 21,
-          "usage": "9.08"
-        },
-        {
           "tier": "vgc2025",
           "rank": 139,
           "usage": "0.13"
+        },
+        {
+          "tier": "pu",
+          "rank": 21,
+          "usage": "9.08"
         },
         {
           "tier": "monotype",
@@ -19332,14 +19332,14 @@ window.localDB = {
           "usage": "0.29"
         },
         {
-          "tier": "ubers",
-          "rank": 201,
-          "usage": "0.07"
-        },
-        {
           "tier": "ou",
           "rank": 125,
           "usage": "0.28"
+        },
+        {
+          "tier": "ubers",
+          "rank": 201,
+          "usage": "0.07"
         },
         {
           "tier": "doublesou",
@@ -19649,19 +19649,24 @@ window.localDB = {
           "usage": "0.37"
         },
         {
+          "tier": "zu",
+          "rank": 63,
+          "usage": "2.10"
+        },
+        {
           "tier": "ru",
           "rank": 79,
           "usage": "1.46"
         },
         {
-          "tier": "pu",
-          "rank": 71,
-          "usage": "1.42"
-        },
-        {
           "tier": "vgc2025",
           "rank": 13,
           "usage": "16.02"
+        },
+        {
+          "tier": "pu",
+          "rank": 71,
+          "usage": "1.42"
         },
         {
           "tier": "monotype",
@@ -19674,19 +19679,14 @@ window.localDB = {
           "usage": "0.14"
         },
         {
-          "tier": "zu",
-          "rank": 63,
-          "usage": "2.10"
+          "tier": "ou",
+          "rank": 130,
+          "usage": "0.24"
         },
         {
           "tier": "ubers",
           "rank": 88,
           "usage": "0.64"
-        },
-        {
-          "tier": "ou",
-          "rank": 130,
-          "usage": "0.24"
         },
         {
           "tier": "doublesou",
@@ -19850,12 +19850,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "vital-spirit",
-          "isHidden": true
-        },
-        {
           "name": "steadfast",
           "isHidden": false
+        },
+        {
+          "name": "vital-spirit",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -19890,14 +19890,14 @@ window.localDB = {
           "usage": "0.46"
         },
         {
+          "tier": "zu",
+          "rank": 3,
+          "usage": "23.00"
+        },
+        {
           "tier": "ru",
           "rank": 181,
           "usage": "0.14"
-        },
-        {
-          "tier": "pu",
-          "rank": 101,
-          "usage": "0.61"
         },
         {
           "tier": "vgc2025",
@@ -19905,14 +19905,14 @@ window.localDB = {
           "usage": "0.08"
         },
         {
+          "tier": "pu",
+          "rank": 101,
+          "usage": "0.61"
+        },
+        {
           "tier": "uu",
           "rank": 270,
           "usage": "0.01"
-        },
-        {
-          "tier": "zu",
-          "rank": 3,
-          "usage": "23.00"
         },
         {
           "tier": "doublesou",
@@ -19951,12 +19951,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "steadfast",
-          "isHidden": true
-        },
-        {
           "name": "technician",
           "isHidden": false
+        },
+        {
+          "name": "steadfast",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -20002,12 +20002,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "hydration",
-          "isHidden": true
-        },
-        {
           "name": "forewarn",
           "isHidden": false
+        },
+        {
+          "name": "hydration",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -20210,14 +20210,14 @@ window.localDB = {
           "usage": "4.41"
         },
         {
-          "tier": "ubers",
-          "rank": 31,
-          "usage": "4.15"
-        },
-        {
           "tier": "ou",
           "rank": 46,
           "usage": "3.49"
+        },
+        {
+          "tier": "ubers",
+          "rank": 31,
+          "usage": "4.15"
         },
         {
           "tier": "doublesou",
@@ -20543,12 +20543,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "inner-focus",
-          "isHidden": true
-        },
-        {
           "name": "pressure",
           "isHidden": false
+        },
+        {
+          "name": "inner-focus",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -20790,14 +20790,14 @@ window.localDB = {
           "usage": "0.38"
         },
         {
-          "tier": "ubers",
-          "rank": 336,
-          "usage": "0.01"
-        },
-        {
           "tier": "ou",
           "rank": 176,
           "usage": "0.10"
+        },
+        {
+          "tier": "ubers",
+          "rank": 336,
+          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -20937,12 +20937,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "inner-focus",
-          "isHidden": true
-        },
-        {
           "name": "pressure",
           "isHidden": false
+        },
+        {
+          "name": "inner-focus",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -20984,12 +20984,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "sand-veil",
-          "isHidden": true
-        },
-        {
           "name": "guts",
           "isHidden": false
+        },
+        {
+          "name": "sand-veil",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -21077,14 +21077,14 @@ window.localDB = {
           "usage": "11.89"
         },
         {
-          "tier": "ubers",
-          "rank": 47,
-          "usage": "1.78"
-        },
-        {
           "tier": "ou",
           "rank": 43,
           "usage": "3.77"
+        },
+        {
+          "tier": "ubers",
+          "rank": 47,
+          "usage": "1.78"
         },
         {
           "tier": "doublesou",
@@ -21898,6 +21898,11 @@ window.localDB = {
           "usage": "0.93"
         },
         {
+          "tier": "zu",
+          "rank": 83,
+          "usage": "1.15"
+        },
+        {
           "tier": "ru",
           "rank": 91,
           "usage": "1.13"
@@ -21918,18 +21923,13 @@ window.localDB = {
           "usage": "0.05"
         },
         {
-          "tier": "zu",
-          "rank": 83,
-          "usage": "1.15"
+          "tier": "ou",
+          "rank": 269,
+          "usage": "0.02"
         },
         {
           "tier": "ubers",
           "rank": 299,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ou",
-          "rank": 269,
           "usage": "0.02"
         },
         {
@@ -22056,12 +22056,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "speed-boost",
-          "isHidden": true
-        },
-        {
           "name": "blaze",
           "isHidden": false
+        },
+        {
+          "name": "speed-boost",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -22091,14 +22091,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "pu",
-          "rank": 214,
-          "usage": "0.02"
-        },
-        {
           "tier": "zu",
           "rank": 174,
           "usage": "0.10"
+        },
+        {
+          "tier": "pu",
+          "rank": 214,
+          "usage": "0.02"
         }
       ],
       "types": [
@@ -22143,14 +22143,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ubers",
-          "rank": 158,
-          "usage": "0.14"
-        },
-        {
           "tier": "ou",
           "rank": 74,
           "usage": "1.64"
+        },
+        {
+          "tier": "ubers",
+          "rank": 158,
+          "usage": "0.14"
         },
         {
           "tier": "doublesou",
@@ -22231,12 +22231,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "speed-boost",
-          "isHidden": true
-        },
-        {
           "name": "blaze",
           "isHidden": false
+        },
+        {
+          "name": "speed-boost",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -22277,12 +22277,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "damp",
-          "isHidden": true
-        },
-        {
           "name": "torrent",
           "isHidden": false
+        },
+        {
+          "name": "damp",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -22355,12 +22355,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "damp",
-          "isHidden": true
-        },
-        {
           "name": "torrent",
           "isHidden": false
+        },
+        {
+          "name": "damp",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -22415,14 +22415,14 @@ window.localDB = {
           "usage": "2.30"
         },
         {
-          "tier": "ubers",
-          "rank": 214,
-          "usage": "0.06"
-        },
-        {
           "tier": "ou",
           "rank": 172,
           "usage": "0.12"
+        },
+        {
+          "tier": "ubers",
+          "rank": 214,
+          "usage": "0.06"
         },
         {
           "tier": "doublesou",
@@ -22623,12 +22623,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "damp",
-          "isHidden": true
-        },
-        {
           "name": "torrent",
           "isHidden": false
+        },
+        {
+          "name": "damp",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -23047,12 +23047,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "compound-eyes",
-          "isHidden": true
-        },
-        {
           "name": "shield-dust",
           "isHidden": false
+        },
+        {
+          "name": "compound-eyes",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -23094,16 +23094,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "own-tempo",
-          "isHidden": true
-        },
-        {
           "name": "swift-swim",
           "isHidden": false
         },
         {
           "name": "rain-dish",
           "isHidden": false
+        },
+        {
+          "name": "own-tempo",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -23145,16 +23145,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "own-tempo",
-          "isHidden": true
-        },
-        {
           "name": "swift-swim",
           "isHidden": false
         },
         {
           "name": "rain-dish",
           "isHidden": false
+        },
+        {
+          "name": "own-tempo",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -23189,19 +23189,24 @@ window.localDB = {
           "usage": "0.25"
         },
         {
+          "tier": "zu",
+          "rank": 93,
+          "usage": "0.83"
+        },
+        {
           "tier": "ru",
           "rank": 54,
           "usage": "2.73"
         },
         {
-          "tier": "pu",
-          "rank": 153,
-          "usage": "0.13"
-        },
-        {
           "tier": "vgc2025",
           "rank": 61,
           "usage": "1.00"
+        },
+        {
+          "tier": "pu",
+          "rank": 153,
+          "usage": "0.13"
         },
         {
           "tier": "monotype",
@@ -23214,18 +23219,13 @@ window.localDB = {
           "usage": "0.04"
         },
         {
-          "tier": "zu",
-          "rank": 93,
-          "usage": "0.83"
+          "tier": "ou",
+          "rank": 274,
+          "usage": "0.02"
         },
         {
           "tier": "ubers",
           "rank": 273,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ou",
-          "rank": 274,
           "usage": "0.02"
         },
         {
@@ -23262,16 +23262,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "own-tempo",
-          "isHidden": true
-        },
-        {
           "name": "swift-swim",
           "isHidden": false
         },
         {
           "name": "rain-dish",
           "isHidden": false
+        },
+        {
+          "name": "own-tempo",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -23407,19 +23407,24 @@ window.localDB = {
           "usage": "0.33"
         },
         {
+          "tier": "zu",
+          "rank": 108,
+          "usage": "0.55"
+        },
+        {
           "tier": "ru",
           "rank": 127,
           "usage": "0.41"
         },
         {
-          "tier": "pu",
-          "rank": 100,
-          "usage": "0.62"
-        },
-        {
           "tier": "vgc2025",
           "rank": 228,
           "usage": "0.02"
+        },
+        {
+          "tier": "pu",
+          "rank": 100,
+          "usage": "0.62"
         },
         {
           "tier": "monotype",
@@ -23430,11 +23435,6 @@ window.localDB = {
           "tier": "uu",
           "rank": 241,
           "usage": "0.02"
-        },
-        {
-          "tier": "zu",
-          "rank": 108,
-          "usage": "0.55"
         },
         {
           "tier": "ou",
@@ -23463,12 +23463,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "pickpocket",
-          "isHidden": true
-        },
-        {
           "name": "wind-rider",
           "isHidden": false
+        },
+        {
+          "name": "pickpocket",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -23620,16 +23620,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "rain-dish",
-          "isHidden": true
-        },
-        {
           "name": "keen-eye",
           "isHidden": false
         },
         {
           "name": "hydration",
           "isHidden": false
+        },
+        {
+          "name": "rain-dish",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -23669,14 +23669,14 @@ window.localDB = {
           "usage": "3.95"
         },
         {
-          "tier": "ubers",
-          "rank": 140,
-          "usage": "0.23"
-        },
-        {
           "tier": "ou",
           "rank": 42,
           "usage": "3.90"
+        },
+        {
+          "tier": "ubers",
+          "rank": 140,
+          "usage": "0.23"
         },
         {
           "tier": "doublesou",
@@ -23877,16 +23877,16 @@ window.localDB = {
       ],
       "abilities": [
         {
+          "name": "keen-eye",
+          "isHidden": false
+        },
+        {
           "name": "drizzle",
           "isHidden": false
         },
         {
           "name": "rain-dish",
           "isHidden": true
-        },
-        {
-          "name": "keen-eye",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -24038,14 +24038,14 @@ window.localDB = {
           "usage": "6.21"
         },
         {
-          "tier": "ubers",
-          "rank": 192,
-          "usage": "0.07"
-        },
-        {
           "tier": "ou",
           "rank": 148,
           "usage": "0.18"
+        },
+        {
+          "tier": "ubers",
+          "rank": 192,
+          "usage": "0.07"
         },
         {
           "tier": "doublesou",
@@ -24257,6 +24257,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "zu",
+          "rank": 89,
+          "usage": "0.90"
+        },
+        {
           "tier": "ru",
           "rank": 253,
           "usage": "0.01"
@@ -24275,11 +24280,6 @@ window.localDB = {
           "tier": "uu",
           "rank": 192,
           "usage": "0.06"
-        },
-        {
-          "tier": "zu",
-          "rank": 89,
-          "usage": "0.90"
         },
         {
           "tier": "ou",
@@ -24409,14 +24409,14 @@ window.localDB = {
           "usage": "0.18"
         },
         {
-          "tier": "ubers",
-          "rank": 263,
-          "usage": "0.03"
-        },
-        {
           "tier": "ou",
           "rank": 168,
           "usage": "0.13"
+        },
+        {
+          "tier": "ubers",
+          "rank": 263,
+          "usage": "0.03"
         },
         {
           "tier": "doublesou",
@@ -24700,14 +24700,19 @@ window.localDB = {
           "usage": "0.16"
         },
         {
-          "tier": "pu",
-          "rank": 163,
-          "usage": "0.11"
+          "tier": "zu",
+          "rank": 97,
+          "usage": "0.69"
         },
         {
           "tier": "vgc2025",
           "rank": 178,
           "usage": "0.06"
+        },
+        {
+          "tier": "pu",
+          "rank": 163,
+          "usage": "0.11"
         },
         {
           "tier": "monotype",
@@ -24720,19 +24725,14 @@ window.localDB = {
           "usage": "0.03"
         },
         {
-          "tier": "zu",
-          "rank": 97,
-          "usage": "0.69"
+          "tier": "ou",
+          "rank": 300,
+          "usage": "0.01"
         },
         {
           "tier": "ubers",
           "rank": 262,
           "usage": "0.03"
-        },
-        {
-          "tier": "ou",
-          "rank": 300,
-          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -25297,11 +25297,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "huge-power",
+          "name": "thick-fat",
           "isHidden": false
         },
         {
-          "name": "thick-fat",
+          "name": "huge-power",
           "isHidden": false
         },
         {
@@ -25336,14 +25336,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "nu",
-          "rank": 130,
-          "usage": "0.26"
-        },
-        {
           "tier": "lc",
           "rank": 121,
           "usage": "0.07"
+        },
+        {
+          "tier": "nu",
+          "rank": 130,
+          "usage": "0.26"
         },
         {
           "tier": "uu",
@@ -25506,19 +25506,24 @@ window.localDB = {
           "usage": "0.64"
         },
         {
+          "tier": "zu",
+          "rank": 44,
+          "usage": "3.86"
+        },
+        {
           "tier": "ru",
           "rank": 103,
           "usage": "0.83"
         },
         {
-          "tier": "pu",
-          "rank": 49,
-          "usage": "3.55"
-        },
-        {
           "tier": "vgc2025",
           "rank": 66,
           "usage": "0.78"
+        },
+        {
+          "tier": "pu",
+          "rank": 49,
+          "usage": "3.55"
         },
         {
           "tier": "monotype",
@@ -25531,19 +25536,14 @@ window.localDB = {
           "usage": "0.11"
         },
         {
-          "tier": "zu",
-          "rank": 44,
-          "usage": "3.86"
+          "tier": "ou",
+          "rank": 296,
+          "usage": "0.01"
         },
         {
           "tier": "ubers",
           "rank": 74,
           "usage": "0.86"
-        },
-        {
-          "tier": "ou",
-          "rank": 296,
-          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -25736,11 +25736,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "intimidate",
+          "name": "hyper-cutter",
           "isHidden": false
         },
         {
-          "name": "hyper-cutter",
+          "name": "intimidate",
           "isHidden": false
         },
         {
@@ -26027,19 +26027,24 @@ window.localDB = {
           "usage": "0.27"
         },
         {
+          "tier": "zu",
+          "rank": 46,
+          "usage": "3.69"
+        },
+        {
           "tier": "ru",
           "rank": 214,
           "usage": "0.06"
         },
         {
-          "tier": "pu",
-          "rank": 144,
-          "usage": "0.20"
-        },
-        {
           "tier": "vgc2025",
           "rank": 209,
           "usage": "0.03"
+        },
+        {
+          "tier": "pu",
+          "rank": 144,
+          "usage": "0.20"
         },
         {
           "tier": "monotype",
@@ -26050,11 +26055,6 @@ window.localDB = {
           "tier": "uu",
           "rank": 169,
           "usage": "0.11"
-        },
-        {
-          "tier": "zu",
-          "rank": 46,
-          "usage": "3.69"
         },
         {
           "tier": "ou",
@@ -26287,12 +26287,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "lightning-rod",
-          "isHidden": true
-        },
-        {
           "name": "plus",
           "isHidden": false
+        },
+        {
+          "name": "lightning-rod",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -26333,12 +26333,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "volt-absorb",
-          "isHidden": true
-        },
-        {
           "name": "minus",
           "isHidden": false
+        },
+        {
+          "name": "volt-absorb",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -26373,6 +26373,11 @@ window.localDB = {
           "usage": "0.11"
         },
         {
+          "tier": "zu",
+          "rank": 104,
+          "usage": "0.59"
+        },
+        {
           "tier": "pu",
           "rank": 67,
           "usage": "1.87"
@@ -26381,11 +26386,6 @@ window.localDB = {
           "tier": "monotype",
           "rank": 310,
           "usage": "0.02"
-        },
-        {
-          "tier": "zu",
-          "rank": 104,
-          "usage": "0.59"
         },
         {
           "tier": "doublesou",
@@ -26438,14 +26438,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 256,
+          "tier": "zu",
+          "rank": 228,
           "usage": "0.01"
         },
         {
-          "tier": "pu",
-          "rank": 177,
-          "usage": "0.07"
+          "tier": "ru",
+          "rank": 256,
+          "usage": "0.01"
         },
         {
           "tier": "vgc2025",
@@ -26453,9 +26453,9 @@ window.localDB = {
           "usage": "0.06"
         },
         {
-          "tier": "zu",
-          "rank": 228,
-          "usage": "0.01"
+          "tier": "pu",
+          "rank": 177,
+          "usage": "0.07"
         },
         {
           "tier": "doublesou",
@@ -26575,11 +26575,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "sticky-hold",
+          "name": "liquid-ooze",
           "isHidden": false
         },
         {
-          "name": "liquid-ooze",
+          "name": "sticky-hold",
           "isHidden": false
         },
         {
@@ -26614,14 +26614,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "pu",
-          "rank": 156,
-          "usage": "0.12"
-        },
-        {
           "tier": "zu",
           "rank": 114,
           "usage": "0.43"
+        },
+        {
+          "tier": "pu",
+          "rank": 156,
+          "usage": "0.12"
         }
       ],
       "types": [
@@ -26661,11 +26661,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "sticky-hold",
+          "name": "liquid-ooze",
           "isHidden": false
         },
         {
-          "name": "liquid-ooze",
+          "name": "sticky-hold",
           "isHidden": false
         },
         {
@@ -26712,12 +26712,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "speed-boost",
-          "isHidden": true
-        },
-        {
           "name": "rough-skin",
           "isHidden": false
+        },
+        {
+          "name": "speed-boost",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -26790,12 +26790,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "speed-boost",
-          "isHidden": true
-        },
-        {
           "name": "rough-skin",
           "isHidden": false
+        },
+        {
+          "name": "speed-boost",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -26836,11 +26836,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "oblivious",
+          "name": "water-veil",
           "isHidden": false
         },
         {
-          "name": "water-veil",
+          "name": "oblivious",
           "isHidden": false
         },
         {
@@ -26886,11 +26886,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "oblivious",
+          "name": "water-veil",
           "isHidden": false
         },
         {
-          "name": "water-veil",
+          "name": "oblivious",
           "isHidden": false
         },
         {
@@ -26977,12 +26977,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "own-tempo",
-          "isHidden": true
-        },
-        {
           "name": "simple",
           "isHidden": false
+        },
+        {
+          "name": "own-tempo",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -27012,14 +27012,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "zu",
+          "rank": 72,
+          "usage": "1.58"
+        },
+        {
           "tier": "ru",
           "rank": 237,
           "usage": "0.03"
-        },
-        {
-          "tier": "pu",
-          "rank": 126,
-          "usage": "0.31"
         },
         {
           "tier": "vgc2025",
@@ -27027,9 +27027,9 @@ window.localDB = {
           "usage": "0.05"
         },
         {
-          "tier": "zu",
-          "rank": 72,
-          "usage": "1.58"
+          "tier": "pu",
+          "rank": 126,
+          "usage": "0.31"
         },
         {
           "tier": "doublesou",
@@ -27064,12 +27064,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "anger-point",
-          "isHidden": true
-        },
-        {
           "name": "solid-rock",
           "isHidden": false
+        },
+        {
+          "name": "anger-point",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -27104,19 +27104,24 @@ window.localDB = {
           "usage": "0.08"
         },
         {
+          "tier": "zu",
+          "rank": 96,
+          "usage": "0.71"
+        },
+        {
           "tier": "ru",
           "rank": 60,
           "usage": "2.45"
         },
         {
-          "tier": "pu",
-          "rank": 138,
-          "usage": "0.24"
-        },
-        {
           "tier": "vgc2025",
           "rank": 34,
           "usage": "4.38"
+        },
+        {
+          "tier": "pu",
+          "rank": 138,
+          "usage": "0.24"
         },
         {
           "tier": "monotype",
@@ -27129,19 +27134,14 @@ window.localDB = {
           "usage": "1.44"
         },
         {
-          "tier": "zu",
-          "rank": 96,
-          "usage": "0.71"
+          "tier": "ou",
+          "rank": 56,
+          "usage": "2.63"
         },
         {
           "tier": "ubers",
           "rank": 129,
           "usage": "0.30"
-        },
-        {
-          "tier": "ou",
-          "rank": 56,
-          "usage": "2.63"
         },
         {
           "tier": "doublesou",
@@ -27301,11 +27301,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "own-tempo",
+          "name": "thick-fat",
           "isHidden": false
         },
         {
-          "name": "thick-fat",
+          "name": "own-tempo",
           "isHidden": false
         },
         {
@@ -27340,14 +27340,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "pu",
-          "rank": 173,
-          "usage": "0.08"
-        },
-        {
           "tier": "zu",
           "rank": 145,
           "usage": "0.18"
+        },
+        {
+          "tier": "pu",
+          "rank": 173,
+          "usage": "0.08"
         }
       ],
       "types": [
@@ -27356,11 +27356,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "own-tempo",
+          "name": "thick-fat",
           "isHidden": false
         },
         {
-          "name": "thick-fat",
+          "name": "own-tempo",
           "isHidden": false
         },
         {
@@ -27579,14 +27579,14 @@ window.localDB = {
           "usage": "0.23"
         },
         {
-          "tier": "ubers",
-          "rank": 330,
-          "usage": "0.01"
-        },
-        {
           "tier": "ou",
           "rank": 233,
           "usage": "0.04"
+        },
+        {
+          "tier": "ubers",
+          "rank": 330,
+          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -27794,6 +27794,11 @@ window.localDB = {
           "usage": "0.59"
         },
         {
+          "tier": "zu",
+          "rank": 123,
+          "usage": "0.36"
+        },
+        {
           "tier": "ru",
           "rank": 224,
           "usage": "0.04"
@@ -27802,11 +27807,6 @@ window.localDB = {
           "tier": "pu",
           "rank": 157,
           "usage": "0.12"
-        },
-        {
-          "tier": "zu",
-          "rank": 123,
-          "usage": "0.36"
         }
       ],
       "types": [
@@ -27863,12 +27863,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "cloud-nine",
-          "isHidden": true
-        },
-        {
           "name": "natural-cure",
           "isHidden": false
+        },
+        {
+          "name": "cloud-nine",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -28021,6 +28021,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "zu",
+          "rank": 74,
+          "usage": "1.45"
+        },
+        {
           "tier": "ru",
           "rank": 221,
           "usage": "0.05"
@@ -28039,11 +28044,6 @@ window.localDB = {
           "tier": "uu",
           "rank": 264,
           "usage": "0.01"
-        },
-        {
-          "tier": "zu",
-          "rank": 74,
-          "usage": "1.45"
         }
       ],
       "types": [
@@ -28103,6 +28103,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "zu",
+          "rank": 211,
+          "usage": "0.03"
+        },
+        {
           "tier": "ru",
           "rank": 239,
           "usage": "0.02"
@@ -28110,11 +28115,6 @@ window.localDB = {
         {
           "tier": "pu",
           "rank": 201,
-          "usage": "0.03"
-        },
-        {
-          "tier": "zu",
-          "rank": 211,
           "usage": "0.03"
         },
         {
@@ -28306,6 +28306,11 @@ window.localDB = {
           "usage": "0.01"
         },
         {
+          "tier": "zu",
+          "rank": 12,
+          "usage": "12.90"
+        },
+        {
           "tier": "pu",
           "rank": 128,
           "usage": "0.30"
@@ -28314,11 +28319,6 @@ window.localDB = {
           "tier": "uu",
           "rank": 257,
           "usage": "0.01"
-        },
-        {
-          "tier": "zu",
-          "rank": 12,
-          "usage": "12.90"
         }
       ],
       "types": [
@@ -28348,12 +28348,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "hydration",
-          "isHidden": true
-        },
-        {
           "name": "anticipation",
           "isHidden": false
+        },
+        {
+          "name": "hydration",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -28464,14 +28464,14 @@ window.localDB = {
           "usage": "0.20"
         },
         {
-          "tier": "ubers",
-          "rank": 208,
-          "usage": "0.06"
-        },
-        {
           "tier": "ou",
           "rank": 155,
           "usage": "0.16"
+        },
+        {
+          "tier": "ubers",
+          "rank": 208,
+          "usage": "0.06"
         },
         {
           "tier": "doublesou",
@@ -28895,14 +28895,14 @@ window.localDB = {
           "usage": "0.97"
         },
         {
-          "tier": "pu",
-          "rank": 5,
-          "usage": "18.44"
-        },
-        {
           "tier": "vgc2025",
           "rank": 199,
           "usage": "0.04"
+        },
+        {
+          "tier": "pu",
+          "rank": 5,
+          "usage": "18.44"
         },
         {
           "tier": "monotype",
@@ -28915,14 +28915,14 @@ window.localDB = {
           "usage": "0.10"
         },
         {
-          "tier": "ubers",
-          "rank": 236,
-          "usage": "0.04"
-        },
-        {
           "tier": "ou",
           "rank": 151,
           "usage": "0.17"
+        },
+        {
+          "tier": "ubers",
+          "rank": 236,
+          "usage": "0.04"
         },
         {
           "tier": "doublesou",
@@ -29179,14 +29179,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "pu",
-          "rank": 203,
-          "usage": "0.03"
-        },
-        {
           "tier": "zu",
           "rank": 66,
           "usage": "1.99"
+        },
+        {
+          "tier": "pu",
+          "rank": 203,
+          "usage": "0.03"
         }
       ],
       "types": [
@@ -29280,14 +29280,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "zu",
+          "rank": 98,
+          "usage": "0.69"
+        },
+        {
           "tier": "ru",
           "rank": 142,
           "usage": "0.32"
-        },
-        {
-          "tier": "pu",
-          "rank": 178,
-          "usage": "0.07"
         },
         {
           "tier": "vgc2025",
@@ -29295,14 +29295,14 @@ window.localDB = {
           "usage": "0.25"
         },
         {
+          "tier": "pu",
+          "rank": 178,
+          "usage": "0.07"
+        },
+        {
           "tier": "monotype",
           "rank": 277,
           "usage": "0.04"
-        },
-        {
-          "tier": "zu",
-          "rank": 98,
-          "usage": "0.69"
         },
         {
           "tier": "ubers",
@@ -29361,6 +29361,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "zu",
+          "rank": 193,
+          "usage": "0.06"
+        },
+        {
           "tier": "pu",
           "rank": 224,
           "usage": "0.01"
@@ -29369,11 +29374,6 @@ window.localDB = {
           "tier": "uu",
           "rank": 233,
           "usage": "0.02"
-        },
-        {
-          "tier": "zu",
-          "rank": 193,
-          "usage": "0.06"
         }
       ],
       "types": [
@@ -29427,14 +29427,14 @@ window.localDB = {
           "usage": "0.02"
         },
         {
-          "tier": "pu",
-          "rank": 208,
-          "usage": "0.02"
-        },
-        {
           "tier": "zu",
           "rank": 132,
           "usage": "0.29"
+        },
+        {
+          "tier": "pu",
+          "rank": 208,
+          "usage": "0.02"
         }
       ],
       "types": [
@@ -29718,16 +29718,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "oblivious",
-          "isHidden": true
-        },
-        {
           "name": "thick-fat",
           "isHidden": false
         },
         {
           "name": "ice-body",
           "isHidden": false
+        },
+        {
+          "name": "oblivious",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -29769,16 +29769,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "oblivious",
-          "isHidden": true
-        },
-        {
           "name": "thick-fat",
           "isHidden": false
         },
         {
           "name": "ice-body",
           "isHidden": false
+        },
+        {
+          "name": "oblivious",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -29820,16 +29820,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "oblivious",
-          "isHidden": true
-        },
-        {
           "name": "thick-fat",
           "isHidden": false
         },
         {
           "name": "ice-body",
           "isHidden": false
+        },
+        {
+          "name": "oblivious",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -30009,16 +30009,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "sturdy",
-          "isHidden": true
-        },
-        {
           "name": "swift-swim",
           "isHidden": false
         },
         {
           "name": "rock-head",
           "isHidden": false
+        },
+        {
+          "name": "sturdy",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -30206,14 +30206,14 @@ window.localDB = {
           "usage": "4.58"
         },
         {
-          "tier": "ubers",
-          "rank": 220,
-          "usage": "0.05"
-        },
-        {
           "tier": "ou",
           "rank": 134,
           "usage": "0.22"
+        },
+        {
+          "tier": "ubers",
+          "rank": 220,
+          "usage": "0.05"
         },
         {
           "tier": "doublesou",
@@ -30496,14 +30496,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "pu",
-          "rank": 221,
-          "usage": "0.01"
-        },
-        {
           "tier": "zu",
           "rank": 205,
           "usage": "0.03"
+        },
+        {
+          "tier": "pu",
+          "rank": 221,
+          "usage": "0.01"
         }
       ],
       "types": [
@@ -30563,14 +30563,14 @@ window.localDB = {
           "usage": "8.37"
         },
         {
-          "tier": "ubers",
-          "rank": 176,
-          "usage": "0.10"
-        },
-        {
           "tier": "ou",
           "rank": 152,
           "usage": "0.17"
+        },
+        {
+          "tier": "ubers",
+          "rank": 176,
+          "usage": "0.10"
         },
         {
           "tier": "doublesou",
@@ -30811,6 +30811,11 @@ window.localDB = {
           "usage": "0.93"
         },
         {
+          "tier": "zu",
+          "rank": 25,
+          "usage": "7.36"
+        },
+        {
           "tier": "ru",
           "rank": 173,
           "usage": "0.16"
@@ -30826,18 +30831,13 @@ window.localDB = {
           "usage": "0.02"
         },
         {
-          "tier": "zu",
-          "rank": 25,
-          "usage": "7.36"
+          "tier": "ou",
+          "rank": 293,
+          "usage": "0.01"
         },
         {
           "tier": "ubers",
           "rank": 325,
-          "usage": "0.01"
-        },
-        {
-          "tier": "ou",
-          "rank": 293,
           "usage": "0.01"
         },
         {
@@ -30928,6 +30928,11 @@ window.localDB = {
           "usage": "0.01"
         },
         {
+          "tier": "zu",
+          "rank": 101,
+          "usage": "0.66"
+        },
+        {
           "tier": "ru",
           "rank": 152,
           "usage": "0.25"
@@ -30948,19 +30953,14 @@ window.localDB = {
           "usage": "0.05"
         },
         {
-          "tier": "zu",
-          "rank": 101,
-          "usage": "0.66"
+          "tier": "ou",
+          "rank": 178,
+          "usage": "0.10"
         },
         {
           "tier": "ubers",
           "rank": 334,
           "usage": "0.01"
-        },
-        {
-          "tier": "ou",
-          "rank": 178,
-          "usage": "0.10"
         },
         {
           "tier": "doublesou",
@@ -31024,14 +31024,14 @@ window.localDB = {
           "usage": "0.03"
         },
         {
-          "tier": "ubers",
-          "rank": 306,
-          "usage": "0.02"
-        },
-        {
           "tier": "ou",
           "rank": 229,
           "usage": "0.04"
+        },
+        {
+          "tier": "ubers",
+          "rank": 306,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -31141,14 +31141,14 @@ window.localDB = {
           "usage": "3.64"
         },
         {
-          "tier": "ubers",
-          "rank": 255,
-          "usage": "0.03"
-        },
-        {
           "tier": "ou",
           "rank": 73,
           "usage": "1.70"
+        },
+        {
+          "tier": "ubers",
+          "rank": 255,
+          "usage": "0.03"
         },
         {
           "tier": "doublesou",
@@ -31380,14 +31380,14 @@ window.localDB = {
           "usage": "26.92"
         },
         {
-          "tier": "ubers",
-          "rank": 241,
-          "usage": "0.04"
-        },
-        {
           "tier": "ou",
           "rank": 68,
           "usage": "2.03"
+        },
+        {
+          "tier": "ubers",
+          "rank": 241,
+          "usage": "0.04"
         },
         {
           "tier": "doublesou",
@@ -32249,14 +32249,14 @@ window.localDB = {
           "usage": "2.13"
         },
         {
-          "tier": "ubers",
-          "rank": 164,
-          "usage": "0.12"
-        },
-        {
           "tier": "ou",
           "rank": 137,
           "usage": "0.21"
+        },
+        {
+          "tier": "ubers",
+          "rank": 164,
+          "usage": "0.12"
         },
         {
           "tier": "doublesou",
@@ -32708,14 +32708,14 @@ window.localDB = {
           "usage": "0.25"
         },
         {
-          "tier": "ubers",
-          "rank": 282,
-          "usage": "0.02"
-        },
-        {
           "tier": "ou",
           "rank": 138,
           "usage": "0.21"
+        },
+        {
+          "tier": "ubers",
+          "rank": 282,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -32995,14 +32995,14 @@ window.localDB = {
           "usage": "0.60"
         },
         {
-          "tier": "ubers",
-          "rank": 345,
-          "usage": "0.01"
-        },
-        {
           "tier": "ou",
           "rank": 181,
           "usage": "0.09"
+        },
+        {
+          "tier": "ubers",
+          "rank": 345,
+          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -33285,14 +33285,14 @@ window.localDB = {
           "usage": "0.68"
         },
         {
-          "tier": "ubers",
-          "rank": 179,
-          "usage": "0.09"
-        },
-        {
           "tier": "ou",
           "rank": 119,
           "usage": "0.32"
+        },
+        {
+          "tier": "ubers",
+          "rank": 179,
+          "usage": "0.09"
         },
         {
           "tier": "doublesou",
@@ -33582,14 +33582,14 @@ window.localDB = {
           "usage": "0.81"
         },
         {
-          "tier": "ubers",
-          "rank": 265,
-          "usage": "0.03"
-        },
-        {
           "tier": "ou",
           "rank": 231,
           "usage": "0.04"
+        },
+        {
+          "tier": "ubers",
+          "rank": 265,
+          "usage": "0.03"
         },
         {
           "tier": "doublesou",
@@ -33882,14 +33882,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "pu",
-          "rank": 212,
-          "usage": "0.02"
-        },
-        {
           "tier": "zu",
           "rank": 184,
           "usage": "0.08"
+        },
+        {
+          "tier": "pu",
+          "rank": 212,
+          "usage": "0.02"
         },
         {
           "tier": "nationaldex",
@@ -33949,16 +33949,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
+          "name": "rivalry",
+          "isHidden": false
+        },
+        {
           "name": "intimidate",
           "isHidden": false
         },
         {
           "name": "guts",
           "isHidden": true
-        },
-        {
-          "name": "rivalry",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -33999,16 +33999,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
+          "name": "rivalry",
+          "isHidden": false
+        },
+        {
           "name": "intimidate",
           "isHidden": false
         },
         {
           "name": "guts",
           "isHidden": true
-        },
-        {
-          "name": "rivalry",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -34038,14 +34038,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "pu",
-          "rank": 162,
-          "usage": "0.11"
-        },
-        {
           "tier": "zu",
           "rank": 181,
           "usage": "0.08"
+        },
+        {
+          "tier": "pu",
+          "rank": 162,
+          "usage": "0.11"
         },
         {
           "tier": "nationaldex",
@@ -34059,16 +34059,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
+          "name": "rivalry",
+          "isHidden": false
+        },
+        {
           "name": "intimidate",
           "isHidden": false
         },
         {
           "name": "guts",
           "isHidden": true
-        },
-        {
-          "name": "rivalry",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -34313,6 +34313,11 @@ window.localDB = {
           "usage": "0.06"
         },
         {
+          "tier": "zu",
+          "rank": 91,
+          "usage": "0.87"
+        },
+        {
           "tier": "ru",
           "rank": 261,
           "usage": "0.01"
@@ -34333,19 +34338,14 @@ window.localDB = {
           "usage": "0.02"
         },
         {
-          "tier": "zu",
-          "rank": 91,
-          "usage": "0.87"
+          "tier": "ou",
+          "rank": 246,
+          "usage": "0.03"
         },
         {
           "tier": "ubers",
           "rank": 298,
           "usage": "0.02"
-        },
-        {
-          "tier": "ou",
-          "rank": 246,
-          "usage": "0.03"
         },
         {
           "tier": "doublesou",
@@ -34451,14 +34451,14 @@ window.localDB = {
           "usage": "0.38"
         },
         {
+          "tier": "zu",
+          "rank": 129,
+          "usage": "0.30"
+        },
+        {
           "tier": "ru",
           "rank": 98,
           "usage": "0.91"
-        },
-        {
-          "tier": "pu",
-          "rank": 190,
-          "usage": "0.04"
         },
         {
           "tier": "vgc2025",
@@ -34466,9 +34466,9 @@ window.localDB = {
           "usage": "0.01"
         },
         {
-          "tier": "zu",
-          "rank": 129,
-          "usage": "0.30"
+          "tier": "pu",
+          "rank": 190,
+          "usage": "0.04"
         },
         {
           "tier": "ubers",
@@ -34691,12 +34691,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "hustle",
-          "isHidden": true
-        },
-        {
           "name": "honey-gather",
           "isHidden": false
+        },
+        {
+          "name": "hustle",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -34778,13 +34778,13 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "vgc2025",
-          "rank": 210,
+          "tier": "zu",
+          "rank": 207,
           "usage": "0.03"
         },
         {
-          "tier": "zu",
-          "rank": 207,
+          "tier": "vgc2025",
+          "rank": 210,
           "usage": "0.03"
         },
         {
@@ -34799,16 +34799,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "volt-absorb",
-          "isHidden": true
-        },
-        {
           "name": "run-away",
           "isHidden": false
         },
         {
           "name": "pickup",
           "isHidden": false
+        },
+        {
+          "name": "volt-absorb",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -35177,14 +35177,14 @@ window.localDB = {
           "usage": "2.69"
         },
         {
-          "tier": "ubers",
-          "rank": 113,
-          "usage": "0.41"
-        },
-        {
           "tier": "ou",
           "rank": 241,
           "usage": "0.04"
+        },
+        {
+          "tier": "ubers",
+          "rank": 113,
+          "usage": "0.41"
         },
         {
           "tier": "doublesou",
@@ -35441,16 +35441,16 @@ window.localDB = {
       ],
       "abilities": [
         {
+          "name": "technician",
+          "isHidden": false
+        },
+        {
           "name": "pickup",
           "isHidden": false
         },
         {
           "name": "skill-link",
           "isHidden": true
-        },
-        {
-          "name": "technician",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -35508,11 +35508,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "unburden",
+          "name": "aftermath",
           "isHidden": false
         },
         {
-          "name": "aftermath",
+          "name": "unburden",
           "isHidden": false
         },
         {
@@ -35552,19 +35552,24 @@ window.localDB = {
           "usage": "1.27"
         },
         {
+          "tier": "zu",
+          "rank": 51,
+          "usage": "3.31"
+        },
+        {
           "tier": "ru",
           "rank": 132,
           "usage": "0.39"
         },
         {
-          "tier": "pu",
-          "rank": 87,
-          "usage": "0.84"
-        },
-        {
           "tier": "vgc2025",
           "rank": 172,
           "usage": "0.06"
+        },
+        {
+          "tier": "pu",
+          "rank": 87,
+          "usage": "0.84"
         },
         {
           "tier": "monotype",
@@ -35577,19 +35582,14 @@ window.localDB = {
           "usage": "0.05"
         },
         {
-          "tier": "zu",
-          "rank": 51,
-          "usage": "3.31"
+          "tier": "ou",
+          "rank": 215,
+          "usage": "0.05"
         },
         {
           "tier": "ubers",
           "rank": 319,
           "usage": "0.01"
-        },
-        {
-          "tier": "ou",
-          "rank": 215,
-          "usage": "0.05"
         },
         {
           "tier": "doublesou",
@@ -35640,11 +35640,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "unburden",
+          "name": "aftermath",
           "isHidden": false
         },
         {
-          "name": "aftermath",
+          "name": "unburden",
           "isHidden": false
         },
         {
@@ -35690,16 +35690,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "limber",
-          "isHidden": true
-        },
-        {
           "name": "run-away",
           "isHidden": false
         },
         {
           "name": "klutz",
           "isHidden": false
+        },
+        {
+          "name": "limber",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -35786,16 +35786,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "limber",
-          "isHidden": true
-        },
-        {
           "name": "cute-charm",
           "isHidden": false
         },
         {
           "name": "klutz",
           "isHidden": false
+        },
+        {
+          "name": "limber",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -35933,19 +35933,24 @@ window.localDB = {
           "usage": "1.97"
         },
         {
+          "tier": "zu",
+          "rank": 45,
+          "usage": "3.73"
+        },
+        {
           "tier": "ru",
           "rank": 174,
           "usage": "0.16"
         },
         {
-          "tier": "pu",
-          "rank": 51,
-          "usage": "3.40"
-        },
-        {
           "tier": "vgc2025",
           "rank": 280,
           "usage": "0.01"
+        },
+        {
+          "tier": "pu",
+          "rank": 51,
+          "usage": "3.40"
         },
         {
           "tier": "monotype",
@@ -35956,11 +35961,6 @@ window.localDB = {
           "tier": "uu",
           "rank": 249,
           "usage": "0.02"
-        },
-        {
-          "tier": "zu",
-          "rank": 45,
-          "usage": "3.73"
         },
         {
           "tier": "ou",
@@ -36096,11 +36096,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "own-tempo",
+          "name": "thick-fat",
           "isHidden": false
         },
         {
-          "name": "thick-fat",
+          "name": "own-tempo",
           "isHidden": false
         },
         {
@@ -36264,6 +36264,11 @@ window.localDB = {
           "usage": "0.10"
         },
         {
+          "tier": "zu",
+          "rank": 2,
+          "usage": "31.29"
+        },
+        {
           "tier": "ru",
           "rank": 187,
           "usage": "0.12"
@@ -36277,11 +36282,6 @@ window.localDB = {
           "tier": "monotype",
           "rank": 333,
           "usage": "0.01"
-        },
-        {
-          "tier": "zu",
-          "rank": 2,
-          "usage": "31.29"
         }
       ],
       "types": [
@@ -36356,12 +36356,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "keen-eye",
-          "isHidden": true
-        },
-        {
           "name": "aftermath",
           "isHidden": false
+        },
+        {
+          "name": "keen-eye",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -36680,12 +36680,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "technician",
-          "isHidden": true
-        },
-        {
           "name": "filter",
           "isHidden": false
+        },
+        {
+          "name": "technician",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -36821,6 +36821,11 @@ window.localDB = {
           "usage": "0.06"
         },
         {
+          "tier": "zu",
+          "rank": 13,
+          "usage": "11.03"
+        },
+        {
           "tier": "ru",
           "rank": 194,
           "usage": "0.10"
@@ -36834,11 +36839,6 @@ window.localDB = {
           "tier": "monotype",
           "rank": 196,
           "usage": "0.19"
-        },
-        {
-          "tier": "zu",
-          "rank": 13,
-          "usage": "11.03"
         },
         {
           "tier": "doublesou",
@@ -37002,6 +37002,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "zu",
+          "rank": 165,
+          "usage": "0.13"
+        },
+        {
           "tier": "pu",
           "rank": 204,
           "usage": "0.03"
@@ -37010,11 +37015,6 @@ window.localDB = {
           "tier": "uu",
           "rank": 198,
           "usage": "0.05"
-        },
-        {
-          "tier": "zu",
-          "rank": 165,
-          "usage": "0.13"
         }
       ],
       "types": [
@@ -37100,14 +37100,14 @@ window.localDB = {
           "usage": "6.89"
         },
         {
-          "tier": "ubers",
-          "rank": 119,
-          "usage": "0.36"
-        },
-        {
           "tier": "ou",
           "rank": 34,
           "usage": "5.37"
+        },
+        {
+          "tier": "ubers",
+          "rank": 119,
+          "usage": "0.36"
         },
         {
           "tier": "doublesou",
@@ -37554,11 +37554,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "thick-fat",
+          "name": "pickup",
           "isHidden": false
         },
         {
-          "name": "pickup",
+          "name": "thick-fat",
           "isHidden": false
         },
         {
@@ -37673,14 +37673,14 @@ window.localDB = {
           "usage": "0.18"
         },
         {
-          "tier": "ubers",
-          "rank": 237,
-          "usage": "0.04"
-        },
-        {
           "tier": "ou",
           "rank": 251,
           "usage": "0.03"
+        },
+        {
+          "tier": "ubers",
+          "rank": 237,
+          "usage": "0.04"
         },
         {
           "tier": "doublesou",
@@ -37791,11 +37791,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "inner-focus",
+          "name": "steadfast",
           "isHidden": false
         },
         {
-          "name": "steadfast",
+          "name": "inner-focus",
           "isHidden": false
         },
         {
@@ -37830,14 +37830,19 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "lc",
+          "rank": 70,
+          "usage": "0.55"
+        },
+        {
           "tier": "nu",
           "rank": 144,
           "usage": "0.12"
         },
         {
-          "tier": "lc",
-          "rank": 70,
-          "usage": "0.55"
+          "tier": "zu",
+          "rank": 95,
+          "usage": "0.71"
         },
         {
           "tier": "ru",
@@ -37848,11 +37853,6 @@ window.localDB = {
           "tier": "pu",
           "rank": 192,
           "usage": "0.04"
-        },
-        {
-          "tier": "zu",
-          "rank": 95,
-          "usage": "0.71"
         },
         {
           "tier": "ubers",
@@ -37932,14 +37932,14 @@ window.localDB = {
           "usage": "7.16"
         },
         {
-          "tier": "ubers",
-          "rank": 239,
-          "usage": "0.04"
-        },
-        {
           "tier": "ou",
           "rank": 116,
           "usage": "0.35"
+        },
+        {
+          "tier": "ubers",
+          "rank": 239,
+          "usage": "0.04"
         },
         {
           "tier": "doublesou",
@@ -38145,12 +38145,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "keen-eye",
-          "isHidden": true
-        },
-        {
           "name": "sniper",
           "isHidden": false
+        },
+        {
+          "name": "keen-eye",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -38196,12 +38196,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "keen-eye",
-          "isHidden": true
-        },
-        {
           "name": "sniper",
           "isHidden": false
+        },
+        {
+          "name": "keen-eye",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -38259,11 +38259,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "dry-skin",
+          "name": "anticipation",
           "isHidden": false
         },
         {
-          "name": "anticipation",
+          "name": "dry-skin",
           "isHidden": false
         },
         {
@@ -38303,19 +38303,24 @@ window.localDB = {
           "usage": "8.75"
         },
         {
+          "tier": "zu",
+          "rank": 26,
+          "usage": "7.31"
+        },
+        {
           "tier": "ru",
           "rank": 90,
           "usage": "1.14"
         },
         {
-          "tier": "pu",
-          "rank": 43,
-          "usage": "4.81"
-        },
-        {
           "tier": "vgc2025",
           "rank": 129,
           "usage": "0.16"
+        },
+        {
+          "tier": "pu",
+          "rank": 43,
+          "usage": "4.81"
         },
         {
           "tier": "monotype",
@@ -38326,11 +38331,6 @@ window.localDB = {
           "tier": "uu",
           "rank": 164,
           "usage": "0.13"
-        },
-        {
-          "tier": "zu",
-          "rank": 26,
-          "usage": "7.31"
         },
         {
           "tier": "ou",
@@ -38431,11 +38431,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "dry-skin",
+          "name": "anticipation",
           "isHidden": false
         },
         {
-          "name": "anticipation",
+          "name": "dry-skin",
           "isHidden": false
         },
         {
@@ -38562,14 +38562,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "monotype",
-          "rank": 327,
-          "usage": "0.01"
-        },
-        {
           "tier": "zu",
           "rank": 208,
           "usage": "0.03"
+        },
+        {
+          "tier": "monotype",
+          "rank": 327,
+          "usage": "0.01"
         }
       ],
       "types": [
@@ -38582,12 +38582,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "water-veil",
-          "isHidden": true
-        },
-        {
           "name": "storm-drain",
           "isHidden": false
+        },
+        {
+          "name": "water-veil",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -38629,11 +38629,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "water-absorb",
+          "name": "swift-swim",
           "isHidden": false
         },
         {
-          "name": "swift-swim",
+          "name": "water-absorb",
           "isHidden": false
         },
         {
@@ -38696,12 +38696,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "soundproof",
-          "isHidden": true
-        },
-        {
           "name": "snow-warning",
           "isHidden": false
+        },
+        {
+          "name": "soundproof",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -38736,6 +38736,11 @@ window.localDB = {
           "usage": "0.06"
         },
         {
+          "tier": "zu",
+          "rank": 47,
+          "usage": "3.55"
+        },
+        {
           "tier": "ru",
           "rank": 147,
           "usage": "0.29"
@@ -38756,19 +38761,14 @@ window.localDB = {
           "usage": "0.02"
         },
         {
-          "tier": "zu",
-          "rank": 47,
-          "usage": "3.55"
+          "tier": "ou",
+          "rank": 206,
+          "usage": "0.07"
         },
         {
           "tier": "ubers",
           "rank": 317,
           "usage": "0.01"
-        },
-        {
-          "tier": "ou",
-          "rank": 206,
-          "usage": "0.07"
         },
         {
           "tier": "doublesou",
@@ -38829,12 +38829,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "soundproof",
-          "isHidden": true
-        },
-        {
           "name": "snow-warning",
           "isHidden": false
+        },
+        {
+          "name": "soundproof",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -38879,14 +38879,14 @@ window.localDB = {
           "usage": "15.32"
         },
         {
-          "tier": "ubers",
-          "rank": 187,
-          "usage": "0.08"
-        },
-        {
           "tier": "ou",
           "rank": 54,
           "usage": "2.74"
+        },
+        {
+          "tier": "ubers",
+          "rank": 187,
+          "usage": "0.08"
         },
         {
           "tier": "doublesou",
@@ -39097,14 +39097,14 @@ window.localDB = {
           "usage": "2.72"
         },
         {
-          "tier": "ubers",
-          "rank": 243,
-          "usage": "0.04"
-        },
-        {
           "tier": "ou",
           "rank": 139,
           "usage": "0.20"
+        },
+        {
+          "tier": "ubers",
+          "rank": 243,
+          "usage": "0.04"
         },
         {
           "tier": "doublesou",
@@ -39260,11 +39260,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "sturdy",
+          "name": "magnet-pull",
           "isHidden": false
         },
         {
-          "name": "magnet-pull",
+          "name": "sturdy",
           "isHidden": false
         },
         {
@@ -39310,16 +39310,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
+          "name": "own-tempo",
+          "isHidden": false
+        },
+        {
           "name": "oblivious",
           "isHidden": false
         },
         {
           "name": "cloud-nine",
           "isHidden": true
-        },
-        {
-          "name": "own-tempo",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -39652,9 +39652,9 @@ window.localDB = {
           "usage": "0.01"
         },
         {
-          "tier": "pu",
-          "rank": 116,
-          "usage": "0.42"
+          "tier": "zu",
+          "rank": 86,
+          "usage": "1.00"
         },
         {
           "tier": "vgc2025",
@@ -39662,14 +39662,14 @@ window.localDB = {
           "usage": "0.04"
         },
         {
+          "tier": "pu",
+          "rank": 116,
+          "usage": "0.42"
+        },
+        {
           "tier": "uu",
           "rank": 184,
           "usage": "0.08"
-        },
-        {
-          "tier": "zu",
-          "rank": 86,
-          "usage": "1.00"
         },
         {
           "tier": "ou",
@@ -39733,14 +39733,14 @@ window.localDB = {
           "usage": "0.01"
         },
         {
-          "tier": "pu",
-          "rank": 175,
-          "usage": "0.08"
-        },
-        {
           "tier": "zu",
           "rank": 55,
           "usage": "2.85"
+        },
+        {
+          "tier": "pu",
+          "rank": 175,
+          "usage": "0.08"
         },
         {
           "tier": "doublesou",
@@ -39817,11 +39817,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "serene-grace",
+          "name": "hustle",
           "isHidden": false
         },
         {
-          "name": "hustle",
+          "name": "serene-grace",
           "isHidden": false
         },
         {
@@ -39876,14 +39876,14 @@ window.localDB = {
           "usage": "1.01"
         },
         {
-          "tier": "ubers",
-          "rank": 296,
-          "usage": "0.02"
-        },
-        {
           "tier": "ou",
           "rank": 234,
           "usage": "0.04"
+        },
+        {
+          "tier": "ubers",
+          "rank": 296,
+          "usage": "0.02"
         },
         {
           "tier": "nationaldex",
@@ -40003,6 +40003,11 @@ window.localDB = {
           "usage": "0.16"
         },
         {
+          "tier": "zu",
+          "rank": 154,
+          "usage": "0.15"
+        },
+        {
           "tier": "ru",
           "rank": 200,
           "usage": "0.08"
@@ -40013,19 +40018,14 @@ window.localDB = {
           "usage": "0.18"
         },
         {
-          "tier": "zu",
-          "rank": 154,
-          "usage": "0.15"
+          "tier": "ou",
+          "rank": 282,
+          "usage": "0.02"
         },
         {
           "tier": "ubers",
           "rank": 260,
           "usage": "0.03"
-        },
-        {
-          "tier": "ou",
-          "rank": 282,
-          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -40044,12 +40044,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "chlorophyll",
-          "isHidden": true
-        },
-        {
           "name": "leaf-guard",
           "isHidden": false
+        },
+        {
+          "name": "chlorophyll",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -40084,6 +40084,11 @@ window.localDB = {
           "usage": "0.09"
         },
         {
+          "tier": "zu",
+          "rank": 112,
+          "usage": "0.46"
+        },
+        {
           "tier": "ru",
           "rank": 219,
           "usage": "0.05"
@@ -40102,11 +40107,6 @@ window.localDB = {
           "tier": "uu",
           "rank": 185,
           "usage": "0.08"
-        },
-        {
-          "tier": "zu",
-          "rank": 112,
-          "usage": "0.46"
         },
         {
           "tier": "ou",
@@ -40175,14 +40175,14 @@ window.localDB = {
           "usage": "11.06"
         },
         {
-          "tier": "ubers",
-          "rank": 27,
-          "usage": "5.17"
-        },
-        {
           "tier": "ou",
           "rank": 13,
           "usage": "12.93"
+        },
+        {
+          "tier": "ubers",
+          "rank": 27,
+          "usage": "5.17"
         },
         {
           "tier": "doublesou",
@@ -40473,11 +40473,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "sand-veil",
+          "name": "hyper-cutter",
           "isHidden": false
         },
         {
-          "name": "hyper-cutter",
+          "name": "sand-veil",
           "isHidden": false
         },
         {
@@ -40527,14 +40527,14 @@ window.localDB = {
           "usage": "3.16"
         },
         {
-          "tier": "ubers",
-          "rank": 189,
-          "usage": "0.08"
-        },
-        {
           "tier": "ou",
           "rank": 103,
           "usage": "0.52"
+        },
+        {
+          "tier": "ubers",
+          "rank": 189,
+          "usage": "0.08"
         },
         {
           "tier": "doublesou",
@@ -40754,12 +40754,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "thick-fat",
-          "isHidden": true
-        },
-        {
           "name": "snow-cloak",
           "isHidden": false
+        },
+        {
+          "name": "thick-fat",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -40804,14 +40804,14 @@ window.localDB = {
           "usage": "0.25"
         },
         {
-          "tier": "ubers",
-          "rank": 230,
-          "usage": "0.05"
-        },
-        {
           "tier": "ou",
           "rank": 123,
           "usage": "0.31"
+        },
+        {
+          "tier": "ubers",
+          "rank": 230,
+          "usage": "0.05"
         },
         {
           "tier": "doublesou",
@@ -40936,11 +40936,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "download",
+          "name": "adaptability",
           "isHidden": false
         },
         {
-          "name": "adaptability",
+          "name": "download",
           "isHidden": false
         },
         {
@@ -40995,14 +40995,14 @@ window.localDB = {
           "usage": "1.45"
         },
         {
-          "tier": "ubers",
-          "rank": 218,
-          "usage": "0.05"
-        },
-        {
           "tier": "ou",
           "rank": 128,
           "usage": "0.27"
+        },
+        {
+          "tier": "ubers",
+          "rank": 218,
+          "usage": "0.05"
         },
         {
           "tier": "doublesou",
@@ -41177,12 +41177,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "justified",
-          "isHidden": true
-        },
-        {
           "name": "sharpness",
           "isHidden": false
+        },
+        {
+          "name": "justified",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -41212,6 +41212,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "zu",
+          "rank": 79,
+          "usage": "1.24"
+        },
+        {
           "tier": "ru",
           "rank": 243,
           "usage": "0.02"
@@ -41227,19 +41232,14 @@ window.localDB = {
           "usage": "0.03"
         },
         {
-          "tier": "zu",
-          "rank": 79,
-          "usage": "1.24"
+          "tier": "ou",
+          "rank": 226,
+          "usage": "0.05"
         },
         {
           "tier": "ubers",
           "rank": 338,
           "usage": "0.01"
-        },
-        {
-          "tier": "ou",
-          "rank": 226,
-          "usage": "0.05"
         }
       ],
       "types": [
@@ -41309,6 +41309,11 @@ window.localDB = {
           "usage": "0.09"
         },
         {
+          "tier": "zu",
+          "rank": 32,
+          "usage": "5.95"
+        },
+        {
           "tier": "ru",
           "rank": 249,
           "usage": "0.02"
@@ -41322,11 +41327,6 @@ window.localDB = {
           "tier": "monotype",
           "rank": 296,
           "usage": "0.03"
-        },
-        {
-          "tier": "zu",
-          "rank": 32,
-          "usage": "5.95"
         },
         {
           "tier": "doublesou",
@@ -41396,6 +41396,11 @@ window.localDB = {
           "usage": "3.41"
         },
         {
+          "tier": "zu",
+          "rank": 16,
+          "usage": "10.06"
+        },
+        {
           "tier": "ru",
           "rank": 158,
           "usage": "0.22"
@@ -41416,19 +41421,14 @@ window.localDB = {
           "usage": "0.09"
         },
         {
-          "tier": "zu",
-          "rank": 16,
-          "usage": "10.06"
+          "tier": "ou",
+          "rank": 275,
+          "usage": "0.02"
         },
         {
           "tier": "ubers",
           "rank": 335,
           "usage": "0.01"
-        },
-        {
-          "tier": "ou",
-          "rank": 275,
-          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -41579,14 +41579,14 @@ window.localDB = {
           "usage": "0.08"
         },
         {
-          "tier": "pu",
-          "rank": 108,
-          "usage": "0.50"
-        },
-        {
           "tier": "zu",
           "rank": 19,
           "usage": "9.44"
+        },
+        {
+          "tier": "pu",
+          "rank": 108,
+          "usage": "0.50"
         },
         {
           "tier": "ou",
@@ -41688,14 +41688,14 @@ window.localDB = {
           "usage": "0.07"
         },
         {
-          "tier": "ubers",
-          "rank": 316,
-          "usage": "0.01"
-        },
-        {
           "tier": "ou",
           "rank": 263,
           "usage": "0.02"
+        },
+        {
+          "tier": "ubers",
+          "rank": 316,
+          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -41776,6 +41776,11 @@ window.localDB = {
           "usage": "1.49"
         },
         {
+          "tier": "zu",
+          "rank": 1,
+          "usage": "42.27"
+        },
+        {
           "tier": "ru",
           "rank": 257,
           "usage": "0.01"
@@ -41789,11 +41794,6 @@ window.localDB = {
           "tier": "uu",
           "rank": 232,
           "usage": "0.02"
-        },
-        {
-          "tier": "zu",
-          "rank": 1,
-          "usage": "42.27"
         }
       ],
       "types": [
@@ -41934,14 +41934,14 @@ window.localDB = {
           "usage": "1.58"
         },
         {
-          "tier": "ubers",
-          "rank": 235,
-          "usage": "0.04"
-        },
-        {
           "tier": "ou",
           "rank": 185,
           "usage": "0.09"
+        },
+        {
+          "tier": "ubers",
+          "rank": 235,
+          "usage": "0.04"
         },
         {
           "tier": "doublesou",
@@ -42353,14 +42353,14 @@ window.localDB = {
           "usage": "13.49"
         },
         {
-          "tier": "ubers",
-          "rank": 130,
-          "usage": "0.30"
-        },
-        {
           "tier": "ou",
           "rank": 49,
           "usage": "3.19"
+        },
+        {
+          "tier": "ubers",
+          "rank": 130,
+          "usage": "0.30"
         },
         {
           "tier": "doublesou",
@@ -42656,19 +42656,24 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "zu",
+          "rank": 126,
+          "usage": "0.33"
+        },
+        {
           "tier": "ru",
           "rank": 236,
           "usage": "0.03"
         },
         {
-          "tier": "pu",
-          "rank": 142,
-          "usage": "0.21"
-        },
-        {
           "tier": "vgc2025",
           "rank": 243,
           "usage": "0.02"
+        },
+        {
+          "tier": "pu",
+          "rank": 142,
+          "usage": "0.21"
         },
         {
           "tier": "monotype",
@@ -42679,11 +42684,6 @@ window.localDB = {
           "tier": "uu",
           "rank": 255,
           "usage": "0.02"
-        },
-        {
-          "tier": "zu",
-          "rank": 126,
-          "usage": "0.33"
         },
         {
           "tier": "ubers",
@@ -42851,14 +42851,14 @@ window.localDB = {
           "usage": "0.94"
         },
         {
-          "tier": "ubers",
-          "rank": 109,
-          "usage": "0.43"
-        },
-        {
           "tier": "ou",
           "rank": 31,
           "usage": "6.25"
+        },
+        {
+          "tier": "ubers",
+          "rank": 109,
+          "usage": "0.43"
         },
         {
           "tier": "doublesou",
@@ -43179,14 +43179,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 188,
-          "usage": "0.12"
-        },
-        {
           "tier": "zu",
           "rank": 230,
           "usage": "0.01"
+        },
+        {
+          "tier": "ru",
+          "rank": 188,
+          "usage": "0.12"
         }
       ],
       "types": [
@@ -43236,14 +43236,14 @@ window.localDB = {
           "usage": "16.52"
         },
         {
-          "tier": "ubers",
-          "rank": 169,
-          "usage": "0.11"
-        },
-        {
           "tier": "ou",
           "rank": 75,
           "usage": "1.62"
+        },
+        {
+          "tier": "ubers",
+          "rank": 169,
+          "usage": "0.11"
         },
         {
           "tier": "doublesou",
@@ -43469,14 +43469,14 @@ window.localDB = {
           "usage": "2.82"
         },
         {
-          "tier": "ubers",
-          "rank": 110,
-          "usage": "0.42"
-        },
-        {
           "tier": "ou",
           "rank": 23,
           "usage": "9.38"
+        },
+        {
+          "tier": "ubers",
+          "rank": 110,
+          "usage": "0.42"
         }
       ],
       "types": [
@@ -43702,14 +43702,14 @@ window.localDB = {
           "usage": "0.21"
         },
         {
+          "tier": "zu",
+          "rank": 175,
+          "usage": "0.10"
+        },
+        {
           "tier": "ru",
           "rank": 125,
           "usage": "0.45"
-        },
-        {
-          "tier": "pu",
-          "rank": 35,
-          "usage": "5.69"
         },
         {
           "tier": "vgc2025",
@@ -43717,14 +43717,14 @@ window.localDB = {
           "usage": "0.05"
         },
         {
+          "tier": "pu",
+          "rank": 35,
+          "usage": "5.69"
+        },
+        {
           "tier": "monotype",
           "rank": 190,
           "usage": "0.21"
-        },
-        {
-          "tier": "zu",
-          "rank": 175,
-          "usage": "0.10"
         },
         {
           "tier": "nationaldex",
@@ -44205,14 +44205,14 @@ window.localDB = {
           "usage": "5.45"
         },
         {
-          "tier": "ubers",
-          "rank": 144,
-          "usage": "0.20"
-        },
-        {
           "tier": "ou",
           "rank": 78,
           "usage": "1.32"
+        },
+        {
+          "tier": "ubers",
+          "rank": 144,
+          "usage": "0.20"
         },
         {
           "tier": "doublesou",
@@ -44458,12 +44458,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "thick-fat",
-          "isHidden": true
-        },
-        {
           "name": "blaze",
           "isHidden": false
+        },
+        {
+          "name": "thick-fat",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -44521,12 +44521,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "thick-fat",
-          "isHidden": true
-        },
-        {
           "name": "blaze",
           "isHidden": false
+        },
+        {
+          "name": "thick-fat",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -44776,6 +44776,11 @@ window.localDB = {
           "usage": "0.01"
         },
         {
+          "tier": "zu",
+          "rank": 40,
+          "usage": "4.17"
+        },
+        {
           "tier": "ru",
           "rank": 211,
           "usage": "0.07"
@@ -44784,11 +44789,6 @@ window.localDB = {
           "tier": "pu",
           "rank": 205,
           "usage": "0.03"
-        },
-        {
-          "tier": "zu",
-          "rank": 40,
-          "usage": "4.17"
         },
         {
           "tier": "ou",
@@ -44964,16 +44964,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "run-away",
-          "isHidden": true
+          "name": "vital-spirit",
+          "isHidden": false
         },
         {
           "name": "pickup",
           "isHidden": false
         },
         {
-          "name": "vital-spirit",
-          "isHidden": false
+          "name": "run-away",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -45018,12 +45018,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "scrappy",
-          "isHidden": true
-        },
-        {
           "name": "sand-rush",
           "isHidden": false
+        },
+        {
+          "name": "scrappy",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -45068,12 +45068,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "scrappy",
-          "isHidden": true
-        },
-        {
           "name": "sand-rush",
           "isHidden": false
+        },
+        {
+          "name": "scrappy",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -45214,12 +45214,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "overgrow",
-          "isHidden": true
-        },
-        {
           "name": "gluttony",
           "isHidden": false
+        },
+        {
+          "name": "overgrow",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -45306,12 +45306,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "blaze",
-          "isHidden": true
-        },
-        {
           "name": "gluttony",
           "isHidden": false
+        },
+        {
+          "name": "blaze",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -45352,12 +45352,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "blaze",
-          "isHidden": true
-        },
-        {
           "name": "gluttony",
           "isHidden": false
+        },
+        {
+          "name": "blaze",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -45398,12 +45398,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "torrent",
-          "isHidden": true
-        },
-        {
           "name": "gluttony",
           "isHidden": false
+        },
+        {
+          "name": "torrent",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -45444,12 +45444,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "torrent",
-          "isHidden": true
-        },
-        {
           "name": "gluttony",
           "isHidden": false
+        },
+        {
+          "name": "torrent",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -45490,11 +45490,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "synchronize",
+          "name": "forewarn",
           "isHidden": false
         },
         {
-          "name": "forewarn",
+          "name": "synchronize",
           "isHidden": false
         },
         {
@@ -45540,11 +45540,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "synchronize",
+          "name": "forewarn",
           "isHidden": false
         },
         {
-          "name": "forewarn",
+          "name": "synchronize",
           "isHidden": false
         },
         {
@@ -45591,16 +45591,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "rivalry",
-          "isHidden": true
+          "name": "big-pecks",
+          "isHidden": false
         },
         {
           "name": "super-luck",
           "isHidden": false
         },
         {
-          "name": "big-pecks",
-          "isHidden": false
+          "name": "rivalry",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -45642,16 +45642,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "rivalry",
-          "isHidden": true
+          "name": "big-pecks",
+          "isHidden": false
         },
         {
           "name": "super-luck",
           "isHidden": false
         },
         {
-          "name": "big-pecks",
-          "isHidden": false
+          "name": "rivalry",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -45693,16 +45693,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "rivalry",
-          "isHidden": true
+          "name": "big-pecks",
+          "isHidden": false
         },
         {
           "name": "super-luck",
           "isHidden": false
         },
         {
-          "name": "big-pecks",
-          "isHidden": false
+          "name": "rivalry",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -45787,6 +45787,11 @@ window.localDB = {
           "usage": "0.04"
         },
         {
+          "tier": "zu",
+          "rank": 149,
+          "usage": "0.17"
+        },
+        {
           "tier": "vgc2025",
           "rank": 223,
           "usage": "0.03"
@@ -45795,11 +45800,6 @@ window.localDB = {
           "tier": "uu",
           "rank": 212,
           "usage": "0.04"
-        },
-        {
-          "tier": "zu",
-          "rank": 149,
-          "usage": "0.17"
         }
       ],
       "types": [
@@ -46009,16 +46009,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "simple",
-          "isHidden": true
+          "name": "unaware",
+          "isHidden": false
         },
         {
           "name": "klutz",
           "isHidden": false
         },
         {
-          "name": "unaware",
-          "isHidden": false
+          "name": "simple",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -46060,16 +46060,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "simple",
-          "isHidden": true
+          "name": "unaware",
+          "isHidden": false
         },
         {
           "name": "klutz",
           "isHidden": false
         },
         {
-          "name": "unaware",
-          "isHidden": false
+          "name": "simple",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -46126,16 +46126,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "mold-breaker",
-          "isHidden": true
-        },
-        {
           "name": "sand-rush",
           "isHidden": false
         },
         {
           "name": "sand-force",
           "isHidden": false
+        },
+        {
+          "name": "mold-breaker",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -46180,14 +46180,14 @@ window.localDB = {
           "usage": "25.78"
         },
         {
-          "tier": "ubers",
-          "rank": 106,
-          "usage": "0.47"
-        },
-        {
           "tier": "ou",
           "rank": 55,
           "usage": "2.72"
+        },
+        {
+          "tier": "ubers",
+          "rank": 106,
+          "usage": "0.47"
         },
         {
           "tier": "doublesou",
@@ -46358,16 +46358,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "mold-breaker",
-          "isHidden": true
-        },
-        {
           "name": "sand-rush",
           "isHidden": false
         },
         {
           "name": "sand-force",
           "isHidden": false
+        },
+        {
+          "name": "mold-breaker",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -46408,16 +46408,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "klutz",
-          "isHidden": true
-        },
-        {
           "name": "healer",
           "isHidden": false
         },
         {
           "name": "regenerator",
           "isHidden": false
+        },
+        {
+          "name": "klutz",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -46518,14 +46518,14 @@ window.localDB = {
           "usage": "0.03"
         },
         {
-          "tier": "pu",
-          "rank": 169,
-          "usage": "0.09"
-        },
-        {
           "tier": "zu",
           "rank": 41,
           "usage": "4.10"
+        },
+        {
+          "tier": "pu",
+          "rank": 169,
+          "usage": "0.09"
         }
       ],
       "types": [
@@ -46554,12 +46554,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "iron-fist",
-          "isHidden": true
-        },
-        {
           "name": "sheer-force",
           "isHidden": false
+        },
+        {
+          "name": "iron-fist",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -46604,14 +46604,14 @@ window.localDB = {
           "usage": "17.47"
         },
         {
-          "tier": "ubers",
-          "rank": 203,
-          "usage": "0.07"
-        },
-        {
           "tier": "ou",
           "rank": 147,
           "usage": "0.18"
+        },
+        {
+          "tier": "ubers",
+          "rank": 203,
+          "usage": "0.07"
         },
         {
           "tier": "doublesou",
@@ -46695,12 +46695,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "iron-fist",
-          "isHidden": true
-        },
-        {
           "name": "sheer-force",
           "isHidden": false
+        },
+        {
+          "name": "iron-fist",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -46741,16 +46741,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "water-absorb",
-          "isHidden": true
-        },
-        {
           "name": "swift-swim",
           "isHidden": false
         },
         {
           "name": "hydration",
           "isHidden": false
+        },
+        {
+          "name": "water-absorb",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -46792,16 +46792,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "water-absorb",
-          "isHidden": true
-        },
-        {
           "name": "swift-swim",
           "isHidden": false
         },
         {
           "name": "hydration",
           "isHidden": false
+        },
+        {
+          "name": "water-absorb",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -46843,16 +46843,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "water-absorb",
-          "isHidden": true
-        },
-        {
           "name": "swift-swim",
           "isHidden": false
         },
         {
           "name": "poison-touch",
           "isHidden": false
+        },
+        {
+          "name": "water-absorb",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -46893,11 +46893,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "inner-focus",
+          "name": "guts",
           "isHidden": false
         },
         {
-          "name": "guts",
+          "name": "inner-focus",
           "isHidden": false
         },
         {
@@ -46994,11 +46994,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "chlorophyll",
+          "name": "swarm",
           "isHidden": false
         },
         {
-          "name": "swarm",
+          "name": "chlorophyll",
           "isHidden": false
         },
         {
@@ -47089,6 +47089,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "zu",
+          "rank": 127,
+          "usage": "0.32"
+        },
+        {
           "tier": "ru",
           "rank": 258,
           "usage": "0.01"
@@ -47109,19 +47114,14 @@ window.localDB = {
           "usage": "0.02"
         },
         {
-          "tier": "zu",
-          "rank": 127,
-          "usage": "0.32"
+          "tier": "ou",
+          "rank": 240,
+          "usage": "0.04"
         },
         {
           "tier": "ubers",
           "rank": 279,
           "usage": "0.02"
-        },
-        {
-          "tier": "ou",
-          "rank": 240,
-          "usage": "0.04"
         },
         {
           "tier": "doublesou",
@@ -47192,16 +47192,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "speed-boost",
-          "isHidden": true
-        },
-        {
           "name": "poison-point",
           "isHidden": false
         },
         {
           "name": "swarm",
           "isHidden": false
+        },
+        {
+          "name": "speed-boost",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -47243,16 +47243,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "speed-boost",
-          "isHidden": true
-        },
-        {
           "name": "poison-point",
           "isHidden": false
         },
         {
           "name": "swarm",
           "isHidden": false
+        },
+        {
+          "name": "speed-boost",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -47294,16 +47294,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "speed-boost",
-          "isHidden": true
-        },
-        {
           "name": "poison-point",
           "isHidden": false
         },
         {
           "name": "swarm",
           "isHidden": false
+        },
+        {
+          "name": "speed-boost",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -47333,14 +47333,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "nu",
-          "rank": 192,
-          "usage": "0.03"
-        },
-        {
           "tier": "lc",
           "rank": 40,
           "usage": "1.57"
+        },
+        {
+          "tier": "nu",
+          "rank": 192,
+          "usage": "0.03"
         },
         {
           "tier": "ubers",
@@ -47415,19 +47415,24 @@ window.localDB = {
           "usage": "1.79"
         },
         {
+          "tier": "zu",
+          "rank": 6,
+          "usage": "19.98"
+        },
+        {
           "tier": "ru",
           "rank": 117,
           "usage": "0.50"
         },
         {
-          "tier": "pu",
-          "rank": 66,
-          "usage": "1.90"
-        },
-        {
           "tier": "vgc2025",
           "rank": 10,
           "usage": "17.12"
+        },
+        {
+          "tier": "pu",
+          "rank": 66,
+          "usage": "1.90"
         },
         {
           "tier": "monotype",
@@ -47440,19 +47445,14 @@ window.localDB = {
           "usage": "0.03"
         },
         {
-          "tier": "zu",
-          "rank": 6,
-          "usage": "19.98"
+          "tier": "ou",
+          "rank": 107,
+          "usage": "0.48"
         },
         {
           "tier": "ubers",
           "rank": 118,
           "usage": "0.36"
-        },
-        {
-          "tier": "ou",
-          "rank": 107,
-          "usage": "0.48"
         },
         {
           "tier": "doublesou",
@@ -47713,16 +47713,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "chlorophyll",
-          "isHidden": true
+          "name": "prankster",
+          "isHidden": false
         },
         {
           "name": "infiltrator",
           "isHidden": false
         },
         {
-          "name": "prankster",
-          "isHidden": false
+          "name": "chlorophyll",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -47763,11 +47763,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "own-tempo",
+          "name": "chlorophyll",
           "isHidden": false
         },
         {
-          "name": "chlorophyll",
+          "name": "own-tempo",
           "isHidden": false
         },
         {
@@ -47802,14 +47802,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "zu",
+          "rank": 62,
+          "usage": "2.11"
+        },
+        {
           "tier": "ru",
           "rank": 129,
           "usage": "0.41"
-        },
-        {
-          "tier": "pu",
-          "rank": 127,
-          "usage": "0.30"
         },
         {
           "tier": "vgc2025",
@@ -47817,9 +47817,9 @@ window.localDB = {
           "usage": "0.10"
         },
         {
-          "tier": "zu",
-          "rank": 62,
-          "usage": "2.11"
+          "tier": "pu",
+          "rank": 127,
+          "usage": "0.30"
         },
         {
           "tier": "ou",
@@ -47844,7 +47844,7 @@ window.localDB = {
         {
           "name": "Quiver Dance",
           "tier": "zu",
-          "ability": "Chlorophyll",
+          "ability": "Own Tempo",
           "item": "Life Orb",
           "nature": "Modest",
           "teraType": "Poison / Fairy / Electric",
@@ -47859,11 +47859,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "own-tempo",
+          "name": "chlorophyll",
           "isHidden": false
         },
         {
-          "name": "chlorophyll",
+          "name": "own-tempo",
           "isHidden": false
         },
         {
@@ -47903,6 +47903,11 @@ window.localDB = {
           "usage": "0.28"
         },
         {
+          "tier": "zu",
+          "rank": 8,
+          "usage": "16.96"
+        },
+        {
           "tier": "ru",
           "rank": 201,
           "usage": "0.08"
@@ -47911,11 +47916,6 @@ window.localDB = {
           "tier": "pu",
           "rank": 154,
           "usage": "0.13"
-        },
-        {
-          "tier": "zu",
-          "rank": 8,
-          "usage": "16.96"
         }
       ],
       "types": [
@@ -47924,16 +47924,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
+          "name": "reckless",
+          "isHidden": false
+        },
+        {
           "name": "adaptability",
           "isHidden": false
         },
         {
           "name": "mold-breaker",
           "isHidden": true
-        },
-        {
-          "name": "reckless",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -47995,12 +47995,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "anger-point",
-          "isHidden": true
-        },
-        {
           "name": "moxie",
           "isHidden": false
+        },
+        {
+          "name": "anger-point",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -48127,14 +48127,14 @@ window.localDB = {
           "usage": "4.56"
         },
         {
-          "tier": "ubers",
-          "rank": 202,
-          "usage": "0.07"
-        },
-        {
           "tier": "ou",
           "rank": 156,
           "usage": "0.16"
+        },
+        {
+          "tier": "ubers",
+          "rank": 202,
+          "usage": "0.07"
         },
         {
           "tier": "doublesou",
@@ -48219,12 +48219,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "anger-point",
-          "isHidden": true
-        },
-        {
           "name": "moxie",
           "isHidden": false
+        },
+        {
+          "name": "anger-point",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -48265,12 +48265,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "inner-focus",
-          "isHidden": true
-        },
-        {
           "name": "hustle",
           "isHidden": false
+        },
+        {
+          "name": "inner-focus",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -48498,14 +48498,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "pu",
-          "rank": 211,
-          "usage": "0.02"
-        },
-        {
           "tier": "vgc2025",
           "rank": 132,
           "usage": "0.16"
+        },
+        {
+          "tier": "pu",
+          "rank": 211,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -48521,7 +48521,7 @@ window.localDB = {
         {
           "name": "Bulk Up",
           "tier": "nfe",
-          "ability": "Shed Skin",
+          "ability": "Intimidate",
           "item": "Eviolite",
           "nature": "Careful",
           "teraType": "Normal",
@@ -48551,16 +48551,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "intimidate",
-          "isHidden": true
-        },
-        {
           "name": "shed-skin",
           "isHidden": false
         },
         {
           "name": "moxie",
           "isHidden": false
+        },
+        {
+          "name": "intimidate",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -48678,16 +48678,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "intimidate",
-          "isHidden": true
-        },
-        {
           "name": "shed-skin",
           "isHidden": false
         },
         {
           "name": "moxie",
           "isHidden": false
+        },
+        {
+          "name": "intimidate",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -48729,16 +48729,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
+          "name": "wonder-skin",
+          "isHidden": false
+        },
+        {
           "name": "magic-guard",
           "isHidden": false
         },
         {
           "name": "tinted-lens",
           "isHidden": true
-        },
-        {
-          "name": "wonder-skin",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -48915,16 +48915,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
+          "name": "solid-rock",
+          "isHidden": false
+        },
+        {
           "name": "sturdy",
           "isHidden": false
         },
         {
           "name": "swift-swim",
           "isHidden": true
-        },
-        {
-          "name": "solid-rock",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -49105,12 +49105,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "aftermath",
-          "isHidden": true
-        },
-        {
           "name": "weak-armor",
           "isHidden": false
+        },
+        {
+          "name": "aftermath",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -49382,12 +49382,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "skill-link",
-          "isHidden": true
-        },
-        {
           "name": "technician",
           "isHidden": false
+        },
+        {
+          "name": "skill-link",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -49442,14 +49442,14 @@ window.localDB = {
           "usage": "0.06"
         },
         {
-          "tier": "ubers",
-          "rank": 305,
-          "usage": "0.02"
-        },
-        {
           "tier": "ou",
           "rank": 253,
           "usage": "0.03"
+        },
+        {
+          "tier": "ubers",
+          "rank": 305,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -49503,12 +49503,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "skill-link",
-          "isHidden": true
-        },
-        {
           "name": "technician",
           "isHidden": false
+        },
+        {
+          "name": "skill-link",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -49565,16 +49565,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "shadow-tag",
-          "isHidden": true
-        },
-        {
           "name": "frisk",
           "isHidden": false
         },
         {
           "name": "competitive",
           "isHidden": false
+        },
+        {
+          "name": "shadow-tag",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -49620,16 +49620,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "shadow-tag",
-          "isHidden": true
-        },
-        {
           "name": "frisk",
           "isHidden": false
         },
         {
           "name": "competitive",
           "isHidden": false
+        },
+        {
+          "name": "shadow-tag",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -49664,9 +49664,9 @@ window.localDB = {
           "usage": "0.01"
         },
         {
-          "tier": "pu",
-          "rank": 200,
-          "usage": "0.03"
+          "tier": "zu",
+          "rank": 118,
+          "usage": "0.40"
         },
         {
           "tier": "vgc2025",
@@ -49674,9 +49674,9 @@ window.localDB = {
           "usage": "0.89"
         },
         {
-          "tier": "zu",
-          "rank": 118,
-          "usage": "0.40"
+          "tier": "pu",
+          "rank": 200,
+          "usage": "0.03"
         },
         {
           "tier": "ubers",
@@ -49771,16 +49771,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "shadow-tag",
-          "isHidden": true
-        },
-        {
           "name": "frisk",
           "isHidden": false
         },
         {
           "name": "competitive",
           "isHidden": false
+        },
+        {
+          "name": "shadow-tag",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -49821,11 +49821,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "magic-guard",
+          "name": "overcoat",
           "isHidden": false
         },
         {
-          "name": "overcoat",
+          "name": "magic-guard",
           "isHidden": false
         },
         {
@@ -49860,14 +49860,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "pu",
-          "rank": 194,
-          "usage": "0.04"
-        },
-        {
           "tier": "zu",
           "rank": 187,
           "usage": "0.07"
+        },
+        {
+          "tier": "pu",
+          "rank": 194,
+          "usage": "0.04"
         }
       ],
       "types": [
@@ -49907,11 +49907,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "magic-guard",
+          "name": "overcoat",
           "isHidden": false
         },
         {
-          "name": "overcoat",
+          "name": "magic-guard",
           "isHidden": false
         },
         {
@@ -49961,14 +49961,14 @@ window.localDB = {
           "usage": "0.36"
         },
         {
-          "tier": "ubers",
-          "rank": 304,
-          "usage": "0.02"
-        },
-        {
           "tier": "ou",
           "rank": 146,
           "usage": "0.18"
+        },
+        {
+          "tier": "ubers",
+          "rank": 304,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -50063,11 +50063,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "magic-guard",
+          "name": "overcoat",
           "isHidden": false
         },
         {
-          "name": "overcoat",
+          "name": "magic-guard",
           "isHidden": false
         },
         {
@@ -50118,12 +50118,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "hydration",
-          "isHidden": true
-        },
-        {
           "name": "big-pecks",
           "isHidden": false
+        },
+        {
+          "name": "hydration",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -50153,6 +50153,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "zu",
+          "rank": 61,
+          "usage": "2.22"
+        },
+        {
           "tier": "pu",
           "rank": 141,
           "usage": "0.22"
@@ -50161,11 +50166,6 @@ window.localDB = {
           "tier": "uu",
           "rank": 244,
           "usage": "0.02"
-        },
-        {
-          "tier": "zu",
-          "rank": 61,
-          "usage": "2.22"
         }
       ],
       "types": [
@@ -50195,12 +50195,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "hydration",
-          "isHidden": true
-        },
-        {
           "name": "big-pecks",
           "isHidden": false
+        },
+        {
+          "name": "hydration",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -50241,11 +50241,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "snow-cloak",
+          "name": "ice-body",
           "isHidden": false
         },
         {
-          "name": "ice-body",
+          "name": "snow-cloak",
           "isHidden": false
         },
         {
@@ -50291,11 +50291,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "snow-cloak",
+          "name": "ice-body",
           "isHidden": false
         },
         {
-          "name": "ice-body",
+          "name": "snow-cloak",
           "isHidden": false
         },
         {
@@ -50408,16 +50408,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "serene-grace",
-          "isHidden": true
-        },
-        {
           "name": "chlorophyll",
           "isHidden": false
         },
         {
           "name": "sap-sipper",
           "isHidden": false
+        },
+        {
+          "name": "serene-grace",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -50452,6 +50452,11 @@ window.localDB = {
           "usage": "0.10"
         },
         {
+          "tier": "zu",
+          "rank": 155,
+          "usage": "0.15"
+        },
+        {
           "tier": "pu",
           "rank": 151,
           "usage": "0.15"
@@ -50460,11 +50465,6 @@ window.localDB = {
           "tier": "monotype",
           "rank": 314,
           "usage": "0.02"
-        },
-        {
-          "tier": "zu",
-          "rank": 155,
-          "usage": "0.15"
         },
         {
           "tier": "ubers",
@@ -50479,16 +50479,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "serene-grace",
-          "isHidden": true
-        },
-        {
           "name": "chlorophyll",
           "isHidden": false
         },
         {
           "name": "sap-sipper",
           "isHidden": false
+        },
+        {
+          "name": "serene-grace",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -50576,11 +50576,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "shed-skin",
+          "name": "swarm",
           "isHidden": false
         },
         {
-          "name": "swarm",
+          "name": "shed-skin",
           "isHidden": false
         },
         {
@@ -50739,14 +50739,14 @@ window.localDB = {
           "usage": "1.77"
         },
         {
-          "tier": "pu",
-          "rank": 48,
-          "usage": "3.56"
-        },
-        {
           "tier": "vgc2025",
           "rank": 14,
           "usage": "15.64"
+        },
+        {
+          "tier": "pu",
+          "rank": 48,
+          "usage": "3.56"
         },
         {
           "tier": "monotype",
@@ -50759,14 +50759,14 @@ window.localDB = {
           "usage": "0.24"
         },
         {
-          "tier": "ubers",
-          "rank": 84,
-          "usage": "0.67"
-        },
-        {
           "tier": "ou",
           "rank": 94,
           "usage": "0.70"
+        },
+        {
+          "tier": "ubers",
+          "rank": 84,
+          "usage": "0.67"
         },
         {
           "tier": "doublesou",
@@ -51029,16 +51029,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "damp",
-          "isHidden": true
-        },
-        {
           "name": "water-absorb",
           "isHidden": false
         },
         {
           "name": "cursed-body",
           "isHidden": false
+        },
+        {
+          "name": "damp",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -51080,16 +51080,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "damp",
-          "isHidden": true
-        },
-        {
           "name": "water-absorb",
           "isHidden": false
         },
         {
           "name": "cursed-body",
           "isHidden": false
+        },
+        {
+          "name": "damp",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -51129,14 +51129,14 @@ window.localDB = {
           "usage": "2.30"
         },
         {
-          "tier": "ubers",
-          "rank": 36,
-          "usage": "3.73"
-        },
-        {
           "tier": "ou",
           "rank": 21,
           "usage": "10.34"
+        },
+        {
+          "tier": "ubers",
+          "rank": 36,
+          "usage": "3.73"
         },
         {
           "tier": "doublesou",
@@ -51306,11 +51306,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "hydration",
+          "name": "healer",
           "isHidden": false
         },
         {
-          "name": "healer",
+          "name": "hydration",
           "isHidden": false
         },
         {
@@ -51361,12 +51361,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "swarm",
-          "isHidden": true
-        },
-        {
           "name": "unnerve",
           "isHidden": false
+        },
+        {
+          "name": "swarm",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -51421,14 +51421,14 @@ window.localDB = {
           "usage": "0.08"
         },
         {
-          "tier": "ubers",
-          "rank": 101,
-          "usage": "0.53"
-        },
-        {
           "tier": "ou",
           "rank": 194,
           "usage": "0.07"
+        },
+        {
+          "tier": "ubers",
+          "rank": 101,
+          "usage": "0.53"
         },
         {
           "tier": "doublesou",
@@ -51543,12 +51543,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "swarm",
-          "isHidden": true
-        },
-        {
           "name": "unnerve",
           "isHidden": false
+        },
+        {
+          "name": "swarm",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -51790,16 +51790,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "clear-body",
-          "isHidden": true
-        },
-        {
           "name": "plus",
           "isHidden": false
         },
         {
           "name": "minus",
           "isHidden": false
+        },
+        {
+          "name": "clear-body",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -51840,16 +51840,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "clear-body",
-          "isHidden": true
-        },
-        {
           "name": "plus",
           "isHidden": false
         },
         {
           "name": "minus",
           "isHidden": false
+        },
+        {
+          "name": "clear-body",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -51984,6 +51984,11 @@ window.localDB = {
           "usage": "0.04"
         },
         {
+          "tier": "zu",
+          "rank": 23,
+          "usage": "8.22"
+        },
+        {
           "tier": "ru",
           "rank": 197,
           "usage": "0.09"
@@ -51997,11 +52002,6 @@ window.localDB = {
           "tier": "monotype",
           "rank": 266,
           "usage": "0.05"
-        },
-        {
-          "tier": "zu",
-          "rank": 23,
-          "usage": "8.22"
         },
         {
           "tier": "doublesou",
@@ -52093,11 +52093,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "synchronize",
+          "name": "telepathy",
           "isHidden": false
         },
         {
-          "name": "telepathy",
+          "name": "synchronize",
           "isHidden": false
         },
         {
@@ -52340,14 +52340,14 @@ window.localDB = {
           "usage": "0.25"
         },
         {
-          "tier": "ubers",
-          "rank": 312,
-          "usage": "0.01"
-        },
-        {
           "tier": "ou",
           "rank": 227,
           "usage": "0.05"
+        },
+        {
+          "tier": "ubers",
+          "rank": 312,
+          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -52644,14 +52644,14 @@ window.localDB = {
           "usage": "1.57"
         },
         {
-          "tier": "ubers",
-          "rank": 221,
-          "usage": "0.05"
-        },
-        {
           "tier": "ou",
           "rank": 114,
           "usage": "0.37"
+        },
+        {
+          "tier": "ubers",
+          "rank": 221,
+          "usage": "0.05"
         },
         {
           "tier": "doublesou",
@@ -52800,12 +52800,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "rattled",
-          "isHidden": true
-        },
-        {
           "name": "slush-rush",
           "isHidden": false
+        },
+        {
+          "name": "rattled",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -52840,6 +52840,11 @@ window.localDB = {
           "usage": "0.04"
         },
         {
+          "tier": "zu",
+          "rank": 57,
+          "usage": "2.53"
+        },
+        {
           "tier": "ru",
           "rank": 160,
           "usage": "0.21"
@@ -52855,19 +52860,14 @@ window.localDB = {
           "usage": "0.02"
         },
         {
-          "tier": "zu",
-          "rank": 57,
-          "usage": "2.53"
+          "tier": "ou",
+          "rank": 250,
+          "usage": "0.03"
         },
         {
           "tier": "ubers",
           "rank": 278,
           "usage": "0.02"
-        },
-        {
-          "tier": "ou",
-          "rank": 250,
-          "usage": "0.03"
         },
         {
           "tier": "doublesou",
@@ -52946,6 +52946,11 @@ window.localDB = {
           "usage": "0.04"
         },
         {
+          "tier": "zu",
+          "rank": 31,
+          "usage": "6.15"
+        },
+        {
           "tier": "ru",
           "rank": 205,
           "usage": "0.08"
@@ -52959,11 +52964,6 @@ window.localDB = {
           "tier": "monotype",
           "rank": 264,
           "usage": "0.05"
-        },
-        {
-          "tier": "zu",
-          "rank": 31,
-          "usage": "6.15"
         }
       ],
       "types": [
@@ -53030,11 +53030,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "shell-armor",
+          "name": "hydration",
           "isHidden": false
         },
         {
-          "name": "hydration",
+          "name": "shell-armor",
           "isHidden": false
         },
         {
@@ -53080,16 +53080,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
+          "name": "hydration",
+          "isHidden": false
+        },
+        {
           "name": "sticky-hold",
           "isHidden": false
         },
         {
           "name": "unburden",
           "isHidden": true
-        },
-        {
-          "name": "hydration",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -53131,16 +53131,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
+          "name": "static",
+          "isHidden": false
+        },
+        {
           "name": "limber",
           "isHidden": false
         },
         {
           "name": "sand-veil",
           "isHidden": true
-        },
-        {
-          "name": "static",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -53261,12 +53261,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "reckless",
-          "isHidden": true
-        },
-        {
           "name": "regenerator",
           "isHidden": false
+        },
+        {
+          "name": "reckless",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -53432,12 +53432,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "mold-breaker",
-          "isHidden": true
-        },
-        {
           "name": "sheer-force",
           "isHidden": false
+        },
+        {
+          "name": "mold-breaker",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -53488,12 +53488,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "no-guard",
-          "isHidden": true
-        },
-        {
           "name": "klutz",
           "isHidden": false
+        },
+        {
+          "name": "no-guard",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -53650,12 +53650,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "no-guard",
-          "isHidden": true
-        },
-        {
           "name": "klutz",
           "isHidden": false
+        },
+        {
+          "name": "no-guard",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -53690,13 +53690,13 @@ window.localDB = {
           "usage": "1.86"
         },
         {
-          "tier": "pu",
-          "rank": 210,
+          "tier": "zu",
+          "rank": 221,
           "usage": "0.02"
         },
         {
-          "tier": "zu",
-          "rank": 221,
+          "tier": "pu",
+          "rank": 210,
           "usage": "0.02"
         }
       ],
@@ -53738,16 +53738,16 @@ window.localDB = {
       ],
       "abilities": [
         {
+          "name": "defiant",
+          "isHidden": false
+        },
+        {
           "name": "inner-focus",
           "isHidden": false
         },
         {
           "name": "pressure",
           "isHidden": true
-        },
-        {
-          "name": "defiant",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -53792,14 +53792,14 @@ window.localDB = {
           "usage": "4.68"
         },
         {
-          "tier": "ubers",
-          "rank": 267,
-          "usage": "0.03"
-        },
-        {
           "tier": "ou",
           "rank": 216,
           "usage": "0.05"
+        },
+        {
+          "tier": "ubers",
+          "rank": 267,
+          "usage": "0.03"
         },
         {
           "tier": "doublesou",
@@ -53910,16 +53910,16 @@ window.localDB = {
       ],
       "abilities": [
         {
+          "name": "defiant",
+          "isHidden": false
+        },
+        {
           "name": "inner-focus",
           "isHidden": false
         },
         {
           "name": "pressure",
           "isHidden": true
-        },
-        {
-          "name": "defiant",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -53960,16 +53960,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "soundproof",
-          "isHidden": true
-        },
-        {
           "name": "reckless",
           "isHidden": false
         },
         {
           "name": "sap-sipper",
           "isHidden": false
+        },
+        {
+          "name": "soundproof",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -54061,12 +54061,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "hustle",
-          "isHidden": true
-        },
-        {
           "name": "sheer-force",
           "isHidden": false
+        },
+        {
+          "name": "hustle",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -54208,14 +54208,14 @@ window.localDB = {
           "usage": "69.58"
         },
         {
-          "tier": "pu",
-          "rank": 220,
-          "usage": "0.01"
-        },
-        {
           "tier": "zu",
           "rank": 116,
           "usage": "0.41"
+        },
+        {
+          "tier": "pu",
+          "rank": 220,
+          "usage": "0.01"
         }
       ],
       "types": [
@@ -54271,16 +54271,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "weak-armor",
-          "isHidden": true
+          "name": "big-pecks",
+          "isHidden": false
         },
         {
           "name": "overcoat",
           "isHidden": false
         },
         {
-          "name": "big-pecks",
-          "isHidden": false
+          "name": "weak-armor",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -54320,14 +54320,14 @@ window.localDB = {
           "usage": "19.23"
         },
         {
-          "tier": "ubers",
-          "rank": 114,
-          "usage": "0.41"
-        },
-        {
           "tier": "ou",
           "rank": 70,
           "usage": "1.77"
+        },
+        {
+          "tier": "ubers",
+          "rank": 114,
+          "usage": "0.41"
         },
         {
           "tier": "doublesou",
@@ -54498,16 +54498,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "weak-armor",
-          "isHidden": true
+          "name": "big-pecks",
+          "isHidden": false
         },
         {
           "name": "overcoat",
           "isHidden": false
         },
         {
-          "name": "big-pecks",
-          "isHidden": false
+          "name": "weak-armor",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -54548,16 +54548,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
+          "name": "gluttony",
+          "isHidden": false
+        },
+        {
           "name": "flash-fire",
           "isHidden": false
         },
         {
           "name": "white-smoke",
           "isHidden": true
-        },
-        {
-          "name": "gluttony",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -54598,16 +54598,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
+          "name": "gluttony",
+          "isHidden": false
+        },
+        {
           "name": "flash-fire",
           "isHidden": false
         },
         {
           "name": "white-smoke",
           "isHidden": true
-        },
-        {
-          "name": "gluttony",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -54754,14 +54754,14 @@ window.localDB = {
           "usage": "5.63"
         },
         {
-          "tier": "ubers",
-          "rank": 228,
-          "usage": "0.05"
-        },
-        {
           "tier": "ou",
           "rank": 76,
           "usage": "1.55"
+        },
+        {
+          "tier": "ubers",
+          "rank": 228,
+          "usage": "0.05"
         },
         {
           "tier": "doublesou",
@@ -55469,14 +55469,14 @@ window.localDB = {
           "usage": "5.89"
         },
         {
-          "tier": "ubers",
-          "rank": 307,
-          "usage": "0.02"
-        },
-        {
           "tier": "ou",
           "rank": 171,
           "usage": "0.12"
+        },
+        {
+          "tier": "ubers",
+          "rank": 307,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -55832,6 +55832,11 @@ window.localDB = {
           "usage": "0.40"
         },
         {
+          "tier": "zu",
+          "rank": 30,
+          "usage": "6.72"
+        },
+        {
           "tier": "ru",
           "rank": 230,
           "usage": "0.04"
@@ -55840,11 +55845,6 @@ window.localDB = {
           "tier": "pu",
           "rank": 70,
           "usage": "1.44"
-        },
-        {
-          "tier": "zu",
-          "rank": 30,
-          "usage": "6.72"
         }
       ],
       "types": [
@@ -56138,12 +56138,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "defiant",
-          "isHidden": true
-        },
-        {
           "name": "prankster",
           "isHidden": false
+        },
+        {
+          "name": "defiant",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -56188,14 +56188,14 @@ window.localDB = {
           "usage": "6.29"
         },
         {
-          "tier": "ubers",
-          "rank": 264,
-          "usage": "0.03"
-        },
-        {
           "tier": "ou",
           "rank": 179,
           "usage": "0.10"
+        },
+        {
+          "tier": "ubers",
+          "rank": 264,
+          "usage": "0.03"
         },
         {
           "tier": "doublesou",
@@ -56321,12 +56321,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "defiant",
-          "isHidden": true
-        },
-        {
           "name": "prankster",
           "isHidden": false
+        },
+        {
+          "name": "defiant",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -56822,12 +56822,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "sheer-force",
-          "isHidden": true
-        },
-        {
           "name": "sand-force",
           "isHidden": false
+        },
+        {
+          "name": "sheer-force",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -56862,14 +56862,14 @@ window.localDB = {
           "usage": "6.47"
         },
         {
-          "tier": "ubers",
-          "rank": 195,
-          "usage": "0.07"
-        },
-        {
           "tier": "ou",
           "rank": 6,
           "usage": "17.65"
+        },
+        {
+          "tier": "ubers",
+          "rank": 195,
+          "usage": "0.07"
         },
         {
           "tier": "doublesou",
@@ -57206,14 +57206,14 @@ window.localDB = {
           "usage": "16.06"
         },
         {
-          "tier": "ubers",
-          "rank": 152,
-          "usage": "0.17"
-        },
-        {
           "tier": "ou",
           "rank": 62,
           "usage": "2.27"
+        },
+        {
+          "tier": "ubers",
+          "rank": 152,
+          "usage": "0.17"
         },
         {
           "tier": "doublesou",
@@ -57465,14 +57465,14 @@ window.localDB = {
           "usage": "0.01"
         },
         {
-          "tier": "ubers",
-          "rank": 324,
-          "usage": "0.01"
-        },
-        {
           "tier": "ou",
           "rank": 167,
           "usage": "0.13"
+        },
+        {
+          "tier": "ubers",
+          "rank": 324,
+          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -57776,14 +57776,14 @@ window.localDB = {
           "usage": "0.39"
         },
         {
-          "tier": "ubers",
-          "rank": 331,
-          "usage": "0.01"
-        },
-        {
           "tier": "ou",
           "rank": 105,
           "usage": "0.49"
+        },
+        {
+          "tier": "ubers",
+          "rank": 331,
+          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -58283,14 +58283,14 @@ window.localDB = {
           "usage": "10.60"
         },
         {
-          "tier": "ubers",
-          "rank": 149,
-          "usage": "0.18"
-        },
-        {
           "tier": "ou",
           "rank": 101,
           "usage": "0.59"
+        },
+        {
+          "tier": "ubers",
+          "rank": 149,
+          "usage": "0.18"
         },
         {
           "tier": "doublesou",
@@ -58492,16 +58492,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "huge-power",
-          "isHidden": true
-        },
-        {
           "name": "pickup",
           "isHidden": false
         },
         {
           "name": "cheek-pouch",
           "isHidden": false
+        },
+        {
+          "name": "huge-power",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -58604,16 +58604,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "huge-power",
-          "isHidden": true
-        },
-        {
           "name": "pickup",
           "isHidden": false
         },
         {
           "name": "cheek-pouch",
           "isHidden": false
+        },
+        {
+          "name": "huge-power",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -58690,14 +58690,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "pu",
-          "rank": 195,
-          "usage": "0.04"
-        },
-        {
           "tier": "zu",
           "rank": 218,
           "usage": "0.02"
+        },
+        {
+          "tier": "pu",
+          "rank": 195,
+          "usage": "0.04"
         }
       ],
       "types": [
@@ -58708,7 +58708,7 @@ window.localDB = {
         {
           "name": "Utility",
           "tier": "nfe",
-          "ability": "Gale Wings",
+          "ability": "Flame Body",
           "item": "Heavy-Duty Boots",
           "nature": "Jolly",
           "teraType": "Normal",
@@ -58723,7 +58723,7 @@ window.localDB = {
         {
           "name": "Swords Dance",
           "tier": "nfe",
-          "ability": "Gale Wings",
+          "ability": "Flame Body",
           "item": "Heavy-Duty Boots",
           "nature": "Jolly",
           "teraType": "Normal",
@@ -58788,14 +58788,14 @@ window.localDB = {
           "usage": "6.69"
         },
         {
-          "tier": "ubers",
-          "rank": 64,
-          "usage": "1.14"
-        },
-        {
           "tier": "ou",
           "rank": 108,
           "usage": "0.45"
+        },
+        {
+          "tier": "ubers",
+          "rank": 64,
+          "usage": "1.14"
         },
         {
           "tier": "doublesou",
@@ -59079,11 +59079,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "compound-eyes",
+          "name": "shield-dust",
           "isHidden": false
         },
         {
-          "name": "shield-dust",
+          "name": "compound-eyes",
           "isHidden": false
         },
         {
@@ -59169,14 +59169,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "pu",
-          "rank": 202,
-          "usage": "0.03"
-        },
-        {
           "tier": "zu",
           "rank": 38,
           "usage": "4.23"
+        },
+        {
+          "tier": "pu",
+          "rank": 202,
+          "usage": "0.03"
         },
         {
           "tier": "nationaldex",
@@ -59521,6 +59521,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "zu",
+          "rank": 202,
+          "usage": "0.04"
+        },
+        {
           "tier": "ru",
           "rank": 220,
           "usage": "0.05"
@@ -59529,11 +59534,6 @@ window.localDB = {
           "tier": "pu",
           "rank": 227,
           "usage": "0.01"
-        },
-        {
-          "tier": "zu",
-          "rank": 202,
-          "usage": "0.04"
         }
       ],
       "types": [
@@ -59731,16 +59731,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "own-tempo",
-          "isHidden": true
-        },
-        {
           "name": "keen-eye",
           "isHidden": false
         },
         {
           "name": "infiltrator",
           "isHidden": false
+        },
+        {
+          "name": "own-tempo",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -59770,6 +59770,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "zu",
+          "rank": 125,
+          "usage": "0.35"
+        },
+        {
           "tier": "ru",
           "rank": 248,
           "usage": "0.02"
@@ -59783,11 +59788,6 @@ window.localDB = {
           "tier": "monotype",
           "rank": 221,
           "usage": "0.11"
-        },
-        {
-          "tier": "zu",
-          "rank": 125,
-          "usage": "0.35"
         },
         {
           "tier": "ubers",
@@ -60159,12 +60159,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "unburden",
-          "isHidden": true
-        },
-        {
           "name": "sweet-veil",
           "isHidden": false
+        },
+        {
+          "name": "unburden",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -60205,12 +60205,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "unburden",
-          "isHidden": true
-        },
-        {
           "name": "sweet-veil",
           "isHidden": false
+        },
+        {
+          "name": "unburden",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -60252,11 +60252,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "suction-cups",
+          "name": "contrary",
           "isHidden": false
         },
         {
-          "name": "contrary",
+          "name": "suction-cups",
           "isHidden": false
         },
         {
@@ -60296,14 +60296,14 @@ window.localDB = {
           "usage": "0.02"
         },
         {
+          "tier": "zu",
+          "rank": 36,
+          "usage": "4.77"
+        },
+        {
           "tier": "ru",
           "rank": 101,
           "usage": "0.87"
-        },
-        {
-          "tier": "pu",
-          "rank": 60,
-          "usage": "2.23"
         },
         {
           "tier": "vgc2025",
@@ -60311,14 +60311,14 @@ window.localDB = {
           "usage": "0.10"
         },
         {
+          "tier": "pu",
+          "rank": 60,
+          "usage": "2.23"
+        },
+        {
           "tier": "monotype",
           "rank": 293,
           "usage": "0.03"
-        },
-        {
-          "tier": "zu",
-          "rank": 36,
-          "usage": "4.77"
         },
         {
           "tier": "ubers",
@@ -60389,11 +60389,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "suction-cups",
+          "name": "contrary",
           "isHidden": false
         },
         {
-          "name": "contrary",
+          "name": "suction-cups",
           "isHidden": false
         },
         {
@@ -60440,16 +60440,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
+          "name": "tough-claws",
+          "isHidden": false
+        },
+        {
           "name": "sniper",
           "isHidden": false
         },
         {
           "name": "pickpocket",
           "isHidden": true
-        },
-        {
-          "name": "tough-claws",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -60491,16 +60491,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
+          "name": "tough-claws",
+          "isHidden": false
+        },
+        {
           "name": "sniper",
           "isHidden": false
         },
         {
           "name": "pickpocket",
           "isHidden": true
-        },
-        {
-          "name": "tough-claws",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -60546,12 +60546,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "adaptability",
-          "isHidden": true
-        },
-        {
           "name": "poison-touch",
           "isHidden": false
+        },
+        {
+          "name": "adaptability",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -60606,14 +60606,14 @@ window.localDB = {
           "usage": "0.02"
         },
         {
-          "tier": "ubers",
-          "rank": 297,
-          "usage": "0.02"
-        },
-        {
           "tier": "ou",
           "rank": 141,
           "usage": "0.20"
+        },
+        {
+          "tier": "ubers",
+          "rank": 297,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -60668,12 +60668,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "adaptability",
-          "isHidden": true
-        },
-        {
           "name": "poison-touch",
           "isHidden": false
+        },
+        {
+          "name": "adaptability",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -60750,6 +60750,11 @@ window.localDB = {
           "usage": "0.06"
         },
         {
+          "tier": "zu",
+          "rank": 10,
+          "usage": "13.71"
+        },
+        {
           "tier": "ru",
           "rank": 227,
           "usage": "0.04"
@@ -60768,11 +60773,6 @@ window.localDB = {
           "tier": "uu",
           "rank": 246,
           "usage": "0.02"
-        },
-        {
-          "tier": "zu",
-          "rank": 10,
-          "usage": "13.71"
         },
         {
           "tier": "doublesou",
@@ -60850,11 +60850,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "sand-veil",
+          "name": "dry-skin",
           "isHidden": false
         },
         {
-          "name": "dry-skin",
+          "name": "sand-veil",
           "isHidden": false
         },
         {
@@ -60901,11 +60901,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "sand-veil",
+          "name": "dry-skin",
           "isHidden": false
         },
         {
-          "name": "dry-skin",
+          "name": "sand-veil",
           "isHidden": false
         },
         {
@@ -60952,12 +60952,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "sturdy",
-          "isHidden": true
-        },
-        {
           "name": "strong-jaw",
           "isHidden": false
+        },
+        {
+          "name": "sturdy",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -60999,12 +60999,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "rock-head",
-          "isHidden": true
-        },
-        {
           "name": "strong-jaw",
           "isHidden": false
+        },
+        {
+          "name": "rock-head",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -61046,12 +61046,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "snow-warning",
-          "isHidden": true
-        },
-        {
           "name": "refrigerate",
           "isHidden": false
+        },
+        {
+          "name": "snow-warning",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -61093,12 +61093,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "snow-warning",
-          "isHidden": true
-        },
-        {
           "name": "refrigerate",
           "isHidden": false
+        },
+        {
+          "name": "snow-warning",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -61153,14 +61153,14 @@ window.localDB = {
           "usage": "0.96"
         },
         {
-          "tier": "ubers",
-          "rank": 215,
-          "usage": "0.06"
-        },
-        {
           "tier": "ou",
           "rank": 198,
           "usage": "0.07"
+        },
+        {
+          "tier": "ubers",
+          "rank": 215,
+          "usage": "0.06"
         },
         {
           "tier": "doublesou",
@@ -61410,14 +61410,14 @@ window.localDB = {
           "usage": "2.33"
         },
         {
-          "tier": "ubers",
-          "rank": 157,
-          "usage": "0.15"
-        },
-        {
           "tier": "ou",
           "rank": 53,
           "usage": "2.86"
+        },
+        {
+          "tier": "ubers",
+          "rank": 157,
+          "usage": "0.15"
         },
         {
           "tier": "doublesou",
@@ -61522,14 +61522,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "pu",
-          "rank": 122,
-          "usage": "0.36"
-        },
-        {
           "tier": "zu",
           "rank": 159,
           "usage": "0.14"
+        },
+        {
+          "tier": "pu",
+          "rank": 122,
+          "usage": "0.36"
         }
       ],
       "types": [
@@ -61539,16 +61539,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
+          "name": "cheek-pouch",
+          "isHidden": false
+        },
+        {
           "name": "pickup",
           "isHidden": false
         },
         {
           "name": "plus",
           "isHidden": true
-        },
-        {
-          "name": "cheek-pouch",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -61583,6 +61583,11 @@ window.localDB = {
           "usage": "0.08"
         },
         {
+          "tier": "zu",
+          "rank": 42,
+          "usage": "4.06"
+        },
+        {
           "tier": "ru",
           "rank": 172,
           "usage": "0.18"
@@ -61598,19 +61603,14 @@ window.localDB = {
           "usage": "0.01"
         },
         {
-          "tier": "zu",
-          "rank": 42,
-          "usage": "4.06"
+          "tier": "ou",
+          "rank": 306,
+          "usage": "0.01"
         },
         {
           "tier": "ubers",
           "rank": 137,
           "usage": "0.26"
-        },
-        {
-          "tier": "ou",
-          "rank": 306,
-          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -61630,12 +61630,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "sturdy",
-          "isHidden": true
-        },
-        {
           "name": "clear-body",
           "isHidden": false
+        },
+        {
+          "name": "sturdy",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -61676,11 +61676,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "hydration",
+          "name": "sap-sipper",
           "isHidden": false
         },
         {
-          "name": "sap-sipper",
+          "name": "hydration",
           "isHidden": false
         },
         {
@@ -61726,11 +61726,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "hydration",
+          "name": "sap-sipper",
           "isHidden": false
         },
         {
-          "name": "sap-sipper",
+          "name": "hydration",
           "isHidden": false
         },
         {
@@ -61780,14 +61780,14 @@ window.localDB = {
           "usage": "0.02"
         },
         {
-          "tier": "ubers",
-          "rank": 343,
-          "usage": "0.01"
-        },
-        {
           "tier": "ou",
           "rank": 278,
           "usage": "0.02"
+        },
+        {
+          "tier": "ubers",
+          "rank": 343,
+          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -61867,11 +61867,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "hydration",
+          "name": "sap-sipper",
           "isHidden": false
         },
         {
-          "name": "sap-sipper",
+          "name": "hydration",
           "isHidden": false
         },
         {
@@ -61931,14 +61931,14 @@ window.localDB = {
           "usage": "0.15"
         },
         {
-          "tier": "ubers",
-          "rank": 168,
-          "usage": "0.12"
-        },
-        {
           "tier": "ou",
           "rank": 90,
           "usage": "0.77"
+        },
+        {
+          "tier": "ubers",
+          "rank": 168,
+          "usage": "0.12"
         },
         {
           "tier": "doublesou",
@@ -62155,14 +62155,14 @@ window.localDB = {
           "usage": "0.19"
         },
         {
+          "tier": "zu",
+          "rank": 71,
+          "usage": "1.60"
+        },
+        {
           "tier": "ru",
           "rank": 137,
           "usage": "0.38"
-        },
-        {
-          "tier": "pu",
-          "rank": 136,
-          "usage": "0.25"
         },
         {
           "tier": "vgc2025",
@@ -62170,24 +62170,24 @@ window.localDB = {
           "usage": "0.15"
         },
         {
+          "tier": "pu",
+          "rank": 136,
+          "usage": "0.25"
+        },
+        {
           "tier": "monotype",
           "rank": 253,
           "usage": "0.07"
         },
         {
-          "tier": "zu",
-          "rank": 71,
-          "usage": "1.60"
+          "tier": "ou",
+          "rank": 304,
+          "usage": "0.01"
         },
         {
           "tier": "ubers",
           "rank": 173,
           "usage": "0.10"
-        },
-        {
-          "tier": "ou",
-          "rank": 304,
-          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -62289,16 +62289,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "insomnia",
-          "isHidden": true
-        },
-        {
           "name": "pickup",
           "isHidden": false
         },
         {
           "name": "frisk",
           "isHidden": false
+        },
+        {
+          "name": "insomnia",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -62340,16 +62340,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "insomnia",
-          "isHidden": true
-        },
-        {
           "name": "pickup",
           "isHidden": false
         },
         {
           "name": "frisk",
           "isHidden": false
+        },
+        {
+          "name": "insomnia",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -62390,16 +62390,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "sturdy",
-          "isHidden": true
-        },
-        {
           "name": "own-tempo",
           "isHidden": false
         },
         {
           "name": "ice-body",
           "isHidden": false
+        },
+        {
+          "name": "sturdy",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -62449,14 +62449,14 @@ window.localDB = {
           "usage": "0.22"
         },
         {
-          "tier": "ubers",
-          "rank": 303,
-          "usage": "0.02"
-        },
-        {
           "tier": "ou",
           "rank": 210,
           "usage": "0.06"
+        },
+        {
+          "tier": "ubers",
+          "rank": 303,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -62591,12 +62591,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "telepathy",
-          "isHidden": true
-        },
-        {
           "name": "infiltrator",
           "isHidden": false
+        },
+        {
+          "name": "telepathy",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -62641,14 +62641,14 @@ window.localDB = {
           "usage": "0.38"
         },
         {
-          "tier": "ubers",
-          "rank": 171,
-          "usage": "0.11"
-        },
-        {
           "tier": "ou",
           "rank": 196,
           "usage": "0.07"
+        },
+        {
+          "tier": "ubers",
+          "rank": 171,
+          "usage": "0.11"
         },
         {
           "tier": "doublesou",
@@ -62733,12 +62733,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "telepathy",
-          "isHidden": true
-        },
-        {
           "name": "infiltrator",
           "isHidden": false
+        },
+        {
+          "name": "telepathy",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -63008,14 +63008,14 @@ window.localDB = {
           "usage": "0.54"
         },
         {
-          "tier": "ubers",
-          "rank": 280,
-          "usage": "0.02"
-        },
-        {
           "tier": "ou",
           "rank": 106,
           "usage": "0.48"
+        },
+        {
+          "tier": "ubers",
+          "rank": 280,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -63391,14 +63391,14 @@ window.localDB = {
           "usage": "1.81"
         },
         {
-          "tier": "ubers",
-          "rank": 211,
-          "usage": "0.06"
-        },
-        {
           "tier": "ou",
           "rank": 67,
           "usage": "2.04"
+        },
+        {
+          "tier": "ubers",
+          "rank": 211,
+          "usage": "0.06"
         },
         {
           "tier": "doublesou",
@@ -63978,12 +63978,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "intimidate",
-          "isHidden": true
-        },
-        {
           "name": "blaze",
           "isHidden": false
+        },
+        {
+          "name": "intimidate",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -64024,12 +64024,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "intimidate",
-          "isHidden": true
-        },
-        {
           "name": "blaze",
           "isHidden": false
+        },
+        {
+          "name": "intimidate",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -64084,14 +64084,14 @@ window.localDB = {
           "usage": "0.20"
         },
         {
-          "tier": "ubers",
-          "rank": 85,
-          "usage": "0.66"
-        },
-        {
           "tier": "ou",
           "rank": 136,
           "usage": "0.22"
+        },
+        {
+          "tier": "ubers",
+          "rank": 85,
+          "usage": "0.66"
         },
         {
           "tier": "doublesou",
@@ -64369,14 +64369,14 @@ window.localDB = {
           "usage": "4.48"
         },
         {
-          "tier": "ubers",
-          "rank": 161,
-          "usage": "0.13"
-        },
-        {
           "tier": "ou",
           "rank": 38,
           "usage": "4.90"
+        },
+        {
+          "tier": "ubers",
+          "rank": 161,
+          "usage": "0.13"
         },
         {
           "tier": "doublesou",
@@ -64808,12 +64808,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "pickup",
-          "isHidden": true
-        },
-        {
           "name": "skill-link",
           "isHidden": false
+        },
+        {
+          "name": "pickup",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -64859,12 +64859,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "pickup",
-          "isHidden": true
-        },
-        {
           "name": "skill-link",
           "isHidden": false
+        },
+        {
+          "name": "pickup",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -64899,6 +64899,11 @@ window.localDB = {
           "usage": "0.03"
         },
         {
+          "tier": "zu",
+          "rank": 134,
+          "usage": "0.27"
+        },
+        {
           "tier": "ru",
           "rank": 260,
           "usage": "0.01"
@@ -64907,11 +64912,6 @@ window.localDB = {
           "tier": "pu",
           "rank": 165,
           "usage": "0.10"
-        },
-        {
-          "tier": "zu",
-          "rank": 134,
-          "usage": "0.27"
         },
         {
           "tier": "ou",
@@ -64976,16 +64976,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "adaptability",
-          "isHidden": true
+          "name": "stakeout",
+          "isHidden": false
         },
         {
           "name": "strong-jaw",
           "isHidden": false
         },
         {
-          "name": "stakeout",
-          "isHidden": false
+          "name": "adaptability",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -65026,16 +65026,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "adaptability",
-          "isHidden": true
+          "name": "stakeout",
+          "isHidden": false
         },
         {
           "name": "strong-jaw",
           "isHidden": false
         },
         {
-          "name": "stakeout",
-          "isHidden": false
+          "name": "adaptability",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -65107,13 +65107,13 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "vgc2025",
-          "rank": 242,
+          "tier": "zu",
+          "rank": 216,
           "usage": "0.02"
         },
         {
-          "tier": "zu",
-          "rank": 216,
+          "tier": "vgc2025",
+          "rank": 242,
           "usage": "0.02"
         },
         {
@@ -65181,19 +65181,24 @@ window.localDB = {
           "usage": "0.11"
         },
         {
+          "tier": "zu",
+          "rank": 22,
+          "usage": "9.17"
+        },
+        {
           "tier": "ru",
           "rank": 203,
           "usage": "0.08"
         },
         {
-          "tier": "pu",
-          "rank": 69,
-          "usage": "1.44"
-        },
-        {
           "tier": "vgc2025",
           "rank": 214,
           "usage": "0.03"
+        },
+        {
+          "tier": "pu",
+          "rank": 69,
+          "usage": "1.44"
         },
         {
           "tier": "monotype",
@@ -65206,19 +65211,14 @@ window.localDB = {
           "usage": "0.23"
         },
         {
-          "tier": "zu",
-          "rank": 22,
-          "usage": "9.17"
+          "tier": "ou",
+          "rank": 205,
+          "usage": "0.07"
         },
         {
           "tier": "ubers",
           "rank": 328,
           "usage": "0.01"
-        },
-        {
-          "tier": "ou",
-          "rank": 205,
-          "usage": "0.07"
         },
         {
           "tier": "doublesou",
@@ -65376,12 +65376,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "anger-point",
-          "isHidden": true
-        },
-        {
           "name": "iron-fist",
           "isHidden": false
+        },
+        {
+          "name": "anger-point",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -65427,12 +65427,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "anger-point",
-          "isHidden": true
-        },
-        {
           "name": "iron-fist",
           "isHidden": false
+        },
+        {
+          "name": "anger-point",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -65467,6 +65467,11 @@ window.localDB = {
           "usage": "1.50"
         },
         {
+          "tier": "zu",
+          "rank": 153,
+          "usage": "0.16"
+        },
+        {
           "tier": "ru",
           "rank": 175,
           "usage": "0.15"
@@ -65480,11 +65485,6 @@ window.localDB = {
           "tier": "monotype",
           "rank": 325,
           "usage": "0.01"
-        },
-        {
-          "tier": "zu",
-          "rank": 153,
-          "usage": "0.16"
         }
       ],
       "types": [
@@ -65643,14 +65643,14 @@ window.localDB = {
           "usage": "1.35"
         },
         {
-          "tier": "ubers",
-          "rank": 13,
-          "usage": "11.71"
-        },
-        {
           "tier": "ou",
           "rank": 63,
           "usage": "2.18"
+        },
+        {
+          "tier": "ubers",
+          "rank": 13,
+          "usage": "11.71"
         },
         {
           "tier": "doublesou",
@@ -65776,11 +65776,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "shield-dust",
+          "name": "honey-gather",
           "isHidden": false
         },
         {
-          "name": "honey-gather",
+          "name": "shield-dust",
           "isHidden": false
         },
         {
@@ -65870,6 +65870,11 @@ window.localDB = {
           "usage": "0.44"
         },
         {
+          "tier": "zu",
+          "rank": 14,
+          "usage": "10.58"
+        },
+        {
           "tier": "ru",
           "rank": 195,
           "usage": "0.09"
@@ -65888,11 +65893,6 @@ window.localDB = {
           "tier": "uu",
           "rank": 195,
           "usage": "0.06"
-        },
-        {
-          "tier": "zu",
-          "rank": 14,
-          "usage": "10.58"
         },
         {
           "tier": "ubers",
@@ -65981,12 +65981,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "steadfast",
-          "isHidden": true
-        },
-        {
           "name": "sand-rush",
           "isHidden": false
+        },
+        {
+          "name": "steadfast",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -66063,14 +66063,14 @@ window.localDB = {
           "usage": "24.93"
         },
         {
-          "tier": "pu",
-          "rank": 123,
-          "usage": "0.34"
-        },
-        {
           "tier": "zu",
           "rank": 186,
           "usage": "0.07"
+        },
+        {
+          "tier": "pu",
+          "rank": 123,
+          "usage": "0.34"
         }
       ],
       "types": [
@@ -66180,14 +66180,14 @@ window.localDB = {
           "usage": "9.23"
         },
         {
-          "tier": "ubers",
-          "rank": 56,
-          "usage": "1.36"
-        },
-        {
           "tier": "ou",
           "rank": 52,
           "usage": "2.88"
+        },
+        {
+          "tier": "ubers",
+          "rank": 56,
+          "usage": "1.36"
         },
         {
           "tier": "doublesou",
@@ -66418,16 +66418,16 @@ window.localDB = {
       ],
       "abilities": [
         {
+          "name": "merciless",
+          "isHidden": false
+        },
+        {
           "name": "limber",
           "isHidden": false
         },
         {
           "name": "regenerator",
           "isHidden": true
-        },
-        {
-          "name": "merciless",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -66488,12 +66488,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "inner-focus",
-          "isHidden": true
-        },
-        {
           "name": "stamina",
           "isHidden": false
+        },
+        {
+          "name": "inner-focus",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -66533,14 +66533,14 @@ window.localDB = {
           "usage": "0.20"
         },
         {
-          "tier": "pu",
-          "rank": 10,
-          "usage": "14.64"
-        },
-        {
           "tier": "vgc2025",
           "rank": 229,
           "usage": "0.02"
+        },
+        {
+          "tier": "pu",
+          "rank": 10,
+          "usage": "14.64"
         },
         {
           "tier": "uu",
@@ -66604,12 +66604,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "inner-focus",
-          "isHidden": true
-        },
-        {
           "name": "stamina",
           "isHidden": false
+        },
+        {
+          "name": "inner-focus",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -66712,14 +66712,14 @@ window.localDB = {
           "usage": "1.46"
         },
         {
-          "tier": "pu",
-          "rank": 16,
-          "usage": "11.38"
-        },
-        {
           "tier": "vgc2025",
           "rank": 78,
           "usage": "0.59"
+        },
+        {
+          "tier": "pu",
+          "rank": 16,
+          "usage": "11.38"
         },
         {
           "tier": "monotype",
@@ -66732,14 +66732,14 @@ window.localDB = {
           "usage": "1.31"
         },
         {
-          "tier": "ubers",
-          "rank": 127,
-          "usage": "0.31"
-        },
-        {
           "tier": "ou",
           "rank": 48,
           "usage": "3.28"
+        },
+        {
+          "tier": "ubers",
+          "rank": 127,
+          "usage": "0.31"
         },
         {
           "tier": "doublesou",
@@ -66925,12 +66925,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "water-absorb",
-          "isHidden": true
-        },
-        {
           "name": "water-bubble",
           "isHidden": false
+        },
+        {
+          "name": "water-absorb",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -67006,6 +67006,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "zu",
+          "rank": 80,
+          "usage": "1.21"
+        },
+        {
           "tier": "ru",
           "rank": 251,
           "usage": "0.01"
@@ -67019,11 +67024,6 @@ window.localDB = {
           "tier": "uu",
           "rank": 217,
           "usage": "0.03"
-        },
-        {
-          "tier": "zu",
-          "rank": 80,
-          "usage": "1.21"
         },
         {
           "tier": "ubers",
@@ -67125,11 +67125,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "effect-spore",
+          "name": "illuminate",
           "isHidden": false
         },
         {
-          "name": "illuminate",
+          "name": "effect-spore",
           "isHidden": false
         },
         {
@@ -67176,11 +67176,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "effect-spore",
+          "name": "illuminate",
           "isHidden": false
         },
         {
-          "name": "illuminate",
+          "name": "effect-spore",
           "isHidden": false
         },
         {
@@ -67303,13 +67303,13 @@ window.localDB = {
           "usage": "0.14"
         },
         {
-          "tier": "ubers",
-          "rank": 219,
+          "tier": "ou",
+          "rank": 225,
           "usage": "0.05"
         },
         {
-          "tier": "ou",
-          "rank": 225,
+          "tier": "ubers",
+          "rank": 219,
           "usage": "0.05"
         },
         {
@@ -67423,16 +67423,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "cute-charm",
-          "isHidden": true
+          "name": "fluffy",
+          "isHidden": false
         },
         {
           "name": "klutz",
           "isHidden": false
         },
         {
-          "name": "fluffy",
-          "isHidden": false
+          "name": "cute-charm",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -67474,16 +67474,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
+          "name": "fluffy",
+          "isHidden": false
+        },
+        {
           "name": "klutz",
           "isHidden": false
         },
         {
           "name": "unnerve",
           "isHidden": true
-        },
-        {
-          "name": "fluffy",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -67524,11 +67524,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "oblivious",
+          "name": "leaf-guard",
           "isHidden": false
         },
         {
-          "name": "leaf-guard",
+          "name": "oblivious",
           "isHidden": false
         },
         {
@@ -67574,11 +67574,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "oblivious",
+          "name": "leaf-guard",
           "isHidden": false
         },
         {
-          "name": "leaf-guard",
+          "name": "oblivious",
           "isHidden": false
         },
         {
@@ -67719,12 +67719,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "sweet-veil",
-          "isHidden": true
-        },
-        {
           "name": "queenly-majesty",
           "isHidden": false
+        },
+        {
+          "name": "sweet-veil",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -67774,14 +67774,14 @@ window.localDB = {
           "usage": "0.50"
         },
         {
-          "tier": "ubers",
-          "rank": 172,
-          "usage": "0.11"
-        },
-        {
           "tier": "ou",
           "rank": 131,
           "usage": "0.24"
+        },
+        {
+          "tier": "ubers",
+          "rank": 172,
+          "usage": "0.11"
         },
         {
           "tier": "doublesou",
@@ -67846,16 +67846,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "natural-cure",
-          "isHidden": true
-        },
-        {
           "name": "flower-veil",
           "isHidden": false
         },
         {
           "name": "triage",
           "isHidden": false
+        },
+        {
+          "name": "natural-cure",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -67885,6 +67885,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "zu",
+          "rank": 199,
+          "usage": "0.05"
+        },
+        {
           "tier": "ru",
           "rank": 255,
           "usage": "0.01"
@@ -67893,11 +67898,6 @@ window.localDB = {
           "tier": "vgc2025",
           "rank": 84,
           "usage": "0.51"
-        },
-        {
-          "tier": "zu",
-          "rank": 199,
-          "usage": "0.05"
         },
         {
           "tier": "doublesou",
@@ -67956,14 +67956,14 @@ window.localDB = {
           "usage": "0.07"
         },
         {
-          "tier": "pu",
-          "rank": 64,
-          "usage": "1.98"
-        },
-        {
           "tier": "zu",
           "rank": 177,
           "usage": "0.10"
+        },
+        {
+          "tier": "pu",
+          "rank": 64,
+          "usage": "1.98"
         },
         {
           "tier": "doublesou",
@@ -68136,12 +68136,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "sand-veil",
-          "isHidden": true
-        },
-        {
           "name": "water-compaction",
           "isHidden": false
+        },
+        {
+          "name": "sand-veil",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -68244,12 +68244,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "sand-veil",
-          "isHidden": true
-        },
-        {
           "name": "water-compaction",
           "isHidden": false
+        },
+        {
+          "name": "sand-veil",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -68290,12 +68290,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "unaware",
-          "isHidden": true
-        },
-        {
           "name": "innards-out",
           "isHidden": false
+        },
+        {
+          "name": "unaware",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -68414,6 +68414,11 @@ window.localDB = {
           "usage": "3.78"
         },
         {
+          "tier": "zu",
+          "rank": 15,
+          "usage": "10.37"
+        },
+        {
           "tier": "ru",
           "rank": 215,
           "usage": "0.06"
@@ -68429,19 +68434,14 @@ window.localDB = {
           "usage": "0.40"
         },
         {
-          "tier": "zu",
-          "rank": 15,
-          "usage": "10.37"
+          "tier": "ou",
+          "rank": 237,
+          "usage": "0.04"
         },
         {
           "tier": "ubers",
           "rank": 332,
           "usage": "0.01"
-        },
-        {
-          "tier": "ou",
-          "rank": 237,
-          "usage": "0.04"
         },
         {
           "tier": "doublesou",
@@ -68543,6 +68543,11 @@ window.localDB = {
           "usage": "0.16"
         },
         {
+          "tier": "zu",
+          "rank": 99,
+          "usage": "0.68"
+        },
+        {
           "tier": "pu",
           "rank": 89,
           "usage": "0.72"
@@ -68551,11 +68556,6 @@ window.localDB = {
           "tier": "uu",
           "rank": 221,
           "usage": "0.03"
-        },
-        {
-          "tier": "zu",
-          "rank": 99,
-          "usage": "0.68"
         },
         {
           "tier": "ou",
@@ -68660,16 +68660,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "sturdy",
-          "isHidden": true
+          "name": "iron-barbs",
+          "isHidden": false
         },
         {
           "name": "lightning-rod",
           "isHidden": false
         },
         {
-          "name": "iron-barbs",
-          "isHidden": false
+          "name": "sturdy",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -68719,14 +68719,14 @@ window.localDB = {
           "usage": "1.77"
         },
         {
-          "tier": "ubers",
-          "rank": 80,
-          "usage": "0.75"
-        },
-        {
           "tier": "ou",
           "rank": 92,
           "usage": "0.74"
+        },
+        {
+          "tier": "ubers",
+          "rank": 80,
+          "usage": "0.75"
         },
         {
           "tier": "doublesou",
@@ -68953,14 +68953,14 @@ window.localDB = {
           "usage": "0.09"
         },
         {
-          "tier": "pu",
-          "rank": 18,
-          "usage": "10.80"
-        },
-        {
           "tier": "vgc2025",
           "rank": 163,
           "usage": "0.08"
+        },
+        {
+          "tier": "pu",
+          "rank": 18,
+          "usage": "10.80"
         },
         {
           "tier": "monotype",
@@ -69036,16 +69036,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "wonder-skin",
-          "isHidden": true
+          "name": "dazzling",
+          "isHidden": false
         },
         {
           "name": "strong-jaw",
           "isHidden": false
         },
         {
-          "name": "dazzling",
-          "isHidden": false
+          "name": "wonder-skin",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -69087,16 +69087,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "cloud-nine",
-          "isHidden": true
+          "name": "berserk",
+          "isHidden": false
         },
         {
           "name": "sap-sipper",
           "isHidden": false
         },
         {
-          "name": "berserk",
-          "isHidden": false
+          "name": "cloud-nine",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -69196,16 +69196,16 @@ window.localDB = {
       ],
       "abilities": [
         {
+          "name": "bulletproof",
+          "isHidden": false
+        },
+        {
           "name": "soundproof",
           "isHidden": false
         },
         {
           "name": "overcoat",
           "isHidden": true
-        },
-        {
-          "name": "bulletproof",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -69235,14 +69235,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "pu",
-          "rank": 207,
-          "usage": "0.02"
-        },
-        {
           "tier": "zu",
           "rank": 227,
           "usage": "0.01"
+        },
+        {
+          "tier": "pu",
+          "rank": 207,
+          "usage": "0.02"
         }
       ],
       "types": [
@@ -69283,16 +69283,16 @@ window.localDB = {
       ],
       "abilities": [
         {
+          "name": "bulletproof",
+          "isHidden": false
+        },
+        {
           "name": "soundproof",
           "isHidden": false
         },
         {
           "name": "overcoat",
           "isHidden": true
-        },
-        {
-          "name": "bulletproof",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -69332,14 +69332,14 @@ window.localDB = {
           "usage": "1.82"
         },
         {
-          "tier": "ubers",
-          "rank": 249,
-          "usage": "0.03"
-        },
-        {
           "tier": "ou",
           "rank": 77,
           "usage": "1.32"
+        },
+        {
+          "tier": "ubers",
+          "rank": 249,
+          "usage": "0.03"
         },
         {
           "tier": "doublesou",
@@ -69615,16 +69615,16 @@ window.localDB = {
       ],
       "abilities": [
         {
+          "name": "bulletproof",
+          "isHidden": false
+        },
+        {
           "name": "soundproof",
           "isHidden": false
         },
         {
           "name": "overcoat",
           "isHidden": true
-        },
-        {
-          "name": "bulletproof",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -69757,12 +69757,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "telepathy",
-          "isHidden": true
-        },
-        {
           "name": "electric-surge",
           "isHidden": false
+        },
+        {
+          "name": "telepathy",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -70018,12 +70018,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "telepathy",
-          "isHidden": true
-        },
-        {
           "name": "grassy-surge",
           "isHidden": false
+        },
+        {
+          "name": "telepathy",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -71233,14 +71233,14 @@ window.localDB = {
           "usage": "0.86"
         },
         {
-          "tier": "ubers",
-          "rank": 257,
-          "usage": "0.03"
-        },
-        {
           "tier": "ou",
           "rank": 175,
           "usage": "0.11"
+        },
+        {
+          "tier": "ubers",
+          "rank": 257,
+          "usage": "0.03"
         },
         {
           "tier": "doublesou",
@@ -72184,14 +72184,14 @@ window.localDB = {
           "usage": "4.81"
         },
         {
-          "tier": "uu",
-          "rank": 153,
-          "usage": "0.16"
-        },
-        {
           "tier": "zu",
           "rank": 157,
           "usage": "0.15"
+        },
+        {
+          "tier": "uu",
+          "rank": 153,
+          "usage": "0.16"
         }
       ],
       "types": [
@@ -72358,14 +72358,14 @@ window.localDB = {
           "usage": "0.68"
         },
         {
-          "tier": "ubers",
-          "rank": 159,
-          "usage": "0.14"
-        },
-        {
           "tier": "ou",
           "rank": 26,
           "usage": "7.29"
+        },
+        {
+          "tier": "ubers",
+          "rank": 159,
+          "usage": "0.14"
         },
         {
           "tier": "doublesou",
@@ -72721,14 +72721,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "pu",
-          "rank": 198,
-          "usage": "0.04"
-        },
-        {
           "tier": "zu",
           "rank": 146,
           "usage": "0.17"
+        },
+        {
+          "tier": "pu",
+          "rank": 198,
+          "usage": "0.04"
         }
       ],
       "types": [
@@ -72808,14 +72808,14 @@ window.localDB = {
           "usage": "4.63"
         },
         {
-          "tier": "ubers",
-          "rank": 102,
-          "usage": "0.52"
-        },
-        {
           "tier": "ou",
           "rank": 15,
           "usage": "12.76"
+        },
+        {
+          "tier": "ubers",
+          "rank": 102,
+          "usage": "0.52"
         },
         {
           "tier": "doublesou",
@@ -73205,12 +73205,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "gluttony",
-          "isHidden": true
-        },
-        {
           "name": "cheek-pouch",
           "isHidden": false
+        },
+        {
+          "name": "gluttony",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -73256,12 +73256,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "gluttony",
-          "isHidden": true
-        },
-        {
           "name": "cheek-pouch",
           "isHidden": false
+        },
+        {
+          "name": "gluttony",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -73401,14 +73401,14 @@ window.localDB = {
           "usage": "9.41"
         },
         {
-          "tier": "ubers",
-          "rank": 42,
-          "usage": "2.35"
-        },
-        {
           "tier": "ou",
           "rank": 19,
           "usage": "10.94"
+        },
+        {
+          "tier": "ubers",
+          "rank": 42,
+          "usage": "2.35"
         },
         {
           "tier": "doublesou",
@@ -73860,11 +73860,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "compound-eyes",
+          "name": "swarm",
           "isHidden": false
         },
         {
-          "name": "swarm",
+          "name": "compound-eyes",
           "isHidden": false
         },
         {
@@ -74111,16 +74111,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "effect-spore",
-          "isHidden": true
+          "name": "cotton-down",
+          "isHidden": false
         },
         {
           "name": "regenerator",
           "isHidden": false
         },
         {
-          "name": "cotton-down",
-          "isHidden": false
+          "name": "effect-spore",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -74211,16 +74211,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
+          "name": "fluffy",
+          "isHidden": false
+        },
+        {
           "name": "steadfast",
           "isHidden": false
         },
         {
           "name": "bulletproof",
           "isHidden": true
-        },
-        {
-          "name": "fluffy",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -74277,16 +74277,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "swift-swim",
-          "isHidden": true
+          "name": "strong-jaw",
+          "isHidden": false
         },
         {
           "name": "shell-armor",
           "isHidden": false
         },
         {
-          "name": "strong-jaw",
-          "isHidden": false
+          "name": "swift-swim",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -74336,14 +74336,14 @@ window.localDB = {
           "usage": "0.02"
         },
         {
-          "tier": "ubers",
-          "rank": 196,
-          "usage": "0.07"
-        },
-        {
           "tier": "ou",
           "rank": 261,
           "usage": "0.02"
+        },
+        {
+          "tier": "ubers",
+          "rank": 196,
+          "usage": "0.07"
         },
         {
           "tier": "doublesou",
@@ -74374,16 +74374,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "swift-swim",
-          "isHidden": true
+          "name": "strong-jaw",
+          "isHidden": false
         },
         {
           "name": "shell-armor",
           "isHidden": false
         },
         {
-          "name": "strong-jaw",
-          "isHidden": false
+          "name": "swift-swim",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -74424,12 +74424,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "rattled",
-          "isHidden": true
-        },
-        {
           "name": "ball-fetch",
           "isHidden": false
+        },
+        {
+          "name": "rattled",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -74470,12 +74470,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "competitive",
-          "isHidden": true
-        },
-        {
           "name": "strong-jaw",
           "isHidden": false
+        },
+        {
+          "name": "competitive",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -74516,16 +74516,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "flash-fire",
-          "isHidden": true
+          "name": "steam-engine",
+          "isHidden": false
         },
         {
           "name": "heatproof",
           "isHidden": false
         },
         {
-          "name": "steam-engine",
-          "isHidden": false
+          "name": "flash-fire",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -74611,14 +74611,14 @@ window.localDB = {
           "usage": "0.73"
         },
         {
-          "tier": "pu",
-          "rank": 53,
-          "usage": "3.23"
-        },
-        {
           "tier": "vgc2025",
           "rank": 277,
           "usage": "0.01"
+        },
+        {
+          "tier": "pu",
+          "rank": 53,
+          "usage": "3.23"
         },
         {
           "tier": "monotype",
@@ -74626,14 +74626,14 @@ window.localDB = {
           "usage": "0.13"
         },
         {
-          "tier": "ubers",
-          "rank": 252,
-          "usage": "0.03"
-        },
-        {
           "tier": "ou",
           "rank": 299,
           "usage": "0.01"
+        },
+        {
+          "tier": "ubers",
+          "rank": 252,
+          "usage": "0.03"
         },
         {
           "tier": "doublesou",
@@ -74684,16 +74684,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "flash-fire",
-          "isHidden": true
+          "name": "steam-engine",
+          "isHidden": false
         },
         {
           "name": "flame-body",
           "isHidden": false
         },
         {
-          "name": "steam-engine",
-          "isHidden": false
+          "name": "flash-fire",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -74735,16 +74735,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
+          "name": "ripen",
+          "isHidden": false
+        },
+        {
           "name": "gluttony",
           "isHidden": false
         },
         {
           "name": "bulletproof",
           "isHidden": true
-        },
-        {
-          "name": "ripen",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -74774,9 +74774,9 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "pu",
-          "rank": 134,
-          "usage": "0.26"
+          "tier": "zu",
+          "rank": 130,
+          "usage": "0.30"
         },
         {
           "tier": "vgc2025",
@@ -74784,9 +74784,9 @@ window.localDB = {
           "usage": "0.02"
         },
         {
-          "tier": "zu",
-          "rank": 130,
-          "usage": "0.30"
+          "tier": "pu",
+          "rank": 134,
+          "usage": "0.26"
         },
         {
           "tier": "doublesou",
@@ -74806,16 +74806,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "hustle",
-          "isHidden": true
+          "name": "ripen",
+          "isHidden": false
         },
         {
           "name": "gluttony",
           "isHidden": false
         },
         {
-          "name": "ripen",
-          "isHidden": false
+          "name": "hustle",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -74845,6 +74845,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "zu",
+          "rank": 34,
+          "usage": "5.56"
+        },
+        {
           "tier": "pu",
           "rank": 145,
           "usage": "0.19"
@@ -74853,11 +74858,6 @@ window.localDB = {
           "tier": "uu",
           "rank": 189,
           "usage": "0.07"
-        },
-        {
-          "tier": "zu",
-          "rank": 34,
-          "usage": "5.56"
         },
         {
           "tier": "doublesou",
@@ -74872,16 +74872,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "thick-fat",
-          "isHidden": true
+          "name": "ripen",
+          "isHidden": false
         },
         {
           "name": "gluttony",
           "isHidden": false
         },
         {
-          "name": "ripen",
-          "isHidden": false
+          "name": "thick-fat",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -74922,16 +74922,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "sand-veil",
-          "isHidden": true
+          "name": "sand-spit",
+          "isHidden": false
         },
         {
           "name": "shed-skin",
           "isHidden": false
         },
         {
-          "name": "sand-spit",
-          "isHidden": false
+          "name": "sand-veil",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -74966,6 +74966,11 @@ window.localDB = {
           "usage": "0.10"
         },
         {
+          "tier": "zu",
+          "rank": 43,
+          "usage": "3.96"
+        },
+        {
           "tier": "ru",
           "rank": 207,
           "usage": "0.07"
@@ -74979,11 +74984,6 @@ window.localDB = {
           "tier": "monotype",
           "rank": 302,
           "usage": "0.03"
-        },
-        {
-          "tier": "zu",
-          "rank": 43,
-          "usage": "3.96"
         },
         {
           "tier": "ubers",
@@ -75063,16 +75063,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "sand-veil",
-          "isHidden": true
+          "name": "sand-spit",
+          "isHidden": false
         },
         {
           "name": "shed-skin",
           "isHidden": false
         },
         {
-          "name": "sand-spit",
-          "isHidden": false
+          "name": "sand-veil",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -75127,14 +75127,14 @@ window.localDB = {
           "usage": "0.03"
         },
         {
-          "tier": "ubers",
-          "rank": 281,
-          "usage": "0.02"
-        },
-        {
           "tier": "ou",
           "rank": 220,
           "usage": "0.05"
+        },
+        {
+          "tier": "ubers",
+          "rank": 281,
+          "usage": "0.02"
         },
         {
           "tier": "nationaldex",
@@ -75277,14 +75277,14 @@ window.localDB = {
           "usage": "1.50"
         },
         {
-          "tier": "ubers",
-          "rank": 188,
-          "usage": "0.08"
-        },
-        {
           "tier": "ou",
           "rank": 79,
           "usage": "1.16"
+        },
+        {
+          "tier": "ubers",
+          "rank": 188,
+          "usage": "0.08"
         },
         {
           "tier": "doublesou",
@@ -75426,16 +75426,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
+          "name": "rattled",
+          "isHidden": false
+        },
+        {
           "name": "static",
           "isHidden": false
         },
         {
           "name": "klutz",
           "isHidden": true
-        },
-        {
-          "name": "rattled",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -75480,14 +75480,14 @@ window.localDB = {
           "usage": "0.37"
         },
         {
-          "tier": "ubers",
-          "rank": 256,
-          "usage": "0.03"
-        },
-        {
           "tier": "ou",
           "rank": 100,
           "usage": "0.61"
+        },
+        {
+          "tier": "ubers",
+          "rank": 256,
+          "usage": "0.03"
         },
         {
           "tier": "doublesou",
@@ -75623,12 +75623,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "flame-body",
-          "isHidden": true
-        },
-        {
           "name": "white-smoke",
           "isHidden": false
+        },
+        {
+          "name": "flame-body",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -75806,14 +75806,14 @@ window.localDB = {
           "usage": "0.15"
         },
         {
-          "tier": "pu",
-          "rank": 176,
-          "usage": "0.07"
-        },
-        {
           "tier": "zu",
           "rank": 195,
           "usage": "0.05"
+        },
+        {
+          "tier": "pu",
+          "rank": 176,
+          "usage": "0.07"
         }
       ],
       "types": [
@@ -75822,12 +75822,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "cursed-body",
-          "isHidden": true
-        },
-        {
           "name": "weak-armor",
           "isHidden": false
+        },
+        {
+          "name": "cursed-body",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -75862,14 +75862,14 @@ window.localDB = {
           "usage": "0.38"
         },
         {
-          "tier": "ubers",
-          "rank": 73,
-          "usage": "0.87"
-        },
-        {
           "tier": "ou",
           "rank": 97,
           "usage": "0.66"
+        },
+        {
+          "tier": "ubers",
+          "rank": 73,
+          "usage": "0.87"
         },
         {
           "tier": "doublesou",
@@ -75919,12 +75919,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "cursed-body",
-          "isHidden": true
-        },
-        {
           "name": "weak-armor",
           "isHidden": false
+        },
+        {
+          "name": "cursed-body",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -75965,11 +75965,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "anticipation",
+          "name": "healer",
           "isHidden": false
         },
         {
-          "name": "healer",
+          "name": "anticipation",
           "isHidden": false
         },
         {
@@ -76009,6 +76009,11 @@ window.localDB = {
           "usage": "0.49"
         },
         {
+          "tier": "zu",
+          "rank": 48,
+          "usage": "3.43"
+        },
+        {
           "tier": "ru",
           "rank": 138,
           "usage": "0.36"
@@ -76022,11 +76027,6 @@ window.localDB = {
           "tier": "uu",
           "rank": 113,
           "usage": "0.42"
-        },
-        {
-          "tier": "zu",
-          "rank": 48,
-          "usage": "3.43"
         },
         {
           "tier": "ubers",
@@ -76071,11 +76071,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "anticipation",
+          "name": "healer",
           "isHidden": false
         },
         {
-          "name": "healer",
+          "name": "anticipation",
           "isHidden": false
         },
         {
@@ -76120,14 +76120,14 @@ window.localDB = {
           "usage": "5.07"
         },
         {
-          "tier": "ubers",
-          "rank": 11,
-          "usage": "12.85"
-        },
-        {
           "tier": "ou",
           "rank": 10,
           "usage": "14.75"
+        },
+        {
+          "tier": "ubers",
+          "rank": 11,
+          "usage": "12.85"
         },
         {
           "tier": "doublesou",
@@ -76403,11 +76403,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "anticipation",
+          "name": "healer",
           "isHidden": false
         },
         {
-          "name": "healer",
+          "name": "anticipation",
           "isHidden": false
         },
         {
@@ -76470,16 +76470,16 @@ window.localDB = {
       ],
       "abilities": [
         {
+          "name": "prankster",
+          "isHidden": false
+        },
+        {
           "name": "frisk",
           "isHidden": false
         },
         {
           "name": "pickpocket",
           "isHidden": true
-        },
-        {
-          "name": "prankster",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -76586,14 +76586,14 @@ window.localDB = {
           "usage": "0.44"
         },
         {
-          "tier": "pu",
-          "rank": 32,
-          "usage": "6.11"
-        },
-        {
           "tier": "vgc2025",
           "rank": 25,
           "usage": "8.34"
+        },
+        {
+          "tier": "pu",
+          "rank": 32,
+          "usage": "6.11"
         },
         {
           "tier": "monotype",
@@ -76606,14 +76606,14 @@ window.localDB = {
           "usage": "2.96"
         },
         {
-          "tier": "ubers",
-          "rank": 24,
-          "usage": "5.74"
-        },
-        {
           "tier": "ou",
           "rank": 96,
           "usage": "0.66"
+        },
+        {
+          "tier": "ubers",
+          "rank": 24,
+          "usage": "5.74"
         },
         {
           "tier": "doublesou",
@@ -76799,16 +76799,16 @@ window.localDB = {
       ],
       "abilities": [
         {
+          "name": "prankster",
+          "isHidden": false
+        },
+        {
           "name": "frisk",
           "isHidden": false
         },
         {
           "name": "pickpocket",
           "isHidden": true
-        },
-        {
-          "name": "prankster",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -76850,11 +76850,11 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "guts",
+          "name": "reckless",
           "isHidden": false
         },
         {
-          "name": "reckless",
+          "name": "guts",
           "isHidden": false
         },
         {
@@ -76894,6 +76894,11 @@ window.localDB = {
           "usage": "0.52"
         },
         {
+          "tier": "zu",
+          "rank": 56,
+          "usage": "2.72"
+        },
+        {
           "tier": "ru",
           "rank": 245,
           "usage": "0.02"
@@ -76902,11 +76907,6 @@ window.localDB = {
           "tier": "pu",
           "rank": 149,
           "usage": "0.16"
-        },
-        {
-          "tier": "zu",
-          "rank": 56,
-          "usage": "2.72"
         },
         {
           "tier": "ubers",
@@ -77088,12 +77088,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "ice-body",
-          "isHidden": true
-        },
-        {
           "name": "screen-cleaner",
           "isHidden": false
+        },
+        {
+          "name": "ice-body",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -77177,12 +77177,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "aroma-veil",
-          "isHidden": true
-        },
-        {
           "name": "sweet-veil",
           "isHidden": false
+        },
+        {
+          "name": "aroma-veil",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -77222,14 +77222,14 @@ window.localDB = {
           "usage": "0.13"
         },
         {
-          "tier": "pu",
-          "rank": 121,
-          "usage": "0.36"
-        },
-        {
           "tier": "vgc2025",
           "rank": 211,
           "usage": "0.03"
+        },
+        {
+          "tier": "pu",
+          "rank": 121,
+          "usage": "0.36"
         },
         {
           "tier": "ou",
@@ -77264,12 +77264,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "aroma-veil",
-          "isHidden": true
-        },
-        {
           "name": "sweet-veil",
           "isHidden": false
+        },
+        {
+          "name": "aroma-veil",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -77304,6 +77304,11 @@ window.localDB = {
           "usage": "0.65"
         },
         {
+          "tier": "zu",
+          "rank": 107,
+          "usage": "0.56"
+        },
+        {
           "tier": "ru",
           "rank": 244,
           "usage": "0.02"
@@ -77312,11 +77317,6 @@ window.localDB = {
           "tier": "pu",
           "rank": 150,
           "usage": "0.16"
-        },
-        {
-          "tier": "zu",
-          "rank": 107,
-          "usage": "0.56"
         },
         {
           "tier": "doublesou",
@@ -77375,6 +77375,11 @@ window.localDB = {
           "usage": "1.33"
         },
         {
+          "tier": "zu",
+          "rank": 103,
+          "usage": "0.62"
+        },
+        {
           "tier": "ru",
           "rank": 134,
           "usage": "0.39"
@@ -77395,19 +77400,14 @@ window.localDB = {
           "usage": "0.41"
         },
         {
-          "tier": "zu",
-          "rank": 103,
-          "usage": "0.62"
+          "tier": "ou",
+          "rank": 142,
+          "usage": "0.20"
         },
         {
           "tier": "ubers",
           "rank": 232,
           "usage": "0.05"
-        },
-        {
-          "tier": "ou",
-          "rank": 142,
-          "usage": "0.20"
         },
         {
           "tier": "doublesou",
@@ -77544,14 +77544,14 @@ window.localDB = {
           "usage": "0.03"
         },
         {
-          "tier": "pu",
-          "rank": 45,
-          "usage": "3.94"
-        },
-        {
           "tier": "vgc2025",
           "rank": 193,
           "usage": "0.05"
+        },
+        {
+          "tier": "pu",
+          "rank": 45,
+          "usage": "3.94"
         },
         {
           "tier": "monotype",
@@ -77564,14 +77564,14 @@ window.localDB = {
           "usage": "0.02"
         },
         {
-          "tier": "ubers",
-          "rank": 227,
-          "usage": "0.05"
-        },
-        {
           "tier": "ou",
           "rank": 110,
           "usage": "0.44"
+        },
+        {
+          "tier": "ubers",
+          "rank": 227,
+          "usage": "0.05"
         },
         {
           "tier": "doublesou",
@@ -77682,6 +77682,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "zu",
+          "rank": 139,
+          "usage": "0.24"
+        },
+        {
           "tier": "vgc2025",
           "rank": 205,
           "usage": "0.04"
@@ -77690,11 +77695,6 @@ window.localDB = {
           "tier": "monotype",
           "rank": 318,
           "usage": "0.02"
-        },
-        {
-          "tier": "zu",
-          "rank": 139,
-          "usage": "0.24"
         },
         {
           "tier": "doublesou",
@@ -77744,6 +77744,11 @@ window.localDB = {
           "usage": "0.01"
         },
         {
+          "tier": "zu",
+          "rank": 141,
+          "usage": "0.20"
+        },
+        {
           "tier": "pu",
           "rank": 206,
           "usage": "0.03"
@@ -77752,11 +77757,6 @@ window.localDB = {
           "tier": "uu",
           "rank": 263,
           "usage": "0.01"
-        },
-        {
-          "tier": "zu",
-          "rank": 141,
-          "usage": "0.20"
         },
         {
           "tier": "ubers",
@@ -77831,14 +77831,14 @@ window.localDB = {
           "usage": "1.25"
         },
         {
-          "tier": "ubers",
-          "rank": 95,
-          "usage": "0.57"
-        },
-        {
           "tier": "ou",
           "rank": 82,
           "usage": "1.01"
+        },
+        {
+          "tier": "ubers",
+          "rank": 95,
+          "usage": "0.57"
         },
         {
           "tier": "doublesou",
@@ -77979,11 +77979,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "synchronize",
+          "name": "inner-focus",
           "isHidden": false
         },
         {
-          "name": "inner-focus",
+          "name": "synchronize",
           "isHidden": false
         },
         {
@@ -78023,6 +78023,11 @@ window.localDB = {
           "usage": "0.04"
         },
         {
+          "tier": "zu",
+          "rank": 85,
+          "usage": "1.05"
+        },
+        {
           "tier": "ru",
           "rank": 217,
           "usage": "0.06"
@@ -78043,19 +78048,14 @@ window.localDB = {
           "usage": "0.01"
         },
         {
-          "tier": "zu",
-          "rank": 85,
-          "usage": "1.05"
+          "tier": "ou",
+          "rank": 305,
+          "usage": "0.01"
         },
         {
           "tier": "ubers",
           "rank": 177,
           "usage": "0.10"
-        },
-        {
-          "tier": "ou",
-          "rank": 305,
-          "usage": "0.01"
         },
         {
           "tier": "nationaldex",
@@ -78380,11 +78380,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "static",
+          "name": "volt-absorb",
           "isHidden": false
         },
         {
-          "name": "volt-absorb",
+          "name": "static",
           "isHidden": false
         },
         {
@@ -78610,11 +78610,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "heavy-metal",
+          "name": "light-metal",
           "isHidden": false
         },
         {
-          "name": "light-metal",
+          "name": "heavy-metal",
           "isHidden": false
         },
         {
@@ -78665,12 +78665,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "cursed-body",
-          "isHidden": true
-        },
-        {
           "name": "infiltrator",
           "isHidden": false
+        },
+        {
+          "name": "cursed-body",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -78777,12 +78777,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "cursed-body",
-          "isHidden": true
-        },
-        {
           "name": "infiltrator",
           "isHidden": false
+        },
+        {
+          "name": "cursed-body",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -78822,14 +78822,14 @@ window.localDB = {
           "usage": "17.31"
         },
         {
-          "tier": "ubers",
-          "rank": 91,
-          "usage": "0.61"
-        },
-        {
           "tier": "ou",
           "rank": 18,
           "usage": "11.40"
+        },
+        {
+          "tier": "ubers",
+          "rank": 91,
+          "usage": "0.61"
         },
         {
           "tier": "doublesou",
@@ -79242,14 +79242,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ubers",
-          "rank": 154,
-          "usage": "0.16"
-        },
-        {
           "tier": "ou",
           "rank": 4,
           "usage": "21.27"
+        },
+        {
+          "tier": "ubers",
+          "rank": 154,
+          "usage": "0.16"
         },
         {
           "tier": "nationaldex",
@@ -80249,14 +80249,14 @@ window.localDB = {
           "usage": "1.53"
         },
         {
-          "tier": "ubers",
-          "rank": 52,
-          "usage": "1.54"
-        },
-        {
           "tier": "ou",
           "rank": 83,
           "usage": "0.92"
+        },
+        {
+          "tier": "ubers",
+          "rank": 52,
+          "usage": "1.54"
         },
         {
           "tier": "doublesou",
@@ -80387,14 +80387,14 @@ window.localDB = {
           "usage": "0.47"
         },
         {
-          "tier": "ubers",
-          "rank": 276,
-          "usage": "0.02"
-        },
-        {
           "tier": "ou",
           "rank": 154,
           "usage": "0.16"
+        },
+        {
+          "tier": "ubers",
+          "rank": 276,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -80555,19 +80555,24 @@ window.localDB = {
           "usage": "0.26"
         },
         {
+          "tier": "zu",
+          "rank": 11,
+          "usage": "12.96"
+        },
+        {
           "tier": "ru",
           "rank": 110,
           "usage": "0.63"
         },
         {
-          "tier": "pu",
-          "rank": 97,
-          "usage": "0.64"
-        },
-        {
           "tier": "vgc2025",
           "rank": 187,
           "usage": "0.05"
+        },
+        {
+          "tier": "pu",
+          "rank": 97,
+          "usage": "0.64"
         },
         {
           "tier": "monotype",
@@ -80578,11 +80583,6 @@ window.localDB = {
           "tier": "uu",
           "rank": 146,
           "usage": "0.20"
-        },
-        {
-          "tier": "zu",
-          "rank": 11,
-          "usage": "12.96"
         },
         {
           "tier": "ou",
@@ -80826,14 +80826,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "pu",
-          "rank": 222,
-          "usage": "0.01"
-        },
-        {
           "tier": "zu",
           "rank": 189,
           "usage": "0.07"
+        },
+        {
+          "tier": "pu",
+          "rank": 222,
+          "usage": "0.01"
         }
       ],
       "types": [
@@ -80874,6 +80874,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "zu",
+          "rank": 158,
+          "usage": "0.15"
+        },
+        {
           "tier": "pu",
           "rank": 218,
           "usage": "0.02"
@@ -80882,11 +80887,6 @@ window.localDB = {
           "tier": "monotype",
           "rank": 219,
           "usage": "0.11"
-        },
-        {
-          "tier": "zu",
-          "rank": 158,
-          "usage": "0.15"
         },
         {
           "tier": "doublesou",
@@ -80960,14 +80960,14 @@ window.localDB = {
           "usage": "1.57"
         },
         {
-          "tier": "ubers",
-          "rank": 163,
-          "usage": "0.13"
-        },
-        {
           "tier": "ou",
           "rank": 183,
           "usage": "0.09"
+        },
+        {
+          "tier": "ubers",
+          "rank": 163,
+          "usage": "0.13"
         },
         {
           "tier": "doublesou",
@@ -81142,14 +81142,14 @@ window.localDB = {
           "usage": "3.79"
         },
         {
-          "tier": "ubers",
-          "rank": 55,
-          "usage": "1.39"
-        },
-        {
           "tier": "ou",
           "rank": 51,
           "usage": "2.96"
+        },
+        {
+          "tier": "ubers",
+          "rank": 55,
+          "usage": "1.39"
         },
         {
           "tier": "doublesou",
@@ -81399,12 +81399,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "unnerve",
-          "isHidden": true
-        },
-        {
           "name": "bulletproof",
           "isHidden": false
+        },
+        {
+          "name": "unnerve",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -81459,14 +81459,14 @@ window.localDB = {
           "usage": "0.23"
         },
         {
-          "tier": "ubers",
-          "rank": 182,
-          "usage": "0.08"
-        },
-        {
           "tier": "ou",
           "rank": 129,
           "usage": "0.25"
+        },
+        {
+          "tier": "ubers",
+          "rank": 182,
+          "usage": "0.08"
         },
         {
           "tier": "nationaldex",
@@ -82048,14 +82048,14 @@ window.localDB = {
           "usage": "0.73"
         },
         {
-          "tier": "ubers",
-          "rank": 244,
-          "usage": "0.04"
-        },
-        {
           "tier": "ou",
           "rank": 85,
           "usage": "0.89"
+        },
+        {
+          "tier": "ubers",
+          "rank": 244,
+          "usage": "0.04"
         },
         {
           "tier": "doublesou",
@@ -82136,16 +82136,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "intimidate",
-          "isHidden": true
+          "name": "poison-point",
+          "isHidden": false
         },
         {
           "name": "swift-swim",
           "isHidden": false
         },
         {
-          "name": "poison-point",
-          "isHidden": false
+          "name": "intimidate",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -82185,14 +82185,14 @@ window.localDB = {
           "usage": "4.46"
         },
         {
-          "tier": "ubers",
-          "rank": 190,
-          "usage": "0.08"
-        },
-        {
           "tier": "ou",
           "rank": 37,
           "usage": "5.12"
+        },
+        {
+          "tier": "ubers",
+          "rank": 190,
+          "usage": "0.08"
         },
         {
           "tier": "doublesou",
@@ -82530,14 +82530,14 @@ window.localDB = {
           "usage": "10.29"
         },
         {
-          "tier": "ubers",
-          "rank": 132,
-          "usage": "0.29"
-        },
-        {
           "tier": "ou",
           "rank": 69,
           "usage": "1.92"
+        },
+        {
+          "tier": "ubers",
+          "rank": 132,
+          "usage": "0.29"
         },
         {
           "tier": "doublesou",
@@ -82870,6 +82870,11 @@ window.localDB = {
           "usage": "0.97"
         },
         {
+          "tier": "zu",
+          "rank": 164,
+          "usage": "0.14"
+        },
+        {
           "tier": "ru",
           "rank": 199,
           "usage": "0.09"
@@ -82878,11 +82883,6 @@ window.localDB = {
           "tier": "pu",
           "rank": 160,
           "usage": "0.11"
-        },
-        {
-          "tier": "zu",
-          "rank": 164,
-          "usage": "0.14"
         }
       ],
       "types": [
@@ -82972,14 +82972,14 @@ window.localDB = {
           "usage": "8.41"
         },
         {
-          "tier": "ubers",
-          "rank": 34,
-          "usage": "3.77"
-        },
-        {
           "tier": "ou",
           "rank": 95,
           "usage": "0.67"
+        },
+        {
+          "tier": "ubers",
+          "rank": 34,
+          "usage": "3.77"
         },
         {
           "tier": "doublesou",
@@ -83277,14 +83277,14 @@ window.localDB = {
       ],
       "allRanks": [
         {
-          "tier": "ru",
-          "rank": 240,
-          "usage": "0.02"
-        },
-        {
           "tier": "zu",
           "rank": 133,
           "usage": "0.28"
+        },
+        {
+          "tier": "ru",
+          "rank": 240,
+          "usage": "0.02"
         }
       ],
       "types": [
@@ -83294,7 +83294,7 @@ window.localDB = {
         {
           "name": "Defensive",
           "tier": "nfe",
-          "ability": "Moxie",
+          "ability": "Torrent",
           "item": "Eviolite",
           "nature": "Impish / Bold",
           "teraType": "Normal",
@@ -83349,14 +83349,14 @@ window.localDB = {
           "usage": "2.16"
         },
         {
-          "tier": "ubers",
-          "rank": 162,
-          "usage": "0.13"
-        },
-        {
           "tier": "ou",
           "rank": 99,
           "usage": "0.62"
+        },
+        {
+          "tier": "ubers",
+          "rank": 162,
+          "usage": "0.13"
         },
         {
           "tier": "doublesou",
@@ -83558,16 +83558,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "thick-fat",
-          "isHidden": true
+          "name": "aroma-veil",
+          "isHidden": false
         },
         {
           "name": "gluttony",
           "isHidden": false
         },
         {
-          "name": "aroma-veil",
-          "isHidden": false
+          "name": "thick-fat",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -83608,16 +83608,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "thick-fat",
-          "isHidden": true
+          "name": "lingering-aroma",
+          "isHidden": false
         },
         {
           "name": "gluttony",
           "isHidden": false
         },
         {
-          "name": "lingering-aroma",
-          "isHidden": false
+          "name": "thick-fat",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -83693,6 +83693,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "zu",
+          "rank": 77,
+          "usage": "1.35"
+        },
+        {
           "tier": "ru",
           "rank": 247,
           "usage": "0.02"
@@ -83703,19 +83708,14 @@ window.localDB = {
           "usage": "0.05"
         },
         {
-          "tier": "zu",
-          "rank": 77,
-          "usage": "1.35"
+          "tier": "ou",
+          "rank": 288,
+          "usage": "0.01"
         },
         {
           "tier": "ubers",
           "rank": 259,
           "usage": "0.03"
-        },
-        {
-          "tier": "ou",
-          "rank": 288,
-          "usage": "0.01"
         }
       ],
       "types": [
@@ -83831,14 +83831,14 @@ window.localDB = {
           "usage": "21.16"
         },
         {
-          "tier": "ubers",
-          "rank": 250,
-          "usage": "0.03"
-        },
-        {
           "tier": "ou",
           "rank": 58,
           "usage": "2.45"
+        },
+        {
+          "tier": "ubers",
+          "rank": 250,
+          "usage": "0.03"
         },
         {
           "tier": "doublesou",
@@ -84185,14 +84185,14 @@ window.localDB = {
           "usage": "0.87"
         },
         {
-          "tier": "pu",
-          "rank": 20,
-          "usage": "9.41"
-        },
-        {
           "tier": "vgc2025",
           "rank": 157,
           "usage": "0.10"
+        },
+        {
+          "tier": "pu",
+          "rank": 20,
+          "usage": "9.41"
         },
         {
           "tier": "monotype",
@@ -84205,14 +84205,14 @@ window.localDB = {
           "usage": "0.99"
         },
         {
-          "tier": "ubers",
-          "rank": 300,
-          "usage": "0.02"
-        },
-        {
           "tier": "ou",
           "rank": 98,
           "usage": "0.62"
+        },
+        {
+          "tier": "ubers",
+          "rank": 300,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -84433,16 +84433,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "own-tempo",
-          "isHidden": true
-        },
-        {
           "name": "run-away",
           "isHidden": false
         },
         {
           "name": "pickup",
           "isHidden": false
+        },
+        {
+          "name": "own-tempo",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -84492,14 +84492,14 @@ window.localDB = {
           "usage": "1.38"
         },
         {
-          "tier": "ubers",
-          "rank": 117,
-          "usage": "0.38"
-        },
-        {
           "tier": "ou",
           "rank": 81,
           "usage": "1.06"
+        },
+        {
+          "tier": "ubers",
+          "rank": 117,
+          "usage": "0.38"
         },
         {
           "tier": "doublesou",
@@ -84594,16 +84594,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "technician",
-          "isHidden": true
-        },
-        {
           "name": "friend-guard",
           "isHidden": false
         },
         {
           "name": "cheek-pouch",
           "isHidden": false
+        },
+        {
+          "name": "technician",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -84684,6 +84684,11 @@ window.localDB = {
           "usage": "0.13"
         },
         {
+          "tier": "zu",
+          "rank": 102,
+          "usage": "0.64"
+        },
+        {
           "tier": "ru",
           "rank": 165,
           "usage": "0.19"
@@ -84694,19 +84699,14 @@ window.localDB = {
           "usage": "0.16"
         },
         {
-          "tier": "zu",
-          "rank": 102,
-          "usage": "0.64"
+          "tier": "ou",
+          "rank": 266,
+          "usage": "0.02"
         },
         {
           "tier": "ubers",
           "rank": 82,
           "usage": "0.72"
-        },
-        {
-          "tier": "ou",
-          "rank": 266,
-          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -84720,12 +84720,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "aroma-veil",
-          "isHidden": true
-        },
-        {
           "name": "well-baked-body",
           "isHidden": false
+        },
+        {
+          "name": "aroma-veil",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -84854,19 +84854,24 @@ window.localDB = {
           "usage": "0.27"
         },
         {
+          "tier": "zu",
+          "rank": 58,
+          "usage": "2.37"
+        },
+        {
           "tier": "ru",
           "rank": 176,
           "usage": "0.15"
         },
         {
-          "tier": "pu",
-          "rank": 105,
-          "usage": "0.58"
-        },
-        {
           "tier": "vgc2025",
           "rank": 64,
           "usage": "0.84"
+        },
+        {
+          "tier": "pu",
+          "rank": 105,
+          "usage": "0.58"
         },
         {
           "tier": "monotype",
@@ -84879,19 +84884,14 @@ window.localDB = {
           "usage": "0.05"
         },
         {
-          "tier": "zu",
-          "rank": 58,
-          "usage": "2.37"
+          "tier": "ou",
+          "rank": 160,
+          "usage": "0.14"
         },
         {
           "tier": "ubers",
           "rank": 291,
           "usage": "0.02"
-        },
-        {
-          "tier": "ou",
-          "rank": 160,
-          "usage": "0.14"
         },
         {
           "tier": "doublesou",
@@ -84987,12 +84987,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "harvest",
-          "isHidden": true
-        },
-        {
           "name": "seed-sower",
           "isHidden": false
+        },
+        {
+          "name": "harvest",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -85022,6 +85022,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "zu",
+          "rank": 94,
+          "usage": "0.74"
+        },
+        {
           "tier": "ru",
           "rank": 196,
           "usage": "0.09"
@@ -85030,11 +85035,6 @@ window.localDB = {
           "tier": "pu",
           "rank": 131,
           "usage": "0.28"
-        },
-        {
-          "tier": "zu",
-          "rank": 94,
-          "usage": "0.74"
         }
       ],
       "types": [
@@ -85094,16 +85094,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
+          "name": "purifying-salt",
+          "isHidden": false
+        },
+        {
           "name": "sturdy",
           "isHidden": false
         },
         {
           "name": "clear-body",
           "isHidden": true
-        },
-        {
-          "name": "purifying-salt",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -85133,6 +85133,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "zu",
+          "rank": 35,
+          "usage": "5.29"
+        },
+        {
           "tier": "ru",
           "rank": 250,
           "usage": "0.02"
@@ -85146,11 +85151,6 @@ window.localDB = {
           "tier": "monotype",
           "rank": 331,
           "usage": "0.01"
-        },
-        {
-          "tier": "zu",
-          "rank": 35,
-          "usage": "5.29"
         }
       ],
       "types": [
@@ -85205,16 +85205,16 @@ window.localDB = {
       ],
       "abilities": [
         {
+          "name": "purifying-salt",
+          "isHidden": false
+        },
+        {
           "name": "sturdy",
           "isHidden": false
         },
         {
           "name": "clear-body",
           "isHidden": true
-        },
-        {
-          "name": "purifying-salt",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -85254,14 +85254,14 @@ window.localDB = {
           "usage": "2.51"
         },
         {
-          "tier": "ubers",
-          "rank": 45,
-          "usage": "1.91"
-        },
-        {
           "tier": "ou",
           "rank": 40,
           "usage": "4.74"
+        },
+        {
+          "tier": "ubers",
+          "rank": 45,
+          "usage": "1.91"
         },
         {
           "tier": "doublesou",
@@ -85461,16 +85461,16 @@ window.localDB = {
       ],
       "abilities": [
         {
+          "name": "purifying-salt",
+          "isHidden": false
+        },
+        {
           "name": "sturdy",
           "isHidden": false
         },
         {
           "name": "clear-body",
           "isHidden": true
-        },
-        {
-          "name": "purifying-salt",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -85561,14 +85561,14 @@ window.localDB = {
           "usage": "1.97"
         },
         {
-          "tier": "ubers",
-          "rank": 205,
-          "usage": "0.06"
-        },
-        {
           "tier": "ou",
           "rank": 91,
           "usage": "0.76"
+        },
+        {
+          "tier": "ubers",
+          "rank": 205,
+          "usage": "0.06"
         },
         {
           "tier": "doublesou",
@@ -85739,14 +85739,14 @@ window.localDB = {
           "usage": "9.25"
         },
         {
-          "tier": "ubers",
-          "rank": 89,
-          "usage": "0.63"
-        },
-        {
           "tier": "ou",
           "rank": 27,
           "usage": "7.06"
+        },
+        {
+          "tier": "ubers",
+          "rank": 89,
+          "usage": "0.63"
         },
         {
           "tier": "doublesou",
@@ -85992,14 +85992,14 @@ window.localDB = {
           "usage": "0.17"
         },
         {
-          "tier": "ubers",
-          "rank": 274,
-          "usage": "0.02"
-        },
-        {
           "tier": "ou",
           "rank": 202,
           "usage": "0.07"
+        },
+        {
+          "tier": "ubers",
+          "rank": 274,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -86240,14 +86240,14 @@ window.localDB = {
           "usage": "2.23"
         },
         {
-          "tier": "pu",
-          "rank": 6,
-          "usage": "18.21"
-        },
-        {
           "tier": "vgc2025",
           "rank": 233,
           "usage": "0.02"
+        },
+        {
+          "tier": "pu",
+          "rank": 6,
+          "usage": "18.21"
         },
         {
           "tier": "monotype",
@@ -86260,13 +86260,13 @@ window.localDB = {
           "usage": "0.32"
         },
         {
-          "tier": "ubers",
-          "rank": 240,
+          "tier": "ou",
+          "rank": 239,
           "usage": "0.04"
         },
         {
-          "tier": "ou",
-          "rank": 239,
+          "tier": "ubers",
+          "rank": 240,
           "usage": "0.04"
         },
         {
@@ -86393,16 +86393,16 @@ window.localDB = {
       ],
       "abilities": [
         {
+          "name": "wind-power",
+          "isHidden": false
+        },
+        {
           "name": "volt-absorb",
           "isHidden": false
         },
         {
           "name": "competitive",
           "isHidden": true
-        },
-        {
-          "name": "wind-power",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -86498,6 +86498,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "zu",
+          "rank": 73,
+          "usage": "1.53"
+        },
+        {
           "tier": "ru",
           "rank": 246,
           "usage": "0.02"
@@ -86506,11 +86511,6 @@ window.localDB = {
           "tier": "pu",
           "rank": 118,
           "usage": "0.38"
-        },
-        {
-          "tier": "zu",
-          "rank": 73,
-          "usage": "1.53"
         },
         {
           "tier": "ou",
@@ -86549,12 +86549,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "stakeout",
-          "isHidden": true
-        },
-        {
           "name": "guard-dog",
           "isHidden": false
+        },
+        {
+          "name": "stakeout",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -86706,14 +86706,14 @@ window.localDB = {
           "usage": "0.06"
         },
         {
-          "tier": "ubers",
-          "rank": 143,
-          "usage": "0.20"
-        },
-        {
           "tier": "ou",
           "rank": 238,
           "usage": "0.04"
+        },
+        {
+          "tier": "ubers",
+          "rank": 143,
+          "usage": "0.20"
         },
         {
           "tier": "doublesou",
@@ -86805,12 +86805,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "infiltrator",
-          "isHidden": true
-        },
-        {
           "name": "wind-rider",
           "isHidden": false
+        },
+        {
+          "name": "infiltrator",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -86973,12 +86973,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "infiltrator",
-          "isHidden": true
-        },
-        {
           "name": "wind-rider",
           "isHidden": false
+        },
+        {
+          "name": "infiltrator",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -87072,14 +87072,19 @@ window.localDB = {
           "usage": "0.15"
         },
         {
-          "tier": "pu",
-          "rank": 107,
-          "usage": "0.50"
+          "tier": "zu",
+          "rank": 53,
+          "usage": "3.09"
         },
         {
           "tier": "vgc2025",
           "rank": 230,
           "usage": "0.02"
+        },
+        {
+          "tier": "pu",
+          "rank": 107,
+          "usage": "0.50"
         },
         {
           "tier": "monotype",
@@ -87092,18 +87097,13 @@ window.localDB = {
           "usage": "0.03"
         },
         {
-          "tier": "zu",
-          "rank": 53,
-          "usage": "3.09"
+          "tier": "ou",
+          "rank": 262,
+          "usage": "0.02"
         },
         {
           "tier": "ubers",
           "rank": 294,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ou",
-          "rank": 262,
           "usage": "0.02"
         },
         {
@@ -87191,6 +87191,11 @@ window.localDB = {
           "usage": "0.01"
         },
         {
+          "tier": "zu",
+          "rank": 115,
+          "usage": "0.43"
+        },
+        {
           "tier": "pu",
           "rank": 143,
           "usage": "0.20"
@@ -87199,11 +87204,6 @@ window.localDB = {
           "tier": "uu",
           "rank": 179,
           "usage": "0.09"
-        },
-        {
-          "tier": "zu",
-          "rank": 115,
-          "usage": "0.43"
         }
       ],
       "types": [
@@ -87212,16 +87212,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
+          "name": "anger-shell",
+          "isHidden": false
+        },
+        {
           "name": "shell-armor",
           "isHidden": false
         },
         {
           "name": "regenerator",
           "isHidden": true
-        },
-        {
-          "name": "anger-shell",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -87306,19 +87306,24 @@ window.localDB = {
           "usage": "1.38"
         },
         {
+          "tier": "zu",
+          "rank": 122,
+          "usage": "0.37"
+        },
+        {
           "tier": "ru",
           "rank": 97,
           "usage": "0.96"
         },
         {
-          "tier": "pu",
-          "rank": 76,
-          "usage": "1.27"
-        },
-        {
           "tier": "vgc2025",
           "rank": 168,
           "usage": "0.08"
+        },
+        {
+          "tier": "pu",
+          "rank": 76,
+          "usage": "1.27"
         },
         {
           "tier": "monotype",
@@ -87331,19 +87336,14 @@ window.localDB = {
           "usage": "0.85"
         },
         {
-          "tier": "zu",
-          "rank": 122,
-          "usage": "0.37"
+          "tier": "ou",
+          "rank": 252,
+          "usage": "0.03"
         },
         {
           "tier": "ubers",
           "rank": 314,
           "usage": "0.01"
-        },
-        {
-          "tier": "ou",
-          "rank": 252,
-          "usage": "0.03"
         },
         {
           "tier": "doublesou",
@@ -87469,11 +87469,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "insomnia",
+          "name": "chlorophyll",
           "isHidden": false
         },
         {
-          "name": "chlorophyll",
+          "name": "insomnia",
           "isHidden": false
         },
         {
@@ -87559,6 +87559,11 @@ window.localDB = {
           "usage": "0.03"
         },
         {
+          "tier": "zu",
+          "rank": 67,
+          "usage": "1.99"
+        },
+        {
           "tier": "ru",
           "rank": 193,
           "usage": "0.10"
@@ -87574,19 +87579,14 @@ window.localDB = {
           "usage": "0.01"
         },
         {
-          "tier": "zu",
-          "rank": 67,
-          "usage": "1.99"
+          "tier": "ou",
+          "rank": 243,
+          "usage": "0.03"
         },
         {
           "tier": "ubers",
           "rank": 245,
           "usage": "0.04"
-        },
-        {
-          "tier": "ou",
-          "rank": 243,
-          "usage": "0.03"
         },
         {
           "tier": "doublesou",
@@ -87652,16 +87652,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "speed-boost",
-          "isHidden": true
-        },
-        {
           "name": "anticipation",
           "isHidden": false
         },
         {
           "name": "frisk",
           "isHidden": false
+        },
+        {
+          "name": "speed-boost",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -87763,16 +87763,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "speed-boost",
-          "isHidden": true
+          "name": "opportunist",
+          "isHidden": false
         },
         {
           "name": "frisk",
           "isHidden": false
         },
         {
-          "name": "opportunist",
-          "isHidden": false
+          "name": "speed-boost",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -87845,11 +87845,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "own-tempo",
+          "name": "mold-breaker",
           "isHidden": false
         },
         {
-          "name": "mold-breaker",
+          "name": "own-tempo",
           "isHidden": false
         },
         {
@@ -87947,11 +87947,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "own-tempo",
+          "name": "mold-breaker",
           "isHidden": false
         },
         {
-          "name": "mold-breaker",
+          "name": "own-tempo",
           "isHidden": false
         },
         {
@@ -88001,14 +88001,14 @@ window.localDB = {
           "usage": "10.17"
         },
         {
-          "tier": "ubers",
-          "rank": 193,
-          "usage": "0.07"
-        },
-        {
           "tier": "ou",
           "rank": 57,
           "usage": "2.61"
+        },
+        {
+          "tier": "ubers",
+          "rank": 193,
+          "usage": "0.07"
         },
         {
           "tier": "doublesou",
@@ -88194,11 +88194,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "own-tempo",
+          "name": "mold-breaker",
           "isHidden": false
         },
         {
-          "name": "mold-breaker",
+          "name": "own-tempo",
           "isHidden": false
         },
         {
@@ -88244,16 +88244,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "sand-veil",
-          "isHidden": true
+          "name": "gooey",
+          "isHidden": false
         },
         {
           "name": "rattled",
           "isHidden": false
         },
         {
-          "name": "gooey",
-          "isHidden": false
+          "name": "sand-veil",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -88288,14 +88288,14 @@ window.localDB = {
           "usage": "0.02"
         },
         {
-          "tier": "ru",
-          "rank": 209,
-          "usage": "0.07"
-        },
-        {
           "tier": "zu",
           "rank": 150,
           "usage": "0.16"
+        },
+        {
+          "tier": "ru",
+          "rank": 209,
+          "usage": "0.07"
         }
       ],
       "types": [
@@ -88304,16 +88304,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "sand-veil",
-          "isHidden": true
+          "name": "gooey",
+          "isHidden": false
         },
         {
           "name": "rattled",
           "isHidden": false
         },
         {
-          "name": "gooey",
-          "isHidden": false
+          "name": "sand-veil",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -88446,11 +88446,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "keen-eye",
+          "name": "big-pecks",
           "isHidden": false
         },
         {
-          "name": "big-pecks",
+          "name": "keen-eye",
           "isHidden": false
         },
         {
@@ -88699,12 +88699,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "slow-start",
-          "isHidden": true
-        },
-        {
           "name": "overcoat",
           "isHidden": false
+        },
+        {
+          "name": "slow-start",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -88744,14 +88744,14 @@ window.localDB = {
           "usage": "8.27"
         },
         {
-          "tier": "ubers",
-          "rank": 321,
-          "usage": "0.01"
-        },
-        {
           "tier": "ou",
           "rank": 191,
           "usage": "0.08"
+        },
+        {
+          "tier": "ubers",
+          "rank": 321,
+          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -88787,12 +88787,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "filter",
-          "isHidden": true
-        },
-        {
           "name": "overcoat",
           "isHidden": false
+        },
+        {
+          "name": "filter",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -88837,14 +88837,14 @@ window.localDB = {
           "usage": "0.79"
         },
         {
-          "tier": "ubers",
-          "rank": 86,
-          "usage": "0.66"
-        },
-        {
           "tier": "ou",
           "rank": 209,
           "usage": "0.06"
+        },
+        {
+          "tier": "ubers",
+          "rank": 86,
+          "usage": "0.66"
         },
         {
           "tier": "doublesou",
@@ -88980,6 +88980,11 @@ window.localDB = {
           "usage": "0.98"
         },
         {
+          "tier": "zu",
+          "rank": 17,
+          "usage": "9.86"
+        },
+        {
           "tier": "pu",
           "rank": 81,
           "usage": "1.09"
@@ -88993,11 +88998,6 @@ window.localDB = {
           "tier": "uu",
           "rank": 176,
           "usage": "0.10"
-        },
-        {
-          "tier": "zu",
-          "rank": 17,
-          "usage": "9.86"
         },
         {
           "tier": "ubers",
@@ -89127,12 +89127,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "sand-veil",
-          "isHidden": true
-        },
-        {
           "name": "earth-eater",
           "isHidden": false
+        },
+        {
+          "name": "sand-veil",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -89167,14 +89167,14 @@ window.localDB = {
           "usage": "23.13"
         },
         {
-          "tier": "pu",
-          "rank": 158,
-          "usage": "0.12"
-        },
-        {
           "tier": "zu",
           "rank": 172,
           "usage": "0.11"
+        },
+        {
+          "tier": "pu",
+          "rank": 158,
+          "usage": "0.12"
         }
       ],
       "types": [
@@ -89230,12 +89230,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "corrosion",
-          "isHidden": true
-        },
-        {
           "name": "toxic-debris",
           "isHidden": false
+        },
+        {
+          "name": "corrosion",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -89275,14 +89275,14 @@ window.localDB = {
           "usage": "4.68"
         },
         {
-          "tier": "ubers",
-          "rank": 18,
-          "usage": "9.39"
-        },
-        {
           "tier": "ou",
           "rank": 17,
           "usage": "11.49"
+        },
+        {
+          "tier": "ubers",
+          "rank": 18,
+          "usage": "9.39"
         },
         {
           "tier": "doublesou",
@@ -89543,12 +89543,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "corrosion",
-          "isHidden": true
-        },
-        {
           "name": "toxic-debris",
           "isHidden": false
+        },
+        {
+          "name": "corrosion",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -89869,11 +89869,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "tangled-feet",
+          "name": "scrappy",
           "isHidden": false
         },
         {
-          "name": "scrappy",
+          "name": "tangled-feet",
           "isHidden": false
         },
         {
@@ -89973,14 +89973,14 @@ window.localDB = {
           "usage": "0.10"
         },
         {
-          "tier": "ubers",
-          "rank": 337,
-          "usage": "0.01"
-        },
-        {
           "tier": "ou",
           "rank": 132,
           "usage": "0.24"
+        },
+        {
+          "tier": "ubers",
+          "rank": 337,
+          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -90059,6 +90059,11 @@ window.localDB = {
           "usage": "0.03"
         },
         {
+          "tier": "zu",
+          "rank": 49,
+          "usage": "3.39"
+        },
+        {
           "tier": "ru",
           "rank": 191,
           "usage": "0.11"
@@ -90079,19 +90084,14 @@ window.localDB = {
           "usage": "0.21"
         },
         {
-          "tier": "zu",
-          "rank": 49,
-          "usage": "3.39"
+          "tier": "ou",
+          "rank": 232,
+          "usage": "0.04"
         },
         {
           "tier": "ubers",
           "rank": 295,
           "usage": "0.02"
-        },
-        {
-          "tier": "ou",
-          "rank": 232,
-          "usage": "0.04"
         },
         {
           "tier": "doublesou",
@@ -90187,14 +90187,14 @@ window.localDB = {
           "usage": "1.68"
         },
         {
-          "tier": "ubers",
-          "rank": 32,
-          "usage": "3.88"
-        },
-        {
           "tier": "ou",
           "rank": 39,
           "usage": "4.81"
+        },
+        {
+          "tier": "ubers",
+          "rank": 32,
+          "usage": "3.88"
         },
         {
           "tier": "doublesou",
@@ -90514,16 +90514,16 @@ window.localDB = {
       ],
       "abilities": [
         {
+          "name": "unaware",
+          "isHidden": false
+        },
+        {
           "name": "oblivious",
           "isHidden": false
         },
         {
           "name": "water-veil",
           "isHidden": true
-        },
-        {
-          "name": "unaware",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -90563,14 +90563,14 @@ window.localDB = {
           "usage": "0.20"
         },
         {
-          "tier": "pu",
-          "rank": 14,
-          "usage": "12.47"
-        },
-        {
           "tier": "vgc2025",
           "rank": 47,
           "usage": "1.94"
+        },
+        {
+          "tier": "pu",
+          "rank": 14,
+          "usage": "12.47"
         },
         {
           "tier": "monotype",
@@ -90676,12 +90676,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "storm-drain",
-          "isHidden": true
-        },
-        {
           "name": "commander",
           "isHidden": false
+        },
+        {
+          "name": "storm-drain",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -90969,11 +90969,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "inner-focus",
+          "name": "vital-spirit",
           "isHidden": false
         },
         {
-          "name": "vital-spirit",
+          "name": "inner-focus",
           "isHidden": false
         },
         {
@@ -91023,14 +91023,14 @@ window.localDB = {
           "usage": "9.91"
         },
         {
-          "tier": "ubers",
-          "rank": 38,
-          "usage": "3.23"
-        },
-        {
           "tier": "ou",
           "rank": 44,
           "usage": "3.67"
+        },
+        {
+          "tier": "ubers",
+          "rank": 38,
+          "usage": "3.23"
         },
         {
           "tier": "doublesou",
@@ -91275,19 +91275,24 @@ window.localDB = {
           "usage": "0.52"
         },
         {
+          "tier": "zu",
+          "rank": 39,
+          "usage": "4.18"
+        },
+        {
           "tier": "ru",
           "rank": 235,
           "usage": "0.03"
         },
         {
-          "tier": "pu",
-          "rank": 82,
-          "usage": "1.02"
-        },
-        {
           "tier": "vgc2025",
           "rank": 17,
           "usage": "13.70"
+        },
+        {
+          "tier": "pu",
+          "rank": 82,
+          "usage": "1.02"
         },
         {
           "tier": "monotype",
@@ -91300,19 +91305,14 @@ window.localDB = {
           "usage": "0.40"
         },
         {
-          "tier": "zu",
-          "rank": 39,
-          "usage": "4.18"
+          "tier": "ou",
+          "rank": 158,
+          "usage": "0.15"
         },
         {
           "tier": "ubers",
           "rank": 341,
           "usage": "0.01"
-        },
-        {
-          "tier": "ou",
-          "rank": 158,
-          "usage": "0.15"
         },
         {
           "tier": "doublesou",
@@ -91453,16 +91453,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "sap-sipper",
-          "isHidden": true
-        },
-        {
           "name": "cud-chew",
           "isHidden": false
         },
         {
           "name": "armor-tail",
           "isHidden": false
+        },
+        {
+          "name": "sap-sipper",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -91608,14 +91608,14 @@ window.localDB = {
           "usage": "1.55"
         },
         {
-          "tier": "ubers",
-          "rank": 16,
-          "usage": "9.60"
-        },
-        {
           "tier": "ou",
           "rank": 3,
           "usage": "25.14"
+        },
+        {
+          "tier": "ubers",
+          "rank": 16,
+          "usage": "9.60"
         },
         {
           "tier": "doublesou",
@@ -91741,16 +91741,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "pressure",
-          "isHidden": true
-        },
-        {
           "name": "defiant",
           "isHidden": false
         },
         {
           "name": "supreme-overlord",
           "isHidden": false
+        },
+        {
+          "name": "pressure",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -91790,14 +91790,14 @@ window.localDB = {
           "usage": "8.07"
         },
         {
-          "tier": "ubers",
-          "rank": 40,
-          "usage": "2.44"
-        },
-        {
           "tier": "ou",
           "rank": 1,
           "usage": "32.17"
+        },
+        {
+          "tier": "ubers",
+          "rank": 40,
+          "usage": "2.44"
         },
         {
           "tier": "doublesou",
@@ -92324,13 +92324,13 @@ window.localDB = {
           "usage": "1.29"
         },
         {
-          "tier": "ubers",
-          "rank": 181,
+          "tier": "ou",
+          "rank": 184,
           "usage": "0.09"
         },
         {
-          "tier": "ou",
-          "rank": 184,
+          "tier": "ubers",
+          "rank": 181,
           "usage": "0.09"
         },
         {
@@ -92598,19 +92598,24 @@ window.localDB = {
           "usage": "5.02"
         },
         {
+          "tier": "zu",
+          "rank": 24,
+          "usage": "7.51"
+        },
+        {
           "tier": "ru",
           "rank": 141,
           "usage": "0.33"
         },
         {
-          "tier": "pu",
-          "rank": 62,
-          "usage": "2.07"
-        },
-        {
           "tier": "vgc2025",
           "rank": 33,
           "usage": "4.57"
+        },
+        {
+          "tier": "pu",
+          "rank": 62,
+          "usage": "2.07"
         },
         {
           "tier": "monotype",
@@ -92623,18 +92628,13 @@ window.localDB = {
           "usage": "0.05"
         },
         {
-          "tier": "zu",
-          "rank": 24,
-          "usage": "7.51"
+          "tier": "ou",
+          "rank": 249,
+          "usage": "0.03"
         },
         {
           "tier": "ubers",
           "rank": 258,
-          "usage": "0.03"
-        },
-        {
-          "tier": "ou",
-          "rank": 249,
           "usage": "0.03"
         },
         {
@@ -93111,14 +93111,14 @@ window.localDB = {
           "usage": "17.12"
         },
         {
-          "tier": "ubers",
-          "rank": 242,
-          "usage": "0.04"
-        },
-        {
           "tier": "ou",
           "rank": 61,
           "usage": "2.28"
+        },
+        {
+          "tier": "ubers",
+          "rank": 242,
+          "usage": "0.04"
         },
         {
           "tier": "doublesou",
@@ -93365,14 +93365,14 @@ window.localDB = {
           "usage": "8.50"
         },
         {
-          "tier": "ubers",
-          "rank": 200,
-          "usage": "0.07"
-        },
-        {
           "tier": "ou",
           "rank": 162,
           "usage": "0.13"
+        },
+        {
+          "tier": "ubers",
+          "rank": 200,
+          "usage": "0.07"
         },
         {
           "tier": "doublesou",
@@ -93629,14 +93629,14 @@ window.localDB = {
           "usage": "7.53"
         },
         {
-          "tier": "ubers",
-          "rank": 70,
-          "usage": "1.00"
-        },
-        {
           "tier": "ou",
           "rank": 14,
           "usage": "12.88"
+        },
+        {
+          "tier": "ubers",
+          "rank": 70,
+          "usage": "1.00"
         },
         {
           "tier": "doublesou",
@@ -94157,14 +94157,14 @@ window.localDB = {
           "usage": "5.18"
         },
         {
-          "tier": "ubers",
-          "rank": 170,
-          "usage": "0.11"
-        },
-        {
           "tier": "ou",
           "rank": 65,
           "usage": "2.12"
+        },
+        {
+          "tier": "ubers",
+          "rank": 170,
+          "usage": "0.11"
         },
         {
           "tier": "doublesou",
@@ -94576,14 +94576,14 @@ window.localDB = {
           "usage": "8.80"
         },
         {
-          "tier": "ubers",
-          "rank": 268,
-          "usage": "0.02"
-        },
-        {
           "tier": "ou",
           "rank": 118,
           "usage": "0.34"
+        },
+        {
+          "tier": "ubers",
+          "rank": 268,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -94795,14 +94795,14 @@ window.localDB = {
           "usage": "2.86"
         },
         {
-          "tier": "ubers",
-          "rank": 151,
-          "usage": "0.17"
-        },
-        {
           "tier": "ou",
           "rank": 24,
           "usage": "8.81"
+        },
+        {
+          "tier": "ubers",
+          "rank": 151,
+          "usage": "0.17"
         },
         {
           "tier": "doublesou",
@@ -95260,12 +95260,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "ice-body",
-          "isHidden": true
-        },
-        {
           "name": "thermal-exchange",
           "isHidden": false
+        },
+        {
+          "name": "ice-body",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -95307,12 +95307,12 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "ice-body",
-          "isHidden": true
-        },
-        {
           "name": "thermal-exchange",
           "isHidden": false
+        },
+        {
+          "name": "ice-body",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -95545,12 +95545,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "ice-body",
-          "isHidden": true
-        },
-        {
           "name": "thermal-exchange",
           "isHidden": false
+        },
+        {
+          "name": "ice-body",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -95632,14 +95632,14 @@ window.localDB = {
           "usage": "10.64"
         },
         {
-          "tier": "ubers",
-          "rank": 59,
-          "usage": "1.28"
-        },
-        {
           "tier": "ou",
           "rank": 2,
           "usage": "26.08"
+        },
+        {
+          "tier": "ubers",
+          "rank": 59,
+          "usage": "1.28"
         },
         {
           "tier": "doublesou",
@@ -96061,14 +96061,14 @@ window.localDB = {
           "usage": "1.43"
         },
         {
-          "tier": "pu",
-          "rank": 11,
-          "usage": "14.44"
-        },
-        {
           "tier": "vgc2025",
           "rank": 99,
           "usage": "0.33"
+        },
+        {
+          "tier": "pu",
+          "rank": 11,
+          "usage": "14.44"
         },
         {
           "tier": "monotype",
@@ -96081,14 +96081,14 @@ window.localDB = {
           "usage": "0.05"
         },
         {
-          "tier": "ubers",
-          "rank": 141,
-          "usage": "0.22"
-        },
-        {
           "tier": "ou",
           "rank": 112,
           "usage": "0.42"
+        },
+        {
+          "tier": "ubers",
+          "rank": 141,
+          "usage": "0.22"
         },
         {
           "tier": "doublesou",
@@ -96414,14 +96414,14 @@ window.localDB = {
           "usage": "9.68"
         },
         {
-          "tier": "ubers",
-          "rank": 26,
-          "usage": "5.26"
-        },
-        {
           "tier": "ou",
           "rank": 12,
           "usage": "13.06"
+        },
+        {
+          "tier": "ubers",
+          "rank": 26,
+          "usage": "5.26"
         },
         {
           "tier": "doublesou",
@@ -97451,14 +97451,14 @@ window.localDB = {
           "usage": "8.56"
         },
         {
-          "tier": "ubers",
-          "rank": 116,
-          "usage": "0.38"
-        },
-        {
           "tier": "ou",
           "rank": 9,
           "usage": "15.59"
+        },
+        {
+          "tier": "ubers",
+          "rank": 116,
+          "usage": "0.38"
         },
         {
           "tier": "doublesou",
@@ -98243,14 +98243,14 @@ window.localDB = {
           "usage": "3.39"
         },
         {
-          "tier": "ubers",
-          "rank": 67,
-          "usage": "1.09"
-        },
-        {
           "tier": "ou",
           "rank": 29,
           "usage": "6.60"
+        },
+        {
+          "tier": "ubers",
+          "rank": 67,
+          "usage": "1.09"
         },
         {
           "tier": "doublesou",
@@ -98741,6 +98741,11 @@ window.localDB = {
       ],
       "allRanks": [
         {
+          "tier": "zu",
+          "rank": 75,
+          "usage": "1.40"
+        },
+        {
           "tier": "ru",
           "rank": 210,
           "usage": "0.07"
@@ -98759,11 +98764,6 @@ window.localDB = {
           "tier": "uu",
           "rank": 250,
           "usage": "0.02"
-        },
-        {
-          "tier": "zu",
-          "rank": 75,
-          "usage": "1.40"
         }
       ],
       "types": [
@@ -98804,16 +98804,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "sticky-hold",
-          "isHidden": true
+          "name": "supersweet-syrup",
+          "isHidden": false
         },
         {
           "name": "gluttony",
           "isHidden": false
         },
         {
-          "name": "supersweet-syrup",
-          "isHidden": false
+          "name": "sticky-hold",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -98905,14 +98905,14 @@ window.localDB = {
           "usage": "12.05"
         },
         {
-          "tier": "ubers",
-          "rank": 120,
-          "usage": "0.35"
-        },
-        {
           "tier": "ou",
           "rank": 59,
           "usage": "2.44"
+        },
+        {
+          "tier": "ubers",
+          "rank": 120,
+          "usage": "0.35"
         },
         {
           "tier": "doublesou",
@@ -99098,12 +99098,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "heatproof",
-          "isHidden": true
-        },
-        {
           "name": "hospitality",
           "isHidden": false
+        },
+        {
+          "name": "heatproof",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -99143,14 +99143,14 @@ window.localDB = {
           "usage": "1.69"
         },
         {
-          "tier": "ubers",
-          "rank": 150,
-          "usage": "0.17"
-        },
-        {
           "tier": "ou",
           "rank": 80,
           "usage": "1.09"
+        },
+        {
+          "tier": "ubers",
+          "rank": 150,
+          "usage": "0.17"
         },
         {
           "tier": "doublesou",
@@ -99291,12 +99291,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "guard-dog",
-          "isHidden": true
-        },
-        {
           "name": "toxic-chain",
           "isHidden": false
+        },
+        {
+          "name": "guard-dog",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -99346,14 +99346,14 @@ window.localDB = {
           "usage": "0.09"
         },
         {
-          "tier": "ubers",
-          "rank": 121,
-          "usage": "0.35"
-        },
-        {
           "tier": "ou",
           "rank": 297,
           "usage": "0.01"
+        },
+        {
+          "tier": "ubers",
+          "rank": 121,
+          "usage": "0.35"
         },
         {
           "tier": "doublesou",
@@ -99464,12 +99464,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "frisk",
-          "isHidden": true
-        },
-        {
           "name": "toxic-chain",
           "isHidden": false
+        },
+        {
+          "name": "frisk",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -99514,14 +99514,14 @@ window.localDB = {
           "usage": "7.23"
         },
         {
-          "tier": "ubers",
-          "rank": 148,
-          "usage": "0.18"
-        },
-        {
           "tier": "ou",
           "rank": 115,
           "usage": "0.37"
+        },
+        {
+          "tier": "ubers",
+          "rank": 148,
+          "usage": "0.18"
         },
         {
           "tier": "doublesou",
@@ -99677,12 +99677,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "technician",
-          "isHidden": true
-        },
-        {
           "name": "toxic-chain",
           "isHidden": false
+        },
+        {
+          "name": "technician",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -99722,14 +99722,14 @@ window.localDB = {
           "usage": "0.03"
         },
         {
-          "tier": "ubers",
-          "rank": 318,
-          "usage": "0.01"
-        },
-        {
           "tier": "ou",
           "rank": 25,
           "usage": "8.32"
+        },
+        {
+          "tier": "ubers",
+          "rank": 318,
+          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -100168,11 +100168,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "sturdy",
+          "name": "stamina",
           "isHidden": false
         },
         {
-          "name": "stamina",
+          "name": "sturdy",
           "isHidden": false
         },
         {
@@ -100222,14 +100222,14 @@ window.localDB = {
           "usage": "13.96"
         },
         {
-          "tier": "ubers",
-          "rank": 185,
-          "usage": "0.08"
-        },
-        {
           "tier": "ou",
           "rank": 60,
           "usage": "2.32"
+        },
+        {
+          "tier": "ubers",
+          "rank": 185,
+          "usage": "0.08"
         },
         {
           "tier": "doublesou",
@@ -100460,16 +100460,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "sticky-hold",
-          "isHidden": true
+          "name": "supersweet-syrup",
+          "isHidden": false
         },
         {
           "name": "regenerator",
           "isHidden": false
         },
         {
-          "name": "supersweet-syrup",
-          "isHidden": false
+          "name": "sticky-hold",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -100758,14 +100758,14 @@ window.localDB = {
           "usage": "7.95"
         },
         {
-          "tier": "ubers",
-          "rank": 79,
-          "usage": "0.79"
-        },
-        {
           "tier": "ou",
           "rank": 8,
           "usage": "15.97"
+        },
+        {
+          "tier": "ubers",
+          "rank": 79,
+          "usage": "0.79"
         },
         {
           "tier": "doublesou",
@@ -101187,14 +101187,14 @@ window.localDB = {
           "usage": "3.73"
         },
         {
-          "tier": "ubers",
-          "rank": 231,
-          "usage": "0.05"
-        },
-        {
           "tier": "ou",
           "rank": 109,
           "usage": "0.45"
+        },
+        {
+          "tier": "ubers",
+          "rank": 231,
+          "usage": "0.05"
         },
         {
           "tier": "doublesou",
@@ -101441,14 +101441,14 @@ window.localDB = {
           "usage": "4.24"
         },
         {
-          "tier": "ubers",
-          "rank": 287,
-          "usage": "0.02"
-        },
-        {
           "tier": "ou",
           "rank": 35,
           "usage": "5.34"
+        },
+        {
+          "tier": "ubers",
+          "rank": 287,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -102018,14 +102018,14 @@ window.localDB = {
           "usage": "2.88"
         },
         {
-          "tier": "ubers",
-          "rank": 98,
-          "usage": "0.56"
-        },
-        {
           "tier": "ou",
           "rank": 22,
           "usage": "9.85"
+        },
+        {
+          "tier": "ubers",
+          "rank": 98,
+          "usage": "0.56"
         },
         {
           "tier": "doublesou",
@@ -102315,6 +102315,619 @@ window.localDB = {
       },
       "isLegendary": false,
       "isMythical": true
+    },
+    "sandshrewalola": {
+      "name": "Sandshrew-Alola",
+      "cleanName": "sandshrewalola",
+      "dex": 27,
+      "id": 10101,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10101.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "lc",
+          "rank": 9,
+          "usage": "21.26"
+        }
+      ],
+      "types": [
+        "ice",
+        "steel"
+      ],
+      "strategies": [
+        {
+          "name": "Sweeper",
+          "tier": "lc",
+          "ability": "Slush Rush",
+          "item": "Eviolite",
+          "nature": "Jolly",
+          "teraType": "Normal",
+          "evs": "36 HP / 236 ATK / 36 DEF / 196 SPE",
+          "moves": [
+            "Triple Axel",
+            "Earthquake",
+            "Rapid Spin / Ice Shard",
+            "Swords Dance / Ice Shard"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "snow-cloak",
+          "isHidden": false
+        },
+        {
+          "name": "slush-rush",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 50,
+        "attack": 75,
+        "defense": 90,
+        "special-attack": 10,
+        "special-defense": 35,
+        "speed": 40
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
+    "growlithehisui": {
+      "name": "Growlithe-Hisui",
+      "cleanName": "growlithehisui",
+      "dex": 58,
+      "id": 10229,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10229.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "lc",
+          "rank": 13,
+          "usage": "15.25"
+        }
+      ],
+      "types": [
+        "fire",
+        "rock"
+      ],
+      "strategies": [
+        {
+          "name": "Choice Scarf",
+          "tier": "lc",
+          "ability": "Rock Head",
+          "item": "Choice Scarf",
+          "nature": "Adamant",
+          "teraType": "Normal",
+          "evs": "36 HP / 236 ATK / 236 SPE",
+          "moves": [
+            "Flare Blitz",
+            "Head Smash",
+            "Psychic Fangs",
+            "Rock Blast / Stealth Rock / Sleep Talk"
+          ]
+        },
+        {
+          "name": "Eviolite",
+          "tier": "lc",
+          "ability": "Rock Head",
+          "item": "Eviolite",
+          "nature": "Jolly",
+          "teraType": "Fire / Flying",
+          "evs": "36 HP / 236 ATK / 236 SPE",
+          "moves": [
+            "Head Smash",
+            "Flare Blitz",
+            "Stealth Rock / Flame Charge",
+            "Will-O-Wisp / Substitute"
+          ]
+        },
+        {
+          "name": "Choice Band",
+          "tier": "nfe",
+          "ability": "Rock Head",
+          "item": "Choice Band",
+          "nature": "Adamant",
+          "teraType": "Normal",
+          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "moves": [
+            "Flare Blitz",
+            "Head Smash",
+            "Close Combat",
+            "Wild Charge"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "intimidate",
+          "isHidden": false
+        },
+        {
+          "name": "flash-fire",
+          "isHidden": false
+        },
+        {
+          "name": "rock-head",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 60,
+        "attack": 75,
+        "defense": 45,
+        "special-attack": 65,
+        "special-defense": 50,
+        "speed": 55
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
+    "diglettalola": {
+      "name": "Diglett-Alola",
+      "cleanName": "diglettalola",
+      "dex": 50,
+      "id": 10105,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10105.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "lc",
+          "rank": 15,
+          "usage": "14.08"
+        }
+      ],
+      "types": [
+        "ground",
+        "steel"
+      ],
+      "strategies": [
+        {
+          "name": "Life Orb",
+          "tier": "lc",
+          "ability": "Tangling Hair",
+          "item": "Life Orb",
+          "nature": "Jolly",
+          "teraType": "Ground / Dark / Stellar",
+          "evs": "36 HP / 236 ATK / 36 DEF / 196 SPE",
+          "moves": [
+            "Earthquake",
+            "Rock Blast",
+            "Sucker Punch",
+            "Substitute / Iron Head"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "sand-veil",
+          "isHidden": false
+        },
+        {
+          "name": "tangling-hair",
+          "isHidden": false
+        },
+        {
+          "name": "sand-force",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 10,
+        "attack": 55,
+        "defense": 30,
+        "special-attack": 35,
+        "special-defense": 45,
+        "speed": 90
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
+    "zoruahisui": {
+      "name": "Zorua-Hisui",
+      "cleanName": "zoruahisui",
+      "dex": 570,
+      "id": 10238,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10238.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "lc",
+          "rank": 28,
+          "usage": "3.32"
+        }
+      ],
+      "types": [
+        "normal",
+        "ghost"
+      ],
+      "strategies": [
+        {
+          "name": "Wallbreaker",
+          "tier": "lc",
+          "ability": "Illusion",
+          "item": "Eviolite",
+          "nature": "Timid",
+          "teraType": "Ground / Fighting",
+          "evs": "116 DEF / 156 SPA / 36 SPD / 196 SPE",
+          "moves": [
+            "Tera Blast",
+            "Hex",
+            "Will-O-Wisp",
+            "Knock Off / U-turn"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "illusion",
+          "isHidden": false
+        }
+      ],
+      "stats": {
+        "hp": 35,
+        "attack": 60,
+        "defense": 40,
+        "special-attack": 85,
+        "special-defense": 40,
+        "speed": 70
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
+    "grimeralola": {
+      "name": "Grimer-Alola",
+      "cleanName": "grimeralola",
+      "dex": 88,
+      "id": 10112,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10112.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "lc",
+          "rank": 43,
+          "usage": "1.27"
+        }
+      ],
+      "types": [
+        "poison",
+        "dark"
+      ],
+      "strategies": [
+        {
+          "name": "Wallbreaker",
+          "tier": "lc",
+          "ability": "Poison Touch",
+          "item": "Eviolite",
+          "nature": "Adamant",
+          "teraType": "Normal",
+          "evs": "36 HP / 196 ATK / 196 DEF / 36 SPD",
+          "moves": [
+            "Knock Off",
+            "Gunk Shot",
+            "Drain Punch",
+            "Sleep Talk / Memento"
+          ]
+        },
+        {
+          "name": "Defensive",
+          "tier": "nfe",
+          "ability": "Poison Touch",
+          "item": "Eviolite",
+          "nature": "Careful",
+          "teraType": "Normal",
+          "evs": "252 HP / 4 DEF / 252 SPD",
+          "moves": [
+            "Knock Off",
+            "Toxic / Rest",
+            "Poison Jab",
+            "Protect / Sleep Talk"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "poison-touch",
+          "isHidden": false
+        },
+        {
+          "name": "gluttony",
+          "isHidden": false
+        },
+        {
+          "name": "power-of-alchemy",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 80,
+        "attack": 80,
+        "defense": 50,
+        "special-attack": 40,
+        "special-defense": 50,
+        "speed": 25
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
+    "gimmighoulroaming": {
+      "name": "Gimmighoul-Roaming",
+      "cleanName": "gimmighoulroaming",
+      "dex": 999,
+      "id": 999,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/999.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "lc",
+          "rank": 45,
+          "usage": "1.23"
+        }
+      ],
+      "types": [
+        "ghost"
+      ],
+      "strategies": [
+        {
+          "name": "Fast Attacker",
+          "tier": "lc",
+          "ability": "Run Away",
+          "item": "Life Orb",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "236 SPA / 76 SPD / 196 SPE",
+          "moves": [
+            "Substitute",
+            "Nasty Plot",
+            "Shadow Ball",
+            "Power Gem"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "rattled",
+          "isHidden": false
+        }
+      ],
+      "stats": {
+        "hp": 45,
+        "attack": 30,
+        "defense": 70,
+        "special-attack": 75,
+        "special-defense": 70,
+        "speed": 10
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
+    "flabebe": {
+      "name": "Flabébé",
+      "cleanName": "flabebe",
+      "dex": 669,
+      "id": 669,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/669.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "lc",
+          "rank": 58,
+          "usage": "0.79"
+        }
+      ],
+      "types": [
+        "fairy"
+      ],
+      "strategies": [],
+      "abilities": [
+        {
+          "name": "flower-veil",
+          "isHidden": false
+        },
+        {
+          "name": "symbiosis",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 44,
+        "attack": 38,
+        "defense": 39,
+        "special-attack": 61,
+        "special-defense": 79,
+        "speed": 42
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
+    "geodudealola": {
+      "name": "Geodude-Alola",
+      "cleanName": "geodudealola",
+      "dex": 74,
+      "id": 10109,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10109.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "lc",
+          "rank": 66,
+          "usage": "0.63"
+        }
+      ],
+      "types": [
+        "rock",
+        "electric"
+      ],
+      "strategies": [],
+      "abilities": [
+        {
+          "name": "magnet-pull",
+          "isHidden": false
+        },
+        {
+          "name": "sturdy",
+          "isHidden": false
+        },
+        {
+          "name": "galvanize",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 40,
+        "attack": 80,
+        "defense": 100,
+        "special-attack": 30,
+        "special-defense": 30,
+        "speed": 20
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
+    "meowthalola": {
+      "name": "Meowth-Alola",
+      "cleanName": "meowthalola",
+      "dex": 52,
+      "id": 10107,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10107.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "lc",
+          "rank": 140,
+          "usage": "0.03"
+        }
+      ],
+      "types": [
+        "dark"
+      ],
+      "strategies": [],
+      "abilities": [
+        {
+          "name": "pickup",
+          "isHidden": false
+        },
+        {
+          "name": "technician",
+          "isHidden": false
+        },
+        {
+          "name": "rattled",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 40,
+        "attack": 35,
+        "defense": 35,
+        "special-attack": 50,
+        "special-defense": 40,
+        "speed": 90
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
+    "wooperpaldea": {
+      "name": "Wooper-Paldea",
+      "cleanName": "wooperpaldea",
+      "dex": 194,
+      "id": 10253,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10253.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "lc",
+          "rank": 148,
+          "usage": "0.02"
+        }
+      ],
+      "types": [
+        "poison",
+        "ground"
+      ],
+      "strategies": [
+        {
+          "name": "Defensive Spikes",
+          "tier": "nfe",
+          "ability": "Water Absorb",
+          "item": "Eviolite",
+          "nature": "Impish",
+          "teraType": "Normal",
+          "evs": "252 HP / 252 DEF / 4 SPD",
+          "moves": [
+            "Earthquake",
+            "Toxic",
+            "Recover",
+            "Spikes"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "poison-point",
+          "isHidden": false
+        },
+        {
+          "name": "water-absorb",
+          "isHidden": false
+        },
+        {
+          "name": "unaware",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 55,
+        "attack": 45,
+        "defense": 45,
+        "special-attack": 25,
+        "special-defense": 25,
+        "speed": 15
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
+    "slowpokegalar": {
+      "name": "Slowpoke-Galar",
+      "cleanName": "slowpokegalar",
+      "dex": 79,
+      "id": 10164,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10164.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "lc",
+          "rank": 149,
+          "usage": "0.02"
+        }
+      ],
+      "types": [
+        "psychic"
+      ],
+      "strategies": [],
+      "abilities": [
+        {
+          "name": "gluttony",
+          "isHidden": false
+        },
+        {
+          "name": "own-tempo",
+          "isHidden": false
+        },
+        {
+          "name": "regenerator",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 90,
+        "attack": 65,
+        "defense": 65,
+        "special-attack": 40,
+        "special-defense": 40,
+        "speed": 15
+      },
+      "isLegendary": false,
+      "isMythical": false
     },
     "taurospaldeaaqua": {
       "name": "Tauros-Paldea-Aqua",
@@ -102635,14 +103248,14 @@ window.localDB = {
           "usage": "0.53"
         },
         {
-          "tier": "ubers",
-          "rank": 288,
-          "usage": "0.02"
-        },
-        {
           "tier": "ou",
           "rank": 157,
           "usage": "0.16"
+        },
+        {
+          "tier": "ubers",
+          "rank": 288,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -102738,16 +103351,16 @@ window.localDB = {
       ],
       "abilities": [
         {
+          "name": "quick-draw",
+          "isHidden": false
+        },
+        {
           "name": "own-tempo",
           "isHidden": false
         },
         {
           "name": "regenerator",
           "isHidden": true
-        },
-        {
-          "name": "quick-draw",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -102790,14 +103403,14 @@ window.localDB = {
           "usage": "0.54"
         },
         {
-          "tier": "ubers",
-          "rank": 197,
-          "usage": "0.07"
-        },
-        {
           "tier": "ou",
           "rank": 213,
           "usage": "0.06"
+        },
+        {
+          "tier": "ubers",
+          "rank": 197,
+          "usage": "0.07"
         },
         {
           "tier": "doublesou",
@@ -102886,14 +103499,14 @@ window.localDB = {
           "usage": "2.72"
         },
         {
-          "tier": "pu",
-          "rank": 47,
-          "usage": "3.71"
-        },
-        {
           "tier": "vgc2025",
           "rank": 85,
           "usage": "0.50"
+        },
+        {
+          "tier": "pu",
+          "rank": 47,
+          "usage": "3.71"
         },
         {
           "tier": "monotype",
@@ -102906,14 +103519,14 @@ window.localDB = {
           "usage": "11.23"
         },
         {
-          "tier": "ubers",
-          "rank": 94,
-          "usage": "0.57"
-        },
-        {
           "tier": "ou",
           "rank": 72,
           "usage": "1.73"
+        },
+        {
+          "tier": "ubers",
+          "rank": 94,
+          "usage": "0.57"
         },
         {
           "tier": "doublesou",
@@ -103197,14 +103810,14 @@ window.localDB = {
           "usage": "0.02"
         },
         {
-          "tier": "ubers",
-          "rank": 323,
-          "usage": "0.01"
-        },
-        {
           "tier": "ou",
           "rank": 174,
           "usage": "0.11"
+        },
+        {
+          "tier": "ubers",
+          "rank": 323,
+          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -103333,6 +103946,11 @@ window.localDB = {
           "usage": "1.47"
         },
         {
+          "tier": "zu",
+          "rank": 120,
+          "usage": "0.40"
+        },
+        {
           "tier": "ru",
           "rank": 238,
           "usage": "0.03"
@@ -103341,11 +103959,6 @@ window.localDB = {
           "tier": "pu",
           "rank": 191,
           "usage": "0.04"
-        },
-        {
-          "tier": "zu",
-          "rank": 120,
-          "usage": "0.40"
         },
         {
           "tier": "doublesou",
@@ -103547,19 +104160,24 @@ window.localDB = {
           "usage": "1.22"
         },
         {
+          "tier": "zu",
+          "rank": 92,
+          "usage": "0.85"
+        },
+        {
           "tier": "ru",
           "rank": 146,
           "usage": "0.30"
         },
         {
-          "tier": "pu",
-          "rank": 102,
-          "usage": "0.61"
-        },
-        {
           "tier": "vgc2025",
           "rank": 118,
           "usage": "0.20"
+        },
+        {
+          "tier": "pu",
+          "rank": 102,
+          "usage": "0.61"
         },
         {
           "tier": "monotype",
@@ -103572,19 +104190,14 @@ window.localDB = {
           "usage": "0.07"
         },
         {
-          "tier": "zu",
-          "rank": 92,
-          "usage": "0.85"
+          "tier": "ou",
+          "rank": 173,
+          "usage": "0.11"
         },
         {
           "tier": "ubers",
           "rank": 333,
           "usage": "0.01"
-        },
-        {
-          "tier": "ou",
-          "rank": 173,
-          "usage": "0.11"
         },
         {
           "tier": "doublesou",
@@ -103684,14 +104297,14 @@ window.localDB = {
           "usage": "0.14"
         },
         {
-          "tier": "pu",
-          "rank": 36,
-          "usage": "5.54"
-        },
-        {
           "tier": "vgc2025",
           "rank": 271,
           "usage": "0.01"
+        },
+        {
+          "tier": "pu",
+          "rank": 36,
+          "usage": "5.54"
         },
         {
           "tier": "monotype",
@@ -103704,14 +104317,14 @@ window.localDB = {
           "usage": "0.06"
         },
         {
-          "tier": "ubers",
-          "rank": 327,
-          "usage": "0.01"
-        },
-        {
           "tier": "ou",
           "rank": 247,
           "usage": "0.03"
+        },
+        {
+          "tier": "ubers",
+          "rank": 327,
+          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -103766,12 +104379,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "tinted-lens",
-          "isHidden": true
-        },
-        {
           "name": "sheer-force",
           "isHidden": false
+        },
+        {
+          "name": "tinted-lens",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -103799,19 +104412,24 @@ window.localDB = {
           "usage": "0.78"
         },
         {
+          "tier": "zu",
+          "rank": 65,
+          "usage": "2.06"
+        },
+        {
           "tier": "ru",
           "rank": 171,
           "usage": "0.18"
         },
         {
-          "tier": "pu",
-          "rank": 164,
-          "usage": "0.10"
-        },
-        {
           "tier": "vgc2025",
           "rank": 177,
           "usage": "0.06"
+        },
+        {
+          "tier": "pu",
+          "rank": 164,
+          "usage": "0.10"
         },
         {
           "tier": "monotype",
@@ -103822,11 +104440,6 @@ window.localDB = {
           "tier": "uu",
           "rank": 234,
           "usage": "0.02"
-        },
-        {
-          "tier": "zu",
-          "rank": 65,
-          "usage": "2.06"
         },
         {
           "tier": "ou",
@@ -103945,6 +104558,11 @@ window.localDB = {
           "usage": "0.73"
         },
         {
+          "tier": "zu",
+          "rank": 27,
+          "usage": "7.30"
+        },
+        {
           "tier": "ru",
           "rank": 228,
           "usage": "0.04"
@@ -103953,11 +104571,6 @@ window.localDB = {
           "tier": "pu",
           "rank": 166,
           "usage": "0.10"
-        },
-        {
-          "tier": "zu",
-          "rank": 27,
-          "usage": "7.30"
         }
       ],
       "types": [
@@ -104035,19 +104648,24 @@ window.localDB = {
           "usage": "0.67"
         },
         {
+          "tier": "zu",
+          "rank": 219,
+          "usage": "0.02"
+        },
+        {
           "tier": "ru",
           "rank": 161,
           "usage": "0.21"
         },
         {
-          "tier": "pu",
-          "rank": 38,
-          "usage": "5.31"
-        },
-        {
           "tier": "vgc2025",
           "rank": 244,
           "usage": "0.02"
+        },
+        {
+          "tier": "pu",
+          "rank": 38,
+          "usage": "5.31"
         },
         {
           "tier": "monotype",
@@ -104058,11 +104676,6 @@ window.localDB = {
           "tier": "uu",
           "rank": 206,
           "usage": "0.05"
-        },
-        {
-          "tier": "zu",
-          "rank": 219,
-          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -104245,16 +104858,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "sturdy",
-          "isHidden": true
+          "name": "strong-jaw",
+          "isHidden": false
         },
         {
           "name": "ice-body",
           "isHidden": false
         },
         {
-          "name": "strong-jaw",
-          "isHidden": false
+          "name": "sturdy",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -104287,14 +104900,14 @@ window.localDB = {
           "usage": "0.15"
         },
         {
-          "tier": "pu",
-          "rank": 34,
-          "usage": "5.92"
-        },
-        {
           "tier": "vgc2025",
           "rank": 159,
           "usage": "0.09"
+        },
+        {
+          "tier": "pu",
+          "rank": 34,
+          "usage": "5.92"
         },
         {
           "tier": "monotype",
@@ -104307,14 +104920,14 @@ window.localDB = {
           "usage": "0.17"
         },
         {
-          "tier": "ubers",
-          "rank": 283,
-          "usage": "0.02"
-        },
-        {
           "tier": "ou",
           "rank": 201,
           "usage": "0.07"
+        },
+        {
+          "tier": "ubers",
+          "rank": 283,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -104488,9 +105101,9 @@ window.localDB = {
           "usage": "0.16"
         },
         {
-          "tier": "pu",
-          "rank": 61,
-          "usage": "2.17"
+          "tier": "zu",
+          "rank": 87,
+          "usage": "0.96"
         },
         {
           "tier": "vgc2025",
@@ -104498,9 +105111,9 @@ window.localDB = {
           "usage": "0.01"
         },
         {
-          "tier": "zu",
-          "rank": 87,
-          "usage": "0.96"
+          "tier": "pu",
+          "rank": 61,
+          "usage": "2.17"
         },
         {
           "tier": "ou",
@@ -104565,16 +105178,16 @@ window.localDB = {
       ],
       "abilities": [
         {
+          "name": "fur-coat",
+          "isHidden": false
+        },
+        {
           "name": "technician",
           "isHidden": false
         },
         {
           "name": "rattled",
           "isHidden": true
-        },
-        {
-          "name": "fur-coat",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -104688,14 +105301,14 @@ window.localDB = {
           "usage": "0.02"
         },
         {
-          "tier": "ubers",
-          "rank": 246,
-          "usage": "0.04"
-        },
-        {
           "tier": "ou",
           "rank": 224,
           "usage": "0.05"
+        },
+        {
+          "tier": "ubers",
+          "rank": 246,
+          "usage": "0.04"
         },
         {
           "tier": "doublesou",
@@ -104776,11 +105389,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "static",
+          "name": "soundproof",
           "isHidden": false
         },
         {
-          "name": "soundproof",
+          "name": "static",
           "isHidden": false
         },
         {
@@ -104813,14 +105426,14 @@ window.localDB = {
           "usage": "0.09"
         },
         {
-          "tier": "pu",
-          "rank": 185,
-          "usage": "0.05"
-        },
-        {
           "tier": "zu",
           "rank": 148,
           "usage": "0.17"
+        },
+        {
+          "tier": "pu",
+          "rank": 185,
+          "usage": "0.05"
         }
       ],
       "types": [
@@ -104875,6 +105488,11 @@ window.localDB = {
           "usage": "0.06"
         },
         {
+          "tier": "zu",
+          "rank": 52,
+          "usage": "3.23"
+        },
+        {
           "tier": "pu",
           "rank": 159,
           "usage": "0.11"
@@ -104883,11 +105501,6 @@ window.localDB = {
           "tier": "monotype",
           "rank": 329,
           "usage": "0.01"
-        },
-        {
-          "tier": "zu",
-          "rank": 52,
-          "usage": "3.23"
         },
         {
           "tier": "ou",
@@ -104937,12 +105550,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "sand-force",
-          "isHidden": true
-        },
-        {
           "name": "tangling-hair",
           "isHidden": false
+        },
+        {
+          "name": "sand-force",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -105033,16 +105646,16 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "intimidate",
-          "isHidden": true
+          "name": "poison-point",
+          "isHidden": false
         },
         {
           "name": "swift-swim",
           "isHidden": false
         },
         {
-          "name": "poison-point",
-          "isHidden": false
+          "name": "intimidate",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -105070,14 +105683,19 @@ window.localDB = {
           "usage": "0.04"
         },
         {
-          "tier": "pu",
-          "rank": 170,
-          "usage": "0.09"
+          "tier": "zu",
+          "rank": 161,
+          "usage": "0.14"
         },
         {
           "tier": "vgc2025",
           "rank": 246,
           "usage": "0.02"
+        },
+        {
+          "tier": "pu",
+          "rank": 170,
+          "usage": "0.09"
         },
         {
           "tier": "monotype",
@@ -105090,18 +105708,13 @@ window.localDB = {
           "usage": "0.05"
         },
         {
-          "tier": "zu",
-          "rank": 161,
-          "usage": "0.14"
+          "tier": "ou",
+          "rank": 281,
+          "usage": "0.02"
         },
         {
           "tier": "ubers",
           "rank": 275,
-          "usage": "0.02"
-        },
-        {
-          "tier": "ou",
-          "rank": 281,
           "usage": "0.02"
         },
         {
@@ -105138,11 +105751,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "sturdy",
+          "name": "magnet-pull",
           "isHidden": false
         },
         {
-          "name": "magnet-pull",
+          "name": "sturdy",
           "isHidden": false
         },
         {
@@ -105218,11 +105831,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "shell-armor",
+          "name": "sap-sipper",
           "isHidden": false
         },
         {
-          "name": "sap-sipper",
+          "name": "shell-armor",
           "isHidden": false
         },
         {
@@ -105255,6 +105868,11 @@ window.localDB = {
           "usage": "0.01"
         },
         {
+          "tier": "zu",
+          "rank": 137,
+          "usage": "0.26"
+        },
+        {
           "tier": "pu",
           "rank": 161,
           "usage": "0.11"
@@ -105268,11 +105886,6 @@ window.localDB = {
           "tier": "uu",
           "rank": 231,
           "usage": "0.02"
-        },
-        {
-          "tier": "zu",
-          "rank": 137,
-          "usage": "0.26"
         },
         {
           "tier": "ou",
@@ -105333,615 +105946,484 @@ window.localDB = {
       "isLegendary": false,
       "isMythical": false
     },
-    "sandshrewalola": {
-      "name": "Sandshrew-Alola",
-      "cleanName": "sandshrewalola",
-      "dex": 27,
-      "id": 10101,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10101.png",
+    "taurospaldeacombat": {
+      "name": "Tauros-Paldea-Combat",
+      "cleanName": "taurospaldeacombat",
+      "dex": 128,
+      "id": 128,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/128.png",
       "locations": [],
       "allRanks": [
         {
-          "tier": "lc",
-          "rank": 9,
-          "usage": "21.26"
+          "tier": "zu",
+          "rank": 54,
+          "usage": "2.88"
         }
       ],
-      "types": [
-        "ice",
-        "steel"
-      ],
-      "strategies": [
-        {
-          "name": "Sweeper",
-          "tier": "lc",
-          "ability": "Slush Rush",
-          "item": "Eviolite",
-          "nature": "Jolly",
-          "teraType": "Normal",
-          "evs": "36 HP / 236 ATK / 36 DEF / 196 SPE",
-          "moves": [
-            "Triple Axel",
-            "Earthquake",
-            "Rapid Spin / Ice Shard",
-            "Swords Dance / Ice Shard"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "snow-cloak",
-          "isHidden": false
-        },
-        {
-          "name": "slush-rush",
-          "isHidden": true
-        }
-      ],
-      "stats": {
-        "hp": 50,
-        "attack": 75,
-        "defense": 90,
-        "special-attack": 10,
-        "special-defense": 35,
-        "speed": 40
-      },
-      "isLegendary": false,
-      "isMythical": false
+      "types": [],
+      "strategies": []
     },
-    "growlithehisui": {
-      "name": "Growlithe-Hisui",
-      "cleanName": "growlithehisui",
-      "dex": 58,
-      "id": 10229,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10229.png",
+    "indeedeef": {
+      "name": "Indeedee-F",
+      "cleanName": "indeedeef",
+      "dex": 876,
+      "id": 876,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/876.png",
       "locations": [],
       "allRanks": [
         {
-          "tier": "lc",
-          "rank": 13,
-          "usage": "15.25"
+          "tier": "zu",
+          "rank": 64,
+          "usage": "2.08"
+        },
+        {
+          "tier": "ru",
+          "rank": 183,
+          "usage": "0.14"
+        },
+        {
+          "tier": "vgc2025",
+          "rank": 8,
+          "usage": "19.98"
+        },
+        {
+          "tier": "pu",
+          "rank": 46,
+          "usage": "3.93"
+        },
+        {
+          "tier": "monotype",
+          "rank": 276,
+          "usage": "0.04"
+        },
+        {
+          "tier": "uu",
+          "rank": 181,
+          "usage": "0.09"
+        },
+        {
+          "tier": "ou",
+          "rank": 259,
+          "usage": "0.02"
+        },
+        {
+          "tier": "ubers",
+          "rank": 115,
+          "usage": "0.39"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 15,
+          "usage": "11.93"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 370,
+          "usage": "0.03"
         }
       ],
       "types": [
-        "fire",
-        "rock"
+        "psychic",
+        "normal"
       ],
       "strategies": [
         {
-          "name": "Choice Scarf",
-          "tier": "lc",
-          "ability": "Rock Head",
-          "item": "Choice Scarf",
-          "nature": "Adamant",
-          "teraType": "Normal",
-          "evs": "36 HP / 236 ATK / 236 SPE",
+          "name": "Terrain Setter",
+          "tier": "pu",
+          "ability": "Psychic Surge",
+          "item": "Terrain Extender",
+          "nature": "Timid",
+          "teraType": "Fairy / Ghost / Steel",
+          "evs": "252 HP / 4 SPA / 252 SPE",
           "moves": [
-            "Flare Blitz",
-            "Head Smash",
-            "Psychic Fangs",
-            "Rock Blast / Stealth Rock / Sleep Talk"
+            "Healing Wish",
+            "Psychic / Psyshock",
+            "Reflect",
+            "Alluring Voice"
           ]
         },
         {
-          "name": "Eviolite",
-          "tier": "lc",
-          "ability": "Rock Head",
-          "item": "Eviolite",
-          "nature": "Jolly",
-          "teraType": "Fire / Flying",
-          "evs": "36 HP / 236 ATK / 236 SPE",
+          "name": "Bulky Support",
+          "tier": "vgc2025",
+          "ability": "Psychic Surge",
+          "item": "Safety Goggles / Psychic Seed / Rocky Helmet / Sitrus Berry",
+          "nature": "Relaxed",
+          "teraType": "Fairy / Grass",
+          "evs": "252 HP / 252 DEF / 4 SPD",
           "moves": [
-            "Head Smash",
-            "Flare Blitz",
-            "Stealth Rock / Flame Charge",
-            "Will-O-Wisp / Substitute"
+            "Follow Me",
+            "Trick Room",
+            "Helping Hand / Imprison",
+            "Psychic / Dazzling Gleam"
           ]
         },
         {
-          "name": "Choice Band",
-          "tier": "nfe",
-          "ability": "Rock Head",
-          "item": "Choice Band",
-          "nature": "Adamant",
-          "teraType": "Normal",
-          "evs": "252 ATK / 4 SPD / 252 SPE",
+          "name": "Trick Room Support",
+          "tier": "vgc2025",
+          "ability": "Psychic Surge",
+          "item": "Safety Goggles / Rocky Helmet / Psychic Seed",
+          "nature": "Bold / Relaxed",
+          "teraType": "Water / Fairy",
+          "evs": "252 HP / 252 DEF / 4 SPD",
           "moves": [
-            "Flare Blitz",
-            "Head Smash",
-            "Close Combat",
-            "Wild Charge"
+            "Psychic / Alluring Voice",
+            "Follow Me",
+            "Helping Hand",
+            "Trick Room"
+          ]
+        },
+        {
+          "name": "TR Support",
+          "tier": "vgc2023",
+          "ability": "Psychic Surge",
+          "item": "Psychic Seed / Safety Goggles / Rocky Helmet",
+          "nature": "Calm",
+          "teraType": "Normal",
+          "evs": "252 HP / 220 DEF / 36 SPD",
+          "moves": [
+            "Psychic / Dazzling Gleam",
+            "Follow Me",
+            "Trick Room",
+            "Helping Hand / Protect"
+          ]
+        },
+        {
+          "name": "Follow Me Support",
+          "tier": "partnersincrime",
+          "ability": "Psychic Surge",
+          "item": "Safety Goggles",
+          "nature": "Bold",
+          "teraType": "Normal",
+          "evs": "244 HP / 252 DEF / 12 SPD",
+          "moves": [
+            "Psychic",
+            "Follow Me",
+            "Trick Room",
+            "Helping Hand / Imprison"
+          ]
+        },
+        {
+          "name": "Choiced",
+          "tier": "zu",
+          "ability": "Psychic Surge",
+          "item": "Choice Scarf / Choice Specs",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Psychic",
+            "Alluring Voice",
+            "Hyper Voice",
+            "Healing Wish / Trick"
+          ]
+        },
+        {
+          "name": "Redirection Support",
+          "tier": "doublesou",
+          "ability": "Psychic Surge",
+          "item": "Sitrus Berry / Safety Goggles / Psychic Seed",
+          "nature": "Bold",
+          "teraType": "Normal",
+          "evs": "252 HP / 236 DEF / 20 SPD",
+          "moves": [
+            "Trick Room / Protect",
+            "Helping Hand / Protect",
+            "Psychic / Dazzling Gleam",
+            "Follow Me"
           ]
         }
       ],
       "abilities": [
         {
-          "name": "flash-fire",
+          "name": "inner-focus",
           "isHidden": false
         },
         {
-          "name": "intimidate",
+          "name": "synchronize",
           "isHidden": false
         },
         {
-          "name": "rock-head",
+          "name": "psychic-surge",
           "isHidden": true
         }
       ],
       "stats": {
         "hp": 60,
-        "attack": 75,
-        "defense": 45,
-        "special-attack": 65,
-        "special-defense": 50,
-        "speed": 55
+        "attack": 65,
+        "defense": 55,
+        "special-attack": 105,
+        "special-defense": 95,
+        "speed": 95
       },
       "isLegendary": false,
       "isMythical": false
     },
-    "diglettalola": {
-      "name": "Diglett-Alola",
-      "cleanName": "diglettalola",
-      "dex": 50,
-      "id": 10105,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10105.png",
+    "crabominable": {
+      "name": "Crabominable",
+      "cleanName": "crabominable",
+      "dex": 740,
+      "id": 740,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/740.png",
       "locations": [],
       "allRanks": [
         {
-          "tier": "lc",
-          "rank": 15,
-          "usage": "14.08"
-        }
-      ],
-      "types": [
-        "ground",
-        "steel"
-      ],
-      "strategies": [
-        {
-          "name": "Life Orb",
-          "tier": "lc",
-          "ability": "Tangling Hair",
-          "item": "Life Orb",
-          "nature": "Jolly",
-          "teraType": "Ground / Dark / Stellar",
-          "evs": "36 HP / 236 ATK / 36 DEF / 196 SPE",
-          "moves": [
-            "Earthquake",
-            "Rock Blast",
-            "Sucker Punch",
-            "Substitute / Iron Head"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "sand-veil",
-          "isHidden": false
+          "tier": "zu",
+          "rank": 106,
+          "usage": "0.57"
         },
         {
-          "name": "sand-force",
-          "isHidden": true
+          "tier": "ru",
+          "rank": 168,
+          "usage": "0.19"
         },
         {
-          "name": "tangling-hair",
-          "isHidden": false
-        }
-      ],
-      "stats": {
-        "hp": 10,
-        "attack": 55,
-        "defense": 30,
-        "special-attack": 35,
-        "special-defense": 45,
-        "speed": 90
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "zoruahisui": {
-      "name": "Zorua-Hisui",
-      "cleanName": "zoruahisui",
-      "dex": 570,
-      "id": 10238,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10238.png",
-      "locations": [],
-      "allRanks": [
+          "tier": "pu",
+          "rank": 124,
+          "usage": "0.33"
+        },
         {
-          "tier": "lc",
-          "rank": 28,
-          "usage": "3.32"
+          "tier": "monotype",
+          "rank": 305,
+          "usage": "0.02"
+        },
+        {
+          "tier": "uu",
+          "rank": 242,
+          "usage": "0.02"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 321,
+          "usage": "0.02"
         }
       ],
       "types": [
-        "normal",
-        "ghost"
+        "fighting",
+        "ice"
       ],
       "strategies": [
         {
-          "name": "Wallbreaker",
-          "tier": "lc",
-          "ability": "Illusion",
-          "item": "Eviolite",
-          "nature": "Timid",
-          "teraType": "Ground / Fighting",
-          "evs": "116 DEF / 156 SPA / 36 SPD / 196 SPE",
-          "moves": [
-            "Tera Blast",
-            "Hex",
-            "Will-O-Wisp",
-            "Knock Off / U-turn"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "illusion",
-          "isHidden": false
-        }
-      ],
-      "stats": {
-        "hp": 35,
-        "attack": 60,
-        "defense": 40,
-        "special-attack": 85,
-        "special-defense": 40,
-        "speed": 70
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "grimeralola": {
-      "name": "Grimer-Alola",
-      "cleanName": "grimeralola",
-      "dex": 88,
-      "id": 10112,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10112.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "lc",
-          "rank": 43,
-          "usage": "1.27"
-        }
-      ],
-      "types": [
-        "poison",
-        "dark"
-      ],
-      "strategies": [
-        {
-          "name": "Wallbreaker",
-          "tier": "lc",
-          "ability": "Poison Touch",
-          "item": "Eviolite",
+          "name": "Choice Band",
+          "tier": "zu",
+          "ability": "Iron Fist",
+          "item": "Choice Band",
           "nature": "Adamant",
-          "teraType": "Normal",
-          "evs": "36 HP / 196 ATK / 196 DEF / 36 SPD",
+          "teraType": "Ice / Fighting",
+          "evs": "252 HP / 252 ATK / 4 SPD",
           "moves": [
-            "Knock Off",
-            "Gunk Shot",
-            "Drain Punch",
-            "Sleep Talk / Memento"
+            "Ice Hammer",
+            "Close Combat",
+            "Earthquake",
+            "Knock Off"
           ]
         },
         {
-          "name": "Defensive",
-          "tier": "nfe",
-          "ability": "Poison Touch",
-          "item": "Eviolite",
-          "nature": "Careful",
-          "teraType": "Normal",
-          "evs": "252 HP / 4 DEF / 252 SPD",
+          "name": "Bulk Up",
+          "tier": "zu",
+          "ability": "Iron Fist",
+          "item": "Leftovers",
+          "nature": "Adamant",
+          "teraType": "Water / Fairy",
+          "evs": "252 HP / 252 ATK / 4 SPD",
           "moves": [
-            "Knock Off",
-            "Toxic / Rest",
-            "Poison Jab",
-            "Protect / Sleep Talk"
+            "Bulk Up",
+            "Ice Hammer",
+            "Drain Punch",
+            "Earthquake"
           ]
         }
       ],
       "abilities": [
         {
-          "name": "gluttony",
+          "name": "hyper-cutter",
           "isHidden": false
         },
         {
-          "name": "poison-touch",
+          "name": "iron-fist",
           "isHidden": false
         },
         {
-          "name": "power-of-alchemy",
+          "name": "anger-point",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 97,
+        "attack": 132,
+        "defense": 77,
+        "special-attack": 62,
+        "special-defense": 67,
+        "speed": 43
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
+    "lycanrocmidnight": {
+      "name": "Lycanroc-Midnight",
+      "cleanName": "lycanrocmidnight",
+      "dex": 745,
+      "id": 745,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/745.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "zu",
+          "rank": 147,
+          "usage": "0.17"
+        },
+        {
+          "tier": "pu",
+          "rank": 135,
+          "usage": "0.25"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 329,
+          "usage": "0.05"
+        }
+      ],
+      "types": [
+        "rock"
+      ],
+      "strategies": [],
+      "abilities": [
+        {
+          "name": "keen-eye",
+          "isHidden": false
+        },
+        {
+          "name": "sand-rush",
+          "isHidden": false
+        },
+        {
+          "name": "steadfast",
+          "isHidden": true
+        }
+      ],
+      "stats": {
+        "hp": 75,
+        "attack": 115,
+        "defense": 65,
+        "special-attack": 55,
+        "special-defense": 65,
+        "speed": 112
+      },
+      "isLegendary": false,
+      "isMythical": false
+    },
+    "oinkolognef": {
+      "name": "Oinkologne-F",
+      "cleanName": "oinkolognef",
+      "dex": null,
+      "id": 0,
+      "sprite": "",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "zu",
+          "rank": 152,
+          "usage": "0.16"
+        }
+      ],
+      "types": [],
+      "strategies": []
+    },
+    "vivillon": {
+      "name": "Vivillon",
+      "cleanName": "vivillon",
+      "dex": 666,
+      "id": 666,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/666.png",
+      "locations": [],
+      "allRanks": [
+        {
+          "tier": "zu",
+          "rank": 176,
+          "usage": "0.10"
+        },
+        {
+          "tier": "vgc2025",
+          "rank": 189,
+          "usage": "0.05"
+        },
+        {
+          "tier": "monotype",
+          "rank": 261,
+          "usage": "0.06"
+        },
+        {
+          "tier": "ubers",
+          "rank": 198,
+          "usage": "0.07"
+        },
+        {
+          "tier": "doublesou",
+          "rank": 261,
+          "usage": "0.05"
+        },
+        {
+          "tier": "nationaldex",
+          "rank": 377,
+          "usage": "0.03"
+        }
+      ],
+      "types": [
+        "bug",
+        "flying"
+      ],
+      "strategies": [
+        {
+          "name": "Status Utility (Bug)",
+          "tier": "monotype",
+          "ability": "Compound Eyes",
+          "item": "Focus Sash",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "252 SPA / 4 SPD / 252 SPE",
+          "moves": [
+            "Hurricane",
+            "Sleep Powder",
+            "Stun Spore",
+            "Tailwind"
+          ]
+        },
+        {
+          "name": "Support",
+          "tier": "vgc2025",
+          "ability": "Compound Eyes",
+          "item": "Focus Sash",
+          "nature": "Timid",
+          "teraType": "Normal",
+          "evs": "4 HP / 252 SPA / 252 SPE",
+          "moves": [
+            "Hurricane",
+            "Rage Powder",
+            "Sleep Powder",
+            "Protect"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "shield-dust",
+          "isHidden": false
+        },
+        {
+          "name": "compound-eyes",
+          "isHidden": false
+        },
+        {
+          "name": "friend-guard",
           "isHidden": true
         }
       ],
       "stats": {
         "hp": 80,
-        "attack": 80,
+        "attack": 52,
         "defense": 50,
-        "special-attack": 40,
+        "special-attack": 90,
         "special-defense": 50,
-        "speed": 25
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "gimmighoulroaming": {
-      "name": "Gimmighoul-Roaming",
-      "cleanName": "gimmighoulroaming",
-      "dex": 999,
-      "id": 999,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/999.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "lc",
-          "rank": 45,
-          "usage": "1.23"
-        }
-      ],
-      "types": [
-        "ghost"
-      ],
-      "strategies": [
-        {
-          "name": "Fast Attacker",
-          "tier": "lc",
-          "ability": "Run Away",
-          "item": "Life Orb",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "236 SPA / 76 SPD / 196 SPE",
-          "moves": [
-            "Substitute",
-            "Nasty Plot",
-            "Shadow Ball",
-            "Power Gem"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "rattled",
-          "isHidden": false
-        }
-      ],
-      "stats": {
-        "hp": 45,
-        "attack": 30,
-        "defense": 70,
-        "special-attack": 75,
-        "special-defense": 70,
-        "speed": 10
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "flabebe": {
-      "name": "Flabébé",
-      "cleanName": "flabebe",
-      "dex": 669,
-      "id": 669,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/669.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "lc",
-          "rank": 58,
-          "usage": "0.79"
-        }
-      ],
-      "types": [
-        "fairy"
-      ],
-      "strategies": [],
-      "abilities": [
-        {
-          "name": "flower-veil",
-          "isHidden": false
-        },
-        {
-          "name": "symbiosis",
-          "isHidden": true
-        }
-      ],
-      "stats": {
-        "hp": 44,
-        "attack": 38,
-        "defense": 39,
-        "special-attack": 61,
-        "special-defense": 79,
-        "speed": 42
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "geodudealola": {
-      "name": "Geodude-Alola",
-      "cleanName": "geodudealola",
-      "dex": 74,
-      "id": 10109,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10109.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "lc",
-          "rank": 66,
-          "usage": "0.63"
-        }
-      ],
-      "types": [
-        "rock",
-        "electric"
-      ],
-      "strategies": [],
-      "abilities": [
-        {
-          "name": "sturdy",
-          "isHidden": false
-        },
-        {
-          "name": "magnet-pull",
-          "isHidden": false
-        },
-        {
-          "name": "galvanize",
-          "isHidden": true
-        }
-      ],
-      "stats": {
-        "hp": 40,
-        "attack": 80,
-        "defense": 100,
-        "special-attack": 30,
-        "special-defense": 30,
-        "speed": 20
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "meowthalola": {
-      "name": "Meowth-Alola",
-      "cleanName": "meowthalola",
-      "dex": 52,
-      "id": 10107,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10107.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "lc",
-          "rank": 140,
-          "usage": "0.03"
-        }
-      ],
-      "types": [
-        "dark"
-      ],
-      "strategies": [],
-      "abilities": [
-        {
-          "name": "pickup",
-          "isHidden": false
-        },
-        {
-          "name": "technician",
-          "isHidden": false
-        },
-        {
-          "name": "rattled",
-          "isHidden": true
-        }
-      ],
-      "stats": {
-        "hp": 40,
-        "attack": 35,
-        "defense": 35,
-        "special-attack": 50,
-        "special-defense": 40,
-        "speed": 90
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "wooperpaldea": {
-      "name": "Wooper-Paldea",
-      "cleanName": "wooperpaldea",
-      "dex": 194,
-      "id": 10253,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10253.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "lc",
-          "rank": 148,
-          "usage": "0.02"
-        }
-      ],
-      "types": [
-        "poison",
-        "ground"
-      ],
-      "strategies": [
-        {
-          "name": "Defensive Spikes",
-          "tier": "nfe",
-          "ability": "Water Absorb",
-          "item": "Eviolite",
-          "nature": "Impish",
-          "teraType": "Normal",
-          "evs": "252 HP / 252 DEF / 4 SPD",
-          "moves": [
-            "Earthquake",
-            "Toxic",
-            "Recover",
-            "Spikes"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "water-absorb",
-          "isHidden": false
-        },
-        {
-          "name": "poison-point",
-          "isHidden": false
-        },
-        {
-          "name": "unaware",
-          "isHidden": true
-        }
-      ],
-      "stats": {
-        "hp": 55,
-        "attack": 45,
-        "defense": 45,
-        "special-attack": 25,
-        "special-defense": 25,
-        "speed": 15
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "slowpokegalar": {
-      "name": "Slowpoke-Galar",
-      "cleanName": "slowpokegalar",
-      "dex": 79,
-      "id": 10164,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10164.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "lc",
-          "rank": 149,
-          "usage": "0.02"
-        }
-      ],
-      "types": [
-        "psychic"
-      ],
-      "strategies": [],
-      "abilities": [
-        {
-          "name": "own-tempo",
-          "isHidden": false
-        },
-        {
-          "name": "gluttony",
-          "isHidden": false
-        },
-        {
-          "name": "regenerator",
-          "isHidden": true
-        }
-      ],
-      "stats": {
-        "hp": 90,
-        "attack": 65,
-        "defense": 65,
-        "special-attack": 40,
-        "special-defense": 40,
-        "speed": 15
+        "speed": 89
       },
       "isLegendary": false,
       "isMythical": false
@@ -105975,14 +106457,14 @@ window.localDB = {
           "usage": "2.44"
         },
         {
-          "tier": "ubers",
-          "rank": 142,
-          "usage": "0.20"
-        },
-        {
           "tier": "ou",
           "rank": 169,
           "usage": "0.12"
+        },
+        {
+          "tier": "ubers",
+          "rank": 142,
+          "usage": "0.20"
         },
         {
           "tier": "doublesou",
@@ -106138,11 +106620,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "gluttony",
+          "name": "poison-touch",
           "isHidden": false
         },
         {
-          "name": "poison-touch",
+          "name": "gluttony",
           "isHidden": false
         },
         {
@@ -106190,14 +106672,14 @@ window.localDB = {
           "usage": "1.93"
         },
         {
-          "tier": "ubers",
-          "rank": 320,
-          "usage": "0.01"
-        },
-        {
           "tier": "ou",
           "rank": 188,
           "usage": "0.08"
+        },
+        {
+          "tier": "ubers",
+          "rank": 320,
+          "usage": "0.01"
         },
         {
           "tier": "doublesou",
@@ -106375,14 +106857,14 @@ window.localDB = {
           "usage": "4.58"
         },
         {
-          "tier": "ubers",
-          "rank": 174,
-          "usage": "0.10"
-        },
-        {
           "tier": "ou",
           "rank": 102,
           "usage": "0.55"
+        },
+        {
+          "tier": "ubers",
+          "rank": 174,
+          "usage": "0.10"
         },
         {
           "tier": "doublesou",
@@ -106628,11 +107110,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "shell-armor",
+          "name": "sap-sipper",
           "isHidden": false
         },
         {
-          "name": "sap-sipper",
+          "name": "shell-armor",
           "isHidden": false
         },
         {
@@ -106675,14 +107157,14 @@ window.localDB = {
           "usage": "0.94"
         },
         {
-          "tier": "ubers",
-          "rank": 254,
-          "usage": "0.03"
-        },
-        {
           "tier": "ou",
           "rank": 199,
           "usage": "0.07"
+        },
+        {
+          "tier": "ubers",
+          "rank": 254,
+          "usage": "0.03"
         },
         {
           "tier": "doublesou",
@@ -106751,12 +107233,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "steadfast",
-          "isHidden": true
-        },
-        {
           "name": "sand-rush",
           "isHidden": false
+        },
+        {
+          "name": "steadfast",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -106799,14 +107281,14 @@ window.localDB = {
           "usage": "0.10"
         },
         {
-          "tier": "ubers",
-          "rank": 133,
-          "usage": "0.29"
-        },
-        {
           "tier": "ou",
           "rank": 204,
           "usage": "0.07"
+        },
+        {
+          "tier": "ubers",
+          "rank": 133,
+          "usage": "0.29"
         },
         {
           "tier": "doublesou",
@@ -106999,354 +107481,6 @@ window.localDB = {
         "special-attack": 98,
         "special-defense": 70,
         "speed": 93
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "crabominable": {
-      "name": "Crabominable",
-      "cleanName": "crabominable",
-      "dex": 740,
-      "id": 740,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/740.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "ru",
-          "rank": 168,
-          "usage": "0.19"
-        },
-        {
-          "tier": "pu",
-          "rank": 124,
-          "usage": "0.33"
-        },
-        {
-          "tier": "monotype",
-          "rank": 305,
-          "usage": "0.02"
-        },
-        {
-          "tier": "uu",
-          "rank": 242,
-          "usage": "0.02"
-        },
-        {
-          "tier": "zu",
-          "rank": 106,
-          "usage": "0.57"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 321,
-          "usage": "0.02"
-        }
-      ],
-      "types": [
-        "fighting",
-        "ice"
-      ],
-      "strategies": [
-        {
-          "name": "Choice Band",
-          "tier": "zu",
-          "ability": "Iron Fist",
-          "item": "Choice Band",
-          "nature": "Adamant",
-          "teraType": "Ice / Fighting",
-          "evs": "252 HP / 252 ATK / 4 SPD",
-          "moves": [
-            "Ice Hammer",
-            "Close Combat",
-            "Earthquake",
-            "Knock Off"
-          ]
-        },
-        {
-          "name": "Bulk Up",
-          "tier": "zu",
-          "ability": "Iron Fist",
-          "item": "Leftovers",
-          "nature": "Adamant",
-          "teraType": "Water / Fairy",
-          "evs": "252 HP / 252 ATK / 4 SPD",
-          "moves": [
-            "Bulk Up",
-            "Ice Hammer",
-            "Drain Punch",
-            "Earthquake"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "hyper-cutter",
-          "isHidden": false
-        },
-        {
-          "name": "anger-point",
-          "isHidden": true
-        },
-        {
-          "name": "iron-fist",
-          "isHidden": false
-        }
-      ],
-      "stats": {
-        "hp": 97,
-        "attack": 132,
-        "defense": 77,
-        "special-attack": 62,
-        "special-defense": 67,
-        "speed": 43
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "indeedeef": {
-      "name": "Indeedee-F",
-      "cleanName": "indeedeef",
-      "dex": 876,
-      "id": 876,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/876.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "ru",
-          "rank": 183,
-          "usage": "0.14"
-        },
-        {
-          "tier": "pu",
-          "rank": 46,
-          "usage": "3.93"
-        },
-        {
-          "tier": "vgc2025",
-          "rank": 8,
-          "usage": "19.98"
-        },
-        {
-          "tier": "monotype",
-          "rank": 276,
-          "usage": "0.04"
-        },
-        {
-          "tier": "uu",
-          "rank": 181,
-          "usage": "0.09"
-        },
-        {
-          "tier": "zu",
-          "rank": 64,
-          "usage": "2.08"
-        },
-        {
-          "tier": "ubers",
-          "rank": 115,
-          "usage": "0.39"
-        },
-        {
-          "tier": "ou",
-          "rank": 259,
-          "usage": "0.02"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 15,
-          "usage": "11.93"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 370,
-          "usage": "0.03"
-        }
-      ],
-      "types": [
-        "psychic",
-        "normal"
-      ],
-      "strategies": [
-        {
-          "name": "Terrain Setter",
-          "tier": "pu",
-          "ability": "Psychic Surge",
-          "item": "Terrain Extender",
-          "nature": "Timid",
-          "teraType": "Fairy / Ghost / Steel",
-          "evs": "252 HP / 4 SPA / 252 SPE",
-          "moves": [
-            "Healing Wish",
-            "Psychic / Psyshock",
-            "Reflect",
-            "Alluring Voice"
-          ]
-        },
-        {
-          "name": "Bulky Support",
-          "tier": "vgc2025",
-          "ability": "Psychic Surge",
-          "item": "Safety Goggles / Psychic Seed / Rocky Helmet / Sitrus Berry",
-          "nature": "Relaxed",
-          "teraType": "Fairy / Grass",
-          "evs": "252 HP / 252 DEF / 4 SPD",
-          "moves": [
-            "Follow Me",
-            "Trick Room",
-            "Helping Hand / Imprison",
-            "Psychic / Dazzling Gleam"
-          ]
-        },
-        {
-          "name": "Trick Room Support",
-          "tier": "vgc2025",
-          "ability": "Psychic Surge",
-          "item": "Safety Goggles / Rocky Helmet / Psychic Seed",
-          "nature": "Bold / Relaxed",
-          "teraType": "Water / Fairy",
-          "evs": "252 HP / 252 DEF / 4 SPD",
-          "moves": [
-            "Psychic / Alluring Voice",
-            "Follow Me",
-            "Helping Hand",
-            "Trick Room"
-          ]
-        },
-        {
-          "name": "TR Support",
-          "tier": "vgc2023",
-          "ability": "Psychic Surge",
-          "item": "Psychic Seed / Safety Goggles / Rocky Helmet",
-          "nature": "Calm",
-          "teraType": "Normal",
-          "evs": "252 HP / 220 DEF / 36 SPD",
-          "moves": [
-            "Psychic / Dazzling Gleam",
-            "Follow Me",
-            "Trick Room",
-            "Helping Hand / Protect"
-          ]
-        },
-        {
-          "name": "Follow Me Support",
-          "tier": "partnersincrime",
-          "ability": "Psychic Surge",
-          "item": "Safety Goggles",
-          "nature": "Bold",
-          "teraType": "Normal",
-          "evs": "244 HP / 252 DEF / 12 SPD",
-          "moves": [
-            "Psychic",
-            "Follow Me",
-            "Trick Room",
-            "Helping Hand / Imprison"
-          ]
-        },
-        {
-          "name": "Choiced",
-          "tier": "zu",
-          "ability": "Psychic Surge",
-          "item": "Choice Scarf / Choice Specs",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Psychic",
-            "Alluring Voice",
-            "Hyper Voice",
-            "Healing Wish / Trick"
-          ]
-        },
-        {
-          "name": "Redirection Support",
-          "tier": "doublesou",
-          "ability": "Psychic Surge",
-          "item": "Sitrus Berry / Safety Goggles / Psychic Seed",
-          "nature": "Bold",
-          "teraType": "Normal",
-          "evs": "252 HP / 236 DEF / 20 SPD",
-          "moves": [
-            "Trick Room / Protect",
-            "Helping Hand / Protect",
-            "Psychic / Dazzling Gleam",
-            "Follow Me"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "synchronize",
-          "isHidden": false
-        },
-        {
-          "name": "inner-focus",
-          "isHidden": false
-        },
-        {
-          "name": "psychic-surge",
-          "isHidden": true
-        }
-      ],
-      "stats": {
-        "hp": 60,
-        "attack": 65,
-        "defense": 55,
-        "special-attack": 105,
-        "special-defense": 95,
-        "speed": 95
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
-    "lycanrocmidnight": {
-      "name": "Lycanroc-Midnight",
-      "cleanName": "lycanrocmidnight",
-      "dex": 745,
-      "id": 745,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/745.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "pu",
-          "rank": 135,
-          "usage": "0.25"
-        },
-        {
-          "tier": "zu",
-          "rank": 147,
-          "usage": "0.17"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 329,
-          "usage": "0.05"
-        }
-      ],
-      "types": [
-        "rock"
-      ],
-      "strategies": [],
-      "abilities": [
-        {
-          "name": "keen-eye",
-          "isHidden": false
-        },
-        {
-          "name": "steadfast",
-          "isHidden": true
-        },
-        {
-          "name": "sand-rush",
-          "isHidden": false
-        }
-      ],
-      "stats": {
-        "hp": 75,
-        "attack": 115,
-        "defense": 65,
-        "special-attack": 55,
-        "special-defense": 65,
-        "speed": 112
       },
       "isLegendary": false,
       "isMythical": false
@@ -108173,14 +108307,14 @@ window.localDB = {
           "usage": "3.38"
         },
         {
-          "tier": "ubers",
-          "rank": 131,
-          "usage": "0.30"
-        },
-        {
           "tier": "ou",
           "rank": 64,
           "usage": "2.16"
+        },
+        {
+          "tier": "ubers",
+          "rank": 131,
+          "usage": "0.30"
         },
         {
           "tier": "doublesou",
@@ -108747,14 +108881,14 @@ window.localDB = {
           "usage": "3.82"
         },
         {
-          "tier": "ubers",
-          "rank": 83,
-          "usage": "0.71"
-        },
-        {
           "tier": "ou",
           "rank": 7,
           "usage": "16.73"
+        },
+        {
+          "tier": "ubers",
+          "rank": 83,
+          "usage": "0.71"
         },
         {
           "tier": "doublesou",
@@ -109325,14 +109459,14 @@ window.localDB = {
           "usage": "2.27"
         },
         {
-          "tier": "ubers",
-          "rank": 156,
-          "usage": "0.15"
-        },
-        {
           "tier": "ou",
           "rank": 111,
           "usage": "0.44"
+        },
+        {
+          "tier": "ubers",
+          "rank": 156,
+          "usage": "0.15"
         },
         {
           "tier": "doublesou",
@@ -109515,14 +109649,14 @@ window.localDB = {
           "usage": "5.81"
         },
         {
-          "tier": "ubers",
-          "rank": 99,
-          "usage": "0.54"
-        },
-        {
           "tier": "ou",
           "rank": 47,
           "usage": "3.36"
+        },
+        {
+          "tier": "ubers",
+          "rank": 99,
+          "usage": "0.54"
         },
         {
           "tier": "doublesou",
@@ -109787,14 +109921,14 @@ window.localDB = {
           "usage": "3.73"
         },
         {
-          "tier": "ubers",
-          "rank": 49,
-          "usage": "1.75"
-        },
-        {
           "tier": "ou",
           "rank": 41,
           "usage": "4.34"
+        },
+        {
+          "tier": "ubers",
+          "rank": 49,
+          "usage": "1.75"
         },
         {
           "tier": "doublesou",
@@ -109909,12 +110043,12 @@ window.localDB = {
           "isHidden": false
         },
         {
-          "name": "misty-surge",
-          "isHidden": true
-        },
-        {
           "name": "neutralizing-gas",
           "isHidden": false
+        },
+        {
+          "name": "misty-surge",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -110184,14 +110318,14 @@ window.localDB = {
           "usage": "2.01"
         },
         {
-          "tier": "ubers",
-          "rank": 136,
-          "usage": "0.26"
-        },
-        {
           "tier": "ou",
           "rank": 164,
           "usage": "0.13"
+        },
+        {
+          "tier": "ubers",
+          "rank": 136,
+          "usage": "0.26"
         },
         {
           "tier": "doublesou",
@@ -110794,14 +110928,14 @@ window.localDB = {
           "usage": "1.54"
         },
         {
-          "tier": "ubers",
-          "rank": 23,
-          "usage": "7.24"
-        },
-        {
           "tier": "ou",
           "rank": 20,
           "usage": "10.82"
+        },
+        {
+          "tier": "ubers",
+          "rank": 23,
+          "usage": "7.24"
         },
         {
           "tier": "doublesou",
@@ -111272,12 +111406,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "sheer-force",
-          "isHidden": true
-        },
-        {
           "name": "sand-force",
           "isHidden": false
+        },
+        {
+          "name": "sheer-force",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -111751,14 +111885,14 @@ window.localDB = {
           "usage": "9.83"
         },
         {
-          "tier": "ubers",
-          "rank": 216,
-          "usage": "0.06"
-        },
-        {
           "tier": "ou",
           "rank": 113,
           "usage": "0.39"
+        },
+        {
+          "tier": "ubers",
+          "rank": 216,
+          "usage": "0.06"
         },
         {
           "tier": "doublesou",
@@ -112034,11 +112168,11 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "flash-fire",
+          "name": "intimidate",
           "isHidden": false
         },
         {
-          "name": "intimidate",
+          "name": "flash-fire",
           "isHidden": false
         },
         {
@@ -112243,14 +112377,14 @@ window.localDB = {
           "usage": "11.44"
         },
         {
-          "tier": "ubers",
-          "rank": 206,
-          "usage": "0.06"
-        },
-        {
           "tier": "ou",
           "rank": 117,
           "usage": "0.35"
+        },
+        {
+          "tier": "ubers",
+          "rank": 206,
+          "usage": "0.06"
         },
         {
           "tier": "doublesou",
@@ -112376,12 +112510,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "defiant",
-          "isHidden": true
-        },
-        {
           "name": "prankster",
           "isHidden": false
+        },
+        {
+          "name": "defiant",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -112414,14 +112548,14 @@ window.localDB = {
           "usage": "2.23"
         },
         {
-          "tier": "ubers",
-          "rank": 308,
-          "usage": "0.02"
-        },
-        {
           "tier": "ou",
           "rank": 84,
           "usage": "0.90"
+        },
+        {
+          "tier": "ubers",
+          "rank": 308,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -112802,14 +112936,14 @@ window.localDB = {
           "usage": "5.37"
         },
         {
-          "tier": "ubers",
-          "rank": 269,
-          "usage": "0.02"
-        },
-        {
           "tier": "ou",
           "rank": 124,
           "usage": "0.30"
+        },
+        {
+          "tier": "ubers",
+          "rank": 269,
+          "usage": "0.02"
         },
         {
           "tier": "doublesou",
@@ -113111,106 +113245,6 @@ window.localDB = {
       "isLegendary": false,
       "isMythical": true
     },
-    "vivillon": {
-      "name": "Vivillon",
-      "cleanName": "vivillon",
-      "dex": 666,
-      "id": 666,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/666.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "vgc2025",
-          "rank": 189,
-          "usage": "0.05"
-        },
-        {
-          "tier": "monotype",
-          "rank": 261,
-          "usage": "0.06"
-        },
-        {
-          "tier": "zu",
-          "rank": 176,
-          "usage": "0.10"
-        },
-        {
-          "tier": "ubers",
-          "rank": 198,
-          "usage": "0.07"
-        },
-        {
-          "tier": "doublesou",
-          "rank": 261,
-          "usage": "0.05"
-        },
-        {
-          "tier": "nationaldex",
-          "rank": 377,
-          "usage": "0.03"
-        }
-      ],
-      "types": [
-        "bug",
-        "flying"
-      ],
-      "strategies": [
-        {
-          "name": "Status Utility (Bug)",
-          "tier": "monotype",
-          "ability": "Compound Eyes",
-          "item": "Focus Sash",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "252 SPA / 4 SPD / 252 SPE",
-          "moves": [
-            "Hurricane",
-            "Sleep Powder",
-            "Stun Spore",
-            "Tailwind"
-          ]
-        },
-        {
-          "name": "Support",
-          "tier": "vgc2025",
-          "ability": "Compound Eyes",
-          "item": "Focus Sash",
-          "nature": "Timid",
-          "teraType": "Normal",
-          "evs": "4 HP / 252 SPA / 252 SPE",
-          "moves": [
-            "Hurricane",
-            "Rage Powder",
-            "Sleep Powder",
-            "Protect"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "name": "compound-eyes",
-          "isHidden": false
-        },
-        {
-          "name": "shield-dust",
-          "isHidden": false
-        },
-        {
-          "name": "friend-guard",
-          "isHidden": true
-        }
-      ],
-      "stats": {
-        "hp": 80,
-        "attack": 52,
-        "defense": 50,
-        "special-attack": 90,
-        "special-defense": 50,
-        "speed": 89
-      },
-      "isLegendary": false,
-      "isMythical": false
-    },
     "arceussteel": {
       "name": "Arceus-Steel",
       "cleanName": "arceussteel",
@@ -113316,14 +113350,14 @@ window.localDB = {
           "usage": "10.66"
         },
         {
-          "tier": "ubers",
-          "rank": 76,
-          "usage": "0.83"
-        },
-        {
           "tier": "ou",
           "rank": 16,
           "usage": "12.50"
+        },
+        {
+          "tier": "ubers",
+          "rank": 76,
+          "usage": "0.83"
         },
         {
           "tier": "doublesou",
@@ -113855,14 +113889,14 @@ window.localDB = {
           "usage": "2.46"
         },
         {
-          "tier": "ubers",
-          "rank": 128,
-          "usage": "0.31"
-        },
-        {
           "tier": "ou",
           "rank": 11,
           "usage": "14.16"
+        },
+        {
+          "tier": "ubers",
+          "rank": 128,
+          "usage": "0.31"
         },
         {
           "tier": "doublesou",
@@ -114495,14 +114529,14 @@ window.localDB = {
           "usage": "6.55"
         },
         {
-          "tier": "ubers",
-          "rank": 261,
-          "usage": "0.03"
-        },
-        {
           "tier": "ou",
           "rank": 33,
           "usage": "5.62"
+        },
+        {
+          "tier": "ubers",
+          "rank": 261,
+          "usage": "0.03"
         },
         {
           "tier": "doublesou",
@@ -114627,12 +114661,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "defiant",
-          "isHidden": true
-        },
-        {
           "name": "prankster",
           "isHidden": false
+        },
+        {
+          "name": "defiant",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -114665,14 +114699,14 @@ window.localDB = {
           "usage": "6.07"
         },
         {
-          "tier": "ubers",
-          "rank": 155,
-          "usage": "0.16"
-        },
-        {
           "tier": "ou",
           "rank": 88,
           "usage": "0.84"
+        },
+        {
+          "tier": "ubers",
+          "rank": 155,
+          "usage": "0.16"
         },
         {
           "tier": "doublesou",
@@ -114887,14 +114921,14 @@ window.localDB = {
           "usage": "0.48"
         },
         {
-          "tier": "ubers",
-          "rank": 21,
-          "usage": "8.34"
-        },
-        {
           "tier": "ou",
           "rank": 30,
           "usage": "6.45"
+        },
+        {
+          "tier": "ubers",
+          "rank": 21,
+          "usage": "8.34"
         },
         {
           "tier": "doublesou",
@@ -115185,40 +115219,6 @@ window.localDB = {
       },
       "isLegendary": false,
       "isMythical": false
-    },
-    "taurospaldeacombat": {
-      "name": "Tauros-Paldea-Combat",
-      "cleanName": "taurospaldeacombat",
-      "dex": 128,
-      "id": 128,
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/128.png",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "zu",
-          "rank": 54,
-          "usage": "2.88"
-        }
-      ],
-      "types": [],
-      "strategies": []
-    },
-    "oinkolognef": {
-      "name": "Oinkologne-F",
-      "cleanName": "oinkolognef",
-      "dex": null,
-      "id": 0,
-      "sprite": "",
-      "locations": [],
-      "allRanks": [
-        {
-          "tier": "zu",
-          "rank": 152,
-          "usage": "0.16"
-        }
-      ],
-      "types": [],
-      "strategies": []
     },
     "arceuselectric": {
       "name": "Arceus-Electric",
@@ -116524,16 +116524,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
+          "name": "cursed-body",
+          "isHidden": false
+        },
+        {
           "name": "lightning-rod",
           "isHidden": false
         },
         {
           "name": "rock-head",
           "isHidden": true
-        },
-        {
-          "name": "cursed-body",
-          "isHidden": false
         }
       ],
       "stats": {
@@ -117144,12 +117144,12 @@ window.localDB = {
       ],
       "abilities": [
         {
-          "name": "cursed-body",
-          "isHidden": true
-        },
-        {
           "name": "weak-armor",
           "isHidden": false
+        },
+        {
+          "name": "cursed-body",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -117326,16 +117326,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "insomnia",
-          "isHidden": true
-        },
-        {
           "name": "pickup",
           "isHidden": false
         },
         {
           "name": "frisk",
           "isHidden": false
+        },
+        {
+          "name": "insomnia",
+          "isHidden": true
         }
       ],
       "stats": {
@@ -117458,16 +117458,16 @@ window.localDB = {
       "strategies": [],
       "abilities": [
         {
-          "name": "insomnia",
-          "isHidden": true
-        },
-        {
           "name": "pickup",
           "isHidden": false
         },
         {
           "name": "frisk",
           "isHidden": false
+        },
+        {
+          "name": "insomnia",
+          "isHidden": true
         }
       ],
       "stats": {
